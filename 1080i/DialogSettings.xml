@@ -40,10 +40,10 @@
 			<posx>0</posx>
 			<posy>100</posy>
 			<width>570</width>
-			<height>800</height>
+			<height>1080</height>
 			<pagecontrol>6</pagecontrol>
-			<onup>27</onup>
-			<ondown>27</ondown>
+			<onup>9001</onup>
+			<ondown>9001</ondown>
 			<onleft>Action(Close)</onleft>
 			<onright>Action(Close)</onright>
 		</control>
@@ -88,32 +88,40 @@
 			<description>Default label</description>
 			<height>70</height>
 		</control>
-		<control type="button" id="28">
-			<description>Ok Button</description>
-			<height>70</height>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-			<font>Font_Reg30</font>
-			<textcolor>grey2</textcolor>
-			<label>186</label>
-		</control>
-		<control type="button" id="29">
-			<description>Cancel Button</description>
-			<height>70</height>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-			<font>Font_Reg30</font>
-			<textcolor>grey2</textcolor>
-			<label>222</label>
-		</control>
-		<control type="button" id="30">
-			<description>Clear Button</description>
-			<height>70</height>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-			<font>Font_Reg30</font>
-			<textcolor>grey2</textcolor>
-			<label>192</label>
+		<control type="grouplist" id="9001">
+			<top>940</top>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<control type="button" id="28">
+				<description>Ok Button</description>
+				<height>70</height>
+				<width>570</width>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+				<font>Font_Reg30</font>
+				<textcolor>grey2</textcolor>
+				<label>186</label>
+			</control>
+			<control type="button" id="29">
+				<description>Cancel Button</description>
+				<height>70</height>
+				<width>570</width>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+				<font>Font_Reg30</font>
+				<textcolor>grey2</textcolor>
+				<label>222</label>
+			</control>
+			<control type="button" id="30">
+				<description>Clear Button</description>
+				<height>70</height>
+				<width>570</width>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+				<font>Font_Reg30</font>
+				<textcolor>grey2</textcolor>
+				<label>192</label>
+			</control>
 		</control>
 	</controls>
 </window>
