@@ -346,7 +346,7 @@
 						<label>script.color.picker > Choose Skin Color</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.color.picker)</onclick>
+						<onclick>InstallAddon(script.color.picker)</onclick>
 						<onclick>Notification($LOCALIZE[31902],$LOCALIZE[31871])</onclick>
 						<visible>!System.HasAddon(script.color.picker)</visible>
 					</control>
@@ -361,7 +361,7 @@
 						<label>script.tvtunes > TV/Movie Themes</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.tvtunes)</onclick>
+						<onclick>InstallAddon(script.tvtunes)</onclick>
 						<visible>!System.HasAddon(script.tvtunes)</visible>
 					</control>
 					<control type="button" id="404">
@@ -375,7 +375,7 @@
 						<label>script.skin.helper.service</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.skin.helper.service)</onclick>
+						<onclick>InstallAddon(script.skin.helper.service)</onclick>
 						<visible>!System.HasAddon(script.skin.helper.service)</visible>
 					</control>
 					<control type="button" id="406">
@@ -389,7 +389,7 @@
 						<label>script.artistslideshow</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.artistslideshow)</onclick>
+						<onclick>InstallAddon(script.artistslideshow)</onclick>
 						<visible>!System.HasAddon(script.artistslideshow)</visible>
 					</control>
 					<control type="button" id="408">
@@ -417,7 +417,7 @@
 						<label>script.extendedinfo > Important</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.extendedinfo)</onclick>
+						<onclick>InstallAddon(script.extendedinfo)</onclick>
 						<visible>!System.HasAddon(script.extendedinfo)</visible>
 					</control>
 					<control type="button" id="412">
@@ -431,7 +431,7 @@
 						<label>script.skinshortcuts</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.skinshortcuts)</onclick>
+						<onclick>InstallAddon(script.skinshortcuts)</onclick>
 						<visible>!System.HasAddon(script.skinshortcuts)</visible>
 					</control>
 					<control type="button" id="414">
@@ -472,7 +472,7 @@
 						<label>script.skin.info.service</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.skin.info.service)</onclick>
+						<onclick>InstallAddon(script.skin.info.service)</onclick>
 						<visible>!System.HasAddon(script.skin.info.service)</visible>
 					</control>
 					<control type="button" id="421">
@@ -486,7 +486,7 @@
 						<label>script.cinemavision > trivia,intros and more</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.cinemavision)</onclick>
+						<onclick>InstallAddon(script.cinemavision)</onclick>
 						<visible>!System.HasAddon(script.cinemavision)</visible>
 					</control>
 					<control type="button" id="423">
@@ -500,7 +500,7 @@
 						<label>script.moviesetart > Artwork for Moviesets</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.moviesetart)</onclick>
+						<onclick>InstallAddon(script.moviesetart)</onclick>
 						<visible>!System.HasAddon(script.moviesetart)</visible>
 					</control>
 					<control type="button" id="425">
@@ -514,7 +514,7 @@
 						<label>script.artwork.downloader > Fanart Downloader</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.artwork.downloader)</onclick>
+						<onclick>InstallAddon(script.artwork.downloader)</onclick>
 						<visible>!System.HasAddon(script.artwork.downloader)</visible>
 					</control>
 					<control type="button" id="427">
@@ -528,7 +528,7 @@
 						<label>script.videoextras > Shows TV/Movie Extras</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.videoextras)</onclick>
+						<onclick>InstallAddon(script.videoextras)</onclick>
 						<visible>!System.HasAddon(script.videoextras)</visible>
 					</control>
 					<control type="button" id="429">
@@ -542,7 +542,7 @@
 						<label>script.videolanguage > Shows Languageflags</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://script.videolanguage)</onclick>
+						<onclick>InstallAddon(script.videolanguage)</onclick>
 						<visible>!System.HasAddon(script.videolanguage)</visible>
 					</control>
 					<control type="button" id="431">
@@ -556,7 +556,7 @@
 						<label>service.library.data.provider</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
-						<onclick>RunPlugin(plugin://service.library.data.provider)</onclick>
+						<onclick>InstallAddon(service.library.data.provider)</onclick>
 						<visible>!System.HasAddon(service.library.data.provider)</visible>
 					</control>
 					<control type="button" id="433">
