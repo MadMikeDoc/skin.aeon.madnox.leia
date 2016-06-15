@@ -196,8 +196,8 @@
 	<include name="Info">
 		<!-- Poster -->
 		<control type="group">
-			<visible>IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + IsEmpty(Container($PARAM[id]).ListItem.ChannelName) + IsEmpty(Container($PARAM[id]).ListItem.Artist) + IsEmpty(Container($PARAM[id]).ListItem.AlbumArtist) + IsEmpty(Container($PARAM[id]).ListItem.AddonName)) + !$PARAM[widgetSquare]</visible>
-			<include name="InfoContent">
+			<visible>IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + IsEmpty(Container($PARAM[id]).ListItem.ChannelName) + IsEmpty(Container($PARAM[id]).ListItem.Artist) + IsEmpty(Container($PARAM[id]).ListItem.AlbumArtist) + IsEmpty(Container($PARAM[id]).ListItem.AddonName) + !$PARAM[widgetSquare]</visible>
+			<include content="InfoContent">
 				<param name="id">$PARAM[id]</param>
 				<param name="Texture">$VAR[HomeWidget$PARAM[id]PosterVar]</param>
 				<param name="Title">$VAR[HomeWidget$PARAM[id]TitleVar]</param>
@@ -213,8 +213,8 @@
 		</control>
 		<!-- Square -->
 		<control type="group">
-			<visible>!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) | !IsEmpty(Container($PARAM[id]).ListItem.Artist) | !IsEmpty(Container($PARAM[id]).ListItem.AlbumArtist) | !IsEmpty(Container($PARAM[id]).ListItem.AddonName)) | $PARAM[widgetSquare]</visible>
-			<include name="InfoContent">
+			<visible>!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) | !IsEmpty(Container($PARAM[id]).ListItem.Artist) | !IsEmpty(Container($PARAM[id]).ListItem.AlbumArtist) | !IsEmpty(Container($PARAM[id]).ListItem.AddonName) | $PARAM[widgetSquare]</visible>
+			<include content="InfoContent">
 				<param name="id">$PARAM[id]</param>
 				<param name="Texture">$VAR[HomeWidget$PARAM[id]PosterVar]</param>
 				<param name="Aspect">scale</param>
@@ -233,7 +233,7 @@
 		<!-- Square - Keep Aspect -->
 		<control type="group">
 			<visible>!IsEmpty(Container($PARAM[id]).ListItem.ChannelName)</visible>
-			<include name="InfoContent">
+			<include content="InfoContent">
 				<param name="id">$PARAM[id]</param>
 				<param name="Texture">$VAR[HomeWidget$PARAM[id]PosterVar]</param>
 				<param name="Aspect">keep</param>
@@ -2419,7 +2419,7 @@
 						<top>619</top>
 						<width>380</width>
 						<height>354</height>
-						<aspectratio scalediffuse="false">scale</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$INFO[Container(5222).ListItem.Icon]</imagepath>
 						<fadetime>750</fadetime>
 						<timeperimage>5000</timeperimage>
@@ -2866,7 +2866,7 @@
 				<top>19</top>
 				<width>380</width>
 				<height>354</height>
-				<aspectratio scalediffuse="false">scale</aspectratio>
+				<aspectratio>scale</aspectratio>
 				<imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$VAR[NowPlayingMultiImageVar]</imagepath>
 				<fadetime>750</fadetime>
 				<timeperimage>5000</timeperimage>

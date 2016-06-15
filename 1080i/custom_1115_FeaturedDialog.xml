@@ -22,7 +22,7 @@
 		<control type="button" id="5014">
 			<onfocus>SetProperty(Widget.Poster,episodes,Home)</onfocus>
 			<include>HiddenObject</include>
-			<include name="featuredOnFocus">
+			<include content="featuredOnFocus">
 				<param name="id">5002</param>
 				<param name="Widget">library</param>
 				<param name="widgetType">episodes</param>
@@ -40,7 +40,7 @@
 		<control type="button" id="5014">
 			<onfocus>SetProperty(Widget.Poster,movies,Home)</onfocus>
 			<include>HiddenObject</include>
-			<include name="featuredOnFocus">
+			<include content="featuredOnFocus">
 				<param name="id">5003</param>
 				<param name="Widget">library</param>
 				<param name="widgetType">movies</param>
@@ -58,7 +58,7 @@
 		<control type="button" id="5014">
 			<onfocus>SetProperty(Widget.Poster,movies,Home)</onfocus>
 			<include>HiddenObject</include>
-			<include name="featuredOnFocus">
+			<include content="featuredOnFocus">
 				<param name="id">6002</param>
 				<param name="Widget">library</param>
 				<param name="widgetType">movies</param>
@@ -76,7 +76,7 @@
 		<control type="button" id="5014">
 			<onfocus>SetProperty(Widget.Poster,movies,Home)</onfocus>
 			<include>HiddenObject</include>
-			<include name="featuredOnFocus">
+			<include content="featuredOnFocus">
 				<param name="id">6003</param>
 				<param name="Widget">library</param>
 				<param name="widgetType">movies</param>
@@ -94,7 +94,7 @@
 		<control type="button" id="5014">
 			<onfocus>SetProperty(Widget.Poster,episodes,Home)</onfocus>
 			<include>HiddenObject</include>
-			<include name="featuredOnFocus">
+			<include content="featuredOnFocus">
 				<param name="id">7002</param>
 				<param name="Widget">library</param>
 				<param name="widgetType">episodes</param>
@@ -112,7 +112,7 @@
 		<control type="button" id="5014">
 			<onfocus>SetProperty(Widget.Poster,episodes,Home)</onfocus>
 			<include>HiddenObject</include>
-			<include name="featuredOnFocus">
+			<include content="featuredOnFocus">
 				<param name="id">7003</param>
 				<param name="Widget">library</param>
 				<param name="widgetType">episodes</param>
@@ -130,7 +130,7 @@
 		<control type="button" id="5014">
 			<onfocus>SetProperty(Widget.Poster,movies,Home)</onfocus>
 			<include>HiddenObject</include>
-			<include name="featuredOnFocus">
+			<include content="featuredOnFocus">
 				<param name="id">8002</param>
 				<param name="Widget">library</param>
 				<param name="widgetType">albums</param>
@@ -148,7 +148,7 @@
 		<control type="button" id="5014">
 			<onfocus>SetProperty(Widget.Target,music,Home)</onfocus>
 			<include>HiddenObject</include>
-			<include name="featuredOnFocus">
+			<include content="featuredOnFocus">
 				<param name="id">8003</param>
 				<param name="Widget">library</param>
 				<param name="widgetType">albums</param>
@@ -166,7 +166,7 @@
 		<control type="button" id="5014">
 			<onfocus>SetProperty(Widget.Target,music,Home)</onfocus>
 			<include>HiddenObject</include>
-			<include name="featuredOnFocus">
+			<include content="featuredOnFocus">
 				<param name="id">9003</param>
 				<param name="Widget">library</param>
 				<param name="widgetType">albums</param>
@@ -184,7 +184,7 @@
 		<control type="button" id="5014">
 			<onfocus>SetProperty(Widget.Target,music,Home)</onfocus>
 			<include>HiddenObject</include>
-			<include name="featuredOnFocus">
+			<include content="featuredOnFocus">
 				<param name="id">9002</param>
 				<param name="Widget">library</param>
 				<param name="widgetType">songs</param>

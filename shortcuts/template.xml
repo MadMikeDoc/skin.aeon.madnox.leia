@@ -262,7 +262,7 @@
 					<visible>IntegerGreaterThan(Container(8011$SKINSHORTCUTS[id]).NumItems,0)</visible>
 					<control type="group">
 						<visible>Skin.String(Widget.ListInfo,Always On) | [IsEmpty(Skin.String(Widget.ListInfo)) + Control.HasFocus(8011$SKINSHORTCUTS[id])]</visible>
-						<include name="Info">
+						<include content="Info">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="widthBack">$SKINSHORTCUTS[infowidthback]</param>
@@ -323,7 +323,7 @@
 								<wrapmultiline>true</wrapmultiline>
 								<label>$VAR[HomeWidget8011$SKINSHORTCUTS[id]TitleVar]</label>
 							</control>
-							<include name="$SKINSHORTCUTS[artcontent]">
+							<include content="$SKINSHORTCUTS[artcontent]">
 								<param name="id">8011$SKINSHORTCUTS[id]</param>
 								<param name="Texture">$SKINSHORTCUTS[artwork]</param>
 								<param name="Title2">$VAR[HomeWidget8011$SKINSHORTCUTS[id]Title2Var]</param>
@@ -362,7 +362,7 @@
 						<effect type="rotatey" start="0" end="-180" center="$SKINSHORTCUTS[rotate]" time="400" tween="sine" easing="inout" />
 						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
 					</animation>
-					<include name="OnInfo">
+					<include content="OnInfo">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 						<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -372,7 +372,7 @@
 						<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 						<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 					</include>
-					<include name="$SKINSHORTCUTS[containercontent]">
+					<include content="$SKINSHORTCUTS[containercontent]">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
 						<param name="leftArt">$SKINSHORTCUTS[leftartbanner]</param>
@@ -631,10 +631,10 @@
 					<control type="group">
 						<top>90</top>
 						<left>245</left>
-						<include name="InfoVisible1">
+						<include content="InfoVisible1">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 						</include>
-						<include name="Info">
+						<include content="Info">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="widthBack">1470</param>
@@ -647,13 +647,13 @@
 					<!-- Background/Label -->
 					<control type="group">
 						<top>$SKINSHORTCUTS[top]</top>
-						<include name="PanelBack">
+						<include content="PanelBack">
 							<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 							<param name="backWidth">1472.5</param>
 							<param name="backHeight">$SKINSHORTCUTS[height]</param>
 						</include>
-						<include name="PanelLabel">
+						<include content="PanelLabel">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="Label">$SKINSHORTCUTS[label]</param>
 							<param name="Title">$VAR[HomeWidget8011$SKINSHORTCUTS[id]TitleVar]</param>
@@ -678,7 +678,7 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation1</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -688,7 +688,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -967,10 +967,10 @@
 					<control type="group">
 						<top>90</top>
 						<left>40</left>
-						<include name="InfoVisible1">
+						<include content="InfoVisible1">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 						</include>
-						<include name="Info">
+						<include content="Info">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="widthBack">1890</param>
@@ -983,13 +983,13 @@
 					<!-- Background/Label -->
 					<control type="group">
 						<top>$SKINSHORTCUTS[top]</top>
-						<include name="PanelBack">
+						<include content="PanelBack">
 							<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 							<param name="backWidth">1882.5</param>
 							<param name="backHeight">$SKINSHORTCUTS[height]</param>
 						</include>
-						<include name="PanelLabel">
+						<include content="PanelLabel">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="Label">$SKINSHORTCUTS[label]</param>
 							<param name="Title">$VAR[HomeWidget8011$SKINSHORTCUTS[id]TitleVar]</param>
@@ -1014,7 +1014,7 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation1</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -1024,7 +1024,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -1303,10 +1303,10 @@
 					<control type="group">
 						<top>90</top>
 						<left>245</left>
-						<include name="InfoVisible1">
+						<include content="InfoVisible1">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 						</include>
-						<include name="Info">
+						<include content="Info">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="widthBack">1470</param>
@@ -1319,13 +1319,13 @@
 					<!-- Background/Label -->
 					<control type="group">
 						<top>$SKINSHORTCUTS[top]</top>
-						<include name="PanelBack">
+						<include content="PanelBack">
 							<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 							<param name="backWidth">1472.5</param>
 							<param name="backHeight">$SKINSHORTCUTS[height]</param>
 						</include>
-						<include name="PanelLabel">
+						<include content="PanelLabel">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="Label">$SKINSHORTCUTS[label]</param>
 							<param name="Title">$VAR[HomeWidget8011$SKINSHORTCUTS[id]TitleVar]</param>
@@ -1350,7 +1350,7 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation1</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -1360,7 +1360,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -1639,10 +1639,10 @@
 					<control type="group">
 						<top>90</top>
 						<left>40</left>
-						<include name="InfoVisible1">
+						<include content="InfoVisible1">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 						</include>
-						<include name="Info">
+						<include content="Info">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="widthBack">1890</param>
@@ -1655,13 +1655,13 @@
 					<!-- Background/Label -->
 					<control type="group">
 						<top>$SKINSHORTCUTS[top]</top>
-						<include name="PanelBack">
+						<include content="PanelBack">
 							<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 							<param name="backWidth">1882.5</param>
 							<param name="backHeight">$SKINSHORTCUTS[height]</param>
 						</include>
-						<include name="PanelLabel">
+						<include content="PanelLabel">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="Label">$SKINSHORTCUTS[label]</param>
 							<param name="Title">$VAR[HomeWidget8011$SKINSHORTCUTS[id]TitleVar]</param>
@@ -1686,7 +1686,7 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation1</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -1696,7 +1696,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -2290,10 +2290,10 @@
 					<top>90</top>
 					<left>245</left>
 					<visible>IntegerGreaterThan(Container(8011$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible1">
+					<include content="InfoVisible1">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 						<param name="widthBack">1470</param>
@@ -2308,10 +2308,10 @@
 					<top>90</top>
 					<left>245</left>
 					<visible>IntegerGreaterThan(Container(8012$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible1">
+					<include content="InfoVisible1">
 						<param name="id">8012$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8012$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
 						<param name="widthBack">1470</param>
@@ -2326,10 +2326,10 @@
 					<top>90</top>
 					<left>245</left>
 					<visible>IntegerGreaterThan(Container(8013$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible1">
+					<include content="InfoVisible1">
 						<param name="id">8013$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8013$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
 						<param name="widthBack">1470</param>
@@ -2343,13 +2343,13 @@
 				<control type="group">
 					<top>462</top>
 					<visible>IntegerGreaterThan(Container(8011$SKINSHORTCUTS[id]).NumItems,0) | IntegerGreaterThan(Container(8012$SKINSHORTCUTS[id]).NumItems,0) | IntegerGreaterThan(Container(8013$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="PanelBack">
+					<include content="PanelBack">
 						<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 						<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						<param name="backWidth">1472.5</param>
 						<param name="backHeight">326</param>
 					</include>
-					<include name="PanelLabelMixed">
+					<include content="PanelLabelMixed">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 						<param name="id.b">8012$SKINSHORTCUTS[id]</param>
 						<param name="id.c">8013$SKINSHORTCUTS[id]</param>
@@ -2388,7 +2388,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>9000</onleft>
 						<onright>8012$SKINSHORTCUTS[id]</onright>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -2398,7 +2398,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -2446,7 +2446,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8011$SKINSHORTCUTS[id]</onleft>
 						<onright>8013$SKINSHORTCUTS[id]</onright>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8012$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget.b]</param>
@@ -2456,7 +2456,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent.b]">
+						<include content="$SKINSHORTCUTS[artcontent.b]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.b]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.b]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork.b]</param>
@@ -2504,7 +2504,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8012$SKINSHORTCUTS[id]</onleft>
 						<include>MixedRightNavigation1</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8013$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget.c]</param>
@@ -2514,7 +2514,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent.c]">
+						<include content="$SKINSHORTCUTS[artcontent.c]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.c]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.c]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork.c]</param>
@@ -2553,7 +2553,7 @@
 				<control type="group">
 					<top>462</top>
 					<visible>IntegerGreaterThan(Container(8011$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 						<param name="Left">245</param>
 						<param name="Width">568</param>
@@ -2572,7 +2572,7 @@
 				<control type="group">
 					<top>462</top>
 					<visible>IntegerGreaterThan(Container(8012$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8012$SKINSHORTCUTS[id]</param>
 						<param name="Left">818</param>
 						<param name="Width">284</param>
@@ -2591,7 +2591,7 @@
 				<control type="group">
 					<top>462</top>
 					<visible>IntegerGreaterThan(Container(8013$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8013$SKINSHORTCUTS[id]</param>
 						<param name="Left">1107</param>
 						<param name="Width">568</param>
@@ -3337,10 +3337,10 @@
 					<top>90</top>
 					<left>40</left>
 					<visible>IntegerGreaterThan(Container(8011$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible1">
+					<include content="InfoVisible1">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 						<param name="widthBack">1890</param>
@@ -3355,10 +3355,10 @@
 					<top>90</top>
 					<left>40</left>
 					<visible>IntegerGreaterThan(Container(8012$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible1">
+					<include content="InfoVisible1">
 						<param name="id">8012$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8012$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
 						<param name="widthBack">1890</param>
@@ -3373,10 +3373,10 @@
 					<top>90</top>
 					<left>40</left>
 					<visible>IntegerGreaterThan(Container(8013$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible1">
+					<include content="InfoVisible1">
 						<param name="id">8013$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8013$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
 						<param name="widthBack">1890</param>
@@ -3391,10 +3391,10 @@
 					<top>90</top>
 					<left>40</left>
 					<visible>IntegerGreaterThan(Container(8014$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible1">
+					<include content="InfoVisible1">
 						<param name="id">8014$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8014$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.d]</param>
 						<param name="Texture">$VAR[HomeWidget8014$SKINSHORTCUTS[id]PosterVar]</param>
@@ -3409,13 +3409,13 @@
 				<control type="group">
 					<top>454</top>
 					<visible>IntegerGreaterThan(Container(8011$SKINSHORTCUTS[id]).NumItems,0) | IntegerGreaterThan(Container(8012$SKINSHORTCUTS[id]).NumItems,0) | IntegerGreaterThan(Container(8013$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="PanelBack">
+					<include content="PanelBack">
 						<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 						<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						<param name="backWidth">1882.5</param>
 						<param name="backHeight">342</param>
 					</include>
-					<include name="PanelLabelMixed">
+					<include content="PanelLabelMixed">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 						<param name="id.b">8012$SKINSHORTCUTS[id]</param>
 						<param name="id.c">8013$SKINSHORTCUTS[id]</param>
@@ -3460,7 +3460,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>9000</onleft>
 						<onright>8012$SKINSHORTCUTS[id]</onright>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8011$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -3470,7 +3470,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -3518,7 +3518,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8011$SKINSHORTCUTS[id]</onleft>
 						<onright>8013$SKINSHORTCUTS[id]</onright>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8012$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget.b]</param>
@@ -3528,7 +3528,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent.b]">
+						<include content="$SKINSHORTCUTS[artcontent.b]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.b]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.b]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork.b]</param>
@@ -3579,7 +3579,7 @@
 						<onright condition="!Skin.HasSetting(lowermainmenu)">9000</onright>
 						<onright condition="Skin.HasSetting(lowermainmenu) + Control.IsVisible(8021$SKINSHORTCUTS[id])">8021$SKINSHORTCUTS[id]</onright>
 						<onright condition="Skin.HasSetting(lowermainmenu) + !Control.IsVisible(8021$SKINSHORTCUTS[id])">9000</onright>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8013$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget.c]</param>
@@ -3589,7 +3589,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent.c]">
+						<include content="$SKINSHORTCUTS[artcontent.c]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.c]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.c]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork.c]</param>
@@ -3637,7 +3637,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8013$SKINSHORTCUTS[id]</onleft>
 						<include>MixedRightNavigation1</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8014$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.d]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget.d]</param>
@@ -3647,7 +3647,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent.d]">
+						<include content="$SKINSHORTCUTS[artcontent.d]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.d]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.d]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork.d]</param>
@@ -3686,7 +3686,7 @@
 				<control type="group">
 					<top>454</top>
 					<visible>IntegerGreaterThan(Container(8011$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 						<param name="Left">40</param>
 						<param name="Width">602.5</param>
@@ -3705,7 +3705,7 @@
 				<control type="group">
 					<top>454</top>
 					<visible>IntegerGreaterThan(Container(8012$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8012$SKINSHORTCUTS[id]</param>
 						<param name="Left">647.5</param>
 						<param name="Width">310</param>
@@ -3724,7 +3724,7 @@
 				<control type="group">
 					<top>454</top>
 					<visible>IntegerGreaterThan(Container(8013$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8013$SKINSHORTCUTS[id]</param>
 						<param name="Left">962.5</param>
 						<param name="Width">602.5</param>
@@ -3743,7 +3743,7 @@
 				<control type="group">
 					<top>454</top>
 					<visible>IntegerGreaterThan(Container(8014$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8014$SKINSHORTCUTS[id]</param>
 						<param name="Left">1570</param>
 						<param name="Width">310</param>
@@ -4023,7 +4023,7 @@
 					<visible>IntegerGreaterThan(Container(8021$SKINSHORTCUTS[id]).NumItems,0)</visible>
 					<control type="group">
 						<visible>Skin.String(Widget.ListInfo,Always On) | [IsEmpty(Skin.String(Widget.ListInfo)) + Control.HasFocus(8021$SKINSHORTCUTS[id])]</visible>
-						<include name="Info">
+						<include content="Info">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="widthBack">$SKINSHORTCUTS[infowidthback]</param>
@@ -4084,7 +4084,7 @@
 								<wrapmultiline>true</wrapmultiline>
 								<label>$VAR[HomeWidget8021$SKINSHORTCUTS[id]TitleVar]</label>
 							</control>
-							<include name="$SKINSHORTCUTS[artcontent]">
+							<include content="$SKINSHORTCUTS[artcontent]">
 								<param name="id">8021$SKINSHORTCUTS[id]</param>
 								<param name="Texture">$SKINSHORTCUTS[artwork]</param>
 								<param name="Title2">$VAR[HomeWidget8021$SKINSHORTCUTS[id]Title2Var]</param>
@@ -4123,7 +4123,7 @@
 						<effect type="rotatey" start="0" end="-180" center="$SKINSHORTCUTS[rotate]" time="400" tween="sine" easing="inout" />
 						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
 					</animation>
-					<include name="OnInfo">
+					<include content="OnInfo">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 						<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -4133,7 +4133,7 @@
 						<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 						<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 					</include>
-					<include name="$SKINSHORTCUTS[containercontent]">
+					<include content="$SKINSHORTCUTS[containercontent]">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
 						<param name="leftArt">$SKINSHORTCUTS[leftartbanner]</param>
@@ -4392,10 +4392,10 @@
 					<control type="group">
 						<top>449</top>
 						<left>245</left>
-						<include name="InfoVisible2">
+						<include content="InfoVisible2">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 						</include>
-						<include name="Info">
+						<include content="Info">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="widthBack">1470</param>
@@ -4408,13 +4408,13 @@
 					<!-- Background/Label -->
 					<control type="group">
 						<top>$SKINSHORTCUTS[top]</top>
-						<include name="PanelBack">
+						<include content="PanelBack">
 							<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 							<param name="backWidth">1472.5</param>
 							<param name="backHeight">$SKINSHORTCUTS[height]</param>
 						</include>
-						<include name="PanelLabel">
+						<include content="PanelLabel">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="Label">$SKINSHORTCUTS[label]</param>
 							<param name="Title">$VAR[HomeWidget8021$SKINSHORTCUTS[id]TitleVar]</param>
@@ -4439,7 +4439,7 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation2</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -4449,7 +4449,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -4728,10 +4728,10 @@
 					<control type="group">
 						<top>449</top>
 						<left>40</left>
-						<include name="InfoVisible2">
+						<include content="InfoVisible2">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 						</include>
-						<include name="Info">
+						<include content="Info">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="widthBack">1890</param>
@@ -4744,13 +4744,13 @@
 					<!-- Background/Label -->
 					<control type="group">
 						<top>$SKINSHORTCUTS[top]</top>
-						<include name="PanelBack">
+						<include content="PanelBack">
 							<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 							<param name="backWidth">1882.5</param>
 							<param name="backHeight">$SKINSHORTCUTS[height]</param>
 						</include>
-						<include name="PanelLabel">
+						<include content="PanelLabel">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="Label">$SKINSHORTCUTS[label]</param>
 							<param name="Title">$VAR[HomeWidget8021$SKINSHORTCUTS[id]TitleVar]</param>
@@ -4775,7 +4775,7 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation2</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -4785,7 +4785,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -5064,10 +5064,10 @@
 					<control type="group">
 						<top>449</top>
 						<left>245</left>
-						<include name="InfoVisible2">
+						<include content="InfoVisible2">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 						</include>
-						<include name="Info">
+						<include content="Info">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="widthBack">1470</param>
@@ -5080,13 +5080,13 @@
 					<!-- Background/Label -->
 					<control type="group">
 						<top>$SKINSHORTCUTS[top]</top>
-						<include name="PanelBack">
+						<include content="PanelBack">
 							<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 							<param name="backWidth">1472.5</param>
 							<param name="backHeight">$SKINSHORTCUTS[height]</param>
 						</include>
-						<include name="PanelLabel">
+						<include content="PanelLabel">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="Label">$SKINSHORTCUTS[label]</param>
 							<param name="Title">$VAR[HomeWidget8021$SKINSHORTCUTS[id]TitleVar]</param>
@@ -5111,7 +5111,7 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation2</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -5121,7 +5121,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -5400,10 +5400,10 @@
 					<control type="group">
 						<top>449</top>
 						<left>40</left>
-						<include name="InfoVisible2">
+						<include content="InfoVisible2">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 						</include>
-						<include name="Info">
+						<include content="Info">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Texture">$VAR[HomeWidget8021$SKINSHORTCUTS[id]PosterVar]</param>
@@ -5417,13 +5417,13 @@
 					<!-- Background/Label -->
 					<control type="group">
 						<top>$SKINSHORTCUTS[top]</top>
-						<include name="PanelBack">
+						<include content="PanelBack">
 							<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 							<param name="backWidth">1882.5</param>
 							<param name="backHeight">$SKINSHORTCUTS[height]</param>
 						</include>
-						<include name="PanelLabel">
+						<include content="PanelLabel">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="Label">$SKINSHORTCUTS[label]</param>
 							<param name="Title">$VAR[HomeWidget8021$SKINSHORTCUTS[id]TitleVar]</param>
@@ -5448,7 +5448,7 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation2</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -5458,7 +5458,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -6052,10 +6052,10 @@
 					<top>449</top>
 					<left>245</left>
 					<visible>IntegerGreaterThan(Container(8021$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible2">
+					<include content="InfoVisible2">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 						<param name="widthBack">1470</param>
@@ -6070,10 +6070,10 @@
 					<top>449</top>
 					<left>245</left>
 					<visible>IntegerGreaterThan(Container(8022$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible2">
+					<include content="InfoVisible2">
 						<param name="id">8022$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8022$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
 						<param name="widthBack">1470</param>
@@ -6088,10 +6088,10 @@
 					<top>449</top>
 					<left>245</left>
 					<visible>IntegerGreaterThan(Container(8023$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible2">
+					<include content="InfoVisible2">
 						<param name="id">8023$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8023$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
 						<param name="widthBack">1470</param>
@@ -6105,13 +6105,13 @@
 				<control type="group">
 					<top>103</top>
 					<visible>IntegerGreaterThan(Container(8021$SKINSHORTCUTS[id]).NumItems,0) | IntegerGreaterThan(Container(8022$SKINSHORTCUTS[id]).NumItems,0) | IntegerGreaterThan(Container(8023$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="PanelBack">
+					<include content="PanelBack">
 						<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 						<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						<param name="backWidth">1472.5</param>
 						<param name="backHeight">326</param>
 					</include>
-					<include name="PanelLabelMixed">
+					<include content="PanelLabelMixed">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 						<param name="id.b">8022$SKINSHORTCUTS[id]</param>
 						<param name="id.c">8023$SKINSHORTCUTS[id]</param>
@@ -6150,7 +6150,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>MixedLeftNavigation2</include>
 						<onright>8022$SKINSHORTCUTS[id]</onright>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -6160,7 +6160,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -6208,7 +6208,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8021$SKINSHORTCUTS[id]</onleft>
 						<onright>8023$SKINSHORTCUTS[id]</onright>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8022$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget.b]</param>
@@ -6218,7 +6218,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent.b]">
+						<include content="$SKINSHORTCUTS[artcontent.b]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.b]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.b]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork.b]</param>
@@ -6266,7 +6266,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8022$SKINSHORTCUTS[id]</onleft>
 						<include>MixedRightNavigation2</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8023$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget.c]</param>
@@ -6276,7 +6276,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent.c]">
+						<include content="$SKINSHORTCUTS[artcontent.c]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.c]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.c]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork.c]</param>
@@ -6315,7 +6315,7 @@
 				<control type="group">
 					<top>103</top>
 					<visible>IntegerGreaterThan(Container(8021$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 						<param name="Left">245</param>
 						<param name="Width">568</param>
@@ -6334,7 +6334,7 @@
 				<control type="group">
 					<top>103</top>
 					<visible>IntegerGreaterThan(Container(8022$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8022$SKINSHORTCUTS[id]</param>
 						<param name="Left">818</param>
 						<param name="Width">284</param>
@@ -6353,7 +6353,7 @@
 				<control type="group">
 					<top>103</top>
 					<visible>IntegerGreaterThan(Container(8023$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8023$SKINSHORTCUTS[id]</param>
 						<param name="Left">1107</param>
 						<param name="Width">568</param>
@@ -7099,10 +7099,10 @@
 					<top>449</top>
 					<left>40</left>
 					<visible>IntegerGreaterThan(Container(8021$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible2">
+					<include content="InfoVisible2">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 						<param name="widthBack">1890</param>
@@ -7117,10 +7117,10 @@
 					<top>449</top>
 					<left>40</left>
 					<visible>IntegerGreaterThan(Container(8022$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible2">
+					<include content="InfoVisible2">
 						<param name="id">8022$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8022$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
 						<param name="widthBack">1890</param>
@@ -7135,10 +7135,10 @@
 					<top>449</top>
 					<left>40</left>
 					<visible>IntegerGreaterThan(Container(8023$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible2">
+					<include content="InfoVisible2">
 						<param name="id">8023$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8023$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
 						<param name="widthBack">1890</param>
@@ -7153,10 +7153,10 @@
 					<top>449</top>
 					<left>40</left>
 					<visible>IntegerGreaterThan(Container(8024$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="InfoVisible2">
+					<include content="InfoVisible2">
 						<param name="id">8024$SKINSHORTCUTS[id]</param>
 					</include>
-					<include name="Info">
+					<include content="Info">
 						<param name="id">8024$SKINSHORTCUTS[id]</param>
 						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.d]</param>
 						<param name="widthBack">1890</param>
@@ -7170,13 +7170,13 @@
 				<control type="group">
 					<top>95</top>
 					<visible>IntegerGreaterThan(Container(8021$SKINSHORTCUTS[id]).NumItems,0) | IntegerGreaterThan(Container(8022$SKINSHORTCUTS[id]).NumItems,0) | IntegerGreaterThan(Container(8023$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="PanelBack">
+					<include content="PanelBack">
 						<param name="Texture">$SKINSHORTCUTS[widgetbackground]</param>
 						<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						<param name="backWidth">1882.5</param>
 						<param name="backHeight">342</param>
 					</include>
-					<include name="PanelLabelMixed">
+					<include content="PanelLabelMixed">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 						<param name="id.b">8022$SKINSHORTCUTS[id]</param>
 						<param name="id.c">8023$SKINSHORTCUTS[id]</param>
@@ -7221,7 +7221,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>MixedLeftNavigation2</include>
 						<onright>8022$SKINSHORTCUTS[id]</onright>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8021$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget]</param>
@@ -7231,7 +7231,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent]">
+						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -7279,7 +7279,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8021$SKINSHORTCUTS[id]</onleft>
 						<onright>8023$SKINSHORTCUTS[id]</onright>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8022$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget.b]</param>
@@ -7289,7 +7289,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent.b]">
+						<include content="$SKINSHORTCUTS[artcontent.b]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.b]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.b]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork.b]</param>
@@ -7340,7 +7340,7 @@
 						<onright condition="!Skin.HasSetting(lowermainmenu)">9000</onright>
 						<onright condition="Skin.HasSetting(lowermainmenu) + Control.IsVisible(8021$SKINSHORTCUTS[id])">8021$SKINSHORTCUTS[id]</onright>
 						<onright condition="Skin.HasSetting(lowermainmenu) + !Control.IsVisible(8021$SKINSHORTCUTS[id])">9000</onright>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8023$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget.c]</param>
@@ -7350,7 +7350,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent.c]">
+						<include content="$SKINSHORTCUTS[artcontent.c]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.c]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.c]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork.c]</param>
@@ -7398,7 +7398,7 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8023$SKINSHORTCUTS[id]</onleft>
 						<include>MixedRightNavigation2</include>
-						<include name="OnInfo">
+						<include content="OnInfo">
 							<param name="id">8024$SKINSHORTCUTS[id]</param>
 							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.d]</param>
 							<param name="Widget">$SKINSHORTCUTS[widget.d]</param>
@@ -7408,7 +7408,7 @@
 							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
 							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
 						</include>
-						<include name="$SKINSHORTCUTS[artcontent.d]">
+						<include content="$SKINSHORTCUTS[artcontent.d]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.d]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.d]</param>
 							<param name="Texture">$SKINSHORTCUTS[artwork.d]</param>
@@ -7447,7 +7447,7 @@
 				<control type="group">
 					<top>95</top>
 					<visible>IntegerGreaterThan(Container(8021$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 						<param name="Texture">homewidgets/label_back_landscape.png</param>
 						<param name="Left">40</param>
@@ -7467,7 +7467,7 @@
 				<control type="group">
 					<top>95</top>
 					<visible>IntegerGreaterThan(Container(8022$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8022$SKINSHORTCUTS[id]</param>
 						<param name="Left">647.5</param>
 						<param name="Width">310</param>
@@ -7486,7 +7486,7 @@
 				<control type="group">
 					<top>95</top>
 					<visible>IntegerGreaterThan(Container(8023$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8023$SKINSHORTCUTS[id]</param>
 						<param name="Left">962.5</param>
 						<param name="Width">602.5</param>
@@ -7505,7 +7505,7 @@
 				<control type="group">
 					<top>95</top>
 					<visible>IntegerGreaterThan(Container(8024$SKINSHORTCUTS[id]).NumItems,0)</visible>
-					<include name="LabelMixed">
+					<include content="LabelMixed">
 						<param name="id">8024$SKINSHORTCUTS[id]</param>
 						<param name="Left">1570</param>
 						<param name="Width">310</param>
@@ -9522,7 +9522,7 @@
 		<property name="imagepath">$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem.Art(fanart)]</property>
 		<property name="imagepathmulti" tag="property" attribute="name|widgetType" value="weather">$INFO[Container(8011$SKINSHORTCUTS[id]).ListItem.Property(WeatherMultiFanart)]</property>
 		<controls>
-			<include name="WidgetBackgroundFanart">
+			<include content="WidgetBackgroundFanart">
 				<param name="Visible">$SKINSHORTCUTS[visible]</param>
 				<param name="isWeather">$SKINSHORTCUTS[isWeather]</param>
 				<param name="imagePath">$SKINSHORTCUTS[imagepath]</param>
@@ -9543,7 +9543,7 @@
 		<property name="imagepath">$INFO[Container(8012$SKINSHORTCUTS[id]).ListItem.Art(fanart)]</property>
 		<property name="imagepathmulti" tag="property" attribute="name|widgetType.b" value="weather">$INFO[Container(8012$SKINSHORTCUTS[id]).ListItem.Property(WeatherMultiFanart)]</property>
 		<controls>
-			<include name="WidgetBackgroundFanart">
+			<include content="WidgetBackgroundFanart">
 				<param name="Visible">$SKINSHORTCUTS[visible]</param>
 				<param name="isWeather">$SKINSHORTCUTS[isWeather]</param>
 				<param name="imagePath">$SKINSHORTCUTS[imagepath]</param>
@@ -9564,7 +9564,7 @@
 		<property name="imagepath">$INFO[Container(8013$SKINSHORTCUTS[id]).ListItem.Art(fanart)]</property>
 		<property name="imagepathmulti" tag="property" attribute="name|widgetType.c" value="weather">$INFO[Container(8013$SKINSHORTCUTS[id]).ListItem.Property(WeatherMultiFanart)]</property>
 		<controls>
-			<include name="WidgetBackgroundFanart">
+			<include content="WidgetBackgroundFanart">
 				<param name="Visible">$SKINSHORTCUTS[visible]</param>
 				<param name="isWeather">$SKINSHORTCUTS[isWeather]</param>
 				<param name="imagePath">$SKINSHORTCUTS[imagepath]</param>
@@ -9584,7 +9584,7 @@
 		<property name="imagepath">$INFO[Container(8014$SKINSHORTCUTS[id]).ListItem.Art(fanart)]</property>
 		<property name="imagepathmulti" tag="property" attribute="name|widgetType.d" value="weather">$INFO[Container(8014$SKINSHORTCUTS[id]).ListItem.Property(WeatherMultiFanart)]</property>
 		<controls>
-			<include name="WidgetBackgroundFanart">
+			<include content="WidgetBackgroundFanart">
 				<param name="Visible">$SKINSHORTCUTS[visible]</param>
 				<param name="isWeather">$SKINSHORTCUTS[isWeather]</param>
 				<param name="imagePath">$SKINSHORTCUTS[imagepath]</param>
@@ -9611,7 +9611,7 @@
 		<property name="imagepath">$INFO[Container(8021$SKINSHORTCUTS[id]).ListItem.Art(fanart)]</property>
 		<property name="imagepathmulti" tag="property" attribute="name|widgetType.2" value="weather">$INFO[Container(8021$SKINSHORTCUTS[id]).ListItem.Property(WeatherMultiFanart)]</property>
 		<controls>
-			<include name="WidgetBackgroundFanart">
+			<include content="WidgetBackgroundFanart">
 				<param name="Visible">$SKINSHORTCUTS[visible]</param>
 				<param name="isWeather">$SKINSHORTCUTS[isWeather]</param>
 				<param name="imagePath">$SKINSHORTCUTS[imagepath]</param>
@@ -9632,7 +9632,7 @@
 		<property name="imagepath">$INFO[Container(8022$SKINSHORTCUTS[id]).ListItem.Art(fanart)]</property>
 		<property name="imagepathmulti" tag="property" attribute="name|widgetType.2b" value="weather">$INFO[Container(8022$SKINSHORTCUTS[id]).ListItem.Property(WeatherMultiFanart)]</property>
 		<controls>
-			<include name="WidgetBackgroundFanart">
+			<include content="WidgetBackgroundFanart">
 				<param name="Visible">$SKINSHORTCUTS[visible]</param>
 				<param name="isWeather">$SKINSHORTCUTS[isWeather]</param>
 				<param name="imagePath">$SKINSHORTCUTS[imagepath]</param>
@@ -9653,7 +9653,7 @@
 		<property name="imagepath">$INFO[Container(8023$SKINSHORTCUTS[id]).ListItem.Art(fanart)]</property>
 		<property name="imagepathmulti" tag="property" attribute="name|widgetType.2c" value="weather">$INFO[Container(8023$SKINSHORTCUTS[id]).ListItem.Property(WeatherMultiFanart)]</property>
 		<controls>
-			<include name="WidgetBackgroundFanart">
+			<include content="WidgetBackgroundFanart">
 				<param name="Visible">$SKINSHORTCUTS[visible]</param>
 				<param name="isWeather">$SKINSHORTCUTS[isWeather]</param>
 				<param name="imagePath">$SKINSHORTCUTS[imagepath]</param>
@@ -9673,7 +9673,7 @@
 		<property name="imagepath">$INFO[Container(8024$SKINSHORTCUTS[id]).ListItem.Art(fanart)]</property>
 		<property name="imagepathmulti" tag="property" attribute="name|widgetType.2d" value="weather">$INFO[Container(8024$SKINSHORTCUTS[id]).ListItem.Property(WeatherMultiFanart)]</property>
 		<controls>
-			<include name="WidgetBackgroundFanart">
+			<include content="WidgetBackgroundFanart">
 				<param name="Visible">$SKINSHORTCUTS[visible]</param>
 				<param name="isWeather">$SKINSHORTCUTS[isWeather]</param>
 				<param name="imagePath">$SKINSHORTCUTS[imagepath]</param>
