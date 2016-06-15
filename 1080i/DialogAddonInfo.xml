@@ -20,7 +20,7 @@
 				<top>-800</top>
 				<width>1491</width>
 				<align>center</align>
-				<label>$INFO[ListItem.AddonName),$LOCALIZE[24003] - ]</label>
+				<label>$INFO[ListItem.AddonName,$LOCALIZE[24003] - ]</label>
 				<font>Font_ShowcaseMainLabel2</font>
 			</control>
 			<control type="image">
@@ -45,7 +45,7 @@
 					<left>300</left>
 					<width>870</width>
 					<height>38</height>
-					<label fallback="416">$INFO[ListItem.AddonType)]</label>
+					<label fallback="416">$INFO[ListItem.AddonType]</label>
 					<font>Font_Reg32</font>
 					<scroll>true</scroll>
 				</control>
@@ -63,7 +63,7 @@
 					<top>45</top>
 					<width>870</width>
 					<height>38</height>
-					<label fallback="416">$INFO[ListItem.AddonCreator)]</label>
+					<label fallback="416">$INFO[ListItem.AddonCreator]</label>
 					<font>Font_Reg32</font>
 					<scroll>true</scroll>
 				</control>
@@ -117,7 +117,7 @@
 					<top>135</top>
 					<width>870</width>
 					<height>38</height>
-					<label fallback="416">$INFO[ListItem.AddonSummary)]</label>
+					<label fallback="416">$INFO[ListItem.AddonSummary]</label>
 					<font>Font_Reg32</font>
 					<pauseatend>2000</pauseatend>
 				</control>
@@ -142,7 +142,7 @@
 						<top>292</top>
 						<width>1380</width>
 						<height>396</height>
-						<label>$INFO[ListItem.AddonDescription)]</label>
+						<label>$INFO[ListItem.AddonDescription]</label>
 						<font>Font_Reg32</font>
 						<pagecontrol>60</pagecontrol>
 					</control>

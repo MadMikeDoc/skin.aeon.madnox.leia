@@ -3919,7 +3919,7 @@
 		<onfocus>SetProperty(Widget.Background,homewidgets/bg_default.png,Home)</onfocus>
 		<!-- Year -->
 		<onfocus>SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.Year],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.AddonName))">SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.AddonVersion)],Home)</onfocus>
+		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.AddonName)">SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.AddonVersion)],Home)</onfocus>
 		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.Year,$INFO[System.FriendlyName],Home)</onfocus>
 		<!-- MPAA -->
 		<onfocus>SetProperty(Widget.FlagsRating,$INFO[Container($PARAM[id]).ListItem.MPAA,$VAR[ColorFlagsRating]rating/,.png],home)</onfocus>
