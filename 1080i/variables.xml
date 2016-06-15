@@ -1003,7 +1003,7 @@
 		<value condition="!IsEmpty(ListItem.Top250) + StringCompare(ListItem.Top250,3)">common/imdb-3-w.png</value>
 		<value condition="!StringCompare(ListItem.Overlay,OverlayWatched.png) + !IsEmpty(ListItem.Top250)">common/imdb.png</value>
 		<value condition="!IsEmpty(ListItem.Top250)">common/imdbwatched.png</value>
-		<value condition="!IsEmpty(ListItem.AddonBroken))">common/wrench.png</value>
+		<value condition="!IsEmpty(ListItem.AddonBroken)">common/wrench.png</value>
 		<value>$INFO[ListItem.Overlay]</value>
 	</variable>
 	<variable name="Imdb_250">
