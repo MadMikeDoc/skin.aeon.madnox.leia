@@ -298,7 +298,7 @@
 				</control>
 
 				<!-- Poster round edges -->
-				<control type="image" id="3822">   	
+				<control type="image" id="3822">
 					<left>-19</left>
 					<top>-40</top>
 					<width>550</width>
@@ -363,7 +363,7 @@
 					<visible>Skin.HasSetting(ListCase)</visible>
 				</control>
 
-			</control>					
+			</control>
 			<control type="group">
 				<visible>!Skin.HasSetting(ListCase)</visible>
 				<control type="image">
@@ -494,7 +494,7 @@
 				<texture background="true">$VAR[LogoVar]</texture>
 				<visible>!Skin.HasSetting(ListCase)</visible>
 			</control>
-			<!-- Case Back -->		
+			<!-- Case Back -->
 			<control type="group">
 				<animation effect="slide" end="-90,0" time="240" tween="cubic" easing="inout" condition="![Skin.HasSetting(listcdart) + [Container.Content(movies) | Container.Content(sets)]] | [Container.Content(tvshows) | Container.Content(seasons)]">Conditional</animation>
 				<visible>Skin.HasSetting(ListCase)</visible>
@@ -791,7 +791,7 @@
 					<top>465</top>
 					<width>491</width>
 					<height>110</height>
-					<aspectratio>scale</aspectratio>					
+					<aspectratio>scale</aspectratio>
 					<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 					<bordersize>7</bordersize>
 					<texture background="true">$INFO[Container.ListItem.Art(fanart)]</texture>
@@ -803,7 +803,7 @@
 					<top>465</top>
 					<width>491</width>
 					<height>110</height>
-					<aspectratio>scale</aspectratio>					
+					<aspectratio>scale</aspectratio>
 					<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 					<bordersize>7</bordersize>
 					<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.FanArt)]</texture>
@@ -976,7 +976,7 @@
 						<texture>flags/discnumber/$INFO[Window(Home).Property(SkinHelper.MovieSet.Count)].png</texture>
 						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					</control>
-				</control>				
+				</control>
 				<control type="group">
 					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 					<left>52</left>
@@ -1017,7 +1017,7 @@
 					</control>
 				</control>
 			</control>
-			<!-- DVD Case Back end -->			
+			<!-- DVD Case Back end -->
 			<control type="grouplist">
 				<left>-46</left>
 				<top>200</top>
@@ -1315,7 +1315,7 @@
 						<bordersize>2</bordersize>
 						<visible>Skin.HasSetting(ListCase)</visible>
 					</control>
-				</control>					
+				</control>
 
 				<control type="group">
 					<visible>[Container.Content(episodes) + !Skin.HasSetting(ListCase)] | [Container.Content(episodes) + Skin.HasSetting(listshowposter) + !Skin.HasSetting(ListCase)]</visible>
@@ -1359,7 +1359,7 @@
 						<bordersize>2</bordersize>
 						<visible>Skin.HasSetting(ListCase)</visible>
 					</control>
-				</control>					
+				</control>
 			</control>
 
 			<control type="group">
@@ -1417,7 +1417,7 @@
 					<bordersize>20</bordersize>
 				</control>
 			</control>
-			
+
 			<control type="group">
 				<left>1296</left>
 				<top>165</top>
@@ -1444,7 +1444,7 @@
 					<colordiffuse>d0FFFFFF</colordiffuse>
 				</control>
 			</control>
-				
+
 			<control type="group">
 				<left>1256</left>
 				<top>365</top>
@@ -1533,7 +1533,7 @@
 					<colordiffuse>d0FFFFFF</colordiffuse>
 				</control>
 			</control>
-			
+
 			<control type="group">
 				<left>1296</left>
 				<top>165</top>
@@ -1560,7 +1560,7 @@
 					<colordiffuse>d0FFFFFF</colordiffuse>
 				</control>
 			</control>
-			
+
 			<control type="group">
 				<left>1256</left>
 				<top>365</top>
@@ -1943,7 +1943,7 @@
 						<top>5</top>
 						<width>90</width>
 						<height>90</height>
-						<texture>$VAR[Colortdefaulticons]$VAR[SmallListIconVar]</texture>
+						<texture>$VAR[SmallListIconVar]</texture>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					</control>
 				</itemlayout>
@@ -2002,7 +2002,7 @@
 						<top>5</top>
 						<width>90</width>
 						<height>90</height>
-						<texture>$VAR[Colortdefaulticons]$VAR[SmallListIconVar]</texture>
+						<texture>$VAR[SmallListIconVar]</texture>
 						<colordiffuse>white2</colordiffuse>
 					</control>
 				</focusedlayout>
@@ -2056,7 +2056,7 @@
 						<top>3</top>
 						<width>55</width>
 						<height>55</height>
-						<texture>$VAR[Colortdefaulticons]$VAR[SmallListIconVar]</texture>
+						<texture>$VAR[SmallListIconVar]</texture>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | Stringcompare(ListItem.Label,..)</visible>
 					</control>
@@ -2117,7 +2117,7 @@
 						<top>3</top>
 						<width>55</width>
 						<height>55</height>
-						<texture>$VAR[Colortdefaulticons]$VAR[SmallListIconVar]</texture>
+						<texture>$VAR[SmallListIconVar]</texture>
 						<colordiffuse>white2</colordiffuse>
 						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | Stringcompare(ListItem.Label,..)</visible>
 					</control>
@@ -2136,7 +2136,7 @@
 				<onright>50</onright>
 				<visible>!Skin.HasSetting(AlphabetScrollbar)</visible>
 			</control>
-			
+
 		<!-- Letter-Scrollbar -->
 			<control type="image">
 				<left>78</left>
