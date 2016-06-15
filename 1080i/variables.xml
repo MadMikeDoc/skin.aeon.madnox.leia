@@ -728,7 +728,7 @@
 		<value condition="!IsEmpty(Skin.String(WeatherFanartDir)) + Control.HasFocus(7503)">$INFO[Container(7503).ListItem.Property(Fanart)]</value>
 		<value condition="!IsEmpty(Skin.String(WeatherFanartDir)) + Control.HasFocus(7504)">$INFO[Container(7504).ListItem.Property(Fanart)]</value>
 		<value condition="!IsEmpty(Skin.String(WeatherFanartDir)) + StringCompare(Skin.String(WeatherBackground),weather)">$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</value>
-		<value condition="SubString(Skin.String(WeatherBackground),weatherworldbackground)">$INFO[Window(Weather).Property(Current.Earth.Phase.LargeImage)]</value>
+		<value condition="SubString(Skin.String(WeatherBackground),weatherworldbackground)">$INFO[Window(Weather).Property(Current.Earth.Phase.image)]</value>
 		<value condition="!IsEmpty(Skin.String(WeatherBackground))">$INFO[Skin.String(WeatherBackground)]</value>
 		<value>special://skin/backgrounds/weather/</value>
 	</variable>
@@ -827,7 +827,7 @@
 		<value condition="skin.hassetting(backendmode) + SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
 		<value condition="!Skin.HasSetting(preferplot) + !IsEmpty(ListItem.PlotOutline) + Control.IsVisible(7550)">$INFO[ListItem.PlotOutline]</value>
 		<value condition="Container.Content(seasons)">$INFO[Container.ShowPlot]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Description)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonDescription)]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 	<variable name="GlobalPlotVar">
@@ -1003,7 +1003,7 @@
 		<value condition="!IsEmpty(ListItem.Top250) + StringCompare(ListItem.Top250,3)">common/imdb-3-w.png</value>
 		<value condition="!StringCompare(ListItem.Overlay,OverlayWatched.png) + !IsEmpty(ListItem.Top250)">common/imdb.png</value>
 		<value condition="!IsEmpty(ListItem.Top250)">common/imdbwatched.png</value>
-		<value condition="!IsEmpty(ListItem.Property(Addon.Broken))">common/wrench.png</value>
+		<value condition="!IsEmpty(ListItem.AddonBroken))">common/wrench.png</value>
 		<value>$INFO[ListItem.Overlay]</value>
 	</variable>
 	<variable name="Imdb_250">
@@ -1421,7 +1421,7 @@
 	<variable name="InfoWallBottomLabel1Var">
 		<value condition="skin.hassetting(backendmode) + SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(Set.Movies.Director)]</value>
 		<value condition="Container.Content(movies) | Container.Content(episodes)">$INFO[ListItem.Director,$LOCALIZE[31156] ]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Version),[COLOR floorlabel]$LOCALIZE[24051] [/COLOR]]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion),[COLOR floorlabel]$LOCALIZE[24051] [/COLOR]]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Year]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_YearsActive))">$INFO[ListItem.Property(Artist_YearsActive),[COLOR floorlabel]$LOCALIZE[21898]: [/COLOR]]</value>
 		<value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.NextDay))">[COLOR grey]$LOCALIZE[209]:[/COLOR] $INFO[Window(Home).Property(NextAired.NextSeasonNumber),S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E]$INFO[Window(Home).Property(NextAired.NextTitle),: ]</value>
@@ -1434,7 +1434,7 @@
 	<variable name="InfoWallBottomLabel2Var">
 		<value condition="Container.Content(movies) + System.HasAddon(script.duration)">$INFO[ListItem.Year] • $VAR[MovieDuration]$INFO[ListItem.RatingAndVotes, • ]</value>
 		<value condition="Container.Content(movies) + !System.HasAddon(script.duration)">$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator),[COLOR floorlabel]$LOCALIZE[21863]: [/COLOR]]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator),[COLOR floorlabel]$LOCALIZE[21863]: [/COLOR]]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Born)]$INFO[ListItem.Property(Artist_Formed)]</value>
 		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]$INFO[ListItem.Premiered, • ]</value>
@@ -1447,7 +1447,7 @@
 	<variable name="InfoWallTextboxVar">
 		<value condition="skin.hassetting(backendmode) + SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
 		<value condition="System.HasAddon(script.metadata.actors) + [Container.Content(actors) | Container.Content(directors)]">$INFO[Window.Property(current.actor.biography)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Description)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonDescription)]</value>
 		<value condition="Container.Content(albums) + !IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="skin.hassetting(backendmode) + Container.Content(albums)">$INFO[Window(home).Property(Album.Songs.Tracklist)]</value>
 		<value condition="Container.Content(albums)">$LOCALIZE[414]</value>
@@ -1589,7 +1589,7 @@
 		<value condition="Control.IsVisible(8998) + !IsEmpty(Container(8000).ListItem.Property(Fanart)) + StringCompare(Control.GetLabel(4322),widgetfanart)">$INFO[Container(8000).ListItem.Property(Fanart)]</value>
 		<value condition="[Substring(Control.GetLabel(4322),recent,left) | Substring(Control.GetLabel(4322),random,left) | Substring(Control.GetLabel(4322),mostplayed,left) | Substring(Control.GetLabel(4322),watchlist,left) | Substring(Control.GetLabel(4322),inprogress,left) | StringCompare(Control.GetLabel(4322),widgetfanart)] | Substring(Control.GetLabel(4322),dailybabe) | Substring(Control.GetLabel(4322),thebigpicture) | Substring(Control.GetLabel(4322),custom,right)">$INFO[Control.GetLabel(4324)]</value>
 		<value condition="StringCompare(Control.GetLabel(4322),weather)">$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</value>
-		<value condition="Substring(Control.GetLabel(4322),weatherworldbackground)">$INFO[Window(Weather).Property(Current.Earth.Phase.LargeImage)]</value>
+		<value condition="Substring(Control.GetLabel(4322),weatherworldbackground)">$INFO[Window(Weather).Property(Current.Earth.Phase.image)]</value>
 		<value>$VAR[MultiFanartVar]</value>
 	</variable> -->
 	<!-- <variable name="WidgetTypeVar">
@@ -1676,7 +1676,7 @@
 	</variable>
 	<variable name="MusicPanelValueLabel1Var">
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Style)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator)]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_Born)) + !IsEmpty(ListItem.Property(Artist_Formed))">$INFO[ListItem.Property(Artist_Born)] / $INFO[ListItem.Property(Artist_Formed)]</value>
 		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Studio]</value>
 	</variable>
@@ -1688,7 +1688,7 @@
 	</variable>
 	<variable name="MusicPanelValueLabel2Var">
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Type)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Summary)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_YearsActive)]</value>
 		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Premiered]</value>
 	</variable>
@@ -1700,7 +1700,7 @@
 	</variable>
 	<variable name="MusicPanelValueLabel3Var">
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Mood)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Type)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonType)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Style)]</value>
 		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]</value>
 	</variable>
@@ -2460,7 +2460,7 @@
 		<value condition="Container.Content(tvshows) + [StringCompare(ListItem.Label2,ListItem.Rating) | StringCompare(ListItem.Label2,ListItem.Premiered)]">$INFO[ListItem.Rating]</value>
 		<value condition="Container.Content(seasons)">[LOWERCASE]$INFO[ListItem.Property(UnWatchedEpisodes),, $LOCALIZE[16101]][/LOWERCASE]</value>
 		<value condition="[Container.Content(episodes)  + [StringCompare(ListItem.Label2,ListItem.Rating) | StringCompare(ListItem.Label2,ListItem.Premiered)]] + ![Control.IsVisible(50) + Skin.HasSetting(slimlist)]">$INFO[ListItem.TVShowTitle]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Version)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion)]</value>
 		<value condition="Container.Content(artists) + IsEmpty(ListItem.Property(Artist_Genre))">$INFO[ListItem.Property(Artist_YearsActive)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]$INFO[ListItem.Property(Artist_YearsActive), - ]</value>
 		<value>$INFO[ListItem.Label2]</value>
@@ -2802,7 +2802,7 @@
 		<value>$INFO[ListItem.Director]</value>
 	</variable>
 	<variable name="TriPanelSquareListValueVar">
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Version)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion)]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.TrackNumber]</value>
 		<value>$INFO[ListItem.Year]</value>
 	</variable>
@@ -2819,7 +2819,7 @@
 		<value>$LOCALIZE[553]:</value>
 	</variable>
 	<variable name="TriPanelSquareValue1Var">
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator)]</value>
 		<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_YearsActive)]</value>
 		<value>$INFO[ListItem.Size]</value>
@@ -2829,7 +2829,7 @@
 		<value>$LOCALIZE[515]:</value>
 	</variable>
 	<variable name="TriPanelSquareValue2Var">
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Path)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonPath)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>
@@ -2884,7 +2884,7 @@
 	</variable>
 	<variable name="FloorSubLabelVar">
 		<value condition="Container.Content(episodes)">$INFO[ListItem.TvShowTitle]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Summary)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary)]</value>
 		<value condition="Container.Content(musicvideos)">$INFO[ListItem.Artist]</value>
 		<value condition="[Control.IsVisible(500) | Control.IsVisible(57) | Control.IsVisible(499)| Control.IsVisible(503)] + Container.Content(movies) + System.HasAddon(script.duration)">$INFO[ListItem.Year,, • ]$INFO[ListItem.RatingAndVotes,, • ]$VAR[MovieDuration]</value>
 		<value condition="[Control.IsVisible(500) | Control.IsVisible(57) | Control.IsVisible(499)| Control.IsVisible(503)] + Container.Content(movies) + !System.HasAddon(script.duration)">$INFO[ListItem.Year,, • ]$INFO[ListItem.RatingAndVotes,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
@@ -3181,7 +3181,7 @@
 		<value condition="!IsEmpty(Container(8020).ListItem.Art(fanart))">$INFO[Container(8020).ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Container(8020).ListItem.Icon)">$INFO[Container(8020).ListItem.Icon]</value>
 		<value condition="StringCompare(Control.GetLabel(4322),weather)">$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</value>
-		<value condition="Substring(Control.GetLabel(4322),weatherworldbackground)">$INFO[Window(Weather).Property(Current.Earth.Phase.LargeImage)]</value>
+		<value condition="Substring(Control.GetLabel(4322),weatherworldbackground)">$INFO[Window(Weather).Property(Current.Earth.Phase.image)]</value>
 		<value>$INFO[Skin.String(MusicViz.MultiFanart)]</value>
 	</variable>
 	<variable name="InfoPanelStyleVar">
@@ -4341,7 +4341,7 @@
 	</variable>
 	<variable name="FanartFloorSubLabelVar">
 		<value condition="Container.Content(episodes)">$INFO[ListItem.TvShowTitle]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Summary)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary)]</value>
 		<value condition="Container.Content(musicvideos)">$INFO[ListItem.Artist]</value>
 		<value condition="IsEmpty(ListItem.Genre)">$INFO[Window(Home).Property(Set.Movies.Genre)]</value>
 		<value>$INFO[ListItem.Genre]</value>
@@ -4925,7 +4925,7 @@
 	</variable>
 	<!-- Widget Labels -->
 	<variable name="HomeWidgetTitleVar">
-		<value condition="!IsEmpty(ListItem.Property(Addon.Name))">$INFO[ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(ListItem.AddonName))">$INFO[ListItem.AddonName)]</value>
 		<value condition="!IsEmpty(ListItem.Property(Label3)) + !IsEmpty(ListItem.Property(WeatherMultiFanart))">$INFO[ListItem.Label] $INFO[ListItem.Label2] $INFO[ListItem.Property(Label3)]$INFO[ListItem.Property(Label4), ]</value>
 		<value condition="!IsEmpty(ListItem.Property(Label3)) + !IsEmpty(ListItem.Property(isSystemInfo))">$INFO[ListItem.Label2]  $INFO[ListItem.Property(Label3)]</value>
 		<value condition="[!IntegerGreaterThan(ListItem.Season,9) + !IntegerGreaterThan(ListItem.Episode,9)] + !SubString(ListItem.Episode,S,left) + !IsEmpty(ListItem.Episode) + !Stringcompare(ListItem.Label,ListItem.TVShowTitle)">$INFO[ListItem.Season,S0]$INFO[ListItem.Episode,E0] $INFO[ListItem.Title]</value>
@@ -5020,7 +5020,7 @@
 	</variable>
 
 	<variable name="featured5002Title">
-		<value condition="!IsEmpty(Container(5002).ListItem.Property(Addon.Name))">$INFO[Container(5002).ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(Container(5002).ListItem.AddonName))">$INFO[Container(5002).ListItem.AddonName)]</value>
 		<value condition="[!IntegerGreaterThan(Container(5002).ListItem.Season,9) + !IntegerGreaterThan(Container(5002).ListItem.Episode,9)] + !SubString(Container(5002).ListItem.Episode,S,left) + !IsEmpty(Container(5002).ListItem.Episode) + !Stringcompare(Container(5002).ListItem.Label,Container(5002).ListItem.TVShowTitle)">$INFO[Container(5002).ListItem.Season,S0]$INFO[Container(5002).ListItem.Episode,E0] $INFO[Container(5002).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(5002).ListItem.Season,9) + !IntegerGreaterThan(Container(5002).ListItem.Episode,9)] + SubString(Container(5002).ListItem.Episode,S,left) + !IsEmpty(Container(5002).ListItem.Episode) + !Stringcompare(Container(5002).ListItem.Label,Container(5002).ListItem.TVShowTitle)">$INFO[Container(5002).ListItem.Season,S0]$INFO[Container(5002).ListItem.Episode] $INFO[Container(5002).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(5002).ListItem.Season,9) + IntegerGreaterThan(Container(5002).ListItem.Episode,9)] + !IsEmpty(Container(5002).ListItem.Episode) + !Stringcompare(Container(5002).ListItem.Label,Container(5002).ListItem.TVShowTitle)">$INFO[Container(5002).ListItem.Season,S0]$INFO[Container(5002).ListItem.Episode,E] $INFO[Container(5002).ListItem.Title]</value>
@@ -5029,7 +5029,7 @@
 		<value>$INFO[Container(5002).ListItem.Label]</value>
 	</variable>
 	<variable name="featured5003Title">
-		<value condition="!IsEmpty(Container(5003).ListItem.Property(Addon.Name))">$INFO[Container(5003).ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(Container(5003).ListItem.AddonName))">$INFO[Container(5003).ListItem.AddonName)]</value>
 		<value condition="[!IntegerGreaterThan(Container(5003).ListItem.Season,9) + !IntegerGreaterThan(Container(5003).ListItem.Episode,9)] + !SubString(Container(5003).ListItem.Episode,S,left) + !IsEmpty(Container(5003).ListItem.Episode) + !Stringcompare(Container(5003).ListItem.Label,Container(5003).ListItem.TVShowTitle)">$INFO[Container(5003).ListItem.Season,S0]$INFO[Container(5003).ListItem.Episode,E0] $INFO[Container(5003).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(5003).ListItem.Season,9) + !IntegerGreaterThan(Container(5003).ListItem.Episode,9)] + SubString(Container(5003).ListItem.Episode,S,left) + !IsEmpty(Container(5003).ListItem.Episode) + !Stringcompare(Container(5003).ListItem.Label,Container(5003).ListItem.TVShowTitle)">$INFO[Container(5003).ListItem.Season,S0]$INFO[Container(5003).ListItem.Episode] $INFO[Container(5003).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(5003).ListItem.Season,9) + IntegerGreaterThan(Container(5003).ListItem.Episode,9)] + !IsEmpty(Container(5003).ListItem.Episode) + !Stringcompare(Container(5003).ListItem.Label,Container(5003).ListItem.TVShowTitle)">$INFO[Container(5003).ListItem.Season,S0]$INFO[Container(5003).ListItem.Episode,E] $INFO[Container(5003).ListItem.Title]</value>
@@ -5038,7 +5038,7 @@
 		<value>$INFO[Container(5003).ListItem.Label]</value>
 	</variable>
 	<variable name="featured6002Title">
-		<value condition="!IsEmpty(Container(6002).ListItem.Property(Addon.Name))">$INFO[Container(6002).ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(Container(6002).ListItem.AddonName))">$INFO[Container(6002).ListItem.AddonName)]</value>
 		<value condition="[!IntegerGreaterThan(Container(6002).ListItem.Season,9) + !IntegerGreaterThan(Container(6002).ListItem.Episode,9)] + !SubString(Container(6002).ListItem.Episode,S,left) + !IsEmpty(Container(6002).ListItem.Episode) + !Stringcompare(Container(6002).ListItem.Label,Container(6002).ListItem.TVShowTitle)">$INFO[Container(6002).ListItem.Season,S0]$INFO[Container(6002).ListItem.Episode,E0] $INFO[Container(6002).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(6002).ListItem.Season,9) + !IntegerGreaterThan(Container(6002).ListItem.Episode,9)] + SubString(Container(6002).ListItem.Episode,S,left) + !IsEmpty(Container(6002).ListItem.Episode) + !Stringcompare(Container(6002).ListItem.Label,Container(6002).ListItem.TVShowTitle)">$INFO[Container(6002).ListItem.Season,S0]$INFO[Container(6002).ListItem.Episode] $INFO[Container(6002).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(6002).ListItem.Season,9) + IntegerGreaterThan(Container(6002).ListItem.Episode,9)] + !IsEmpty(Container(6002).ListItem.Episode) + !Stringcompare(Container(6002).ListItem.Label,Container(6002).ListItem.TVShowTitle)">$INFO[Container(6002).ListItem.Season,S0]$INFO[Container(6002).ListItem.Episode,E] $INFO[Container(6002).ListItem.Title]</value>
@@ -5047,7 +5047,7 @@
 		<value>$INFO[Container(6002).ListItem.Label]</value>
 	</variable>
 	<variable name="featured6003Title">
-		<value condition="!IsEmpty(Container(6003).ListItem.Property(Addon.Name))">$INFO[Container(6003).ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(Container(6003).ListItem.AddonName))">$INFO[Container(6003).ListItem.AddonName)]</value>
 		<value condition="[!IntegerGreaterThan(Container(6003).ListItem.Season,9) + !IntegerGreaterThan(Container(6003).ListItem.Episode,9)] + !SubString(Container(6003).ListItem.Episode,S,left) + !IsEmpty(Container(6003).ListItem.Episode) + !Stringcompare(Container(6003).ListItem.Label,Container(6003).ListItem.TVShowTitle)">$INFO[Container(6003).ListItem.Season,S0]$INFO[Container(6003).ListItem.Episode,E0] $INFO[Container(6003).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(6003).ListItem.Season,9) + !IntegerGreaterThan(Container(6003).ListItem.Episode,9)] + SubString(Container(6003).ListItem.Episode,S,left) + !IsEmpty(Container(6003).ListItem.Episode) + !Stringcompare(Container(6003).ListItem.Label,Container(6003).ListItem.TVShowTitle)">$INFO[Container(6003).ListItem.Season,S0]$INFO[Container(6003).ListItem.Episode] $INFO[Container(6003).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(6003).ListItem.Season,9) + IntegerGreaterThan(Container(6003).ListItem.Episode,9)] + !IsEmpty(Container(6003).ListItem.Episode) + !Stringcompare(Container(6003).ListItem.Label,Container(6003).ListItem.TVShowTitle)">$INFO[Container(6003).ListItem.Season,S0]$INFO[Container(6003).ListItem.Episode,E] $INFO[Container(6003).ListItem.Title]</value>
@@ -5056,7 +5056,7 @@
 		<value>$INFO[Container(6003).ListItem.Label]</value>
 	</variable>
 	<variable name="featured7002Title">
-		<value condition="!IsEmpty(Container(7002).ListItem.Property(Addon.Name))">$INFO[Container(7002).ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(Container(7002).ListItem.AddonName))">$INFO[Container(7002).ListItem.AddonName)]</value>
 		<value condition="[!IntegerGreaterThan(Container(7002).ListItem.Season,9) + !IntegerGreaterThan(Container(7002).ListItem.Episode,9)] + !SubString(Container(7002).ListItem.Episode,S,left) + !IsEmpty(Container(7002).ListItem.Episode) + !Stringcompare(Container(7002).ListItem.Label,Container(7002).ListItem.TVShowTitle)">$INFO[Container(7002).ListItem.Season,S0]$INFO[Container(7002).ListItem.Episode,E0] $INFO[Container(7002).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(7002).ListItem.Season,9) + !IntegerGreaterThan(Container(7002).ListItem.Episode,9)] + SubString(Container(7002).ListItem.Episode,S,left) + !IsEmpty(Container(7002).ListItem.Episode) + !Stringcompare(Container(7002).ListItem.Label,Container(7002).ListItem.TVShowTitle)">$INFO[Container(7002).ListItem.Season,S0]$INFO[Container(7002).ListItem.Episode] $INFO[Container(7002).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(7002).ListItem.Season,9) + IntegerGreaterThan(Container(7002).ListItem.Episode,9)] + !IsEmpty(Container(7002).ListItem.Episode) + !Stringcompare(Container(7002).ListItem.Label,Container(7002).ListItem.TVShowTitle)">$INFO[Container(7002).ListItem.Season,S0]$INFO[Container(7002).ListItem.Episode,E] $INFO[Container(7002).ListItem.Title]</value>
@@ -5065,7 +5065,7 @@
 		<value>$INFO[Container(7002).ListItem.Label]</value>
 	</variable>
 	<variable name="featured7003Title">
-		<value condition="!IsEmpty(Container(7003).ListItem.Property(Addon.Name))">$INFO[Container(7003).ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(Container(7003).ListItem.AddonName))">$INFO[Container(7003).ListItem.AddonName)]</value>
 		<value condition="[!IntegerGreaterThan(Container(7003).ListItem.Season,9) + !IntegerGreaterThan(Container(7003).ListItem.Episode,9)] + !SubString(Container(7003).ListItem.Episode,S,left) + !IsEmpty(Container(7003).ListItem.Episode) + !Stringcompare(Container(7003).ListItem.Label,Container(7003).ListItem.TVShowTitle)">$INFO[Container(7003).ListItem.Season,S0]$INFO[Container(7003).ListItem.Episode,E0] $INFO[Container(7003).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(7003).ListItem.Season,9) + !IntegerGreaterThan(Container(7003).ListItem.Episode,9)] + SubString(Container(7003).ListItem.Episode,S,left) + !IsEmpty(Container(7003).ListItem.Episode) + !Stringcompare(Container(7003).ListItem.Label,Container(7003).ListItem.TVShowTitle)">$INFO[Container(7003).ListItem.Season,S0]$INFO[Container(7003).ListItem.Episode] $INFO[Container(7003).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(7003).ListItem.Season,9) + IntegerGreaterThan(Container(7003).ListItem.Episode,9)] + !IsEmpty(Container(7003).ListItem.Episode) + !Stringcompare(Container(7003).ListItem.Label,Container(7003).ListItem.TVShowTitle)">$INFO[Container(7003).ListItem.Season,S0]$INFO[Container(7003).ListItem.Episode,E] $INFO[Container(7003).ListItem.Title]</value>
@@ -5074,7 +5074,7 @@
 		<value>$INFO[Container(7003).ListItem.Label]</value>
 	</variable>
 	<variable name="featured8002Title">
-		<value condition="!IsEmpty(Container(8002).ListItem.Property(Addon.Name))">$INFO[Container(8002).ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(Container(8002).ListItem.AddonName))">$INFO[Container(8002).ListItem.AddonName)]</value>
 		<value condition="[!IntegerGreaterThan(Container(8002).ListItem.Season,9) + !IntegerGreaterThan(Container(8002).ListItem.Episode,9)] + !SubString(Container(8002).ListItem.Episode,S,left) + !IsEmpty(Container(8002).ListItem.Episode) + !Stringcompare(Container(8002).ListItem.Label,Container(8002).ListItem.TVShowTitle)">$INFO[Container(8002).ListItem.Season,S0]$INFO[Container(8002).ListItem.Episode,E0] $INFO[Container(8002).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(8002).ListItem.Season,9) + !IntegerGreaterThan(Container(8002).ListItem.Episode,9)] + SubString(Container(8002).ListItem.Episode,S,left) + !IsEmpty(Container(8002).ListItem.Episode) + !Stringcompare(Container(8002).ListItem.Label,Container(8002).ListItem.TVShowTitle)">$INFO[Container(8002).ListItem.Season,S0]$INFO[Container(8002).ListItem.Episode] $INFO[Container(8002).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(8002).ListItem.Season,9) + IntegerGreaterThan(Container(8002).ListItem.Episode,9)] + !IsEmpty(Container(8002).ListItem.Episode) + !Stringcompare(Container(8002).ListItem.Label,Container(8002).ListItem.TVShowTitle)">$INFO[Container(8002).ListItem.Season,S0]$INFO[Container(8002).ListItem.Episode,E] $INFO[Container(8002).ListItem.Title]</value>
@@ -5083,7 +5083,7 @@
 		<value>$INFO[Container(8002).ListItem.Label]</value>
 	</variable>
 	<variable name="featured8003Title">
-		<value condition="!IsEmpty(Container(8003).ListItem.Property(Addon.Name))">$INFO[Container(8003).ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(Container(8003).ListItem.AddonName))">$INFO[Container(8003).ListItem.AddonName)]</value>
 		<value condition="[!IntegerGreaterThan(Container(8003).ListItem.Season,9) + !IntegerGreaterThan(Container(8003).ListItem.Episode,9)] + !SubString(Container(8003).ListItem.Episode,S,left) + !IsEmpty(Container(8003).ListItem.Episode) + !Stringcompare(Container(8003).ListItem.Label,Container(8003).ListItem.TVShowTitle)">$INFO[Container(8003).ListItem.Season,S0]$INFO[Container(8003).ListItem.Episode,E0] $INFO[Container(8003).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(8003).ListItem.Season,9) + !IntegerGreaterThan(Container(8003).ListItem.Episode,9)] + SubString(Container(8003).ListItem.Episode,S,left) + !IsEmpty(Container(8003).ListItem.Episode) + !Stringcompare(Container(8003).ListItem.Label,Container(8003).ListItem.TVShowTitle)">$INFO[Container(8003).ListItem.Season,S0]$INFO[Container(8003).ListItem.Episode] $INFO[Container(8003).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(8003).ListItem.Season,9) + IntegerGreaterThan(Container(8003).ListItem.Episode,9)] + !IsEmpty(Container(8003).ListItem.Episode) + !Stringcompare(Container(8003).ListItem.Label,Container(8003).ListItem.TVShowTitle)">$INFO[Container(8003).ListItem.Season,S0]$INFO[Container(8003).ListItem.Episode,E] $INFO[Container(8003).ListItem.Title]</value>
@@ -5092,7 +5092,7 @@
 		<value>$INFO[Container(8003).ListItem.Label]</value>
 	</variable>
 	<variable name="featured9002Title">
-		<value condition="!IsEmpty(Container(9002).ListItem.Property(Addon.Name))">$INFO[Container(9002).ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(Container(9002).ListItem.AddonName))">$INFO[Container(9002).ListItem.AddonName)]</value>
 		<value condition="[!IntegerGreaterThan(Container(9002).ListItem.Season,9) + !IntegerGreaterThan(Container(9002).ListItem.Episode,9)] + !SubString(Container(9002).ListItem.Episode,S,left) + !IsEmpty(Container(9002).ListItem.Episode) + !Stringcompare(Container(9002).ListItem.Label,Container(9002).ListItem.TVShowTitle)">$INFO[Container(9002).ListItem.Season,S0]$INFO[Container(9002).ListItem.Episode,E0] $INFO[Container(9002).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(9002).ListItem.Season,9) + !IntegerGreaterThan(Container(9002).ListItem.Episode,9)] + SubString(Container(9002).ListItem.Episode,S,left) + !IsEmpty(Container(9002).ListItem.Episode) + !Stringcompare(Container(9002).ListItem.Label,Container(9002).ListItem.TVShowTitle)">$INFO[Container(9002).ListItem.Season,S0]$INFO[Container(9002).ListItem.Episode] $INFO[Container(9002).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(9002).ListItem.Season,9) + IntegerGreaterThan(Container(9002).ListItem.Episode,9)] + !IsEmpty(Container(9002).ListItem.Episode) + !Stringcompare(Container(9002).ListItem.Label,Container(9002).ListItem.TVShowTitle)">$INFO[Container(9002).ListItem.Season,S0]$INFO[Container(9002).ListItem.Episode,E] $INFO[Container(9002).ListItem.Title]</value>
@@ -5101,7 +5101,7 @@
 		<value>$INFO[Container(9002).ListItem.Label]</value>
 	</variable>
 	<variable name="featured9003Title">
-		<value condition="!IsEmpty(Container(9003).ListItem.Property(Addon.Name))">$INFO[Container(9003).ListItem.Property(Addon.Name)]</value>
+		<value condition="!IsEmpty(Container(9003).ListItem.AddonName))">$INFO[Container(9003).ListItem.AddonName)]</value>
 		<value condition="[!IntegerGreaterThan(Container(9003).ListItem.Season,9) + !IntegerGreaterThan(Container(9003).ListItem.Episode,9)] + !SubString(Container(9003).ListItem.Episode,S,left) + !IsEmpty(Container(9003).ListItem.Episode) + !Stringcompare(Container(9003).ListItem.Label,Container(9003).ListItem.TVShowTitle)">$INFO[Container(9003).ListItem.Season,S0]$INFO[Container(9003).ListItem.Episode,E0] $INFO[Container(9003).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(9003).ListItem.Season,9) + !IntegerGreaterThan(Container(9003).ListItem.Episode,9)] + SubString(Container(9003).ListItem.Episode,S,left) + !IsEmpty(Container(9003).ListItem.Episode) + !Stringcompare(Container(9003).ListItem.Label,Container(9003).ListItem.TVShowTitle)">$INFO[Container(9003).ListItem.Season,S0]$INFO[Container(9003).ListItem.Episode] $INFO[Container(9003).ListItem.Title]</value>
 		<value condition="[!IntegerGreaterThan(Container(9003).ListItem.Season,9) + IntegerGreaterThan(Container(9003).ListItem.Episode,9)] + !IsEmpty(Container(9003).ListItem.Episode) + !Stringcompare(Container(9003).ListItem.Label,Container(9003).ListItem.TVShowTitle)">$INFO[Container(9003).ListItem.Season,S0]$INFO[Container(9003).ListItem.Episode,E] $INFO[Container(9003).ListItem.Title]</value>
@@ -5116,7 +5116,7 @@
 		<value condition="!IsEmpty(Container(5002).ListItem.TVShowTitle)">$INFO[Container(5002).ListItem.TVShowTitle]</value>
 		<value condition="!IsEmpty(Container(5002).ListItem.Artist)">$INFO[Container(5002).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(5002).ListItem.AlbumArtist)">$INFO[Container(5002).ListItem.AlbumArtist]</value>
-		<value condition="!IsEmpty(Container(5002).ListItem.Property(Addon.Summary))">$INFO[Container(5002).ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(Container(5002).ListItem.AddonSummary))">$INFO[Container(5002).ListItem.AddonSummary)]</value>
 		<value condition="!IsEmpty(Container(5002).ListItem.Property(Label3))">$INFO[Container(5002).ListItem.Label2]</value>
 	</variable>
 	<variable name="featured5003SubTitle">
@@ -5125,7 +5125,7 @@
 		<value condition="!IsEmpty(Container(5003).ListItem.TVShowTitle)">$INFO[Container(5003).ListItem.TVShowTitle]</value>
 		<value condition="!IsEmpty(Container(5003).ListItem.Artist)">$INFO[Container(5003).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(5003).ListItem.AlbumArtist)">$INFO[Container(5003).ListItem.AlbumArtist]</value>
-		<value condition="!IsEmpty(Container(5003).ListItem.Property(Addon.Summary))">$INFO[Container(5003).ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(Container(5003).ListItem.AddonSummary))">$INFO[Container(5003).ListItem.AddonSummary)]</value>
 		<value condition="!IsEmpty(Container(5003).ListItem.Property(Label3))">$INFO[Container(5003).ListItem.Label2]</value>
 	</variable>
 	<variable name="featured6002SubTitle">
@@ -5134,7 +5134,7 @@
 		<value condition="!IsEmpty(Container(6002).ListItem.TVShowTitle)">$INFO[Container(6002).ListItem.TVShowTitle]</value>
 		<value condition="!IsEmpty(Container(6002).ListItem.Artist)">$INFO[Container(6002).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(6002).ListItem.AlbumArtist)">$INFO[Container(6002).ListItem.AlbumArtist]</value>
-		<value condition="!IsEmpty(Container(6002).ListItem.Property(Addon.Summary))">$INFO[Container(6002).ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(Container(6002).ListItem.AddonSummary))">$INFO[Container(6002).ListItem.AddonSummary)]</value>
 		<value condition="!IsEmpty(Container(6002).ListItem.Property(Label3))">$INFO[Container(6002).ListItem.Label2]</value>
 	</variable>
 	<variable name="featured6003SubTitle">
@@ -5143,7 +5143,7 @@
 		<value condition="!IsEmpty(Container(6003).ListItem.TVShowTitle)">$INFO[Container(6003).ListItem.TVShowTitle]</value>
 		<value condition="!IsEmpty(Container(6003).ListItem.Artist)">$INFO[Container(6003).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(6003).ListItem.AlbumArtist)">$INFO[Container(6003).ListItem.AlbumArtist]</value>
-		<value condition="!IsEmpty(Container(6003).ListItem.Property(Addon.Summary))">$INFO[Container(6003).ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(Container(6003).ListItem.AddonSummary))">$INFO[Container(6003).ListItem.AddonSummary)]</value>
 		<value condition="!IsEmpty(Container(6003).ListItem.Property(Label3))">$INFO[Container(6003).ListItem.Label2]</value>
 	</variable>
 	<variable name="featured7002SubTitle">
@@ -5152,7 +5152,7 @@
 		<value condition="!IsEmpty(Container(7002).ListItem.TVShowTitle)">$INFO[Container(7002).ListItem.TVShowTitle]</value>
 		<value condition="!IsEmpty(Container(7002).ListItem.Artist)">$INFO[Container(7002).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(7002).ListItem.AlbumArtist)">$INFO[Container(7002).ListItem.AlbumArtist]</value>
-		<value condition="!IsEmpty(Container(7002).ListItem.Property(Addon.Summary))">$INFO[Container(7002).ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(Container(7002).ListItem.AddonSummary))">$INFO[Container(7002).ListItem.AddonSummary)]</value>
 		<value condition="!IsEmpty(Container(7002).ListItem.Property(Label3))">$INFO[Container(7002).ListItem.Label2]</value>
 	</variable>
 	<variable name="featured7003SubTitle">
@@ -5161,7 +5161,7 @@
 		<value condition="!IsEmpty(Container(7003).ListItem.TVShowTitle)">$INFO[Container(7003).ListItem.TVShowTitle]</value>
 		<value condition="!IsEmpty(Container(7003).ListItem.Artist)">$INFO[Container(7003).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(7003).ListItem.AlbumArtist)">$INFO[Container(7003).ListItem.AlbumArtist]</value>
-		<value condition="!IsEmpty(Container(7003).ListItem.Property(Addon.Summary))">$INFO[Container(7003).ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(Container(7003).ListItem.AddonSummary))">$INFO[Container(7003).ListItem.AddonSummary)]</value>
 		<value condition="!IsEmpty(Container(7003).ListItem.Property(Label3))">$INFO[Container(7003).ListItem.Label2]</value>
 	</variable>
 	<variable name="featured8002SubTitle">
@@ -5170,7 +5170,7 @@
 		<value condition="!IsEmpty(Container(8002).ListItem.TVShowTitle)">$INFO[Container(8002).ListItem.TVShowTitle]</value>
 		<value condition="!IsEmpty(Container(8002).ListItem.Artist)">$INFO[Container(8002).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(8002).ListItem.AlbumArtist)">$INFO[Container(8002).ListItem.AlbumArtist]</value>
-		<value condition="!IsEmpty(Container(8002).ListItem.Property(Addon.Summary))">$INFO[Container(8002).ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(Container(8002).ListItem.AddonSummary))">$INFO[Container(8002).ListItem.AddonSummary)]</value>
 		<value condition="!IsEmpty(Container(8002).ListItem.Property(Label3))">$INFO[Container(8002).ListItem.Label2]</value>
 	</variable>
 	<variable name="featured8003SubTitle">
@@ -5179,7 +5179,7 @@
 		<value condition="!IsEmpty(Container(8003).ListItem.TVShowTitle)">$INFO[Container(8003).ListItem.TVShowTitle]</value>
 		<value condition="!IsEmpty(Container(8003).ListItem.Artist)">$INFO[Container(8003).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(8003).ListItem.AlbumArtist)">$INFO[Container(8003).ListItem.AlbumArtist]</value>
-		<value condition="!IsEmpty(Container(8003).ListItem.Property(Addon.Summary))">$INFO[Container(8003).ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(Container(8003).ListItem.AddonSummary))">$INFO[Container(8003).ListItem.AddonSummary)]</value>
 		<value condition="!IsEmpty(Container(8003).ListItem.Property(Label3))">$INFO[Container(8003).ListItem.Label2]</value>
 	</variable>
 	<variable name="featured9002SubTitle">
@@ -5188,7 +5188,7 @@
 		<value condition="!IsEmpty(Container(9002).ListItem.TVShowTitle)">$INFO[Container(9002).ListItem.TVShowTitle]</value>
 		<value condition="!IsEmpty(Container(9002).ListItem.Artist)">$INFO[Container(9002).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(9002).ListItem.AlbumArtist)">$INFO[Container(9002).ListItem.AlbumArtist]</value>
-		<value condition="!IsEmpty(Container(9002).ListItem.Property(Addon.Summary))">$INFO[Container(9002).ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(Container(9002).ListItem.AddonSummary))">$INFO[Container(9002).ListItem.AddonSummary)]</value>
 		<value condition="!IsEmpty(Container(9002).ListItem.Property(Label3))">$INFO[Container(9002).ListItem.Label2]</value>
 	</variable>
 	<variable name="featured9003SubTitle">
@@ -5197,14 +5197,14 @@
 		<value condition="!IsEmpty(Container(9003).ListItem.TVShowTitle)">$INFO[Container(9003).ListItem.TVShowTitle]</value>
 		<value condition="!IsEmpty(Container(9003).ListItem.Artist)">$INFO[Container(9003).ListItem.Artist]</value>
 		<value condition="!IsEmpty(Container(9003).ListItem.AlbumArtist)">$INFO[Container(9003).ListItem.AlbumArtist]</value>
-		<value condition="!IsEmpty(Container(9003).ListItem.Property(Addon.Summary))">$INFO[Container(9003).ListItem.Property(Addon.Summary)]</value>
+		<value condition="!IsEmpty(Container(9003).ListItem.AddonSummary))">$INFO[Container(9003).ListItem.AddonSummary)]</value>
 		<value condition="!IsEmpty(Container(9003).ListItem.Property(Label3))">$INFO[Container(9003).ListItem.Label2]</value>
 	</variable>
 
 	<variable name="featured5002Info1">
 		<value condition="!IsEmpty(Container(5002).ListItem.Artist)">$INFO[Container(5002).ListItem.Duration,, $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(5002).ListItem.AlbumArtist)">$INFO[Container(5002).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value condition="!IsEmpty(Container(5002).ListItem.Property(Addon.Name))">$INFO[Container(5002).ListItem.Property(Addon.Creator),$LOCALIZE[31001] ]</value>
+		<value condition="!IsEmpty(Container(5002).ListItem.AddonName))">$INFO[Container(5002).ListItem.AddonCreator),$LOCALIZE[31001] ]</value>
 		<value condition="!IsEmpty(Container(5002).ListItem.Property(Label3))">$INFO[Container(5002).ListItem.Property(Label3)]</value>
 		<value condition="!IsEmpty(Container(5002).ListItem.Property(ShortTime))">$INFO[Container(5002).ListItem.Property(ShortTime)]$INFO[Container(5002).ListItem.Property(NextDate),  •  ]$INFO[Container(5002).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(5002).ListItem.Property(RunTime),  •  , $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(5002).ListItem.TVShowTitle) + !IsEmpty(Container(5002).ListItem.Property(Runtime))">$INFO[Container(5002).ListItem.Premiered]$INFO[Container(5002).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(5002).ListItem.Property(Runtime),  •  , $LOCALIZE[12391]]</value>
@@ -5215,7 +5215,7 @@
 	<variable name="featured5003Info1">
 		<value condition="!IsEmpty(Container(5003).ListItem.Artist)">$INFO[Container(5003).ListItem.Duration,, $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(5003).ListItem.AlbumArtist)">$INFO[Container(5003).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value condition="!IsEmpty(Container(5003).ListItem.Property(Addon.Name))">$INFO[Container(5003).ListItem.Property(Addon.Creator),$LOCALIZE[31001] ]</value>
+		<value condition="!IsEmpty(Container(5003).ListItem.AddonName))">$INFO[Container(5003).ListItem.AddonCreator),$LOCALIZE[31001] ]</value>
 		<value condition="!IsEmpty(Container(5003).ListItem.Property(Label3))">$INFO[Container(5003).ListItem.Property(Label3)]</value>
 		<value condition="!IsEmpty(Container(5003).ListItem.Property(ShortTime))">$INFO[Container(5003).ListItem.Property(ShortTime)]$INFO[Container(5003).ListItem.Property(NextDate),  •  ]$INFO[Container(5003).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(5003).ListItem.Property(RunTime),  •  , $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(5003).ListItem.TVShowTitle) + !IsEmpty(Container(5003).ListItem.Property(Runtime))">$INFO[Container(5003).ListItem.Premiered]$INFO[Container(5003).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(5003).ListItem.Property(Runtime),  •  , $LOCALIZE[12391]]</value>
@@ -5226,7 +5226,7 @@
 	<variable name="featured6002Info1">
 		<value condition="!IsEmpty(Container(6002).ListItem.Artist)">$INFO[Container(6002).ListItem.Duration,, $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(6002).ListItem.AlbumArtist)">$INFO[Container(6002).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value condition="!IsEmpty(Container(6002).ListItem.Property(Addon.Name))">$INFO[Container(6002).ListItem.Property(Addon.Creator),$LOCALIZE[31001] ]</value>
+		<value condition="!IsEmpty(Container(6002).ListItem.AddonName))">$INFO[Container(6002).ListItem.AddonCreator),$LOCALIZE[31001] ]</value>
 		<value condition="!IsEmpty(Container(6002).ListItem.Property(Label3))">$INFO[Container(6002).ListItem.Property(Label3)]</value>
 		<value condition="!IsEmpty(Container(6002).ListItem.Property(ShortTime))">$INFO[Container(6002).ListItem.Property(ShortTime)]$INFO[Container(6002).ListItem.Property(NextDate),  •  ]$INFO[Container(6002).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(6002).ListItem.Property(RunTime),  •  , $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(6002).ListItem.TVShowTitle) + !IsEmpty(Container(6002).ListItem.Property(Runtime))">$INFO[Container(6002).ListItem.Premiered]$INFO[Container(6002).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(6002).ListItem.Property(Runtime),  •  , $LOCALIZE[12391]]</value>
@@ -5237,7 +5237,7 @@
 	<variable name="featured6003Info1">
 		<value condition="!IsEmpty(Container(6003).ListItem.Artist)">$INFO[Container(6003).ListItem.Duration,, $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(6003).ListItem.AlbumArtist)">$INFO[Container(6003).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value condition="!IsEmpty(Container(6003).ListItem.Property(Addon.Name))">$INFO[Container(6003).ListItem.Property(Addon.Creator),$LOCALIZE[31001] ]</value>
+		<value condition="!IsEmpty(Container(6003).ListItem.AddonName))">$INFO[Container(6003).ListItem.AddonCreator),$LOCALIZE[31001] ]</value>
 		<value condition="!IsEmpty(Container(6003).ListItem.Property(Label3))">$INFO[Container(6003).ListItem.Property(Label3)]</value>
 		<value condition="!IsEmpty(Container(6003).ListItem.Property(ShortTime))">$INFO[Container(6003).ListItem.Property(ShortTime)]$INFO[Container(6003).ListItem.Property(NextDate),  •  ]$INFO[Container(6003).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(6003).ListItem.Property(RunTime),  •  , $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(6003).ListItem.TVShowTitle) + !IsEmpty(Container(6003).ListItem.Property(Runtime))">$INFO[Container(6003).ListItem.Premiered]$INFO[Container(6003).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(6003).ListItem.Property(Runtime),  •  , $LOCALIZE[12391]]</value>
@@ -5248,7 +5248,7 @@
 	<variable name="featured7002Info1">
 		<value condition="!IsEmpty(Container(7002).ListItem.Artist)">$INFO[Container(7002).ListItem.Duration,, $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(7002).ListItem.AlbumArtist)">$INFO[Container(7002).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value condition="!IsEmpty(Container(7002).ListItem.Property(Addon.Name))">$INFO[Container(7002).ListItem.Property(Addon.Creator),$LOCALIZE[31001] ]</value>
+		<value condition="!IsEmpty(Container(7002).ListItem.AddonName))">$INFO[Container(7002).ListItem.AddonCreator),$LOCALIZE[31001] ]</value>
 		<value condition="!IsEmpty(Container(7002).ListItem.Property(Label3))">$INFO[Container(7002).ListItem.Property(Label3)]</value>
 		<value condition="!IsEmpty(Container(7002).ListItem.Property(ShortTime))">$INFO[Container(7002).ListItem.Property(ShortTime)]$INFO[Container(7002).ListItem.Property(NextDate),  •  ]$INFO[Container(7002).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(7002).ListItem.Property(RunTime),  •  , $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(7002).ListItem.TVShowTitle) + !IsEmpty(Container(7002).ListItem.Property(Runtime))">$INFO[Container(7002).ListItem.Premiered]$INFO[Container(7002).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(7002).ListItem.Property(Runtime),  •  , $LOCALIZE[12391]]</value>
@@ -5259,7 +5259,7 @@
 	<variable name="featured7003Info1">
 		<value condition="!IsEmpty(Container(7003).ListItem.Artist)">$INFO[Container(7003).ListItem.Duration,, $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(7003).ListItem.AlbumArtist)">$INFO[Container(7003).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value condition="!IsEmpty(Container(7003).ListItem.Property(Addon.Name))">$INFO[Container(7003).ListItem.Property(Addon.Creator),$LOCALIZE[31001] ]</value>
+		<value condition="!IsEmpty(Container(7003).ListItem.AddonName))">$INFO[Container(7003).ListItem.AddonCreator),$LOCALIZE[31001] ]</value>
 		<value condition="!IsEmpty(Container(7003).ListItem.Property(Label3))">$INFO[Container(7003).ListItem.Property(Label3)]</value>
 		<value condition="!IsEmpty(Container(7003).ListItem.Property(ShortTime))">$INFO[Container(7003).ListItem.Property(ShortTime)]$INFO[Container(7003).ListItem.Property(NextDate),  •  ]$INFO[Container(7003).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(7003).ListItem.Property(RunTime),  •  , $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(7003).ListItem.TVShowTitle) + !IsEmpty(Container(7003).ListItem.Property(Runtime))">$INFO[Container(7003).ListItem.Premiered]$INFO[Container(7003).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(7003).ListItem.Property(Runtime),  •  , $LOCALIZE[12391]]</value>
@@ -5270,7 +5270,7 @@
 	<variable name="featured8002Info1">
 		<value condition="!IsEmpty(Container(8002).ListItem.Artist)">$INFO[Container(8002).ListItem.Duration,, $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(8002).ListItem.AlbumArtist)">$INFO[Container(8002).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value condition="!IsEmpty(Container(8002).ListItem.Property(Addon.Name))">$INFO[Container(8002).ListItem.Property(Addon.Creator),$LOCALIZE[31001] ]</value>
+		<value condition="!IsEmpty(Container(8002).ListItem.AddonName))">$INFO[Container(8002).ListItem.AddonCreator),$LOCALIZE[31001] ]</value>
 		<value condition="!IsEmpty(Container(8002).ListItem.Property(Label3))">$INFO[Container(8002).ListItem.Property(Label3)]</value>
 		<value condition="!IsEmpty(Container(8002).ListItem.Property(ShortTime))">$INFO[Container(8002).ListItem.Property(ShortTime)]$INFO[Container(8002).ListItem.Property(NextDate),  •  ]$INFO[Container(8002).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(8002).ListItem.Property(RunTime),  •  , $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(8002).ListItem.TVShowTitle) + !IsEmpty(Container(8002).ListItem.Property(Runtime))">$INFO[Container(8002).ListItem.Premiered]$INFO[Container(8002).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(8002).ListItem.Property(Runtime),  •  , $LOCALIZE[12391]]</value>
@@ -5281,7 +5281,7 @@
 	<variable name="featured8003Info1">
 		<value condition="!IsEmpty(Container(8003).ListItem.Artist)">$INFO[Container(8003).ListItem.Duration,, $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(8003).ListItem.AlbumArtist)">$INFO[Container(8003).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value condition="!IsEmpty(Container(8003).ListItem.Property(Addon.Name))">$INFO[Container(8003).ListItem.Property(Addon.Creator),$LOCALIZE[31001] ]</value>
+		<value condition="!IsEmpty(Container(8003).ListItem.AddonName))">$INFO[Container(8003).ListItem.AddonCreator),$LOCALIZE[31001] ]</value>
 		<value condition="!IsEmpty(Container(8003).ListItem.Property(Label3))">$INFO[Container(8003).ListItem.Property(Label3)]</value>
 		<value condition="!IsEmpty(Container(8003).ListItem.Property(ShortTime))">$INFO[Container(8003).ListItem.Property(ShortTime)]$INFO[Container(8003).ListItem.Property(NextDate),  •  ]$INFO[Container(8003).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(8003).ListItem.Property(RunTime),  •  , $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(8003).ListItem.TVShowTitle) + !IsEmpty(Container(8003).ListItem.Property(Runtime))">$INFO[Container(8003).ListItem.Premiered]$INFO[Container(8003).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(8003).ListItem.Property(Runtime),  •  , $LOCALIZE[12391]]</value>
@@ -5292,7 +5292,7 @@
 	<variable name="featured9002Info1">
 		<value condition="!IsEmpty(Container(9002).ListItem.Artist)">$INFO[Container(9002).ListItem.Duration,, $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(9002).ListItem.AlbumArtist)">$INFO[Container(9002).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value condition="!IsEmpty(Container(9002).ListItem.Property(Addon.Name))">$INFO[Container(9002).ListItem.Property(Addon.Creator),$LOCALIZE[31001] ]</value>
+		<value condition="!IsEmpty(Container(9002).ListItem.AddonName))">$INFO[Container(9002).ListItem.AddonCreator),$LOCALIZE[31001] ]</value>
 		<value condition="!IsEmpty(Container(9002).ListItem.Property(Label3))">$INFO[Container(9002).ListItem.Property(Label3)]</value>
 		<value condition="!IsEmpty(Container(9002).ListItem.Property(ShortTime))">$INFO[Container(9002).ListItem.Property(ShortTime)]$INFO[Container(9002).ListItem.Property(NextDate),  •  ]$INFO[Container(9002).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(9002).ListItem.Property(RunTime),  •  , $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(9002).ListItem.TVShowTitle) + !IsEmpty(Container(9002).ListItem.Property(Runtime))">$INFO[Container(9002).ListItem.Premiered]$INFO[Container(9002).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(9002).ListItem.Property(Runtime),  •  , $LOCALIZE[12391]]</value>
@@ -5303,7 +5303,7 @@
 	<variable name="featured9003Info1">
 		<value condition="!IsEmpty(Container(9003).ListItem.Artist)">$INFO[Container(9003).ListItem.Duration,, $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(9003).ListItem.AlbumArtist)">$INFO[Container(9003).ListItem.Duration,, $LOCALIZE[12391]]</value>
-		<value condition="!IsEmpty(Container(9003).ListItem.Property(Addon.Name))">$INFO[Container(9003).ListItem.Property(Addon.Creator),$LOCALIZE[31001] ]</value>
+		<value condition="!IsEmpty(Container(9003).ListItem.AddonName))">$INFO[Container(9003).ListItem.AddonCreator),$LOCALIZE[31001] ]</value>
 		<value condition="!IsEmpty(Container(9003).ListItem.Property(Label3))">$INFO[Container(9003).ListItem.Property(Label3)]</value>
 		<value condition="!IsEmpty(Container(9003).ListItem.Property(ShortTime))">$INFO[Container(9003).ListItem.Property(ShortTime)]$INFO[Container(9003).ListItem.Property(NextDate),  •  ]$INFO[Container(9003).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(9003).ListItem.Property(RunTime),  •  , $LOCALIZE[12391]]</value>
 		<value condition="!IsEmpty(Container(9003).ListItem.TVShowTitle) + !IsEmpty(Container(9003).ListItem.Property(Runtime))">$INFO[Container(9003).ListItem.Premiered]$INFO[Container(9003).ListItem.RatingAndVotes,  •  $LOCALIZE[563] ]$INFO[Container(9003).ListItem.Property(Runtime),  •  , $LOCALIZE[12391]]</value>
@@ -5366,70 +5366,70 @@
 	<variable name="featured5002Plot">
 		<value condition="[!IsEmpty(Container(5002).ListItem.Artist) | !IsEmpty(Container(5002).ListItem.AlbumArtist)] + !IsEmpty(Container(5002).ListItem.Plot)">$INFO[Container(5002).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(5002).ListItem.Artist) | !IsEmpty(Container(5002).ListItem.AlbumArtist)">$INFO[Container(5002).ListItem.Property(Album_Description)]</value>
-		<value condition="!IsEmpty(Container(5002).ListItem.Property(Addon.Name))">$INFO[Container(5002).ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(Container(5002).ListItem.AddonName))">$INFO[Container(5002).ListItem.AddonDescription)]</value>
 		<value condition="!IsEmpty(Container(5002).ListItem.Property(Label3))">$INFO[Window(weather).Property(Current.Condition),$LOCALIZE[33006] ,. ]$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.Humidity),$LOCALIZE[406] ,. ]$INFO[Window(weather).Property(Current.Wind),$LOCALIZE[404] ,. ]$INFO[Window(weather).Property(Current.DewPoint),$LOCALIZE[405] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.UVIndex),$LOCALIZE[403] ,. ]$INFO[Window(weather).Property(Today.Sunrise),$LOCALIZE[33027] ,. ]$INFO[Window(weather).Property(Today.Sunset),$LOCALIZE[33028] ,.]</value>
 		<value>$INFO[Container(5002).ListItem.Plot]</value>
 	</variable>
 	<variable name="featured5003Plot">
 		<value condition="[!IsEmpty(Container(5003).ListItem.Artist) | !IsEmpty(Container(5003).ListItem.AlbumArtist)] + !IsEmpty(Container(5003).ListItem.Plot)">$INFO[Container(5003).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(5003).ListItem.Artist) | !IsEmpty(Container(5003).ListItem.AlbumArtist)">$INFO[Container(5003).ListItem.Property(Album_Description)]</value>
-		<value condition="!IsEmpty(Container(5003).ListItem.Property(Addon.Name))">$INFO[Container(5003).ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(Container(5003).ListItem.AddonName))">$INFO[Container(5003).ListItem.AddonDescription)]</value>
 		<value condition="!IsEmpty(Container(5003).ListItem.Property(Label3))">$INFO[Window(weather).Property(Current.Condition),$LOCALIZE[33006] ,. ]$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.Humidity),$LOCALIZE[406] ,. ]$INFO[Window(weather).Property(Current.Wind),$LOCALIZE[404] ,. ]$INFO[Window(weather).Property(Current.DewPoint),$LOCALIZE[405] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.UVIndex),$LOCALIZE[403] ,. ]$INFO[Window(weather).Property(Today.Sunrise),$LOCALIZE[33027] ,. ]$INFO[Window(weather).Property(Today.Sunset),$LOCALIZE[33028] ,.]</value>
 		<value>$INFO[Container(5003).ListItem.Plot]</value>
 	</variable>
 	<variable name="featured6002Plot">
 		<value condition="[!IsEmpty(Container(6002).ListItem.Artist) | !IsEmpty(Container(6002).ListItem.AlbumArtist)] + !IsEmpty(Container(6002).ListItem.Plot)">$INFO[Container(6002).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(6002).ListItem.Artist) | !IsEmpty(Container(6002).ListItem.AlbumArtist)">$INFO[Container(6002).ListItem.Property(Album_Description)]</value>
-		<value condition="!IsEmpty(Container(6002).ListItem.Property(Addon.Name))">$INFO[Container(6002).ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(Container(6002).ListItem.AddonName))">$INFO[Container(6002).ListItem.AddonDescription)]</value>
 		<value condition="!IsEmpty(Container(6002).ListItem.Property(Label3))">$INFO[Window(weather).Property(Current.Condition),$LOCALIZE[33006] ,. ]$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.Humidity),$LOCALIZE[406] ,. ]$INFO[Window(weather).Property(Current.Wind),$LOCALIZE[404] ,. ]$INFO[Window(weather).Property(Current.DewPoint),$LOCALIZE[405] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.UVIndex),$LOCALIZE[403] ,. ]$INFO[Window(weather).Property(Today.Sunrise),$LOCALIZE[33027] ,. ]$INFO[Window(weather).Property(Today.Sunset),$LOCALIZE[33028] ,.]</value>
 		<value>$INFO[Container(6002).ListItem.Plot]</value>
 	</variable>
 	<variable name="featured6003Plot">
 		<value condition="[!IsEmpty(Container(6003).ListItem.Artist) | !IsEmpty(Container(6003).ListItem.AlbumArtist)] + !IsEmpty(Container(6003).ListItem.Plot)">$INFO[Container(6003).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(6003).ListItem.Artist) | !IsEmpty(Container(6003).ListItem.AlbumArtist)">$INFO[Container(6003).ListItem.Property(Album_Description)]</value>
-		<value condition="!IsEmpty(Container(6003).ListItem.Property(Addon.Name))">$INFO[Container(6003).ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(Container(6003).ListItem.AddonName))">$INFO[Container(6003).ListItem.AddonDescription)]</value>
 		<value condition="!IsEmpty(Container(6003).ListItem.Property(Label3))">$INFO[Window(weather).Property(Current.Condition),$LOCALIZE[33006] ,. ]$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.Humidity),$LOCALIZE[406] ,. ]$INFO[Window(weather).Property(Current.Wind),$LOCALIZE[404] ,. ]$INFO[Window(weather).Property(Current.DewPoint),$LOCALIZE[405] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.UVIndex),$LOCALIZE[403] ,. ]$INFO[Window(weather).Property(Today.Sunrise),$LOCALIZE[33027] ,. ]$INFO[Window(weather).Property(Today.Sunset),$LOCALIZE[33028] ,.]</value>
 		<value>$INFO[Container(6003).ListItem.Plot]</value>
 	</variable>
 	<variable name="featured7002Plot">
 		<value condition="[!IsEmpty(Container(7002).ListItem.Artist) | !IsEmpty(Container(7002).ListItem.AlbumArtist)] + !IsEmpty(Container(7002).ListItem.Plot)">$INFO[Container(7002).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(7002).ListItem.Artist) | !IsEmpty(Container(7002).ListItem.AlbumArtist)">$INFO[Container(7002).ListItem.Property(Album_Description)]</value>
-		<value condition="!IsEmpty(Container(7002).ListItem.Property(Addon.Name))">$INFO[Container(7002).ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(Container(7002).ListItem.AddonName))">$INFO[Container(7002).ListItem.AddonDescription)]</value>
 		<value condition="!IsEmpty(Container(7002).ListItem.Property(Label3))">$INFO[Window(weather).Property(Current.Condition),$LOCALIZE[33006] ,. ]$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.Humidity),$LOCALIZE[406] ,. ]$INFO[Window(weather).Property(Current.Wind),$LOCALIZE[404] ,. ]$INFO[Window(weather).Property(Current.DewPoint),$LOCALIZE[405] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.UVIndex),$LOCALIZE[403] ,. ]$INFO[Window(weather).Property(Today.Sunrise),$LOCALIZE[33027] ,. ]$INFO[Window(weather).Property(Today.Sunset),$LOCALIZE[33028] ,.]</value>
 		<value>$INFO[Container(7002).ListItem.Plot]</value>
 	</variable>
 	<variable name="featured7003Plot">
 		<value condition="[!IsEmpty(Container(7003).ListItem.Artist) | !IsEmpty(Container(7003).ListItem.AlbumArtist)] + !IsEmpty(Container(7003).ListItem.Plot)">$INFO[Container(7003).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(7003).ListItem.Artist) | !IsEmpty(Container(7003).ListItem.AlbumArtist)">$INFO[Container(7003).ListItem.Property(Album_Description)]</value>
-		<value condition="!IsEmpty(Container(7003).ListItem.Property(Addon.Name))">$INFO[Container(7003).ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(Container(7003).ListItem.AddonName))">$INFO[Container(7003).ListItem.AddonDescription)]</value>
 		<value condition="!IsEmpty(Container(7003).ListItem.Property(Label3))">$INFO[Window(weather).Property(Current.Condition),$LOCALIZE[33006] ,. ]$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.Humidity),$LOCALIZE[406] ,. ]$INFO[Window(weather).Property(Current.Wind),$LOCALIZE[404] ,. ]$INFO[Window(weather).Property(Current.DewPoint),$LOCALIZE[405] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.UVIndex),$LOCALIZE[403] ,. ]$INFO[Window(weather).Property(Today.Sunrise),$LOCALIZE[33027] ,. ]$INFO[Window(weather).Property(Today.Sunset),$LOCALIZE[33028] ,.]</value>
 		<value>$INFO[Container(7003).ListItem.Plot]</value>
 	</variable>
 	<variable name="featured8002Plot">
 		<value condition="[!IsEmpty(Container(8002).ListItem.Artist) | !IsEmpty(Container(8002).ListItem.AlbumArtist)] + !IsEmpty(Container(8002).ListItem.Plot)">$INFO[Container(8002).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(8002).ListItem.Artist) | !IsEmpty(Container(8002).ListItem.AlbumArtist)">$INFO[Container(8002).ListItem.Property(Album_Description)]</value>
-		<value condition="!IsEmpty(Container(8002).ListItem.Property(Addon.Name))">$INFO[Container(8002).ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(Container(8002).ListItem.AddonName))">$INFO[Container(8002).ListItem.AddonDescription)]</value>
 		<value condition="!IsEmpty(Container(8002).ListItem.Property(Label3))">$INFO[Window(weather).Property(Current.Condition),$LOCALIZE[33006] ,. ]$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.Humidity),$LOCALIZE[406] ,. ]$INFO[Window(weather).Property(Current.Wind),$LOCALIZE[404] ,. ]$INFO[Window(weather).Property(Current.DewPoint),$LOCALIZE[405] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.UVIndex),$LOCALIZE[403] ,. ]$INFO[Window(weather).Property(Today.Sunrise),$LOCALIZE[33027] ,. ]$INFO[Window(weather).Property(Today.Sunset),$LOCALIZE[33028] ,.]</value>
 		<value>$INFO[Container(8002).ListItem.Plot]</value>
 	</variable>
 	<variable name="featured8003Plot">
 		<value condition="[!IsEmpty(Container(8003).ListItem.Artist) | !IsEmpty(Container(8003).ListItem.AlbumArtist)] + !IsEmpty(Container(8003).ListItem.Plot)">$INFO[Container(8003).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(8003).ListItem.Artist) | !IsEmpty(Container(8003).ListItem.AlbumArtist)">$INFO[Container(8003).ListItem.Property(Album_Description)]</value>
-		<value condition="!IsEmpty(Container(8003).ListItem.Property(Addon.Name))">$INFO[Container(8003).ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(Container(8003).ListItem.AddonName))">$INFO[Container(8003).ListItem.AddonDescription)]</value>
 		<value condition="!IsEmpty(Container(8003).ListItem.Property(Label3))">$INFO[Window(weather).Property(Current.Condition),$LOCALIZE[33006] ,. ]$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.Humidity),$LOCALIZE[406] ,. ]$INFO[Window(weather).Property(Current.Wind),$LOCALIZE[404] ,. ]$INFO[Window(weather).Property(Current.DewPoint),$LOCALIZE[405] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.UVIndex),$LOCALIZE[403] ,. ]$INFO[Window(weather).Property(Today.Sunrise),$LOCALIZE[33027] ,. ]$INFO[Window(weather).Property(Today.Sunset),$LOCALIZE[33028] ,.]</value>
 		<value>$INFO[Container(8003).ListItem.Plot]</value>
 	</variable>
 	<variable name="featured9002Plot">
 		<value condition="[!IsEmpty(Container(9002).ListItem.Artist) | !IsEmpty(Container(9002).ListItem.AlbumArtist)] + !IsEmpty(Container(9002).ListItem.Plot)">$INFO[Container(9002).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(9002).ListItem.Artist) | !IsEmpty(Container(9002).ListItem.AlbumArtist)">$INFO[Container(9002).ListItem.Property(Album_Description)]</value>
-		<value condition="!IsEmpty(Container(9002).ListItem.Property(Addon.Name))">$INFO[Container(9002).ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(Container(9002).ListItem.AddonName))">$INFO[Container(9002).ListItem.AddonDescription)]</value>
 		<value condition="!IsEmpty(Container(9002).ListItem.Property(Label3))">$INFO[Window(weather).Property(Current.Condition),$LOCALIZE[33006] ,. ]$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.Humidity),$LOCALIZE[406] ,. ]$INFO[Window(weather).Property(Current.Wind),$LOCALIZE[404] ,. ]$INFO[Window(weather).Property(Current.DewPoint),$LOCALIZE[405] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.UVIndex),$LOCALIZE[403] ,. ]$INFO[Window(weather).Property(Today.Sunrise),$LOCALIZE[33027] ,. ]$INFO[Window(weather).Property(Today.Sunset),$LOCALIZE[33028] ,.]</value>
 		<value>$INFO[Container(9002).ListItem.Plot]</value>
 	</variable>
 	<variable name="featured9003Plot">
 		<value condition="[!IsEmpty(Container(9003).ListItem.Artist) | !IsEmpty(Container(9003).ListItem.AlbumArtist)] + !IsEmpty(Container(9003).ListItem.Plot)">$INFO[Container(9003).ListItem.Plot]</value>
 		<value condition="!IsEmpty(Container(9003).ListItem.Artist) | !IsEmpty(Container(9003).ListItem.AlbumArtist)">$INFO[Container(9003).ListItem.Property(Album_Description)]</value>
-		<value condition="!IsEmpty(Container(9003).ListItem.Property(Addon.Name))">$INFO[Container(9003).ListItem.Property(Addon.Description)]</value>
+		<value condition="!IsEmpty(Container(9003).ListItem.AddonName))">$INFO[Container(9003).ListItem.AddonDescription)]</value>
 		<value condition="!IsEmpty(Container(9003).ListItem.Property(Label3))">$INFO[Window(weather).Property(Current.Condition),$LOCALIZE[33006] ,. ]$INFO[Window(weather).Property(Current.FeelsLike),$LOCALIZE[402] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.Humidity),$LOCALIZE[406] ,. ]$INFO[Window(weather).Property(Current.Wind),$LOCALIZE[404] ,. ]$INFO[Window(weather).Property(Current.DewPoint),$LOCALIZE[405] ]$INFO[System.TemperatureUnits,,. ]$INFO[Window(weather).Property(Current.UVIndex),$LOCALIZE[403] ,. ]$INFO[Window(weather).Property(Today.Sunrise),$LOCALIZE[33027] ,. ]$INFO[Window(weather).Property(Today.Sunset),$LOCALIZE[33028] ,.]</value>
 		<value>$INFO[Container(9003).ListItem.Plot]</value>
 	</variable>
@@ -5526,14 +5526,14 @@
 		<value condition="Container.Content(songs)">$INFO[ListItem.Genre]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Genre)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator)]</value>
 		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]</value>
 	</variable>
 	<variable name="MusicStyleLastPlayedVar">
 		<value condition="Container.Content(songs)">$INFO[ListItem.LastPlayed]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Style)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Style)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator)]</value>
 		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]</value>
 	</variable>
 	<variable name="MusicMoodPlaycountVar">
@@ -5541,7 +5541,7 @@
 		<value condition="Container.Content(songs)">$INFO[ListItem.PlayCount]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Mood)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Mood)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator)]</value>
 		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]</value><value condition="Container.Content(addons)">$LOCALIZE[21863]:</value>
 	</variable>
 
@@ -5586,7 +5586,7 @@
 		<value condition="Container.Content(songs)">$INFO[ListItem.Duration]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Genre)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator)]</value>
 		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]</value>
 	</variable>
 	<variable name="MusicInfoLabel2Var">
@@ -5594,14 +5594,14 @@
 		<value condition="Container.Content(songs)">$INFO[ListItem.PlayCount]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Style)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Style)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator)]</value>
 		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]</value>
 	</variable>
 	<variable name="MusicInfoLabel3Var">
 		<value condition="Container.Content(songs)">$INFO[ListItem.LastPlayed]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Mood)]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Mood)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator)]</value>
 		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]</value><value condition="Container.Content(addons)">$LOCALIZE[21863]:</value>
 	</variable>
 	<variable name="MusicInfoTextLabel1Var">

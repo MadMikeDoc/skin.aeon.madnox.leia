@@ -56,7 +56,7 @@
 	<!-- <include file="Includes_LiveTV.xml"/> -->
 	<include file="script-skinshortcuts-includes.xml" />
 	<constant name="AutoScrollTime">2000</constant>
-	<include name="FSMediaInfoPanel">
+	<!-- <include name="FSMediaInfoPanel">
 		<control type="image" id="1">
 			<width>1265</width>
 			<height>300</height>
@@ -70,7 +70,7 @@
 			<texture border="5">panels/panel-content-border2.png</texture>
 			<animation effect="fade" end="5" condition="true">Conditional</animation>
 		</control>
-	</include>
+	</include> -->
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>60</height>
 		<width>254</width>
@@ -3919,7 +3919,7 @@
 		<onfocus>SetProperty(Widget.Background,homewidgets/bg_default.png,Home)</onfocus>
 		<!-- Year -->
 		<onfocus>SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.Year],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(Addon.Name))">SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.Property(Addon.Version)],Home)</onfocus>
+		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.AddonName))">SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.AddonVersion)],Home)</onfocus>
 		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.Year,$INFO[System.FriendlyName],Home)</onfocus>
 		<!-- MPAA -->
 		<onfocus>SetProperty(Widget.FlagsRating,$INFO[Container($PARAM[id]).ListItem.MPAA,$VAR[ColorFlagsRating]rating/,.png],home)</onfocus>

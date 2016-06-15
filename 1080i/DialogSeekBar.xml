@@ -736,7 +736,7 @@
 				</control>
 			</control>
 			<control type="group" id="4003">
-				<visible>!Window.IsVisible(infodialog)</visible>
+				<visible>!Window.IsVisible(notification)</visible>
 				<visible>Player.Paused|[Player.Paused+Player.Seeking] | [Player.Paused+Player.DisplayAfterSeek]</visible>
 				<visible>!Control.IsVisible(4001) + !Control.IsVisible(4002)</visible>
 				<animation type="Visible">

@@ -2027,7 +2027,7 @@
 					<top>123</top>
 					<width>1670</width>
 					<height>786</height>
-					<texture background="true">$INFO[Window.Property(Current.Earth.Phase.LargeImage)]</texture>
+					<texture background="true">$INFO[Window.Property(Current.Earth.Phase.image)]</texture>
 					<colordiffuse>44FFFFFF</colordiffuse>
 				</control>
 				<control type="group">
@@ -2535,7 +2535,7 @@
 						<visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
 						<visible>SubString(Weather.Plugin,weather.wunderground)</visible>
 					</control>
-					
+
 					<control type="radiobutton" id="309">
 						<label>	- Infrared Satellite</label>
 						<include>Objects_MediaMenuButtonAlt</include>
@@ -2578,9 +2578,9 @@
 						<visible>SubString(Weather.Plugin,weather.wunderground)</visible>
 						<visible>SubString(Window.Property(Weather.CurrentView),maps)</visible>
 					</control>
-					
-					
-					
+
+
+
 					<control type="button" id="1604">
 						<width>400</width>
 						<height>45</height>

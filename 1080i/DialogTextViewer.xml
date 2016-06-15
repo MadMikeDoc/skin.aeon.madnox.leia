@@ -10,7 +10,7 @@
 				<top>-800</top>
 				<width>1491</width>
 				<align>center</align>
-				<label>$INFO[ListItem.Property(Addon.Name),$LOCALIZE[24003] - ]</label>
+				<label>$INFO[ListItem.AddonName),$LOCALIZE[24003] - ]</label>
 				<font>Font_ShowcaseMainLabel2</font>
 			</control>
 			<control type="textbox" id="5">

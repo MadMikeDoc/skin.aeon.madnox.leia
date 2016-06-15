@@ -136,34 +136,22 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
-						<label>480</label>
+						<label>14206</label>
 						<property name="description">$LOCALIZE[31400]</property>
-						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						<onclick>ActivateWindow(InterfaceSettings)</onclick>
 						<icon>special://skin/backgrounds/system_icons/skinsetting.jpg</icon>
 					</item>
 					<item id="2">
-						<label>157</label>
+						<label>14200</label>
 						<property name="description">$LOCALIZE[31401]</property>
-						<onclick>ActivateWindow(VideosSettings)</onclick>
+						<onclick>ActivateWindow(PlayerSettings)</onclick>
 						<icon>special://skin/backgrounds/system_icons/videos.jpg</icon>
 					</item>
 					<item id="3">
-						<label>2</label>
+						<label>14202</label>
 						<property name="description">$LOCALIZE[31402]</property>
-						<onclick>ActivateWindow(MusicSettings)</onclick>
+						<onclick>ActivateWindow(LibrarySettings)</onclick>
 						<icon>special://skin/backgrounds/system_icons/music.jpg</icon>
-					</item>
-					<item id="4">
-						<label>1</label>
-						<property name="description">$LOCALIZE[31403]</property>
-						<onclick>ActivateWindow(PicturesSettings)</onclick>
-						<icon>special://skin/backgrounds/system_icons/pictures.jpg</icon>
-					</item>
-					<item id="5">
-						<label>8</label>
-						<property name="description">$LOCALIZE[31404]</property>
-						<onclick>ActivateWindow(WeatherSettings)</onclick>
-						<icon>special://skin/backgrounds/system_icons/weather.jpg</icon>
 					</item>
 					<item id="6">
 						<label>24001</label>

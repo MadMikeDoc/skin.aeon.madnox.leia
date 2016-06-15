@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="52">
 
-	<visible>Window.IsVisible(mutebug) | Window.IsVisible(volumebar)</visible>
+	<visible>Player.Muted | Window.IsVisible(volumebar)</visible>
 	<animation type="WindowOpen" reversible="false">
 		<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
 		<effect type="fade" delay="160" end="100" time="240" />
@@ -38,7 +38,7 @@
 				<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
 			</control>
 			<control type="group">
-				<visible>!Window.IsVisible(mutebug) + !player.passthrough</visible>
+				<visible>!Player.Muted + !player.passthrough</visible>
 				<control type="image">
 					<left>-10</left>
 					<top>0</top>
@@ -73,7 +73,7 @@
 					<label>VOLUME</label>
 					<font>Font_MainClassic3</font>
 					<scroll>true</scroll>
-					<visible>!Window.IsVisible(mutebug)</visible>
+					<visible>!Player.Muted</visible>
 				</control>
 			</control>
 			<control type="label">
@@ -87,7 +87,7 @@
 				<visible>player.passthrough</visible>
 			</control>
 			<control type="group">
-				<visible>Window.IsVisible(mutebug)</visible>
+				<visible>Player.Muted</visible>
 				<control type="image">
 					<left>26</left>
 					<top>30</top>

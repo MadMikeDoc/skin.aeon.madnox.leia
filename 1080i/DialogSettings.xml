@@ -23,7 +23,7 @@
 			<posy>18</posy>
 			<width>90</width>
 			<height>90</height>
-			<texture colordiffuse="gray">special://skin/extras/BigIcons/Magicwand.png</texture>
+			<texture colordiffuse="grey">special://skin/extras/BigIcons/Magicwand.png</texture>
 
 		</control>
 		<control type="label" id="2">
@@ -69,6 +69,12 @@
 			<font>Font_Reg30</font>
 			<textcolor>grey2</textcolor>
 		</control>
+		<control type="edit" id="12">
+			<height>70</height>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">button-nofocus.png</texturenofocus>
+			<font>Font_Reg30</font>
+			<textcolor>grey2</textcolor>
+		</control>
 		<control type="sliderex" id="13">
 			<height>70</height>
 			<textoffsetx>13</textoffsetx>
@@ -78,27 +84,36 @@
 			<font>Font_Reg30</font>
 			<textcolor>grey2</textcolor>
 		</control>
-		<control type="edit" id="12">
+		<control type="label" id="14">
+			<description>Default label</description>
 			<height>70</height>
-			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">button-nofocus.png</texturenofocus>
+		</control>
+		<control type="button" id="28">
+			<description>Ok Button</description>
+			<height>70</height>
+			<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			<font>Font_Reg30</font>
 			<textcolor>grey2</textcolor>
+			<label>186</label>
 		</control>
-		<control type="button" id="27">
-			<posx>0</posx>
-			<posy>900</posy>
-			<width>570</width>
-			<height>60</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">button-nofocus.png</texturenofocus>
+		<control type="button" id="29">
+			<description>Cancel Button</description>
+			<height>70</height>
+			<texturenofocus border="5">button-nofocus.png</texturenofocus>
 			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-			<label>Reset</label>
-			<font>Font_Reg26</font>
-			<onup>5</onup>
-			<onleft>Action(Close)</onleft>
-			<onright>Action(Close)</onright>
-			<ondown>5</ondown>
+			<font>Font_Reg30</font>
+			<textcolor>grey2</textcolor>
+			<label>222</label>
+		</control>
+		<control type="button" id="30">
+			<description>Clear Button</description>
+			<height>70</height>
+			<texturenofocus border="5">button-nofocus.png</texturenofocus>
+			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+			<font>Font_Reg30</font>
+			<textcolor>grey2</textcolor>
+			<label>192</label>
 		</control>
 	</controls>
 </window>
