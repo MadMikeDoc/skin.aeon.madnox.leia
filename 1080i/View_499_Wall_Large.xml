@@ -151,7 +151,7 @@
 				<label>[COLOR $VAR[FocusTextureColorVar]]$INFO[ListItem.Label][/COLOR]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!StringCompare(ListItem.Label,..)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 			<control type="image">
 				<posx>640</posx>
@@ -195,7 +195,7 @@
 				<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[31156][/COLOR]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!StringCompare(ListItem.Label,..) + Container.Content(movies)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies)</visible>
 			</control>
 			<control type="label">
 				<posx>805</posx>
@@ -206,7 +206,7 @@
 				<label>$INFO[ListItem.Director]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!StringCompare(ListItem.Label,..) + Container.Content(movies) + !SubString(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies) + !SubString(ListItem(0).Path,videodb://movies/sets)</visible>
 			</control>
 			<control type="label">
 				<posx>805</posx>
@@ -217,7 +217,7 @@
 				<label>$INFO[Window(0).Property(Set.Movies.Director)]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!StringCompare(ListItem.Label,..) + Container.Content(movies) + SubString(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies) + SubString(ListItem(0).Path,videodb://movies/sets)</visible>
 			</control>
 			<control type="label">
 				<posx>650</posx>
@@ -228,7 +228,7 @@
 				<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[2050]:[/COLOR]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!StringCompare(ListItem.Label,..) + Container.Content(movies)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies)</visible>
 			</control>
 			<control type="label">
 				<posx>770</posx>
@@ -239,7 +239,7 @@
 				<label>$VAR[MovieDuration]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!StringCompare(ListItem.Label,..) + Container.Content(movies)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies)</visible>
 			</control>
 			<control type="label">
 				<posx>890</posx>
@@ -250,7 +250,7 @@
 				<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[515]:[/COLOR]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!StringCompare(ListItem.Label,..) + Container.Content(movies)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies)</visible>
 			</control>
 			<control type="label">
 				<posx>980</posx>
@@ -261,7 +261,7 @@
 				<label>$INFO[ListItem.Genre]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!StringCompare(ListItem.Label,..) + Container.Content(movies) + !SubString(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies) + !SubString(ListItem(0).Path,videodb://movies/sets)</visible>
 			</control>
 			<control type="label">
 				<posx>980</posx>
@@ -272,15 +272,15 @@
 				<label>$INFO[Window(0).Property(Set.Movies.Genre)]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!StringCompare(ListItem.Label,..) + Container.Content(movies) + SubString(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies) + SubString(ListItem(0).Path,videodb://movies/sets)</visible>
 			</control>
 		</control>
 	</include>
 	<include name="Wall_Dimmer">
-		<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(5) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !StringCompare(ListItem.Label,..) + Skin.HasSetting(WallLargeMovieInfoDelay_5)">conditional</animation>
-		<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(10) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !StringCompare(ListItem.Label,..) + Skin.HasSetting(WallLargeMovieInfoDelay_10)">conditional</animation>
-		<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(20) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !StringCompare(ListItem.Label,..) + Skin.HasSetting(WallLargeMovieInfoDelay_20)">conditional</animation>
-		<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(30) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !StringCompare(ListItem.Label,..) + Skin.HasSetting(WallLargeMovieInfoDelay_30)">conditional</animation>
+		<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(5) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !ListItem.IsParentFolder + Skin.HasSetting(WallLargeMovieInfoDelay_5)">conditional</animation>
+		<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(10) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !ListItem.IsParentFolder + Skin.HasSetting(WallLargeMovieInfoDelay_10)">conditional</animation>
+		<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(20) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !ListItem.IsParentFolder + Skin.HasSetting(WallLargeMovieInfoDelay_20)">conditional</animation>
+		<animation effect="fade" start="100" end="25" time="300" condition="System.IdleTime(30) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !ListItem.IsParentFolder + Skin.HasSetting(WallLargeMovieInfoDelay_30)">conditional</animation>
 	</include>
 	<include name="Wall_Large">
 		<control type="group">
@@ -496,7 +496,7 @@
 				<ondown>499</ondown>
 				<pagecontrol>60</pagecontrol>
 				<preloaditems>2</preloaditems>
-				<viewtype label="Wall Large">Panel</viewtype>
+				<viewtype label="Wall Large">icon</viewtype>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<visible>Container.Content(tvshows) | Container.Content(movies) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(sets) | Container.Content(genres)</visible>
 				<itemlayout height="285" width="185" condition="!Skin.Hassetting(WallLargeViewSmall)">
@@ -647,8 +647,6 @@
 							<top>67</top>
 							<width>90</width>
 							<height>40</height>
-							<align>center</align>
-							<aspectratio align="center" aligny="top">keep</aspectratio>
 							<visible>Skin.HasSetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(ListItem.Art(clearlogo))</visible>
 							<control type="image">
 								<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -981,8 +979,6 @@
 							<top>52</top>
 							<width>70</width>
 							<height>30</height>
-							<align>center</align>
-							<aspectratio align="center" aligny="top">keep</aspectratio>
 							<visible>Skin.HasSetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(ListItem.Art(clearlogo))</visible>
 							<control type="image">
 								<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -1206,7 +1202,7 @@
 			<control type="group">
 				<visible>Skin.HasSetting(WallLargeMovieInfo)</visible>
 				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-				<visible>[System.IdleTime(5) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !StringCompare(ListItem.Label,..) + Skin.HasSetting(WallLargeMovieInfoDelay_5)] | [System.IdleTime(10) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !StringCompare(ListItem.Label,..) + Skin.HasSetting(WallLargeMovieInfoDelay_10) ] | [System.IdleTime(20) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !StringCompare(ListItem.Label,..) + Skin.HasSetting(WallLargeMovieInfoDelay_20)] | [System.IdleTime(30) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !StringCompare(ListItem.Label,..) + Skin.HasSetting(WallLargeMovieInfoDelay_30)]</visible>
+				<visible>[System.IdleTime(5) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !ListItem.IsParentFolder + Skin.HasSetting(WallLargeMovieInfoDelay_5)] | [System.IdleTime(10) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !ListItem.IsParentFolder + Skin.HasSetting(WallLargeMovieInfoDelay_10) ] | [System.IdleTime(20) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !ListItem.IsParentFolder + Skin.HasSetting(WallLargeMovieInfoDelay_20)] | [System.IdleTime(30) + Control.HasFocus(499) + Skin.HasSetting(WallLargeMovieInfo) + !ListItem.IsParentFolder + Skin.HasSetting(WallLargeMovieInfoDelay_30)]</visible>
 				<include>Movie_Info</include>
 			</control>
 			<control type="scrollbar" id="60">
@@ -1228,8 +1224,8 @@
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>
-			
-	<!-- Letter-Scrollbar -->	
+
+	<!-- Letter-Scrollbar -->
 		<control type="image">
 			<left>1784</left>
 			<top>126</top>
@@ -1275,7 +1271,7 @@
 			</focusedlayout>
 			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 		</control>
-			
+
 		</control>
 	</include>
 </includes>

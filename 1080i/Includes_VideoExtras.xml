@@ -463,7 +463,7 @@
 							<align>right</align>
 							<label>$INFO[ListItem.plot]</label>
 							<font>Font_Reg30_2</font>
-							<autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll time="2000" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 					</control>
 				</focusedlayout>

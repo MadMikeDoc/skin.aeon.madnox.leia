@@ -4,8 +4,8 @@
 		<control type="group">
 			<include>ViewAnimation</include>
 			<visible>Control.IsVisible(810)</visible>
-			<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
-			<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
+			<!-- <effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
+			<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" /> -->
 			<include>CommonSlideAnimations</include>
 			<control type="image">
 				<texture flipx="true">views/episodebgoverlay.png</texture>
@@ -56,7 +56,6 @@
 				<top>240</top>
 				<width>650</width>
 				<height>270</height>
-				<textcolor>$VAR[TitleColorVar]</textcolor>
 				<!-- Album Info-->
 				<control type="grouplist">
 					<left>2</left>
@@ -83,7 +82,7 @@
 					<width>650</width>
 					<label>[COLOR $VAR[FocusTextureColorVar]]TrackList: [/COLOR]</label>
 					<include>KodiFlixButtonsValues</include>
-					<visible>!StringCompare(ListItem.Label,..) + Container.Content(albums)</visible>
+					<visible>!ListItem.IsParentFolder + Container.Content(albums)</visible>
 				</control>
 				<control type="textbox">
 					<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.Music.TrackList)][/COLOR]</label>
@@ -94,7 +93,7 @@
 					<align>left</align>
 					<include>KodiFlixButtonsValues</include>
 					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
-					<visible>!StringCompare(ListItem.Label,..) + Container.Content(albums)</visible>
+					<visible>!ListItem.IsParentFolder + Container.Content(albums)</visible>
 				</control>
 				<!-- End Album Info -->
 				<!--Album Song list-->
@@ -104,7 +103,7 @@
 					<width>650</width>
 					<label>[COLOR $VAR[FocusTextureColorVar]]Albums: [/COLOR]</label>
 					<include>KodiFlixButtonsValues</include>
-					<visible>!StringCompare(ListItem.Label,..) + Container.Content(artists)</visible>
+					<visible>!ListItem.IsParentFolder + Container.Content(artists)</visible>
 				</control>
 				<control type="textbox">
 					<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.Music.Albums)][/COLOR]</label>
@@ -115,7 +114,7 @@
 					<align>left</align>
 					<include>KodiFlixButtonsValues</include>
 					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
-					<visible>!StringCompare(ListItem.Label,..) + Container.Content(artists)</visible>
+					<visible>!ListItem.IsParentFolder + Container.Content(artists)</visible>
 				</control>
 				<control type="group">
 					<left>0</left>
@@ -134,7 +133,7 @@
 						<pagecontrol>63</pagecontrol>
 						<include>ShowCaseInfoPanelButtonsValues</include>
 						<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
 				<!-- End of Album Song List -->

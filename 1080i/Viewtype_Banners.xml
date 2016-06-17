@@ -49,7 +49,7 @@
 				</control>
 			</control>
 			<control type="image">
-			
+
 				<left>117</left>
 				<top>622</top>
 				<width>1688</width>
@@ -60,7 +60,7 @@
 				<visible>Skin.HasSetting(AltBannerPlex)</visible>
 				<animation effect="fade" time="160" delay="120" start="100" end="40" condition="Control.IsVisible(7550)">Conditional</animation>
 			</control>
-			
+
 			<control type="panel" id="508">
 				<left>117</left>
 				<top>614</top>
@@ -73,7 +73,7 @@
 				<ondown condition="!Skin.HasSetting(AlphabetScrollbar)">61</ondown>
 				<ondown condition="Skin.HasSetting(AlphabetScrollbar)">6020</ondown>
 				<orientation>horizontal</orientation>
-				<viewtype label="$LOCALIZE[31236]">wide icon</viewtype>
+				<viewtype label="$LOCALIZE[31236]">icon</viewtype>
 				<pagecontrol>61</pagecontrol>
 				<scrolltime tween="cubic">300</scrolltime>
 				<preloaditems>2</preloaditems>
@@ -348,7 +348,7 @@
 				</focusedlayout>
 			</control>
 
-			<!-- Letter-Scrollbar MOVIES-->			
+			<!-- Letter-Scrollbar MOVIES-->
 			<control type="image">
 				<left>405</left>
 				<top>1004</top>
@@ -390,9 +390,9 @@
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
-			</control>	
+			</control>
 
-			<!-- Letter-Scrollbar TVSHOWS-->			
+			<!-- Letter-Scrollbar TVSHOWS-->
 			<control type="image">
 				<left>490</left>
 				<top>1004</top>
@@ -434,8 +434,8 @@
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
-			</control>	
-			
+			</control>
+
 
 		</control>
 	</include>

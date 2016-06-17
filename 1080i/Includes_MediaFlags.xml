@@ -959,7 +959,7 @@
 				<control type="group">
 					<!--playcount-->
 					<!--visible>Control.Isvisible(57)</visible-->
-					<visible>!Stringcompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 					<left>15</left>
 					<animation effect="slide" end="1190" time="0" condition="Control.IsVisible(700)">Conditional</animation>
 					<control type="label">
@@ -1006,7 +1006,7 @@
                 </control-->
 				<!-- Rating -->
 				<control type="image">
-					<visible>!Stringcompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 					<left>140</left>
 					<width>135</width>
 					<height>88</height>
@@ -1089,7 +1089,7 @@
 		<control type="group">
 			<top>1005</top>
 			<visible>[Control.IsVisible(57) | Control.IsVisible(510) | Control.IsVisible(52)] + !Container.Content(files)</visible>
-			<visible>!Stringcompare(ListItem.Label,..)</visible>
+			<visible>!ListItem.IsParentFolder</visible>
 			<animation effect="slide" end="-0,-15" condition="Control.IsVisible(52)">Conditional</animation>
 			<include>Animation_FlagSlideDown</include>
 			<control type="group">

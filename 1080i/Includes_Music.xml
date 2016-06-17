@@ -6,7 +6,7 @@
 			<width>1920</width>
 			<height>750</height>
 			<visible>Window.IsActive(1112) | Window.IsActive(1166) | Control.IsVisible(199) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
-			<visible>!Stringcompare(ListItem.Label,..)</visible>
+			<visible>!ListItem.IsParentFolder</visible>
 			<visible>Control.IsVisible(57) | Control.isVisible(509) | Control.IsVisible(503)</visible>
 			<animation effect="slide" start="0,-1200" end="0,0" time="560" tween="cubic">VisibleChange</animation>
 			<animation effect="slide" start="0,-1200" end="0,0" time="440" delay="640" tween="cubic">WindowOpen</animation>
@@ -142,7 +142,7 @@
 							<height>220</height>
 							<label fallback="31006">$VAR[InfoWallTextboxVar]</label>
 							<textcolor>white6</textcolor>
-							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 					</control>
 					<control type="group">
@@ -2032,7 +2032,7 @@
 							<label>$INFO[Window(visualisation).Property(ArtistSlideshow.ArtistBiography)]</label>
 							<font>Font_Reg30_2</font>
 							<pagecontrol>7010</pagecontrol>
-							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 						<control type="spincontrol" id="7010">
 							<left>1080</left>

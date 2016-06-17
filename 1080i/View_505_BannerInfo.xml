@@ -129,7 +129,7 @@
 						<height>80</height>
 						<include>OverlayVisibility0</include>
 						<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
-					</control>				
+					</control>
 					<control type="image">
 						<posx>892</posx>
 						<posy>8</posy>
@@ -158,7 +158,7 @@
 							<texture background="true" fallback="thumbs/fallback_banner_tp.png">$VAR[BannerVar]</texture>
 							<fadetime>400</fadetime>
 							<visible>[!IsEmpty(ListItem.Art(banner)) + [!Skin.HasSetting(BannerInfoUseLogo) | !SubString(ListItem.Path,videodb://movies/sets) ]]| !IsEmpty(ListItem.Art(fanart)) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
-						</control>				
+						</control>
 						<control type="group">
 							<visible>IsEmpty(ListItem.Art(banner)) | [Skin.HasSetting(BannerInfoUseLogo) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
 							<control type="image">
@@ -245,7 +245,7 @@
 							<width>80</width>
 							<height>80</height>
 							<include>OverlayVisibility0</include>
-						</control>				
+						</control>
 						<control type="image">
 							<posx>894</posx>
 							<posy>6</posy>
@@ -265,7 +265,7 @@
 						<height>181</height>
 						<texture border="8">views/addonwall_select.png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-					</control>	
+					</control>
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
@@ -332,7 +332,7 @@
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.AnimatedFanart)]</texture>
 					<visible>Skin.HasSetting(SkinHelperAnimations) + !IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart)) + !Skin.HasSetting(BannerInfoDisableAnimatedFanart)</visible>
 				</control>
-				
+
 			</control>
 			<control type="label">
 				<posx>1113</posx>
@@ -452,7 +452,6 @@
 				<posy>990</posy>
 				<width>1815</width>
 				<height>90</height>
-				<orientation>horizontal</orientation>
 				<include>VisibleFadeEffect</include>
 				<visible>Container.Content(tvshows)</visible>
 				<control type="group">
@@ -556,7 +555,7 @@
 				<top>984</top>
 				<width>1840</width>
 				<height>90</height>
-				<visible>Container.Content(movies) + ![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)]</visible>
+				<visible>Container.Content(movies) + ![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
 				<control type="image">
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsResolution]resolution/$INFO[ListItem.VideoResolution,,.png]</texture>

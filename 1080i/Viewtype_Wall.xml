@@ -415,7 +415,7 @@
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[Listitem.Label]</texture>
-					<visible>Container.Content(directors) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>Container.Content(directors) + !ListItem.IsParentFolder</visible>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
@@ -425,7 +425,7 @@
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
-					<visible>StringCompare(ListItem.Label,..)</visible>
+					<visible>ListItem.IsParentFolder</visible>
 					<bordersize>5</bordersize>
 				</control>
 			</control>
@@ -445,7 +445,7 @@
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[Listitem.Label]</texture>
-					<visible>Container.Content(directors) + !StringCompare(ListItem.Label,..)</visible>
+					<visible>Container.Content(directors) + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
 					<left>-2</left>
@@ -454,7 +454,7 @@
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
-					<visible>StringCompare(ListItem.Label,..)</visible>
+					<visible>ListItem.IsParentFolder</visible>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
@@ -481,7 +481,7 @@
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[Listitem.Label]</texture>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
@@ -491,7 +491,7 @@
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
-					<visible>StringCompare(ListItem.Label,..)</visible>
+					<visible>ListItem.IsParentFolder</visible>
 					<bordersize>5</bordersize>
 				</control>
 			</control>
@@ -511,7 +511,7 @@
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">http://localhost:52307/getthumb&amp;title=$INFO[Listitem.Label]</texture>
-					<visible>!StringCompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
 					<left>-2</left>
@@ -520,7 +520,7 @@
 					<height>150</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
-					<visible>StringCompare(ListItem.Label,..)</visible>
+					<visible>ListItem.IsParentFolder</visible>
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
@@ -1004,7 +1004,7 @@
 			<orientation>horizontal</orientation>
 			<include>WallContent</include>
 		</control>
-		
+
 		<!-- Letter-Scrollbar -->
 			<control type="image">
 				<left>400</left>
@@ -1016,7 +1016,7 @@
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6016) + Skin.HasSetting(AlphabetScrollbar)</visible>
 				<visible>Container.Content(movies) | Container.Content(sets)</visible>
-			</control>			
+			</control>
 			<control type="panel" id="6016">
 				<onup>500</onup>
 				<ondown>61</ondown>
@@ -1059,7 +1059,7 @@
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6016) + Skin.HasSetting(AlphabetScrollbar)</visible>
 				<visible>Container.Content(TVShows) | Container.Content(seasons) | Container.Content(episodes)</visible>
-			</control>			
+			</control>
 			<control type="panel" id="6016">
 				<onup>500</onup>
 				<ondown>61</ondown>
@@ -1091,7 +1091,7 @@
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 			</control>
-			
+
 	</include>
 
 	<include name="WallVertical">
@@ -1143,8 +1143,8 @@
 			<orientation>vertical</orientation>
 			<include>WallContent</include>
 		</control>
-		
-	<!-- Letter-Scrollbar -->	
+
+	<!-- Letter-Scrollbar -->
 		<control type="image">
 			<left>1769</left>
 			<top>80</top>
@@ -1192,7 +1192,7 @@
 			</focusedlayout>
 			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 		</control>
-		
+
 	</include>
 
 	<include name="Viewtype_Wall">

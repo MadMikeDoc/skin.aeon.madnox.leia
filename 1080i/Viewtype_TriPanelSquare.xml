@@ -115,7 +115,7 @@
 					<height>365</height>
 					<label>$INFO[Window(Home).Property(SkinHelper.Music.Info)]</label>
 					<font>font.ml.26</font>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<visible>!Skin.HasSetting(TriPanelSquareShowTracks) + Container.Content(albums)</visible>
@@ -125,7 +125,7 @@
 					<height>365</height>
 					<label>$INFO[Window(Home).Property(SkinHelper.Music.Info)]</label>
 					<font>font.ml.26</font>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<visible>Skin.HasSetting(TriPanelSquareShowCDs) + Container.Content(artists)</visible>
@@ -136,7 +136,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Window(Home).Property(SkinHelper.Music.Albums.Formatted)]</label>
 					<font>font.ml.26</font>
-					<autoscroll delay="1000" time="AutoScrollTime" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="1000" time="2000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<visible>Skin.HasSetting(TriPanelSquareShowTracks) + Container.Content(albums)</visible>
@@ -147,7 +147,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Window(Home).Property(SkinHelper.Music.TrackList)]</label>
 					<font>font.ml</font>
-					<autoscroll delay="1000" time="AutoScrollTime" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="1000" time="2000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 			<control type="group" id="5302">
@@ -346,7 +346,7 @@
 					<height>400</height>
 					<label>$VAR[InfoWallTextboxVar]</label>
 					<font>font.ml.26</font>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<visible>!Skin.HasSetting(TriPanelSquareShowTracks) + Container.Content(albums)</visible>
@@ -356,7 +356,7 @@
 					<height>400</height>
 					<label>$VAR[InfoWallTextboxVar]</label>
 					<font>Font_Reg28</font>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<visible>Skin.HasSetting(TriPanelSquareShowCDs) + Container.Content(artists)</visible>
@@ -367,7 +367,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Window(Home).Property(SkinHelper.Music.Albums)]</label>
 					<font>font.ml.26</font>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<visible>Skin.HasSetting(TriPanelSquareShowTracks) + Container.Content(albums)</visible>
@@ -378,7 +378,7 @@
 					<aligny>center</aligny>
 					<label>$INFO[Window(Home).Property(SkinHelper.Music.TrackList)]</label>
 					<font>font.ml</font>
-					<autoscroll delay="1000" time="AutoScrollTime" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="1000" time="2000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="image">
 					<width>650</width>
@@ -771,7 +771,7 @@
 					<top>275</top>
 					<width>410</width>
 					<height>80</height>
-					<aspectratio>strech</aspectratio>
+					<aspectratio>stretch</aspectratio>
 					<texture>homewidgets/glass/banner.png</texture>
 					<visible>Control.IsVisible(53) + Skin.HasSetting(TriPanelSquareClearArt)  + !IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))</visible>
 					<animation effect="slide" end="0,0" time="300" condition=" Stringcompare(Skin.String(TriPanelSquarePosition),1)">Conditional</animation>
@@ -782,7 +782,7 @@
 					<top>275</top>
 					<width>410</width>
 					<height>80</height>
-					<aspectratio>strech</aspectratio>
+					<aspectratio>stretch</aspectratio>
 					<texture>thumbs_square/banner_shadow_in.png</texture>
 					<visible>Control.IsVisible(53) + Skin.HasSetting(TriPanelSquareClearArt)  + !IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))</visible>
 					<animation effect="slide" end="0,0" time="300" condition=" Stringcompare(Skin.String(TriPanelSquarePosition),1)">Conditional</animation>

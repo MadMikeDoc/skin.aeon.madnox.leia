@@ -20,8 +20,7 @@
 				<top>100</top>
 				<width>1240</width>
 				<height>560</height>
-				<texture border="20">osd/osd_settings_back.png</texture>
-				<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[DialogColorVar]" border="20">osd/osd_settings_back.png</texture>
 			</control>
 			<include>Animation_OpenCloseZoom</include>
 			<control type="button">

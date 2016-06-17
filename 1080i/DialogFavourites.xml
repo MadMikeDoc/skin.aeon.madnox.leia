@@ -25,8 +25,7 @@
 			<top>80</top>
 			<width>1608</width>
 			<height>922</height>
-			<texture>osd/osd_settings_back.png</texture>
-			<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+			<texture colordiffuse="$VAR[DialogColorVar]">osd/osd_settings_back.png</texture>
 		</control>
 		<control type="image">
 			<left>175</left>

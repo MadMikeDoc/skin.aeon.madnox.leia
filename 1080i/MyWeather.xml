@@ -2011,7 +2011,6 @@
 					<font>Font_Reg28</font>
 					<textcolor>floor</textcolor>
 					<scroll>true</scroll>
-					<wrapmultiline>false</wrapmultiline>
 					<scrollspeed>30</scrollspeed>
 					<visible>Window.Property(Alerts.IsFetched)</visible>
 					<animation effect="slide" end="0,429" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>
@@ -2131,7 +2130,7 @@
 						</control>
 						<control type="group">
 							<top>825</top>
-							<dwescription>Sunset</dwescription>
+							<description>Sunset</description>
 							<visible>!IsEmpty(Window.Property(Current.Sunset))</visible>
 							<control type="label">
 								<left>255</left>
@@ -2412,7 +2411,6 @@
 					<width>450</width>
 					<height>1080</height>
 					<orientation>vertical</orientation>
-					<scroll>true</scroll>
 					<onleft>7510</onleft>
 					<onright>7510</onright>
 					<onup>9003</onup>
@@ -2446,7 +2444,6 @@
 						<textcolor>$VAR[FontColorVar]</textcolor>
 						<focusedcolor>white6</focusedcolor>
 						<onleft>ActivateWindow(1121)</onleft>
-						<spinleft>-20</spinleft>
 					</control>
 					<control type="togglebutton" id="307">
 						<label>$LOCALIZE[20088]: [COLOR $VAR[FontColorVar]]$LOCALIZE[571][/COLOR]</label>

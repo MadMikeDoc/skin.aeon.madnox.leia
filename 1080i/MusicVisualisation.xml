@@ -1012,7 +1012,7 @@
 					<posy>-270</posy>
 					<height>400</height>
 					<width>500</width>
-					<aspectratio align="left">keep</aspectratio>                       
+					<aspectratio align="left">keep</aspectratio>
 					<texture diffuse="thumbs/cdcover_mask2.png">thumbs/cdcover_glass_noreflect.png</texture>
 				</control>
 				<control type="image">
@@ -1358,7 +1358,6 @@
 				<width>610</width>
 				<height>30</height>
 				<itemgap>3</itemgap>
-				<scroll>true</scroll>
 				<visible>!IsEmpty(MusicPlayer.Offset(1).Title)</visible>
 				<orientation>horizontal</orientation>
 				<control type="label">
@@ -1661,8 +1660,6 @@
 					<label>10:</label>
 					<font>Font_Reg19_Caps</font>
 					<textcolor>white3</textcolor>
-					<font>Font_Reg19_Caps</font>
-					<textcolor>white3</textcolor>
 				</control>
 				<control type="label">
 					<width min="30" max="200">auto</width>
@@ -1715,7 +1712,7 @@
 					<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
 				</control>
 				 <control type="group">
-					<animation effect="slide" start="0,0" end="155,0" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext + Skin.HasSetting(AltMusicVizLayoutShuffle)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="155,0" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext) + Skin.HasSetting(AltMusicVizLayoutShuffle)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="-170,35" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutPlaylistNext) + !Skin.HasSetting(AltMusicVizLayoutProgress)">Conditional</animation>
 					<left>970</left>
 					<top>153</top>
@@ -1855,7 +1852,7 @@
 				<height>435</height>
 				<visible>Skin.HasSetting(ThirdMusicVizShowViz) + Skin.HasSetting(HideVizBG)</visible>
 			</control>
-		
+
 			<control type="image"> <!--Set Panel-->
 				<top>20</top>
 				<width>1960</width>
@@ -1941,7 +1938,7 @@
 				<top>60</top>
 				<width>810</width>
 				<height>410</height>
-				
+
 				<control type="image">
 					<animation effect="slide" start="0,0" end="-250,0" time="1500" tween="cubic" easing="out" delay="400" condition="Skin.HasSetting(ThirdMusicVizRecordPlayer)">Conditional</animation>
 					<left>10</left>
@@ -3812,7 +3809,7 @@
 						<font>Font_Reg15</font>
 						<textcolor>$VAR[TitleColorVar]</textcolor>
 						<label>$VAR[NowPlayingTextBoxLabelVar]</label>
-						<autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll delay="5000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 				</control>
 			</control>
@@ -3944,7 +3941,7 @@
 					<font>Font_Reg15</font>
 					<textcolor>$VAR[TitleColorVar]</textcolor>
 					<label>$VAR[NowPlayingTextBoxLabelVar2]</label>
-					<autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="5000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="group">
 					<posx>1730</posx>

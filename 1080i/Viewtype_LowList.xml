@@ -104,7 +104,6 @@
 					<onleft>50</onleft>
 					<onright condition="!Skin.HasSetting(kioskmode)">9000</onright>
 					<ondown>Control.Move(511,1)</ondown>
-					<onback>50</onback>
 					<visible allowhiddenfocus="true">Control.HasFocus(7002)</visible>
 				</control>
 				<control type="group">
@@ -333,7 +332,7 @@
 						<font>Font_Reg30_2</font>
 						<textcolor>white6</textcolor>
 						<pagecontrol>7002</pagecontrol>
-						<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 				</control>
 				<control type="group">
@@ -460,7 +459,7 @@
 							<label>$VAR[GlobalPlotVar]</label>
 							<font>Font_Reg30</font>
 							<textcolor>white6</textcolor>
-							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<visible>Skin.HasSetting(nohighlist)</visible>
 						</control>
 						<control type="textbox">
@@ -471,7 +470,7 @@
 							<label>$VAR[GlobalPlotVar]</label>
 							<font>Font_Reg30_2</font>
 							<textcolor>white6</textcolor>
-							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<visible>Skin.HasSetting(LowListPlotOnly) + !Skin.HasSetting(nohighlist)</visible>
 						</control>
 						<control type="textbox">
@@ -482,7 +481,7 @@
 							<label>$VAR[GlobalPlotVar]</label>
 							<font>Font_Reg30_2</font>
 							<textcolor>white6</textcolor>
-							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<visible>!Skin.HasSetting(LowListPlotOnly) + !Skin.HasSetting(nohighlist)</visible>
 						</control>
 					</control>
@@ -640,9 +639,6 @@
 				<top>293</top>
 				<width>230</width>
 				<height>70</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<aspectratio aligny="bottom">keep</aspectratio>
 				<visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 				<control type="image">
 					<texture background="true" fallback="empty.png">$VAR[LogoVar]</texture>
@@ -900,7 +896,7 @@
 				<focusedlayout height="70" width="825" condition="![Skin.HasSetting(lowlistbanner) + Container.Content(tvshows)]">
 					<control type="group">
 						<animation effect="slide" start="0,66" end="0,0" time="200" reversible="false" tween="quadratic" easing="out" condition="Container.OnPrevious">Focus</animation>
-						<animation effect="slide" start="0,-66" end="0,0" time="200" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext">Focus</animation> 
+						<animation effect="slide" start="0,-66" end="0,0" time="200" reversible="false" tween="quadratic" easing="out" condition="Container.OnNext">Focus</animation>
 						<control type="image">
 							<left>-8</left>
 							<top>-10</top>
@@ -1233,8 +1229,7 @@
 				<top>562</top>
 				<width>300</width>
 				<height>300</height>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !Stringcompare(ListItem.Label,..) + IntegerGreaterThan(ListItem.Property(TotalEpisodes),020) + !IsEmpty(Container.ListItem.Art(poster))</visible>
+				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !ListItem.IsParentFolder + IntegerGreaterThan(ListItem.Property(TotalEpisodes),020) + !IsEmpty(Container.ListItem.Art(poster))</visible>
 				<animation effect="slide" start="-890,0" end="0,0" delay="2000" time="800" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<control type="image">
 					<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Container.ListItem.Art(poster)]</texture>
@@ -1249,8 +1244,7 @@
 				<top>562</top>
 				<width>300</width>
 				<height>300</height>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !Stringcompare(ListItem.Label,..) + IntegerGreaterThan(ListItem.Property(TotalEpisodes),016) + !IsEmpty(Container.ListItem.Art(poster))</visible>
+				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !ListItem.IsParentFolder + IntegerGreaterThan(ListItem.Property(TotalEpisodes),016) + !IsEmpty(Container.ListItem.Art(poster))</visible>
 				<animation effect="slide" start="-740,0" end="0,0" delay="1800" time="800" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<control type="image">
 					<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Container.ListItem.Art(poster)]</texture>
@@ -1265,8 +1259,7 @@
 				<top>562</top>
 				<width>300</width>
 				<height>300</height>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !Stringcompare(ListItem.Label,..) + IntegerGreaterThan(ListItem.Property(TotalEpisodes),012) + !IsEmpty(Container.ListItem.Art(poster))</visible>
+				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !ListItem.IsParentFolder + IntegerGreaterThan(ListItem.Property(TotalEpisodes),012) + !IsEmpty(Container.ListItem.Art(poster))</visible>
 				<animation effect="slide" start="-590,0" end="0,0" delay="1600" time="800" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<control type="image">
 					<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Container.ListItem.Art(poster)]</texture>
@@ -1281,8 +1274,7 @@
 				<top>562</top>
 				<width>300</width>
 				<height>300</height>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !Stringcompare(ListItem.Label,..) + IntegerGreaterThan(ListItem.Property(TotalEpisodes),008) + !IsEmpty(Container.ListItem.Art(poster))</visible>
+				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !ListItem.IsParentFolder + IntegerGreaterThan(ListItem.Property(TotalEpisodes),008) + !IsEmpty(Container.ListItem.Art(poster))</visible>
 				<animation effect="slide" start="-450,0" end="0,0" delay="1400" time="800" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<control type="image">
 					<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Container.ListItem.Art(poster)]</texture>
@@ -1297,8 +1289,7 @@
 				<top>562</top>
 				<width>300</width>
 				<height>300</height>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !Stringcompare(ListItem.Label,..) + IntegerGreaterThan(ListItem.Property(TotalEpisodes),004) + !IsEmpty(Container.ListItem.Art(poster))</visible>
+				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !ListItem.IsParentFolder + IntegerGreaterThan(ListItem.Property(TotalEpisodes),004) + !IsEmpty(Container.ListItem.Art(poster))</visible>
 				<animation effect="slide" start="-300,0" end="0,0" delay="1200" time="800" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<control type="image">
 					<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Container.ListItem.Art(poster)]</texture>
@@ -1313,8 +1304,7 @@
 				<top>562</top>
 				<width>300</width>
 				<height>300</height>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !Stringcompare(ListItem.Label,..) + IntegerGreaterThan(ListItem.Property(TotalEpisodes),000) + !IsEmpty(Container.ListItem.Art(poster))</visible>
+				<visible>Container.Content(seasons) + !Control.HasFocus(5001) + Skin.HasSetting(TVshowFakeDiscs) + !ListItem.IsParentFolder + IntegerGreaterThan(ListItem.Property(TotalEpisodes),000) + !IsEmpty(Container.ListItem.Art(poster))</visible>
 				<animation effect="slide" start="-165,0" end="0,0" delay="1000" time="800" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<control type="image">
 					<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Container.ListItem.Art(poster)]</texture>

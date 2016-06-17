@@ -2460,8 +2460,6 @@
 					<include condition="!Skin.HasSetting(PostersCase)">DiscPosNoCase</include>
 					<width>400</width>
 					<height>400</height>
-					<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-					<bordersize>7</bordersize>
 					<control type="image">
 						<animation type="Visible" reversible="false">
 							<effect type="fade" start="0" end="100" delay="480" time="960" tween="cubic" />
@@ -2564,9 +2562,6 @@
 					<include condition="!Skin.HasSetting(PostersCase)">FakeDiscPosNoCase</include>
 					<width>230</width>
 					<height>70</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<aspectratio aligny="bottom">keep</aspectratio>
 					<visible>Control.HasFocus(5106) + Skin.HasSetting(PostersDiscArt) + !Skin.HasSetting(PostersDiscArtRight) + Container.Content(movies) + !IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 					<control type="image">
 						<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -2727,9 +2722,6 @@
 					<top>368</top>
 					<width>230</width>
 					<height>70</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<aspectratio aligny="bottom">keep</aspectratio>
 					<visible>Control.HasFocus(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight) + Container.Content(movies) + !IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 					<control type="image">
 						<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -2886,7 +2878,7 @@
 						<label fallback="31006">$VAR[InfoWallTextboxVar]</label>
 						<font>Font_Reg29</font>
 						<textcolor>white6</textcolor>
-						<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>!Container.Content(seasons)</visible>
 					</control>
 					<control type="textbox">
@@ -2897,11 +2889,11 @@
 						<label fallback="31006">$VAR[InfoWallTextboxVar]</label>
 						<font>Font_Reg29</font>
 						<textcolor>white6</textcolor>
-						<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>Container.Content(seasons)</visible>
 					</control>
 				</control>
-				<!-- Case Back -->		
+				<!-- Case Back -->
 				<control type="group">
 					<visible>Skin.HasSetting(PostersCase)</visible>
 					<control type="image">
@@ -3034,7 +3026,7 @@
 						<label fallback="31006">$VAR[InfoWallTextboxVar]</label>
 						<textcolor>white</textcolor>
 						<shadowcolor>77000000</shadowcolor>
-						<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 					<control type="group">
 						<left>328</left>
@@ -3085,7 +3077,7 @@
 						<top>505</top>
 						<width>451</width>
 						<height>90</height>
-						<aspectratio>scale</aspectratio>					
+						<aspectratio>scale</aspectratio>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
 						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
@@ -3097,7 +3089,7 @@
 						<top>505</top>
 						<width>451</width>
 						<height>90</height>
-						<aspectratio>scale</aspectratio>					
+						<aspectratio>scale</aspectratio>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
 						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.FanArt)]</texture>
@@ -3213,7 +3205,7 @@
 							<texture>flags/discnumber/$INFO[Window(Home).Property(SkinHelper.MovieSet.Count)].png</texture>
 							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 						</control>
-					</control>				
+					</control>
 					<control type="group">
 						<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 						<left>68</left>
@@ -3254,7 +3246,7 @@
 						</control>
 					</control>
 				</control>
-				<!-- DVD Case Back end -->			
+				<!-- DVD Case Back end -->
 
 			</control>
 			<!-- Invisible buttons for list end animation -->
@@ -3286,8 +3278,8 @@
 					<effect type="zoom" start="100" end="0" time="960" center="auto" tween="cubic" />
 				</animation>
 				<visible>Control.HasFocus(5106)</visible>
-			</control>		
-		</control>			
+			</control>
+		</control>
 
 			<!-- Letter-Scrollbar -->
 			<control type="image">
@@ -3299,7 +3291,7 @@
 				<texture>views/directory/sbl_backround.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6011) + Skin.HasSetting(AlphabetScrollbar)</visible>
-			</control>			
+			</control>
 			<control type="panel" id="6011">
 				<onup>510</onup>
 				<ondown>61</ondown>
@@ -3329,7 +3321,7 @@
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
-			</control>		
+			</control>
 </include>
 
 	<include name="PostersViewList">
@@ -3348,7 +3340,7 @@
 			<ondown condition="Skin.HasSetting(AlphabetScrollbar)">6011</ondown>
 			<ondown condition="!Skin.HasSetting(AlphabetScrollbar)">61</ondown>
 			<orientation>horizontal</orientation>
-			<viewtype label="31271">Wraplist of Posters</viewtype>
+			<viewtype label="31271">wrap</viewtype>
 			<pagecontrol>61</pagecontrol>
 			<focusposition>1</focusposition>
 			<visible>!IsEmpty(Container.FolderPath) + !Container.Content(years)</visible>
@@ -3356,7 +3348,7 @@
 			<visible>![!IsEmpty(Skin.String(DisablePostersVL)) + Window.IsActive(videos)]</visible>
 			<itemlayout width="210" height="750"></itemlayout>
 			<focusedlayout width="210" height="750"></focusedlayout>
-		</control>		
+		</control>
 		<control type="button" id="5106">
 			<include>HiddenObject</include>
 			<onup>9000</onup>
@@ -3367,8 +3359,8 @@
 			<onclick condition="!IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
 			<onclick condition="IsEmpty(ListItem.Trailer)">PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
 			<onclick condition="Container.Content(tvshows) | Container.Content(seasons)">SetFocus(50)</onclick>
-			<visible>!StringCompare(ListItem.Label,..) + Skin.HasSetting(posterviewinfopane)</visible>
-		</control>		
+			<visible>!ListItem.IsParentFolder + Skin.HasSetting(posterviewinfopane)</visible>
+		</control>
 	</include>
 	<include name="DiscPosNoCase">
 		<top>-95</top>

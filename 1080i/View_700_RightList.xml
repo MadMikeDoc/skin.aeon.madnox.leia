@@ -25,7 +25,6 @@
 				<top>50</top>
 				<width>390</width>
 				<height>164</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
 				<visible>[Skin.HasSetting(rightlistlogomovie) + Container.Content(movies) | Container.Content(sets)] | [Skin.HasSetting(rightlistlogotv) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]</visible>
 				<visible>!IsEmpty(Container.ListItem.Art(clearlogo))</visible>
 				<control type="image">
@@ -221,7 +220,6 @@
 					<top>-153</top>
 					<width>230</width>
 					<height>70</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
 					<visible>Skin.HasSetting(rightlistlogomovie) + Container.Content(movies) + !IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 					<control type="image">
 						<texture background="true" fallback="empty.png">$VAR[LogoVar]</texture>
@@ -239,8 +237,8 @@
 					<bordersize>20</bordersize>
 					<visible>Skin.Hassetting(usecases)</visible>
 				</control>
-				<!-- change by schimi - change position - before it was on position 260 - OVER the original cover - now its under and just visible when no original cover is available --> 
-				<control type="image">  
+				<!-- change by schimi - change position - before it was on position 260 - OVER the original cover - now its under and just visible when no original cover is available -->
+				<control type="image">
 					<left>-1</left>
 					<top>6</top>
 					<width>438</width>
@@ -293,10 +291,9 @@
 				<width>650</width>
 				<height>270</height>
 				<include>VisibleFadeEffect</include>
-				<textcolor>grey</textcolor>
 				<visible>Skin.HasSetting(inforightlist)</visible>
 				<control type="grouplist">
-					<visible>Container.Content(movies) + ![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)]</visible>
+					<visible>Container.Content(movies) + ![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]Directed by:[/COLOR][CR]$INFO[ListItem.Director]</label>
 						<width>650</width>
@@ -312,7 +309,7 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<visible>[SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)]</visible>
+					<visible>[SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]Directed by:[/COLOR][CR][COLOR white]$INFO[Window(home).Property(Set.Movies.Director)][/COLOR]</label>
 						<width>650</width>
@@ -425,7 +422,7 @@
 				<top>980</top>
 				<width>1840</width>
 				<height>90</height>
-				<visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)]</visible>
+				<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
 				<control type="image">
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsSource]source/$VAR[SourceFlagVar,,.png]</texture>
@@ -695,7 +692,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>[COLOR $VAR[TitleColorVar]]$INFO[ListItem.Label][/COLOR]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)]</visible>
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="label">
 						<top>7</top>
@@ -707,7 +704,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>[COLOR $VAR[TitleColorVar]]$INFO[ListItem.Label][/COLOR]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>[SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)]</visible>
+						<visible>[SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="label">
 						<left>30</left>
@@ -719,8 +716,8 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.RatingAndVotes,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)]</visible>
-						<!--visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)] + !System.Hasaddon(script.duration)</visible-->
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+						<!--visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + !System.Hasaddon(script.duration)</visible-->
 					</control>
 					<!--control type="label">
 						<onfocus>XBMC.RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>
@@ -733,7 +730,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.RatingAndVotes,, • ]$VAR[MovieDuration]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)] + System.Hasaddon(script.duration)</visible>
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + System.Hasaddon(script.duration)</visible>
 					</control-->
 					<control type="label">
 						<left>630</left>
@@ -808,7 +805,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)]</visible>
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="label">
 						<top>7</top>
@@ -821,7 +818,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>[SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)]</visible>
+						<visible>[SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="label">
 						<left>130</left>
@@ -833,7 +830,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$VAR[FloorSubLabelVar]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)]</visible>
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="image">
 						<left>742</left>
@@ -1557,8 +1554,8 @@
 				<orientation>vertical</orientation>
 				<visible>!Skin.HasSetting(AlphabetScrollbar)</visible>
 			</control>
-			
-		<!-- Letter-Scrollbar -->	
+
+		<!-- Letter-Scrollbar -->
 			<control type="image">
 				<left>1884</left>
 				<top>90</top>
@@ -1658,7 +1655,7 @@
 				<top>95</top>
 				<width>763</width>
 				<height>150</height>
-				<aspectratio>strech</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<texture>homewidgets/glass/banner.png</texture>
 				<visible>Skin.HasSetting(rightlistBannerartist) + [!IsEmpty(Control.GetLabel(6565)) | !IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))]</visible>
 				<animation effect="slide" start="0,280" end="0" time="500" tween="cubic" delay="50" condition="!Container.Content(Artists)">Conditional</animation>
@@ -1669,7 +1666,7 @@
 				<top>95</top>
 				<width>763</width>
 				<height>150</height>
-				<aspectratio>strech</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<texture>thumbs_square/banner_shadow_in.png</texture>
 				<visible>Skin.HasSetting(rightlistBannerartist) + [!IsEmpty(Control.GetLabel(6565)) | !IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))]</visible>
 				<animation effect="slide" start="0,280" end="0" time="500" tween="cubic" delay="50" condition="!Container.Content(Artists)">Conditional</animation>
@@ -1836,7 +1833,7 @@
 					<bordertexture border="20">thumbs/cd_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 				</control>
-			</control>        
+			</control>
 			<control type="group">
 				<left>50</left>
 				<top>300</top>
@@ -1906,7 +1903,7 @@
 				<aligny>center</aligny>
 				<font>font10</font>
 				<autoscroll time="1000" delay="4000" repeat="5000"></autoscroll>
-				<visible>!StringCompare(ListItem.Label,..) + Container.Content(albums) + Skin.HasSetting(RightListShowTracks)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(albums) + Skin.HasSetting(RightListShowTracks)</visible>
 			</control>
 			<control type="textbox">
 				<include>Animation_WindowFade250</include>
@@ -2127,7 +2124,7 @@
 						<textcolor>grey</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<visible>[!Container.Content(songs) | Stringcompare(ListItem.Label,..)]</visible>
+						<visible>[!Container.Content(songs) | ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="label">
 						<left>30</left>
@@ -2138,7 +2135,7 @@
 						<textcolor>grey</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Tracknumber]: $INFO[ListItem.Title]</label>
-						<visible>Container.Content(songs) + !Stringcompare(ListItem.Label,..)</visible>
+						<visible>Container.Content(songs) + !ListItem.IsParentFolder</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="68" width="806">
@@ -2176,8 +2173,8 @@
 						<align>right</align>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<animation effect="slide" start="0" end="-20" time="150" tween="Back" easing="out">Focus</animation>
-						<visible>[!Container.Content(songs) | Stringcompare(ListItem.Label,..)]</visible>
+						<animation effect="slide" start="0" end="-20" time="150" tween="back" easing="out">Focus</animation>
+						<visible>[!Container.Content(songs) | ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -2188,8 +2185,8 @@
 						<align>right</align>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Tracknumber]: $INFO[ListItem.Title]</label>
-						<animation effect="slide" start="0" end="-20" time="150" tween="Back" easing="out">Focus</animation>
-						<visible>Container.Content(songs) + !Stringcompare(ListItem.Label,..) + !Stringcompare(ListItem.AlbumArtist,Various Artists)</visible>
+						<animation effect="slide" start="0" end="-20" time="150" tween="back" easing="out">Focus</animation>
+						<visible>Container.Content(songs) + !ListItem.IsParentFolder + !Stringcompare(ListItem.AlbumArtist,Various Artists)</visible>
 					</control>
 					<control type="label">
 						<left>5</left>
@@ -2200,8 +2197,8 @@
 						<align>right</align>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Artist]</label>
-						<animation effect="slide" start="0" end="-20" time="150" tween="Back" easing="out">Focus</animation>
-						<visible>Container.Content(songs) + !Stringcompare(ListItem.Label,..) + Stringcompare(ListItem.AlbumArtist,Various Artists)</visible>
+						<animation effect="slide" start="0" end="-20" time="150" tween="back" easing="out">Focus</animation>
+						<visible>Container.Content(songs) + !ListItem.IsParentFolder + Stringcompare(ListItem.AlbumArtist,Various Artists)</visible>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -2212,8 +2209,8 @@
 						<align>right</align>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Tracknumber]: $INFO[ListItem.Title]</label>
-						<animation effect="slide" start="0" end="-20" time="150" tween="Back" easing="out">Focus</animation>
-						<visible>Container.Content(songs) + !Stringcompare(ListItem.Label,..) + Stringcompare(ListItem.AlbumArtist,Various Artists)</visible>
+						<animation effect="slide" start="0" end="-20" time="150" tween="back" easing="out">Focus</animation>
+						<visible>Container.Content(songs) + !ListItem.IsParentFolder + Stringcompare(ListItem.AlbumArtist,Various Artists)</visible>
 					</control>
 				</focusedlayout>
 			</control>

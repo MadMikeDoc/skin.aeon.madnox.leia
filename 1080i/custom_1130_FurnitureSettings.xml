@@ -30,11 +30,10 @@
 				<top>200</top>
 				<width>1210</width>
 				<height>820</height>
-				<texture border="50">osd/osd_settings_back.png</texture>
+				<texture colordiffuse="$VAR[DialogColorVar]" border="50">osd/osd_settings_back.png</texture>
 				<animation type="Conditional" condition="!Stringcompare(Window.Property(actualItem),MainMenu)">
 					<effect type="zoom" end="100,66" time="320" easing="in" tween="cubic" />
 				</animation>
-				<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
 			</control>
 			<control type="image">
 				<left>375</left>
@@ -57,7 +56,6 @@
 				<top>292</top>
 				<width>1172</width>
 				<height>550</height>
-				<aligny>center</aligny>
 				<pagecontrol>60</pagecontrol>
 				<onleft>60</onleft>
 				<onright>60</onright>
@@ -143,7 +141,7 @@
 					<visible>Stringcompare(Window.Property(actualItem),MainMenu)</visible>
 				</control>
 				<control type="radiobutton" id="491">
-					<discription>Large focus Label</discription>
+					<description>Large focus Label</description>
 					<label>31470</label>
 					<include>Objects_CommonSettingsButton</include>
 					<selected>Skin.HasSetting(MenuLargeIcons)</selected>

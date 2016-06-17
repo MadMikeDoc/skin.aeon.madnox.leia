@@ -529,7 +529,6 @@
 					<top>-5</top>
 					<width>1018</width>
 					<height>200</height>
-					<aligny>top</aligny>
 					<itemgap>0</itemgap>
 					<orientation>vertical</orientation>
 					<control type="label">
@@ -546,7 +545,6 @@
 						<top>0</top>
 						<width>1018</width>
 						<height>50</height>
-						<aligny>top</aligny>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
@@ -860,7 +858,7 @@
 					<align>left</align>
 					<label fallback="31006">$INFO[VideoPlayer.CastAndRole]</label>
 					<font>Font_Reg30</font>
-					<autoscroll delay="5000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="5000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<left>4</left>
@@ -871,7 +869,7 @@
 					<label fallback="31006">$INFO[VideoPlayer.Plot]</label>
 					<font>Font_Reg30</font>
 					<pagecontrol>60</pagecontrol>
-					<autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!Control.IsVisible(50)</visible>
 				</control>
 				<control type="grouplist">
@@ -1125,7 +1123,7 @@
 						<label fallback="31006">$INFO[VideoPlayer.Plot]</label>
 						<font>Font_Reg35</font>
 						<pagecontrol>60</pagecontrol>
-						<autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+						<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
 						<visible>!Control.IsVisible(50)</visible>
 					</control>
 				</control>
@@ -1162,7 +1160,7 @@
 						<label fallback="31006">$INFO[VideoPlayer.NextPlot]</label>
 						<font>Font_Reg35</font>
 						<pagecontrol>60</pagecontrol>
-						<autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+						<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
 						<visible>!Control.IsVisible(50)</visible>
 					</control>
 				</control>
@@ -1367,7 +1365,7 @@
 						<label fallback="31006">$INFO[VideoPlayer.Plot]</label>
 						<font>Font_Reg35</font>
 						<pagecontrol>60</pagecontrol>
-						<autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+						<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
 						<visible>!Control.IsVisible(50)</visible>
 					</control>
 				</control>
@@ -1404,7 +1402,7 @@
 						<label fallback="31006">$INFO[VideoPlayer.NextPlot]</label>
 						<font>Font_Reg35</font>
 						<pagecontrol>60</pagecontrol>
-						<autoscroll delay="15000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+						<autoscroll delay="15000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
 						<visible>!Control.IsVisible(50)</visible>
 					</control>
 				</control>

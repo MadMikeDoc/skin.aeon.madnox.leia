@@ -12,7 +12,7 @@
 				<height>900</height>
 				<texture border="40">listpanel_back.png</texture>
 				<colordiffuse>D8FFFFFF</colordiffuse>
-				<visible>!Stringcompare(ListItem.Label,..)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 			</control>
 		<!-- Info Panel -->
 			<control type="group">
@@ -20,7 +20,7 @@
 				<left>-85</left>
 				<top>-71</top>
 				<control type="grouplist">
-					<visible>!Stringcompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 					<left>121</left>
 					<top>162</top>
 					<control type="label">
@@ -39,10 +39,10 @@
 					<width>2</width>
 					<height>179</height>
 					<texture border="1">separator3.png</texture>
-					<visible>!Stringcompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="grouplist">
-					<visible>!Stringcompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 					<left>624</left>
 					<top>162</top>
 					<control type="button">
@@ -80,7 +80,7 @@
 					<pagecontrol>62</pagecontrol>
 					<autoscroll time="3000" delay="4000" repeat="5000"/>
 					<include>Shelf3DInfoPanelButtonsValues</include>
-					<visible>!Stringcompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="scrollbar" id="62">
 					<top>342</top>
@@ -97,7 +97,7 @@
 					<texturesliderbarfocus border="1">scrollbar/texturesliderbar3.png</texturesliderbarfocus>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-					<visible>!Stringcompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="multiimage" id="70801">
 					<left>1126</left>
@@ -162,7 +162,7 @@
 					<width>1670</width>
 					<height>60</height>
 					<texture border="1">separator2.png</texture>
-					<visible>!Stringcompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
 					<left>121</left>
@@ -170,7 +170,7 @@
 					<width>1670</width>
 					<height>60</height>
 					<texture border="1">separator2.png</texture>
-					<visible>!Stringcompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="group">
 					<left>450</left>
@@ -181,7 +181,7 @@
 						<left>-310</left>
 						<bordersize>2</bordersize>
 						<texture>$VAR[StudioImageVar]</texture>
-						<visible>!SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)</visible>
+						<visible>!SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder</visible>
 						<width>140</width>
 						<height>115</height>
 						<aspectratio>keep</aspectratio>
@@ -203,7 +203,7 @@
 						<visible>IsEmpty(Control.GetLabel(84756))</visible>
 					</control>
 					<control type="image">
-						<visible>!SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)</visible>
+						<visible>!SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder</visible>
 						<left>-150</left>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>grey2</colordiffuse>
@@ -243,7 +243,7 @@
 						<colordiffuse>grey2</colordiffuse>
 						<include>MediaFlagVarsShelf</include>
 						<texture>$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
-						<visible>!Stringcompare(ListItem.Label,..)</visible>
+						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
 						<animation effect="rotatey" center="50" start="15" end="15" time="0" condition="true">Conditional</animation>
@@ -342,7 +342,7 @@
 								<height>380</height>
 								<texture background="true">views/shelf3DR/$VAR[GlobalCaseVar]</texture>
 								<aspectratio>stretch</aspectratio>
-								<visible>!Stringcompare(ListItem.Label,..)</visible>
+								<visible>!ListItem.IsParentFolder</visible>
 							</control>
 							<control type="image">
 								<left>-100</left>
@@ -351,7 +351,7 @@
 								<height>380</height>
 								<texture flipy="true" diffuse="views/shelf3DR/reflect_box_overlay.png" background="true" >views/shelf3DR/$VAR[GlobalCaseVar]</texture>
 								<aspectratio>stretch</aspectratio>
-								<visible>!Stringcompare(ListItem.Label,..)</visible>
+								<visible>!ListItem.IsParentFolder</visible>
 							</control>
 						</control>
 					</itemlayout>
@@ -411,7 +411,7 @@
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="50,180" start="80" end="100" time="600" tween="cubic" easing="out" />
 								</animation>
-								<visible>!Stringcompare(ListItem.Label,..)</visible>
+								<visible>!ListItem.IsParentFolder</visible>
 							</control>
 							<control type="image">
 								<left>-144</left>
@@ -425,7 +425,7 @@
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="50,180" start="80" end="100" time="600" tween="cubic" easing="out" />
 								</animation>
-								<visible>!Stringcompare(ListItem.Label,..)</visible>
+								<visible>!ListItem.IsParentFolder</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -493,7 +493,7 @@
 						</control>
 						<control type="group">
 							<visible>!Control.HasFocus(708) + !ListItem.IsCollection</visible>
-							<visible>!Stringcompare(ListItem.Label,..)</visible>
+							<visible>!ListItem.IsParentFolder</visible>
 							<left>140</left>
 							<top>0</top>
 							<control type="image">
@@ -542,7 +542,7 @@
 						</control>
 						<control type="group">
 							<visible>!ListItem.IsCollection + Control.HasFocus(708)</visible>
-							<visible>!Stringcompare(ListItem.Label,..)</visible>
+							<visible>!ListItem.IsParentFolder</visible>
 							<animation type="Focus" reversible="false">
 								<effect type="rotatey" delay="5000" center="190" start="-180" end="0" time="800" tween="quadratic" easing="out"/>
 								<effect type="fade" start="0" end="100" delay="5000" time="200"/>
@@ -703,7 +703,7 @@
 						</control>
 						<control type="group">
 							<visible>!ListItem.IsCollection + Control.HasFocus(708)</visible>
-							<visible>!Stringcompare(ListItem.Label,..)</visible>
+							<visible>!ListItem.IsParentFolder</visible>
 							<animation type="Focus" reversible="false">
 								<effect type="rotatey" delay="5000" center="190" start="-180" end="0" time="800" tween="quadratic" easing="out"/>
 								<effect type="fade" start="0" end="100" delay="5000" time="200"/>
@@ -781,7 +781,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>!Stringcompare(ListItem.Label,..)</visible>
+							<visible>!ListItem.IsParentFolder</visible>
 							<animation effect="rotatey" center="50" start="-2" end="-2" time="0" condition="true">Conditional</animation>
 							<left>196</left>
 							<top>272</top>
@@ -887,7 +887,7 @@
 							<width>294</width>
 							<height>294</height>
 							<visible>!ListItem.IsCollection + Control.HasFocus(708)</visible>
-							<visible>!Stringcompare(ListItem.Label,..)</visible>
+							<visible>!ListItem.IsParentFolder</visible>
 							<animation type="Focus" reversible="false">
 								<effect type="fade" start="0" end="100" delay="10000" time="150" />
 							</animation>
@@ -930,7 +930,7 @@
 				<texture>views/directory/sbl_backround.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6013) + Skin.HasSetting(AlphabetScrollbar)</visible>
-			</control>			
+			</control>
 			<control type="panel" id="6013">
 				<onup>708</onup>
 				<ondown>88</ondown>
@@ -961,7 +961,7 @@
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 			</control>
-				
+
 			</control>
 		</control>
 	</include>

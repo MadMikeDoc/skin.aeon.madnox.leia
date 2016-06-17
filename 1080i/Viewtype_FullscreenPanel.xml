@@ -295,9 +295,6 @@
 							<top>48</top>
 							<width>156</width>
 							<height>70</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<aspectratio aligny="bottom">keep</aspectratio>
 							<animation effect="rotate" end="-360" center="249,164" time="6400" delay="800" reversible="false" tween="cubic" easing="inout">Focus</animation>
 							<control type="image">
 								<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -553,9 +550,6 @@
 							<top>48</top>
 							<width>156</width>
 							<height>70</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<aspectratio aligny="bottom">keep</aspectratio>
 							<animation effect="slide" delay="100" start="80,0" end="160" time="350" tween="quadratic">Focus</animation>
 							<animation effect="slide" start="160" end="80" time="200" tween="quadratic" easing="in">Unfocus</animation>
 							<animation effect="rotate" end="-360" center="90,160" time="6400" delay="0" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
@@ -652,7 +646,7 @@
 								<label>$VAR[GlobalPlotVar]</label>
 								<font>Font_Reg35</font>
 								<textcolor>FFCACACA</textcolor>
-								<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">true</autoscroll>
+								<autoscroll delay="8000" time="2000" repeat="8000">true</autoscroll>
 							</control>
 						</control>
 						<control type="group">
@@ -696,7 +690,7 @@
 								<aligny>top</aligny>
 								<label>$VAR[GlobalPlotVar]</label>
 								<font>Font_Reg35</font>
-								<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">true</autoscroll>
+								<autoscroll delay="8000" time="2000" repeat="8000">true</autoscroll>
 							</control>
 						</control>
 					</focusedlayout>
@@ -779,7 +773,7 @@
 								<textcolor>FF666666</textcolor>
 								<label>[UPPERCASE]$LOCALIZE[33054]: $INFO[ListItem.Season]  •  $LOCALIZE[20360]: $INFO[ListItem.Episode]  •  $LOCALIZE[31005]: $INFO[ListItem.Premiered][/UPPERCASE]</label>
 								<visible>Container.Content(tvshows) + !Container.Content(episodes)</visible>
-							</control> 
+							</control>
 							<control type="label"> <!-- label episodes -->
 								<description>Episode</description>
 								<left>410</left>
@@ -921,7 +915,7 @@
 							<textcolor>FFCACACA</textcolor>
 							<label>[UPPERCASE]$LOCALIZE[33054]: $INFO[ListItem.Season]  •  $LOCALIZE[20360]: $INFO[ListItem.Episode]  •  $LOCALIZE[31005]: $INFO[ListItem.Premiered][/UPPERCASE]</label>
 							<visible>Container.Content(tvshows) + !Container.Content(episodes)</visible>
-						</control> 
+						</control>
 						<control type="label"> <!-- label episodes -->
 							<description>Episode</description>
 							<left>410</left>
@@ -958,7 +952,7 @@
 							<height>94</height>
 							<label>$INFO[ListItem.Plot]</label>
 							<visible>IsEmpty(ListItem.Art(characterart))</visible>
-							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 						<control type="textbox">
 							<left>412</left>
@@ -967,7 +961,7 @@
 							<height>94</height>
 							<label>$INFO[ListItem.Plot]</label>
 							<visible>!IsEmpty(ListItem.Art(characterart))</visible>
-							<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 						<control type="image">
 							<left>1580</left>
@@ -1023,8 +1017,8 @@
 				<visible>Skin.HasSetting(infopanelbackground)</visible>
 				<visible>!Skin.HasSetting(AlphabetScrollbar)</visible>
 			</control>
-			
-		<!-- Letter-Scrollbar -->	
+
+		<!-- Letter-Scrollbar -->
 			<control type="image">
 				<left>1753</left>
 				<top>90</top>
@@ -1249,9 +1243,6 @@
 			<top>48</top>
 			<width>156</width>
 			<height>70</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<aspectratio aligny="bottom">keep</aspectratio>
 			<animation effect="slide" delay="100" start="80,0" end="160" time="350" tween="quadratic">Focus</animation>
 			<animation effect="slide" start="160" end="80" time="200" tween="quadratic" easing="in">Unfocus</animation>
 			<animation effect="rotate" end="-360" center="90,160" time="6400" delay="0" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
@@ -1346,7 +1337,7 @@
 				<label>$VAR[GlobalPlotOutlineVar]</label>
 				<font>Font_Reg32</font>
 				<textcolor>white6</textcolor>
-				<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 		</control>
 
@@ -1389,7 +1380,7 @@
 				<label>$VAR[GlobalPlotVar]</label>
 				<font>Font_Reg32</font>
 				<textcolor>white6</textcolor>
-				<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 			</control>
 		</control>
 	</include>
@@ -1494,9 +1485,6 @@
 			<top>48</top>
 			<width>156</width>
 			<height>70</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<aspectratio aligny="bottom">keep</aspectratio>
 			<animation effect="rotate" end="-360" center="249,164" time="6400" delay="800" reversible="false" tween="cubic" easing="inout">Focus</animation>
 			<control type="image">
 				<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -1874,7 +1862,7 @@
 			<width>500</width>
 			<height>125</height>
 			<label>$INFO[ListItem.Plot]</label>
-			<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+			<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 		</control>
 	</include>
 	<include name="FSPanelTVItemLayout">

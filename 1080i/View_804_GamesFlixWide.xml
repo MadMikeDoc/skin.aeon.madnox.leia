@@ -59,7 +59,7 @@
 				<fadetime>500</fadetime>
 				<timeperimage>3000</timeperimage>
 				<imagepath background="true" diffuse="views/KodiFlix/fanart_diffuse2.png">special://skin/backgrounds/games/</imagepath>
-				<visible>IsEmpty(Control.GetLabel(5901)) + IsEmpty(Container.ListItem.Art(fanart)) + !Stringcompare(ListItem.Label,..)</visible>
+				<visible>IsEmpty(Control.GetLabel(5901)) + IsEmpty(Container.ListItem.Art(fanart)) + !ListItem.IsParentFolder</visible>
 				<include>Animation_VisibleChange200</include>
 			</control>
 			<!-- End Multiple Fanart -->
@@ -69,7 +69,6 @@
 				<top>240</top>
 				<width>650</width>
 				<height>270</height>
-				<textcolor>$VAR[TitleColorVar]</textcolor>
 				<control type="grouplist">
 					<visible>Control.IsVisible(804) + SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
 					<control type="label">
@@ -155,7 +154,7 @@
 				<focusposition>1</focusposition>
 				<visible>SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
 				<!-- Landscape Orientation Thumbs -->
-				<itemlayout width="400" height="300" condition="!Skin.HasSetting(smallgamesflixwideview)"> 
+				<itemlayout width="400" height="300" condition="!Skin.HasSetting(smallgamesflixwideview)">
 					<control type="image">
 						<top>360</top>
 						<width>400</width>
@@ -228,7 +227,7 @@
 				</focusedlayout>
 				<!-- End of Landscape Thumbs-->
 				<!-- Small Landscape Orientation Thumbs -->
-				<itemlayout width="350" height="250" condition="Skin.HasSetting(smallgamesflixwideview)"> 
+				<itemlayout width="350" height="250" condition="Skin.HasSetting(smallgamesflixwideview)">
 					<control type="image">
 						<top>410</top>
 						<width>350</width>

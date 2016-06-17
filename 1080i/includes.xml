@@ -148,8 +148,7 @@
 			<top>-4</top>
 			<width>776</width>
 			<height>147</height>
-			<texture>dialogs/scan_backg_shadow.png</texture>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">dialogs/scan_backg_shadow.png</texture>
 			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 			<include>PanelGlowFade</include>
 			<include>Animation_VisibleChange400</include>
@@ -181,8 +180,7 @@
 			<top>25</top>
 			<width>90</width>
 			<height>90</height>
-			<texture>spinner.png</texture>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">spinner.png</texture>
 			<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="true">Conditional</animation>
 			<animation effect="fade" start="70" time="1200" condition="true" pulse="true">Conditional</animation>
 		</control>
@@ -210,10 +208,10 @@
 		<textcolor>white3</textcolor>
 		<scroll>true</scroll>
 	</include>
-	<include name="Dialogs_Label1">
+	<!-- <include name="Dialogs_Label1">
 		<top>4</top>
 		<include>Dialogs_LabelVars</include>
-	</include>
+	</include> -->
 	<include name="Dialogs_Label2">
 		<top>34</top>
 		<include>Dialogs_LabelVars</include>
@@ -469,19 +467,6 @@
 		<alttexturenofocus>keyboard/keyboard_triplenf.png</alttexturenofocus>
 		<include>Objects_KeyOffVars</include>
 	</include>
-	<include name="Objects_DoubleKeyOffSymbol">
-		<width>165</width>
-		<height>102</height>
-		<textoffsety>32</textoffsety>
-		<align>center</align>
-		<aligny>top</aligny>
-		<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">keyboard/keyboard_doublef.png</texturefocus>
-		<texturenofocus>keyboard/keyboard_doublenf.png</texturenofocus>
-		<font>Font_Reg30_2</font>
-		<textcolor>grey2</textcolor>
-		<selectedcolor>grey2</selectedcolor>
-		<focusedcolor>grey2</focusedcolor>
-	</include>
 	<include name="Objects_SingleKeyOff">
 		<width>85</width>
 		<height>102</height>
@@ -503,8 +488,7 @@
 				<top>472</top>
 				<width>1920</width>
 				<height>608</height>
-				<texture>views/showcase_floor.png</texture>
-				<colordiffuse>$VAR[ExtendedColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ExtendedColorDiffuseVar]">views/showcase_floor.png</texture>
 			</control>
 			<control type="image">
 				<top>874</top>
@@ -518,8 +502,7 @@
 				<top>-100</top>
 				<width>1920</width>
 				<height>608</height>
-				<texture flipy="true">views/showcase_glow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" flipy="true">views/showcase_glow.png</texture>
 			</control>
 		</control>
 	</include>
@@ -529,9 +512,8 @@
 			<top>36</top>
 			<width>1846</width>
 			<height>1006</height>
-			<texture>settings/settings_panelback_shadow.png</texture>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">settings/settings_panelback_shadow.png</texture>
 			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 			<include>Animation_VisibleChange400</include>
 		</control>
 		<control type="image">
@@ -539,8 +521,7 @@
 			<top>34</top>
 			<width>1850</width>
 			<height>1010</height>
-			<texture>settings/settings_panelback.png</texture>
-			<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+			<texture colordiffuse="$VAR[DialogColorVar]">settings/settings_panelback.png</texture>
 		</control>
 		<control type="image">
 			<left>50</left>
@@ -565,9 +546,8 @@
 			<top>36</top>
 			<width>1846</width>
 			<height>1006</height>
-			<texture>settings/settings_panelback_shadow.png</texture>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">settings/settings_panelback_shadow.png</texture>
 			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 			<include>Animation_VisibleChange400</include>
 		</control>
 		<control type="image">
@@ -619,52 +599,39 @@
 		<width>1469</width>
 		<height>74</height>
 		<textoffsetx>30</textoffsetx>
-		<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
 		<font>Font_Reg32</font>
 		<textcolor>grey2</textcolor>
-		<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 		<radioleft>1300</radioleft>
 	</include>
 	<include name="Default_SettingRadioButtonShort">
 		<width>734</width>
 		<height>74</height>
 		<textoffsetx>30</textoffsetx>
-		<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
 		<font>Font_Reg32</font>
 		<textcolor>grey2</textcolor>
-		<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 		<radioleft>565</radioleft>
 	</include>
 	<include name="Default_SettingButton">
 		<width>1449</width>
 		<height>74</height>
 		<textoffsetx>30</textoffsetx>
-		<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
 		<font>Font_Reg32</font>
 		<textcolor>grey2</textcolor>
-		<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 	</include>
 	<include name="Default_SettingButtonShort">
 		<width>734</width>
 		<height>74</height>
 		<textoffsetx>30</textoffsetx>
-		<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
 		<font>Font_Reg32</font>
 		<textcolor>grey2</textcolor>
-		<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-	</include>
-	<include name="Default_PlaylistDialogButton">
-		<width>335</width>
-		<height>60</height>
-		<textoffsetx>20</textoffsetx>
-		<textoffsety>8</textoffsety>
-		<aligny>top</aligny>
-		<font>Font_Reg28</font>
-		<textcolor>$VAR[SubTitleColorVar]</textcolor>
 	</include>
 	<include name="FullscreenDimensions">
 		<width>1920</width>
@@ -692,56 +659,21 @@
 		<width>1172</width>
 		<height>60</height>
 		<textoffsetx>45</textoffsetx>
-		<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-		<texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="3">osd/osd_settings_buttonnf.png</texturenofocus>
 		<font>Font_Reg32</font>
 		<textcolor>grey2</textcolor>
 		<radioleft>1020</radioleft>
-		<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 	</include>
 	<include name="Objects_NowPlayingSettingsButton">
 		<width>672</width>
 		<height>60</height>
 		<textoffsetx>25</textoffsetx>
-		<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-		<texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="3">osd/osd_settings_buttonnf.png</texturenofocus>
 		<font>Font_Reg32</font>
 		<textcolor>grey2</textcolor>
 		<radioleft>550</radioleft>
-		<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-	</include>
-	<include name="Objects_CustomizerSettingsButton">
-		<width>400</width>
-		<height>60</height>
-		<textoffsetx>45</textoffsetx>
-		<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-		<texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
-		<font>Font_Reg32</font>
-		<textcolor>grey2</textcolor>
-		<focusedcolor>white2</focusedcolor>
-		<radioleft>290</radioleft>
-		<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-	</include>
-	<include name="Objects_SubMenuSettingsButton">
-		<width>530</width>
-		<height>60</height>
-		<textoffsetx>45</textoffsetx>
-		<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-		<texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
-		<font>Font_Reg32</font>
-		<textcolor>grey2</textcolor>
-		<focusedcolor>white2</focusedcolor>
-		<radioleft>420</radioleft>
-		<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-	</include>
-	<include name="Objects_CustomizerInfoButton">
-		<width>535</width>
-		<height>60</height>
-		<textoffsetx>20</textoffsetx>
-		<textoffsety>8</textoffsety>
-		<aligny>top</aligny>
-		<font>Font_Reg28</font>
-		<textcolor>$VAR[SubTitleColorVar]</textcolor>
 	</include>
 	<include name="Objects_CommonSettingsScrollbar">
 		<left>1524</left>
@@ -1186,10 +1118,9 @@
 			<top>110</top>
 			<width>748</width>
 			<height>683</height>
-			<texture>wall/wall_bg_glow.png</texture>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">wall/wall_bg_glow.png</texture>
 			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 			<include>PanelGlowFade</include>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 		</control>
 		<control type="image">
 			<left>105</left>
@@ -1211,8 +1142,7 @@
 			<top>149</top>
 			<width>128</width>
 			<height>540</height>
-			<texture>views/listpanel_detailwide.png</texture>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">views/listpanel_detailwide.png</texture>
 		</control>
 	</include>
 	<include name="FileBrowserPanel">
@@ -1221,9 +1151,8 @@
 			<top>110</top>
 			<width>1132</width>
 			<height>1056</height>
-			<texture>wall/wall_bg_glow.png</texture>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">wall/wall_bg_glow.png</texture>
 			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 			<include>Animation_VisibleChange400</include>
 			<include>PanelGlowFade</include>
 		</control>
@@ -1241,8 +1170,7 @@
 			<top>900</top>
 			<width>1920</width>
 			<height>180</height>
-			<texture>osd/osd_back.png</texture>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">osd/osd_back.png</texture>
 		</control>
 		<control type="group" id="1">
 			<top>865</top>
@@ -1477,10 +1405,9 @@
 							<top>478</top>
 							<width>277</width>
 							<height>422</height>
-							<texture>thumbs/player_thumbs/thumb_glass_shadow.png</texture>
+							<texture colordiffuse="$VAR[ColorDiffuseVar]">thumbs/player_thumbs/thumb_glass_shadow.png</texture>
 							<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 							<include>PanelGlowFade</include>
-							<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 							<include>Animation_VisibleChange400</include>
 						</control>
 						<control type="image">
@@ -1726,10 +1653,9 @@
 							<top>478</top>
 							<width>277</width>
 							<height>422</height>
-							<texture>thumbs/player_thumbs/thumb_glass_shadow.png</texture>
+							<texture colordiffuse="$VAR[ColorDiffuseVar]">thumbs/player_thumbs/thumb_glass_shadow.png</texture>
 							<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 							<include>PanelGlowFade</include>
-							<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 							<include>Animation_VisibleChange400</include>
 							<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
 						</control>
@@ -2147,8 +2073,7 @@
 				<left>-80</left>
 				<width>2080</width>
 				<height>87</height>
-				<texture border="80,0,80,0">osd/osd_progress_bar_back.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" border="80,0,80,0">osd/osd_progress_bar_back.png</texture>
 			</control>
 			<control type="progress" id="23">
 				<left>150</left>
@@ -2286,8 +2211,7 @@
                 <top>100</top>
                 <width>590</width>
                 <height>870</height>
-                <texture border="20">osd/osd_settings_back_glow.png</texture>
-                <colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+                <texture colordiffuse="$VAR[ColorDiffuseVar]" border="20">osd/osd_settings_back_glow.png</texture>
                 <visible>!Skin.HasSetting(DisableGlowbar)</visible>
                 <include>PanelGlowFade</include>
                 <include>Animation_VisibleChange400</include>
@@ -3490,8 +3414,7 @@
 			<control type="image">
 				<width>1332</width>
 				<height>612</height>
-				<texture border="50">featured/panel_featured_shadow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" border="50">featured/panel_featured_shadow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>PanelGlowFade</include>
 				<include>Animation_VisibleChange400</include>
@@ -3518,7 +3441,7 @@
 		<height>220</height>
 		<label>$VAR[FanartPanelPlotVar]</label>
 		<textcolor>white6</textcolor>
-		<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+		<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 	</include>
 	<include name="ShowCaseInfoPanelButtonsValues">
 		<height>90</height>

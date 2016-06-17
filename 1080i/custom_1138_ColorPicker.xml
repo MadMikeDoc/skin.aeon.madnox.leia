@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1138">
 	<defaultcontrol always="true">10</defaultcontrol>
-
 	<onload condition="!Substring(Skin.CurrentTheme,whit) + StringCompare(Window(10000).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_,home)</onload>
 	<onload condition="Substring(Skin.CurrentTheme,whit) + StringCompare(Window(10000).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_white_,home)</onload>
 	<onload condition="!Substring(Skin.CurrentTheme,whit) + StringCompare(Window(10000).Property(colordialog),font_color)">SetProperty(ColorTarget,font_,home)</onload>
@@ -50,8 +49,7 @@
 				<top>-24</top>
 				<width>776</width>
 				<height>372</height>
-				<texture border="22">dialogs/scan_backg.png</texture>
-				<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[DialogColorVar]" border="22">dialogs/scan_backg.png</texture>
 			</control>
 			<include>Dialogs_Settings</include>
 			<control type="panel" id="10">

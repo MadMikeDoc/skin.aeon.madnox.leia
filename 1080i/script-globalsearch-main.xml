@@ -348,7 +348,7 @@
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
-											<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(111)</autoscroll>
+											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(111)</autoscroll>
 											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
 										</control>
 										<control type="textbox">
@@ -359,7 +359,7 @@
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plotoutline)]</label>
 											<font>Font_Reg32</font>
-											<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(111)</autoscroll>
+											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(111)</autoscroll>
 										</control>
 									</control>
 								</focusedlayout>
@@ -510,7 +510,7 @@
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
-											<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(211)</autoscroll>
+											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(211)</autoscroll>
 											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
 										</control>
 										<control type="textbox">
@@ -521,7 +521,7 @@
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plotoutline)]</label>
 											<font>Font_Reg32</font>
-											<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(211)</autoscroll>
+											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(211)</autoscroll>
 										</control>
 									</control>
 								</focusedlayout>
@@ -671,7 +671,7 @@
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
-											<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(121)</autoscroll>
+											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(121)</autoscroll>
 											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
 										</control>
 										<control type="textbox">
@@ -682,7 +682,7 @@
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plotoutline)]</label>
 											<font>Font_Reg32</font>
-											<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(121)</autoscroll>
+											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(121)</autoscroll>
 										</control>
 									</control>
 								</focusedlayout>
@@ -819,7 +819,7 @@
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
-											<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(131)</autoscroll>
+											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(131)</autoscroll>
 										</control>
 									</control>
 								</focusedlayout>
@@ -958,7 +958,7 @@
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
-											<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(141)</autoscroll>
+											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(141)</autoscroll>
 										</control>
 									</control>
 								</focusedlayout>
@@ -1097,7 +1097,7 @@
 											<aligny>top</aligny>
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
-											<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(151)</autoscroll>
+											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(151)</autoscroll>
 										</control>
 									</control>
 								</focusedlayout>
@@ -1587,7 +1587,6 @@
 				<control type="grouplist">
 					<width>1920</width>
 					<align>center</align>
-					<aligny>center</aligny>
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
 					<animation effect="fade" time="320" delay="320">Visible</animation>

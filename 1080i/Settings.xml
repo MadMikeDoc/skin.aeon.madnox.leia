@@ -120,7 +120,7 @@
 							</animation>
 							<width>380</width>
 							<height>140</height>
-							<autoscroll delay="3000" time="AutoScrollTime" repeat="8001">true</autoscroll>
+							<autoscroll delay="3000" time="2000" repeat="8001">true</autoscroll>
 							<label>$INFO[ListItem.Property(Description)]</label>
 							<font>Font_Reg25_2</font>
 							<align>center</align>

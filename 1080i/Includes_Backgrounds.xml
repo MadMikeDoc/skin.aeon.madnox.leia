@@ -64,7 +64,7 @@
 			<label>$INFO[Window(Home).Property(Set.Movie.19.Art(fanart))]</label>
 			<label>$INFO[Window(Home).Property(Set.Movie.20.Art(fanart))]</label>
 			<visible>[Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets/,left)]</visible>
-			<visible>!Stringcompare(ListItem.Label,..)</visible>
+			<visible>!ListItem.IsParentFolder</visible>
 		</control>
 	</include>
 	<!-- Live DVD/BD Cases for Movieset -->
@@ -73,7 +73,7 @@
 			<animation effect="fade" time="600">VisibleChange</animation>
 			<include>Animation_WindowFade250</include>
 			<visible>Skin.HasSetting(livenodecovers)</visible>
-			<visible>!Stringcompare(ListItem.Label,..)</visible>
+			<visible>!ListItem.IsParentFolder</visible>
 			<visible>[Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets/,left)]</visible>
 			<control type="group">
 				<control type="group">
@@ -390,9 +390,8 @@
 	</include>
 	<include name="CommonMediaPlayingBackground">
 		<control type="image">
-			<texture>common/black.png</texture>
+			<texture colordiffuse="FF000000">common/black.png</texture>
 			<include>FullscreenDimensions</include>
-			<colordiffuse>FF000000</colordiffuse>
 			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)</visible>
 		</control>
 		<control type="visualisation">

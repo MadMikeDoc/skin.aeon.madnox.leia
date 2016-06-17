@@ -2205,7 +2205,7 @@
 							<height>260</height>
 							<label fallback="31006">$INFO[VideoPlayer.Plot]</label>
 							<font>Font_Reg30_2</font>
-							<autoscroll delay="5000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+							<autoscroll delay="5000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 					</control>
 				</control>
@@ -2271,7 +2271,7 @@
 					<label>$VAR[NowPlayingTextBoxLabelVar]</label>
 					<font>Font_Reg26</font>
 					<textcolor>white6</textcolor>
-					<autoscroll delay="5000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="5000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="group">
 					<left>1450</left>

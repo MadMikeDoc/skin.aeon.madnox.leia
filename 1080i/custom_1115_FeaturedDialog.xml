@@ -251,8 +251,7 @@
 						<top>450</top>
 						<width>1332</width>
 						<height>160</height>
-						<texture border="50">featured/panel_featured.png</texture>
-						<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[DialogColorVar]" border="50">featured/panel_featured.png</texture>
 					</control>
 					<control type="image">
 						<left>21</left>
@@ -322,8 +321,7 @@
 						<top>471</top>
 						<width>1290</width>
 						<height>118</height>
-						<texture border="21">featured/panel_featured_overlay.png</texture>
-						<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[DialogColorVar]" border="21">featured/panel_featured_overlay.png</texture>
 					</control>
 				</control>
 			</control>
@@ -530,8 +528,8 @@
 						<top>21</top>
 						<width>1290</width>
 						<height>570</height>
-						<texture>featured/panel_featured_overlay.png</texture>
-						<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[DialogColorVar]">featured/panel_featured_overlay.png</texture>
+
 					</control>
 				</control>
 			</control>
@@ -736,8 +734,7 @@
 						<top>21</top>
 						<width>1290</width>
 						<height>570</height>
-						<texture>featured/panel_featured_overlay.png</texture>
-						<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[DialogColorVar]">featured/panel_featured_overlay.png</texture>
 					</control>
 				</control>
 			</control>
@@ -981,8 +978,7 @@
 						<top>21</top>
 						<width>1290</width>
 						<height>570</height>
-						<texture>featured/panel_featured_overlay.png</texture>
-						<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[DialogColorVar]">featured/panel_featured_overlay.png</texture>
 					</control>
 				</control>
 			</control>
@@ -1225,8 +1221,7 @@
 						<top>21</top>
 						<width>1290</width>
 						<height>570</height>
-						<texture>featured/panel_featured_overlay.png</texture>
-						<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[DialogColorVar]">featured/panel_featured_overlay.png</texture>
 					</control>
 				</control>
 			</control>
@@ -1469,8 +1464,7 @@
 						<top>21</top>
 						<width>1290</width>
 						<height>570</height>
-						<texture>featured/panel_featured_overlay.png</texture>
-						<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[DialogColorVar]">featured/panel_featured_overlay.png</texture>
 					</control>
 				</control>
 			</control>

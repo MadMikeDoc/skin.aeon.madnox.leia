@@ -52,7 +52,7 @@
 			<include>HiddenObject</include>
 			<visible>!Container.Content()</visible>
 			<visible>!SubString(ListItem.Path,videodb://movies/sets/,left) | skin.hassetting(backendmode)</visible>
-			<visible>!Stringcompare(ListItem.Label,..)</visible>
+			<visible>!ListItem.IsParentFolder</visible>
 			<visible>!Container.Content(years)</visible>
 			<visible>!Container.Content(genres)</visible>
 			<visible>!Container.Content(studios)</visible>
@@ -429,7 +429,7 @@
 					<font>Hand_20</font>
 					<align>center</align>
 					<aligny>top</aligny>
-					<visible>Skin.HasSetting(showcasecdart) + IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + IsEmpty(Container.ListItem.Art(clearlogo)) + !Control.IsVisible(750) + !Stringcompare(ListItem.Label,..)</visible>
+					<visible>Skin.HasSetting(showcasecdart) + IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + IsEmpty(Container.ListItem.Art(clearlogo)) + !Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
 					<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Year] - $VAR[MovieDuration]</label>
 					<textcolor>black</textcolor>
 				</control>
@@ -438,7 +438,7 @@
 						<effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						<effect type="rotate" start="0" center="2670,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 					</animation>
-					<visible>Skin.HasSetting(showcasecdart) + Container.Content(movies) + !IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + !Control.IsVisible(750) + !Stringcompare(ListItem.Label,..)</visible>
+					<visible>Skin.HasSetting(showcasecdart) + Container.Content(movies) + !IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + !Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
 					<control type="image">
 						<left>2600</left>
 						<top>744</top>
@@ -678,7 +678,7 @@
 					<font>Hand_20</font>
 					<align>center</align>
 					<aligny>top</aligny>
-					<visible>Skin.HasSetting(showcasecdart) + IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + IsEmpty(Container.ListItem.Art(clearlogo)) + Control.IsVisible(750) + !Stringcompare(ListItem.Label,..)</visible>
+					<visible>Skin.HasSetting(showcasecdart) + IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + IsEmpty(Container.ListItem.Art(clearlogo)) + Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
 					<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Year] - $VAR[MovieDuration]</label>
 					<textcolor>black</textcolor>
 				</control>
@@ -687,7 +687,7 @@
 						<effect type="slide" start="0,0" end="-1800,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						<effect type="rotate" start="0" center="2670,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 					</animation>
-					<visible>Skin.HasSetting(showcasecdart) + Container.Content(movies) + !IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + Control.IsVisible(750) + !Stringcompare(ListItem.Label,..)</visible>
+					<visible>Skin.HasSetting(showcasecdart) + Container.Content(movies) + !IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
 					<control type="image">
 						<left>2600</left>
 						<top>744</top>
@@ -737,7 +737,7 @@
 							<effect type="slide" start="0,0" end="-1800,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="auto" end="720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						</animation>
-						<visible>ListItem.IsCollection + !Stringcompare(ListItem.Label,..) + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4299))</visible>
+						<visible>ListItem.IsCollection + !ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4299))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
 							<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.1.Art(poster))]</texture>
@@ -745,7 +745,7 @@
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 							<texture background="true">$VAR[MovieSetDisc1FakeDiscArtOverlay]</texture>
-							<visible>ListItem.IsCollection + !Stringcompare(ListItem.Label,..) + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4298))</visible>
+							<visible>ListItem.IsCollection + !ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4298))</visible>
 						</control>
 					</control>
 					<control type="image" id="4298">
@@ -772,7 +772,7 @@
 							<effect type="slide" start="0,0" end="-1800,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="auto" end="720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						</animation>
-						<visible>ListItem.IsCollection + !Stringcompare(ListItem.Label,..) + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4298)) + !IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
+						<visible>ListItem.IsCollection + !ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4298)) + !IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
 						<include>Shelf3DDiscAnimationReflection</include>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
@@ -808,7 +808,7 @@
 							<effect type="slide" start="0,0" end="-1800,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="auto" end="720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						</animation>
-						<visible>ListItem.IsCollection + !Stringcompare(ListItem.Label,..) + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4297)) + !IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
+						<visible>ListItem.IsCollection + !ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4297)) + !IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
 						<include>Shelf3DDiscAnimationReflection</include>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
@@ -848,7 +848,7 @@
 							<effect type="slide" start="0,0" end="-1800,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="720" center="auto" end="0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						</animation>
-						<visible>ListItem.IsCollection + !Stringcompare(ListItem.Label,..) + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4299)) + !IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
+						<visible>ListItem.IsCollection + !ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4299)) + !IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
 							<texture flipy="true" background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.1.Art(poster))]</texture>
@@ -886,7 +886,7 @@
 							<effect type="slide" start="0,0" end="-1800,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="720" center="auto" end="0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						</animation>
-						<visible>ListItem.IsCollection + !Stringcompare(ListItem.Label,..) + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4298)) + !IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
+						<visible>ListItem.IsCollection + !ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4298)) + !IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
 						<include>Shelf3DDiscAnimationReflection</include>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
@@ -925,7 +925,7 @@
 							<effect type="slide" start="0,0" end="-1800,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="720" center="auto" end="0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						</animation>
-						<visible>ListItem.IsCollection + !Stringcompare(ListItem.Label,..) + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4297)) + !IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
+						<visible>ListItem.IsCollection + !ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4297)) + !IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
 							<texture flipy="true" background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.3.Art(poster))]</texture>

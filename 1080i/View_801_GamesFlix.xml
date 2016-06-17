@@ -59,7 +59,7 @@
 				<fadetime>500</fadetime>
 				<timeperimage>3000</timeperimage>
 				<imagepath background="true" diffuse="views/KodiFlix/fanart_diffuse2.png">special://skin/backgrounds/games/</imagepath>
-				<visible>IsEmpty(Control.GetLabel(5900)) + IsEmpty(Container.ListItem.Art(fanart)) + !Stringcompare(ListItem.Label,..)</visible>
+				<visible>IsEmpty(Control.GetLabel(5900)) + IsEmpty(Container.ListItem.Art(fanart)) + !ListItem.IsParentFolder</visible>
 				<include>Animation_VisibleChange200</include>
 			</control>
 			<!-- End Multiple Fanart -->
@@ -69,7 +69,6 @@
 				<top>240</top>
 				<width>650</width>
 				<height>270</height>
-				<textcolor>$VAR[TitleColorVar]</textcolor>
 				<control type="grouplist">
 					<visible>Control.IsVisible(801) + SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
 					<control type="label">

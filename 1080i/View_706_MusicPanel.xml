@@ -56,7 +56,7 @@
 			<animation effect="slide" start="0,0" end="0,-300" time="500" tween="cubic" delay="50" condition="!Skin.HasSetting(MusicPanelDown)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="1220,295" time="500" tween="cubic" delay="50" condition="Skin.HasSetting(MusicPanelBannerRightAlbums) | !Skin.HasSetting(MusicPanelDown)">Conditional</animation>
 			<animation effect="zoom" start="100,100" end="80,80" time="500" tween="cubic" delay="50" condition="Skin.HasSetting(MusicPanelBannerRightAlbums) | !Skin.HasSetting(MusicPanelDown)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,20" time="100" tween="cubic" delay="50" 
+			<animation effect="slide" start="0,0" end="0,20" time="100" tween="cubic" delay="50"
 			condition="Container.Content(songs) | [Container.Content(albums) + !Skin.HasSetting(MusicPanelMood)]">Conditional</animation>
 			<include>Animation_CommonFade</include>
 			<control type="image">
@@ -292,7 +292,6 @@
 				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
 				<align>left</align>
-				<aligny>center</aligny>
 				<include>Animation_CommonFade</include>
 				<include>Animation_VisibleChangeDelayed</include>
 				<control type="image">
@@ -394,7 +393,6 @@
 				<itemgap>20</itemgap>
 				<orientation>horizontal</orientation>
 				<align>left</align>
-				<aligny>center</aligny>
 				<include>Animation_CommonFade</include>
 				<include>Animation_VisibleChangeDelayed</include>
 				<control type="image">
@@ -701,7 +699,7 @@
 					<aligny>center</aligny>
 					<font>font.ml</font>
 					<autoscroll time="1000" delay="4000" repeat="5000"></autoscroll>
-					<visible>!StringCompare(ListItem.Label,..) + Container.Content(albums)</visible>
+					<visible>!ListItem.IsParentFolder + Container.Content(albums)</visible>
 				</control>
 				<control type="textbox">
 					<include>Animation_WindowFade250</include>

@@ -329,7 +329,7 @@
 						<height>173</height>
 						<font>Font_Reg28_2</font>
 						<label>$INFO[ListItem.Plot]</label>
-						<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 					<control type="button" id="85">
 						<top>205</top>
@@ -646,7 +646,7 @@
 					<height>145</height>
 					<font>Font_Reg20</font>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 		</control>
@@ -916,7 +916,7 @@
 					<height>145</height>
 					<font>Font_Reg20</font>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 		</control>

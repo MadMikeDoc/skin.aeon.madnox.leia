@@ -984,7 +984,7 @@
 					<height>205</height>
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
-					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
 				</control>
 				<control type="textbox">   <!-- content bottom lvl1-->
@@ -993,7 +993,7 @@
 					<height>205</height>
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
-					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!StringCompare(Control.GetLabel(4420),fanart) + !Skin.HasSetting(NoFlow)</visible>
 				</control>
 				<control type="textbox">    <!-- ?????? -->
@@ -1002,7 +1002,7 @@
 					<height>205</height>
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
-					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!StringCompare(Control.GetLabel(4420),fanart) + Skin.HasSetting(NoFlow)</visible>
 				</control>
 			</control>
@@ -1629,7 +1629,7 @@
 					<height>247</height>
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
-					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
 				</control>
 				<control type="textbox">
@@ -1638,7 +1638,7 @@
 					<height>218</height>
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
-					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!StringCompare(Control.GetLabel(4420),fanart) + !Skin.HasSetting(NoFlow)</visible>
 				</control>
 				<control type="textbox">
@@ -1647,7 +1647,7 @@
 					<height>188</height>
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
-					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!StringCompare(Control.GetLabel(4420),fanart) + Skin.HasSetting(NoFlow)</visible>
 				</control>
 			</control>
@@ -1798,7 +1798,7 @@
 						<label fallback="31006">$VAR[FanartPanelPlotVar]</label>
 						<textcolor>white6</textcolor>
 						<animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo">Conditional</animation>
-						<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>!Control.IsVisible(503)</visible>
 						<visible>[[Skin.HasSetting(noflow) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]] | [Skin.HasSetting(noflowtv) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]]]</visible>
 					</control>
@@ -1810,7 +1810,7 @@
 						<label fallback="31006">$VAR[FanartPanelPlotVar]</label>
 						<textcolor>white6</textcolor>
 						<animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo">Conditional</animation>
-						<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						<visible>!Control.IsVisible(5777)</visible>
 					</control>
 				</control>
@@ -2185,7 +2185,7 @@
 					<height>177</height>
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
-					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
 				</control>
 			</control>

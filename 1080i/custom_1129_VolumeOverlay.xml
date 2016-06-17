@@ -34,8 +34,7 @@
 				<top>-4</top>
 				<width>330</width>
 				<height>162</height>
-				<texture>dialogs/scan_backg.png</texture>
-				<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[DialogColorVar]">dialogs/scan_backg.png</texture>
 			</control>
 			<control type="group">
 				<visible>!Player.Muted + !player.passthrough</visible>

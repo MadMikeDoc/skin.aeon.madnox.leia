@@ -41,8 +41,7 @@
 				<top>200</top>
 				<width>510</width>
 				<height>625</height>
-				<texture border="50">osd/osd_settings_back.png</texture>
-				<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[DialogColorVar]" border="50">osd/osd_settings_back.png</texture>
 			</control>
 			<control type="image">
 				<left>375</left>
@@ -65,7 +64,6 @@
 				<top>292</top>
 				<width>1172</width>
 				<height>450</height>
-				<aligny>center</aligny>
 				<pagecontrol>60</pagecontrol>
 				<onleft>60</onleft>
 				<onright>60</onright>

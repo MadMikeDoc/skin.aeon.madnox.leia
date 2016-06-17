@@ -634,7 +634,7 @@
 										<label fallback="31006">$INFO[ListItem.Plot]</label>
 										<font>Font_Reg28_2</font>
 										<pagecontrol>60</pagecontrol>
-										<autoscroll delay="20000" time="AutoScrollTime" repeat="15000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+										<autoscroll delay="20000" time="2000" repeat="15000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
 										<visible>[IsEmpty(ListItem.Art(discart)) + [!Skin.HasSetting(Fakediscart) | !Container.Content(movies)]] + IsEmpty(ListItem.Art(characterart)) + IsEmpty(ListItem.Art(tvshow.characterart))</visible>
 									</control>
 								</control>
@@ -657,7 +657,7 @@
 										<label fallback="31006">$INFO[ListItem.Plot]</label>
 										<font>Font_Reg28_2</font>
 										<pagecontrol>60</pagecontrol>
-										<autoscroll delay="20000" time="AutoScrollTime" repeat="15000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
+										<autoscroll delay="20000" time="2000" repeat="15000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
 										<visible>[!IsEmpty(ListItem.Art(discart)) | [Skin.HasSetting(Fakediscart) + Container.Content(movies)]] | !IsEmpty(ListItem.Art(characterart)) | !IsEmpty(ListItem.Art(tvshow.characterart))</visible>
 									</control>
 								</control>
@@ -1420,9 +1420,11 @@
 						<ondown>60</ondown>
 						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic">200</scrolltime>
-						<control type="button" id="8">
-							<label>$VAR[DialogVideoInfoButtonLabelVar]</label>
+						<control type="togglebutton" id="8">
 							<include>DialogVideoInfoButton</include>
+							<label>208</label>
+							<altlabel>1024</altlabel>
+							<usealttexture>String.IsEqual(ListItem.DBType,tvshow)</usealttexture>
 						</control>
 						<control type="button" id="9">
 							<label>$LOCALIZE[13404] $INFO[ListItem.PercentPlayed,(,%)]</label>

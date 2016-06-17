@@ -26,8 +26,7 @@
 			<top>180</top>
 			<width>1210</width>
 			<height>700</height>
-			<texture>osd/osd_settings_back.png</texture>
-			<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+			<texture colordiffuse="$VAR[DialogColorVar]">osd/osd_settings_back.png</texture>
 		</control>
 		<control type="image">
 			<left>375</left>
@@ -52,7 +51,6 @@
 			<top>292</top>
 			<width>1172</width>
 			<height>540</height>
-			<aligny>center</aligny>
 			<scrolltime>0</scrolltime>
 			<onleft>450</onleft>
 			<onright>450</onright>
@@ -163,7 +161,7 @@
 				<onclick>SetProperty(Dialog.9.Label,$LOCALIZE[231])</onclick>
 				<onclick>SetProperty(Dialog.9.BuiltIn,Skin.SetString(Widget.Back,-))</onclick>
 				<onclick>RunScript(script.toolbox,info=selectdialog,header=$LOCALIZE[31790])</onclick>
-			</control>			
+			</control>
 			<control type="radiobutton" id="324">
 				<label>31306</label>
 				<include>Objects_CommonSettingsButton</include>
@@ -177,7 +175,7 @@
 				<selected>Skin.HasSetting(Enable.WidgetHide)</selected>
 			</control>
 			<control type="label" id="330">
-				<label>Widget Info</label>				
+				<label>Widget Info</label>
 				<include>Objects_CommonSettingsButton</include>
 			</control>
 			<control type="button" id="331">
@@ -239,13 +237,13 @@
 				<onclick>Skin.ToggleSetting(Enable.OnInfoMatch)</onclick>
 				<selected>Skin.HasSetting(Enable.OnInfoMatch)</selected>
 				<include>Objects_CommonSettingsButton</include>
-			</control>			
+			</control>
 			<control type="radiobutton" id="336">
 				<label>31304</label>
 				<include>Objects_CommonSettingsButton</include>
 				<onclick>Skin.ToggleSetting(Enable.PanelInfo)</onclick>
 				<selected>Skin.HasSetting(Enable.PanelInfo)</selected>
-			</control>		
+			</control>
 		</control>
 	</controls>
 </window>

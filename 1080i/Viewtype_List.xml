@@ -730,7 +730,7 @@
 					<label fallback="31006">$VAR[InfoWallTextboxVar]</label>
 					<textcolor>white</textcolor>
 					<shadowcolor>77000000</shadowcolor>
-					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="group">
 					<left>348</left>
@@ -1071,7 +1071,7 @@
 				<label fallback="31006">$VAR[InfoWallTextboxVar]</label>
 				<font>Font_Reg29</font>
 				<textcolor>white6</textcolor>
-				<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<visible>!Skin.HasSetting(ListCase)</visible>
 			</control>
 		</control>
@@ -2058,7 +2058,7 @@
 						<height>55</height>
 						<texture>$VAR[SmallListIconVar]</texture>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | Stringcompare(ListItem.Label,..)</visible>
+						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | ListItem.IsParentFolder</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="61.5" condition="Skin.HasSetting(slimlist)">
@@ -2119,7 +2119,7 @@
 						<height>55</height>
 						<texture>$VAR[SmallListIconVar]</texture>
 						<colordiffuse>white2</colordiffuse>
-						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | Stringcompare(ListItem.Label,..)</visible>
+						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | ListItem.IsParentFolder</visible>
 					</control>
 				</focusedlayout>
 			</control>

@@ -40,10 +40,10 @@
 					<visible>stringcompare(container.folderpath,special://profile/playlists/video/IMDBTop250.xsp)</visible>
 				</control>
 				<control type="label">
-					<visible>stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) | 
-					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) | 
-					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) | 
-					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) | 
+					<visible>stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) |
+					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) |
+					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) |
+					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) |
 					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestscore.xsp)</visible>
 					<left>105</left>
 					<top>122</top>
@@ -56,10 +56,10 @@
 					<textcolor>ffe8b854</textcolor>
 				</control>
 				<control type="label">
-					<visible>stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) | 
-					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) | 
-					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) | 
-					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) | 
+					<visible>stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) |
+					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) |
+					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) |
+					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) |
 					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestscore.xsp)</visible>
 					<left>408</left>
 					<top>128</top>
@@ -73,10 +73,10 @@
 					<shadowcolor>66000000</shadowcolor>
 				</control>
 				<control type="label">
-					<visible>stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) | 
-					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) | 
-					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) | 
-					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) | 
+					<visible>stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) |
+					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) |
+					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) |
+					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) |
 					stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestscore.xsp)</visible>
 					<left>428</left>
 					<top>183</top>
@@ -90,15 +90,15 @@
 					<shadowcolor>66000000</shadowcolor>
 				</control>
 				<control type="grouplist">
-					<visible>!stringcompare(container.folderpath,special://profile/playlists/video/IMDBTop250.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) + 
+					<visible>!stringcompare(container.folderpath,special://profile/playlists/video/IMDBTop250.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) +
 					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestscore.xsp)</visible>
 					<left>140</left>
 					<top>135</top>
@@ -120,17 +120,16 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<visible>!stringcompare(container.folderpath,special://profile/playlists/video/IMDBTop250.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) + 
+					<visible>!stringcompare(container.folderpath,special://profile/playlists/video/IMDBTop250.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) +
 					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestscore.xsp)</visible>
-					<left>140</left>
 					<left>140</left>
 					<top>180</top>
 					<width>445</width>
@@ -151,17 +150,16 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<visible>!stringcompare(container.folderpath,special://profile/playlists/video/IMDBTop250.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) + 
-					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) + 
+					<visible>!stringcompare(container.folderpath,special://profile/playlists/video/IMDBTop250.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) +
+					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) +
 					!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestscore.xsp)</visible>
-					<left>140</left>
 					<left>140</left>
 					<top>225</top>
 					<width>445</width>
@@ -187,7 +185,7 @@
 					<width>434</width>
 					<height>550</height>
 					<label>$VAR[GlobalPlotVar]</label>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!Skin.HasSetting(tripanelextrafanart)</visible>
 				</control>
 				<control type="textbox">
@@ -197,7 +195,7 @@
 					<height>264</height>
 					<label>$VAR[GlobalPlotVar]</label>
 					<visible>Skin.HasSetting(tripanelextrafanart)</visible>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="group">
 					<left>65</left>
@@ -216,10 +214,10 @@
 						<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 					</control>
 					<control type="image">
-						<visible>stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) | 
-						stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) | 
-						stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) | 
-						stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) | 
+						<visible>stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) |  stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) | stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) |
+						stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) |
+						stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) |
+						stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) |
 						stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestscore.xsp)</visible>
 						<texture background="true" diffuse="thumbs/multiplex_tvmask.png">oscars2.jpg</texture>
 						<animation effect="fade" start="100" end="90" time="50" condition="true">Conditional</animation>
@@ -232,15 +230,15 @@
 						<fadetime>IconCrossfadeTime</fadetime>
 					</control>
 					<control type="image">
-						<visible>!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) + 
-						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) + 
-						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) + 
-						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) + 
-						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) + 
-						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) + 
-						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) + 
-						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) + 
-						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) + 
+						<visible>!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) + !stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) +
+						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestactress.xsp) +
+						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactor.xsp) +
+						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestsuppactress.xsp) +
+						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestvisualeffects.xsp) +
+						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestanimated.xsp) +
+						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestoriginalscreenplay.xsp) +
+						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestadaptedscreenplay.xsp) +
+						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestforeign.xsp) +
 						!stringcompare(container.folderpath,special://skin/extras/Playlists/oscars/bestscore.xsp)</visible>
 						<texture background="true" diffuse="thumbs/multiplex_tvmask.png" fallback="thumbs/fallback_episode_tp.png">$VAR[InfoWallPreviewTextureVar]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
@@ -280,7 +278,7 @@
 				<width>640</width>
 				<height>980</height>
 				<include>Animation_TriPanelMid</include>
-				<visible>!StringCompare(ListItem.Label,..)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 				<visible>Control.IsVisible(52)</visible>
 				<visible>[Stringcompare(Skin.String(TriPanelPosition),1) | IsEmpty(Skin.String(TriPanelPosition))] + !Container.Content(years) + !Container.Content(countries)</visible>
 				<control type="image" id="3822">
@@ -360,7 +358,7 @@
 				<height>903</height>
 				<visible>Control.IsVisible(52)</visible>
 				<include>Animation_TriPanelRight</include>
-				<visible>!StringCompare(ListItem.Label,..)</visible>
+				<visible>!ListItem.IsParentFolder</visible>
 				<animation effect="slide" end="-1320,0" time="320" tween="cubic" easing="inout" condition="Stringcompare(Skin.String(TriPanelPosition),3)">Conditional</animation>
 				<visible>[Stringcompare(Skin.String(TriPanelPosition),2) | Stringcompare(Skin.String(TriPanelPosition),3)] + !Container.Content(years) + !Container.Content(countries)</visible>
 				<animation effect="slide" end="-500,0" time="640" easing="inout" tween="circle" condition="IsEmpty(Container.FolderPath) + Stringcompare(Skin.String(TriPanelPosition),2)">Conditional</animation>
@@ -523,7 +521,7 @@
 					<height>550</height>
 					<label>$VAR[GlobalPlotVar]</label>
 					<visible>!Skin.HasSetting(tripanelextrafanart)</visible>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="textbox">
 					<left>102</left>
@@ -532,7 +530,7 @@
 					<height>264</height>
 					<label>$VAR[GlobalPlotVar]</label>
 					<visible>Skin.HasSetting(tripanelextrafanart)</visible>
-					<autoscroll delay="10000" time="AutoScrollTime" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="group">
 					<left>97</left>
@@ -630,7 +628,7 @@
 <!-- 				<onleft condition="!IntegerGreaterThan(Container.NumPages,1)">9000</onleft>
 					<onleft condition="IntegerGreaterThan(Container.NumPages,1)">70</onleft> -->
 					<onleft condition="!Skin.HasSetting(AlphabetScrollbar)">70</onleft>
-					<onleft condition="Skin.HasSetting(AlphabetScrollbar)">6010</onleft>					
+					<onleft condition="Skin.HasSetting(AlphabetScrollbar)">6010</onleft>
 					<onup>52</onup>
 					<ondown>52</ondown>
 					<viewtype label="31477">list</viewtype>
@@ -1175,7 +1173,7 @@
 					<animation effect="fade" time="0" start="100" end="20" condition="!Control.HasFocus(70)">Conditional</animation>
 					<visible>!Skin.HasSetting(AlphabetScrollbar)</visible>
 				</control>
-				
+
 			<!-- Letter-Scrollbar -->
 			<control type="image">
 				<left>27</left>
@@ -1221,8 +1219,8 @@
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 			</control>
-				
-				
+
+
 			</control>
 		</control>
 	</include>

@@ -10,7 +10,7 @@
 				<include condition="Skin.HasSetting(Shelf3DFlatInfoPanel)">FlatBackPanelDimensions</include>
 				<texture border="40">listpanel_back.png</texture>
 				<colordiffuse>D9FFFFFF</colordiffuse>
-				<visible>!Skin.HasSetting(Shelf3DNoInfoPanel) + !Stringcompare(ListItem.Label,..)</visible>
+				<visible>!Skin.HasSetting(Shelf3DNoInfoPanel) + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="image" id="8858">
 				<top>205</top>
@@ -59,7 +59,7 @@
 				<font>font_SimplerE3D_bold</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>Skin.HasSetting(Shelf3DFlatInfoPanel) + [Container.Content(movies) | Container.Content(sets) + IsEmpty(Container.ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + [IsEmpty(Container.ListItem.Art(tvshow.clearlogo)) + IsEmpty(Container.ListItem.Art(clearlogo))]]</visible>
-				<visible>[IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(tvshow.clearlogo))] + !Stringcompare(ListItem.Label,..) + !Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
+				<visible>[IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(tvshow.clearlogo))] + !ListItem.IsParentFolder + !Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
 			</control>
 			<control type="group">
 				<animation effect="rotatey" center="1230" start="-12" end="-12" time="0" condition="!Skin.HasSetting(Shelf3DFlatInfoPanel)">Conditional</animation>
@@ -67,7 +67,7 @@
 				<top>-71</top>
 				<visible>!Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
 				<control type="grouplist">
-					<visible>!Stringcompare(ListItem.Label,..)</visible>
+					<visible>!ListItem.IsParentFolder</visible>
 					<itemgap>-50</itemgap>
 					<left>121</left>
 					<top>162</top>
@@ -114,7 +114,7 @@
 				<pagecontrol>62</pagecontrol>
 				<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(62)</autoscroll>
 				<include>ShowCaseInfoPanelButtonsValues</include>
-				<visible>!Skin.HasSetting(Shelf3DNoInfoPanel) + !Stringcompare(ListItem.Label,..)</visible>
+				<visible>!Skin.HasSetting(Shelf3DNoInfoPanel) + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="scrollbar" id="62">
 				<animation effect="rotatey" center="1230" start="-12" end="-12" time="0" condition="!Skin.HasSetting(Shelf3DFlatInfoPanel)">Conditional</animation>
@@ -134,15 +134,15 @@
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<visible>!Skin.HasSetting(Shelf3DNoInfoPanel) + !Skin.HasSetting(AlphabetScrollbar)</visible>
-			</control>		
-			
+			</control>
+
 			<!--Fanart-->
 			<control type="group">
 				<animation effect="rotatey" center="1230" start="-12" end="-12" time="0" condition="!Skin.HasSetting(Shelf3DFlatInfoPanel)">Conditional</animation>
 				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(Shelf3DFlatInfoPanel)">
 					<effect type="slide" start="0,0" end="-50,0" time="350" tween="cubic" easing="out" />
 				</animation>
-				<visible>!Stringcompare(ListItem.Label,..) + !Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
+				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
 				<control type="multiimage" id="4208">
 					<left>1276</left>
 					<top>92</top>
@@ -211,7 +211,7 @@
 					<showonepage>false</showonepage>
 					<orientation>horizontal</orientation>
 					<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(88) + !Container.Scrolling">Conditional</animation>
-				</control>	
+				</control>
 				<control type="fixedlist" id="750">
 					<viewtype label="Shelf 3D">list</viewtype>
 					<left>0</left>
@@ -374,7 +374,7 @@
 					<colordiffuse>grey2</colordiffuse>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[StudioImageVar]</texture>
-					<visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)] + [!Container.Content(seasons) + !IsEmpty(ListItem.Studio)]</visible>
+					<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !IsEmpty(ListItem.Studio)]</visible>
 					<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="textbox">
@@ -455,7 +455,7 @@
 						<left>-100</left>
 						<bordersize>2</bordersize>
 						<texture>$VAR[StudioImageVar]</texture>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)] + [!Container.Content(seasons) + !IsEmpty(ListItem.Studio)]</visible>
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !IsEmpty(ListItem.Studio)]</visible>
 						<width>140</width>
 						<height>115</height>
 						<aspectratio>keep</aspectratio>
@@ -477,7 +477,7 @@
 						<visible>IsEmpty(Control.GetLabel(84757))</visible>
 					</control>
 					<control type="image">
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)] + [!Container.Content(seasons) + !IsEmpty(ListItem.MPAA)]</visible>
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !IsEmpty(ListItem.MPAA)]</visible>
 						<left>45</left>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
@@ -485,7 +485,7 @@
 						<visible>!Skin.HasSetting(coloredflags)</visible>
 					</control>
 					<control type="image">
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !Stringcompare(ListItem.Label,..)] + [!Container.Content(seasons) + !IsEmpty(ListItem.MPAA)]</visible>
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !IsEmpty(ListItem.MPAA)]</visible>
 						<left>-150</left>
 						<aspectratio>keep</aspectratio>
 						<aspectratio scalediffuse="false">center</aspectratio>
@@ -517,7 +517,7 @@
 						<left>350</left>
 						<include>MediaFlagVarsShelf</include>
 						<texture>$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
-						<visible>!Stringcompare(ListItem.Label,..)</visible>
+						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
 						<left>460</left>
@@ -603,7 +603,7 @@
 						</control>
 					</control>
 				</control>
-			</control>				
+			</control>
 
 			<!-- Letter-Scrollbar -->
 			<control type="image">
@@ -615,7 +615,7 @@
 				<texture>views/directory/sbl_backround.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6012) + Skin.HasSetting(AlphabetScrollbar)</visible>
-			</control>			
+			</control>
 			<control type="panel" id="6012">
 				<onup>750</onup>
 				<ondown>88</ondown>
@@ -645,8 +645,8 @@
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
-			</control>	
-			
+			</control>
+
 		</control>
 	</include>
 
@@ -809,7 +809,7 @@
 				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(Shelf3DFlatInfoPanel)">
 					<effect type="slide" start="0,0" end="-50,0" time="350" tween="cubic" easing="out" />
 				</animation>
-				<visible>!Stringcompare(ListItem.Label,..) + !Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
+				<visible>!ListItem.IsParentFolder + !Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
 				<control type="multiimage" id="4208">
 					<left>1276</left>
 					<top>92</top>

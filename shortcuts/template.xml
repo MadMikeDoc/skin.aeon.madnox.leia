@@ -362,16 +362,6 @@
 						<effect type="rotatey" start="0" end="-180" center="$SKINSHORTCUTS[rotate]" time="400" tween="sine" easing="inout" />
 						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
 					</animation>
-					<include content="OnInfo">
-						<param name="id">8011$SKINSHORTCUTS[id]</param>
-						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-						<param name="Widget">$SKINSHORTCUTS[widget]</param>
-						<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-						<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-						<param name="widgetName">$SKINSHORTCUTS[label]</param>
-						<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-						<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-					</include>
 					<include content="$SKINSHORTCUTS[containercontent]">
 						<param name="id">8011$SKINSHORTCUTS[id]</param>
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -678,16 +668,6 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation1</include>
-						<include content="OnInfo">
-							<param name="id">8011$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -1014,16 +994,6 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation1</include>
-						<include content="OnInfo">
-							<param name="id">8011$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -1350,16 +1320,6 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation1</include>
-						<include content="OnInfo">
-							<param name="id">8011$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -1686,16 +1646,6 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation1</include>
-						<include content="OnInfo">
-							<param name="id">8011$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -2388,16 +2338,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>9000</onleft>
 						<onright>8012$SKINSHORTCUTS[id]</onright>
-						<include content="OnInfo">
-							<param name="id">8011$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -2446,16 +2386,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8011$SKINSHORTCUTS[id]</onleft>
 						<onright>8013$SKINSHORTCUTS[id]</onright>
-						<include content="OnInfo">
-							<param name="id">8012$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget.b]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype.b]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target.b]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label.b]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent.b]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.b]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.b]</param>
@@ -2504,16 +2434,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8012$SKINSHORTCUTS[id]</onleft>
 						<include>MixedRightNavigation1</include>
-						<include content="OnInfo">
-							<param name="id">8013$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget.c]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype.c]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target.c]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label.c]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent.c]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.c]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.c]</param>
@@ -3460,16 +3380,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>9000</onleft>
 						<onright>8012$SKINSHORTCUTS[id]</onright>
-						<include content="OnInfo">
-							<param name="id">8011$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -3518,16 +3428,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8011$SKINSHORTCUTS[id]</onleft>
 						<onright>8013$SKINSHORTCUTS[id]</onright>
-						<include content="OnInfo">
-							<param name="id">8012$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget.b]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype.b]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target.b]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label.b]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent.b]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.b]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.b]</param>
@@ -3579,16 +3479,6 @@
 						<onright condition="!Skin.HasSetting(lowermainmenu)">9000</onright>
 						<onright condition="Skin.HasSetting(lowermainmenu) + Control.IsVisible(8021$SKINSHORTCUTS[id])">8021$SKINSHORTCUTS[id]</onright>
 						<onright condition="Skin.HasSetting(lowermainmenu) + !Control.IsVisible(8021$SKINSHORTCUTS[id])">9000</onright>
-						<include content="OnInfo">
-							<param name="id">8013$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget.c]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype.c]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target.c]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label.c]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent.c]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.c]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.c]</param>
@@ -3637,16 +3527,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8013$SKINSHORTCUTS[id]</onleft>
 						<include>MixedRightNavigation1</include>
-						<include content="OnInfo">
-							<param name="id">8014$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.d]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget.d]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype.d]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target.d]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label.d]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent.d]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.d]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.d]</param>
@@ -4123,16 +4003,6 @@
 						<effect type="rotatey" start="0" end="-180" center="$SKINSHORTCUTS[rotate]" time="400" tween="sine" easing="inout" />
 						<effect type="fade" start="100" end="0" time="300" tween="sine" easing="inout" />
 					</animation>
-					<include content="OnInfo">
-						<param name="id">8021$SKINSHORTCUTS[id]</param>
-						<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-						<param name="Widget">$SKINSHORTCUTS[widget]</param>
-						<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-						<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-						<param name="widgetName">$SKINSHORTCUTS[label]</param>
-						<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-						<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-					</include>
 					<include content="$SKINSHORTCUTS[containercontent]">
 						<param name="id">8021$SKINSHORTCUTS[id]</param>
 						<param name="Texture">$SKINSHORTCUTS[artwork]</param>
@@ -4439,16 +4309,6 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation2</include>
-						<include content="OnInfo">
-							<param name="id">8021$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -4775,16 +4635,6 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation2</include>
-						<include content="OnInfo">
-							<param name="id">8021$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -5111,16 +4961,6 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation2</include>
-						<include content="OnInfo">
-							<param name="id">8021$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -5448,16 +5288,6 @@
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>HorizontalNavigation2</include>
-						<include content="OnInfo">
-							<param name="id">8021$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -6150,16 +5980,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>MixedLeftNavigation2</include>
 						<onright>8022$SKINSHORTCUTS[id]</onright>
-						<include content="OnInfo">
-							<param name="id">8021$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -6208,16 +6028,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8021$SKINSHORTCUTS[id]</onleft>
 						<onright>8023$SKINSHORTCUTS[id]</onright>
-						<include content="OnInfo">
-							<param name="id">8022$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget.b]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype.b]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target.b]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label.b]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent.b]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.b]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.b]</param>
@@ -6266,16 +6076,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8022$SKINSHORTCUTS[id]</onleft>
 						<include>MixedRightNavigation2</include>
-						<include content="OnInfo">
-							<param name="id">8023$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget.c]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype.c]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target.c]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label.c]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent.c]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.c]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.c]</param>
@@ -7221,16 +7021,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<include>MixedLeftNavigation2</include>
 						<onright>8022$SKINSHORTCUTS[id]</onright>
-						<include content="OnInfo">
-							<param name="id">8021$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight]</param>
@@ -7279,16 +7069,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8021$SKINSHORTCUTS[id]</onleft>
 						<onright>8023$SKINSHORTCUTS[id]</onright>
-						<include content="OnInfo">
-							<param name="id">8022$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.b]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget.b]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype.b]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target.b]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label.b]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent.b]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.b]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.b]</param>
@@ -7340,16 +7120,6 @@
 						<onright condition="!Skin.HasSetting(lowermainmenu)">9000</onright>
 						<onright condition="Skin.HasSetting(lowermainmenu) + Control.IsVisible(8021$SKINSHORTCUTS[id])">8021$SKINSHORTCUTS[id]</onright>
 						<onright condition="Skin.HasSetting(lowermainmenu) + !Control.IsVisible(8021$SKINSHORTCUTS[id])">9000</onright>
-						<include content="OnInfo">
-							<param name="id">8023$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.c]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget.c]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype.c]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target.c]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label.c]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent.c]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.c]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.c]</param>
@@ -7398,16 +7168,6 @@
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
 						<onleft>8023$SKINSHORTCUTS[id]</onleft>
 						<include>MixedRightNavigation2</include>
-						<include content="OnInfo">
-							<param name="id">8024$SKINSHORTCUTS[id]</param>
-							<param name="widgetSquare">$SKINSHORTCUTS[widgetsquare.d]</param>
-							<param name="Widget">$SKINSHORTCUTS[widget.d]</param>
-							<param name="widgetType">$SKINSHORTCUTS[widgettype.d]</param>
-							<param name="widgetTarget">$SKINSHORTCUTS[target.d]</param>
-							<param name="widgetName">$SKINSHORTCUTS[label.d]</param>
-							<param name="backTexture">$SKINSHORTCUTS[widgetbackground]</param>
-							<param name="backColor">$SKINSHORTCUTS[widgetbackgroundcolor]</param>
-						</include>
 						<include content="$SKINSHORTCUTS[artcontent.d]">
 							<param name="containerWidth">$SKINSHORTCUTS[containerwidth.d]</param>
 							<param name="containerHeight">$SKINSHORTCUTS[containerheight.d]</param>

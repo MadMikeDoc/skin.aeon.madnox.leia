@@ -80,7 +80,7 @@
 				<onright>9000</onright>
 				<visible>!Skin.HasSetting(AlphabetScrollbar)</visible>
 			</control>
-			
+
 		<!-- Letter-Scrollbar -->
 			<control type="image">
 				<left>1875</left>
@@ -127,7 +127,7 @@
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 			</control>
-			
+
 			<control type="image">
 				<left>92</left>
 				<top>50</top>
@@ -835,9 +835,6 @@
 				<top>353</top>
 				<width>230</width>
 				<height>70</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<aspectratio aligny="bottom">keep</aspectratio>
 				<visible>Skin.HasSetting(EpisodeDiscArt) + Container.Content(movies) + !IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 				<control type="image">
 					<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -965,7 +962,7 @@
 			<control type="group">
 				<visible>Window.IsActive(videos)</visible>
 				<visible>!Skin.HasSetting(disableepisodeposter)</visible>
-				<control type="image">  
+				<control type="image">
 					<left>49</left>
 					<top>190</top>
 					<width>533</width>
@@ -1096,7 +1093,7 @@
 					<align>right</align>
 					<label>$VAR[InfoWallTextboxVar]</label>
 					<font>Font_Reg30_2</font>
-					<autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 		</focusedlayout>
@@ -1375,7 +1372,7 @@
 					<align>right</align>
 					<label>$VAR[GlobalPlotVar]</label>
 					<font>Font_Reg30_2</font>
-					<autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="2000" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 		</focusedlayout>
@@ -1454,8 +1451,8 @@
 					<height>122</height>
 					<align>right</align>
 					<font>Font_Reg30_2</font>
-					<info>ListItem.Plot</info>
-					<autoscroll time="AutoScrollTime" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<label>$VAR[GlobalPlotVar]</label>
+					<autoscroll time="2000" delay="6000" repeat="6000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 		</focusedlayout>

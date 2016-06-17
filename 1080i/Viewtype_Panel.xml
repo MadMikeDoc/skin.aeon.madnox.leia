@@ -111,7 +111,7 @@
 					<height>191</height>
 					<label>$VAR[GlobalPlotOutlineVar]</label>
 					<font>Font_Reg32</font>
-					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 			</control>
 			<control type="group">
@@ -413,7 +413,7 @@
 					<height>260</height>
 					<label>$VAR[GlobalPlotVar]</label>
 					<font>Font_Reg32</font>
-					<autoscroll delay="8000" time="AutoScrollTime" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="image">
 					<left>1654</left>
@@ -441,7 +441,7 @@
 					<include>Animation_VisibleChange200</include>
 					<texture>overlayprogress.png</texture>
 					<visible>Container.ListItem(0).IsResumable + Skin.HasSetting(InProgressFlag)</visible>
-				</control>			
+				</control>
 			</control>
 			<control type="list" id="550">
 				<left>63</left>
@@ -556,8 +556,8 @@
 				<onright>9000</onright>
 				<visible>!Skin.HasSetting(AlphabetScrollbar)</visible>
 			</control>
-			
-		<!-- Letter-Scrollbar -->	
+
+		<!-- Letter-Scrollbar -->
 			<control type="image">
 				<left>477</left>
 				<top>77</top>
