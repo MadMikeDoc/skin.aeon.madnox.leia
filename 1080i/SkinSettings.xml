@@ -290,7 +290,8 @@
 						<label>31278</label>
 						<label2>$INFO[Skin.String(WeatherFanartDir.name)]</label2>
 						<include>Default_SettingButton</include>
-						<onclick>RunScript(script.image.resource.select,property=WeatherFanartDir&amp;type=resource.images.weatherfanart)</onclick>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanartDir&amp;type=resource.images.weatherfanart)</onclick>
 					</control>
 					<control type="button" id="455">
 						<label>$LOCALIZE[31961]</label>
