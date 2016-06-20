@@ -1,5 +1,4 @@
 # Kodi Media Center language file
-# Kodi Media Center language file
 # Addon Name: Aeon Madnox
 # Addon id: skin.aeon.madnox
 # Addon Provider: Mike_Doc|schimi2k
@@ -78,7 +77,7 @@ msgid "Timer"
 msgstr ""
 
 msgctxt "#31016"
-msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Tune new channels · Configure the electronic guide · Record your favourite programs"
+msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]· Configure General Settings[CR]· Configure Menu/OSD[CR]· Configure Guide Settings[CR]· Configure Playback Settings[CR]· Configure Recording Settings[CR]· Configure Power Saving[CR]· Configure Parent Control[CR]· Configure Client Specific"
 msgstr ""
 
 msgctxt "#31017"
@@ -1614,31 +1613,31 @@ msgid "Flat Discs"
 msgstr ""
 
 msgctxt "#31400"
-msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver · Activate different themes and fontsets for the current skin"
+msgid "[B]CONFIGURE INTERFACE SETTINGS[/B][CR][CR]· Configure Skin[CR]· Configure Regional[CR]· Configure Control[CR]· Configure Screensaver[CR]· Configure SkinMaster Lock[CR]· Configure Other"
 msgstr ""
 
 msgctxt "#31401"
-msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
+msgid "[B]CONFIGURE PLAYER SETTINGS[/B][CR][CR]· Configure Video-Play Settings[CR]· Configure Music-Play Settings[CR]· Configure Discs Settings[CR]· Configure Pictures Settings[CR]· Configure Language Settings[CR]· Configure Accessibility"
 msgstr ""
 
 msgctxt "#31402"
-msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgid "[B]CONFIGURE LIBRARY SETTINGS[/B][CR][CR]· Configure General Settings[CR]· Configure Video Settings[CR]· Configure Music Settings[CR]· Configure Pictures Settings[CR]· Configure Databases Settings"
 msgstr ""
 
 msgctxt "#31403"
-msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshows"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]· Configure General Settings[CR]· Configure Customizers[CR]· Install Addons[CR]· Show Credits[CR]· Set Paths"
 msgstr ""
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Choose a weather add-on · Set three cities to collect weather information"
+msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Choose a weather add-on [CR]· Set three cities to collect weather information"
 msgstr ""
 
 msgctxt "#31405"
-msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
+msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]· Configure Device Name[CR]· Configure UPnP and HTTP[CR]· Configure Web Server[CR]· Configure AirPlay[CR]· Configure Weather"
 msgstr ""
 
 msgctxt "#31406"
-msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]· Configure Display Settings[CR]· Configure Audio Settings[CR]· Configure Internet Access[CR]· Configure Power Saving[CR]· Configure Addons Settings[CR]· Configure Logging Settings"
 msgstr ""
 
 msgctxt "#31407"
@@ -1646,15 +1645,15 @@ msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Aeon Nox skin · Customiz
 msgstr ""
 
 msgctxt "#31408"
-msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for and install Add-ons from xbmc.tv[CR]Modify Add-on settings"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]· Manage your installed Add-ons[CR]· Browse for and install Add-ons[CR]· Modify Add-on settings"
 msgstr ""
 
 msgctxt "#31409"
-msgid "[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU usage[CR]Check Kodi revision number"
+msgid "[B]SYSTEM INFORMATION[/B][CR][CR]· Show Summary[CR]· Show Storage[CR]· Show Network[CR]· Show Video[CR]· Show Hardware[CR]· Show PVR Service"
 msgstr ""
 
 msgctxt "#31410"
-msgid "[B]CONFIGURE USER PROFILES[/B][CR][CR]Grant access to folders and network shares · Lock folders such as network shares on a per-user basis · Separate media libraries for each user[CR]Setup view settings such as skins for each user"
+msgid "[B]CONFIGURE USER PROFILES[/B][CR][CR]· Configure Login[CR]· Manage Profiles"
 msgstr ""
 
 msgctxt "#31411"
@@ -1662,7 +1661,7 @@ msgid "MANAGER"
 msgstr ""
 
 msgctxt "#31412"
-msgid "[B]MANAGE FILES/FOLDERS[/B][CR][CR]Copy, Move, Delete, Rename Files and/or Folders[CR]Switch to Settings/other views[CR]Create Folders and calculate size of folders"
+msgid "[B]MANAGE FILES/FOLDERS[/B][CR][CR]· Copy, Move, Delete, Rename Files and/or Folders[CR]· Create Folders and calculate size of folders"
 msgstr ""
 
 msgctxt "#31413"
