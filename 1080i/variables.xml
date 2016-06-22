@@ -1616,7 +1616,7 @@
 		<value condition="Substring(Control.GetLabel(4325),default) | Control.HasFocus(7000)">keyboard/keyboard_back.png</value>
 		<value>-</value>
 	</variable> -->
-	<variable name="WeatherWidgetBackVar">
+	<!-- <variable name="WeatherWidgetBackVar">
 		<value condition="Substring(Control.GetLabel(4321),glass)">keyboard/numeric_back_classic.png</value>
 		<value condition="Substring(Control.GetLabel(4321),default)">keyboard/numeric_back.png</value>
 		<value>-</value>
@@ -1625,7 +1625,7 @@
 		<value condition="Substring(Control.GetLabel(4325),glass)">keyboard/numeric_back_classic.png</value>
 		<value condition="Substring(Control.GetLabel(4325),default)">keyboard/numeric_back.png</value>
 		<value>-</value>
-	</variable>
+	</variable> -->
 	<!--
 	<variable name="PanelWidgetBackVar">
 		<value condition="Substring(Control.GetLabel(4321),glass)">featured/featured_classic.png</value>
@@ -5558,7 +5558,7 @@
 		<value>$LOCALIZE[31489]</value>
 	</variable>
 	<!-- Music Extra/MediaInfo-->
-	<variable name="MusicExtraInfo1Var">
+	<!-- <variable name="MusicExtraInfo1Var">
 		<value condition="Container.Content(artists)">$INFO[Window(Home).Property(SkinHelper.Music.AlbumCount)]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Label)]</value>
 	</variable>
@@ -5576,7 +5576,7 @@
 		<value condition="Container.Content(artists)">$INFO[Window(home).Property(Artist.Albums.Newest)]</value>
 		<value condition="Container.Content(albums) + IsEmpty(Window(home).Property(Artist.Albums.Playcount))">0</value>
 		<value condition="Container.Content(albums)">$INFO[Window(home).Property(Artist.Albums.Playcount)]</value>
-	</variable>
+	</variable> -->
 	<!--Label-->
 		<variable name="MusicExtraInfo1LabelVar">
 		<value condition="Container.Content(songs)">Duration :</value>
