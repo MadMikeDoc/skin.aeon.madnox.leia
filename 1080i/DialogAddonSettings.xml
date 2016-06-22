@@ -99,7 +99,6 @@
 			<control type="spincontrolex" id="5">
 				<textoffsetx>40</textoffsetx>
 				<include>Default_SettingButton</include>
-				<spinleft>12</spinleft>
 			</control>
 			<control type="image" id="6">
 				<include>HiddenObject</include>

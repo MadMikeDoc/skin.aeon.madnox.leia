@@ -45,7 +45,6 @@
 				<top>72</top>
 				<width>480</width>
 				<height>30</height>
-				<align>center</align>
 				<texturesliderbar>osd/osd_slider_bg.png</texturesliderbar>
 				<textureslidernib>osd/osd_slider_nib_nf.png</textureslidernib>
 				<textureslidernibfocus>osd/osd_slider_nib.png</textureslidernibfocus>

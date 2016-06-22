@@ -2963,24 +2963,20 @@
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-85" time="1000" tween="quadratic" easing="out"/>
 		</animation>
 	</include>
-	<include name="KodiFlixOpenBoxset">
+	<!-- <include name="KodiFlixOpenBoxset">
 		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(Fakedischandwriting)| Skin.Hassetting(fakediscart)] + !Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixMoviesCenterList)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="50" time="1000" tween="quadratic" easing="out"/>
-			<!--effect type="rotatey" delay="6800" center="-4" start="0" end="-50" time="1000" tween="quadratic" easing="out"/-->
 		</animation>
 		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | !IsEmpty(Container.ListItem.Art(poster))] + Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixMoviesCenterList)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="50" time="1000" tween="quadratic" easing="out"/>
-			<!--effect type="rotatey" delay="6800" center="-4" start="0" end="-50" time="1000" tween="quadratic" easing="out"/-->
 		</animation>
 		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(Fakedischandwriting)| Skin.Hassetting(fakediscart)] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
-			<!--effect type="rotatey" delay="6800" center="-4" start="0" end="-75" time="1000" tween="quadratic" easing="out"/-->
 		</animation>
 		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | !IsEmpty(Container.ListItem.Art(poster))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
-			<!--effect type="rotatey" delay="6800" center="-4" start="0" end="-75" time="1000" tween="quadratic" easing="out"/-->
 		</animation>
-	</include>
+	</include> -->
 
 	<include name="KodiFlixMovieThumb">
 		<left>0</left>

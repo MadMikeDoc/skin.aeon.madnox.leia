@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="LiveTVItemInfo">
+	<!-- <include name="LiveTVItemInfo">
 		<include>DialogBackFade</include>
 		<control type="group" id="9005">
 			<top>100</top>
@@ -43,7 +43,7 @@
 					<width>170</width>
 					<height>170</height>
 					<aspectratio>keep</aspectratio>
-					<!--<texture>$INFO[ListItem.Icon]</texture>-->
+					<texture>$INFO[ListItem.Icon]</texture>
 					<texture fallback="DefaultVideo.png">new_pvr/picons/$INFO[ListItem.ChannelName].png</texture>
 				</control>
 				<control type="label">
@@ -196,7 +196,7 @@
 				</control>
 			</control>
 		</control>
-	</include>
+	</include> -->
 	<include name="PVRCommonBackground">
 		<control type="multiimage">
 			<imagepath background="true">$VAR[LiveTVFanartVar]</imagepath>
@@ -739,7 +739,6 @@
 			<top>900</top>
 			<height>140</height>
 			<width>200</width>
-			<fadetime>IconCrossfadeTime2</fadetime>
 			<control type="image" id="1">
 				<left>-5</left>
 				<top>20</top>

@@ -85,7 +85,7 @@
 					<selected>Skin.HasSetting(NetFiixTVShowLogoAsTtile)</selected>
 					<visible>Stringcompare(Window(home).Property(actualViewtype),KodiFlixViewTV)</visible>
 				</control>
-				
+
 				<control type="radiobutton" id="17044">
 					<description>Show Extra Fanart</description>
 					<include>Objects_MediaMenuButtonAround</include>
@@ -128,7 +128,7 @@
 					<include condition="Skin.HasSetting(KodiFlixMoviesCenterFocus)">ReloadWindowOnClick</include>
 					<!--onclick condition="Skin.HasSetting(KodiFlixMoviesCenterFocus) | [Skin.HasSetting(KodiFlixMoviesShortList) + [Skin.HasSetting(KodiFlixMovieBoxsets) | Skin.HasSetting(KodiFlixDiscArtView)]]">Dialog.Close(all,true)</onclick>
 					<onclick condition="Skin.HasSetting(KodiFlixMoviesCenterFocus) | [Skin.HasSetting(KodiFlixMoviesShortList) + [Skin.HasSetting(KodiFlixMovieBoxsets) | Skin.HasSetting(KodiFlixDiscArtView)]]">ReloadSkin()</onclick-->
-					
+
 					<visible>Window.IsActive(videolibrary) + Stringcompare(Window(home).Property(actualViewtype),KodiFlixView) + [Container.Content(movies) | Container.Content(sets)]</visible>
 				</control>
 				<control type="button" id="80112">
@@ -144,7 +144,7 @@
 					<onclick condition="Skin.HasSetting(KodiFlixTVPosters)">Skin.Reset(KodiFlixTVShortList)</onclick>
 					<onclick condition="Skin.HasSetting(KodiFlixBoxsets)">Skin.SetBool(KodiFlixViewTVLayoutDefault)</onclick>
 					<onclick condition="Skin.HasSetting(KodiFlixBoxsets)">Skin.Reset(KodiFlixBoxsets)</onclick>
-					<onclick condition="Skin.HasSetting(KodiFlixBoxSets">Skin.Reset(KodiFlixTVCenterFocus)</onclick>
+					<onclick condition="Skin.HasSetting(KodiFlixBoxSets)">Skin.Reset(KodiFlixTVCenterFocus)</onclick>
 					<onclick condition="Skin.HasSetting(KodiFlixTVCenterFocus) | Skin.HasSetting(KodiFlixTVShortList)">Dialog.Close(all,true)</onclick>
 					<include condition="Skin.HasSetting(KodiFlixTVCenterFocus) | Skin.HasSetting(KodiFlixTVShortList)">ReloadWindowOnClick</include>
 					<visible>Stringcompare(Window(home).Property(actualViewtype),KodiFlixViewTV) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
@@ -521,7 +521,7 @@
 					<selected>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom)</selected>
 					<visible>[Container.Content(movies) | Container.Content(sets)] + Stringcompare(Window(home).Property(actualViewtype),KodiFlixView) + Skin.HasSetting(KodiFlixMovieBoxsets) + Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 				</control>
-				
+
 				<control type="radiobutton" id="80113">
 					<description>Remove TV Focus Surround</description>
 					<include>Objects_MediaMenuButtonAround</include>

@@ -270,13 +270,10 @@
 		<imagepath background="true">$INFO[Skin.String(CDWall_Folder_Path)]</imagepath>
 		<fadetime>500</fadetime>
 	</include>
-	<include name="MovieWall">
+	<!-- <include name="MovieWall">
 		<control type="group" id="2355">
 			<left>-52</left>
 			<top>-22</top>
-			<!--         <animation effect="zoom" start="110" end="130" center="auto" time="15000" pulse="true" condition="true">Conditional</animation>
-        <animation effect="slide" start="-15,-15" end="15,15" time="7500" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
-        <animation effect="rotatex" start="" end="15" time="0" condition="true">Conditional</animation> -->
 			<visible>SubString(Control.GetLabel(4322),moviewall)</visible>
 			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="[!Window.IsActive(home) + Skin.HasSetting(animation_bg)] | [Window.IsActive(home) + Skin.HasSetting(animatedbghome)]">Conditional</animation>
 			<animation effect="slide" start="-15,-15" end="15,15" time="6000" tween="sine" easing="inout" pulse="true" condition="[!Window.IsActive(home) + Skin.HasSetting(animation_bg)] | [Window.IsActive(home) + Skin.HasSetting(animatedbghome)]">Conditional</animation>
@@ -477,11 +474,11 @@
 				<texture background="true">moviewall-grid.png</texture>
 			</control>
 		</control>
-	</include>
-	<include name="MovieWallThumbs">
+	</include> -->
+	<!-- <include name="MovieWallThumbs">
 		<width>225</width>
 		<height>337</height>
 		<imagepath background="true">$VAR[MovieWallPathVar]</imagepath>
 		<fadetime>500</fadetime>
-	</include>
+	</include> -->
 </includes>

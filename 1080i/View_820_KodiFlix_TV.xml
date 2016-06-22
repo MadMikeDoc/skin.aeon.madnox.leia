@@ -3,8 +3,6 @@
 	<include name="KodiFlixViewTV">
 		<control type="group">
 			<visible>Control.IsVisible(820)</visible>
-			<effect type="fade" start="100" end="0" time="300" delay="0" tween="sine" easing="inout" />
-			<effect type="zoom" start="100" end="90" time="300" delay="0" center="640,360" tween="sine" easing="inout" />
 			<include>CommonSlideAnimations</include>
 			<include condition="Skin.HasSetting(KodiFlixViewLayoutDefault) + Skin.HasSetting(KodiFlixTVCenterFocus)">ReloadWindowOnClick</include>
 			<control type="group">
@@ -23,9 +21,7 @@
 			<control type = "group">
 				<description>KodiFlix Fanart</description>
 				<include>FanartFade</include>
-				<fadetime>250</fadetime>
 				<include>BackgroundAnimation</include>
-				<aspectratio>scale</aspectratio>
 				<visible>!Player.HasVideo + Control.IsVisible(820) + [!Skin.HasSetting(NetFiixTVExtraFanart) | IsEmpty(Control.GetLabel(5910))]</visible>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixTVSmallFanart)">KodiFlixTVSmallFanartFullScreenDimensions</include>
@@ -115,9 +111,6 @@
 			<!--Extrafanart Options-->
 			<control type="group">
 				<description>KodiFlix Fanart extrafanart</description>
-				<randomize>true</randomize>
-				<fadetime>500</fadetime>
-				<timeperimage>3000</timeperimage>
 				<include>Animation_VisibleChange200</include>
 				<visible>!Player.HasVideo + Control.IsVisible(820) + Skin.HasSetting(NetFiixTVExtraFanart)</visible>
 				<control type="multiimage" id="5910">
@@ -355,7 +348,6 @@
 				<width>650</width>
 				<height>270</height>
 				<include>VisibleFadeEffect</include>
-				<textcolor>$VAR[TitleColorVar]</textcolor>
 				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo)</visible>
 				<control type="grouplist">
 					<animation type="Conditional" reversible="false" condition="!Skin.HasSetting(NetFlixTVHideFilmInfo) + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixLowerInfo)">
@@ -1180,7 +1172,7 @@
 				<ondown condition="Skin.HasSetting(AlphabetScrollbar)">6019</ondown>
 				<ondown condition="!Skin.HasSetting(AlphabetScrollbar)">60</ondown>
 				<viewtype label="KodiFlix">List</viewtype>
-				<scrolltime tween="Quadratic" easing="out">300</scrolltime>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<orientation>horizontal</orientation>
 				<include condition="Skin.HasSetting(KodiFlixTVCenterFocus) + !Skin.Hassetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVShortList) + !Skin.HasSetting(KodiFlixBoxsets)">KodiFlixTVCenterFocusPosNormal</include>
 				<include condition="Skin.HasSetting(KodiFlixTVCenterFocus) + !Skin.Hassetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVShortList) + Skin.HasSetting(KodiFlixBoxsets)">KodiFlixTVCenterFocusPosBoxsets</include>
@@ -2265,24 +2257,6 @@
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-85" time="1000" tween="quadratic" easing="out"/>
 		</animation>
 	</include>
-	<include name="KodiFlixOpenBoxset">
-		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(Fakedischandwriting)| Skin.Hassetting(fakediscart)] + !Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixTVCenterList)">
-			<effect type="rotatey" delay="1000" center="-4" start="0" end="50" time="1000" tween="quadratic" easing="out"/>
-			<!--effect type="rotatey" delay="6800" center="-4" start="0" end="-50" time="1000" tween="quadratic" easing="out"/-->
-		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | !IsEmpty(Container.ListItem.Art(poster))] + Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixTVCenterList)">
-			<effect type="rotatey" delay="1000" center="-4" start="0" end="50" time="1000" tween="quadratic" easing="out"/>
-			<!--effect type="rotatey" delay="6800" center="-4" start="0" end="-50" time="1000" tween="quadratic" easing="out"/-->
-		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(Fakedischandwriting)| Skin.Hassetting(fakediscart)] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixTVCenterList)">
-			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
-			<!--effect type="rotatey" delay="6800" center="-4" start="0" end="-75" time="1000" tween="quadratic" easing="out"/-->
-		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | !IsEmpty(Container.ListItem.Art(poster))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixTVCenterList)">
-			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
-			<!--effect type="rotatey" delay="6800" center="-4" start="0" end="-75" time="1000" tween="quadratic" easing="out"/-->
-		</animation>
-	</include>
 	<include name="KodiFlixMovieThumb">
 		<left>0</left>
 		<top>22</top>
@@ -2617,7 +2591,6 @@
 				<posx>284</posx>
 				<width>254</width>
 				<height>254</height>
-				<aspectratio>stretch</aspectratio>
 				<textcolor>FFFFFAF0</textcolor>
 				<label>[COLOR $VAR[FocusTextureColorVar]]Artwork[/COLOR]</label>
 				<font>Font_18A</font>
@@ -2630,7 +2603,6 @@
 				<posx>284</posx>
 				<width>254</width>
 				<height>254</height>
-				<aspectratio>stretch</aspectratio>
 				<textcolor>FFFFFAF0</textcolor>
 				<label>[COLOR $VAR[FocusTextureColorVar]]Plot[/COLOR]</label>
 				<font>Font_18A</font>
@@ -2642,7 +2614,6 @@
 				<posx>284</posx>
 				<width>254</width>
 				<height>254</height>
-				<aspectratio>stretch</aspectratio>
 				<textcolor>FFFFFAF0</textcolor>
 				<label>[COLOR $VAR[FocusTextureColorVar]]DiscArt[/COLOR]</label>
 				<font>Font_18A</font>

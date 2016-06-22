@@ -158,7 +158,6 @@
 						<textoffsetx>30</textoffsetx>
 						<label>19200</label>
 						<include>Default_SettingButtonShort</include>
-						<spinleft>25</spinleft>
 					</control>
 					<control type="button" id="31">
 						<label>19203</label>
