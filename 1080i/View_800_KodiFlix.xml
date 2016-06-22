@@ -25,7 +25,6 @@
 				<description>KodiFlix Fanart</description>
 				<include>FanartFade</include>
 				<include>BackgroundAnimation</include>
-				<aspectratio>scale</aspectratio>
 				<visible>!Player.HasVideo + Control.IsVisible(800) + [!Skin.HasSetting(NetFiixExtraFanart) | IsEmpty(Control.GetLabel(5900))]</visible>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
@@ -119,7 +118,6 @@
 				<visible>!Player.HasVideo + Control.IsVisible(800) + Skin.HasSetting(NetFiixExtraFanart)</visible>
 				<control type="multiimage" id="5900">
 					<aspectratio>scale</aspectratio>
-					<align>center</align>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<imagepath background="true" diffuse="views/kodiflix/fanart_diffuse2.png">$VAR[VideoExtraFanartVar]</imagepath>
@@ -127,7 +125,6 @@
 				</control>
 				<control type="multiimage" id="5900">
 					<aspectratio>scale</aspectratio>
-					<align>center</align>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<imagepath background="true" diffuse="views/kodiflix/fanart_diffuse2.png">$VAR[VideoExtraFanartVar]</imagepath>
@@ -135,7 +132,6 @@
 				</control>
 				<control type="multiimage" id="5900">
 					<aspectratio>scale</aspectratio>
-					<align>center</align>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<imagepath background="true" diffuse="views/kodiflix/fanart_diffuse4.png">$VAR[VideoExtraFanartVar]</imagepath>
@@ -143,7 +139,6 @@
 				</control>
 				<control type="multiimage" id="5900">
 					<aspectratio>scale</aspectratio>
-					<align>center</align>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<imagepath background="true" diffuse="views/kodiflix/fanart_diffuse.png">$VAR[VideoExtraFanartVar]</imagepath>
@@ -151,7 +146,6 @@
 				</control>
 				<control type="multiimage" id="5900">
 					<aspectratio>scale</aspectratio>
-					<align>center</align>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<imagepath background="true" diffuse="views/kodiflix/fanart_diffuse4.png">$VAR[VideoExtraFanartVar]</imagepath>
@@ -159,7 +153,6 @@
 				</control>
 				<control type="multiimage" id="5900">
 					<aspectratio>scale</aspectratio>
-					<align>center</align>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<imagepath background="true" diffuse="views/kodiflix/fanart_diffuse5.png">$VAR[VideoExtraFanartVar]</imagepath>
@@ -167,7 +160,6 @@
 				</control>
 				<control type="multiimage" id="5900">
 					<aspectratio>scale</aspectratio>
-					<align>center</align>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<imagepath background="true" diffuse="views/kodiflix/fanart_diffuse3.png">$VAR[VideoExtraFanartVar]</imagepath>
@@ -175,7 +167,6 @@
 				</control>
 				<control type="multiimage" id="5900">
 					<aspectratio>scale</aspectratio>
-					<align>center</align>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<imagepath background="true" diffuse="views/kodiflix/fanart_diffuse4.png">$VAR[VideoExtraFanartVar]</imagepath>
@@ -183,7 +174,6 @@
 				</control>
 				<control type="multiimage" id="5900">
 					<aspectratio>scale</aspectratio>
-					<align>center</align>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<imagepath background="true" diffuse="views/kodiflix/fanart_diffuse5.png">$VAR[VideoExtraFanartVar]</imagepath>
@@ -191,7 +181,6 @@
 				</control>
 				<control type="multiimage" id="5900">
 					<aspectratio>scale</aspectratio>
-					<align>center</align>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<imagepath background="true" diffuse="views/kodiflix/fanart_diffuse4.png">$VAR[VideoExtraFanartVar]</imagepath>
