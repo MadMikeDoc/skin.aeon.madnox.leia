@@ -135,10 +135,10 @@
 		<animation type="Conditional" condition="Control.HasFocus(109) | [Control.IsVisible(503) + Skin.HasSetting(landscapeonelogo) + [Container.Content(movies) | Container.Content(tvshows)]]">
 			<effect type="slide" end="0,-52" time="240" tween="cubic" easing="in" />
 		</animation>
-		<animation type="WindowClose" condition="Window.Next(home) | Window.Next(1115) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(videolibrary)">
+		<animation type="WindowClose" condition="Window.Next(home) | Window.Next(1115) | Window.Next(fullscreenvideo) | Window.Next(visualisation) | Window.Next(slideshow) | Window.Next(videos)">
 			<effect type="slide" end="0,-52" time="240" tween="cubic" easing="in" />
 		</animation>
-		<animation type="WindowOpen" condition="[Window.Previous(home) | Window.Previous(fullscreenvideo) | Window.Previous(visualisation) | Window.Previous(slideshow) | [Window.Previous(settings) + Window.Next(videolibrary)]]">
+		<animation type="WindowOpen" condition="[Window.Previous(home) | Window.Previous(fullscreenvideo) | Window.Previous(visualisation) | Window.Previous(slideshow) | [Window.Previous(settings) + Window.Next(videos)]]">
 			<effect type="slide" start="0,-52" end="0,0" time="240" tween="cubic" easing="in" />
 		</animation>
 		<animation type="Hidden">

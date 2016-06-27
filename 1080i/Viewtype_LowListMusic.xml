@@ -589,7 +589,7 @@
 				<control type="group">
 					<left>12</left>
 					<top>600</top>
-					<visible>Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary)</visible>
+					<visible>Window.IsActive(musicplaylist) | Window.IsActive(music)</visible>
 					<control type="image">
 						<width>428</width>
 						<height>428</height>

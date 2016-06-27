@@ -504,7 +504,7 @@
 			<animation effect="slide" start="1192,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
 			<animation effect="slide" end="1192,0" time="320" tween="quadratic">WindowClose</animation>
 			<animation effect="slide" start="1192,0" end="0,0" time="320" tween="quadratic">VisibleChange</animation>
-			<visible>!VideoPlayer.Content(LiveTV) + !IsEmpty(Window(home).Property(morefullscreeninfo)) + !Window.IsActive(infodialog) + !Control.IsVisible(9001) + !Control.IsVisible(9002)</visible>
+			<visible>!VideoPlayer.Content(LiveTV) + !IsEmpty(Window(home).Property(morefullscreeninfo)) + !Window.IsActive(notification) + !Control.IsVisible(9001) + !Control.IsVisible(9002)</visible>
 			<control type="image">
 				<left>729</left>
 				<width>1192</width>
@@ -1009,7 +1009,7 @@
 			<animation effect="slide" start="0,1080" end="0,100" time="320" tween="quadratic">WindowOpen</animation>
 			<animation effect="slide" start="0,100" end="0,-1080" time="400" tween="quadratic">WindowClose</animation>
 			<animation effect="slide" start="0,1080" end="0,100" time="320" tween="quadratic">VisibleChange</animation>
-			<visible>!VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg + !Window.IsActive(infodialog) + !Control.IsVisible(9001) + !Control.IsVisible(9002)</visible>
+			<visible>!VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg + !Window.IsActive(notification) + !Control.IsVisible(9001) + !Control.IsVisible(9002)</visible>
 			<control type="image">
 				<left>260</left>
 				<width>1400</width>
@@ -1279,7 +1279,7 @@
 		<control type="group" id="9006">
 			<animation effect="slide" start="0,1080" end="0,60" time="400" easing="out" tween="back">WindowOpen</animation>
 			<animation effect="slide" start="0,60" end="0,1080" time="400" easing="in" tween="back">WindowClose</animation>
-			<visible>VideoPlayer.Content(LiveTV) + !Window.IsActive(infodialog) + !Control.IsVisible(9001) + !Control.IsVisible(9002)</visible>
+			<visible>VideoPlayer.Content(LiveTV) + !Window.IsActive(notification) + !Control.IsVisible(9001) + !Control.IsVisible(9002)</visible>
 			<control type="image">
 				<left>260</left>
 				<width>1400</width>

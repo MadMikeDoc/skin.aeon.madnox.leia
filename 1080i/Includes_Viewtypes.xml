@@ -37,7 +37,7 @@
 					<texture>views/list_spot.png</texture>
 					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					<animation effect="slide" time="160" end="190" tween="cubic" condition="Control.IsVisible(52) | Control.IsVisible(53)">Conditional</animation>
-					<animation effect="slide" time="160" end="60" tween="cubic" condition="Control.IsVisible(50) + Window.IsActive(musiclibrary)">Conditional</animation>
+					<animation effect="slide" time="160" end="60" tween="cubic" condition="Control.IsVisible(50) + Window.IsActive(music)">Conditional</animation>
 					<visible>[Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(53)]</visible>
 					<visible>!Container.Content(years) + !Container.Content(playlists)</visible>
 				</control>
@@ -738,7 +738,7 @@
 	<include name="ReloadWindowOnClick">
 		<onclick condition="Window.IsActive(addonbrowser)">SetProperty(activewindow,addons,home)</onclick>
 		<onclick condition="Window.IsActive(musicfiles)">SetProperty(activewindow,musicfiles,home)</onclick>
-		<onclick condition="Window.IsActive(musiclibrary)">SetProperty(activewindow,musiclibrary,home)</onclick>
+		<onclick condition="Window.IsActive(music)">SetProperty(activewindow,musiclibrary,home)</onclick>
 		<onclick condition="Window.IsActive(musicplaylist)">SetProperty(activewindow,musicplaylist,home)</onclick>
 		<onclick condition="Window.IsActive(videoplaylist)">SetProperty(activewindow,videoplaylist,home)</onclick>
 		<onclick condition="Window.IsActive(videos)">SetProperty(activewindow,videos,home)</onclick>
@@ -1069,8 +1069,8 @@
                     <animation effect="zoom" end="112" time="0" delay="0" reversible="false" condition="true">Conditional</animation>
                     <visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
                 </control>
-                <!--  END Posters for sets: ShadowTek -->	
-				
+                <!--  END Posters for sets: ShadowTek -->
+
 				<control type="image">   <!--  Posters Poster glass right -->
 					<left>1591</left>
 					<top>78</top>

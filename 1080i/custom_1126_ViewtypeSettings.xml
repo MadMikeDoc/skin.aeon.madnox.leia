@@ -41,7 +41,7 @@
 					<onclick condition="Container.Content(tvshows)">SetProperty(BackgroundArea,TVShowsBackground,home)</onclick>
 					<onclick condition="Container.Content(seasons)">SetProperty(BackgroundArea,SeasonBackground,home)</onclick>
 					<onclick condition="Container.Content(episodes)">SetProperty(BackgroundArea,EpisodeBackground,home)</onclick>
-					<onclick condition="Window.IsActive(musiclibrary)">SetProperty(BackgroundArea,MusicBackground,home)</onclick>
+					<onclick condition="Window.IsActive(music)">SetProperty(BackgroundArea,MusicBackground,home)</onclick>
 					<onclick condition="Window.IsActive(programs)">SetProperty(BackgroundArea,ProgramsBackground,home)</onclick>
 					<onclick>ActivateWindow(1127)</onclick>
 					<visible>!Stringcompare(Window(home).Property(actualViewtype),BigFan)</visible>
@@ -123,7 +123,7 @@
 					<include>ReloadWindowOnClick</include>
 					<onclick>SetFocus(9000)</onclick>
 					<selected>Skin.HasSetting(nohighlist)</selected>
-					<visible>Window.IsActive(videolibrary) + Stringcompare(Window(home).Property(actualViewtype),LowList)</visible>
+					<visible>Window.IsActive(videos) + Stringcompare(Window(home).Property(actualViewtype),LowList)</visible>
 				</control>
 				<control type="radiobutton" id="16300">
 					<label>31810</label>
@@ -201,7 +201,7 @@
 					<onclick condition="Skin.HasSetting(bigfanlogo)">Skin.SetBool(bigfanlandscape)</onclick>
 					<onclick condition="Skin.HasSetting(bigfanlogo)">Skin.Reset(bigfanlogo)</onclick>
 					<onclick condition="!Skin.HasSetting(bigfanclearart) + !Skin.HasSetting(bigfanlogo) + Skin.HasSetting(bigfanlandscape)">Skin.Reset(bigfanlandscape)</onclick>
-					<visible>Window.IsActive(videolibrary) + Stringcompare(Window(home).Property(actualViewtype),BigFan) + !Container.Content(genres)   + !Container.Content(seasons)</visible>
+					<visible>Window.IsActive(videos) + Stringcompare(Window(home).Property(actualViewtype),BigFan) + !Container.Content(genres)   + !Container.Content(seasons)</visible>
 				</control>
 				<!--Landscape Options-->
 				<control type="button" id="1639">
@@ -488,7 +488,7 @@
 					<onclick condition="Skin.HasSetting(WallLargeMovieInfoDelay_20)">Skin.Reset(WallLargeMovieInfoDelay_20)</onclick>
 					<onclick condition="Skin.HasSetting(WallLargeMovieInfoDelay_30)">Skin.SetBool(WallLargeMovieInfoDelay_5)</onclick>
 					<onclick condition="Skin.HasSetting(WallLargeMovieInfoDelay_30)">Skin.Reset(WallLargeMovieInfoDelay_30)</onclick>
-					<visible>Window.IsActive(videolibrary) + Stringcompare(Window(home).Property(actualViewtype),Wall_Large) + Container.Content(movies) + Skin.HasSetting(WallLargeMovieInfo)</visible>
+					<visible>Window.IsActive(videos) + Stringcompare(Window(home).Property(actualViewtype),Wall_Large) + Container.Content(movies) + Skin.HasSetting(WallLargeMovieInfo)</visible>
 				</control>
 
 				<!--MAD - Below for reference while I get above button working-->
@@ -502,7 +502,7 @@
 					<onclick condition="Skin.HasSetting(bigfanlogo)">Skin.SetBool(bigfanlandscape)</onclick>
 					<onclick condition="Skin.HasSetting(bigfanlogo)">Skin.Reset(bigfanlogo)</onclick>
 					<onclick condition="!Skin.HasSetting(bigfanclearart) + !Skin.HasSetting(bigfanlogo) + Skin.HasSetting(bigfanlandscape)">Skin.Reset(bigfanlandscape)</onclick>
-					<visible>Window.IsActive(videolibrary) + Stringcompare(Window(home).Property(actualViewtype),BigFan) + !Container.Content(genres)   + !Container.Content(seasons)</visible>
+					<visible>Window.IsActive(videos) + Stringcompare(Window(home).Property(actualViewtype),BigFan) + !Container.Content(genres)   + !Container.Content(seasons)</visible>
 				</control-->
 
 
@@ -1007,14 +1007,14 @@
 					<onclick>Skin.ToggleSetting(lowlist)</onclick>
 					<selected>Skin.HasSetting(lowlist)</selected>
 					<include>ReloadWindowOnClick</include>
-					<visible>[Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)] + Stringcompare(Window(home).Property(actualViewtype),LowListMusic)</visible>
+					<visible>[Window.IsActive(music) | Window.IsActive(musicplaylist)] + Stringcompare(Window(home).Property(actualViewtype),LowListMusic)</visible>
 				</control>
 				<control type="radiobutton" id="1671">
 					<label>$LOCALIZE[535]: $LOCALIZE[539]</label>
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(lowlistmusicwidelist)</onclick>
 					<selected>Skin.HasSetting(lowlistmusicwidelist)</selected>
-					<visible>[Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)] + Stringcompare(Window(home).Property(actualViewtype),LowListMusic)</visible>
+					<visible>[Window.IsActive(music) | Window.IsActive(musicplaylist)] + Stringcompare(Window(home).Property(actualViewtype),LowListMusic)</visible>
 				</control>
 				<control type="radiobutton" id="1676">
 					<label>$LOCALIZE[31377]</label>
@@ -1022,14 +1022,14 @@
 					<onclick>Skin.ToggleSetting(cdartlowlist)</onclick>
 					<selected>!Skin.HasSetting(cdartlowlist)</selected>
 					<visible>Container.Content(songs)</visible>
-					<visible>[Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)] + Stringcompare(Window(home).Property(actualViewtype),LowListMusic)</visible>
+					<visible>[Window.IsActive(music) | Window.IsActive(musicplaylist)] + Stringcompare(Window(home).Property(actualViewtype),LowListMusic)</visible>
 				</control>
 				<control type="radiobutton" id="1682">
 					<label>$LOCALIZE[31377]</label>
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(cdartfliplist)</onclick>
 					<selected>!Skin.HasSetting(cdartfliplist)</selected>
-					<visible>[[Window.IsActive(musiclibrary) + Container.Content(songs)] | Window.IsActive(musicplaylist)] + [Stringcompare(Window(home).Property(actualViewtype),List) | Stringcompare(Window(home).Property(actualViewtype),TriPanelSquare)]</visible>
+					<visible>[[Window.IsActive(music) + Container.Content(songs)] | Window.IsActive(musicplaylist)] + [Stringcompare(Window(home).Property(actualViewtype),List) | Stringcompare(Window(home).Property(actualViewtype),TriPanelSquare)]</visible>
 				</control>
 				<control type="radiobutton" id="1658">
 					<label>$LOCALIZE[31168]</label>
@@ -1404,7 +1404,7 @@
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(posterwrap)</onclick>
 					<selected>!Skin.HasSetting(posterwrap)</selected>
-					<visible>Window.IsActive(videolibrary) + [Stringcompare(Window(home).Property(actualViewtype),posters) | [Stringcompare(Window(home).Property(actualViewtype),tripanel) + Stringcompare(Skin.String(TriPanelPosition),4)]]</visible>
+					<visible>Window.IsActive(videos) + [Stringcompare(Window(home).Property(actualViewtype),posters) | [Stringcompare(Window(home).Property(actualViewtype),tripanel) + Stringcompare(Skin.String(TriPanelPosition),4)]]</visible>
 				</control>
 				<control type="radiobutton" id="16443">
 					<label>31711</label>
@@ -1551,7 +1551,7 @@
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[PreferPlotSettingsVar][/COLOR]</label2>
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(preferplot)</onclick>
-					<visible>Window.IsActive(videolibrary) + ![Stringcompare(Window(home).Property(actualViewtype),ViewSets) | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),Wall_Large)]</visible>
+					<visible>Window.IsActive(videos) + ![Stringcompare(Window(home).Property(actualViewtype),ViewSets) | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),Wall_Large)]</visible>
 				</control>
 				<control type="radiobutton" id="267">
 					<label>31952</label>

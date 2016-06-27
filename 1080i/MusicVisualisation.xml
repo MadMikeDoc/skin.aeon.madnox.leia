@@ -156,9 +156,6 @@
 						<height>40</height>
 						<aligny>top</aligny>
 						<width>40</width>
-						<font>Font_Reg33_Caps</font>
-						<textcolor>white</textcolor>
-						<scroll>false</scroll>
 						<texture>weather/small/colored/$INFO[Weather.FanartCode].png</texture>
 						<visible>Skin.HasSetting(WeatherConditionVis)</visible>
 					</control>
@@ -785,8 +782,6 @@
 					<width>920</width>
 					<!--animation effect="fade" start="100" end="0" time="300" condition="Window.IsVisible(musicosd)">Conditional</animation-->
 					<height>150</height>
-					<itemgap>10</itemgap>
-					<orientation>horizontal</orientation>
 					<control type="label">
 						<width min="10" max="1250">auto</width>
 						<height>70</height>
@@ -1718,8 +1713,6 @@
 					<top>153</top>
 					<width>520</width>
 					<height>150</height>
-					<itemgap>10</itemgap>
-					<orientation>horizontal</orientation>
 					<control type="label">
 					<width min="10" max="550">auto</width>
 					<height>70</height>
@@ -2195,8 +2188,8 @@
 						<posy>60</posy>
 						<width>480</width>
 						<height>370</height>
-						<texture diifuse="blank.png">recordplayer/recordplayer.png</texture>
-						<aspectratio align="bottom">stretch</aspectratio>
+						<texture diffuse="blank.png">recordplayer/recordplayer.png</texture>
+						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="group">
 						<control type="image">
@@ -2207,7 +2200,7 @@
 							<width>316</width>
 							<height>316</height>
 							<texture>recordplayer/vinyl.png</texture>
-							<aspectratio align="bottom">keep</aspectratio>
+							<aspectratio aligny="bottom">keep</aspectratio>
 						</control>
 						<control type="image">
 							<description>CDart as vinyl label</description>
@@ -2217,7 +2210,7 @@
 							<width>110</width>
 							<height>110</height>
 							<texture>$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
-							<aspectratio align="bottom">keep</aspectratio>
+							<aspectratio aligny="bottom">keep</aspectratio>
 						</control>
 					</control>
 					<control type="image">
@@ -2229,7 +2222,7 @@
                         <width>90</width>
                         <height>540</height>
                         <texture>recordplayer/tonearm.png</texture>
-                        <aspectratio align="bottom">keep</aspectratio>
+                        <aspectratio aligny="bottom">keep</aspectratio>
                     </control>
 				</control>
 			</control>
@@ -3624,7 +3617,7 @@
 			</control>
 		</control>
 		<control type="group" id="0">
-			<visible>Player.ShowCodec + ![Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
+			<visible>Player.ShowCodec + ![Window.IsVisible(script-cu-lrclyrics-main.xml) | Window.IsVisible(AddonSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
 			<animation effect="slide" start="0,-255" end="0,0" time="500" tween="cubic">VisibleChange</animation>
 			<control type="image">
 				<posy>-455</posy>
@@ -3638,8 +3631,6 @@
 				<top>25</top>
 				<width>1920</width>
 				<height>300</height>
-				<align>center</align>
-				<aligny>center</aligny>
 				<control type="label">
 					<description>row 1 label</description>
 					<width>1770</width>

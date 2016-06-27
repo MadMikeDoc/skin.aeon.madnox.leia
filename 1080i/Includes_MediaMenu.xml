@@ -55,7 +55,7 @@
 		</control>
 		<control type="button" id="22">
 			<label>192</label>
-			<onclick>ReplaceWindow(video)</onclick>
+			<onclick>ReplaceWindow(videos)</onclick>
 			<include>Objects_MediaMenuButtonIcons</include>
 			<visible>Window.IsActive(videoplaylist)</visible>
 		</control>
@@ -172,9 +172,9 @@
 		<control type="radiobutton" id="102">
 			<label>$LOCALIZE[29800]</label>
 			<include>Objects_MediaMenuButtonIcons</include>
-			<onclick>ReplaceWindow(MusicLibrary)</onclick>
-			<selected>Window.IsVisible(MusicLibrary)</selected>
-			<visible>Window.IsActive(MusicFiles)</visible>
+			<onclick>ReplaceWindow(music)</onclick>
+			<selected>Window.IsVisible(music)</selected>
+			<visible>Window.IsActive(music)</visible>
 		</control>
 		<control type="button" id="17">
 			<label>527</label>
@@ -262,7 +262,7 @@
 				<texture colordiffuse="$VAR[ExtendedColorVar]">tooltip.png</texture>
 			</control>
 			<control type="group">
-				<animation effect="slide" end="0,-15" time="320" tween="cubic" condition="[[!IsEmpty(ListItem.Trailer) + Window.IsActive(videolibrary)] | [!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(musiclibrary)]] + !Container.Scrolling">Conditional</animation>
+				<animation effect="slide" end="0,-15" time="320" tween="cubic" condition="[[!IsEmpty(ListItem.Trailer) + Window.IsActive(videos)] | [!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(music)]] + !Container.Scrolling">Conditional</animation>
 				<control type="image">
 					<left>415</left>
 					<top>532</top>
@@ -295,8 +295,8 @@
 				<include>Animation_VisibleChange400</include>
 				<animation effect="fade" start="100" end="60" time="1200" pulse="true" condition="true">conditional</animation>
 				<animation effect="fade" start="100" end="0" time="400" delay="400" condition="!Control.IsVisible(4051)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="160" condition="[IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(musiclibrary)] | [IsEmpty(ListItem.Trailer) + Window.IsActive(videolibrary)] | Container.Scrolling">Conditional</animation>
-				<visible>!ControlGroup(9000).HasFocus + [Window.IsActive(musiclibrary) | Window.IsActive(videos)]</visible>
+				<animation effect="fade" start="100" end="0" time="160" condition="[IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(music)] | [IsEmpty(ListItem.Trailer) + Window.IsActive(videos)] | Container.Scrolling">Conditional</animation>
+				<visible>!ControlGroup(9000).HasFocus + [Window.IsActive(music) | Window.IsActive(videos)]</visible>
 			</control>
 		</control>
 	</include>
@@ -378,10 +378,10 @@
 					<visible>Control.IsEnabled(4)</visible>
 				</control>
 				<include condition="!Window.IsActive(videoplaylist) + !Window.IsActive(musicplaylist)">FilterButtons</include>
-				<include condition="Window.IsActive(videolibrary)">VideoLibraryAltButtons_Left</include>
+				<include condition="Window.IsActive(videos)">VideoLibraryAltButtons_Left</include>
 				<include condition="Window.IsActive(AddonBrowser)">AddonBrowserButtons</include>
-				<include condition="Window.IsActive(MusicLibrary)">MusicLibraryButtons_Left</include>
-				<include condition="Window.IsActive(MusicFiles)">MusicFilesButtons</include>
+				<include condition="Window.IsActive(music)">MusicLibraryButtons_Left</include>
+				<include condition="Window.IsActive(music)">MusicFilesButtons</include>
 				<include condition="Window.IsActive(musicplaylist)">MusicPlaylistButtons</include>
 				<include condition="Window.IsActive(videoplaylist)">VideoPlaylistButtons</include>
 				<include condition="Window.IsActive(pictures)">PicturesButtons</include>
@@ -431,19 +431,19 @@
 					<texture>special://skin/extras/BigIcons/Format.png</texture>
 					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(7)">Conditional</animation>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(7) + Window.IsActive(musicfiles)</visible>
+					<visible>Control.IsVisible(7) + Window.IsActive(music)</visible>
 				</control>
 				<control type="image">
 					<texture>special://skin/extras/BigIcons/Search.png</texture>
 					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(9)">Conditional</animation>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(9) + Window.IsActive(musicfiles)</visible>
+					<visible>Control.IsVisible(9) + Window.IsActive(music)</visible>
 				</control>
 				<control type="image">
 					<texture>special://skin/extras/BigIcons/Microphone.png</texture>
 					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(10)">Conditional</animation>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(10) + Window.IsActive(musicfiles)</visible>
+					<visible>Control.IsVisible(10) + Window.IsActive(music)</visible>
 				</control>
 				<control type="image">
 					<texture>special://skin/extras/BigIcons/Search.png</texture>
@@ -461,7 +461,7 @@
 					<texture>special://skin/extras/BigIcons/Folder.png</texture>
 					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(17)">Conditional</animation>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(17) + Window.IsActive(videolibrary) + Container.Content()</visible>
+					<visible>Control.IsVisible(17) + Window.IsActive(videos) + Container.Content()</visible>
 				</control>
 				<control type="image">
 					<texture>special://skin/extras/BigIcons/Image.png</texture>
@@ -540,7 +540,7 @@
 					<texture>special://skin/extras/BigIcons/flpp.png</texture>
 					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(17)">Conditional</animation>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(17) + Window.IsActive(musicfiles)</visible>
+					<visible>Control.IsVisible(17) + Window.IsActive(music)</visible>
 				</control>
 				<control type="image">
 					<texture>special://skin/extras/BigIcons/ButtonReload.png</texture>
@@ -572,13 +572,13 @@
 					<texture>special://skin/extras/BigIcons/QUICKPAR.png</texture>
 					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(7)">Conditional</animation>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(7) + Window.IsActive(videolibrary)</visible>
+					<visible>Control.IsVisible(7) + Window.IsActive(videos)</visible>
 				</control>
 				<control type="image">
 					<texture>special://skin/extras/BigIcons/Key.png</texture>
 					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(11)">Conditional</animation>
 					<include>MediaMenuIcons</include>
-					<visible>Control.IsVisible(11) + Window.IsActive(videolibrary)</visible>
+					<visible>Control.IsVisible(11) + Window.IsActive(videos)</visible>
 				</control>
 				<control type="image">
 					<texture>special://skin/extras/BigIcons/Application.png</texture>

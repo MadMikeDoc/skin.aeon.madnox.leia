@@ -22,7 +22,7 @@
 			<animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
 		</control>
 		<control type="group">
-			<visible>Window.IsActive(skinsettings) | Window.IsActive(1115) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(LibrarySettings) | Window.IsActive(networksettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings) | Window.IsActive(home)</visible>
+			<visible>Window.IsActive(skinsettings) | Window.IsActive(1115) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(LibrarySettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings) | Window.IsActive(home)</visible>
 			<animation type="WindowClose">
 				<effect type="slide" end="-490" time="320" easing="in" tween="cubic" />
 			</animation>
@@ -144,7 +144,7 @@
 				<item>
 					<label>$LOCALIZE[31477]</label>
 					<onclick>Container.SetViewMode(53)</onclick>
-					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(songs) | Window.IsActive(musicfiles)</visible>
+					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(songs) | Window.IsActive(music)</visible>
 					<visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
 				</item>
 				<item>
@@ -170,7 +170,7 @@
 				<item>
 					<label>$LOCALIZE[31153]</label>
 					<onclick>Container.SetViewMode(506)</onclick>
-					<visible>Window.IsVisible(musiclibrary) | Window.IsVisible(musicfiles) | Window.IsVisible(musicplaylist)</visible>
+					<visible>Window.IsVisible(music) | Window.IsVisible(musicplaylist)</visible>
 					<visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
 				</item>
 				<item>
@@ -285,7 +285,7 @@
 				<item>
 					<label>$LOCALIZE[20359]</label>
 					<onclick>Container.SetViewMode(514)</onclick>
-					<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(musiclibrary)</visible>
+					<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(music)</visible>
 					<visible>![Window.IsActive(videos) + !IsEmpty(Skin.String(DisableEpisodeVL))]</visible>
 					<visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
 				</item>
@@ -307,7 +307,7 @@
 				<item>
 					<label>$LOCALIZE[31235]</label>
 					<onclick>Container.SetViewMode(57)</onclick>
-					<visible>[[Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist) | Window.isActive(programs) | Window.isActive(addonbrowser) | [Window.IsActive(videos) + [!Container.Content(episodes) | SubString(Container.FolderPath,videodb://recentlyaddedepisodes/)]]] + !IsEmpty(Container.FolderPath) + !Container.Content(years)] | Window.IsActive(videoplaylist)</visible>
+					<visible>[[Window.IsActive(music) | Window.IsActive(musicplaylist) | Window.isActive(programs) | Window.isActive(addonbrowser) | [Window.IsActive(videos) + [!Container.Content(episodes) | SubString(Container.FolderPath,videodb://recentlyaddedepisodes/)]]] + !IsEmpty(Container.FolderPath) + !Container.Content(years)] | Window.IsActive(videoplaylist)</visible>
 					<visible>![Window.IsActive(videos) + !IsEmpty(Skin.String(DisableShiftVL))]</visible>
 					<visible>!Container.Content(countries)</visible>
 					<visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
@@ -322,7 +322,7 @@
 				<item>
 					<label>$LOCALIZE[31029]</label>
 					<onclick>Container.SetViewMode(509)</onclick>
-					<visible>[Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(programs) | [Window.IsActive(pictures) + !Substring(Container.FolderPath,\comics\)] | Container.Content(addons) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + !Container.Content(years)</visible>
+					<visible>[Window.IsActive(music) | Window.IsActive(programs) | [Window.IsActive(pictures) + !Substring(Container.FolderPath,\comics\)] | Container.Content(addons) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)] + !Container.Content(years)</visible>
 					<visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
 				</item>
 				<item>

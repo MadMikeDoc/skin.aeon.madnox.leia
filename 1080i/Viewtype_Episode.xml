@@ -47,7 +47,7 @@
 				<onright condition="Skin.HasSetting(AlphabetScrollbar)">6003</onright>
 				<preloaditems>2</preloaditems>
 				<pagecontrol>61</pagecontrol>
-				<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(musiclibrary)</visible>
+				<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(music)</visible>
 				<visible>![!IsEmpty(Skin.String(DisableEpisodeVL)) + Window.IsActive(videos)]</visible>
 				<animation effect="slide" end="-40,0" time="240" tween="cubic" easing="inout" condition="Control.HasFocus(61)">Conditional</animation>
 				<animation effect="slide" end="-40,0" time="240" tween="cubic" easing="inout" condition="Control.HasFocus(6003)">Conditional</animation>
@@ -63,8 +63,8 @@
 				<animation effect="slide" end="0,-29" time="160" condition="Container(514).Row(6) + [Skin.HasSetting(episodebanner) | Skin.HasSetting(episodelogo)] + Container.Content(tvshows)">Conditional</animation>
 				<animation effect="slide" end="0,-36" time="160" condition="Container(514).Row(7)">Conditional</animation>
 				<animation effect="slide" end="0,-43" time="160" condition="Container(514).Row(8)">Conditional</animation>
-				<include condition="Window.IsActive(musiclibrary)">EpisodeViewtypeMusicLayouts</include>
-				<include condition="!Window.IsActive(musiclibrary)">EpisodeViewtypeVideoLayouts</include>
+				<include condition="Window.IsActive(music)">EpisodeViewtypeMusicLayouts</include>
+				<include condition="!Window.IsActive(music)">EpisodeViewtypeVideoLayouts</include>
 			</control>
 			<control type="scrollbar" id="61">
 				<left>1875</left>
@@ -137,7 +137,7 @@
 				<texture background="true">$VAR[LogoVar]</texture>
 				<fadetime>400</fadetime>
 				<visible>![Skin.HasSetting(episodelogo) + Container.Content(tvshows)]</visible>
-				<animation type="Conditional" condition="Window.IsActive(musiclibrary)">
+				<animation type="Conditional" condition="Window.IsActive(music)">
 					<effect type="zoom" end="130" center="auto" time="320" tween="cubic" easing="inout" />
 					<effect type="slide" end="0,35" time="6000" />
 				</animation>

@@ -4,8 +4,8 @@
 	<onload condition="Stringcompare(Window(home).Property(activewindow),videos)">ReplaceWindow(videos,$ESCINFO[Window(home).Property(containerpath)],return)</onload>
 	<onload condition="Stringcompare(Window(home).Property(activewindow),addonbrowser)">ReplaceWindow(addonbrowser)</onload>
 	<onload condition="Stringcompare(Window(home).Property(activewindow),programs)">ReplaceWindow(programs)</onload>
-	<onload condition="Stringcompare(Window(home).Property(activewindow),musiclibrary)">ReplaceWindow(musiclibrary,$ESCINFO[Window(home).Property(containerpath)],return)</onload>
-	<onload condition="Stringcompare(Window(home).Property(activewindow),musicfiles)">ReplaceWindow(musicfiles)</onload>
+	<onload condition="Stringcompare(Window(home).Property(activewindow),musiclibrary)">ReplaceWindow(music,$ESCINFO[Window(home).Property(containerpath)],return)</onload>
+	<onload condition="Stringcompare(Window(home).Property(activewindow),musicfiles)">ReplaceWindow(music)</onload>
 	<onload condition="Stringcompare(Window(home).Property(activewindow),musicplaylist)">ReplaceWindow(musicplaylist)</onload>
 	<onload condition="Stringcompare(Window(home).Property(activewindow),videoplaylist)">ReplaceWindow(videoplaylist)</onload>
 	<onload condition="Stringcompare(Window(home).Property(activewindow),tvguide)">ReplaceWindow(home)</onload>

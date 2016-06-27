@@ -170,7 +170,7 @@
 				<control type="group">
 					<left>-1225</left>
 					<top>-370</top>
-					<include condition="Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)">CDArtFlip</include>
+					<include condition="Window.IsActive(music) | Window.IsActive(musicplaylist)">CDArtFlip</include>
 				</control>
 				<control type="image">
 					<left>55</left>
@@ -229,7 +229,7 @@
 				<control type="group">
 					<left>-1325</left>
 					<top>-420</top>
-					<include condition="Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)">CDArtFlip</include>
+					<include condition="Window.IsActive(music) | Window.IsActive(musicplaylist)">CDArtFlip</include>
 					<animation effect="zoom" start="100" end="90" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
 				</control>
 				<control type="image">

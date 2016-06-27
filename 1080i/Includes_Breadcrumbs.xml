@@ -59,7 +59,7 @@
 			<orientation>horizontal</orientation>
 			<visible>Skin.HasSetting(breadcrumbslabel)</visible>
 			<usecontrolcoords>true</usecontrolcoords>
-			<visible>![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying) + IsEmpty(Window(videolibrary).Property(tvtunesIsAlive))]</visible>
+			<visible>![Player.HasMedia + Skin.HasSetting(GlobalNowPlaying) + IsEmpty(Window(videos).Property(tvtunesIsAlive))]</visible>
 			<control type="image">
 				<width>36</width>
 				<height>36</height>
@@ -89,7 +89,7 @@
 			<control type="label">
 				<label>$VAR[BreadcrumbsLabel2Var]</label>
 				<include>BreadcrumbsLabel</include>
-				<visible>!Window.IsActive(PVR)</visible>
+				<visible>!Window.IsActive(tvchannels)</visible>
 			</control>
 			<control type="label">
 				<label>$VAR[BreadcrumbsFilterVar]</label>
@@ -248,7 +248,6 @@
 				<control type="grouplist">
 					<width>1920</width>
 					<align>center</align>
-					<aligny>center</aligny>
 					<!--breadcrumbs-->
 					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>

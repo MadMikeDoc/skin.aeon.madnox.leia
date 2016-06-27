@@ -5,11 +5,11 @@
 		<top>580</top>
 		<width>2655</width>
 		<height>525</height>
-		<visible>[Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(programs) | Window.IsActive(pictures) | Container.Content(addons) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)]</visible>
+		<visible>[Window.IsActive(music) | Window.IsActive(programs) | Window.IsActive(pictures) | Container.Content(addons) | Window.IsActive(addonbrowser) | Window.IsActive(musicplaylist)]</visible>
 		<onleft>509</onleft>
 		<onright>509</onright>
-		<onup condition="!Window.IsActive(videolibrary) + !Container.Content(years) + !Container.Content(genres)">7000</onup>
-		<onup condition="Window.IsActive(videolibrary) | Container.Content(years) | Container.Content(genres)">9000</onup>
+		<onup condition="!Window.IsActive(videos) + !Container.Content(years) + !Container.Content(genres)">7000</onup>
+		<onup condition="Window.IsActive(videos) | Container.Content(years) | Container.Content(genres)">9000</onup>
 		<ondown condition="Control.IsVisible(61)">61</ondown>
 		<ondown condition="!Control.IsVisible(61)">109</ondown>
 		<viewtype label="31029">bigwrap</viewtype>

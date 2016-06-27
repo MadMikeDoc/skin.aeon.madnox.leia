@@ -130,11 +130,11 @@
 				<textcolor>context</textcolor>
 				<focusedcolor>white2</focusedcolor>
 				<colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
-				<visible>Container.Content(movies) | [!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(musiclibrary)]</visible>
+				<visible>Container.Content(movies) | [!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(music)]</visible>
 				<onclick condition="Container.Content(movies) + !IsEmpty(ListItem.Trailer)">Dialog.Close(contextmenu)</onclick>
 				<onclick condition="Container.Content(movies) + !IsEmpty(ListItem.Trailer)">SetFocus(7566)</onclick>
 				<onclick condition="Container.Content(movies) + IsEmpty(ListItem.Trailer)">ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$ESCINFO[ListItem.Label] Trailer,return)</onclick>
-				<onclick condition="!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(musiclibrary)">PlayMedia($ESCINFO[Window.Property(SongToMusicVideo.Path)])</onclick>
+				<onclick condition="!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(music)">PlayMedia($ESCINFO[Window.Property(SongToMusicVideo.Path)])</onclick>
 			</control>
 			<control type="button" id="2010">
 				<width>462</width>

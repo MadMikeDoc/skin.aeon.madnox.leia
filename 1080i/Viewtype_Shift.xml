@@ -297,8 +297,8 @@
 				<animation effect="slide" end="120,270" time="0" condition="Skin.HasSetting(smallshiftview) + !Window.IsActive(programs)">Conditional</animation>
 				<onleft>57</onleft>
 				<onright>57</onright>
-				<onup condition="!Window.IsActive(musiclibrary) | !Control.IsVisible(7000)">9000</onup>
-				<onup condition="Window.IsActive(musiclibrary) + Control.IsVisible(7000)">SetFocus(7000)</onup>
+				<onup condition="!Window.IsActive(music) | !Control.IsVisible(7000)">9000</onup>
+				<onup condition="Window.IsActive(music) + Control.IsVisible(7000)">SetFocus(7000)</onup>
 				<ondown condition="Skin.HasSetting(AlphabetScrollbar)">6014</ondown>
 				<ondown condition="!Skin.HasSetting(AlphabetScrollbar)">61</ondown>
 				<orientation>horizontal</orientation>
@@ -308,7 +308,7 @@
 				<focusposition>1</focusposition>
 				<include>Animation_OpenCloseZoom</include>
 				<visible>![!IsEmpty(Skin.String(DisableEpisodeVL)) + Window.IsActive(videos)]</visible>
-				<visible>[Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist) | Window.isActive(programs) | Window.isActive(addonbrowser) | [Window.IsActive(videos) + [!Container.Content(episodes) | SubString(Container.FolderPath,videodb://recentlyaddedepisodes/)]]] + !Container.Content(years) + !Container.Content(countries)</visible>
+				<visible>[Window.IsActive(music) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist) | Window.isActive(programs) | Window.isActive(addonbrowser) | [Window.IsActive(videos) + [!Container.Content(episodes) | SubString(Container.FolderPath,videodb://recentlyaddedepisodes/)]]] + !Container.Content(years) + !Container.Content(countries)</visible>
 				<animation effect="fade" start="100" end="0" time="320" condition="Control.HasFocus(110)">Conditional</animation>
 				<itemlayout width="315" height="750" condition="!Skin.HasSetting(smallshiftview) | Window.IsActive(programs)">
 					<include condition="!Window.IsActive(programs)">ShiftCase</include>
@@ -412,9 +412,6 @@
 						<top>203</top>
 						<width>230</width>
 						<height>70</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<aspectratio>keep</aspectratio>
 						<visible>Container.Content(movies) + !IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 						<control type="image">
 							<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -437,9 +434,9 @@
 				</itemlayout>
 				<focusedlayout width="157" height="500" condition="Skin.HasSetting(smallshiftview) + !Window.IsActive(programs)">
 					<include>ShiftThumbsSmall</include>
-				</focusedlayout>	
+				</focusedlayout>
 			</control>
-			
+
 			<!-- Letter-Scrollbar -->
 			<control type="image">
 				<left>450</left>
@@ -450,7 +447,7 @@
 				<texture>views/directory/sbl_backround.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6014) + Skin.HasSetting(AlphabetScrollbar)</visible>
-			</control>			
+			</control>
 			<control type="panel" id="6014">
 				<onup>57</onup>
 				<ondown>61</ondown>
@@ -481,7 +478,7 @@
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 			</control>
-			
+
 			<control type="group">
 				<include>Animation_OpenCloseZoom</include>
 				<visible>[Control.IsVisible(8822) + !Container.OnScrollNext + !Container.OnScrollPrevious] | !Control.IsVisible(8822)</visible>
@@ -588,7 +585,7 @@
 				<fadetime>IconCrossfadeTime2</fadetime>
 				<colordiffuse>floor</colordiffuse>
 				<visible>!Skin.HasSetting(smallshiftview) + Container.Content(movies)</visible>
-			</control>	
-		</control>	
+			</control>
+		</control>
 	</include>
 </includes>

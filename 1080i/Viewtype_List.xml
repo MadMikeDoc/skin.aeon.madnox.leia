@@ -252,9 +252,6 @@
 				<top>223</top>
 				<width>230</width>
 				<height>70</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<aspectratio aligny="bottom">keep</aspectratio>
 				<visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 				<control type="image">
 					<texture background="true" fallback="empty.png">$VAR[LogoVar]</texture>
@@ -591,9 +588,6 @@
 					<top>168</top>
 					<width>230</width>
 					<height>70</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<aspectratio aligny="bottom">keep</aspectratio>
 					<visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 					<control type="image">
 						<texture background="true" fallback="empty.png">$VAR[LogoVar]</texture>
@@ -1080,9 +1074,9 @@
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
 			<include>Animation_ListSlideRight</include>
-			<include condition="Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)">CDArtFlip</include>
+			<include condition="Window.IsActive(music) | Window.IsActive(musicplaylist)">CDArtFlip</include>
 			<include>ListDiscartMovieSet</include>
-			<include condition="Window.IsActive(videolibrary) | Window.IsActive(programs)">ListIconPoster</include>
+			<include condition="Window.IsActive(videos) | Window.IsActive(programs)">ListIconPoster</include>
 			<control type="group" id="40003">
 				<left>1296</left>
 				<top>165</top>
@@ -1195,9 +1189,6 @@
 					<top>223</top>
 					<width>230</width>
 					<height>70</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<aspectratio aligny="bottom">keep</aspectratio>
 					<visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 					<control type="image">
 						<texture background="true" fallback="empty.png">$INFO[Container.ListItem.Art(clearlogo)]</texture>
@@ -1661,7 +1652,7 @@
 					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					<visible>[StringCompare(Container.SortMethod,$LOCALIZE[562]) + Container.Content(movies)] | [Container.Content(addons) + StringCompare(Container.SortMethod,$LOCALIZE[551])]</visible>
 					<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(songs) | Container.Content(addons)]</visible>
-					<animation effect="slide" end="38" condition="!Window.IsActive(videolibrary) + !Container.Content(musicvideos)">Conditional</animation>
+					<animation effect="slide" end="38" condition="!Window.IsActive(videos) + !Container.Content(musicvideos)">Conditional</animation>
 				</control>
 				<control type="image">
 					<left>1086</left>

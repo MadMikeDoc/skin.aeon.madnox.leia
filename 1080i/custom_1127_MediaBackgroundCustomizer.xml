@@ -4,13 +4,13 @@
 	<onload condition="Container.Content(movies)">SetProperty(BackgroundArea,Movies,home)</onload>
 	<onload condition="Container.Content(TVShows) | Container.Content(seasons) | Container.Content(episodes)">SetProperty(BackgroundArea,TVShows,home)</onload>
 	<onload condition="Window.IsActive(videos) + [Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums)]">SetProperty(BackgroundArea,MusicVideos,home)</onload>
-	<onload condition="Window.IsActive(musiclibrary) | Window.IsActive(musicfiles) | Window.IsActive(musicplaylist)">SetProperty(BackgroundArea,Music,home)</onload>
+	<onload condition="Window.IsActive(music) | Window.IsActive(musicplaylist)">SetProperty(BackgroundArea,Music,home)</onload>
 	<onload condition="Window.IsActive(pictures)">SetProperty(BackgroundArea,Pictures,home)</onload>
 	<onload condition="Window.IsActive(addonbrowser) | Window.IsActive(programs)">SetProperty(BackgroundArea,AddonBrowser,home)</onload>
 	<onload condition="Window.IsActive(skinsettings)">SetProperty(BackgroundArea,Settings,home)</onload>
 	<onload condition="Window.IsActive(weather)">SetProperty(BackgroundArea,Weather,home)</onload>
 	<onload condition="Window.IsActive(1115)">SetProperty(BackgroundArea,Featured,home)</onload>
-	<onload condition="Window.IsActive(PVR)">SetProperty(BackgroundArea,LiveTV,home)</onload>
+	<onload condition="Window.IsActive(tvchannels)">SetProperty(BackgroundArea,LiveTV,home)</onload>
 	<defaultcontrol always="true">450</defaultcontrol>
 
 	<coordinates>
@@ -83,7 +83,7 @@
 					<onclick condition="Skin.HasSetting(musicextrafanart)">Skin.SetBool(NoMusicLibraryFanart)</onclick>
 					<onclick condition="Skin.HasSetting(musicextrafanart)">Skin.Reset(musicextrafanart)</onclick>
 					<onclick condition="Skin.HasSetting(NoMusicLibraryFanart)">Skin.Reset(NoMusicLibraryFanart)</onclick>
-					<visible>Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)</visible>
+					<visible>Window.IsActive(music) | Window.IsActive(musicplaylist)</visible>
 				</control>
 				<control type="button" id="1675">
 					<label>$LOCALIZE[20445]:</label>
@@ -139,7 +139,7 @@
 					<onclick>Skin.ToggleSetting(NoVideoLibraryFanart)</onclick>
 					<selected>Skin.HasSetting(NoVideoLibraryFanart)</selected>
 					<include>Objects_MediaBackgroundsButton</include>
-					<visible>Window.IsActive(videolibrary) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(musicvideos)</visible>
+					<visible>Window.IsActive(videos) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(musicvideos)</visible>
 				</control>
 				<control type="button" id="1690">
 					<label>$LOCALIZE[20445]:</label>
@@ -196,7 +196,7 @@
 					<onclick>Skin.ToggleSetting(darkinfopane)</onclick>
 					<selected>Skin.HasSetting(darkinfopane)</selected>
 					<enable>![stringcompare(Window(home).Property(actualViewtype),wall) + Skin.HasSetting(wallfullscreen)]</enable>
-					<visible>![stringcompare(Window(home).Property(actualViewtype),BigFan) | Stringcompare(Window(home).Property(actualViewtype),Episode) | Substring(Window(home).Property(actualViewtype),LowList) | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),AddonWall) | [Substring(Window(home).Property(actualViewtype),TriPanel) + !Window.IsActive(videolibrary)]] + Skin.HasSetting(DisableGlowbar)</visible>
+					<visible>![stringcompare(Window(home).Property(actualViewtype),BigFan) | Stringcompare(Window(home).Property(actualViewtype),Episode) | Substring(Window(home).Property(actualViewtype),LowList) | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),AddonWall) | [Substring(Window(home).Property(actualViewtype),TriPanel) + !Window.IsActive(videos)]] + Skin.HasSetting(DisableGlowbar)</visible>
 				</control>
 				<control type="radiobutton" id="1703">
 					<label>$LOCALIZE[31375]</label>
