@@ -425,7 +425,7 @@
 					<top>92</top>
 					<width>842</width>
 					<height>525</height>
-					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(songs) | Window.IsActive(musicfiles) | Window.IsActive(musicplaylist)</visible>
+					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(addons) | Container.Content(songs) | Window.IsActive(musicplaylist)</visible>
 					<pagecontrol>70</pagecontrol>
 					<onleft>9000</onleft>
 					<onright>70</onright>

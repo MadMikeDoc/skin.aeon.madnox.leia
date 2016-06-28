@@ -1421,7 +1421,7 @@
 	<variable name="InfoWallBottomLabel1Var">
 		<value condition="skin.hassetting(backendmode) + SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(Set.Movies.Director)]</value>
 		<value condition="Container.Content(movies) | Container.Content(episodes)">$INFO[ListItem.Director,$LOCALIZE[31156] ]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion),[COLOR floorlabel]$LOCALIZE[24051] [/COLOR]]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion,[COLOR floorlabel]$LOCALIZE[24051] [/COLOR]]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Year]</value>
 		<value condition="Container.Content(artists) + !IsEmpty(ListItem.Property(Artist_YearsActive))">$INFO[ListItem.Property(Artist_YearsActive),[COLOR floorlabel]$LOCALIZE[21898]: [/COLOR]]</value>
 		<value condition="Container.Content(tvshows) + !IsEmpty(Window(Home).Property(NextAired.NextDay))">[COLOR grey]$LOCALIZE[209]:[/COLOR] $INFO[Window(Home).Property(NextAired.NextSeasonNumber),S]$INFO[Window(Home).Property(NextAired.NextEpisodeNumber),E]$INFO[Window(Home).Property(NextAired.NextTitle),: ]</value>
@@ -2551,7 +2551,7 @@
 		<value condition="Window.IsActive(videoplaylist)">$LOCALIZE[10522]</value>
 		<value condition="Window.IsActive(musicplaylisteditor)">$LOCALIZE[10503]</value>
 		<value condition="Window.IsActive(music)">$LOCALIZE[10516]</value>
-		<value condition="Window.IsActive(musicfiles)">$LOCALIZE[31022]</value>
+		<!-- <value condition="Window.IsActive(musicfiles)">$LOCALIZE[31022]</value> -->
 		<value condition="Window.IsActive(musicplaylist)">$LOCALIZE[10517]</value>
 		<value condition="Window.IsActive(settings)">$LOCALIZE[5]</value>
 		<value condition="Window.IsActive(skinsettings)">$LOCALIZE[5] / $LOCALIZE[20077]</value>
@@ -2829,7 +2829,7 @@
 		<value>$LOCALIZE[515]:</value>
 	</variable>
 	<variable name="TriPanelSquareValue2Var">
-		<value condition="Container.Content(addons)">$INFO[ListItem.AddonPath)]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonPath]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>
@@ -3072,7 +3072,7 @@
 	</variable>
 	<variable name="cdARTVar">
 		<value condition="Stringcompare(ListItem.Artist,Musicplayer.Artist) + Stringcompare(ListItem.Album,MusicPlayer.Album)">$INFO[Player.FolderPath]cdart.png</value>
-		<value condition="[Window.IsActive(musicfiles) + IsEmpty(ListItem.FileExtension)]">$INFO[ListItem.Path]$INFO[ListItem.Label,,/cdart.png]</value>
+		<value condition="[Window.IsActive(music) + IsEmpty(ListItem.FileExtension)]">$INFO[ListItem.Path]$INFO[ListItem.Label,,/cdart.png]</value>
 		<value condition="Container.Content(albums) + Stringcompare(Skin.String(LibraryStructure),2)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Artist]\$INFO[ListItem.Year] - $INFO[ListItem.Album,,\cdart.png]</value>
 		<value condition="Container.Content(albums) + Stringcompare(Skin.String(LibraryStructure),3)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Artist]\$INFO[ListItem.Album] $INFO[ListItem.Year,(,)\cdart.png]</value>
 		<value condition="Container.Content(albums) + Stringcompare(Skin.String(LibraryStructure),4)">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Artist] - $INFO[ListItem.Album] $INFO[ListItem.Year,(,)\cdart.png]</value>

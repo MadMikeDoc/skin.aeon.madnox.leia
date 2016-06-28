@@ -1610,7 +1610,7 @@
 					<height>850</height>
 					<texture>views/listpanel_detailwide.png</texture>
 					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs) | [Container.Content(addons) + Window.IsActive(addonbrowser)] | [Container.Content(files) + Window.IsActive(musicfiles)] | Window.IsActive(pictures)</visible>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs) | [Container.Content(addons) + Window.IsActive(addonbrowser)] | [Container.Content(files) + Window.IsActive(music)] | Window.IsActive(pictures)</visible>
 				</control>
 				<control type="image">
 					<left>1026</left>

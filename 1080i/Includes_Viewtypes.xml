@@ -737,7 +737,6 @@
 	</include>
 	<include name="ReloadWindowOnClick">
 		<onclick condition="Window.IsActive(addonbrowser)">SetProperty(activewindow,addons,home)</onclick>
-		<onclick condition="Window.IsActive(musicfiles)">SetProperty(activewindow,musicfiles,home)</onclick>
 		<onclick condition="Window.IsActive(music)">SetProperty(activewindow,musiclibrary,home)</onclick>
 		<onclick condition="Window.IsActive(musicplaylist)">SetProperty(activewindow,musicplaylist,home)</onclick>
 		<onclick condition="Window.IsActive(videoplaylist)">SetProperty(activewindow,videoplaylist,home)</onclick>
