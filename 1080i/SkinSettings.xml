@@ -149,7 +149,7 @@
 						<!--visible>System.HasAddon(script.moreinfo)</visible-->
 					<!--/control-->
 					<control type="radiobutton" id="107">
-						<label>21398</label>
+						<label>$LOCALIZE[31492]</label>
 						<include>Default_SettingRadioButton</include>
 						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>

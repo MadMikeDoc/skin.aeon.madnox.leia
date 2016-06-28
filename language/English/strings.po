@@ -1980,6 +1980,10 @@ msgctxt "#31491"
 msgid "Show Extra Info"
 msgstr ""
 
+msgctxt "#31492"
+msgid "Enable Playlist on Startup"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Pictures"
 msgstr ""

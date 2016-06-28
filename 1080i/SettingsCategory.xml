@@ -84,6 +84,9 @@
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<focusedcolor>white2</focusedcolor>
 			</control>
+			<control type="label" id="2">
+				<include>HiddenObject</include>
+			</control>
 			<control type="button" id="7">
 				<include>Default_SettingButton</include>
 			</control>
@@ -98,8 +101,18 @@
 			<control type="image" id="11">
 				<include>HiddenObject</include>
 			</control>
-			<control type="label" id="2">
-				<include>HiddenObject</include>
+			<control type="label" id="14">
+				<description>Default Label</description>
+				<width>1256</width>
+				<textoffsetx>45</textoffsetx>
+				<top>0</top>
+				<height>50</height>
+				<label>-</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font_Bold30_Caps</font>
+				<textcolor>$VAR[FocusTextureColorVar]</textcolor>
+				<shadowcolor>black</shadowcolor>
 			</control>
 		</control>
 		<control type="group">
@@ -149,6 +162,6 @@
 			<textcolor>gray</textcolor>
 			<font>Font_Info</font>
 			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
-		</control>
+		</control>	
 	</controls>
 </window>

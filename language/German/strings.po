@@ -2050,6 +2050,10 @@ msgctxt "#31491"
 msgid "Show Extra Info"
 msgstr "Zeige Extra Info"
 
+msgctxt "#31492"
+msgid "Enable Playlist on Startup"
+msgstr "Wiedergabeliste bei Programmstart abspielen"
+
 msgctxt "#31500"
 msgid "Pictures"
 msgstr "Bilder"
