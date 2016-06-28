@@ -42,6 +42,14 @@
 			<colordiffuse>black</colordiffuse>
 		</control>
 		<control type="image">
+			<width>1920</width>
+			<height>1080</height>
+			<aspectratio scalediffuse="false" alignx="center">keep</aspectratio>
+			<texture>kodisplash.jpg</texture>
+			<!-- <colordiffuse>white</colordiffuse> -->
+			<!--visible>Skin.HasSetting(DisableIntro)</visible-->
+		</control>
+		<control type="image">
 			<left>923</left>
 			<top>603</top>
 			<width>74</width>
@@ -50,16 +58,6 @@
 			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 			<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="true">Conditional</animation>
 			<animation effect="fade" start="70" time="1200" condition="true" pulse="true">Conditional</animation>
-			<!--visible>Skin.HasSetting(DisableIntro)</visible-->
-		</control>
-		<control type="image">
-			<left>560</left>
-			<top>220</top>
-			<width>800</width>
-			<height>260</height>
-			<aspectratio scalediffuse="false" alignx="center">keep</aspectratio>
-			<texture>KODI_Logo.png</texture>
-			<!-- <colordiffuse>white</colordiffuse> -->
 			<!--visible>Skin.HasSetting(DisableIntro)</visible-->
 		</control>
 		<control type="videowindow">
