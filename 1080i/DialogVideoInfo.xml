@@ -6,7 +6,7 @@
 	<onload condition="!Skin.HasSetting(UseExtendedInfo)">ClearProperty(ActorFade)</onload>
 	<!-- <onload condition="!Skin.HasSetting(UseExtendedInfo)">AlarmClock(ActorFade,SetProperty(ActorFade,true),00:02,silent)</onload> -->
 	<onload condition="!Skin.HasSetting(UseExtendedInfo) + Skin.HasSetting(TVTunes.Enabled) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
-	<onload condition="!Skin.HasSetting(UseExtendedInfo) + System.HasAddon(script.videolanguage) + [Container.Content(movies) | Container.Content(episodes)]">XBMC.RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload>
+	<!-- <onload condition="!Skin.HasSetting(UseExtendedInfo) + System.HasAddon(script.videolanguage) + [Container.Content(movies) | Container.Content(episodes)]">XBMC.RunScript(script.videolanguage,movieid=$INFO[ListItem.DBID])</onload> -->
 	<onload condition="!Skin.HasSetting(UseExtendedInfo) + System.HasAddon(script.videoextras) + !Skin.HasSetting(Enable.videoextras)">XBMC.RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<onload condition="!Skin.HasSetting(UseExtendedInfo) + System.HasAddon(script.duration)">RunScript(script.duration,duration=$INFO[ListItem.Duration])</onload>
 	<onunload>ClearProperty(FanartZoom,movieinformation)</onunload>
@@ -59,7 +59,6 @@
 						<texturefocus border="8" colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<label>-</label>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<ondown>600</ondown>
 						<visible>!IsEmpty(ListItem.Director)</visible>
 					</control>
@@ -83,7 +82,6 @@
 							<onclick condition="Skin.HasSetting(UseMetadataAddon)">SetFocus(601)</onclick>
 							<onclick condition="!Skin.HasSetting(UseMetadataAddon)">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[ListItem.Director])</onclick>
 							<onfocus>SetProperty(ContainerTitle,$INFO[ListItem.Director],home)</onfocus>
-							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 							<ondown>131</ondown>
 							<visible>!IsEmpty(ListItem.Director)</visible>
 						</control>
@@ -98,7 +96,6 @@
 							<onclick condition="Skin.HasSetting(UseMetadataAddon)">SetProperty(ListType,Writer,home)</onclick>
 							<onclick condition="Skin.HasSetting(UseMetadataAddon)">SetFocus(601)</onclick>
 							<onclick condition="!Skin.HasSetting(UseMetadataAddon)">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[ListItem.Writer])</onclick>
-							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 							<ondown>600</ondown>
 							<onup>130</onup>
 							<enable>!IsEmpty(ListItem.Writer)</enable>
@@ -775,7 +772,7 @@
 									<aspectratio aligny="center" align="center">keep</aspectratio>
 									<texture>$VAR[ColorFlags]cc.png</texture>
 									<colordiffuse>white2</colordiffuse>
-									<visible>!IsEmpty(ListItem.SubtitleLanguage) + IsEmpty(Window.Property(SubtitleLanguage.1))</visible>
+									<visible>!String.IsEmpty(ListItem.SubtitleLanguage)</visible>
 								</control>
 								<!-- Language flags -->
 								<control type="grouplist">
@@ -789,7 +786,7 @@
 										<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
 										<itemgap>2</itemgap>
 										<orientation>horizontal</orientation>
-										<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.1)) + !Stringcompare(Window(movieinformation).Property(AudioLanguage.1),und)</visible>
+										<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1)) + !String.IsEqual(ListItem.Property(AudioLanguage.1),und)</visible>
 										<control type="label">
 											<width>110</width>
 											<height>24</height>
@@ -826,7 +823,7 @@
 											<label>31003</label>
 											<textcolor>grey</textcolor>
 											<font>Font_Reg19_Caps</font>
-											<visible>IsEmpty(Window(movieinformation).Property(SubtitleLanguage.1)) + IsEmpty(Window(movieinformation).Property(SubtitleLanguage.2))</visible>
+											<visible>IsEmpty(ListItem.Property(SubtitleLanguage.1)) + IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
 										</control>
 										<include>SubtitleFlags</include>
 									</control>

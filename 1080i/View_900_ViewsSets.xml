@@ -188,8 +188,8 @@
 				<width>26</width>
 				<height>22</height>
 				<aspectratio>scale</aspectratio>
-				<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.1),,.png]</texture>
-				<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.1))</visible>
+				<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
+				<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 				<include>Animation_VisibleChange200</include>
 				<fadetime>400</fadetime>
 			</control>
@@ -198,9 +198,9 @@
 				<width>26</width>
 				<height>22</height>
 				<aspectratio>scale</aspectratio>
-				<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.2),,.png]</texture>
-				<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.2))</visible>
-				<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.2))</visible>
+				<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
+				<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+				<visible>!Stringcompare(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 				<include>Animation_VisibleChange200</include>
 				<fadetime>400</fadetime>
 			</control>
@@ -209,10 +209,10 @@
 				<width>26</width>
 				<height>22</height>
 				<aspectratio>scale</aspectratio>
-				<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.3),,.png]</texture>
-				<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.3))</visible>
-				<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.3))</visible>
-				<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.2),Window(movieinformation).Property(AudioLanguage.3))</visible>
+				<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
+				<visible>!IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+				<visible>!Stringcompare(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
+				<visible>!Stringcompare(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
 				<include>Animation_VisibleChange200</include>
 				<fadetime>400</fadetime>
 			</control>

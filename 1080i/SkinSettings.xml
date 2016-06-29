@@ -538,7 +538,7 @@
 						<onclick>Addon.OpenSettings(script.videoextras)</onclick>
 						<visible>System.HasAddon(script.videoextras)</visible>
 					</control>
-					<control type="button" id="430">
+					<!-- <control type="button" id="430">
 						<label>script.videolanguage > Shows Languageflags</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
 						<include>Default_SettingRadioButtonShort</include>
@@ -551,7 +551,7 @@
 						<include>Default_SettingRadioButtonShort</include>
 						<onclick>Addon.OpenSettings(script.videolanguage)</onclick>
 						<visible>System.HasAddon(script.videolanguage)</visible>
-					</control>
+					</control> -->
 					<control type="button" id="432">
 						<label>service.library.data.provider</label>
 						<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>

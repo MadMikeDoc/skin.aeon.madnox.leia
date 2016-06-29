@@ -5,100 +5,100 @@
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.1),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.1))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.2),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.2))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.2))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.3),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.3))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.3))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.2),Window(movieinformation).Property(AudioLanguage.3))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.4),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.4))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.4))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.2),Window(movieinformation).Property(AudioLanguage.4))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.3),Window(movieinformation).Property(AudioLanguage.4))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.4),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.4))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.4))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.4))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.3),ListItem.Property(AudioLanguage.4))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.5),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.5))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.5))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.2),Window(movieinformation).Property(AudioLanguage.5))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.3),Window(movieinformation).Property(AudioLanguage.5))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.4),Window(movieinformation).Property(AudioLanguage.5))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.5),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.5))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.5))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.5))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.3),ListItem.Property(AudioLanguage.5))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.4),ListItem.Property(AudioLanguage.5))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.6),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.6))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.6))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.2),Window(movieinformation).Property(AudioLanguage.6))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.3),Window(movieinformation).Property(AudioLanguage.6))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.4),Window(movieinformation).Property(AudioLanguage.6))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.5),Window(movieinformation).Property(AudioLanguage.6))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.6),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.6))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.6))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.6))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.3),ListItem.Property(AudioLanguage.6))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.4),ListItem.Property(AudioLanguage.6))</visible>
+			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.5),ListItem.Property(AudioLanguage.6))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.7),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.7))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.7),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.7))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.8),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.8))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.8),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.8))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.9),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.9))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.9),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.9))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.10),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.10))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.10),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.10))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.11),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.11))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.11),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.11))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.12),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.12))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.12),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.12))</visible>
 		</control>
 	</include>
 	<include name="SubtitleFlags">
@@ -106,100 +106,100 @@
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.1),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.1))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.1),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.2),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.2))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.1),Window(movieinformation).Property(SubtitleLanguage.2))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.2),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.2))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.3),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.3))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.1),Window(movieinformation).Property(SubtitleLanguage.3))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.2),Window(movieinformation).Property(SubtitleLanguage.3))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.3),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.3))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.3))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.4),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.4))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.1),Window(movieinformation).Property(SubtitleLanguage.4))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.2),Window(movieinformation).Property(SubtitleLanguage.4))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.3),Window(movieinformation).Property(SubtitleLanguage.4))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.4),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.4))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.4))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.4))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.3),ListItem.Property(SubtitleLanguage.4))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.5),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.5))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.1),Window(movieinformation).Property(SubtitleLanguage.5))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.2),Window(movieinformation).Property(SubtitleLanguage.5))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.3),Window(movieinformation).Property(SubtitleLanguage.5))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.4),Window(movieinformation).Property(SubtitleLanguage.5))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.5),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.5))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.5))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.5))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.3),ListItem.Property(SubtitleLanguage.5))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.4),ListItem.Property(SubtitleLanguage.5))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.6),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.6))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.1),Window(movieinformation).Property(SubtitleLanguage.6))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.2),Window(movieinformation).Property(SubtitleLanguage.6))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.3),Window(movieinformation).Property(SubtitleLanguage.6))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.4),Window(movieinformation).Property(SubtitleLanguage.6))</visible>
-			<visible>!Stringcompare(Window(movieinformation).Property(SubtitleLanguage.5),Window(movieinformation).Property(SubtitleLanguage.6))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.6),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.3),ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.4),ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.5),ListItem.Property(SubtitleLanguage.6))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.7),,.png]</texture>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.7),,.png]</texture>
 			<aspectratio>keep</aspectratio>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.7))</visible>
-		</control>
-		<control type="image">
-			<width>28</width>
-			<height>28</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.8),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.8))</visible>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.7))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.9),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.9))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.8),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.8))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.10),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.10))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.9),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.9))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.11),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.11))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.10),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.10))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(SubtitleLanguage.12),,.png]</texture>
-			<visible>!IsEmpty(Window(movieinformation).Property(SubtitleLanguage.12))</visible>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.11),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.11))</visible>
+		</control>
+		<control type="image">
+			<width>28</width>
+			<height>28</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.12),,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.12))</visible>
 		</control>
 	</include>
 	<include name="OSDFlagVars">
@@ -330,8 +330,8 @@
 							<width>26</width>
 							<height>22</height>
 							<aspectratio>scale</aspectratio>
-							<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.1),,.png]</texture>
-							<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.1))</visible>
+							<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
+							<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 							<include>Animation_VisibleChange200</include>
 							<fadetime>400</fadetime>
 						</control>
@@ -339,9 +339,9 @@
 							<width>26</width>
 							<height>22</height>
 							<aspectratio>scale</aspectratio>
-							<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.2),,.png]</texture>
-							<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.2))</visible>
-							<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.2))</visible>
+							<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
+							<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+							<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 							<include>Animation_VisibleChange200</include>
 							<fadetime>400</fadetime>
 						</control>
@@ -349,10 +349,10 @@
 							<width>26</width>
 							<height>22</height>
 							<aspectratio>scale</aspectratio>
-							<texture>$VAR[ColorFlagsLanguage]$INFO[Window(movieinformation).Property(AudioLanguage.3),,.png]</texture>
-							<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage.3))</visible>
-							<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.1),Window(movieinformation).Property(AudioLanguage.3))</visible>
-							<visible>!Stringcompare(Window(movieinformation).Property(AudioLanguage.2),Window(movieinformation).Property(AudioLanguage.3))</visible>
+							<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
+							<visible>!IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+							<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
+							<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
 							<include>Animation_VisibleChange200</include>
 							<fadetime>400</fadetime>
 						</control>
