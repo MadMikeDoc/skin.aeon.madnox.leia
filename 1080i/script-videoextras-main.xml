@@ -86,7 +86,6 @@
 					<width>450</width>
 					<height>1080</height>
 					<orientation>vertical</orientation>
-					<scroll>true</scroll>
 					<onleft>51</onleft>
 					<onright>51</onright>
 					<onup>9003</onup>

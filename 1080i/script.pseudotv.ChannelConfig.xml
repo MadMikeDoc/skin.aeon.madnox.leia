@@ -45,7 +45,7 @@
 					<label>186</label>
 					<font>Font_Bold34_Caps</font>
 					<onclick condition="!Control.isVisible(106)">PreviousMenu</onclick>
-					<pulseonselect>no</pulseonselect>
+					<pulseonselect>false</pulseonselect>
 				</control>
 				<control type="button" id="113">
 					<width>216</width>
@@ -57,7 +57,7 @@
 					<label>222</label>
 					<font>Font_Bold34_Caps</font>
 					<onclick condition="!Control.isVisible(106)">PreviousMenu</onclick>
-					<pulseonselect>no</pulseonselect>
+					<pulseonselect>false</pulseonselect>
 				</control>
 			</control>
 			<control type="label">

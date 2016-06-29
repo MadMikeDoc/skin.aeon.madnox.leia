@@ -164,7 +164,6 @@
 				<posy>863</posy>
 				<width>1815</width>
 				<height>90</height>
-				<orientation>horizontal</orientation>
 				<include>VisibleFadeEffect</include>
 				<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 				<control type="group">
@@ -325,7 +324,7 @@
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.AnimatedFanart)]</texture>
 					<fadetime>400</fadetime>
-				</control>	
+				</control>
 			</control>
 			<control type="group">
 				<posx>76</posx>
@@ -911,7 +910,7 @@
 					<orientation>vertical</orientation>
 					<visible>!Skin.HasSetting(AlphabetScrollbar)</visible>
 				</control>
-				
+
 			<!-- Letter-Scrollbar -->
 				<control type="image">
 					<posx>1041</posx>

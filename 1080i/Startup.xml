@@ -44,7 +44,7 @@
 		<control type="image">
 			<width>1920</width>
 			<height>1080</height>
-			<aspectratio scalediffuse="false" alignx="center">keep</aspectratio>
+			<aspectratio scalediffuse="false">keep</aspectratio>
 			<texture>kodisplash.jpg</texture>
 			<!-- <colordiffuse>white</colordiffuse> -->
 			<!--visible>Skin.HasSetting(DisableIntro)</visible-->

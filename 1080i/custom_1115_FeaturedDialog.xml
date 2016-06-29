@@ -329,12 +329,7 @@
 			<control type="group" id="5000">
 				<width>2325</width>
 				<height>825</height>
-				<!-- <onfocus>AlarmClock(Tile,Control.Move(5002,1),00:04,silent,loop)</onfocus>
-                <onfocus>AlarmClock(TileTwo,Control.Move(5003,1),00:07,silent,loop)</onfocus> -->
-				<animation type="Conditional" condition="Window.IsActive(1199)" reversible="false">
-					<include>Animation_PanelFlipUp2</include>
-				</animation>
-				<animation type="Conditional" condition="!Window.IsActive(1199)" reversible="false">
+				<animation type="Conditional" condition="true" reversible="false">
 					<include>Animation_PanelFlipDown1</include>
 				</animation>
 				<animation type="Conditional" condition="![ControlGroup(5000).HasFocus | Control.HasFocus(5012)]">
@@ -537,10 +532,7 @@
 			<control type="group" id="6000">
 				<width>2325</width>
 				<height>825</height>
-				<animation type="Conditional" condition="Window.IsActive(1199)" reversible="false">
-					<include>Animation_PanelFlipUp2</include>
-				</animation>
-				<animation type="Conditional" condition="!Window.IsActive(1199)" reversible="false">
+				<animation type="Conditional" condition="true" reversible="false">
 					<include>Animation_PanelFlipDown1</include>
 				</animation>
 				<animation type="Conditional" condition="![ControlGroup(6000).HasFocus | Control.HasFocus(6012)]">
@@ -742,10 +734,7 @@
 			<control type="group" id="7000">
 				<width>2325</width>
 				<height>825</height>
-				<animation type="Conditional" condition="Window.IsActive(1199)" reversible="false">
-					<include>Animation_PanelFlipUp2</include>
-				</animation>
-				<animation type="Conditional" condition="!Window.IsActive(1199)" reversible="false">
+				<animation type="Conditional" condition="true" reversible="false">
 					<include>Animation_PanelFlipDown1</include>
 				</animation>
 				<animation type="Conditional" condition="![ControlGroup(7000).HasFocus | Control.HasFocus(7012)]">

@@ -296,7 +296,6 @@
 					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<label>749</label>
 					<font>Font_Reg38</font>
-					<selectedcolor>FF7b7b7b</selectedcolor>
 					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<textureradioon>-</textureradioon>
 					<textureradiooff>-</textureradiooff>

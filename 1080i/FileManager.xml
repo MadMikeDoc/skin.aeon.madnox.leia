@@ -290,7 +290,6 @@
 			<control type="grouplist">
 				<width>1920</width>
 				<align>center</align>
-				<aligny>center</aligny>
 				<visible>!IsEmpty(Container.NumItems) + !Skin.HasSetting(ClassicTopBar)</visible>
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>

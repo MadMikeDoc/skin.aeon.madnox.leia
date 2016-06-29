@@ -1213,8 +1213,6 @@
 				<left>1152</left>
 				<top>598</top>
 				<font>-</font>
-				<spinwidth>33</spinwidth>
-				<spinheight>22</spinheight>
 				<textureup>scroll-up-2.png</textureup>
 				<texturedown>scroll-down-2.png</texturedown>
 				<textureupfocus>scroll-up-focus-2.png</textureupfocus>

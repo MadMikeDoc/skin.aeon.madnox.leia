@@ -310,7 +310,7 @@
 		<itemlayout height="600" width="100" condition="![Control.IsVisible(961) + !Control.IsVisible(6000)] + !Skin.HasSetting(showcasezoom)"/>
 		<focusedlayout height="525" width="858" condition="![Control.IsVisible(961) + !Control.IsVisible(6000)] + !Skin.HasSetting(showcasezoom)"/>
 		<itemlayout height="600" width="200" condition="![Control.IsVisible(961) + !Control.IsVisible(6000)] + Skin.HasSetting(showcasezoom)"/>
-		<focusedlayout height="525" width="858" condition="![Control.IsVisible(961) + !Control.IsVisible(6000)] + Skin.HasSetting(showcasezoom)"/>	
+		<focusedlayout height="525" width="858" condition="![Control.IsVisible(961) + !Control.IsVisible(6000)] + Skin.HasSetting(showcasezoom)"/>
 	</include>
 	<include name="scmfixed">
 		<control type="fixedlist" id="501">
@@ -320,7 +320,7 @@
 	<include name="scmwrap">
 		<control type="wraplist" id="501">
 			<include>contents501list</include>
-		</control>	
+		</control>
 	</include>
 	<include name="Showcase">
 		<control type="group">
@@ -832,7 +832,7 @@
 			<include condition="!Skin.HasSetting(showcasewrap)">scmfixed</include>
 			<include condition="Skin.HasSetting(showcasewrap)">scmwrap</include>
 		</control>
-		
+
 	<!-- Letter-Scrollbar MOVIES-->
 		<control type="image">
 			<left>410</left>
@@ -875,8 +875,8 @@
 				</control>
 			</focusedlayout>
 			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
-		</control>	
-		
+		</control>
+
 	<!-- Letter-Scrollbar TVSHOWS-->
 		<control type="image">
 			<left>490</left>
@@ -920,7 +920,7 @@
 			</focusedlayout>
 			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 		</control>
-		
+
 	</include>
 
 	<!-- MikeZBH44 Start remove <control> from <include> -->
@@ -2866,9 +2866,6 @@
 			<top>98</top>
 			<width>145</width>
 			<height>40</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<aspectratio aligny="bottom">keep</aspectratio>
 			<visible>Skin.HasSetting(noflow) + Container.Content(movies) + !IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 			<control type="image">
 				<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>

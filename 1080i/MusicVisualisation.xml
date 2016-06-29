@@ -3764,7 +3764,7 @@
 								<width>380</width>
 								<height>354</height>
 								<imagepath background="true">$INFO[Skin.String(ArtistsLogosPath)]$INFO[MusicPlayer.Artist,,/extrafanart/]</imagepath>
-								<aspectratio scalediffuse="false">scale</aspectratio>
+								<aspectratio>scale</aspectratio>
 								<visible>!System.HasAddon(script.artistslideshow)</visible>
 								<timeperimage>5000</timeperimage>
 								<fadetime>750</fadetime>
@@ -3775,7 +3775,7 @@
 								<width>380</width>
 								<height>354</height>
 								<imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-								<aspectratio scalediffuse="false">scale</aspectratio>
+								<aspectratio>scale</aspectratio>
 								<visible>System.HasAddon(script.artistslideshow)</visible>
 								<timeperimage>5000</timeperimage>
 								<fadetime>750</fadetime>
@@ -3874,7 +3874,7 @@
 						<width>400</width>
 						<height>374</height>
 						<imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$INFO[Container(5222).ListItem.Icon]</imagepath>
-						<aspectratio scalediffuse="false">scale</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<timeperimage>5000</timeperimage>
 						<fadetime>750</fadetime>
 					</control>
@@ -3953,7 +3953,7 @@
 						<width>400</width>
 						<height>374</height>
 						<imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$INFO[Container(5223).ListItem.Icon]</imagepath>
-						<aspectratio scalediffuse="false">scale</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<timeperimage>5000</timeperimage>
 						<fadetime>750</fadetime>
 					</control>

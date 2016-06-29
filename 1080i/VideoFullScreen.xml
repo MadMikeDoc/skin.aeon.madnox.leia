@@ -32,7 +32,6 @@
 				<top>0</top>
 				<width>1920</width>
 				<height>300</height>
-				<aligny>top</aligny>
 				<itemgap>10</itemgap>
 				<control type="label" id="10">
 					<description>row 1 label</description>
@@ -165,14 +164,6 @@
 					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
 				</control>
-				<control type="progress_cache">
-					<description>Progressbar Cache</description>
-					<posx>270</posx>
-					<posy>137</posy>
-					<width>910</width>
-					<height>14</height>
-					<info>PVR.ActStreamProgrSignal</info>
-				</control>
 				<control type="progress">
 					<description>Progressbar</description>
 					<posx>270</posx>
@@ -204,14 +195,6 @@
 					<label>$LOCALIZE[19009]:</label>
 					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
-				</control>
-				<control type="progress_cache">
-					<description>Progressbar Cache</description>
-					<posx>270</posx>
-					<posy>167</posy>
-					<width>910</width>
-					<height>14</height>
-					<info>PVR.ActStreamProgrSNR</info>
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>

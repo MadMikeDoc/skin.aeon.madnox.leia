@@ -902,8 +902,6 @@
 					<top>980</top>
 					<width>400</width>
 					<height>90</height>
-					<aligny>top</aligny>
-					<align>left</align>
 					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 					<control type="label">
 						<font>font14</font>

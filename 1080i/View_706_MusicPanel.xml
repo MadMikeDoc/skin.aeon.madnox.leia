@@ -36,7 +36,7 @@
 				<top>95</top>
 				<width>763</width>
 				<height>150</height>
-				<aspectratio>strech</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<texture>homewidgets/glass/banner.png</texture>
 				<visible>!IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))</visible>
 			</control>
@@ -45,7 +45,7 @@
 				<top>95</top>
 				<width>763</width>
 				<height>150</height>
-				<aspectratio>strech</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<texture>thumbs_square/banner_shadow_in.png</texture>
 				<visible>!IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))</visible>
 			</control>
@@ -72,7 +72,7 @@
 				<top>95</top>
 				<width>763</width>
 				<height>150</height>
-				<aspectratio>strech</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<texture>homewidgets/glass/banner.png</texture>
 				<visible>!IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))</visible>
 			</control>
@@ -81,7 +81,7 @@
 				<top>95</top>
 				<width>763</width>
 				<height>150</height>
-				<aspectratio>strech</aspectratio>
+				<aspectratio>stretch</aspectratio>
 				<texture>thumbs_square/banner_shadow_in.png</texture>
 				<visible>!IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))</visible>
 			</control>
@@ -145,9 +145,6 @@
 				<top>400</top>
 				<width>1200</width>
 				<height>800</height>
-				<itemgap>20</itemgap>
-				<orientation>horizontal</orientation>
-				<align>left</align>
 				<include>Animation_CommonFade</include>
 				<include>Animation_VisibleChangeDelayed</include>
 				<control type="image">
@@ -202,7 +199,6 @@
 				<top>200</top>
 				<width>1200</width>
 				<height>800</height>
-				<align>right</align>
 				<include>Animation_CommonFade</include>
 				<include>Animation_VisibleChangeDelayed</include>
 				<control type="image">
@@ -335,10 +331,6 @@
 				<top>650</top>
 				<width>1200</width>
 				<height>400</height>
-				<itemgap>20</itemgap>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<aligny>center</aligny>
 				<include>Animation_CommonFade</include>
 				<include>Animation_VisibleChangeDelayed</include>
 				<control type="image">
@@ -436,10 +428,6 @@
 				<top>650</top>
 				<width>1200</width>
 				<height>400</height>
-				<itemgap>20</itemgap>
-				<orientation>horizontal</orientation>
-				<align>left</align>
-				<aligny>center</aligny>
 				<include>Animation_CommonFade</include>
 				<include>Animation_VisibleChangeDelayed</include>
 				<control type="image">
@@ -981,7 +969,6 @@
 				<width>750</width>
 				<height>100</height>
 				<visible>Skin.HasSetting(MusicPanelExtraInfo) + !Container.Content(songs)</visible>
-				<orientation>horizontal</orientation>
 				<include>Animation_CommonFade</include>
 				<!--Artists lvl -->
 				<control type="label">
@@ -1040,7 +1027,7 @@
 				<left>450</left>
 				<top>520</top>
 				<width>700</width>
-				<height min="29" max="450">auto</height>
+				<height>450</height>
 				<onleft>SetProperty(MediaMenu,True,home)</onleft>
 				<onleft>SetFocus(9000)</onleft>
 				<onright>60</onright>

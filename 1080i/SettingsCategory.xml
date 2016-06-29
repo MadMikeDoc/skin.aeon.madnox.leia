@@ -96,7 +96,6 @@
 			</control>
 			<control type="spincontrolex" id="9">
 				<include>Default_SettingButton</include>
-				<spinleft>40</spinleft>
 			</control>
 			<control type="image" id="11">
 				<include>HiddenObject</include>
@@ -162,6 +161,6 @@
 			<textcolor>gray</textcolor>
 			<font>Font_Info</font>
 			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
-		</control>	
+		</control>
 	</controls>
 </window>

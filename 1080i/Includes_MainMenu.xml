@@ -572,7 +572,7 @@
 	<include name="RSSPanel">
 		<control type="group">
 			<top>610</top>
-			<visible>[system.getbool(lookandfeel.enablerssfeeds) | Skin.HasSetting(ActorBirthdayRSS)] + !Skin.HasSetting(DisableRSS)</visible>
+			<visible>[system.getbool(lookandfeel.enablerssfeeds)] + !Skin.HasSetting(DisableRSS)</visible>
 			<animation effect="slide" end="0,330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidget2Info)) + !Window.IsActive(1115)">Conditional</animation>
 			<animation effect="slide" end="0,-330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidgetInfo)) + !Window.IsActive(1115)">Conditional</animation>
 			<animation effect="slide" end="1920,0" time="240">WindowClose</animation>
@@ -603,32 +603,16 @@
 					<animation effect="rotatex" end="180" time="320" center="22" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
 				</control>
 				<control type="group">
-					<control type="label">
-						<top>3</top>
-						<width>1920</width>
-						<height>40</height>
-						<textoffsetx>5</textoffsetx>
-						<label>$INFO[Window(Home).Property(peopleborntoday.1.name)][COLOR=grey]$INFO[Window.Property(peopleborntoday.1.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.2.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.2.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.3.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.3.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.4.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.4.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.5.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.5.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.6.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.6.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.7.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.7.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.8.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.8.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.9.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.9.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.10.name), | ][COLOR=grey]$INFO[Window.Property(peopleborntoday.10.job), • ][/COLOR]</label>
-						<font>Font_Reg26</font>
-						<textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
-						<scroll>true</scroll>
-						<wrapmultiline>false</wrapmultiline>
-						<scrollspeed>40</scrollspeed>
-						<visible>Skin.HasSetting(ActorBirthdayRSS)</visible>
-					</control>
 					<control type="rss">
 						<top>7</top>
 						<width>1920</width>
 						<height>50</height>
-						<aligny>center</aligny>
 						<font>Font_Reg26</font>
 						<textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
 						<urlset>1</urlset>
 						<headlinecolor>grey</headlinecolor>
-						<highlightcolor>$VAR[HomeMenuWidgetTextVar]</highlightcolor>
 						<titlecolor>$VAR[HomeMenuWidgetTextVar]</titlecolor>
 						<scrollspeed>40</scrollspeed>
-						<visible>!Skin.HasSetting(ActorBirthdayRSS)</visible>
 					</control>
 				</control>
 			</control>
@@ -643,20 +627,6 @@
 					<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
 					<animation effect="rotatex" end="180" time="320" center="22" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>
 				</control>
-				<control type="label">
-					<left>165</left>
-					<top>3</top>
-					<width>1880</width>
-					<height>40</height>
-					<textoffsetx>0</textoffsetx>
-					<label>$INFO[Window(Home).Property(peopleborntoday.1.name)][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.1.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.2.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.2.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.3.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.3.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.4.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.4.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.5.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.5.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.6.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.6.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.7.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.7.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.8.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.8.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.9.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.9.job), • ][/COLOR]$INFO[Window(Home).Property(peopleborntoday.10.name), | ][COLOR=a9000000]$INFO[Window.Property(peopleborntoday.10.job), • ][/COLOR]</label>
-					<font>Font_Reg26</font>
-					<textcolor>FF666666</textcolor>
-					<scroll>true</scroll>
-					<wrapmultiline>false</wrapmultiline>
-					<scrollspeed>40</scrollspeed>
-					<visible>Skin.HasSetting(ActorBirthdayRSS)</visible>
-				</control>
 				<control type="rss">
 					<left>165</left>
 					<top>3</top>
@@ -666,10 +636,8 @@
 					<textcolor>a9000000</textcolor>
 					<urlset>1</urlset>
 					<headlinecolor>a9000000</headlinecolor>
-					<highlightcolor>a9000000</highlightcolor>
 					<titlecolor>dc2B60DE</titlecolor>
 					<scrollspeed>40</scrollspeed>
-					<visible>!Skin.HasSetting(ActorBirthdayRSS)</visible>
 				</control>
 				<control type="group">
 					<animation effect="rotatex" end="180" time="320" center="22" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow)">Conditional</animation>

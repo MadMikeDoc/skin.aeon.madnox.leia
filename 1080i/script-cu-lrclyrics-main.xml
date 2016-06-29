@@ -82,14 +82,11 @@
 				<height>98</height>
 				<textoffsetx>0</textoffsetx>
 				<textcolor>grey</textcolor>
-				<spinposx>-4</spinposx>
 				<subtype>page</subtype>
 				<onleft>110</onleft>
 				<onright>110</onright>
 				<ondown>110</ondown>
 				<onup>110</onup>
-				<spinwidth>60</spinwidth>
-				<spinheight>92</spinheight>
 				<visible>Control.IsVisible(110)</visible>
 				<animation effect="fade" time="800">WindowOpen</animation>
 				<animation effect="fade" time="160">WindowClose</animation>
@@ -162,15 +159,12 @@
 				<height>98</height>
 				<textoffsetx>0</textoffsetx>
 				<textcolor>grey</textcolor>
-				<spinposx>-4</spinposx>
 				<subtype>page</subtype>
 				<onleft>120</onleft>
 				<onright>120</onright>
 				<ondown>120</ondown>
 				<onup>120</onup>
 				<visible>Control.IsVisible(120)</visible>
-				<spinwidth>60</spinwidth>
-				<spinheight>92</spinheight>
 				<animation effect="fade" time="800">WindowOpen</animation>
 				<animation effect="fade" time="160">WindowClose</animation>
 			</control>

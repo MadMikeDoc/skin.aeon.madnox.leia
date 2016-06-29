@@ -155,7 +155,6 @@
 			<control type="grouplist">
 				<width>1920</width>
 				<align>center</align>
-				<aligny>center</aligny>
 				<itemgap>15</itemgap>
 				<orientation>horizontal</orientation>
 				<animation effect="fade" time="320" delay="320">Visible</animation>
@@ -168,7 +167,6 @@
 				<control type="grouplist">
 					<width>1882</width>
 					<align>right</align>
-					<aligny>center</aligny>
 					<orientation>horizontal</orientation>
 					<control type="label">
 						<width min="15" max="1920">auto</width>

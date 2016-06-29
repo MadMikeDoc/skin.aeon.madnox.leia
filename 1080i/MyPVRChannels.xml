@@ -213,11 +213,11 @@
 						<top>4</top>
 						<width>650</width>
 						<height>365</height>
-						<texture>$INFO[ListItem.Icon]</texture>		
-						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>						
-						<visible> IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb))  + !Player.HasVideo )</visible> 
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo</visible>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
-					</control> 
+					</control>
 					<control type="image">
 						<left>30</left>
 						<top>4</top>
@@ -232,11 +232,11 @@
 						<top>4</top>
 						<width>650</width>
 						<height>365</height>
-						<texture>new_pvr/mod/PVRSmallBG.png</texture>						
-						<visible> IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb) + !Player.HasVideo + IsEmpty(ListItem.Thumb)</visible>
+						<texture>new_pvr/mod/PVRSmallBG.png</texture>
+						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + IsEmpty(ListItem.Thumb)</visible>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
-					</control> 
+					</control>
 					<control type="image">
 						<left>-10</left>
 						<top>780</top>
@@ -301,7 +301,7 @@
 						<align>left</align>
 						<label>$INFO[VideoPlayer.Title]</label>
 						<font>Font_Reg22</font>
-						<scroll>yes</scroll>
+						<scroll>true</scroll>
 					</control>
 				</control>
 				<control type="group">
@@ -327,7 +327,7 @@
 						<label>$INFO[Container(50).ListItem.Title]</label>
 						<font>Font_Bold30</font>
 						<textcolor>$VAR[FontColorVar]</textcolor>
-						<scroll>yes</scroll>
+						<scroll>true</scroll>
 					</control>
 					<control type="label">
 						<left>10</left>
@@ -487,8 +487,8 @@
 						<width>653</width>
 						<height>396</height>
 						<texture>$INFO[ListItem.Icon]</texture>
-						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>						
-						<visible> IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb))  + !Player.HasVideo )</visible> 
+						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb))  + !Player.HasVideo</visible>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
 					</control> -->
 					<control type="image">
@@ -505,11 +505,11 @@
 						<top>-10</top>
 						<width>653</width>
 						<height>396</height>
-						<texture>new_pvr/mod/PVRSmallBG.png</texture>						
-						<visible> IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb) + !Player.HasVideo + IsEmpty(ListItem.Thumb)</visible>
+						<texture>new_pvr/mod/PVRSmallBG.png</texture>
+						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + IsEmpty(ListItem.Thumb)</visible>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
-					</control> 
+					</control>
 					<control type="image">
 						<left>-50</left>
 						<top>755</top>
@@ -575,7 +575,7 @@
 					<align>left</align>
 					<label>$INFO[VideoPlayer.Title]</label>
 					<font>Font_Reg22</font>
-					<scroll>yes</scroll>
+					<scroll>true</scroll>
 				</control>
 			</control>
 			<control type="group">
@@ -598,7 +598,7 @@
 						<label>$INFO[Container(51).ListItem.Title]</label>
 						<font>Font_Bold34</font>
 						<textcolor>$VAR[FontColorVar]</textcolor>
-						<scroll>yes</scroll>
+						<scroll>true</scroll>
 					</control>
 					<control type="label">
 						<left>45</left>
@@ -783,7 +783,7 @@
 							<height>140</height>
 							<aspectratio>stretch</aspectratio>
 							<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-							<texture border="40" colordiffuse="$VAR[AreaColorVar]">buttons/roundedbutton-focus.png</texture> 
+							<texture border="40" colordiffuse="$VAR[AreaColorVar]">buttons/roundedbutton-focus.png</texture>
 							<visible>true</visible>
 						</control>
 						<control type="label">
@@ -931,7 +931,7 @@
 				<ondown>52</ondown>
 				<pagecontrol>60</pagecontrol>
 				<preloaditems>2</preloaditems>
-				<viewtype label="Wall">icons</viewtype>
+				<viewtype label="Wall">icon</viewtype>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="165" width="460">
 					<control type="image">
@@ -1125,11 +1125,12 @@
 						<top>-2</top>
 						<width>358</width>
 						<height>198</height>
-						<texture>$INFO[ListItem.Icon]</texture>		
-						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>						
-						<visible> IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb))  + !Player.HasVideo )</visible> 
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+
+						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb))  + !Player.HasVideo</visible>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
-					</control> 
+					</control>
 					<control type="image">
 						<left>4</left>
 						<top>2</top>
@@ -1144,11 +1145,11 @@
 						<top>2</top>
 						<width>358</width>
 						<height>198</height>
-						<texture>new_pvr/mod/PVRSmallBG.png</texture>						
-						<visible> IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb) + !Player.HasVideo + IsEmpty(ListItem.Thumb)</visible>
+						<texture>new_pvr/mod/PVRSmallBG.png</texture>
+						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + IsEmpty(ListItem.Thumb)</visible>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
-					</control> 
+					</control>
 <!-- 					TV Thumb instead of Tv channel logo on right side - Wall view END -->
 				</control>
 				<control type="group">

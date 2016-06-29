@@ -66,7 +66,6 @@
 			<control type="grouplist">
 				<width>1920</width>
 				<align>center</align>
-				<aligny>center</aligny>
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<visible>!Skin.HasSetting(ClassicTopBar)</visible>
@@ -102,7 +101,6 @@
 					<width>450</width>
 					<height>1080</height>
 					<orientation>vertical</orientation>
-					<scroll>true</scroll>
 					<onleft>9001</onleft>
 					<onright>9001</onright>
 					<onup>9003</onup>

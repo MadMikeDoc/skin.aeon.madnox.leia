@@ -78,7 +78,6 @@
 					<onup>23</onup>
 					<ondown>12</ondown>
 					<include>Default_SettingButton</include>
-					<spinleft>-2</spinleft>
 				</control>
 				<control type="edit" id="12">
 					<left>387</left>
@@ -186,7 +185,6 @@
 					<onup>10</onup>
 					<ondown>17</ondown>
 					<include>Default_SettingButton</include>
-					<spinleft>-2</spinleft>
 				</control>
 				<control type="spincontrolex" id="17">
 					<left>387</left>
@@ -198,7 +196,6 @@
 					<onup>16</onup>
 					<ondown>18</ondown>
 					<include>Default_SettingButton</include>
-					<spinleft>-2</spinleft>
 				</control>
 				<control type="spincontrolex" id="18">
 					<left>387</left>
@@ -213,7 +210,6 @@
 					<onup>17</onup>
 					<ondown>23</ondown>
 					<include>Default_SettingButton</include>
-					<spinleft>-2</spinleft>
 				</control>
 				<control type="togglebutton" id="19">
 					<left>1491</left>
@@ -248,7 +244,6 @@
 					<onup>18</onup>
 					<ondown>22</ondown>
 					<include>Default_SettingButton</include>
-					<spinleft>-2</spinleft>
 				</control>
 				<control type="radiobutton" id="24">
 					<left>1491</left>

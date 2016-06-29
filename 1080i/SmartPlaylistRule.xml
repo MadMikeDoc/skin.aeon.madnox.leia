@@ -70,7 +70,6 @@
 					<onup>18</onup>
 					<ondown>17</ondown>
 					<include>Default_SettingButton</include>
-					<spinleft>-2</spinleft>
 				</control>
 				<control type="spincontrolex" id="16">
 					<left>744</left>
@@ -85,7 +84,6 @@
 					<onup>18</onup>
 					<ondown>17</ondown>
 					<include>Default_SettingButton</include>
-					<spinleft>-2</spinleft>
 				</control>
 			</control>
 			<control type="edit" id="17">

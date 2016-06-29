@@ -458,7 +458,7 @@
 						</control>
 					</focusedlayout>
 				</control>
-				
+
 		<!-- Letter-Scrollbar -->
 			<control type="image">
 				<left>420</left>
@@ -469,7 +469,7 @@
 				<texture>views/directory/sbl_backround.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6019) + Skin.HasSetting(AlphabetScrollbar)</visible>
-			</control>			
+			</control>
 			<control type="panel" id="6019">
 				<onup>900</onup>
 				<ondown>9000</ondown>
@@ -500,7 +500,7 @@
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
 			</control>
-				
+
 				<control type="image">
 					<left>1285</left>
 					<top>500</top>
@@ -715,7 +715,6 @@
 						<left>152</left>
 						<width>140</width>
 						<height>70</height>
-						<aspectratio aligny="bottom">keep</aspectratio>
 						<visible>!IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting)</visible>
 						<control type="image">
 							<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -979,7 +978,6 @@
 							<left>152</left>
 							<width>140</width>
 							<height>70</height>
-							<aspectratio aligny="bottom">keep</aspectratio>
 							<visible>!IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting)</visible>
 							<control type="image">
 								<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>

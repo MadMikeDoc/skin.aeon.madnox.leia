@@ -519,7 +519,7 @@
 					<align>left</align>
 					<textcolor>grey2</textcolor>
 					<label>[COLOR $VAR[TitleColorVar]]Awards:[/COLOR] $INFO[Window.Property(omdb.Awards)]</label>
-					<scroll delay="15000" repeat="5000">true</scroll>
+					<scroll>true</scroll>
 					<scrollspeed>70</scrollspeed>
 					<visible>Control.IsVisible(800) + !IsEmpty(Window.Property(omdb.Awards)) + !IsEmpty(Window.Property(discart))</visible>
 				</control>
@@ -532,7 +532,7 @@
 					<align>left</align>
 					<textcolor>grey2</textcolor>
 					<label>$INFO[Window.Property(omdb.Awards),[COLOR=$VAR[FocusTextureColorVar]]Awards:[/COLOR] ]</label>
-					<scroll delay="15000" repeat="5000">true</scroll>
+					<scroll>true</scroll>
 					<scrollspeed>70</scrollspeed>
 					<visible>Control.IsVisible(800) + !IsEmpty(Window.Property(omdb.Awards)) + IsEmpty(Window.Property(discart))</visible>
 				</control>
@@ -569,7 +569,6 @@
 						<width>1190</width>
 						<height>90</height>
 						<align>left</align>
-						<aligny>center</aligny>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
 						<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
@@ -1259,8 +1258,6 @@
 					<top>980</top>
 					<width>400</width>
 					<height>90</height>
-					<aligny>top</aligny>
-					<align>left</align>
 					<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 					<control type="label">
 						<font>font14</font>

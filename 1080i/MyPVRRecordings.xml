@@ -80,7 +80,7 @@
 						<label>$INFO[Container(50).ListItem.Title]</label>
 						<font>Font_Bold34</font>
 						<textcolor>$VAR[FontColorVar]</textcolor>
-						<scroll>yes</scroll>
+						<scroll>true</scroll>
 					</control>
 					<control type="label">
 						<left>10</left>
