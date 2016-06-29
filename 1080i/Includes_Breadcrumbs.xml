@@ -25,9 +25,8 @@
 			<control type="image">
 				<width>1920</width>
 				<height>87</height>
-				<texture flipy="true">home/nav_back.png</texture>
+				<texture colordiffuse="$VAR[ExtendedColorVar]" flipy="true">home/nav_back.png</texture>
 				<visible>!Skin.HasSetting(FadedTopBar)</visible>
-				<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
 			</control>
 			<control type="image">
 				<top>-40</top>
@@ -42,8 +41,7 @@
 			<left>-140</left>
 			<width>794</width>
 			<height>87</height>
-			<texture flipy="true" flipx="true">home/timepanel_mid.png</texture>
-			<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
+			<texture colordiffuse="$VAR[ExtendedColorVar]" flipy="true" flipx="true">home/timepanel_mid.png</texture>
 			<include>Animation_VisibleChange400</include>
 			<visible>Skin.HasSetting(ClassicTopBar) + Skin.HasSetting(breadcrumbslabel)</visible>
 			<animation effect="slide" start="-750" end="0" time="240">VisibleChange</animation>
@@ -64,12 +62,11 @@
 				<width>36</width>
 				<height>36</height>
 				<top>-2</top>
-				<texture>$VAR[Colortdefaulticons]DefaultFolderBack.png</texture>
+				<texture colordiffuse="$VAR[TitleColorVar]">$VAR[Colortdefaulticons]DefaultFolderBack.png</texture>
 				<animation effect="slide" end="-9,4" center="auto" time="0" condition="true">Conditional</animation>
 				<animation effect="rotate" end="-90" center="auto" delay="240" time="640" condition="Window.IsActive(musicinformation) | Control.HasFocus(7000) | Control.IsVisible(508) | Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(510) | Control.IsVisible(57) | Control.IsVisible(516) | Control.IsVisible(509) | [Control.IsVisible(500) + !Skin.HasSetting(WallVertical)]">Conditional</animation>
 				<animation effect="rotate" end="-180" center="auto" delay="240" time="640" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 				<animation effect="rotate" start="-90" end="180" center="auto" delay="240" time="640" condition="Control.IsVisible(503) + [Skin.HasSetting(landscapeonelogo) + Container.Content(movies)]">Conditional</animation>
-				<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
 				<include>Animation_VisibleChange400</include>
 				<visible>Skin.HasSetting(TopBarToolTip)</visible>
 			</control>
@@ -77,8 +74,7 @@
 				<width>54</width>
 				<height>38</height>
 				<aspectratio>keep</aspectratio>
-				<texture>$VAR[BreadcrumbsIconVar]</texture>
-				<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[TitleColorVar]">$VAR[BreadcrumbsIconVar]</texture>
 				<include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
 				<visible>Skin.HasSetting(breadcrumbslabel) + ![Skin.HasSetting(GlobalNowPlaying) + Player.HasMedia]</visible>
 			</control>
@@ -224,8 +220,7 @@
 				<control type="image">
 					<width>904</width>
 					<height>87</height>
-					<texture flipy="true">home/timepanel_mid.png</texture>
-					<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ExtendedColorVar]" flipy="true">home/timepanel_mid.png</texture>
 					<include>Animation_VisibleChange400</include>
 					<visible>Skin.HasSetting(ClassicTopBar)</visible>
 					<animation effect="slide" start="750" end="0" time="240">VisibleChange</animation>
@@ -242,8 +237,7 @@
 					<width>600</width>
 					<height>87</height>
 					<visible>Skin.HasSetting(ClassicTopBar)</visible>
-					<texture border="70,0,70,0">home/submenubar.png</texture>
-					<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ExtendedColorVar]" border="70,0,70,0">home/submenubar.png</texture>
 				</control>
 				<control type="grouplist">
 					<width>1920</width>

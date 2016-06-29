@@ -352,28 +352,28 @@
 		<focusedcolor>white6</focusedcolor>
 	</include>
 	<include name="ShutdownNoGlow">
-		<texturefocus>dialogs/shutdown_focus.png</texturefocus>
-		<texturenofocus>dialogs/shutdown_nofocus.png</texturenofocus>
-		<alttexturefocus>dialogs/shutdown_focus.png</alttexturefocus>
-		<alttexturenofocus>dialogs/shutdown_nofocus.png</alttexturenofocus>
+		<texturefocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_focus.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_nofocus.png</texturenofocus>
+		<alttexturefocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_focus.png</alttexturefocus>
+		<alttexturenofocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_nofocus.png</alttexturenofocus>
 	</include>
 	<include name="ShutdownGlow">
-		<texturefocus>dialogs/shutdown_focus_glow.png</texturefocus>
-		<texturenofocus>dialogs/shutdown_nofocus_glow.png</texturenofocus>
-		<alttexturefocus>dialogs/shutdown_focus_glow.png</alttexturefocus>
-		<alttexturenofocus>dialogs/shutdown_nofocus_glow.png</alttexturenofocus>
+		<texturefocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_focus_glow.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_nofocus_glow.png</texturenofocus>
+		<alttexturefocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_focus_glow.png</alttexturefocus>
+		<alttexturenofocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_nofocus_glow.png</alttexturenofocus>
 	</include>
 	<include name="ShutdownNoGlowAlt">
-		<texturefocus>dialogs/shutdown_focus2.png</texturefocus>
-		<texturenofocus>dialogs/shutdown_nofocus2.png</texturenofocus>
-		<alttexturefocus>dialogs/shutdown_focus2.png</alttexturefocus>
-		<alttexturenofocus>dialogs/shutdown_nofocus2.png</alttexturenofocus>
+		<texturefocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_focus2.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_nofocus2.png</texturenofocus>
+		<alttexturefocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_focus2.png</alttexturefocus>
+		<alttexturenofocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_nofocus2.png</alttexturenofocus>
 	</include>
 	<include name="ShutdownGlowAlt">
-		<texturefocus>dialogs/shutdown_focus_glow2.png</texturefocus>
-		<texturenofocus>dialogs/shutdown_nofocus_glow2.png</texturenofocus>
-		<alttexturefocus>dialogs/shutdown_focus_glow2.png</alttexturefocus>
-		<alttexturenofocus>dialogs/shutdown_nofocus_glow2.png</alttexturenofocus>
+		<texturefocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_focus_glow2.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_nofocus_glow2.png</texturenofocus>
+		<alttexturefocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_focus_glow2.png</alttexturefocus>
+		<alttexturenofocus colordiffuse="$VAR[SpotColorVar2]">dialogs/shutdown_nofocus_glow2.png</alttexturenofocus>
 	</include>
 	<include name="Objects_ContextMenuButton">
 		<width>462</width>
@@ -386,7 +386,6 @@
 		<textcolor>context</textcolor>
 		<disabledcolor>$VAR[SpotColorVar2]</disabledcolor>
 		<focusedcolor>white2</focusedcolor>
-		<colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
 		<include condition="!Skin.HasSetting(DisableGlowbar)">ShutdownGlowAlt</include>
 		<include condition="Skin.HasSetting(DisableGlowbar)">ShutdownNoGlowAlt</include>
 	</include>
@@ -401,7 +400,6 @@
 		<textcolor>context</textcolor>
 		<disabledcolor>$VAR[SpotColorVar2]</disabledcolor>
 		<focusedcolor>white2</focusedcolor>
-		<colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
 		<include condition="!Skin.HasSetting(DisableGlowbar)">ShutdownGlow</include>
 		<include condition="Skin.HasSetting(DisableGlowbar)">ShutdownNoGlow</include>
 	</include>
@@ -731,83 +729,6 @@
 		<onload>Skin.SetString(TriPanelPosition,1)</onload>
 		<onload>Skin.SetBool(GlobalNowPlaying)</onload>
 		<onload>Skin.SetBool(altoverlayinfowall)</onload>
-		<onload condition="!Library.HasContent(MusicVideos)">Skin.SetString(MusicVideosHomeItem.Disable,1)</onload>
-		<onload condition="!Library.HasContent(Pictures)">Skin.SetString(PicturesHomeItem.Disable,1)</onload>
-		<onload condition="!Library.HasContent(Music)">Skin.SetString(MusicHomeItem.Disable,1)</onload>
-		<onload>Skin.SetString(FavouritesHomeItem.Disable,1)</onload>
-		<onload>Skin.SetString(LiveTVHomeItem.Disable,1)</onload>
-		<onload>Skin.SetString(TVGuideHomeItem.Disable,1)</onload>
-		<onload>Skin.SetString(ProgramsHomeItem.Disable,1)</onload>
-		<onload>Skin.SetString(FeaturedHomeItem.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub8_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub8_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub8_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub8_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub8_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub9_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub9_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub9_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub9_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub9_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub0_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub0_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub0_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub0_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub0_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub0_6.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub0_7.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub0_8.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub1_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub1_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub1_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub1_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub1_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub2_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub2_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub2_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub2_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub2_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub3_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub3_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub3_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub3_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub3_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub4_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub4_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub4_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub4_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub4_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub5_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub5_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub5_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub5_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub5_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub6_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub6_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub6_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub6_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub6_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub7_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub7_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub7_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub7_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub7_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub8_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub8_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub8_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub8_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub8_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub9_1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub9_2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub9_3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub9_4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomSub9_5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomHomeItem1.Disable,1)</onload>
-		<onload>Skin.SetString(CustomHomeItem2.Disable,1)</onload>
-		<onload>Skin.SetString(CustomHomeItem3.Disable,1)</onload>
-		<onload>Skin.SetString(CustomHomeItem4.Disable,1)</onload>
-		<onload>Skin.SetString(CustomHomeItem5.Disable,1)</onload>
-		<onload>Skin.SetString(CustomHomeItem6.Disable,1)</onload>
 		<onload>Skin.SetBool(firstrun4.0)</onload>
 	</include>
 	<include name="DelayAnimations">
@@ -1897,8 +1818,7 @@
 					<top>110</top>
 					<width>180</width>
 					<height>36</height>
-					<texture>$INFO[VideoPlayer.Rating,player_stars/,.png]</texture>
-					<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[TitleColorVar]">$INFO[VideoPlayer.Rating,player_stars/,.png]</texture>
 				</control>
 			</control>
 		</control>
