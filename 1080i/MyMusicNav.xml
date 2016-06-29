@@ -543,8 +543,7 @@
 					</animation>
 					<control type="image">
 						<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
-						<texture flipy="true" background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[ListAlbumVar]</texture>
-						<colordiffuse>61FFFFFF</colordiffuse>
+						<texture colordiffuse="61FFFFFF" flipy="true" background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[ListAlbumVar]</texture>
 					</control>
 				</control>
 			</control>
