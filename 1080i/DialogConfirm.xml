@@ -12,8 +12,7 @@
 		<control type="image">
 			<width>790</width>
 			<height>500</height>
-			<texture>dialogs/dialog_back.png</texture>
-			<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+			<texture colordiffuse="$VAR[DialogColorVar]">dialogs/dialog_back.png</texture>
 		</control>
 		<control type="progress">
 			<description>Progressbar</description>

@@ -50,8 +50,7 @@
 				<top>-24</top>
 				<width>776</width>
 				<height>372</height>
-				<texture border="22">dialogs/scan_backg.png</texture>
-				<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[DialogColorVar]" border="22">dialogs/scan_backg.png</texture>
 			</control>
 			<include>Dialogs_Settings</include>
 			<control type="panel" id="10">

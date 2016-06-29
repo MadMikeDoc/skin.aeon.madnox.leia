@@ -2029,8 +2029,7 @@
                 <top>100</top>
                 <width>590</width>
                 <height>870</height>
-                <texture border="20">osd/osd_settings_back.png</texture>
-                <colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+                <texture colordiffuse="$VAR[DialogColorVar]" border="20">osd/osd_settings_back.png</texture>
             </control>
             <control type="button" id="810">
                 <include>HiddenObject</include>
@@ -2541,33 +2540,30 @@
 					<control type="button" id="70027">
 						<width>100</width>
 						<height>100</height>
-						<texturefocus>special://skin/extras/BigIcons/ButtonTxt.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/ButtonTxt.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<label>31109</label>
 						<font>-</font>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<onclick>ActivateWindow(Teletext)</onclick>
 						<onclick>Dialog.Close(VideoOSD)</onclick>
 					</control>
 					<control type="button" id="70028">
 						<width>100</width>
 						<height>100</height>
-						<texturefocus>special://skin/extras/BigIcons/ButtonPlaylist.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/ButtonPlaylist.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<label>31107</label>
 						<font>-</font>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<onclick>ActivateWindow(PVROSDChannels)</onclick>
 						<onclick>Dialog.Close(VideoOSD)</onclick>
 					</control>
 					<control type="button" id="70029">
 						<width>100</width>
 						<height>100</height>
-						<texturefocus>special://skin/extras/BigIcons/Gears.png</texturefocus>
+						<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/Gears.png</texturefocus>
 						<texturenofocus>-</texturenofocus>
 						<label>31026</label>
 						<font>-</font>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<onclick>ActivateWindow(1118)</onclick>
 					</control>
 				</control>
@@ -2884,31 +2880,28 @@
 				<control type="button" id="700">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/Book.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/Book.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>298</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>ActivateWindow(videobookmarks)</onclick>
 				</control>
 				<control type="button" id="701">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/Speaker.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/Speaker.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>13396</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>ActivateWindow(osdaudiosettings)</onclick>
 				</control>
 				<control type="button" id="702">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/Camcorder.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/Camcorder.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>13395</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>ActivateWindow(osdvideosettings)</onclick>
 				</control>
 			</control>
@@ -2930,65 +2923,59 @@
 				<control type="button" id="600">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/ButtonFirst.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/ButtonFirst.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>210</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
 				<control type="button" id="601">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/ButtonFRW.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/ButtonFRW.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>31354</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>PlayerControl(Rewind)</onclick>
 				</control>
 				<control type="togglebutton" id="602">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/ButtonPause.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/ButtonPause.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<alttexturefocus>special://skin/extras/BigIcons/ButtonPlay.png</alttexturefocus>
+					<alttexturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/ButtonPlay.png</alttexturefocus>
 					<alttexturenofocus>-</alttexturenofocus>
 					<label>31351</label>
 					<altlabel>208</altlabel>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 					<onclick>PlayerControl(Play)</onclick>
 				</control>
 				<control type="button" id="603">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/ButtonStop.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/ButtonStop.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>31352</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>PlayerControl(Stop)</onclick>
 				</control>
 				<control type="button" id="604">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/ButtonFFW.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/ButtonFFW.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>31353</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>PlayerControl(Forward)</onclick>
 				</control>
 				<control type="button" id="605">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/ButtonEnd.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/ButtonEnd.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>209</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
 			</control>
@@ -3011,10 +2998,9 @@
 					<height>100</height>
 					<label>31356</label>
 					<font>-</font>
-					<texturefocus>special://skin/extras/BigIcons/Subtitle.png</texturefocus>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/Subtitle.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
-					<alttexturefocus>special://skin/extras/BigIcons/Subtitle.png</alttexturefocus>
+					<alttexturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/Subtitle.png</alttexturefocus>
 					<alttexturenofocus>-</alttexturenofocus>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(SubtitleSearch)</onclick>
@@ -3022,11 +3008,10 @@
 				<control type="button" id="704">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/dvdmenu.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/dvdmenu.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>31355</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>PlayerControl(ShowVideoMenu)</onclick>
 					<enable>VideoPlayer.HasMenu</enable>
 					<animation effect="fade" start="100" end="50" time="80" condition="!VideoPlayer.HasMenu">Conditional</animation>
@@ -3034,11 +3019,10 @@
 				<control type="button" id="706">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/Button3d.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/Button3d.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>31218</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>StereoMode</onclick>
 					<enable>VideoPlayer.IsStereoscopic</enable>
 					<animation effect="fade" start="100" end="50" time="80" condition="VideoPlayer.IsStereoscopic">Conditional</animation>
@@ -3046,11 +3030,10 @@
 				<control type="button" id="705">
 					<width>100</width>
 					<height>100</height>
-					<texturefocus>special://skin/extras/BigIcons/Gears.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">special://skin/extras/BigIcons/Gears.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>31026</label>
 					<font>-</font>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<onclick>ActivateWindow(1118)</onclick>
 				</control>
 			</control>

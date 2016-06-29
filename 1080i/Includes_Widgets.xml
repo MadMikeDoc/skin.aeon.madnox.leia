@@ -1327,7 +1327,6 @@
 					<top>$PARAM[topCase]</top>
 					<width>$PARAM[widthCase]</width>
 					<height>$PARAM[heightCase]</height>
-					<colordiffuse>$VAR[HomeWidgetTransVar]</colordiffuse>
 					<texture>$PARAM[Case]</texture>
 				</control>
 			</control>
@@ -2129,9 +2128,8 @@
 						<top>660</top>
 						<width>1650</width>
 						<height>402</height>
-						<texture border="50">featured/panel_featured_shadow.png</texture>
+						<texture colordiffuse="$VAR[ColorDiffuseVar]" border="50">featured/panel_featured_shadow.png</texture>
 						<animation effect="fade" start="100" end="80" time="2000" pulse="true" condition="true">conditional</animation>
-						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 						<include>Animation_VisibleChange400</include>
 					</control>
@@ -2140,9 +2138,8 @@
 						<top>660</top>
 						<width>1650</width>
 						<height>402</height>
-						<texture border="50">featured/panel_featured.png</texture>
+						<texture colordiffuse="$VAR[DialogColorVar]" border="50">featured/panel_featured.png</texture>
 						<animation effect="fade" start="100" end="55" time="0" condition="Skin.HasSetting(nowplayingpanel)">Conditional</animation>
-						<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
 					</control>
 				</control>
 				<control type="group">
@@ -2218,8 +2215,7 @@
 						<top>681</top>
 						<width>1608</width>
 						<height>360</height>
-						<texture border="50">featured/panel_featured_overlay.png</texture>
-						<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[DialogColorVar]" border="50">featured/panel_featured_overlay.png</texture>
 					</control>
 				</control>
 			</control>
@@ -2242,9 +2238,8 @@
 					<top>660</top>
 					<width>1650</width>
 					<height>402</height>
-					<texture border="50">featured/panel_featured_shadow.png</texture>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]" border="50">featured/panel_featured_shadow.png</texture>
 					<animation effect="fade" start="100" end="80" time="2000" pulse="true" condition="true">conditional</animation>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 					<include>Animation_VisibleChange400</include>
 				</control>
@@ -2253,9 +2248,8 @@
 					<top>660</top>
 					<width>1650</width>
 					<height>402</height>
-					<texture border="50">featured/panel_featured.png</texture>
+					<texture colordiffuse="$VAR[DialogColorVar]" border="50">featured/panel_featured.png</texture>
 					<animation effect="fade" start="100" end="60" time="0" condition="true">Conditional</animation>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
 				</control>
 				<control type="group">
 					<animation effect="zoom" start="100" end="85" time="640" easing="inout" tween="circle" center="960,500" condition="true">Conditional</animation>
@@ -2281,8 +2275,7 @@
 						<top>600</top>
 						<width>425</width>
 						<height>400</height>
-						<texture>thumbs/boxes/cd_shadow_light_shadow.png</texture>
-						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+						<texture colordiffuse="$VAR[ColorDiffuseVar]">thumbs/boxes/cd_shadow_light_shadow.png</texture>
 						<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 						<animation effect="fade" start="100" end="80" time="2000" pulse="true" condition="true">conditional</animation>
 						<include>Animation_VisibleChange400</include>
@@ -2348,8 +2341,7 @@
 					<top>681</top>
 					<width>1608</width>
 					<height>360</height>
-					<texture border="50">featured/panel_featured_overlay.png</texture>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[DialogColorVar]" border="50">featured/panel_featured_overlay.png</texture>
 				</control>
 			</control>
 		</control>
@@ -2368,8 +2360,7 @@
 					<top>691</top>
 					<width>615</width>
 					<height>359</height>
-					<texture>common/black.png</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">common/black.png</texture>
 					<bordertexture border="15">home/nowplaying/OverlayDialogBackground.png</bordertexture>
 					<bordersize>15</bordersize>
 				</control>
@@ -2507,9 +2498,8 @@
 					<top>656</top>
 					<width>423</width>
 					<height>420</height>
-					<texture>thumbs/cd_shadow_glow.png</texture>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">thumbs/cd_shadow_glow.png</texture>
 					<animation effect="fade" start="100" end="80" time="2000" pulse="true" condition="true">conditional</animation>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				</control>
 				<control type="group">
@@ -2728,8 +2718,7 @@
 			<control type="image">
 				<width>425</width>
 				<height>398</height>
-				<texture>thumbs/boxes/cd_shadow_light_shadow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">thumbs/boxes/cd_shadow_light_shadow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<animation effect="fade" start="100" end="80" time="2000" pulse="true" condition="true">conditional</animation>
 				<include>Animation_VisibleChange400</include>
@@ -2763,16 +2752,14 @@
 			<control type="image">
 				<width>1860</width>
 				<height>87</height>
-				<texture flipy="true" flipx="true" border="0,0,80,0">$VAR[TimePanelImageVar]</texture>
-				<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ExtendedColorVar]" flipy="true" flipx="true" border="0,0,80,0">$VAR[TimePanelImageVar]</texture>
 				<animation effect="rotatex" end="180" time="320" center="20" tween="cubic" easing="inout" condition="![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">Conditional</animation>
 				<visible>!Skin.HasSetting(alternativerss)</visible>
 			</control>
 			<control type="image">
 				<width>1920</width>
 				<height>87</height>
-				<texture flipy="true" flipx="true">$VAR[NavBarImageVar]</texture>
-				<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ExtendedColorVar]" flipy="true" flipx="true">$VAR[NavBarImageVar]</texture>
 				<animation effect="rotatex" end="180" time="320" center="20" tween="cubic" easing="inout" condition="![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">Conditional</animation>
 				<visible>Skin.HasSetting(alternativerss)</visible>
 			</control>

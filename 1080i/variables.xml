@@ -718,7 +718,7 @@
 		<value>special://skin/backgrounds/tvshows/</value>
 	</variable>
 	<variable name="AddonBrowserFanartVar">
-		<value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value condition="!IsEmpty(Skin.String(AddonBrowserBackground))">$INFO[Skin.String(AddonBrowserBackground)]</value>
 		<value>special://skin/backgrounds/programs/</value>
 	</variable>

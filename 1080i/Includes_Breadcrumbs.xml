@@ -249,8 +249,7 @@
 						<width>34</width>
 						<height>42</height>
 						<aspectratio>keep</aspectratio>
-						<texture>breadcrumbs/items.png</texture>
-						<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[TitleColorVar]">breadcrumbs/items.png</texture>
 						<include>Animation_WindowFade200</include>
 					</control>
 					<control type="label">
@@ -261,8 +260,7 @@
 						<width>34</width>
 						<height>42</height>
 						<aspectratio>keep</aspectratio>
-						<texture>breadcrumbs/pages.png</texture>
-						<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[TitleColorVar]">breadcrumbs/pages.png</texture>
 						<include>Animation_WindowFade200</include>
 						<visible>!Stringcompare(Container.NumPages,1)</visible>
 					</control>

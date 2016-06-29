@@ -57,8 +57,7 @@
 					<top>918</top>
 					<width>30</width>
 					<height>20</height>
-					<texture>arrowdown.png</texture>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[FocusTextureColorVar]">arrowdown.png</texture>
 					<include>Animation_VisibleChange200</include>
 					<visible>Container(5).HasNext</visible>
 				</control>
@@ -77,11 +76,10 @@
 				<height>74</height>
 				<textoffsetx>20</textoffsetx>
 				<textoffsety>18</textoffsety>
-				<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<font>Font_Bold34_Caps</font>
 				<textcolor>grey</textcolor>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<focusedcolor>white2</focusedcolor>
 			</control>
 			<control type="label" id="2">
@@ -143,8 +141,7 @@
 			<textoffsety>35</textoffsety>
 			<align>left</align>
 			<aligny>top</aligny>
-			<texturefocus>views/tripanel/listselect_fo.png</texturefocus>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<font>Font_Bold34_Caps</font>
 			<textcolor>grey</textcolor>

@@ -25,8 +25,7 @@
 				<top>480</top>
 				<width>1350</width>
 				<height>575</height>
-				<texture border="50">osd/osd_settings_back_glow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" border="50">osd/osd_settings_back_glow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>Animation_VisibleChange400</include>
 				<include>PanelGlowFade</include>
