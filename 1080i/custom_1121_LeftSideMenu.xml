@@ -223,6 +223,13 @@
 					<visible>![Window.IsActive(videos) + !IsEmpty(Skin.String(DisableKodiFlixVL))]</visible>
 					<visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
 				</item>
+				<item>
+					<label>$LOCALIZE[31133]</label>
+					<onclick>Container.SetViewMode(820)</onclick>
+					<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+					<visible>![Window.IsActive(videos) + !IsEmpty(Skin.String(DisableKodiFlixVL))]</visible>
+					<visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
+				</item>
 				<!-- MAD - New ViewSets - WIP -->
 				<item>
 					<label>Sets</label>
@@ -251,6 +258,13 @@
 				<item>
 					<label>Shelf 3D</label>
 					<onclick>Container.SetViewMode(750)</onclick>
+					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
+					<visible>![Window.IsActive(videos) + !IsEmpty(Skin.String(DisableShelfVL))]</visible>
+					<visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
+				</item>
+				<item>
+					<label>Shelf 3D Right</label>
+					<onclick>Container.SetViewMode(708)</onclick>
 					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
 					<visible>![Window.IsActive(videos) + !IsEmpty(Skin.String(DisableShelfVL))]</visible>
 					<visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
