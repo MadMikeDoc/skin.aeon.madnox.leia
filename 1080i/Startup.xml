@@ -54,8 +54,7 @@
 			<top>603</top>
 			<width>74</width>
 			<height>74</height>
-			<texture>spinner.png</texture>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">spinner.png</texture>
 			<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="true">Conditional</animation>
 			<animation effect="fade" start="70" time="1200" condition="true" pulse="true">Conditional</animation>
 			<!--visible>Skin.HasSetting(DisableIntro)</visible-->

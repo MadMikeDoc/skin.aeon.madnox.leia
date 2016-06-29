@@ -80,24 +80,13 @@
 		<font>Font_Reg29</font>
 		<textcolor>white2</textcolor>
 	</default>
-	<default type="progress_cache">
-		<left>0</left>
-		<top>0</top>
-		<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-		<texturebg>dialogs/progress/progress_back_cache.png</texturebg>
-		<lefttexture border="1">dialogs/progress/progress_left_cache.png</lefttexture>
-		<midtexture border="1">dialogs/progress/progress_mid_cache.png</midtexture>
-		<righttexture border="1">dialogs/progress/progress_right_cache.png</righttexture>
-		<overlaytexture>-</overlaytexture>
-	</default>
 	<default type="progress">
 		<left>0</left>
 		<top>0</top>
-		<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-		<texturebg>dialogs/progress/progress_back.png</texturebg>
-		<lefttexture border="1">dialogs/progress/progress_left.png</lefttexture>
-		<midtexture border="1">dialogs/progress/progress_mid.png</midtexture>
-		<righttexture border="1">dialogs/progress/progress_right.png</righttexture>
+		<texturebg colordiffuse="$VAR[ColorDiffuseVar]">dialogs/progress/progress_back.png</texturebg>
+		<lefttexture colordiffuse="$VAR[ColorDiffuseVar]" border="1">dialogs/progress/progress_left.png</lefttexture>
+		<midtexture colordiffuse="$VAR[ColorDiffuseVar]" border="1">dialogs/progress/progress_mid.png</midtexture>
+		<righttexture colordiffuse="$VAR[ColorDiffuseVar]" border="1">dialogs/progress/progress_right.png</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
 	<default type="spincontrol">
@@ -112,14 +101,13 @@
 		<font>-</font>
 		<textcolor>white2</textcolor>
 		<disabledcolor>grey3</disabledcolor>
-		<textureup>settings/spin-up.png</textureup>
-		<texturedown>settings/spin-down.png</texturedown>
-		<textureupfocus>settings/spin-up-focus.png</textureupfocus>
-		<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
+		<textureup colordiffuse="$VAR[ColorDiffuseVar]">settings/spin-up.png</textureup>
+		<texturedown colordiffuse="$VAR[ColorDiffuseVar]">settings/spin-down.png</texturedown>
+		<textureupfocus colordiffuse="$VAR[ColorDiffuseVar]">settings/spin-up-focus.png</textureupfocus>
+		<texturedownfocus colordiffuse="$VAR[ColorDiffuseVar]">settings/spin-down-focus.png</texturedownfocus>
 		<pulseonselect>yes</pulseonselect>
 		<reverse>yes</reverse>
 		<subtype>page</subtype>
-		<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 	</default>
 	<default type="spincontrolex">
 		<left>0</left>
@@ -128,7 +116,7 @@
 		<height>63</height>
 		<textoffsetx>10</textoffsetx>
 		<aligny>center</aligny>
-		<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+		<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
 		<font>Font_Reg29</font>
 		<textcolor>white2</textcolor>
@@ -136,11 +124,10 @@
 		<disabledcolor>grey3</disabledcolor>
 		<spinwidth>60</spinwidth>
 		<spinheight>92</spinheight>
-		<textureup>settings/spin-up.png</textureup>
-		<texturedown>settings/spin-down.png</texturedown>
-		<textureupfocus>settings/spin-up-focus.png</textureupfocus>
-		<texturedownfocus>settings/spin-down-focus.png</texturedownfocus>
-		<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+		<textureup colordiffuse="$VAR[FocusTextureColorVar]">settings/spin-up.png</textureup>
+		<texturedown colordiffuse="$VAR[FocusTextureColorVar]">settings/spin-down.png</texturedown>
+		<textureupfocus colordiffuse="$VAR[FocusTextureColorVar]">settings/spin-up-focus.png</textureupfocus>
+		<texturedownfocus colordiffuse="$VAR[FocusTextureColorVar]">settings/spin-down-focus.png</texturedownfocus>
 		<focusedcolor>white</focusedcolor>
 		<pulseonselect>yes</pulseonselect>
 		<reverse>yes</reverse>
@@ -182,15 +169,14 @@
 		<height>52</height>
 		<textoffsetx>30</textoffsetx>
 		<aligny>center</aligny>
-		<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-		<texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="3">osd/osd_settings_buttonnf.png</texturenofocus>
 		<font>Font_Reg29</font>
 		<textcolor>white3</textcolor>
 		<selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<sliderwidth>150</sliderwidth>
 		<sliderheight>20</sliderheight>
-		<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 		<texturesliderbar border="22,1,22,1">settings/slider_back.png</texturesliderbar>
 		<textureslidernib>settings/orb_nofo.png</textureslidernib>
 		<textureslidernibfocus>settings/orb_fo.png</textureslidernibfocus>

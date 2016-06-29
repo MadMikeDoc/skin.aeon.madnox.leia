@@ -10,8 +10,7 @@
 				<top>472</top>
 				<width>1920</width>
 				<height>608</height>
-				<texture>views/showcase_floor.png</texture>
-				<colordiffuse>$VAR[ExtendedColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ExtendedColorDiffuseVar]">views/showcase_floor.png</texture>
 			</control>
 			<control type="group" id="8860">
 				<visible>![Control.IsVisible(512) | Control.IsVisible(510) | Control.IsVisible(550)]</visible>
@@ -22,20 +21,18 @@
 					<top>874</top>
 					<width>1490</width>
 					<height>206</height>
-					<texture>views/showcase_spot.png</texture>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">views/showcase_spot.png</texture>
 					<animation effect="fade" start="100" end="50" time="240" condition="!Control.IsVisible(52) + !Control.IsVisible(53) + [ControlGroup(9000).HasFocus | Control.HasFocus(60) | Control.HasFocus(70) | Control.HasFocus(62) | Control.HasFocus(61)]">Conditional</animation>
 					<animation effect="slide" time="160" end="-585" tween="cubic" condition="Control.IsVisible(57)">Conditional</animation>
 					<animation effect="slide" time="160" end="-120" tween="cubic" condition="Control.IsVisible(57) + Skin.HasSetting(smallshiftview)">Conditional</animation>
 					<animation effect="slide" time="160" end="185" tween="cubic" condition="Control.IsVisible(52) | Control.IsVisible(53)">Conditional</animation>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 				</control>
 				<control type="image">
 					<left>1040</left>
 					<top>874</top>
 					<width>880</width>
 					<height>206</height>
-					<texture>views/list_spot.png</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">views/list_spot.png</texture>
 					<animation effect="slide" time="160" end="190" tween="cubic" condition="Control.IsVisible(52) | Control.IsVisible(53)">Conditional</animation>
 					<animation effect="slide" time="160" end="60" tween="cubic" condition="Control.IsVisible(50) + Window.IsActive(music)">Conditional</animation>
 					<visible>[Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(53)]</visible>
@@ -65,10 +62,9 @@
 				<top>874</top>
 				<width>1920</width>
 				<height>206</height>
-				<texture>views/panel_spot.png</texture>
+				<texture colordiffuse="$VAR[SpotColorVar2]">views/panel_spot.png</texture>
 				<include>Animation_OpenClose_Furniture</include>
 				<visible>[Control.IsVisible(518) + !Skin.HasSetting(infopanelfanart)]| Control.IsVisible(52) | Control.IsVisible(53) | Control.IsVisible(50) | Control.IsVisible(500) | [Control.IsVisible(512) + !Skin.HasSetting(addonwallaltbackground)] | Control.IsVisible(500) | Control.IsVisible(550)| Control.IsVisible(508)</visible>
-				<colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
 				<animation effect="zoom" start="0,874,1920,206" end="0,874,2020,206" time="0" reversible="false" condition="Control.IsVisible(518)">Conditional</animation>
 			</control>
 			<include>Neon_Floor</include>
@@ -90,8 +86,7 @@
 			<top>874</top>
 			<width>1920</width>
 			<height>206</height>
-			<texture>views/panel_spot.png</texture>
-			<colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
+			<texture colordiffuse="$VAR[SpotColorVar2]">views/panel_spot.png</texture>
 		</control>
 	</include>
 	<include name="FloorLabels">
@@ -277,17 +272,15 @@
 			<control type="image">
 				<width>130</width>
 				<height>80</height>
-				<texture>dialogs/dialog_back_shadow.png</texture>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">dialogs/dialog_back_shadow.png</texture>
 				<include>PanelGlowFade</include>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 			</control>
 			<control type="image">
 				<width>130</width>
 				<height>80</height>
-				<texture>dialogs/dialog_back.png</texture>
+				<texture colordiffuse="$VAR[DialogColorVar]">dialogs/dialog_back.png</texture>
 				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-				<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
 			</control>
 			<control type="label">
 				<left>15</left>
@@ -306,12 +299,11 @@
 			<top>-100</top>
 			<width>1920</width>
 			<height>608</height>
-			<texture flipy="true">views/showcase_glow.png</texture>
+			<texture colordiffuse="$VAR[ExtendedColorDiffuseVar]" flipy="true">views/showcase_glow.png</texture>
 			<visible>!Control.HasFocus(109)</visible>
 			<include>Animation_OpenClose_Furniture</include>
 			<include>Animation_VisibleChange400</include>
 			<visible>![Control.IsVisible(516) | Control.IsVisible(514) | Control.IsVisible(511) | Control.IsVisible(506) | Control.IsVisible(8858) | [Skin.HasSetting(addonwallaltbackground) + Control.IsVisible(512)]]</visible>
-			<colordiffuse>$VAR[ExtendedColorDiffuseVar]</colordiffuse>
 			<include>Animation_VisibleChange400</include>
 			<visible>[Skin.HasSetting(ExtendedGlowMode) + !Skin.HasSetting(DisableGlowbar)] + ![Control.IsVisible(518) + Skin.HasSetting(infopanelbackground)]</visible>
 		</control>
@@ -334,8 +326,7 @@
 					<animation effect="zoom" start="112,68,1695,1038" end="136,38,1651,1132" time="240" condition="Control.IsVisible(518)">Conditional</animation>
 					<width>1695</width>
 					<height>1038</height>
-					<texture>wall/wall_bg_glow.png</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">wall/wall_bg_glow.png</texture>
 					<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 					<include>PanelGlowFade</include>
 				</control>
@@ -346,8 +337,7 @@
 					<animation effect="zoom" start="112,68,1695,1038" end="136,38,1651,1132" time="240" condition="Control.IsVisible(518)">Conditional</animation>
 					<width>1695</width>
 					<height>1038</height>
-					<texture>wall/wall_bg.png</texture>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[DialogColorVar]">wall/wall_bg.png</texture>
 				</control>
 				<control type="image">
 					<left>112</left>
@@ -771,9 +761,8 @@
 					<left>112</left>
 					<width>1695</width>
 					<height>1050</height>
-					<texture>wall/wall_bg_new_glow.png</texture>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">wall/wall_bg_new_glow.png</texture>
 					<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					<include>PanelGlowFade</include>
 				</control>
 				<control type="image">	<!-- panel BG  -->
@@ -781,8 +770,7 @@
 					<left>112</left>
 					<width>1695</width>
 					<height>1050</height>
-					<texture>wall/wall_bg_new.png</texture>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[DialogColorVar]">wall/wall_bg_new.png</texture>
 				</control>
 			</control>
 			<control type="image">   <!-- grid left top panel -->
@@ -802,8 +790,7 @@
 					<width>40</width>
 					<height>40</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture>$VAR[WatchedIconVar]</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">$VAR[WatchedIconVar]</texture>
 				</control>
 				<control type="label">    <!-- top 250 number -->
 					<left>1275</left>
@@ -1337,8 +1324,7 @@
 				<width>750</width>
 				<height>210</height>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<texture>home/overlaynextaired.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">home/overlaynextaired.png</texture>
 			</control>
 			<control type="label">
 				<left>550</left>
@@ -1389,17 +1375,15 @@
 					<left>112</left>
 					<width>1695</width>
 					<height>1050</height>
-					<texture>wall/wall_bg_glow.png</texture>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">wall/wall_bg_glow.png</texture>
 					<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					<include>PanelGlowFade</include>
 				</control>
 				<control type="image">
 					<left>112</left>
 					<width>1695</width>
 					<height>1050</height>
-					<texture>wall/wall_bg.png</texture>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[DialogColorVar]">wall/wall_bg.png</texture>
 				</control>
 			</control>
 			<control type="image">
@@ -1435,8 +1419,7 @@
 					<top>15</top>
 					<width>45</width>
 					<height>45</height>
-					<texture>$VAR[WatchedIconVar]</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">$VAR[WatchedIconVar]</texture>
 				</control>
 				<control type="label">
 					<left>1745</left>
@@ -1954,8 +1937,7 @@
 				<width>750</width>
 				<height>210</height>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<texture>home/overlaynextaired.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">home/overlaynextaired.png</texture>
 			</control>
 			<control type="label">
 				<left>550</left>
@@ -2009,17 +1991,15 @@
 					<left>112</left>
 					<width>1695</width>
 					<height>760</height>
-					<texture>wall/wall_bg_glow.png</texture>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">wall/wall_bg_glow.png</texture>
 					<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					<include>PanelGlowFade</include>
 				</control>
 				<control type="image">
 					<left>112</left>
 					<width>1695</width>
 					<height>760</height>
-					<texture>wall/wall_bg.png</texture>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[DialogColorVar]">wall/wall_bg.png</texture>
 				</control>
 			</control>
 			<control type="image">
@@ -2039,8 +2019,7 @@
 					<top>15</top>
 					<width>45</width>
 					<height>45</height>
-					<texture>$VAR[WatchedIconVar]</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">$VAR[WatchedIconVar]</texture>
 				</control>
 				<control type="label">
 					<left>1745</left>
@@ -2222,8 +2201,7 @@
 				<width>750</width>
 				<height>210</height>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<texture>home/overlaynextaired.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">home/overlaynextaired.png</texture>
 			</control>
 			<control type="label">
 				<left>550</left>
@@ -2502,7 +2480,6 @@
 	<include name="Topbar">
 		<width>1920</width>
 		<height>40</height>
-		<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 	</include>
 	<include name="Neon_Topbar">
 		<control type="group">
@@ -2529,15 +2506,13 @@
 			<control type="image">
 				<width>40</width>
 				<height>1080</height>
-				<texture>common/topbar_top.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">common/topbar_top.png</texture>
 				<include>TopbarPulseAnimationLeft</include>
 			</control>
 			<control type="image">
 				<width>40</width>
 				<height>1080</height>
-				<texture>common/topbar_down.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">common/topbar_down.png</texture>
 				<include>TopbarPulseAnimationRight</include>
 			</control>
 		</control>

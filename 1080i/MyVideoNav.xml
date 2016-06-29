@@ -148,13 +148,12 @@
 			<visible>Skin.HasSetting(BlueOverlay)</visible>
 		</control>
 		<control type="image">
-			<texture>diffuseoverlay.png</texture>
+			<texture colordiffuse="$VAR[SpotColorVar2]">diffuseoverlay.png</texture>
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" time="200">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
 			<animation effect="fade" end="100" time="440" delay="160">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="320">Hidden</animation>
-			<colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
 			<visible>!Control.HasFocus(109)</visible>
 			<visible>[Control.IsVisible(512) + Skin.HasSetting(addonwallaltbackground)] | [Control.IsVisible(500) + Skin.HasSetting(wallfullscreen)] | [Skin.HasSetting(no_infopane_panel) + Control.IsVisible(7550)] | Control.IsVisible(5999)</visible>
 			<visible>!Skin.HasSetting(BlueOverlay)</visible>

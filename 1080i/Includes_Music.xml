@@ -19,9 +19,8 @@
 					<left>112</left>
 					<width>1695</width>
 					<height>1050</height>
-					<texture>wall/wall_bg_glow.png</texture>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">wall/wall_bg_glow.png</texture>
 					<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 					<include>PanelGlowFade</include>
 				</control>
 				<control type="image">
@@ -1747,8 +1746,7 @@
 								<top>-8</top>
 								<width>465</width>
 								<height>465</height>
-								<texture>thumbs/boxes/cd_shadow_light_shadow.png</texture>
-								<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+								<texture colordiffuse="$VAR[ColorDiffuseVar]">thumbs/boxes/cd_shadow_light_shadow.png</texture>
 								<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 								<animation effect="fade" start="100" end="80" time="2000" pulse="true" condition="true">conditional</animation>
 								<include>Animation_VisibleChange400</include>
@@ -1803,9 +1801,8 @@
 									<top>10</top>
 									<width>240</width>
 									<height>240</height>
-									<texture border="6">views/addonwall_select.png</texture>
+									<texture colordiffuse="$VAR[FocusTextureColorVar]" border="6">views/addonwall_select.png</texture>
 									<visible>Control.HasFocus(5010)</visible>
-									<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 								</control>
 							</focusedlayout>
 							<content>
@@ -1924,9 +1921,8 @@
 									<top>10</top>
 									<width>240</width>
 									<height>240</height>
-									<texture border="6">views/addonwall_select.png</texture>
+									<texture colordiffuse="$VAR[FocusTextureColorVar]" border="6">views/addonwall_select.png</texture>
 									<visible>Control.HasFocus(6010)</visible>
-									<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 								</control>
 							</focusedlayout>
 							<content>
@@ -2175,9 +2171,8 @@
 								<control type="image">
 									<width>800</width>
 									<height>48</height>
-									<texture border="8">views/tripanel/listselect_fo.png</texture>
+									<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 									<visible>Control.HasFocus(8010)</visible>
-									<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 								</control>
 								<control type="image">
 									<left>15</left>

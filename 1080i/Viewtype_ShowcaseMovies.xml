@@ -840,8 +840,7 @@
 			<width>1097</width>
 			<height>58</height>
 			<animation effect="fade" start="100" end="80" time="50" condition="Control.HasFocus(6015)">Conditional</animation>
-			<texture>views/directory/sbl_backround.png</texture>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+			<texture colordiffuse="$VAR[FocusTextureColorVar]">views/directory/sbl_backround.png</texture>
 			<visible>Control.HasFocus(6015) + Skin.HasSetting(AlphabetScrollbar)</visible>
 			<visible>Container.Content(movies) | Container.Content(sets)</visible>
 		</control>
@@ -861,16 +860,14 @@
 					<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 				</control>
 				<control type="image">
-					<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[FocusTextureColorVar]">views/directory/1/$INFO[ListItem.Label].png</texture>
 					<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
 					<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout height="41" width="40">
 				<control type="image">
-					<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[FocusTextureColorVar]">views/directory/1/$INFO[ListItem.Label].png</texture>
 					<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 				</control>
 			</focusedlayout>

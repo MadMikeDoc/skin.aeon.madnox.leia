@@ -213,8 +213,7 @@
 	<include name="Furniture_FlagUpright">
 		<width>2</width>
 		<height>71</height>
-		<texture>views/tripanel/upright.png</texture>
-		<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+		<texture colordiffuse="$VAR[ColorDiffuseVar]">views/tripanel/upright.png</texture>
 	</include>
 	<include name="Furniture_FlagUpright1">
 		<width>2</width>

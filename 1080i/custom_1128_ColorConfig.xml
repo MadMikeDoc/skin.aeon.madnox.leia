@@ -62,12 +62,11 @@
 					<height>45</height>
 					<textoffsetx>15</textoffsetx>
 					<textoffsety>0</textoffsety>
-					<texturenofocus border="3">settings/listselect_nf3.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="3">settings/listselect_nf3.png</texturenofocus>
 					<label>$LOCALIZE[31176]</label>
 					<font>Font_Bold26_Caps</font>
 					<textcolor>$VAR[FontColorVar]</textcolor>
 					<disabledcolor>$VAR[FontColorVar]</disabledcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<focusedcolor>white6</focusedcolor>
 					<include>Animation_CommonFade</include>
 					<enable>no</enable>
@@ -104,12 +103,11 @@
 					<height>45</height>
 					<textoffsetx>15</textoffsetx>
 					<textoffsety>0</textoffsety>
-					<texturenofocus border="3">settings/listselect_nf3.png</texturenofocus>
+					<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="3">settings/listselect_nf3.png</texturenofocus>
 					<label>$LOCALIZE[31885]</label>
 					<font>Font_Bold26_Caps</font>
 					<textcolor>$VAR[FontColorVar]</textcolor>
 					<disabledcolor>$VAR[FontColorVar]</disabledcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<focusedcolor>white6</focusedcolor>
 					<include>Animation_CommonFade</include>
 					<enable>no</enable>

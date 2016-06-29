@@ -98,8 +98,7 @@
 				<control type="image">
 					<width>219</width>
 					<height>60</height>
-					<texture border="8">views/tripanel/listselect_fo.png</texture>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 					<include>PanelGlowFade</include>
 					<visible>Control.HasFocus(9011)</visible>
 				</control>
@@ -602,9 +601,8 @@
 				<control type="image">
 					<width>219</width>
 					<height>115</height>
-					<texture border="8">views/tripanel/listselect_fo.png</texture>
+					<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 					<visible>Control.HasFocus(9011)</visible>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<include>PanelGlowFade</include>
 				</control>
 				<control type="image">
@@ -635,11 +633,10 @@
 			<width>60</width>
 			<height>40</height>
 			<align>center</align>
-			<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-			<texturenofocus border="8">-</texturenofocus>
+			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">-</texturenofocus>
 			<label>-</label>
 			<textcolor>grey2</textcolor>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			<onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">SetProperty(quicknavsetup,1,home)</onclick>
 			<onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[31902],$LOCALIZE[31881])</onclick>
 			<onclick condition="!IsEmpty(Window(home).Property(quicknavsetup))">ClearProperty(quicknavsetup,home)</onclick>
@@ -666,11 +663,10 @@
 			<width>50</width>
 			<height>40</height>
 			<align>center</align>
-			<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-			<texturenofocus border="8">-</texturenofocus>
+			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">-</texturenofocus>
 			<label>-</label>
 			<textcolor>grey2</textcolor>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			<onclick>Action(Close)</onclick>
 			<onclick>Fullscreen</onclick>
 			<onleft>9012</onleft>
@@ -696,11 +692,10 @@
 			<width>50</width>
 			<height>40</height>
 			<align>center</align>
-			<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-			<texturenofocus border="8">-</texturenofocus>
+			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">-</texturenofocus>
 			<label>-</label>
 			<textcolor>grey2</textcolor>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			<onclick>Action(Close)</onclick>
 			<onclick>ActivateWindow(musicplaylist)</onclick>
 			<onleft>9013</onleft>
@@ -726,11 +721,10 @@
 			<width>60</width>
 			<height>40</height>
 			<align>center</align>
-			<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-			<texturenofocus border="8">-</texturenofocus>
+			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">-</texturenofocus>
 			<label>-</label>
 			<textcolor>grey2</textcolor>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			<onclick>Action(Close)</onclick>
 			<onclick>PlayDVD()</onclick>
 			<onleft>9014</onleft>
