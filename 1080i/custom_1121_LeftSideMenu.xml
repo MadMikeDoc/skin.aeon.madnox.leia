@@ -50,7 +50,7 @@
 		<control type="list" id="9011">
 			<!-- viewtype selection including config-->
 			<width>450</width>
-			<height>1080</height>
+			<height>1020</height>
 			<visible>!String.IsEmpty(Window(home).Property(viewtypeselect))</visible>
 			<orientation>vertical</orientation>
 			<onleft>Dialog.CLose(1121)</onleft>
