@@ -280,7 +280,7 @@
 			<control type="group">
 				<left>678</left>
 				<top>885</top>
-				<visible>!IsEmpty(ListItem.Addonbroken)</visible>
+				<visible>!String.IsEmpty(ListItem.Addonbroken)</visible>
 				<include>Dialogs_Group</include>
 				<include>Dialogs_Tablet</include>
 				<include>Dialogs_Exclam</include>

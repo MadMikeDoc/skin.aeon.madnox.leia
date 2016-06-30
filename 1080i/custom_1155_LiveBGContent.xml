@@ -81,11 +81,11 @@
 				<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]">button-nofocus.png</texturenofocus>
 				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texturefocus>
 				<onup>6</onup>
-				<visible>IsEmpty(Window(Home).Property(LiveCasesType))</visible>
+				<visible>String.IsEmpty(Window(Home).Property(LiveCasesType))</visible>
 				<ondown>8</ondown>
-				<onclick condition="Stringcompare(Skin.String(LiveBGCase),colorcases) | IsEmpty(Skin.String(LiveBGCase))">Skin.SetString(LiveBGCase,movies)</onclick>
-				<onclick condition="Stringcompare(Skin.String(LiveBGCase),movies)">Skin.SetString(LiveBGCase,tvshows)</onclick>
-				<onclick condition="Stringcompare(Skin.String(LiveBGCase),tvshows)">Skin.SetString(LiveBGCase,colorcases)</onclick>
+				<onclick condition="String.IsEqual(Skin.String(LiveBGCase),colorcases) | String.IsEmpty(Skin.String(LiveBGCase))">Skin.SetString(LiveBGCase,movies)</onclick>
+				<onclick condition="String.IsEqual(Skin.String(LiveBGCase),movies)">Skin.SetString(LiveBGCase,tvshows)</onclick>
+				<onclick condition="String.IsEqual(Skin.String(LiveBGCase),tvshows)">Skin.SetString(LiveBGCase,colorcases)</onclick>
 			</control>
 			<control type="radiobutton" id="8">
 				<left>347</left>
@@ -99,7 +99,7 @@
 				<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]">button-nofocus.png</texturenofocus>
 				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texturefocus>
 				<onup>7</onup>
-				<visible>Stringcompare(Window(Home).Property(LiveCasesType),CDs)</visible>
+				<visible>String.IsEqual(Window(Home).Property(LiveCasesType),CDs)</visible>
 				<ondown>4</ondown>
 				<onclick>Skin.ToggleSetting(LiveBGCDCase)</onclick>
 				<selected>Skin.HasSetting(LiveBGCDCase)</selected>
@@ -196,115 +196,115 @@
 						<label>$LOCALIZE[31323]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,dvdcaserecentmovies)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(movies) + IsEmpty(Window(Home).Property(LiveCasesType))</visible>
+						<visible>Library.HasContent(movies) + String.IsEmpty(Window(Home).Property(LiveCasesType))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31222]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,dvdcaserandommovies)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(movies) + IsEmpty(Window(Home).Property(LiveCasesType))</visible>
+						<visible>Library.HasContent(movies) + String.IsEmpty(Window(Home).Property(LiveCasesType))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31335]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,dvdcasewatchlistmovies)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(movies) + IsEmpty(Window(Home).Property(LiveCasesType))</visible>
+						<visible>Library.HasContent(movies) + String.IsEmpty(Window(Home).Property(LiveCasesType))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31464]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,dvdcasewatchlisttv)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(tvshows) + IsEmpty(Window(Home).Property(LiveCasesType))</visible>
+						<visible>Library.HasContent(tvshows) + String.IsEmpty(Window(Home).Property(LiveCasesType))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31324]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,dvdcaserecenttv)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(tvshows) + IsEmpty(Window(Home).Property(LiveCasesType))</visible>
+						<visible>Library.HasContent(tvshows) + String.IsEmpty(Window(Home).Property(LiveCasesType))</visible>
 					</item>
 					<item>
 						<label>559</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,dvdcaseplaylist)</onclick>
 						<onclick>RunScript(script.skinshortcuts,type=widgets&amp;grouping=musicvis&amp;skinWidgetName=MusicViz.PlaylistName&amp;skinWidgetPath=MusicViz.Playlist)</onclick>
-						<visible>IsEmpty(Window(Home).Property(LiveCasesType))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(LiveCasesType))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31359]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,caserecentalbums)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(music) + Stringcompare(Window(Home).Property(LiveCasesType),CDs)</visible>
+						<visible>Library.HasContent(music) + String.IsEqual(Window(Home).Property(LiveCasesType),CDs)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31068]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,caserandomalbums)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(music) + Stringcompare(Window(Home).Property(LiveCasesType),CDs)</visible>
+						<visible>Library.HasContent(music) + String.IsEqual(Window(Home).Property(LiveCasesType),CDs)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31326]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,casewatchlistalbums)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(music) + Stringcompare(Window(Home).Property(LiveCasesType),CDs)</visible>
+						<visible>Library.HasContent(music) + String.IsEqual(Window(Home).Property(LiveCasesType),CDs)</visible>
 					</item>
 					<item>
 						<label>559</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,caseplaylist)</onclick>
 						<onclick>RunScript(script.skinshortcuts,type=widgets&amp;grouping=musicvis&amp;skinWidgetName=MusicViz.PlaylistName&amp;skinWidgetPath=MusicViz.Playlist)</onclick>
-						<visible>Stringcompare(Window(Home).Property(LiveCasesType),CDs)</visible>
+						<visible>String.IsEqual(Window(Home).Property(LiveCasesType),CDs)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31323]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,nocaserecentmovies)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(movies) + Stringcompare(Window(Home).Property(LiveCasesType),Pics)</visible>
+						<visible>Library.HasContent(movies) + String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31222]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,nocaserandommovies)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(movies) + Stringcompare(Window(Home).Property(LiveCasesType),Pics)</visible>
+						<visible>Library.HasContent(movies) + String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31335]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,nocasewatchlistmovies)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(movies) + Stringcompare(Window(Home).Property(LiveCasesType),Pics)</visible>
+						<visible>Library.HasContent(movies) + String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
 					</item>
 					<item>
 						<label>31220</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,nocaserandomtv)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(tvshows) + Stringcompare(Window(Home).Property(LiveCasesType),Pics)</visible>
+						<visible>Library.HasContent(tvshows) + String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
 					</item>
 					<item>
 						<label>31324</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,nocaserecenttv)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(tvshows) + Stringcompare(Window(Home).Property(LiveCasesType),Pics)</visible>
+						<visible>Library.HasContent(tvshows) + String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
 					</item>
 					<item>
 						<label>31464</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,nocasewatchlisttv)</onclick>
 						<onclick>Dialog.Close(1155)</onclick>
-						<visible>Library.HasContent(tvshows) + Stringcompare(Window(Home).Property(LiveCasesType),Pics)</visible>
+						<visible>Library.HasContent(tvshows) + String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
 					</item>
 					<!--item>
                         <label>31820</label>
                         <onclick>Skin.SetString(ItemToEdit.MultiFanart,nocasedailybabe)</onclick>
                         <onclick>Dialog.Close(1155)</onclick>
-                        <visible>Stringcompare(Window(Home).Property(LiveCasesType),Pics)</visible>
+                        <visible>String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
                     </item>
                     <item>
                         <label>Today Babe</label>
                         <onclick>Skin.SetString(ItemToEdit.MultiFanart,nocasedailybabe2)</onclick>
                         <onclick>Dialog.Close(1155)</onclick>
-                        <visible>Stringcompare(Window(Home).Property(LiveCasesType),Pics)</visible>
+                        <visible>String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
                     </item-->
 					<item>
 						<label>559</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,nocaseplaylist)</onclick>
 						<onclick>RunScript(script.skinshortcuts,type=widgets&amp;grouping=musicvis&amp;skinWidgetName=MusicViz.PlaylistName&amp;skinWidgetPath=MusicViz.Playlist)</onclick>
-						<visible>Stringcompare(Window(Home).Property(LiveCasesType),Pics)</visible>
+						<visible>String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
 					</item>
 				</content>
 			</control>

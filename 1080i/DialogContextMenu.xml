@@ -52,7 +52,7 @@
 				<focusedcolor>white2</focusedcolor>
 				<colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
 				<onclick>RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID])</onclick>
-				<visible>System.HasAddon(script.libraryeditor) + !IsEmpty(ListItem.DBID) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>System.HasAddon(script.libraryeditor) + !String.IsEmpty(ListItem.DBID) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
 				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
 			</control>
 			<control type="button" id="2035">
@@ -130,11 +130,11 @@
 				<textcolor>context</textcolor>
 				<focusedcolor>white2</focusedcolor>
 				<colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
-				<visible>Container.Content(movies) | [!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(music)]</visible>
-				<onclick condition="Container.Content(movies) + !IsEmpty(ListItem.Trailer)">Dialog.Close(contextmenu)</onclick>
-				<onclick condition="Container.Content(movies) + !IsEmpty(ListItem.Trailer)">SetFocus(7566)</onclick>
-				<onclick condition="Container.Content(movies) + IsEmpty(ListItem.Trailer)">ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$ESCINFO[ListItem.Label] Trailer,return)</onclick>
-				<onclick condition="!IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(music)">PlayMedia($ESCINFO[Window.Property(SongToMusicVideo.Path)])</onclick>
+				<visible>Container.Content(movies) | [!String.IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(music)]</visible>
+				<onclick condition="Container.Content(movies) + !String.IsEmpty(ListItem.Trailer)">Dialog.Close(contextmenu)</onclick>
+				<onclick condition="Container.Content(movies) + !String.IsEmpty(ListItem.Trailer)">SetFocus(7566)</onclick>
+				<onclick condition="Container.Content(movies) + String.IsEmpty(ListItem.Trailer)">ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$ESCINFO[ListItem.Label] Trailer,return)</onclick>
+				<onclick condition="!String.IsEmpty(Window.Property(SongToMusicVideo.Path)) + Window.IsActive(music)">PlayMedia($ESCINFO[Window.Property(SongToMusicVideo.Path)])</onclick>
 			</control>
 			<control type="button" id="2010">
 				<width>462</width>

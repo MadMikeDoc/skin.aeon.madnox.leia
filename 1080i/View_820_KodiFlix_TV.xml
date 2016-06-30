@@ -22,7 +22,7 @@
 				<description>KodiFlix Fanart</description>
 				<include>FanartFade</include>
 				<include>BackgroundAnimation</include>
-				<visible>!Player.HasVideo + Control.IsVisible(820) + [!Skin.HasSetting(NetFiixTVExtraFanart) | IsEmpty(Control.GetLabel(5910))]</visible>
+				<visible>!Player.HasVideo + Control.IsVisible(820) + [!Skin.HasSetting(NetFiixTVExtraFanart) | String.IsEmpty(Control.GetLabel(5910))]</visible>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixTVSmallFanart)">KodiFlixTVSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixTVSmallFanart)">KodiFlixTVSmallFanartDimensions</include>
@@ -99,13 +99,13 @@
 					<include condition="!Skin.HasSetting(KodiFlixTVSmallFanart)">KodiFlixTVSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixTVSmallFanart)">KodiFlixTVSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + !Skin.HasSetting(KodiFlixTVShortList) + IsEmpty(Control.GetLabel(5910))</visible>
+					<visible>SubString(ListItem.Path,videodb://movies/sets) + !Skin.HasSetting(KodiFlixTVShortList) + String.IsEmpty(Control.GetLabel(5910))</visible>
 				</control>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixTVSmallFanart)">KodiFlixTVSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixTVSmallFanart)">KodiFlixTVSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse3.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(KodiFlixTVShortList) + IsEmpty(Control.GetLabel(5910))</visible>
+					<visible>SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(KodiFlixTVShortList) + String.IsEmpty(Control.GetLabel(5910))</visible>
 				</control>
 			</control>
 			<!--Extrafanart Options-->
@@ -209,7 +209,7 @@
 				<fadetime>100</fadetime>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				<texture background="true">$VAR[LogoVar]</texture>
-				<visible>Skin.HasSetting(NetFiixTVShowLogoAsTtile) + !IsEmpty(Container.ListItem.Art(clearlogo))</visible>
+				<visible>Skin.HasSetting(NetFiixTVShowLogoAsTtile) + !String.IsEmpty(Container.ListItem.Art(clearlogo))</visible>
 				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixTVHideFilmInfo) + !Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixBoxsets)">
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 					<effect type="slide" start="0,0" end="0,320" time="350" tween="cubic" easing="out" />
@@ -243,8 +243,8 @@
 				<shadowcolor>black</shadowcolor>
 				<font>font_SimplerE3D_bold</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
-				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo) + [Container.Content(movies) | Container.Content(sets) + IsEmpty(Container.ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + [IsEmpty(Container.ListItem.Art(tvshow.clearlogo)) + IsEmpty(Container.ListItem.Art(clearlogo))]]</visible>
-				<visible>[IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(tvshow.clearlogo))] + Skin.HasSetting(NetFiixTVShowLogoAsTtile) + !ListItem.IsParentFolder</visible>
+				<visible>!Skin.HasSetting(NetFlixTVHideFilmInfo) + [Container.Content(movies) | Container.Content(sets) + String.IsEmpty(Container.ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + [String.IsEmpty(Container.ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Container.ListItem.Art(clearlogo))]]</visible>
+				<visible>[String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(tvshow.clearlogo))] + Skin.HasSetting(NetFiixTVShowLogoAsTtile) + !ListItem.IsParentFolder</visible>
 				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixTVHideFilmInfo) + !Skin.HasSetting(KodiFlixTVCenterList)">
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 					<effect type="slide" start="0,0" end="0,340" time="350" tween="cubic" easing="out" />
@@ -265,8 +265,8 @@
 				<shadowcolor>black</shadowcolor>
 				<font>font_SimplerE3D_bold</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
-				<visible>Skin.HasSetting(NetFlixTVHideFilmInfo) + [Container.Content(movies) | Container.Content(sets) + IsEmpty(Container.ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + [IsEmpty(Container.ListItem.Art(tvshow.clearlogo)) + IsEmpty(Container.ListItem.Art(clearlogo))]]</visible>
-				<visible>[IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(tvshow.clearlogo))] + Skin.HasSetting(NetFiixTVShowLogoAsTtile) + !ListItem.IsParentFolder</visible>
+				<visible>Skin.HasSetting(NetFlixTVHideFilmInfo) + [Container.Content(movies) | Container.Content(sets) + String.IsEmpty(Container.ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + [String.IsEmpty(Container.ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Container.ListItem.Art(clearlogo))]]</visible>
+				<visible>[String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(tvshow.clearlogo))] + Skin.HasSetting(NetFiixTVShowLogoAsTtile) + !ListItem.IsParentFolder</visible>
 				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixTVHideFilmInfo) + !Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixBoxsets)">
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 					<effect type="slide" start="0,0" end="0,340" time="350" tween="cubic" easing="out" />
@@ -289,7 +289,7 @@
 				<fadetime>100</fadetime>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				<texture background="true">$VAR[LogoVar]</texture>
-				<visible>Skin.HasSetting(NetFiixTVShowLogoAsTtile) + IsEmpty(Container.ListItem.Art(clearlogo)) + !IsEmpty(Container.ListItem.Art(tvshow.clearlogo)) + [!Container.Content(episodes) | !Skin.HasSetting(NetFlixTVHideFilmInfo)]</visible>
+				<visible>Skin.HasSetting(NetFiixTVShowLogoAsTtile) + String.IsEmpty(Container.ListItem.Art(clearlogo)) + !String.IsEmpty(Container.ListItem.Art(tvshow.clearlogo)) + [!Container.Content(episodes) | !Skin.HasSetting(NetFlixTVHideFilmInfo)]</visible>
 				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixTVHideFilmInfo) + !Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixBoxsets)">
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 					<effect type="slide" start="0,0" end="0,320" time="350" tween="cubic" easing="out" />
@@ -360,27 +360,27 @@
 						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[31190]: [/COLOR][COLOR white]$INFO[Window(Home).Property(NextAired.NextTitle)][/COLOR]</label>
 						<width>580</width>
 						<include>KodiFlixButtonsValues</include>
-						<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(Disable.NextAired)</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(Disable.NextAired)</visible>
 						<visible>!Container.Content(episodes) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[31819]: [/COLOR][COLOR white]$INFO[Window(Home).Property(NextAired.NextDate),,][/COLOR]</label>
 						<width>580</width>
 						<include>KodiFlixButtonsValues</include>
-						<visible>!IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(Disable.NextAired)</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(Disable.NextAired)</visible>
 						<visible>!Container.Content(episodes) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
 					</control>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[126]: [/COLOR][COLOR white]$INFO[Window(Home).Property(NextAired.Status)][/COLOR]</label>
 						<width>580</width>
 						<include>KodiFlixButtonsValues</include>
-						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [!IsEmpty(Window(Home).Property(NextAired.Status)) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(Disable.NextAired)]</visible>
+						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [!String.IsEmpty(Window(Home).Property(NextAired.Status)) + String.IsEmpty(Window(Home).Property(NextAired.NextDate)) + !Skin.HasSetting(Disable.NextAired)]</visible>
 					</control>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[515]: [/COLOR][COLOR white]$INFO[ListItem.Genre][/COLOR]</label>
 						<width>580</width>
 						<include>KodiFlixButtonsValues</include>
-						<visible>!Container.Content(episodes) + [Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.Genre)</visible>
+						<visible>!Container.Content(episodes) + [Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Genre)</visible>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -394,19 +394,19 @@
 						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[31062]: [/COLOR][COLOR white]$INFO[ListItem.Title][/COLOR]</label>
 						<width>650</width>
 						<include>KodiFlixButtonsValues</include>
-						<visible>!IsEmpty(ListItem.Premiered) + Skin.HasSetting(NetFiixTVShowLogoAsTtile)</visible>
+						<visible>!String.IsEmpty(ListItem.Premiered) + Skin.HasSetting(NetFiixTVShowLogoAsTtile)</visible>
 					</control>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[20416]: [/COLOR][COLOR white]$INFO[ListItem.Premiered][/COLOR]</label>
 						<width>650</width>
 						<include>KodiFlixButtonsValues</include>
-						<visible>!IsEmpty(ListItem.Premiered)</visible>
+						<visible>!String.IsEmpty(ListItem.Premiered)</visible>
 					</control>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[2050]: [/COLOR][COLOR white]$INFO[ListItem.Duration,, $LOCALIZE[12391][/COLOR]]</label>
 						<width>650</width>
 						<include>KodiFlixButtonsValues</include>
-						<visible>!IsEmpty(ListItem.Duration)</visible>
+						<visible>!String.IsEmpty(ListItem.Duration)</visible>
 					</control>
 				</control>
 			</control>
@@ -535,7 +535,7 @@
 					<width>65</width>
 					<height>60</height>
 					<texture>$VAR[Imdb_250]</texture>
-					<visible>!IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixIMDBIcon)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixIMDBIcon)</visible>
 				</control>
 				<control type="image">
 					<left>460</left>
@@ -543,7 +543,7 @@
 					<width>65</width>
 					<height>30</height>
 					<texture>imdb.png</texture>
-					<visible>!IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + !Skin.HasSetting(KodiFlixIMDBIcon)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + !Skin.HasSetting(KodiFlixIMDBIcon)</visible>
 				</control>
 				<control type="Label">
 					<left>530</left>
@@ -555,7 +555,7 @@
 					<font>font14</font>
 					<shadowcolor>77000000</shadowcolor>
 					<textcolor>fffeec900</textcolor>
-					<visible>!IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases)</visible>
 				</control>
 				<control type="image">
 					<left>90</left>
@@ -563,7 +563,7 @@
 					<width>65</width>
 					<height>60</height>
 					<texture>$VAR[Imdb_250]</texture>
-					<visible>!IsEmpty(ListItem.Top250) + !System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixIMDBIcon)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + !System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixIMDBIcon)</visible>
 				</control>
 				<control type="image">
 					<left>90</left>
@@ -571,7 +571,7 @@
 					<width>65</width>
 					<height>30</height>
 					<texture>imdb.png</texture>
-					<visible>!IsEmpty(ListItem.Top250) + !System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + !Skin.HasSetting(KodiFlixIMDBIcon)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + !System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + !Skin.HasSetting(KodiFlixIMDBIcon)</visible>
 				</control>
 				<control type="Label">
 					<left>160</left>
@@ -583,7 +583,7 @@
 					<font>font14</font>
 					<shadowcolor>77000000</shadowcolor>
 					<textcolor>fffeec900</textcolor>
-					<visible>!IsEmpty(ListItem.Top250) + !System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + !System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -609,7 +609,7 @@
 					<width>65</width>
 					<height>60</height>
 					<texture>$VAR[Imdb_250]</texture>
-					<visible>!IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixIMDBIcon)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixIMDBIcon)</visible>
 				</control>
 				<control type="image">
 					<left>460</left>
@@ -617,7 +617,7 @@
 					<width>65</width>
 					<height>30</height>
 					<texture>imdb.png</texture>
-					<visible>!IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + Skin.Hassetting(KodiFlixCases) + !Skin.HasSetting(KodiFlixIMDBIcon)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + Skin.Hassetting(KodiFlixCases) + !Skin.HasSetting(KodiFlixIMDBIcon)</visible>
 				</control>
 				<control type="Label">
 					<left>530</left>
@@ -629,7 +629,7 @@
 					<font>font14</font>
 					<shadowcolor>77000000</shadowcolor>
 					<textcolor>fffeec900</textcolor>
-					<visible>!IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + Skin.Hassetting(KodiFlixCases)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + Skin.Hassetting(KodiFlixCases)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -1004,7 +1004,7 @@
 					<colordiffuse>white</colordiffuse>
 					<aspectratio align="left" aligny="center">stretch</aspectratio>
 					<texture background="true">flags/sets/sets.png</texture>
-					<visible>Substring(ListItem.Path,videodb://movies/sets/,left) + ListItem.IsFolder + !IsEmpty(ListItem.Title)</visible>
+					<visible>Substring(ListItem.Path,videodb://movies/sets/,left) + ListItem.IsFolder + !String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -1032,7 +1032,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$VAR[KodiFlix.Duration]</label>
-					<visible>[Container.Content(Movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] + [!IsEmpty(ListItem.Duration) + IntegerGreaterThan(ListItem.Duration,0)]</visible>
+					<visible>[Container.Content(Movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] + [!String.IsEmpty(ListItem.Duration) + IntegerGreaterThan(ListItem.Duration,0)]</visible>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -1104,7 +1104,7 @@
 					<colordiffuse>white</colordiffuse>
 					<aspectratio align="left" aligny="center">stretch</aspectratio>
 					<texture background="true">flags/sets/sets.png</texture>
-					<visible>Substring(ListItem.Path,videodb://movies/sets/,left) + ListItem.IsFolder + !IsEmpty(ListItem.Title)</visible>
+					<visible>Substring(ListItem.Path,videodb://movies/sets/,left) + ListItem.IsFolder + !String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -1132,7 +1132,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$VAR[KodiFlix.Duration]</label>
-					<visible>[Container.Content(Movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] + [!IsEmpty(ListItem.Duration) + IntegerGreaterThan(ListItem.Duration,0)]</visible>
+					<visible>[Container.Content(Movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] + [!String.IsEmpty(ListItem.Duration) + IntegerGreaterThan(ListItem.Duration,0)]</visible>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -1220,7 +1220,7 @@
 						<height>201</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-						<visible>!Container.Content(Episodes) + IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(tvshow.landscape)) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						<bordersize>40</bordersize>
 						<include>KodiFlixTVDimAnimation</include>
 					</control>
@@ -1242,7 +1242,7 @@
 						<height>161</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" >$INFO[ListItem.Art(clearlogo)]</texture>
-						<visible>!Container.Content(Episodes) + IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(tvshow.landscape)) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						<bordertexture border="15">thumbs/thumb_border_fade.png</bordertexture>
 						<bordersize>40</bordersize>
 						<animation type="Conditional" reversible="false" condition="true">
@@ -1257,7 +1257,7 @@
 						<height>161</height>
 						<aspectratio aligny="center" align="center">stretch</aspectratio>
 						<texture>overlays/unwatched/banners/$VAR[WatchedStateOverlay]_Episodes.png</texture>
-						<visible>StringCompare(Skin.String(WatchedFlag),unwatched) | StringCompare(Skin.String(WatchedFlag),watched)</visible>
+						<visible>String.IsEqual(Skin.String(WatchedFlag),unwatched) | String.IsEqual(Skin.String(WatchedFlag),watched)</visible>
 						<bordersize>6</bordersize>
 						<include>KodiFlixTVDimAnimation</include>
 					</control>
@@ -1313,7 +1313,7 @@
 						<height>201</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-						<visible>!Container.Content(Episodes) + IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(tvshow.landscape)) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						<bordersize>40</bordersize>
 					</control>
 					<control type="image">
@@ -1332,7 +1332,7 @@
 						<height>201</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" >$INFO[ListItem.Art(clearlogo)]</texture>
-						<visible>!Container.Content(Episodes) + IsEmpty(ListItem.Art(landscape)) + IsEmpty(ListItem.Art(tvshow.landscape)) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + String.IsEmpty(ListItem.Art(tvshow.landscape)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						<bordertexture border="15">thumbs/thumb_border_fade.png</bordertexture>
 						<bordersize>40</bordersize>
 						<animation type="Conditional" reversible="false" condition="true">
@@ -1346,7 +1346,7 @@
 						<height>201</height>
 						<aspectratio aligny="center" align="center">stretch</aspectratio>
 						<texture>overlays/unwatched/banners/$VAR[WatchedStateOverlay]_Episodes.png</texture>
-						<visible>[StringCompare(Skin.String(WatchedFlag),unwatched) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)] | [StringCompare(Skin.String(WatchedFlag),watched) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+						<visible>[String.IsEqual(Skin.String(WatchedFlag),unwatched) + String.IsEqual(ListItem.Overlay,OverlayUnWatched.png)] | [String.IsEqual(Skin.String(WatchedFlag),watched) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)]</visible>
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
@@ -1467,7 +1467,7 @@
 						<height>299</height>
 						<aspectratio aligny="center" align="center">stretch</aspectratio>
 						<texture>overlays/unwatched/thumbs/$VAR[WatchedStateOverlay]_Poster.png</texture>
-						<visible>[StringCompare(Skin.String(WatchedFlag),unwatched) + stringcompare(ListItem.Overlay,OverlayUnWatched.png)] | [StringCompare(Skin.String(WatchedFlag),watched) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+						<visible>[String.IsEqual(Skin.String(WatchedFlag),unwatched) + String.IsEqual(ListItem.Overlay,OverlayUnWatched.png)] | [String.IsEqual(Skin.String(WatchedFlag),watched) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)]</visible>
 						<bordersize>8</bordersize>
 					</control>
 					<control type="group">
@@ -1913,7 +1913,7 @@
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsResolution]resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 					<include>AudioFlagsVars</include>
-					<visible>![IsEmpty(ListItem.VideoResolution) + !ListItem.IsParentFolder]</visible>
+					<visible>![String.IsEmpty(ListItem.VideoResolution) + !ListItem.IsParentFolder]</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="image">
@@ -1933,7 +1933,7 @@
 					<texture fallback="flags/colored/rating/NR.png">$VAR[RatingFlagVar]</texture>
 					<colordiffuse>floor</colordiffuse>
 					<include>MediaFlagVars</include>
-					<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !IsEmpty(ListItem.Title) + !ListItem.IsParentFolder</visible>
+					<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !String.IsEmpty(ListItem.Title) + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image" id="1180">
 					<left>800</left>
@@ -1941,22 +1941,22 @@
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
 					<include>AudioFlagsVars</include>
-					<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !IsEmpty(ListItem.Title) + !ListItem.IsParentFolder</visible>
+					<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !String.IsEmpty(ListItem.Title) + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
 					<left>800</left>
 					<width>200</width>
 					<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 					<include>AudioFlagsVars</include>
-					<visible>IsEmpty(Control.GetLabel(1180))</visible>
-					<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !IsEmpty(ListItem.Title) + !ListItem.IsParentFolder</visible>
+					<visible>String.IsEmpty(Control.GetLabel(1180))</visible>
+					<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !String.IsEmpty(ListItem.Title) + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
 					<left>600</left>
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsAudio]audio/$VAR[AudioFlagVar,,.png]</texture>
 					<include>AudioFlagsVars</include>
-					<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+					<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 					<include>VisibleFadeEffect</include>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
@@ -1966,7 +1966,7 @@
 					<colordiffuse>floor</colordiffuse>
 					<include>MediaFlagVars</include>
 					<texture>$VAR[StudioImageVar]</texture>
-					<visible>!IsEmpty(ListItem.Studio)	+ !Container.Content(tvshows) + !Container.Content(seasons) + !ListItem.IsParentFolder</visible>
+					<visible>!String.IsEmpty(ListItem.Studio)	+ !Container.Content(tvshows) + !Container.Content(seasons) + !ListItem.IsParentFolder</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="image">
@@ -1975,7 +1975,7 @@
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
 					<include>AudioFlagsVars</include>
-					<visible>IsEmpty(ListItem.Studio) + !ListItem.IsParentFolder</visible>
+					<visible>String.IsEmpty(ListItem.Studio) + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="label">
 					<left>1100</left>
@@ -1987,7 +1987,7 @@
 					<font>Font_Reg22_Caps</font>
 					<textcolor>grey</textcolor>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>IsEmpty(ListItem.Studio) + !Skin.HasSetting(DisableStudiosColorFlag) + !ListItem.IsParentFolder</visible>
+					<visible>String.IsEmpty(ListItem.Studio) + !Skin.HasSetting(DisableStudiosColorFlag) + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="grouplist" id="12100">
 					<animation effect="fade" start="100" end="85" time="0" condition="true">Conditional</animation>
@@ -1999,7 +1999,7 @@
 						<height>22</height>
 						<aspectratio>scale</aspectratio>
 						<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
-						<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 						<include>Animation_VisibleChange200</include>
 						<fadetime>400</fadetime>
 					</control>
@@ -2008,8 +2008,8 @@
 						<height>22</height>
 						<aspectratio>scale</aspectratio>
 						<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
-						<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
-						<visible>!Stringcompare(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+						<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 						<include>Animation_VisibleChange200</include>
 						<fadetime>400</fadetime>
 					</control>
@@ -2018,9 +2018,9 @@
 						<height>22</height>
 						<aspectratio>scale</aspectratio>
 						<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
-						<visible>!IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
-						<visible>!Stringcompare(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
-						<visible>!Stringcompare(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+						<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
+						<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
 						<include>Animation_VisibleChange200</include>
 						<fadetime>400</fadetime>
 					</control>
@@ -2033,7 +2033,7 @@
 						<colordiffuse>floor</colordiffuse>
 						<include>MediaFlagVars</include>
 						<texture>$VAR[ColorFlagsStudio]$INFO[ListItem.Studio,,.png]</texture>
-						<visible>!IsEmpty(ListItem.Title) + !Container.Content(seasons)</visible>
+						<visible>!String.IsEmpty(ListItem.Title) + !Container.Content(seasons)</visible>
 					</control>
 					<control type="image" id="1200">
 						<left>800</left>
@@ -2049,13 +2049,13 @@
 						<colordiffuse>floor</colordiffuse>
 						<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 						<include>AudioFlagsVars</include>
-						<visible>IsEmpty(Control.GetLabel(1200)) + !ListItem.IsParentFolder</visible>
+						<visible>String.IsEmpty(Control.GetLabel(1200)) + !ListItem.IsParentFolder</visible>
 					</control>
 					<control type="group">
 						<left>960</left>
 						<top>-6</top>
 						<width>162.5</width>
-						<visible>!IsEmpty(ListItem.Property(TotalSeasons))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
 						<control type="label">
 							<left>0</left>
 							<top>2</top>
@@ -2078,7 +2078,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>!IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 						<width>162.5</width>
 						<left>1100</left>
 						<top>-6</top>
@@ -2104,7 +2104,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 						<width>200</width>
 						<left>1220</left>
 						<top>-6</top>
@@ -2129,7 +2129,7 @@
 						</control>
 					</control>
 					<control type="group">
-					<visible>!IsEmpty(ListItem.UserRating)</visible>
+					<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 					<left>1400</left>
 					<control type="image">
 						<top>12</top>
@@ -2211,20 +2211,20 @@
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="41" width="40">
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -2232,27 +2232,27 @@
 		</control>
 	</include>
 	<include name="KodiFlixOpenCase">
-		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(Fakedischandwriting)| Skin.Hassetting(fakediscart)] + !Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | Skin.HasSetting(Fakedischandwriting)| Skin.Hassetting(fakediscart)] + !Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="50" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-50" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | !IsEmpty(Container.ListItem.Art(poster))] + Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart))) | !String.IsEmpty(Container.ListItem.Art(poster))] + Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="50" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-50" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-75" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixTVCenterList) + !Skin.HasSetting(KodiFlixTVCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-75" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="85" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-85" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!IsEmpty(Container.ListItem.Art(discart)) | !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(820) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="85" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-85" time="1000" tween="quadratic" easing="out"/>
 		</animation>
@@ -2334,7 +2334,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.1.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
 				</control>
 				<control type="image" id="6602">
 					<width>254</width>
@@ -2343,7 +2343,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.2.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!IsEmpty(Window(home).Property(Set.Movie.8.Art(Discart))) | !IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(Discart))) | !String.IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
 				</control>
 				<control type="image" id="6603">
 					<width>254</width>
@@ -2352,7 +2352,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.3.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!IsEmpty(Window(home).Property(Set.Movie.9.Art(Discart))) | !IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(Discart))) | !String.IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
 				</control>
 				<control type="image" id="6604">
 					<width>254</width>
@@ -2361,7 +2361,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.4.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!IsEmpty(Window(home).Property(Set.Movie.10.Art(Discart))) | !IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(Set.Movie.10.Art(Discart))) | !String.IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
 				</control>
 				<control type="image" id="6605">
 					<width>254</width>
@@ -2370,7 +2370,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.5.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!IsEmpty(Window(home).Property(Set.Movie.11.Art(Discart))) | !IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(Set.Movie.11.Art(Discart))) | !String.IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
 				</control>
 				<control type="image" id="6606">
 					<width>254</width>
@@ -2379,7 +2379,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.6.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!IsEmpty(Window(home).Property(Set.Movie.12.Art(Discart))) | !IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(Set.Movie.12.Art(Discart))) | !String.IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))">KodiFlixExtrasDiscChange</include>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -2394,7 +2394,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.7.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(Discart)))</visible>
 				</control>
 				<control type="image" id="6602">
 					<width>254</width>
@@ -2403,7 +2403,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.8.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.8.Art(Discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(Discart)))</visible>
 				</control>
 				<control type="image" id="6603">
 					<width>254</width>
@@ -2412,7 +2412,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.9.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.9.Art(Discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(Discart)))</visible>
 				</control>
 				<control type="image" id="6604">
 					<width>254</width>
@@ -2421,7 +2421,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.10.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.10.Art(Discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.10.Art(Discart)))</visible>
 				</control>
 				<control type="image" id="6605">
 					<width>254</width>
@@ -2430,7 +2430,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.11.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.11.Art(Discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.11.Art(Discart)))</visible>
 				</control>
 				<control type="image" id="6606">
 					<width>254</width>
@@ -2439,7 +2439,7 @@
 					<texture background="true">$INFO[Window(home).Property(Set.Movie.12.Art(Discart))]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.12.Art(Discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.12.Art(Discart)))</visible>
 				</control>
 			</control>
 			<control type="image">
@@ -2452,7 +2452,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6601)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6601)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2464,7 +2464,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6601)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6601)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2476,7 +2476,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6602)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6602)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2488,7 +2488,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6602)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6602)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2500,7 +2500,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6603)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6603)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2512,7 +2512,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6603)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6603)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2524,7 +2524,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6604)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6604)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2536,7 +2536,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6604)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6604)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2548,7 +2548,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6605)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6605)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2560,7 +2560,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6605)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6605)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2572,7 +2572,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6606)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6606)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -2584,7 +2584,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>IsEmpty(Control.GetLabel(6606)) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6606)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
 			</control>
 			<control type="Label">
 				<posy>594</posy>
@@ -2685,7 +2685,7 @@
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[ListItem.Art(poster)]</texture>
 				<include>KodiFlixTVDimAnimation</include>
-				<visible>IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + Container.Content(movies)</visible>
+				<visible>String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + Container.Content(movies)</visible>
 				<include>KodiFlixExtrasClear</include>
 			</control>
 			<control type="image">
@@ -2698,7 +2698,7 @@
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true">$VAR[FakeDiscArtOverlay]</texture>
 				<include>KodiFlixTVDimAnimation</include>
-				<visible>IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + Container.Content(movies)</visible>
+				<visible>String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + Container.Content(movies)</visible>
 				<include>KodiFlixExtrasClear</include>
 			</control>
 			<control type="grouplist">
@@ -2825,22 +2825,22 @@
 			<height>247</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">$INFO[ListItem.Path]season11-poster.jpg</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82011))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82011))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82011))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82011))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82011))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82011))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82011))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82011))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixTVBoxsetsActiveBoxSetExtraSeasons)</visible>
-			<visible>!ListItem.IsParentFolder + Container.Content(tvshows) + !IsEmpty(Control.GetLabel(82011))</visible>
+			<visible>!ListItem.IsParentFolder + Container.Content(tvshows) + !String.IsEmpty(Control.GetLabel(82011))</visible>
 			<visible>Skin.HasSetting(KodiFlixTVBoxsetsActiveBoxSetCases) + Skin.HasSetting(KodiFlixBoxsets) + !Skin.HasSetting(KodiFlixTVsCenterList) + !Skin.HasSetting(KodiFlixTVsCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -2850,22 +2850,22 @@
 			<height>273</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82011))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82011))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82011))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82011))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82011))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82011))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82011))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82011))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixTVBoxsetsActiveBoxSetExtraSeasons)</visible>
-			<visible>!ListItem.IsParentFolder + Container.Content(tvshows) + !IsEmpty(Control.GetLabel(82011))</visible>
+			<visible>!ListItem.IsParentFolder + Container.Content(tvshows) + !String.IsEmpty(Control.GetLabel(82011))</visible>
 			<visible>Skin.HasSetting(KodiFlixTVBoxsetsActiveBoxSetCases) + Skin.HasSetting(KodiFlixBoxsets) + !Skin.HasSetting(KodiFlixTVsCenterList) + !Skin.HasSetting(KodiFlixTVsCenterFocus)</visible>
 		</control>
 		<!-- Case 10 -->
@@ -2876,16 +2876,16 @@
 			<height>249</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">$INFO[ListItem.Path]season10-poster.jpg</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82010))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82010))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82010))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82010))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82010))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82010))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82010))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82010))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -2901,16 +2901,16 @@
 			<height>278</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82010))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82010))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82010))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82010))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82010))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82010))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82010))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82010))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -2927,16 +2927,16 @@
 			<height>254</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">$INFO[ListItem.Path]season09-poster.jpg</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82009))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82009))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82009))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82009))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82009))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82009))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82009))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82009))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -2952,16 +2952,16 @@
 			<height>283</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82009))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82009))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82009))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82009))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82009))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82009))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82009))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82009))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -2978,16 +2978,16 @@
 			<height>259</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">$INFO[ListItem.Path]season08-poster.jpg</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82008))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82008))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82008))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82008))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82008))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82008))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82008))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82008))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3003,16 +3003,16 @@
 			<height>288</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82008))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82008))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82008))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82008))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82008))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82008))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82008))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82008))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3029,16 +3029,16 @@
 			<height>264</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">$INFO[ListItem.Path]season07-poster.jpg</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82007))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82007))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82007))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82007))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82007))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82007))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82007))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82007))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3054,16 +3054,16 @@
 			<height>293</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82007))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82007))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82007))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82007))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82007))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82007))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82007))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82007))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3080,16 +3080,16 @@
 			<height>266</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">$INFO[ListItem.Path]season06-poster.jpg</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82006))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82006))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82006))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82006))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82006))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82006))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82006))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82006))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3105,16 +3105,16 @@
 			<height>298</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82006))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82006))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82006))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82006))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82006))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82006))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82006))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82006))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3131,16 +3131,16 @@
 			<height>272</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">$INFO[ListItem.Path]season05-poster.jpg</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82005))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82005))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82005))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82005))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82005))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82005))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82005))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82005))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3157,16 +3157,16 @@
 			<height>303</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82005))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82005))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82005))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82005))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82005))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82005))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82005))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82005))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3183,16 +3183,16 @@
 			<width>247</width>
 			<height>277</height>
 			<texture background="true">$INFO[ListItem.Path]season04-poster.jpg</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82004))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82004))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82004))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82004))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82004))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82004))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82004))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82004))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3207,16 +3207,16 @@
 			<width>289</width>
 			<height>308</height>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82004))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82004))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82004))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82004))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82004))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82004))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82004))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82004))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3232,16 +3232,16 @@
 			<width>247</width>
 			<height>282</height>
 			<texture background="true">$INFO[ListItem.Path]season03-poster.jpg</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82003))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82003))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82003))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82003))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82003))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82003))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82003))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82003))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3256,16 +3256,16 @@
 			<width>289</width>
 			<height>314</height>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82003))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82003))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82003))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82003))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82003))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82003))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82003))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82003))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3305,16 +3305,16 @@
 			<width>314</width>
 			<height>322</height>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82002))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82002))" reversible="true">
 				<effect type="slide" start="0,0" end="140,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82002))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82002))" reversible="true">
 				<effect type="slide" start="0,0" end="140,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82002))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82002))" reversible="true">
 				<effect type="slide" start="0,0" end="140,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82002))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82002))" reversible="true">
 				<effect type="slide" start="0,0" end="140,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3354,16 +3354,16 @@
 			<width>334</width>
 			<height>329</height>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !IsEmpty(Control.GetLabel(82001))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixTvSetCasesDelay_5) + !String.IsEmpty(Control.GetLabel(82001))" reversible="true">
 				<effect type="slide" start="0,0" end="70,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !IsEmpty(Control.GetLabel(82001))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixTvSetCasesDelay_10) + !String.IsEmpty(Control.GetLabel(82001))" reversible="true">
 				<effect type="slide" start="0,0" end="70,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !IsEmpty(Control.GetLabel(82001))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixTvSetCasesDelay_20) + !String.IsEmpty(Control.GetLabel(82001))" reversible="true">
 				<effect type="slide" start="0,0" end="70,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !IsEmpty(Control.GetLabel(82001))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixTvSetCasesDelay_30) + !String.IsEmpty(Control.GetLabel(82001))" reversible="true">
 				<effect type="slide" start="0,0" end="70,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>

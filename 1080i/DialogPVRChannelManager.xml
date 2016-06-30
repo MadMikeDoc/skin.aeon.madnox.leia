@@ -205,7 +205,7 @@
 					<textcolor>grey</textcolor>
 					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<focusedcolor>white2</focusedcolor>
-					<usealttexture>IsEmpty(Window.Property(IsRadio))</usealttexture>
+					<usealttexture>String.IsEmpty(Window.Property(IsRadio))</usealttexture>
 				</control>
 				<control type="button" id="30">
 					<width>334</width>

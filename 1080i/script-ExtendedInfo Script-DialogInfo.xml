@@ -139,7 +139,7 @@
 							<label fallback="161">$INFO[Window.Property(AlsoKnownAs)]</label>
 							<label2>$ADDON[script.extendedinfo 32016]:</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(Window.Property(AlsoKnownAs))</visible>
+							<visible>!String.IsEmpty(Window.Property(AlsoKnownAs))</visible>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Window.Property(Birthday)]</label>
@@ -150,13 +150,13 @@
 							<label fallback="161">$INFO[Window.Property(Age)]</label>
 							<label2>$ADDON[script.extendedinfo 32020]:</label2>
 							<onclick>noop</onclick>
-							<visible>IsEmpty(Window.Property(Deathday))</visible>
+							<visible>String.IsEmpty(Window.Property(Deathday))</visible>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Window.Property(Deathday)]</label>
 							<label2>$ADDON[script.extendedinfo 32013]:</label2>
 							<onclick>noop</onclick>
-							<visible>!IsEmpty(Window.Property(Deathday))</visible>
+							<visible>!String.IsEmpty(Window.Property(Deathday))</visible>
 						</item>
 						<item>
 							<label fallback="161">$INFO[Window.Property(PlaceOfBirth)]</label>
@@ -247,7 +247,7 @@
 								<width>93</width>
 								<height>93</height>
 								<texture>extendedinfo.png</texture>
-								<visible>!IsEmpty(ListItem.Property(DBID))</visible>
+								<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
 							</control>
 							<control type="image">
 								<top>0</top>
@@ -256,7 +256,7 @@
 								<height>40</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Year)</visible>
+								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</control>
 							<control type="textbox">
 								<left>8</left>
@@ -274,7 +274,7 @@
 								<height>78</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Label)</visible>
+								<visible>!String.IsEmpty(ListItem.Label)</visible>
 							</control>
 							<control type="label">
 								<left>14</left>
@@ -325,7 +325,7 @@
 								<width>93</width>
 								<height>93</height>
 								<texture>extendedinfo.png</texture>
-								<visible>!IsEmpty(ListItem.Property(DBID))</visible>
+								<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
 							</control>
 							<control type="image">
 								<top>8</top>
@@ -334,7 +334,7 @@
 								<height>32</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Year)</visible>
+								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</control>
 							<control type="textbox">
 								<left>8</left>
@@ -353,7 +353,7 @@
 								<height>70</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Label)</visible>
+								<visible>!String.IsEmpty(ListItem.Label)</visible>
 							</control>
 							<control type="label">
 								<left>14</left>
@@ -402,7 +402,7 @@
 								<width>93</width>
 								<height>93</height>
 								<texture>extendedinfo.png</texture>
-								<visible>!IsEmpty(ListItem.Property(DBID))</visible>
+								<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
 							</control>
 							<control type="image">
 								<top>0</top>
@@ -411,7 +411,7 @@
 								<height>40</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Year)</visible>
+								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</control>
 							<control type="textbox">
 								<left>8</left>
@@ -429,7 +429,7 @@
 								<height>78</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Label)</visible>
+								<visible>!String.IsEmpty(ListItem.Label)</visible>
 							</control>
 							<control type="label">
 								<left>14</left>
@@ -480,7 +480,7 @@
 								<width>93</width>
 								<height>93</height>
 								<texture>extendedinfo.png</texture>
-								<visible>!IsEmpty(ListItem.Property(DBID))</visible>
+								<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
 							</control>
 							<control type="image">
 								<top>8</top>
@@ -489,7 +489,7 @@
 								<height>32</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Year)</visible>
+								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</control>
 							<control type="textbox">
 								<left>8</left>
@@ -508,7 +508,7 @@
 								<height>70</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Label)</visible>
+								<visible>!String.IsEmpty(ListItem.Label)</visible>
 							</control>
 							<control type="label">
 								<left>14</left>
@@ -559,7 +559,7 @@
 								<height>94</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Title)</visible>
+								<visible>!String.IsEmpty(ListItem.Title)</visible>
 							</control>
 							<control type="textbox">
 								<left>17</left>
@@ -599,7 +599,7 @@
 								<height>86</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Title)</visible>
+								<visible>!String.IsEmpty(ListItem.Title)</visible>
 							</control>
 							<control type="textbox">
 								<left>17</left>
@@ -637,7 +637,7 @@
 								<width>93</width>
 								<height>93</height>
 								<texture>extendedinfo.png</texture>
-								<visible>!IsEmpty(ListItem.Property(DBID))</visible>
+								<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
 							</control>
 							<control type="image">
 								<top>0</top>
@@ -646,7 +646,7 @@
 								<height>40</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Year)</visible>
+								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</control>
 							<control type="textbox">
 								<left>8</left>
@@ -664,7 +664,7 @@
 								<height>78</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Label)</visible>
+								<visible>!String.IsEmpty(ListItem.Label)</visible>
 							</control>
 							<control type="label">
 								<left>14</left>
@@ -715,7 +715,7 @@
 								<width>93</width>
 								<height>93</height>
 								<texture>extendedinfo.png</texture>
-								<visible>!IsEmpty(ListItem.Property(DBID))</visible>
+								<visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
 							</control>
 							<control type="image">
 								<top>8</top>
@@ -724,7 +724,7 @@
 								<height>32</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Year)</visible>
+								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</control>
 							<control type="textbox">
 								<left>8</left>
@@ -743,7 +743,7 @@
 								<height>70</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Label)</visible>
+								<visible>!String.IsEmpty(ListItem.Label)</visible>
 							</control>
 							<control type="label">
 								<left>14</left>
@@ -836,7 +836,7 @@
 								<height>78</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Title)</visible>
+								<visible>!String.IsEmpty(ListItem.Title)</visible>
 							</control>
 							<control type="textbox">
 								<left>14</left>
@@ -877,7 +877,7 @@
 								<height>70</height>
 								<texture>black.png</texture>
 								<colordiffuse>88ffffff</colordiffuse>
-								<visible>!IsEmpty(ListItem.Title)</visible>
+								<visible>!String.IsEmpty(ListItem.Title)</visible>
 							</control>
 							<control type="textbox">
 								<left>14</left>

@@ -67,7 +67,7 @@
 						<height>673</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<visible>IsEmpty(ListItem.Art(fanart))</visible>
+						<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
 						<fadetime>600</fadetime>
 					</control>
 					<control type="image">
@@ -456,7 +456,7 @@
 				<pagecontrol>60</pagecontrol>
 				<viewtype label="$LOCALIZE[31233]">list</viewtype>
 				<scrolltime tween="quadratic">200</scrolltime>
-				<visible>![!IsEmpty(Skin.String(DisablePanelVL)) + Window.IsActive(videos)]</visible>
+				<visible>![!String.IsEmpty(Skin.String(DisablePanelVL)) + Window.IsActive(videos)]</visible>
 				<itemlayout height="103" width="570" condition="![Skin.HasSetting(panellogo) + [Container.Content(movies) | Container.Content(tvshows)]]">
 					<control type="label">
 						<left>20</left>
@@ -584,14 +584,14 @@
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>white</textcolor>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="label">
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>$VAR[TitleColorVar]</textcolor>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="33" width="30">
@@ -599,7 +599,7 @@
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>$VAR[TitleColorVar]</textcolor>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -625,7 +625,7 @@
 			<texture>$INFO[ListItem.Art(clearlogo)]</texture>
 		</control>
 		<control type="group">
-			<visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+			<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			<control type="label">
 				<left></left>
 				<top>110</top>

@@ -13,7 +13,7 @@
 		<include>CommonMediaPlayingBackground</include>
 		<control type="button" id="197">
 			<include>HiddenObject</include>
-			<visible>!Container.OnNext + !Container.OnPrevious + StringCompare(Control.GetLabel(4421),infopanelonauto)</visible>
+			<visible>!Container.OnNext + !Container.OnPrevious + String.IsEqual(Control.GetLabel(4421),infopanelonauto)</visible>
 			<include>DelayAnimations</include>
 		</control>
 		<control type="image">

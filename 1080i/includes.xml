@@ -420,7 +420,7 @@
 		<font>-</font>
 	</include>
 	<include name="TvTunesVisibleCondition">
-		<visible>IsEmpty(Window(videos).Property(tvtunesIsAlive))</visible>
+		<visible>String.IsEmpty(Window(videos).Property(tvtunesIsAlive))</visible>
 	</include>
 	<include name="Objects_KeyOffVars">
 		<textoffsety>32</textoffsety>
@@ -732,11 +732,11 @@
 		<onload>Skin.SetBool(firstrun4.0)</onload>
 	</include>
 	<include name="DelayAnimations">
-		<animation effect="fade" end="100" time="120" delay="1000" condition="Stringcompare(Skin.String(InfopanelDelay),1)">Visible</animation>
-		<animation effect="fade" end="100" time="120" delay="2000" condition="Stringcompare(Skin.String(InfopanelDelay),2)">Visible</animation>
-		<animation effect="fade" end="100" time="120" delay="3000" condition="Stringcompare(Skin.String(InfopanelDelay),3)">Visible</animation>
-		<animation effect="fade" end="100" time="120" delay="4000" condition="Stringcompare(Skin.String(InfopanelDelay),4)">Visible</animation>
-		<animation effect="fade" end="100" time="120" delay="5000" condition="Stringcompare(Skin.String(InfopanelDelay),5)">Visible</animation>
+		<animation effect="fade" end="100" time="120" delay="1000" condition="String.IsEqual(Skin.String(InfopanelDelay),1)">Visible</animation>
+		<animation effect="fade" end="100" time="120" delay="2000" condition="String.IsEqual(Skin.String(InfopanelDelay),2)">Visible</animation>
+		<animation effect="fade" end="100" time="120" delay="3000" condition="String.IsEqual(Skin.String(InfopanelDelay),3)">Visible</animation>
+		<animation effect="fade" end="100" time="120" delay="4000" condition="String.IsEqual(Skin.String(InfopanelDelay),4)">Visible</animation>
+		<animation effect="fade" end="100" time="120" delay="5000" condition="String.IsEqual(Skin.String(InfopanelDelay),5)">Visible</animation>
 	</include>
 	<include name="UnwatchedIcon">
 		<control type="group">
@@ -841,7 +841,7 @@
             <thumb fallback="special://skin/extras/BigIcons/Film.png">$INFO[Skin.String(QuickNavItem1.MultiFanart)]</thumb>
             <onclick>SetProperty(MenuItem,QuickNavItem1,home)</onclick>
             <onclick>SetFocus(810)</onclick>
-            <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem1.Disable))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem1.Disable))</visible>
         </item>
         <item>
             <label fallback="31503">$INFO[Skin.String(QuickNavItem2.Label)]</label>
@@ -851,7 +851,7 @@
             <thumb fallback="special://skin/extras/BigIcons/Television.png">$INFO[Skin.String(QuickNavItem2.MultiFanart)]</thumb>
             <onclick>SetProperty(MenuItem,QuickNavItem2,home)</onclick>
             <onclick>SetFocus(810)</onclick>
-            <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem2.Disable))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem2.Disable))</visible>
         </item>
         <item>
             <label fallback="31501">$INFO[Skin.String(QuickNavItem3.Label)]</label>
@@ -861,7 +861,7 @@
             <thumb fallback="special://skin/extras/BigIcons/Headphone.png">$INFO[Skin.String(QuickNavItem3.MultiFanart)]</thumb>
             <onclick>SetProperty(MenuItem,QuickNavItem3,home)</onclick>
             <onclick>SetFocus(810)</onclick>
-            <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem3.Disable))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem3.Disable))</visible>
         </item>
         <item>
             <label fallback="20389">$INFO[Skin.String(QuickNavItem4.Label)]</label>
@@ -871,7 +871,7 @@
             <thumb fallback="special://skin/extras/BigIcons/Media.png">$INFO[Skin.String(QuickNavItem4.MultiFanart)]</thumb>
             <onclick>SetProperty(MenuItem,QuickNavItem4,home)</onclick>
             <onclick>SetFocus(810)</onclick>
-            <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem4.Disable))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem4.Disable))</visible>
         </item>
         <item>
             <label fallback="31017">$INFO[Skin.String(QuickNavItem5.Label)]</label>
@@ -881,7 +881,7 @@
             <thumb fallback="special://skin/extras/BigIcons/TV.png">$INFO[Skin.String(QuickNavItem5.MultiFanart)]</thumb>
             <onclick>SetProperty(MenuItem,QuickNavItem5,home)</onclick>
             <onclick>SetFocus(810)</onclick>
-            <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem5.Disable))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem5.Disable))</visible>
         </item>
         <item>
             <label fallback="1037">$INFO[Skin.String(QuickNavItem6.Label)]</label>
@@ -891,7 +891,7 @@
             <thumb fallback="special://skin/extras/BigIcons/Camcorder.png">$INFO[Skin.String(QuickNavItem6.MultiFanart)]</thumb>
             <onclick>SetProperty(MenuItem,QuickNavItem6,home)</onclick>
             <onclick>SetFocus(810)</onclick>
-            <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem6.Disable))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem6.Disable))</visible>
         </item>
         <item>
             <label fallback="31507">$INFO[Skin.String(QuickNavItem7.Label)]</label>
@@ -901,7 +901,7 @@
             <thumb fallback="special://skin/extras/BigIcons/Puzzle.png">$INFO[Skin.String(QuickNavItem7.MultiFanart)]</thumb>
             <onclick>SetProperty(MenuItem,QuickNavItem7,home)</onclick>
             <onclick>SetFocus(810)</onclick>
-            <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem7.Disable))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem7.Disable))</visible>
         </item>
         <item>
             <label fallback="137">$INFO[Skin.String(QuickNavItem8.Label)]</label>
@@ -911,7 +911,7 @@
             <thumb fallback="special://skin/extras/BigIcons/Search.png">$INFO[Skin.String(QuickNavItem8.MultiFanart)]</thumb>
             <onclick>SetProperty(MenuItem,QuickNavItem8,home)</onclick>
             <onclick>SetFocus(810)</onclick>
-            <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem8.Disable))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem8.Disable))</visible>
         </item>
         <item>
             <label fallback="1036">$INFO[Skin.String(QuickNavItem9.Label)]</label>
@@ -921,7 +921,7 @@
             <thumb fallback="special://skin/extras/BigIcons/Star.png">$INFO[Skin.String(QuickNavItem9.MultiFanart)]</thumb>
             <onclick>SetProperty(MenuItem,QuickNavItem9,home)</onclick>
             <onclick>SetFocus(810)</onclick>
-            <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickNavItem9.Disable))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem9.Disable))</visible>
         </item>
     </include-->
 	<include name="FileManagerPanels">
@@ -1057,7 +1057,7 @@
 				<align>center</align>
 				<label>$INFO[VideoPlayer.Title]</label>
 				<font>Font_Bold40</font>
-				<visible>!IsEmpty(VideoPlayer.Title)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 			</control>
 			<control type="label" id="1">
 				<top>50</top>
@@ -1067,7 +1067,7 @@
 				<label>$LOCALIZE[19031]: $INFO[VideoPlayer.NextTitle]</label>
 				<font>Font_Reg28</font>
 				<textcolor>grey</textcolor>
-				<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
 			</control>
 		</control>
 		<control type="group" id="1">
@@ -1792,7 +1792,7 @@
 			<top>922</top>
 			<control type="group">
 				<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
-				<animation effect="slide" end="0,30" condition="IsEmpty(VideoPlayer.Rating)">Conditional</animation>
+				<animation effect="slide" end="0,30" condition="String.IsEmpty(VideoPlayer.Rating)">Conditional</animation>
 				<control type="label">
 					<left>38</left>
 					<top>56</top>
@@ -2035,12 +2035,12 @@
                 <include>HiddenObject</include>
                 <onfocus>SetFocus(800)</onfocus>
                 <onfocus>Action(Close)</onfocus>
-                <onfocus condition="Stringcompare(Container(800).ListItem.Property(Path),ActivateWindow(Videos,MovieTitles,return)) | Stringcompare(Container(800).ListItem.Property(Path),ActivateWindow(Videos,MusicVideoTitles,return)) | Substring(Container(800).ListItem.Property(Path),  videodb://movies/)">SetProperty(DontRunTVShowScripts,True,Home)</onfocus>
-                <onfocus condition="stringcompare(Container(800).ListItem.Property(Type),0) | stringcompare(Container(800).ListItem.Property(Type),1) | stringcompare(Container(800).ListItem.Property(Type),2) | stringcompare(Container(800).ListItem.Property(Type),3)">RunAddon($INFO[Container(800).ListItem.Property(Path)])</onfocus>
-                <onfocus condition="stringcompare(Container(800).ListItem.Property(Type),4)">ActivateWindow(Videos,$ESCINFO[Container(800).ListItem.Property(Path)],return)</onfocus>
-                <onfocus condition="stringcompare(Container(800).ListItem.Property(Type),5)">ActivateWindow(MusicLibrary,$ESCINFO[Container(800).ListItem.Property(Path)],return)</onfocus>
-                <onfocus condition="stringcompare(Container(800).ListItem.Property(Type),6) | Stringcompare(Container(800).ListItem.Property(Type),7)  | Stringcompare(Container(800).ListItem.Property(Type),custom)">$INFO[Container(800).ListItem.Property(Path)]</onfocus>
-                <visible>IsEmpty(Window(home).Property(quicknavsetup))</visible>
+                <onfocus condition="String.IsEqual(Container(800).ListItem.Property(Path),ActivateWindow(Videos,MovieTitles,return)) | String.IsEqual(Container(800).ListItem.Property(Path),ActivateWindow(Videos,MusicVideoTitles,return)) | Substring(Container(800).ListItem.Property(Path),  videodb://movies/)">SetProperty(DontRunTVShowScripts,True,Home)</onfocus>
+                <onfocus condition="String.IsEqual(Container(800).ListItem.Property(Type),0) | String.IsEqual(Container(800).ListItem.Property(Type),1) | String.IsEqual(Container(800).ListItem.Property(Type),2) | String.IsEqual(Container(800).ListItem.Property(Type),3)">RunAddon($INFO[Container(800).ListItem.Property(Path)])</onfocus>
+                <onfocus condition="String.IsEqual(Container(800).ListItem.Property(Type),4)">ActivateWindow(Videos,$ESCINFO[Container(800).ListItem.Property(Path)],return)</onfocus>
+                <onfocus condition="String.IsEqual(Container(800).ListItem.Property(Type),5)">ActivateWindow(MusicLibrary,$ESCINFO[Container(800).ListItem.Property(Path)],return)</onfocus>
+                <onfocus condition="String.IsEqual(Container(800).ListItem.Property(Type),6) | String.IsEqual(Container(800).ListItem.Property(Type),7)  | String.IsEqual(Container(800).ListItem.Property(Type),custom)">$INFO[Container(800).ListItem.Property(Path)]</onfocus>
+                <visible>String.IsEmpty(Window(home).Property(quicknavsetup))</visible>
             </control>
             <control type="button" id="810">
                 <include>HiddenObject</include>
@@ -2051,7 +2051,7 @@
                 <onfocus>Skin.Setstring(ItemToEdit.Type,$ESCINFO[Container(800).ListItem.Property(Type)])</onfocus>
                 <onfocus>Skin.Setstring(ItemToEdit.Path,$ESCINFO[Container(800).ListItem.Property(Path)])</onfocus>
                 <onfocus>ActivateWindow(1136)</onfocus>
-                <visible>!IsEmpty(Window(home).Property(quicknavsetup))</visible>
+                <visible>!String.IsEmpty(Window(home).Property(quicknavsetup))</visible>
             </control>
             <control type="list" id="800">
                 <top>150</top>
@@ -2092,7 +2092,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <texture>close.png</texture>
-                        <visible>stringcompare(ListItem.Property(DisableIcon),1)</visible>
+                        <visible>String.IsEqual(ListItem.Property(DisableIcon),1)</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout width="600" height="80">
@@ -2131,7 +2131,7 @@
                         <height>80</height>
                         <aspectratio>keep</aspectratio>
                         <texture>close.png</texture>
-                        <visible>stringcompare(ListItem.Property(DisableIcon),1)</visible>
+                        <visible>String.IsEqual(ListItem.Property(DisableIcon),1)</visible>
                     </control>
                 </focusedlayout>
                 <content>
@@ -2143,7 +2143,7 @@
                         <thumb fallback="special://skin/extras/BigIcons/Film.png">$INFO[Skin.String(QuickList1_1.MultiFanart)]</thumb>
                         <onclick>SetProperty(MenuItem,QuickList1_1,home)</onclick>
                         <onclick>SetFocus(810)</onclick>
-                        <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_1.Disable))</visible>
+                        <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickList1_1.Disable))</visible>
                     </item>
                     <item>
                         <label fallback="31503">$INFO[Skin.String(QuickList1_2.Label)]</label>
@@ -2153,7 +2153,7 @@
                         <thumb fallback="special://skin/extras/BigIcons/Television.png">$INFO[Skin.String(QuickList1_2.MultiFanart)]</thumb>
                         <onclick>SetProperty(MenuItem,QuickList1_2,home)</onclick>
                         <onclick>SetFocus(810)</onclick>
-                        <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_2.Disable))</visible>
+                        <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickList1_2.Disable))</visible>
                     </item>
                     <item>
                         <label fallback="31501">$INFO[Skin.String(QuickList1_3.Label)]</label>
@@ -2163,7 +2163,7 @@
                         <thumb fallback="special://skin/extras/BigIcons/Headphone.png">$INFO[Skin.String(QuickList1_3.MultiFanart)]</thumb>
                         <onclick>SetProperty(MenuItem,QuickList1_3,home)</onclick>
                         <onclick>SetFocus(810)</onclick>
-                        <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_3.Disable))</visible>
+                        <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickList1_3.Disable))</visible>
                     </item>
                     <item>
                         <label fallback="20389">$INFO[Skin.String(QuickList1_4.Label)]</label>
@@ -2173,7 +2173,7 @@
                         <thumb fallback="special://skin/extras/BigIcons/Media.png">$INFO[Skin.String(QuickList1_4.MultiFanart)]</thumb>
                         <onclick>SetProperty(MenuItem,QuickList1_4,home)</onclick>
                         <onclick>SetFocus(810)</onclick>
-                        <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_4.Disable))</visible>
+                        <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickList1_4.Disable))</visible>
                     </item>
                     <item>
                         <label fallback="1036">$INFO[Skin.String(QuickList1_5.Label)]</label>
@@ -2183,7 +2183,7 @@
                         <thumb fallback="special://skin/extras/BigIcons/Star.png">$INFO[Skin.String(QuickList1_5.MultiFanart)]</thumb>
                         <onclick>SetProperty(MenuItem,QuickList1_5,home)</onclick>
                         <onclick>SetFocus(810)</onclick>
-                        <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_5.Disable))</visible>
+                        <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickList1_5.Disable))</visible>
                     </item>
                     <item>
                         <label fallback="1037">$INFO[Skin.String(QuickList1_6.Label)]</label>
@@ -2193,7 +2193,7 @@
                         <thumb fallback="special://skin/extras/BigIcons/Monitor.png">$INFO[Skin.String(QuickList1_6.MultiFanart)]</thumb>
                         <onclick>SetProperty(MenuItem,QuickList1_6,home)</onclick>
                         <onclick>SetFocus(810)</onclick>
-                        <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_6.Disable))</visible>
+                        <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickList1_6.Disable))</visible>
                     </item>
                     <item>
                         <label fallback="31507">$INFO[Skin.String(QuickList1_7.Label)]</label>
@@ -2203,7 +2203,7 @@
                         <thumb fallback="special://skin/extras/BigIcons/Puzzle.png">$INFO[Skin.String(QuickList1_7.MultiFanart)]</thumb>
                         <onclick>SetProperty(MenuItem,QuickList1_7,home)</onclick>
                         <onclick>SetFocus(810)</onclick>
-                        <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_7.Disable))</visible>
+                        <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickList1_7.Disable))</visible>
                     </item>
                     <item>
                         <label fallback="137">$INFO[Skin.String(QuickList1_8.Label)]</label>
@@ -2213,7 +2213,7 @@
                         <thumb fallback="special://skin/extras/BigIcons/Search.png">$INFO[Skin.String(QuickList1_8.MultiFanart)]</thumb>
                         <onclick>SetProperty(MenuItem,QuickList1_8,home)</onclick>
                         <onclick>SetFocus(810)</onclick>
-                        <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_8.Disable))</visible>
+                        <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickList1_8.Disable))</visible>
                     </item>
                     <item>
                         <label fallback="559">$INFO[Skin.String(QuickList1_9.Label)]</label>
@@ -2223,7 +2223,7 @@
                         <thumb fallback="special://skin/extras/BigIcons/Format.png">$INFO[Skin.String(QuickList1_9.MultiFanart)]</thumb>
                         <onclick>SetProperty(MenuItem,QuickList1_9,home)</onclick>
                         <onclick>SetFocus(810)</onclick>
-                        <visible>!IsEmpty(Window(home).Property(quicknavsetup)) | IsEmpty(Skin.String(QuickList1_9.Disable))</visible>
+                        <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickList1_9.Disable))</visible>
                     </item>
                 </content>
             </control>
@@ -2238,16 +2238,16 @@
                 <label>$VAR[QuickNavButtonLabelVar]</label>
                 <font>Font_Reg26</font>
                 <textcolor>grey2</textcolor>
-                <onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">SetProperty(quicknavsetup,1,home)</onclick>
-                <onclick condition="IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[31902],$LOCALIZE[31881])</onclick>
-                <onclick condition="!IsEmpty(Window(home).Property(quicknavsetup))">ClearProperty(quicknavsetup,home)</onclick>
+                <onclick condition="String.IsEmpty(Window(home).Property(quicknavsetup))">SetProperty(quicknavsetup,1,home)</onclick>
+                <onclick condition="String.IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[31902],$LOCALIZE[31881])</onclick>
+                <onclick condition="!String.IsEmpty(Window(home).Property(quicknavsetup))">ClearProperty(quicknavsetup,home)</onclick>
                 <onleft>3</onleft>
                 <onright>3</onright>
                 <onup>SetFocus(800,20)</onup>
                 <onup>800</onup>
                 <ondown>SetFocus(800,0)</ondown>
                 <ondown>800</ondown>
-                <visible>IsEmpty(Window(home).Property(viewtypeselect))</visible>
+                <visible>String.IsEmpty(Window(home).Property(viewtypeselect))</visible>
                 <visible>!Skin.HasSetting(kioskmode)</visible>
             </control>
         </control>
@@ -2838,7 +2838,7 @@
 					<height>100</height>
 					<texturenofocus>special://skin/extras/BigIcons/Subtitle.png</texturenofocus>
 					<alttexturenofocus>special://skin/extras/BigIcons/Subtitle.png</alttexturenofocus>
-					<usealttexture>IsEmpty(Skin.String(SubtitleScript_Path))</usealttexture>
+					<usealttexture>String.IsEmpty(Skin.String(SubtitleScript_Path))</usealttexture>
 					<colordiffuse>gray</colordiffuse>
 				</control>
 				<control type="button">
@@ -3251,21 +3251,21 @@
 	</include>
 	<include name="BackgroundAnimation">
 		<!--global-->
-		<animation effect="zoom" start="110" end="130" center="auto" time="14000" tween="sine" easing="inout" pulse="true" condition="StringCompare(Skin.String(BG-Animation),global)" reversible="false">Conditional</animation>
-		<animation effect="slide" start="-20,-20" end="20,20" time="15000" tween="sine" easing="inout" pulse="true" condition="StringCompare(Skin.String(BG-Animation),global)" reversible="false">Conditional</animation>
+		<animation effect="zoom" start="110" end="130" center="auto" time="14000" tween="sine" easing="inout" pulse="true" condition="String.IsEqual(Skin.String(BG-Animation),global)" reversible="false">Conditional</animation>
+		<animation effect="slide" start="-20,-20" end="20,20" time="15000" tween="sine" easing="inout" pulse="true" condition="String.IsEqual(Skin.String(BG-Animation),global)" reversible="false">Conditional</animation>
 		<!--only in windows-->
-		<animation effect="zoom" start="110" end="130" center="auto" time="14000" tween="sine" easing="inout" pulse="true" condition="StringCompare(Skin.String(BG-Animation),windows) + !Window.IsActive(home)" reversible="false">Conditional</animation>
-		<animation effect="slide" start="-20,-20" end="20,20" time="15000" tween="sine" easing="inout" pulse="true" condition="StringCompare(Skin.String(BG-Animation),windows) + !Window.IsActive(home)" reversible="false">Conditional</animation>
+		<animation effect="zoom" start="110" end="130" center="auto" time="14000" tween="sine" easing="inout" pulse="true" condition="String.IsEqual(Skin.String(BG-Animation),windows) + !Window.IsActive(home)" reversible="false">Conditional</animation>
+		<animation effect="slide" start="-20,-20" end="20,20" time="15000" tween="sine" easing="inout" pulse="true" condition="String.IsEqual(Skin.String(BG-Animation),windows) + !Window.IsActive(home)" reversible="false">Conditional</animation>
 		<!--only in home screen-->
-		<animation effect="zoom" start="110" end="130" center="auto" time="14000" tween="sine" easing="inout" pulse="true" condition="StringCompare(Skin.String(BG-Animation),home) + Window.IsActive(home)" reversible="false">Conditional</animation>
-		<animation effect="slide" start="-20,-20" end="20,20" time="15000" tween="sine" easing="inout" pulse="true" condition="StringCompare(Skin.String(BG-Animation),home) + Window.IsActive(home)" reversible="false">Conditional</animation>
+		<animation effect="zoom" start="110" end="130" center="auto" time="14000" tween="sine" easing="inout" pulse="true" condition="String.IsEqual(Skin.String(BG-Animation),home) + Window.IsActive(home)" reversible="false">Conditional</animation>
+		<animation effect="slide" start="-20,-20" end="20,20" time="15000" tween="sine" easing="inout" pulse="true" condition="String.IsEqual(Skin.String(BG-Animation),home) + Window.IsActive(home)" reversible="false">Conditional</animation>
 	</include>
 	<include name="Animation_ViewsCDart">
-		<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + StringCompare(skin.string(cdart_seconds),2000)">Conditional</animation>
-		<animation effect="rotate" end="-360" center="auto" time="4000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + StringCompare(skin.string(cdart_seconds),4000)">Conditional</animation>
-		<animation effect="rotate" end="-360" center="auto" time="8000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + StringCompare(skin.string(cdart_seconds),8000)">Conditional</animation>
-		<animation effect="rotate" end="-360" center="auto" time="16000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + StringCompare(skin.string(cdart_seconds),16000)">Conditional</animation>
-		<animation effect="rotate" end="-360" center="auto" time="20000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + StringCompare(skin.string(cdart_seconds),20000)">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + String.IsEqual(skin.string(cdart_seconds),2000)">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="4000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + String.IsEqual(skin.string(cdart_seconds),4000)">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="8000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + String.IsEqual(skin.string(cdart_seconds),8000)">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="16000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + String.IsEqual(skin.string(cdart_seconds),16000)">Conditional</animation>
+		<animation effect="rotate" end="-360" center="auto" time="20000" loop="true" reversible="false" condition="[Player.HasVideo + !Player.Paused] + String.IsEqual(skin.string(cdart_seconds),20000)">Conditional</animation>
 	</include>
 	<include name="Animation_DefaultGlass2">
 		<animation effect="fade" start="100" end="90" time="0" condition="true">Conditional</animation>
@@ -3503,8 +3503,8 @@
 		<onfocus>SetProperty(Widget.Trailer,$INFO[Container($PARAM[id]).ListItem.Trailer],Home)</onfocus>
 		<!-- Art -->
 		<onfocus>SetProperty(Widget.Cover,$PARAM[Texture],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.Cover,$INFO[Container($PARAM[id]).ListItem.Property(Fanart)],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart)) + Skin.HasSetting(WeatherFanartDir.multi)">SetProperty(Widget.Cover,$INFO[Container($PARAM[id]).ListItem.Property(WeatherMultiFanart)],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.Cover,$INFO[Container($PARAM[id]).ListItem.Property(Fanart)],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart)) + Skin.HasSetting(WeatherFanartDir.multi)">SetProperty(Widget.Cover,$INFO[Container($PARAM[id]).ListItem.Property(WeatherMultiFanart)],Home)</onfocus>
 		<onfocus>SetProperty(Widget.DiscArt,$INFO[Container($PARAM[id]).ListItem.Art(discart)],Home)</onfocus>
 		<!-- Info -->
 		<onfocus>SetProperty(Widget.Title,$PARAM[Title],Home)</onfocus>
@@ -3516,8 +3516,8 @@
 		<onfocus>SetProperty(Widget.Background,homewidgets/bg_default.png,Home)</onfocus>
 		<!-- Year -->
 		<onfocus>SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.Year],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.AddonName)">SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.AddonVersion],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.Year,$INFO[System.FriendlyName],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.AddonName)">SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.AddonVersion],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.Year,$INFO[System.FriendlyName],Home)</onfocus>
 		<!-- MPAA -->
 		<onfocus>SetProperty(Widget.FlagsRating,$INFO[Container($PARAM[id]).ListItem.MPAA,$VAR[ColorFlagsRating]rating/,.png],home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-G) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - G)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-G_Certificate_US.png,home)</onfocus>
@@ -3528,8 +3528,8 @@
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-Y) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - Y)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/tv-y.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,US:G) | SubString(Container($PARAM[id]).ListItem.MPAA,USA:G) | SubString(Container($PARAM[id]).ListItem.MPAA,Rated G)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_G_Certificate_US.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,PG-13) | SubString(Container($PARAM[id]).ListItem.MPAA,PG - 13)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_PG-13_Certificate_US.png,home)</onfocus>
-		<onfocus condition="Substring(Container($PARAM[id]).ListItem.MPAA,Rated PG) | StringCompare(Container($PARAM[id]).ListItem.MPAA,PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_PG_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,US:R) | SubString(Container($PARAM[id]).ListItem.MPAA,USA:R) | SubString(Container($PARAM[id]).ListItem.MPAA,Rated R) | StringCompare(Container($PARAM[id]).ListItem.MPAA,R)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_R_Certificate_US.png,home)</onfocus>
+		<onfocus condition="Substring(Container($PARAM[id]).ListItem.MPAA,Rated PG) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_PG_Certificate_US.png,home)</onfocus>
+		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,US:R) | SubString(Container($PARAM[id]).ListItem.MPAA,USA:R) | SubString(Container($PARAM[id]).ListItem.MPAA,Rated R) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,R)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_R_Certificate_US.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,US:NC-17)| SubString(Container($PARAM[id]).ListItem.MPAA,USA:NC-17)| SubString(Container($PARAM[id]).ListItem.MPAA,Rated NC-17) | SubString(Container($PARAM[id]).ListItem.MPAA,Rated NC - 17)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_NC-17_Certificate_US.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:U)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_U_Certificate_UK.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_PG_Certificate_UK.png,home)</onfocus>
@@ -3537,11 +3537,11 @@
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:12)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_12_Certificate_UK.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:15)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_15_Certificate_UK.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:18)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_18_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:0) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 0)| SubString(Container($PARAM[id]).ListItem.MPAA,o.A)| SubString(Container($PARAM[id]).ListItem.MPAA,FSK 0)| StringCompare(Container($PARAM[id]).ListItem.MPAA,FSK:0)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-0.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:6) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 6) | StringCompare(Container($PARAM[id]).ListItem.MPAA,6) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 6) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:6)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-6.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:12) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 12) | StringCompare(Container($PARAM[id]).ListItem.MPAA,12) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 12) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:12)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:16) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 16) | StringCompare(Container($PARAM[id]).ListItem.MPAA,16) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 16) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:16)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-16.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:18) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 18) | StringCompare(Container($PARAM[id]).ListItem.MPAA,18) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 18) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:18)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-18.png,home)</onfocus>
+		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:0) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 0)| SubString(Container($PARAM[id]).ListItem.MPAA,o.A)| SubString(Container($PARAM[id]).ListItem.MPAA,FSK 0)| String.IsEqual(Container($PARAM[id]).ListItem.MPAA,FSK:0)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-0.png,home)</onfocus>
+		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:6) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 6) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,6) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 6) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:6)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-6.png,home)</onfocus>
+		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:12) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 12) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,12) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 12) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:12)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-12.png,home)</onfocus>
+		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:16) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 16) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,16) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 16) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:16)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-16.png,home)</onfocus>
+		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:18) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 18) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,18) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 18) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:18)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-18.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,besorolás alatt)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_BA.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,korhatárra való tekintett nélkül megtekintetheto)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_KN.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,12 éven aluliak számára a megtekintése nagykorú felügyelete mellett ajánlott)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_12.png,home)</onfocus>
@@ -3565,11 +3565,11 @@
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:18) | SubString(Container($PARAM[id]).ListItem.MPAA,18 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_18.png,home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Rated X)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_X_Certificate_US.png,home)</onfocus>
 		<!-- Studio -->
-		<onfocus condition="Skin.HasSetting(StudiosColorFlag) + !IsEmpty(Container($PARAM[id]).ListItem.Studio)">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Studio,resource://resource.images.studios.coloured/,.png],Home)</onfocus>
-		<onfocus condition="!Skin.HasSetting(StudiosColorFlag) + !IsEmpty(Container($PARAM[id]).ListItem.Studio)">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Studio,resource://resource.images.studios.white/,.png],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(Album_Label))">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Property(Album_Label)],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.FlagsStudio,Homewidgets/systeminfo/square/system.png,Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart))">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Icon],Home)</onfocus>
+		<onfocus condition="Skin.HasSetting(StudiosColorFlag) + !String.IsEmpty(Container($PARAM[id]).ListItem.Studio)">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Studio,resource://resource.images.studios.coloured/,.png],Home)</onfocus>
+		<onfocus condition="!Skin.HasSetting(StudiosColorFlag) + !String.IsEmpty(Container($PARAM[id]).ListItem.Studio)">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Studio,resource://resource.images.studios.white/,.png],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Album_Label))">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Property(Album_Label)],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.FlagsStudio,Homewidgets/systeminfo/square/system.png,Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart))">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Icon],Home)</onfocus>
 		<!-- VideoCodec -->
 		<onfocus>SetProperty(Widget.FlagsSource,$INFO[Container($PARAM[id]).ListItem.VideoCodec,flags/colored/source/,.png])</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,PDTV) | SubString(Container($PARAM[id]).ListItem.filename,sdtv) | SubString(Container($PARAM[id]).ListItem.filename,sd tv)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/sdtv.png,Home)</onfocus>
@@ -3579,8 +3579,8 @@
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,bluray) | SubString(Container($PARAM[id]).ListItem.filename,blu-ray) | SubString(Container($PARAM[id]).ListItem.filename,bdrip) | SubString(Container($PARAM[id]).ListItem.filename,brrip)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/bluray.png,Home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,dvb)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/dvb.png,Home)</onfocus>
 		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,web-dl)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/web-dl.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,dvd) | StringCompare(Container($PARAM[id]).ListItem.FileExtension,iso) | StringCompare(Container($PARAM[id]).ListItem.FileExtension,ifo)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/dvd.png,Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart))">SetProperty(Widget.FlagsSource,$INFO[Window(weather).Property(WeatherProviderLogo)],Home)</onfocus>
+		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,dvd) | String.IsEqual(Container($PARAM[id]).ListItem.FileExtension,iso) | String.IsEqual(Container($PARAM[id]).ListItem.FileExtension,ifo)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/dvd.png,Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart))">SetProperty(Widget.FlagsSource,$INFO[Window(weather).Property(WeatherProviderLogo)],Home)</onfocus>
 		<!-- Resolution -->
 		<onfocus>SetProperty(Widget.FlagsResolution,$VAR[ColorFlagsResolution]resolution/$INFO[Container($PARAM[id]).ListItem.VideoResolution,,.png],Home)</onfocus>
 		<!-- Aspect -->
@@ -3591,15 +3591,15 @@
 		<!--onfocus condition="Skin.HasSetting(coloredflags)">SetProperty(Widget.FlagsAudioChannels,$INFO[Container($PARAM[id]).ListItem.AudioChannels,flags/colored/channels/,.png],Home)</onfocus>
         <onfocus condition="!Skin.HasSetting(coloredflags)">SetProperty(Widget.FlagsAudioChannels,$INFO[Container($PARAM[id]).ListItem.AudioChannels,flags/channels/,.png],Home)</onfocus-->
 		<!-- Subtitle Language -->
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.SubtitleLanguage)">SetProperty(Widget.FlagsCC,$VAR[ColorFlags]cc.png,Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.SubtitleLanguage)">SetProperty(Widget.FlagsCC,$VAR[ColorFlags]cc.png,Home)</onfocus>
 		<!--Audio Languages-->
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(AudioLanguage.1))">SetProperty(Widget.FlagsAL1,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(AudioLanguage.1),,.png],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(AudioLanguage.2))">SetProperty(Widget.FlagsAL2,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(AudioLanguage.2),,.png],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(AudioLanguage.3))">SetProperty(Widget.FlagsAL3,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(AudioLanguage.3),,.png],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(AudioLanguage.1))">SetProperty(Widget.FlagsAL1,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(AudioLanguage.1),,.png],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(AudioLanguage.2))">SetProperty(Widget.FlagsAL2,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(AudioLanguage.2),,.png],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(AudioLanguage.3))">SetProperty(Widget.FlagsAL3,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(AudioLanguage.3),,.png],Home)</onfocus>
 		<!--Subtitle Languages-->
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(SubtitleLanguage.1))">SetProperty(Widget.FlagsSL1,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(SubtitleLanguage.1),,.png],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(SubtitleLanguage.2))">SetProperty(Widget.FlagsSL2,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(SubtitleLanguage.2),,.png],Home)</onfocus>
-		<onfocus condition="!IsEmpty(Container($PARAM[id]).ListItem.Property(SubtitleLanguage.3))">SetProperty(Widget.FlagsSL3,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(SubtitleLanguage.3),,.png],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(SubtitleLanguage.1))">SetProperty(Widget.FlagsSL1,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(SubtitleLanguage.1),,.png],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(SubtitleLanguage.2))">SetProperty(Widget.FlagsSL2,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(SubtitleLanguage.2),,.png],Home)</onfocus>
+		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(SubtitleLanguage.3))">SetProperty(Widget.FlagsSL3,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(SubtitleLanguage.3),,.png],Home)</onfocus>
 		<!-- Open Window -->
 		<onfocus>ActivateWindow(1199)</onfocus>
 	</include>
@@ -3612,7 +3612,7 @@
 				<label>$INFO[Container(50).ListItem($PARAM[CastListItemID]).Label]</label>
 				<label2>$INFO[Container(50).ListItem($PARAM[CastListItemID]).Label2]</label2>
 				<thumb>$INFO[Container(50).ListItem($PARAM[CastListItemID]).Thumb]</thumb>
-				<visible>!IsEmpty(Container(50).ListItemNoWrap($PARAM[CastListItemID]).Label)</visible>
+				<visible>!String.IsEmpty(Container(50).ListItemNoWrap($PARAM[CastListItemID]).Label)</visible>
 				<onclick condition="Skin.HasSetting(UseMetadataAddon)">SetProperty(Position,$PARAM[CastListItemID])</onclick>
 				<onclick condition="Skin.HasSetting(UseMetadataAddon)">SetFocus(599)</onclick>
 				<onclick condition="!Skin.HasSetting(UseMetadataAddon)">RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).Listitem($PARAM[CastListItemID]).Label])</onclick>

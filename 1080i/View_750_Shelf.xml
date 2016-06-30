@@ -58,8 +58,8 @@
 				<shadowcolor>black</shadowcolor>
 				<font>font_SimplerE3D_bold</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
-				<visible>Skin.HasSetting(Shelf3DFlatInfoPanel) + [Container.Content(movies) | Container.Content(sets) + IsEmpty(Container.ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + [IsEmpty(Container.ListItem.Art(tvshow.clearlogo)) + IsEmpty(Container.ListItem.Art(clearlogo))]]</visible>
-				<visible>[IsEmpty(Container.ListItem.Art(clearlogo)) + IsEmpty(Container.ListItem.Art(tvshow.clearlogo))] + !ListItem.IsParentFolder + !Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
+				<visible>Skin.HasSetting(Shelf3DFlatInfoPanel) + [Container.Content(movies) | Container.Content(sets) + String.IsEmpty(Container.ListItem.Art(clearlogo))] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) + [String.IsEmpty(Container.ListItem.Art(tvshow.clearlogo)) + String.IsEmpty(Container.ListItem.Art(clearlogo))]]</visible>
+				<visible>[String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(tvshow.clearlogo))] + !ListItem.IsParentFolder + !Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
 			</control>
 			<control type="group">
 				<animation effect="rotatey" center="1230" start="-12" end="-12" time="0" condition="!Skin.HasSetting(Shelf3DFlatInfoPanel)">Conditional</animation>
@@ -161,7 +161,7 @@
 					<timeperimage>3250</timeperimage>
 					<fadetime>650</fadetime>
 					<aspectratio aligny="top">scale</aspectratio>
-					<visible>IsEmpty(Control.GetLabel(4208))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(4208))</visible>
 					<imagepath background="true">$INFO[Container.ListItem.Path,,extrathumbs/]</imagepath>
 				</control>
 				<control type="image">
@@ -169,7 +169,7 @@
 					<top>92</top>
 					<width>662</width>
 					<height>360</height>
-					<visible>IsEmpty(Control.GetLabel(4208)) + IsEmpty(Control.GetLabel(4209))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(4208)) + String.IsEmpty(Control.GetLabel(4209))</visible>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture background="true">$INFO[Container.ListItem(0).Art(fanart)]</texture>
 				</control>
@@ -192,7 +192,7 @@
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.AnimatedFanart)]</texture>
 					<bordertexture border="1,1,2,1">thumbs/panel_border.png</bordertexture>
 					<bordersize>1,1,2,1</bordersize>
-					<visible>Skin.HasSetting(SkinHelperAnimations) + !IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart)) + !Skin.HasSetting(Shelf3DDisableAnimatedFanart)</visible>
+					<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart)) + !Skin.HasSetting(Shelf3DDisableAnimatedFanart)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -374,7 +374,7 @@
 					<colordiffuse>grey2</colordiffuse>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[StudioImageVar]</texture>
-					<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !IsEmpty(ListItem.Studio)]</visible>
+					<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.Studio)]</visible>
 					<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="textbox">
@@ -397,7 +397,7 @@
 					<align>center</align>
 					<colordiffuse>grey2</colordiffuse>
 					<texture>$VAR[ColorFlagsSource]source/$VAR[SourceFlagVar,,.png]</texture>
-					<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+					<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 					<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
 				</control>
 				<!-- Media Flags -->
@@ -427,7 +427,7 @@
 						<width>65</width>
 						<height>60</height>
 						<texture>$VAR[Imdb_250]</texture>
-						<visible>!IsEmpty(ListItem.Top250)</visible>
+						<visible>!String.IsEmpty(ListItem.Top250)</visible>
 					</control>
 					<control type="Label">
 						<animation type="Conditional" reversible="false" condition="Skin.HasSetting(Shelf3DNoInfoPanel)">
@@ -448,14 +448,14 @@
 						<font>font14</font>
 						<shadowcolor>77000000</shadowcolor>
 						<textcolor>fffeec900</textcolor>
-						<visible>!IsEmpty(ListItem.Top250)</visible>
+						<visible>!String.IsEmpty(ListItem.Top250)</visible>
 					</control>
 					<control type="image" id="84757">
 						<top>-24</top>
 						<left>-100</left>
 						<bordersize>2</bordersize>
 						<texture>$VAR[StudioImageVar]</texture>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !IsEmpty(ListItem.Studio)]</visible>
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.Studio)]</visible>
 						<width>140</width>
 						<height>115</height>
 						<aspectratio>keep</aspectratio>
@@ -474,10 +474,10 @@
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<wrapmultiline>true</wrapmultiline>
-						<visible>IsEmpty(Control.GetLabel(84757))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(84757))</visible>
 					</control>
 					<control type="image">
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !IsEmpty(ListItem.MPAA)]</visible>
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.MPAA)]</visible>
 						<left>45</left>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
@@ -485,7 +485,7 @@
 						<visible>!Skin.HasSetting(coloredflags)</visible>
 					</control>
 					<control type="image">
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !IsEmpty(ListItem.MPAA)]</visible>
+						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.MPAA)]</visible>
 						<left>-150</left>
 						<aspectratio>keep</aspectratio>
 						<aspectratio scalediffuse="false">center</aspectratio>
@@ -497,21 +497,21 @@
 						<left>140</left>
 						<include>MediaFlagVarsShelf</include>
 						<texture>$VAR[ColorFlagsSource]source/$VAR[SourceFlagVar,,.png]</texture>
-						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.VideoCodec)</visible>
+						<visible>!Container.Content(tvshows) + !String.IsEmpty(ListItem.VideoCodec)</visible>
 						<visible>!Skin.HasSetting(coloredflags)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<include>MediaFlagVarsShelf</include>
 						<texture>$VAR[ColorFlagsSource]source/$VAR[SourceFlagVar,,.png]</texture>
-						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.VideoCodec)</visible>
+						<visible>!Container.Content(tvshows) + !String.IsEmpty(ListItem.VideoCodec)</visible>
 						<visible>Skin.HasSetting(coloredflags)</visible>
 					</control>
 					<control type="image">
 						<left>250</left>
 						<include>MediaFlagVarsShelf</include>
 						<texture>$VAR[ColorFlagsResolution]resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
-						<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.VideoResolution)</visible>
+						<visible>!Container.Content(tvshows) + !String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
 						<left>350</left>
@@ -523,13 +523,13 @@
 						<left>460</left>
 						<include>MediaFlagVarsShelf</include>
 						<texture>$VAR[LibraryAudioFlagVar]</texture>
-						<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+						<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					</control>
 					<control type="group">
 						<left>140</left>
 						<top>-6</top>
 						<width>162.5</width>
-						<visible>!IsEmpty(ListItem.Property(TotalSeasons))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
 						<control type="label">
 							<left>0</left>
 							<top>2</top>
@@ -552,7 +552,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>!IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 						<width>162.5</width>
 						<left>250</left>
 						<top>-6</top>
@@ -578,7 +578,7 @@
 						</control>
 					</control>
 					<control type="group">
-						<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+						<visible>!String.IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 						<width>200</width>
 						<left>380</left>
 						<top>-6</top>
@@ -628,20 +628,20 @@
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="41" width="40">
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -700,7 +700,7 @@
 				<shadowcolor>black</shadowcolor>
 				<font>font_SimplerE3D_28</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
-				<visible>!Skin.HasSetting(Shelf3DFlatInfoPanel) + IsEmpty(Control.GetLabel(4295)) + !Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
+				<visible>!Skin.HasSetting(Shelf3DFlatInfoPanel) + String.IsEmpty(Control.GetLabel(4295)) + !Skin.HasSetting(Shelf3DNoInfoPanel)</visible>
 			</control>
 			<control type="grouplist">
 				<animation effect="rotatey" center="1230" start="-12" end="-12" time="0" condition="!Skin.HasSetting(Shelf3DFlatInfoPanel)">Conditional</animation>
@@ -715,44 +715,44 @@
 					<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[557]:[/COLOR] [COLOR white]$INFO[ListItem.Artist][/COLOR]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<visible>!IsEmpty(ListItem.Artist)</visible>
+					<visible>!String.IsEmpty(ListItem.Artist)</visible>
 				</control>
 				<control type="label">
 					<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[558]:[/COLOR] [COLOR white]$INFO[ListItem.Title][/COLOR]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<visible>!IsEmpty(ListItem.Title) + !Container.Content(songs)</visible>
+					<visible>!String.IsEmpty(ListItem.Title) + !Container.Content(songs)</visible>
 				</control>
 				<control type="label">
 					<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[554]:[/COLOR] [COLOR white]$INFO[ListItem.Tracknumber]: $INFO[ListItem.Title][/COLOR]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<visible>!IsEmpty(ListItem.Title) + Container.Content(songs)</visible>
+					<visible>!String.IsEmpty(ListItem.Title) + Container.Content(songs)</visible>
 				</control>
 				<control type="label">
 					<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[180]:[/COLOR] [COLOR white]$INFO[ListItem.Duration][/COLOR]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<visible>!IsEmpty(ListItem.Duration)</visible>
+					<visible>!String.IsEmpty(ListItem.Duration)</visible>
 				</control>
 
 				<control type="label">
 					<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[21894]:[/COLOR] [COLOR white]$INFO[ListItem.Property(Artist_Formed)][/COLOR]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<visible>!IsEmpty(ListItem.Property(Artist_Formed)) + IsEmpty(ListItem.Property(Artist_Genre)) + IsEmpty(ListItem.Property(Artist_Born))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(Artist_Formed)) + String.IsEmpty(ListItem.Property(Artist_Genre)) + String.IsEmpty(ListItem.Property(Artist_Born))</visible>
 				</control>
 				<control type="label">
 					<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[21893]:[/COLOR] [COLOR white]$INFO[ListItem.Property(Artist_Born)][/COLOR]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<visible>!IsEmpty(ListItem.Property(Artist_Born)) + IsEmpty(ListItem.Property(Artist_Genre))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(Artist_Born)) + String.IsEmpty(ListItem.Property(Artist_Genre))</visible>
 				</control>
 				<control type="label">
 					<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[515]:[/COLOR] [COLOR white]$INFO[ListItem.Property(Artist_Genre)][/COLOR]</label>
 					<width>650</width>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<visible>!IsEmpty(ListItem.Property(Artist_Genre))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(Artist_Genre))</visible>
 				</control>
 			</control>
 			<control type="textbox">
@@ -766,7 +766,7 @@
 				<pagecontrol>62</pagecontrol>
 				<include>ShowCaseInfoPanelButtonsValues</include>
 				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(62)</autoscroll>
-				<visible>!IsEmpty(ListItem.Comment)</visible>
+				<visible>!String.IsEmpty(ListItem.Comment)</visible>
 			</control>
 			<control type="textbox" id="70">
 				<label>$VAR[MusicPlotVar]</label>
@@ -828,7 +828,7 @@
 					<timeperimage>3250</timeperimage>
 					<fadetime>650</fadetime>
 					<aspectratio aligny="top">scale</aspectratio>
-					<visible>IsEmpty(Control.GetLabel(4208))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(4208))</visible>
 					<imagepath background="true">$INFO[ListItem.Path,,extrathumbs/]</imagepath>
 				</control>
 				<control type="image">
@@ -836,7 +836,7 @@
 					<top>92</top>
 					<width>662</width>
 					<height>360</height>
-					<visible>IsEmpty(Control.GetLabel(4208)) + IsEmpty(Control.GetLabel(4209))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(4208)) + String.IsEmpty(Control.GetLabel(4209))</visible>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture background="true">$INFO[ListItem(0).Art(fanart)]</texture>
 					<bordertexture border="1,1,2,1">thumbs/panel_border.png</bordertexture>
@@ -942,7 +942,7 @@
 							</control>
 						</control>
 						<!-- Spine -->
-						<control type="textbox">							
+						<control type="textbox">
 							<left>-505</left>
 							<top>368</top>
 							<width>1120</width>
@@ -1126,7 +1126,7 @@
 					<align>center</align>
 					<colordiffuse>grey2</colordiffuse>
 					<texture>$VAR[ColorFlagsSource]source/$VAR[SourceFlagVar,,.png]</texture>
-					<visible>!Container.Content(tvshows) + !IsEmpty(ListItem.VideoCodec) + Skin.HasSetting(Shelf3DSpineText)</visible>
+					<visible>!Container.Content(tvshows) + !String.IsEmpty(ListItem.VideoCodec) + Skin.HasSetting(Shelf3DSpineText)</visible>
 				</control>
 
 			</control>
@@ -1167,13 +1167,13 @@
 		<left>1212</left>
 	</include>
 	<include name="Shelf3DDiscAnimation">
-		<animation type="Contiditional" condition="!IsEmpty(Container.ListItem.Art(discart))" reversible="false">
+		<animation type="Contiditional" condition="!String.IsEmpty(Container.ListItem.Art(discart))" reversible="false">
 			<effect type="slide" start="1400,0" end="0,0" delay="0" time="2300" tween="cubic" easing="inout"/>
 			<effect type="rotate" start="0" center="auto" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
 		</animation>
 	</include>
 	<include name="Shelf3DDiscAnimationReflection">
-		<animation type="Contiditional" condition="!IsEmpty(Container.ListItem.Art(discart))" reversible="false">
+		<animation type="Contiditional" condition="!String.IsEmpty(Container.ListItem.Art(discart))" reversible="false">
 			<effect type="slide" start="1400,0" end="0,0" delay="0" time="2300" tween="cubic" easing="inout"/>
 			<effect type="rotate" start="720" center="auto" end="0" delay="0" time="2300" tween="cubic" easing="inout"/>
 		</animation>

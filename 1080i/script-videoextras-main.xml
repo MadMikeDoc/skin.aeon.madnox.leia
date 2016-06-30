@@ -12,7 +12,7 @@
 				<include>FullscreenDimensions</include>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-				<visible>!Player.HasVideo + !Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))</visible>
+				<visible>!Player.HasVideo + !Skin.HasSetting(HideBackGroundFanart) + !String.IsEmpty(ListItem.Property(Fanart_Image))</visible>
 			</control>
 			<control type="multiimage" id="4001">
 				<imagepath background="true">$INFO[ListItem.Path,,extrafanart/]</imagepath>

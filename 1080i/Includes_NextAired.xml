@@ -94,7 +94,7 @@
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[ListItem.Label]</label>
 				<scroll>true</scroll>
-				<visible>Skin.HasSetting(NextAiredLogo) + IsEmpty(ListItem.Property(Art(clearlogo)))</visible>
+				<visible>Skin.HasSetting(NextAiredLogo) + String.IsEmpty(ListItem.Property(Art(clearlogo)))</visible>
 			</control>
 			<control type="group">
 				<top>-30</top>
@@ -107,7 +107,7 @@
 					<texture background="true">$INFO[ListItem.Property(Art(fanart))]</texture>
 					<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 					<bordersize>7</bordersize>
-					<visible>!Skin.HasSetting(NextAiredclearart) + IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+					<visible>!Skin.HasSetting(NextAiredclearart) + String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 				</control>
 				<control type="image">
 					<left>10</left>
@@ -117,7 +117,7 @@
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Property(Art(ClearArt))]</texture>
 					<bordersize>7</bordersize>
-					<visible>Skin.HasSetting(NextAiredclearart) + IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+					<visible>Skin.HasSetting(NextAiredclearart) + String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 				</control>
 				<control type="image">
 					<left>10</left>
@@ -128,7 +128,7 @@
 					<texture background="true">$INFO[ListItem.Property(Art(landscape))]</texture>
 					<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 					<bordersize>7</bordersize>
-					<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+					<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 				</control>
 				<control type="image">
 					<left>17</left>
@@ -137,7 +137,7 @@
 					<height>34</height>
 					<texture>common/bgcolor.png</texture>
 					<colordiffuse>99FFFFFF</colordiffuse>
-					<animation type="Conditional" condition="!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))  + !Skin.HasSetting(NextAiredLogo)">
+					<animation type="Conditional" condition="!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))  + !Skin.HasSetting(NextAiredLogo)">
 						<effect type="slide" end="0,25" time="0" />
 					</animation>
 				</control>
@@ -172,7 +172,7 @@
 					<height>35</height>
 					<texture>$VAR[ColortvguideFlags]clock.png</texture>
 					<colordiffuse>floor</colordiffuse>
-					<animation type="Conditional" condition="!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))  + !Skin.HasSetting(NextAiredLogo)">
+					<animation type="Conditional" condition="!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))  + !Skin.HasSetting(NextAiredLogo)">
 						<effect type="slide" end="0,25" time="0" />
 					</animation>
 				</control>
@@ -185,7 +185,7 @@
 					<label>[COLOR white2]$INFO[ListItem.Property(ShortTime)][/COLOR][COLOR grey] ($INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]])[/COLOR]</label>
 					<font>Font_Reg28</font>
 					<textcolor>$VAR[TitleColorVar]</textcolor>
-					<animation type="Conditional" condition="!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs)) + !Skin.HasSetting(NextAiredLogo)">
+					<animation type="Conditional" condition="!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs)) + !Skin.HasSetting(NextAiredLogo)">
 						<effect type="slide" end="0,25" time="0" />
 					</animation>
 				</control>
@@ -313,7 +313,7 @@
 		<height>58</height>
 		<aspectratio>keep</aspectratio>
 		<texture background="true" fallback="KODI_Logo.png">$INFO[ListItem.Property(Art(clearlogo))]</texture>
-		<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+		<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),2)</visible>
 	</include>
 	<include name="NextAiredThumbVars">
 		<left>8</left>
@@ -322,7 +322,7 @@
 		<height>150</height>
 		<aspectratio>keep</aspectratio>
 		<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
-		<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+		<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
 	</include>
 	<include name="NextAiredBannerVars">
 		<left>10</left>
@@ -331,7 +331,7 @@
 		<height>58</height>
 		<aspectratio>keep</aspectratio>
 		<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
-		<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+		<visible>String.IsEqual(Window(Home).Property(TVGuide.ThumbType),1)</visible>
 	</include>
 	<include name="NextAiredLabelVars">
 		<left></left>
@@ -403,7 +403,7 @@
 					<font>Font_Reg37_Caps</font>
 					<label>$LOCALIZE[41]</label>
 					<align>center</align>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>304</left>
@@ -411,7 +411,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg37_Caps</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
 					<label>$LOCALIZE[42]</label>
 					<align>center</align>
 				</control>
@@ -421,7 +421,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg37_Caps</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
 					<label>$LOCALIZE[43]</label>
 					<align>center</align>
 				</control>
@@ -431,7 +431,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg37_Caps</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
 					<label>$LOCALIZE[44]</label>
 					<align>center</align>
 				</control>
@@ -441,7 +441,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg37_Caps</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
 					<label>$LOCALIZE[45]</label>
 					<align>center</align>
 				</control>
@@ -451,7 +451,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg37_Caps</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
 					<label>$LOCALIZE[46]</label>
 					<align>center</align>
 				</control>
@@ -461,7 +461,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg37_Caps</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
 					<label>$LOCALIZE[47]</label>
 					<align>center</align>
 				</control>
@@ -473,7 +473,7 @@
 					<font>Font_Reg28</font>
 					<label>$INFO[Window(Home).Property(NextAired.1.Date)]</label>
 					<align>center</align>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>304</left>
@@ -481,7 +481,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg28</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.2.Date)]</label>
 					<align>center</align>
 				</control>
@@ -491,7 +491,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg28</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.3.Date)]</label>
 					<align>center</align>
 				</control>
@@ -501,7 +501,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg28</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.4.Date)]</label>
 					<align>center</align>
 				</control>
@@ -511,7 +511,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg28</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.5.Date)]</label>
 					<align>center</align>
 				</control>
@@ -521,7 +521,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg28</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.6.Date)]</label>
 					<align>center</align>
 				</control>
@@ -531,7 +531,7 @@
 					<width>172</width>
 					<height>38</height>
 					<font>Font_Reg28</font>
-					<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
+					<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
 					<label>$INFO[Window(Home).Property(NextAired.7.Date)]</label>
 					<align>center</align>
 				</control>
@@ -552,7 +552,7 @@
 								<left>6</left>
 								<control type="label">
 									<include>NextAiredLabelVars</include>
-									<visible>!StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+									<visible>!String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
 								</control>
 								<control type="image">
 									<include>NextAiredThumbVars</include>
@@ -583,13 +583,13 @@
 								<control type="label">
 									<include>NextAiredLabelVars</include>
 									<visible>!Control.HasFocus(200)</visible>
-									<visible>!StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+									<visible>!String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
 								</control>
 								<control type="label">
 									<textcolor>$VAR[SubTitleColorVar]</textcolor>
 									<include>NextAiredLabelVars</include>
 									<visible>Control.HasFocus(200)</visible>
-									<visible>!StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+									<visible>!String.IsEqual(Window(Home).Property(TVGuide.ThumbType),0)</visible>
 								</control>
 								<control type="image">
 									<include>NextAiredLogoVars</include>
@@ -923,7 +923,7 @@
 						<texture background="true">$INFO[Container(200).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(200).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(200).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -934,7 +934,7 @@
 						<texture background="true">$INFO[Container(200).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -1099,7 +1099,7 @@
 						<texture background="true">$INFO[Container(201).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(201).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(201).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -1110,7 +1110,7 @@
 						<texture background="true">$INFO[Container(201).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -1274,7 +1274,7 @@
 						<texture background="true">$INFO[Container(202).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(202).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(202).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -1285,7 +1285,7 @@
 						<texture background="true">$INFO[Container(202).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -1449,7 +1449,7 @@
 						<texture background="true">$INFO[Container(203).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(203).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(203).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -1460,7 +1460,7 @@
 						<texture background="true">$INFO[Container(203).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -1624,7 +1624,7 @@
 						<texture background="true">$INFO[Container(204).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(204).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(204).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -1635,7 +1635,7 @@
 						<texture background="true">$INFO[Container(204).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -1799,7 +1799,7 @@
 						<texture background="true">$INFO[Container(205).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(205).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(205).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -1810,7 +1810,7 @@
 						<texture background="true">$INFO[Container(205).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -1974,7 +1974,7 @@
 						<texture background="true">$INFO[Container(206).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(206).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(206).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -1985,7 +1985,7 @@
 						<texture background="true">$INFO[Container(206).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -2266,7 +2266,7 @@
 						<label>[B]$VAR[TVDayLabelMon][/B]</label>
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.1.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(200)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2001)]]">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(200).NumItems,0)</enable>
 					</control>
@@ -2275,7 +2275,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.2.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(201)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2002)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(201).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2283,7 +2283,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.3.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(202)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2003)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(202).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2291,7 +2291,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.4.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(203)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2004)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(203).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2299,7 +2299,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.5.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(204)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2005)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(204).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2307,7 +2307,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.6.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(205)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2006)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(205).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2315,7 +2315,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.7.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButtonbackground</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(206)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2007)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(206).NumItems,0)</enable>
 					</control>
 				</control>
@@ -2328,7 +2328,7 @@
 						<label>[B]$VAR[TVDayLabelMon][/B]</label>
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.1.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButton</include>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[41])">Conditional</animation>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(200)">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(200).NumItems,0)</enable>
 					</control>
@@ -2337,7 +2337,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.2.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(201)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[42])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(201).NumItems,0)</enable>
 					</control>
 					<control type="button" id="2003">
@@ -2345,7 +2345,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.3.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(202)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[43])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(202).NumItems,0)</enable>
 					</control>
 					<control type="button" id="2004">
@@ -2353,7 +2353,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.4.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(203)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[44])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(203).NumItems,0)</enable>
 					</control>
 					<control type="button" id="2005">
@@ -2361,7 +2361,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.5.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(204)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[45])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(204).NumItems,0)</enable>
 					</control>
 					<control type="button" id="2006">
@@ -2369,7 +2369,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.6.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(205)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[46])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(205).NumItems,0)</enable>
 					</control>
 					<control type="button" id="2007">
@@ -2377,7 +2377,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.7.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButton</include>
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(206)">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(206).NumItems,0)</enable>
 					</control>
 				</control>
@@ -2666,7 +2666,7 @@
 						<include>TVGuideWeekdayButtonbackground2</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(200)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2001)]]">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(200).NumItems,0)</enable>
-						<visible>!StringCompare(Window(Home).Property(NextAired.YesterdayText),)</visible>
+						<visible>!String.IsEqual(Window(Home).Property(NextAired.YesterdayText),)</visible>
 					</control>
 					<control type="button">
 						<label>$VAR[TVDayLabel2]</label>
@@ -2736,7 +2736,7 @@
 						<label2>[COLOR=99FFFFFF]$INFO[Window(Home).Property(NextAired.210.Date)][/COLOR]</label2>
 						<include>TVGuideWeekdayButtonbackground2</include>
 						<animation effect="fade" start="100" end="0" time="240" tween="sine" easing="inout" condition="![[ControlGroup(9001).HasFocus + ControlGroup(9001).HasFocus(210)] | [ControlGroup(2000).HasFocus + ControlGroup(2000).HasFocus(2011)]]">Conditional</animation>
-						<animation effect="fade" start="100" end="65" time="0" condition="!StringCompare(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
+						<animation effect="fade" start="100" end="65" time="0" condition="!String.IsEqual(System.Date(ddd),$LOCALIZE[47])">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(210).NumItems,0)</enable>
 					</control>
 					<control type="button">
@@ -2787,7 +2787,7 @@
 						<animation effect="fade" start="100" end="50" time="240" tween="sine" easing="inout" condition="!ControlGroup(9001).HasFocus(200)">Conditional</animation>
 						<animation effect="fade" start="100" end="65" time="0" condition="!ControlGroup(9001).HasFocus(200)">Conditional</animation>
 						<enable>IntegerGreaterThan(Container(200).NumItems,0)</enable>
-						<visible>!StringCompare(Window(Home).Property(NextAired.YesterdayText),)</visible>
+						<visible>!String.IsEqual(Window(Home).Property(NextAired.YesterdayText),)</visible>
 					</control>
 					<control type="button" id="2002">
 						<label>$VAR[TVDayLabel2]</label>
@@ -2968,7 +2968,7 @@
 				<itemgap>2</itemgap>
 				<control type="group">
 					<description>Yesterday</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.200.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.200.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3045,7 +3045,7 @@
 				</control>
 				<control type="group">
 					<description>Today</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.201.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.201.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3122,7 +3122,7 @@
 				</control>
 				<control type="group">
 					<description>Today+1</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.202.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.202.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3200,7 +3200,7 @@
 				</control>
 				<control type="group">
 					<description>Today+2</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.203.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.203.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3277,7 +3277,7 @@
 				</control>
 				<control type="group">
 					<description>Today+3</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.204.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.204.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3354,7 +3354,7 @@
 				</control>
 				<control type="group">
 					<description>Today+4</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.205.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.205.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3431,7 +3431,7 @@
 				</control>
 				<control type="group">
 					<description>Today+5</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.206.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.206.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3508,7 +3508,7 @@
 				</control>
 				<control type="group">
 					<description>Today+6</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.207.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.207.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3585,7 +3585,7 @@
 				</control>
 				<control type="group">
 					<description>Today+7</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.208.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.208.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3662,7 +3662,7 @@
 				</control>
 				<control type="group">
 					<description>Today+8</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.209.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.209.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3739,7 +3739,7 @@
 				</control>
 				<control type="group">
 					<description>Today+9</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.210.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.210.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3816,7 +3816,7 @@
 				</control>
 				<control type="group">
 					<description>Today+10</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.211.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.211.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3893,7 +3893,7 @@
 				</control>
 				<control type="group">
 					<description>Today+11</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.212.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.212.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -3970,7 +3970,7 @@
 				</control>
 				<control type="group">
 					<description>Today+12</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.213.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.213.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -4047,7 +4047,7 @@
 				</control>
 				<control type="group">
 					<description>Today+13</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.214.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.214.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -4124,7 +4124,7 @@
 				</control>
 				<control type="group">
 					<description>Today+14</description>
-					<visible>!StringCompare(Window(Home).Property(NextAired.215.Wday),)</visible>
+					<visible>!String.IsEqual(Window(Home).Property(NextAired.215.Wday),)</visible>
 					<width>170</width>
 					<height>655</height>
 					<control type="label">
@@ -4244,7 +4244,7 @@
 						<texture background="true">$INFO[Container(200).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(200).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(200).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -4255,7 +4255,7 @@
 						<texture background="true">$INFO[Container(200).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -4420,7 +4420,7 @@
 						<texture background="true">$INFO[Container(201).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(201).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(201).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -4431,7 +4431,7 @@
 						<texture background="true">$INFO[Container(201).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -4595,7 +4595,7 @@
 						<texture background="true">$INFO[Container(202).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(202).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(202).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -4606,7 +4606,7 @@
 						<texture background="true">$INFO[Container(202).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -4770,7 +4770,7 @@
 						<texture background="true">$INFO[Container(203).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(203).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(203).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -4781,7 +4781,7 @@
 						<texture background="true">$INFO[Container(203).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -4945,7 +4945,7 @@
 						<texture background="true">$INFO[Container(204).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(204).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(204).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -4956,7 +4956,7 @@
 						<texture background="true">$INFO[Container(204).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -5120,7 +5120,7 @@
 						<texture background="true">$INFO[Container(205).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(205).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(205).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -5131,7 +5131,7 @@
 						<texture background="true">$INFO[Container(205).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -5295,7 +5295,7 @@
 						<texture background="true">$INFO[Container(206).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(206).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(206).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -5306,7 +5306,7 @@
 						<texture background="true">$INFO[Container(206).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -5470,7 +5470,7 @@
 						<texture background="true">$INFO[Container(207).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(207).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(207).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -5481,7 +5481,7 @@
 						<texture background="true">$INFO[Container(207).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -5645,7 +5645,7 @@
 						<texture background="true">$INFO[Container(208).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(208).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(208).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -5656,7 +5656,7 @@
 						<texture background="true">$INFO[Container(208).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -5820,7 +5820,7 @@
 						<texture background="true">$INFO[Container(209).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(209).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(209).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -5831,7 +5831,7 @@
 						<texture background="true">$INFO[Container(209).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -5995,7 +5995,7 @@
 						<texture background="true">$INFO[Container(210).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(210).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(210).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -6006,7 +6006,7 @@
 						<texture background="true">$INFO[Container(210).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -6170,7 +6170,7 @@
 						<texture background="true">$INFO[Container(211).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(211).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(211).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -6181,7 +6181,7 @@
 						<texture background="true">$INFO[Container(211).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -6345,7 +6345,7 @@
 						<texture background="true">$INFO[Container(212).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(212).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(212).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -6356,7 +6356,7 @@
 						<texture background="true">$INFO[Container(212).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -6520,7 +6520,7 @@
 						<texture background="true">$INFO[Container(213).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(213).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(213).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -6531,7 +6531,7 @@
 						<texture background="true">$INFO[Container(213).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -6695,7 +6695,7 @@
 						<texture background="true">$INFO[Container(214).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(214).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(214).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -6706,7 +6706,7 @@
 						<texture background="true">$INFO[Container(214).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>
@@ -6870,7 +6870,7 @@
 						<texture background="true">$INFO[Container(215).ListItem.Property(Art(fanart))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!Control.IsVisible(2001) | IsEmpty(Container(215).ListItem.Property(Art(landscape)))</visible>
+						<visible>!Control.IsVisible(2001) | String.IsEmpty(Container(215).ListItem.Property(Art(landscape)))</visible>
 					</control>
 					<control type="image" id="2001">
 						<left>123</left>
@@ -6881,7 +6881,7 @@
 						<texture background="true">$INFO[Container(215).ListItem.Property(Art(landscape))]</texture>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>!IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
+						<visible>!String.IsEmpty(Window(Home).property(TVGuide.PreviewThumbs))</visible>
 					</control>
 					<control type="label">
 						<left>117</left>

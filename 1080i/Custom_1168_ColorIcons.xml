@@ -87,22 +87,22 @@
 					<item id="1">
 						<label>$LOCALIZE[31182]</label>
 						<onclick>noop</onclick>
-						<visible>!IsEmpty(Skin.String(ColorFlagsPath))</visible>
+						<visible>!String.IsEmpty(Skin.String(ColorFlagsPath))</visible>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[31988]</label>
 						<onclick>noop</onclick>
-						<visible>!IsEmpty(Skin.String(ReloadedFlagsPath))</visible>
+						<visible>!String.IsEmpty(Skin.String(ReloadedFlagsPath))</visible>
 					</item>
 					<item id="7">
 						<label>$LOCALIZE[20388]</label>
 						<onclick>noop</onclick>
-						<visible>!IsEmpty(Skin.String(StudioFlagsPath))</visible>
+						<visible>!String.IsEmpty(Skin.String(StudioFlagsPath))</visible>
 					</item>
 					<item id="8">
 						<label>$LOCALIZE[248]</label>
 						<onclick>noop</onclick>
-						<visible>!IsEmpty(Skin.String(languageFlagsPath))</visible>
+						<visible>!String.IsEmpty(Skin.String(languageFlagsPath))</visible>
 					</item>
 					<item id="3">
 						<label>$LOCALIZE[31262]</label>
@@ -115,7 +115,7 @@
 					<item id="5">
 						<label>$LOCALIZE[31967]</label>
 						<onclick>noop</onclick>
-						<visible>!IsEmpty(Skin.String(ColorFlagsPath))</visible>
+						<visible>!String.IsEmpty(Skin.String(ColorFlagsPath))</visible>
 					</item>
 					<item id="9">
 						<label>$LOCALIZE[31968]</label>
@@ -420,13 +420,13 @@
 					<label>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(ColorFlagsPath)][/COLOR]</label>
 					<include>Objects_MediaMenuButtonAlt3</include>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(Skin.String(ColorFlagsPath)) + Control.HasFocus(601)</visible>
+					<visible>!String.IsEmpty(Skin.String(ColorFlagsPath)) + Control.HasFocus(601)</visible>
 				</control>
 				<control type="label" id="603">
 					<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31978][/COLOR]</label>
 					<include>Objects_MediaMenuButtonAlt3</include>
 					<scroll>true</scroll>
-					<visible>IsEmpty(Skin.String(ColorFlagsPath)) + Control.HasFocus(601)</visible>
+					<visible>String.IsEmpty(Skin.String(ColorFlagsPath)) + Control.HasFocus(601)</visible>
 				</control>
 				<control type="button" id="604">
 					<label>$LOCALIZE[31982]</label>
@@ -437,13 +437,13 @@
 					<label>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(ReloadedFlagsPath)][/COLOR]</label>
 					<include>Objects_MediaMenuButtonAlt3</include>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(Skin.String(ReloadedFlagsPath)) + Control.HasFocus(604)</visible>
+					<visible>!String.IsEmpty(Skin.String(ReloadedFlagsPath)) + Control.HasFocus(604)</visible>
 				</control>
 				<control type="label" id="801">
 					<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31978][/COLOR]</label>
 					<include>Objects_MediaMenuButtonAlt3</include>
 					<scroll>true</scroll>
-					<visible>IsEmpty(Skin.String(ReloadedFlagsPath)) + Control.HasFocus(604)</visible>
+					<visible>String.IsEmpty(Skin.String(ReloadedFlagsPath)) + Control.HasFocus(604)</visible>
 				</control>
 				<control type="button" id="613">
 					<label>$LOCALIZE[31983]</label>
@@ -454,13 +454,13 @@
 					<label>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(StudioFlagsPath)][/COLOR]</label>
 					<include>Objects_MediaMenuButtonAlt3</include>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(Skin.String(StudioFlagsPath)) + Control.HasFocus(613)</visible>
+					<visible>!String.IsEmpty(Skin.String(StudioFlagsPath)) + Control.HasFocus(613)</visible>
 				</control>
 				<control type="label" id="615">
 					<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31979][/COLOR]</label>
 					<include>Objects_MediaMenuButtonAlt3</include>
 					<scroll>true</scroll>
-					<visible>IsEmpty(Skin.String(StudioFlagsPath)) + Control.HasFocus(613)</visible>
+					<visible>String.IsEmpty(Skin.String(StudioFlagsPath)) + Control.HasFocus(613)</visible>
 				</control>
 				<control type="button" id="813">
 					<label>$LOCALIZE[31984]</label>
@@ -471,13 +471,13 @@
 					<label>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(languageFlagsPath)][/COLOR]</label>
 					<include>Objects_MediaMenuButtonAlt3</include>
 					<scroll>true</scroll>
-					<visible>!IsEmpty(Skin.String(languageFlagsPath)) + Control.HasFocus(813)</visible>
+					<visible>!String.IsEmpty(Skin.String(languageFlagsPath)) + Control.HasFocus(813)</visible>
 				</control>
 				<control type="label" id="815">
 					<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31980][/COLOR]</label>
 					<include>Objects_MediaMenuButtonAlt3</include>
 					<scroll>true</scroll>
-					<visible>IsEmpty(Skin.String(languageFlagsPath)) + Control.HasFocus(813)</visible>
+					<visible>String.IsEmpty(Skin.String(languageFlagsPath)) + Control.HasFocus(813)</visible>
 				</control>
 				<control type="button" id="630">
 					<label>$LOCALIZE[31985]</label>

@@ -78,7 +78,7 @@
 				<scrolltime tween="cubic">300</scrolltime>
 				<preloaditems>2</preloaditems>
 				<visible>Container.Content(TVShows) | Container.Content(movies) | Container.Content(seasons)</visible>
-				<visible>![!IsEmpty(Skin.String(DisableBannersVL)) + Window.IsActive(videos)]</visible>
+				<visible>![!String.IsEmpty(Skin.String(DisableBannersVL)) + Window.IsActive(videos)]</visible>
 				<itemlayout width="562" height="120" condition="!Skin.HasSetting(AltBannerPlex)">
 					<control type="image">
 						<left>6</left>
@@ -95,7 +95,7 @@
 						<height>96</height>
 						<aspectratio scalediffuse="false" align="left">keep</aspectratio>
 						<texture background="true" diffuse="thumbs/banner_mask.png">$VAR[LogoVarList]</texture>
-						<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+						<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 					</control>
 					<control type="label">
 						<left>8</left>
@@ -106,7 +106,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font_Bold40</font>
 						<shadowcolor>black</shadowcolor>
-						<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="group">
 						<top>-5</top>
@@ -164,7 +164,7 @@
 							<height>96</height>
 							<aspectratio scalediffuse="false" align="left">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/banner_mask.png">$VAR[LogoVarList]</texture>
-							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+							<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 						</control>
 						<control type="label">
 							<left>8</left>
@@ -175,7 +175,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font_Bold40</font>
 							<shadowcolor>black</shadowcolor>
-							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						</control>
 						<control type="group">
 							<top>-5</top>
@@ -231,7 +231,7 @@
 						<height>103</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$VAR[LogoVarList]</texture>
-						<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+						<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 					</control>
 					<control type="label">
 						<left></left>
@@ -241,7 +241,7 @@
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font_Bold40</font>
 						<shadowcolor>black</shadowcolor>
-						<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="image">
 						<left>473</left>
@@ -300,7 +300,7 @@
 							<height>103</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$VAR[LogoVarList]</texture>
-							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+							<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 						</control>
 						<control type="label">
 							<left></left>
@@ -311,7 +311,7 @@
 							<font>Font_Bold40</font>
 							<shadowcolor>black</shadowcolor>
 							<textcolor>CCFFFFFF</textcolor>
-							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						</control>
 						<control type="group">
 							<top>-10</top>
@@ -373,20 +373,20 @@
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="40" width="40">
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -417,20 +417,20 @@
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="35" width="35">
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>

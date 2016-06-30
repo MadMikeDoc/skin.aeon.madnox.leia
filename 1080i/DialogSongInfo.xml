@@ -63,7 +63,7 @@
 						<height>381</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>300</fadetime>
-						<visible>!StringCompare(Control.getLabel(5001),common/cdart/default.png)</visible>
+						<visible>!String.IsEqual(Control.getLabel(5001),common/cdart/default.png)</visible>
 						<animation effect="slide" start="0,180" end="0,0" time="560" tween="cubic" delay="600">Visible</animation>
 						<animation effect="slide" end="0,180" time="320" tween="cubic">Hidden</animation>
 						<animation effect="slide" start="0,180" end="0,0" time="560" tween="cubic" delay="320">WindowOpen</animation>
@@ -295,7 +295,7 @@
 								<height>88</height>
 								<texture>flags/music/year/year.png</texture>
 								<colordiffuse>grey2</colordiffuse>
-								<visible>!IsEmpty(ListItem.Year)</visible>
+								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</control>
 							<control type="label">
 								<width>135</width>
@@ -306,7 +306,7 @@
 								<font>Font_Reg30_2</font>
 								<textcolor>grey2</textcolor>
 								<animation effect="slide" end="-145,23" time="0" condition="true">Conditional</animation>
-								<visible>!IsEmpty(ListItem.Year)</visible>
+								<visible>!String.IsEmpty(ListItem.Year)</visible>
 							</control>
 							<control type="image">
 								<width>135</width>
@@ -314,7 +314,7 @@
 								<colordiffuse>grey2</colordiffuse>
 								<fadetime>IconCrossfadeTime2</fadetime>
 								<texture>flags/music/recordlabel/$INFO[ListItem.Property(Album_Label),,.png]</texture>
-								<animation effect="slide" end="-145" time="0" condition="!IsEmpty(ListItem.Year)">Conditional</animation>
+								<animation effect="slide" end="-145" time="0" condition="!String.IsEmpty(ListItem.Year)">Conditional</animation>
 							</control>
 						</control>
 					</control>
@@ -327,7 +327,7 @@
 				<aspectratio>keep</aspectratio>
 				<fadetime>400</fadetime>
 				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.ClearLogo)]</texture>
-				<animation effect="slide" end="-145" time="0" condition="!IsEmpty(ListItem.Year)">Conditional</animation>
+				<animation effect="slide" end="-145" time="0" condition="!String.IsEmpty(ListItem.Year)">Conditional</animation>
 			</control>
 			<!-- List -->
 			<control type="grouplist">
@@ -424,7 +424,7 @@
       <aspectratio>keep</aspectratio>
       <fadetime>400</fadetime>
       <texture background="true">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Artist,,/logo.png]</texture>
-      <visible>!IsEmpty(Skin.String(ArtistsLogosPath))</visible>
+      <visible>!String.IsEmpty(Skin.String(ArtistsLogosPath))</visible>
     </control>-->
 			<control type="label">
 				<left>1905</left>

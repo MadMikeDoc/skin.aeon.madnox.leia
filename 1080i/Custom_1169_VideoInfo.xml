@@ -172,21 +172,21 @@
 					<onclick condition="!Skin.HasSetting(RatingColorFlag) + !Skin.HasSetting(RatingColorFlagreloaded)">Skin.SetBool(RatingColorFlagreloaded)</onclick>
 					<onclick>SetFocus(1200)</onclick>
 					<visible>Container.Content(movies)</visible>
-					<visible>!IsEmpty(Skin.String(ColorFlagsPath)) + !IsEmpty(Skin.String(ReloadedFlagsPath))</visible>
+					<visible>!String.IsEmpty(Skin.String(ColorFlagsPath)) + !String.IsEmpty(Skin.String(ReloadedFlagsPath))</visible>
 				</control>
 				<control type="radiobutton" id="1301">
 					<label>$LOCALIZE[31264]</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(RatingColorFlag)</onclick>
 					<selected>Skin.HasSetting(RatingColorFlag)</selected>
-					<visible>Container.Content(movies) + [!IsEmpty(Skin.String(ColorFlagsPath)) + IsEmpty(Skin.String(ReloadedFlagsPath))]</visible>
+					<visible>Container.Content(movies) + [!String.IsEmpty(Skin.String(ColorFlagsPath)) + String.IsEmpty(Skin.String(ReloadedFlagsPath))]</visible>
 				</control>
 				<control type="radiobutton" id="1302">
 					<label>$LOCALIZE[31052]</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(RatingColorFlagreloaded)</onclick>
 					<selected>Skin.HasSetting(RatingColorFlagreloaded)</selected>
-					<visible>Container.Content(movies) + [IsEmpty(Skin.String(ColorFlagsPath)) + !IsEmpty(Skin.String(ReloadedFlagsPath))]</visible>
+					<visible>Container.Content(movies) + [String.IsEmpty(Skin.String(ColorFlagsPath)) + !String.IsEmpty(Skin.String(ReloadedFlagsPath))]</visible>
 				</control>
 				<control type="radiobutton" id="1201">
 					<label>$LOCALIZE[31051]</label>
@@ -205,21 +205,21 @@
 					<onclick condition="!Skin.HasSetting(RatingColorFlagreloaded)">Skin.SetBool(RatingColorFlagreloaded)</onclick>
 					<onclick>SetFocus(1202)</onclick>
 					<visible>Container.Content(tvshows)</visible>
-					<visible>!IsEmpty(Skin.String(ColorFlagsPath)) + !IsEmpty(Skin.String(ReloadedFlagsPath))</visible>
+					<visible>!String.IsEmpty(Skin.String(ColorFlagsPath)) + !String.IsEmpty(Skin.String(ReloadedFlagsPath))</visible>
 				</control>
 				<control type="radiobutton" id="1305">
 					<label>$LOCALIZE[31264]</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(RatingColorFlag)</onclick>
 					<selected>Skin.HasSetting(RatingColorFlag)</selected>
-					<visible>Container.Content(tvshows) + [!IsEmpty(Skin.String(ColorFlagsPath)) + IsEmpty(Skin.String(ReloadedFlagsPath))]</visible>
+					<visible>Container.Content(tvshows) + [!String.IsEmpty(Skin.String(ColorFlagsPath)) + String.IsEmpty(Skin.String(ReloadedFlagsPath))]</visible>
 				</control>
 				<control type="radiobutton" id="1306">
 					<label>$LOCALIZE[31052]</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(RatingColorFlagreloaded)</onclick>
 					<selected>Skin.HasSetting(RatingColorFlagreloaded)</selected>
-					<visible>Container.Content(tvshows) + [IsEmpty(Skin.String(ColorFlagsPath)) + !IsEmpty(Skin.String(ReloadedFlagsPath))]</visible>
+					<visible>Container.Content(tvshows) + [String.IsEmpty(Skin.String(ColorFlagsPath)) + !String.IsEmpty(Skin.String(ReloadedFlagsPath))]</visible>
 				</control>
 				<control type="radiobutton" id="1203">
 					<label>$LOCALIZE[31082]</label>

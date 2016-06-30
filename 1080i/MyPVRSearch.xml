@@ -107,7 +107,7 @@
 								<texture border="1">osd/osd_settings_buttonnf.png</texture>
 							</control>
 							<control type="group">
-								<visible>IsEmpty(ListItem.Date)</visible>
+								<visible>String.IsEmpty(ListItem.Date)</visible>
 								<control type="image">
 									<left>3</left>
 									<top>12</top>
@@ -125,7 +125,7 @@
 								</control>
 							</control>
 							<control type="group">
-								<visible>!IsEmpty(ListItem.Date)</visible>
+								<visible>!String.IsEmpty(ListItem.Date)</visible>
 								<control type="image">
 									<left>3</left>
 									<top>8</top>
@@ -204,7 +204,7 @@
 								<texture colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texture>
 							</control>
 							<control type="group">
-								<visible>IsEmpty(ListItem.Date)</visible>
+								<visible>String.IsEmpty(ListItem.Date)</visible>
 								<control type="image">
 									<left>3</left>
 									<top>12</top>
@@ -222,7 +222,7 @@
 								</control>
 							</control>
 							<control type="group">
-								<visible>!IsEmpty(ListItem.Date)</visible>
+								<visible>!String.IsEmpty(ListItem.Date)</visible>
 								<control type="image">
 									<left>3</left>
 									<top>8</top>

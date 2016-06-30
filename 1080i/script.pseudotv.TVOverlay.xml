@@ -70,7 +70,7 @@
 					<label>•</label>
 					<font>Font_Reg32</font>
 					<textcolor>white</textcolor>
-					<visible>!IsEmpty(Control.Getlabel(504))</visible>
+					<visible>!String.IsEmpty(Control.Getlabel(504))</visible>
 				</control>
 				<control type="label" id="504">
 					<width min="40" max="900">auto</width>

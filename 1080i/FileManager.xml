@@ -290,7 +290,7 @@
 			<control type="grouplist">
 				<width>1920</width>
 				<align>center</align>
-				<visible>!IsEmpty(Container.NumItems) + !Skin.HasSetting(ClassicTopBar)</visible>
+				<visible>!String.IsEmpty(Container.NumItems) + !Skin.HasSetting(ClassicTopBar)</visible>
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<animation effect="fade" time="320" delay="320">Visible</animation>

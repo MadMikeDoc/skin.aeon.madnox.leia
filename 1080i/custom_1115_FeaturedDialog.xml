@@ -2,7 +2,7 @@
 <window id="1115" type="dialog">
 	<defaultcontrol>40</defaultcontrol>
 	<backgroundcolor>backgroundcolor</backgroundcolor>
-	<!--onload condition="!IsEmpty(Window(home).Property(FeaturedSetup))">ActivateWindow(1128)</onload-->
+	<!--onload condition="!String.IsEmpty(Window(home).Property(FeaturedSetup))">ActivateWindow(1128)</onload-->
 	<onload condition="Window.Previous(SkinSettings)">ActivateWindow(1128)</onload>
 	<onload condition="Window.Previous(home)">SetFocus(5012)</onload>
 	<onload>SetFocus(5000)</onload>

@@ -7,11 +7,11 @@
 		<system>1</system>
 	</coordinates>
 	<include>Animation_DialogPopup2</include>
-	<onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">Skin.SetString($INFO[Window(selectdialog).Property(Property),,.Label],$ESCINFO[Window(selectdialog).Property(Label)])</onunload>
-	<onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">Skin.SetString($INFO[Window(selectdialog).Property(Property),,.Icon],$ESCINFO[Window(selectdialog).Property(Icon)])</onunload>
-	<onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Label,selectdialog)</onunload>
-	<onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Icon,selectdialog)</onunload>
-	<onunload condition="!IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Property,selectdialog)</onunload>
+	<onunload condition="!String.IsEmpty(Window(selectdialog).Property(Property))">Skin.SetString($INFO[Window(selectdialog).Property(Property),,.Label],$ESCINFO[Window(selectdialog).Property(Label)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(selectdialog).Property(Property))">Skin.SetString($INFO[Window(selectdialog).Property(Property),,.Icon],$ESCINFO[Window(selectdialog).Property(Icon)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Label,selectdialog)</onunload>
+	<onunload condition="!String.IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Icon,selectdialog)</onunload>
+	<onunload condition="!String.IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Property,selectdialog)</onunload>
 	<controls>
 		<include>DialogBackFade</include>
 		<control type="image">
@@ -204,8 +204,8 @@
 				<focusedlayout height="90" width="825">
 					<control type="button">
 						<include>HiddenObject</include>
-						<onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Label,$ESCINFO[Container(6).ListItem.Label])</onfocus>
-						<onfocus condition="!IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Icon,$ESCINFO[Container(6).ListItem.Icon])</onfocus>
+						<onfocus condition="!String.IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Label,$ESCINFO[Container(6).ListItem.Label])</onfocus>
+						<onfocus condition="!String.IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Icon,$ESCINFO[Container(6).ListItem.Icon])</onfocus>
 					</control>
 					<control type="image">
 						<left>15</left>

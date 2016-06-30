@@ -436,7 +436,7 @@
 						<height>150</height>
 						<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.ClearLogo)]</texture>
 						<fadetime>IconCrossfadeTime2</fadetime>
-						<visible>!IsEmpty(Skin.String(ArtistsLogosPath))</visible>
+						<visible>!String.IsEmpty(Skin.String(ArtistsLogosPath))</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -456,7 +456,7 @@
 						<texture fallback="flags/source/defaultsource.png">flags/music/recordlabel/$INFO[ListItem.Property(Album_Label),,.png]</texture>
 						<fadetime>IconCrossfadeTime2</fadetime>
 						<colordiffuse>white2</colordiffuse>
-						<visible>!IsEmpty(ListItem.Album) + Container.Content(albums)</visible>
+						<visible>!String.IsEmpty(ListItem.Album) + Container.Content(albums)</visible>
 					</control>
 				</control>
 			</control>
@@ -481,7 +481,7 @@
                         <include condition="!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)">cdartlibrary</include>
                         <include condition="Skin.HasSetting(vinylart)">vinylartlibrary</include>
                         <include condition="Skin.HasSetting(blurayart)">blurayartlibrary</include>
-                        <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="StringCompare(ListItem.Album,MusicPlayer.Album) + !IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
+                        <animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
                     </control-->
 					<control type="image">
 						<left>8</left>
@@ -491,9 +491,9 @@
 						<aspectratio>keep</aspectratio>
 						<fadetime>IconCrossfadeTime2</fadetime>
 						<texture background="true">$VAR[colorcdARTVar]</texture>
-						<visible>IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
-						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="StringCompare(ListItem.Album,MusicPlayer.Album) + !IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
-						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
+						<visible>String.IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
+						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 					</control>
 					<control type="label">
 						<left>94</left>
@@ -504,11 +504,11 @@
 						<font>Hand_26</font>
 						<aligny>top</aligny>
 						<label> $INFO[ListItem.Artist]</label>
-						<visible>IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
+						<visible>String.IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
 						<textcolor>black</textcolor>
 						<wrapmultiline>true</wrapmultiline>
-						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="StringCompare(ListItem.Album,MusicPlayer.Album) + !IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
-						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 					</control>
 					<control type="label">
 						<left>99</left>
@@ -519,11 +519,11 @@
 						<font>Hand_26</font>
 						<aligny>top</aligny>
 						<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Album]</label>
-						<visible>IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)	</visible>
+						<visible>String.IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)	</visible>
 						<textcolor>black</textcolor>
 						<wrapmultiline>true</wrapmultiline>
-						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="StringCompare(ListItem.Album,MusicPlayer.Album) + !IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
-						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 					</control>
 					<control type="image" id="417291">
 						<left>8</left>
@@ -533,8 +533,8 @@
 						<fadetime>IconCrossfadeTime2</fadetime>
 						<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[ListAlbumVar]</texture>
 						<visible>!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + Skin.HasSetting(MusicFakeDisc)</visible>
-						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="StringCompare(ListItem.Album,MusicPlayer.Album) + !IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
-						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 					</control>
 					<control type="image" id="417291">
 						<left>8</left>
@@ -545,8 +545,8 @@
 						<fadetime>IconCrossfadeTime2</fadetime>
 						<texture background="true">$VAR[cdARTVar]</texture>
 						<visible>!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
-						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="StringCompare(ListItem.Album,MusicPlayer.Album) + !IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
-						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 					</control>
 					<control type="image">
 						<left>8</left>
@@ -557,8 +557,8 @@
 						<fadetime>400</fadetime>
 						<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
 						<visible>Skin.HasSetting(rightlistCD) + Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
-						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="StringCompare(ListItem.Album,MusicPlayer.Album) + !IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
-						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 					</control>
 					<control type="image">
 						<left>8</left>
@@ -569,8 +569,8 @@
 						<fadetime>400</fadetime>
 						<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
 						<visible>Skin.HasSetting(rightlistCD) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
-						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="StringCompare(ListItem.Album,MusicPlayer.Album) + !IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
-						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 					</control>
 					<control type="image">
 						<left>8</left>
@@ -581,9 +581,9 @@
 						<fadetime>IconCrossfadeTime2</fadetime>
 						<include condition="Skin.HasSetting(vinylart)">vinylartlibrary</include>
 						<include condition="Skin.HasSetting(blurayart)">blurayartlibrary</include>
-						<visible>IsEmpty(Window(Home).Property(SkinHelper.Music.DiscArt))</visible>
-						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="StringCompare(ListItem.Album,MusicPlayer.Album) + !IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
-						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.Music.DiscArt))</visible>
+						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
+						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 					</control>
 				</control>
 				<control type="group">

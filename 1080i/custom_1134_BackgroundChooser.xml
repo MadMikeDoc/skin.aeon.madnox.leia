@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1134">
 	<defaultcontrol always="true">4</defaultcontrol>
-	<onload condition="!IsEmpty(Window(visualisation).Property(MusicVizBG))">Skin.SetString(ItemToEdit.MultiFanart,$ESCINFO[Skin.String(MusicViz.MultiFanart)])</onload>
-	<onunload condition="!IsEmpty(Window(visualisation).Property(MusicVizBG))">Skin.SetString(MusicViz.MultiFanart,$ESCINFO[Skin.String(ItemToEdit.MultiFanart)])</onunload>
-	<onunload condition="!IsEmpty(Window(visualisation).Property(MusicVizBG))">Skin.Reset(ItemToEdit.MultiFanart)</onunload>
+	<onload condition="!String.IsEmpty(Window(visualisation).Property(MusicVizBG))">Skin.SetString(ItemToEdit.MultiFanart,$ESCINFO[Skin.String(MusicViz.MultiFanart)])</onload>
+	<onunload condition="!String.IsEmpty(Window(visualisation).Property(MusicVizBG))">Skin.SetString(MusicViz.MultiFanart,$ESCINFO[Skin.String(ItemToEdit.MultiFanart)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(visualisation).Property(MusicVizBG))">Skin.Reset(ItemToEdit.MultiFanart)</onunload>
 	<onunload>ClearProperty(MusicVizBG,visualisation)</onunload>
 	<controls>
 		<control type="group">
@@ -104,19 +104,19 @@
 						<label>31092</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,artistfanart)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>!IsEmpty(Window(visualisation).Property(MusicVizBG))</visible>
+						<visible>!String.IsEmpty(Window(visualisation).Property(MusicVizBG))</visible>
 					</item>
 					<item>
 						<label>31039</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,cd-wall)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>!IsEmpty(Window(visualisation).Property(MusicVizBG))</visible>
+						<visible>!String.IsEmpty(Window(visualisation).Property(MusicVizBG))</visible>
 					</item>
 					<item>
 						<label>31044</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,artistslideshow)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>!IsEmpty(Window(visualisation).Property(MusicVizBG))</visible>
+						<visible>!String.IsEmpty(Window(visualisation).Property(MusicVizBG))</visible>
 					</item>
 					<!--item>
                         <label>31820</label>
@@ -138,102 +138,102 @@
 					<item>
 						<label>$LOCALIZE[31323]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,recentmovies)</onclick>
-						<onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recentmovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ItemToEdit.Widget),recentmovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
 					</item>
 					<item>
 						<label>$LOCALIZE[31222]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,randommovies)</onclick>
-						<onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),randommovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ItemToEdit.Widget),randommovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
 					</item>
 					<item>
 						<label>$LOCALIZE[31324]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,recenttv)</onclick>
-						<onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recenttv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ItemToEdit.Widget),recenttv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
 					</item>
 					<item>
 						<label>$LOCALIZE[31220]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,randomtv)</onclick>
-						<onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),randomtv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ItemToEdit.Widget),randomtv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
 					</item>
 					<item id="111">
 						<label>$LOCALIZE[31335]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,watchlistmovies)</onclick>
-						<onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),watchlistmovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ItemToEdit.Widget),watchlistmovies)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
 					</item>
 					<item id="112">
 						<label>$LOCALIZE[31464]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,watchlisttv)</onclick>
-						<onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),watchlisttv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ItemToEdit.Widget),watchlisttv)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
 					</item>
 					<item>
 						<label>$LOCALIZE[31326]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,watchlistalbums)</onclick>
-						<onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),watchlistalbums)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ItemToEdit.Widget),watchlistalbums)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
 					</item>
 					<item>
 						<label>$LOCALIZE[31359]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,recentalbums)</onclick>
-						<onclick condition="Stringcompare(Skin.String(ItemToEdit.Widget),recentalbums)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(ItemToEdit.Widget),recentalbums)">Skin.SetString(ItemToEdit.MultiFanart,widgetfanart)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
 					</item>
 					<item>
 						<label>$LOCALIZE[31035] [LOWERCASE]$LOCALIZE[20445][/LOWERCASE]</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,weather)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>!IsEmpty(Skin.String(WeatherFanartDir))</visible>
+						<visible>!String.IsEmpty(Skin.String(WeatherFanartDir))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31035] [LOWERCASE]$LOCALIZE[20445][/LOWERCASE]</label>
 						<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>IsEmpty(Skin.String(WeatherFanartDir))</visible>
+						<visible>String.IsEmpty(Skin.String(WeatherFanartDir))</visible>
 					</item>
 					<item>
 						<label>31601</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,cdwall)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>!IsEmpty(Skin.String(CDWall_Folder_Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(CDWall_Folder_Path))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31612] 1</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,moviewall1)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>!IsEmpty(Skin.String(MovieWall_Folder_Path_1))</visible>
+						<visible>!String.IsEmpty(Skin.String(MovieWall_Folder_Path_1))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31612] 2</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,moviewall2)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>!IsEmpty(Skin.String(MovieWall_Folder_Path_2))</visible>
+						<visible>!String.IsEmpty(Skin.String(MovieWall_Folder_Path_2))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31612] 3</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,moviewall3)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>!IsEmpty(Skin.String(MovieWall_Folder_Path_3))</visible>
+						<visible>!String.IsEmpty(Skin.String(MovieWall_Folder_Path_3))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31612] 4</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,moviewall4)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>!IsEmpty(Skin.String(MovieWall_Folder_Path_4))</visible>
+						<visible>!String.IsEmpty(Skin.String(MovieWall_Folder_Path_4))</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[31612] 5</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,moviewall5)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
-						<visible>!IsEmpty(Skin.String(MovieWall_Folder_Path_5))</visible>
+						<visible>!String.IsEmpty(Skin.String(MovieWall_Folder_Path_5))</visible>
 					</item>
 					<item>
 						<label>31823</label>
-						<onclick>RunScript(script.widget.weatherworld,time=10&amp;limit=9&amp;mapsize=1920x1080&amp;tilesize=360x60&amp;window=10000&amp;condition=StringCompare(Control.GetLabel(4322),weatherworldbackground))</onclick>
+						<onclick>RunScript(script.widget.weatherworld,time=10&amp;limit=9&amp;mapsize=1920x1080&amp;tilesize=360x60&amp;window=10000&amp;condition=String.IsEqual(Control.GetLabel(4322),weatherworldbackground))</onclick>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,weatherworldbackground)</onclick>
 						<onclick>Dialog.Close(1134)</onclick>
 						<visible>System.HasAddon(script.widget.weatherworld) + System.HasAddon(script.widget.weatherworld)</visible>
@@ -246,19 +246,19 @@
 					</item>
 					<item>
 						<label>31824</label>
-						<onclick condition="IsEmpty(Window(visualisation).Property(MusicVizBG))">Dialog.Close(1134)</onclick>
+						<onclick condition="String.IsEmpty(Window(visualisation).Property(MusicVizBG))">Dialog.Close(1134)</onclick>
 						<onclick>ActivateWindow(1155)</onclick>
 					</item>
 					<item>
 						<label>31825</label>
 						<onclick>SetProperty(LiveCasesType,CDs,Home)</onclick>
-						<onclick condition="IsEmpty(Window(visualisation).Property(MusicVizBG))">Dialog.Close(1134)</onclick>
+						<onclick condition="String.IsEmpty(Window(visualisation).Property(MusicVizBG))">Dialog.Close(1134)</onclick>
 						<onclick>ActivateWindow(1155)</onclick>
 					</item>
 					<item>
 						<label>31826</label>
 						<onclick>SetProperty(LiveCasesType,Pics,Home)</onclick>
-						<onclick condition="IsEmpty(Window(visualisation).Property(MusicVizBG))">Dialog.Close(1134)</onclick>
+						<onclick condition="String.IsEmpty(Window(visualisation).Property(MusicVizBG))">Dialog.Close(1134)</onclick>
 						<onclick>ActivateWindow(1155)</onclick>
 					</item>
 					<item>

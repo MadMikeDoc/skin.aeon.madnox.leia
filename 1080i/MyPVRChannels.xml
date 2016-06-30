@@ -61,7 +61,7 @@
 								<texture colordiffuse="$VAR[AreaColorVar]">osd/osd_settings_buttonnf.png</texture>
 							</control>
 							<control type="image">
-								<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 								<left>65</left>
 								<top>7</top>
 								<width>60</width>
@@ -75,7 +75,7 @@
 								<width>90</width>
 								<height>16</height>
 								<info>ListItem.Progress</info>
-								<visible>!IsEmpty(ListItem.Title)</visible>
+								<visible>!String.IsEmpty(ListItem.Title)</visible>
 								<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 								<texturebg border="3">new_pvr/texturebg_border_white.png</texturebg>
 								<midtexture border="3">new_pvr/texturebg_white.png</midtexture>
@@ -126,7 +126,7 @@
 								<info>ListItem.ChannelNumber</info>
 							</control>
 							<control type="image">
-								<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+								<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 								<left>65</left>
 								<top>7</top>
 								<width>60</width>
@@ -140,7 +140,7 @@
 								<width>90</width>
 								<height>16</height>
 								<info>ListItem.Progress</info>
-								<visible>!IsEmpty(ListItem.Title)</visible>
+								<visible>!String.IsEmpty(ListItem.Title)</visible>
 								<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 								<texturebg border="3">new_pvr/texturebg_border_white.png</texturebg>
 								<midtexture border="3">new_pvr/texturebg_white.png</midtexture>
@@ -208,14 +208,14 @@
 					</control>
 <!-- 					TV Thumb instead of Tv channel logo on right side - Big List START -->
 					<control type="image">
-						<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+						<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 						<left>30</left>
 						<top>4</top>
 						<width>650</width>
 						<height>365</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo</visible>
+						<visible>String.IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo</visible>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
 					</control>
 					<control type="image">
@@ -225,7 +225,7 @@
 						<height>365</height>
 						<texture>$INFO[Window(home).Property(SkinHelper.PVR.Thumb)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-						<visible>!IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
 					</control>
 					<control type="image">
 						<left>30</left>
@@ -233,7 +233,7 @@
 						<width>650</width>
 						<height>365</height>
 						<texture>new_pvr/mod/PVRSmallBG.png</texture>
-						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + IsEmpty(ListItem.Thumb)</visible>
+						<visible>String.IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + String.IsEmpty(ListItem.Thumb)</visible>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
 					</control>
@@ -244,7 +244,7 @@
 						<height>75</height>
 						<texture>$INFO[Window(home).Property(SkinHelper.PVR.Banner)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
-						<visible>!IsEmpty(Window(home).Property(SkinHelper.PVR.Banner)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) </visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.PVR.Banner)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) </visible>
 					</control>
 					<control type="image">
 						<left>450</left>
@@ -253,7 +253,7 @@
 						<height>110</height>
 						<texture>$INFO[Window(home).Property(SkinHelper.PVR.ClearArt)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
-						<visible>!IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) </visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) </visible>
 					</control>
 					<control type="image">
 						<left>450</left>
@@ -262,7 +262,7 @@
 						<height>80</height>
 						<texture>$INFO[Window(home).Property(SkinHelper.PVR.ClearLogo)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
-						<visible>!IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo)) + String.IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
 					</control>
 					<control type="image" id="56">
 						<left>20</left>
@@ -309,7 +309,7 @@
 					<top>410</top>
 					<height>75</height>
 					<width>746</width>
-					<visible>!IsEmpty(Container(50).ListItem.Title)</visible>
+					<visible>!String.IsEmpty(Container(50).ListItem.Title)</visible>
 					<control type="image">
 						<left>4</left>
 						<width>706</width>
@@ -481,14 +481,14 @@
 				</control>
 <!-- 					TV Thumb instead of Tv channel logo on right side - Small List START -->
 					<control type="image">
-						<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+						<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 						<left>44</left>
 						<top>-10</top>
 						<width>653</width>
 						<height>396</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb))  + !Player.HasVideo</visible>
+						<visible>String.IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb))  + !Player.HasVideo</visible>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
 					</control> -->
 					<control type="image">
@@ -498,7 +498,7 @@
 						<height>396</height>
 						<texture>$INFO[Window(home).Property(SkinHelper.PVR.Thumb)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-						<visible>!IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
 					</control>
 					<control type="image">
 						<left>44</left>
@@ -506,7 +506,7 @@
 						<width>653</width>
 						<height>396</height>
 						<texture>new_pvr/mod/PVRSmallBG.png</texture>
-						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + IsEmpty(ListItem.Thumb)</visible>
+						<visible>String.IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + String.IsEmpty(ListItem.Thumb)</visible>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
 					</control>
@@ -517,7 +517,7 @@
 						<height>75</height>
 						<texture>$INFO[Window(home).Property(SkinHelper.PVR.Banner)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
-						<visible>!IsEmpty(Window(home).Property(SkinHelper.PVR.Banner)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) </visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.PVR.Banner)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) </visible>
 					</control>
 					<control type="image">
 						<left>440</left>
@@ -526,7 +526,7 @@
 						<height>110</height>
 						<texture>$INFO[Window(home).Property(SkinHelper.PVR.ClearArt)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
-						<visible>!IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) </visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs) </visible>
 					</control>
 					<control type="image">
 						<left>440</left>
@@ -535,7 +535,7 @@
 						<height>80</height>
 						<texture>$INFO[Window(home).Property(SkinHelper.PVR.ClearLogo)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
-						<visible>!IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo)) + IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.PVR.ClearLogo)) + String.IsEmpty(Window(home).Property(SkinHelper.PVR.ClearArt)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
 					</control>
 					<control type="image">
 						<left>650</left>
@@ -544,7 +544,7 @@
 						<height>155</height>
 						<texture>$INFO[Window(home).Property(SkinHelper.PVR.CharacterArt)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">keep</aspectratio>
-						<visible>!IsEmpty(Window(home).Property(SkinHelper.PVR.CharacterArt)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.PVR.CharacterArt)) + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
 					</control>
 <!-- 					TV Thumb instead of Tv channel logo on right side - Small List END -->
 				<control type="videowindow">
@@ -585,7 +585,7 @@
 					<height>100</height>
 					<width>846</width>
 					<include>Animation_WindowFade200</include>
-					<visible>!IsEmpty(Container(51).ListItem.Title)</visible>
+					<visible>!String.IsEmpty(Container(51).ListItem.Title)</visible>
 					<control type="image">
 						<animation effect="fade" end="70" condition="true">conditional</animation>
 					</control>
@@ -700,7 +700,7 @@
 							<font>Font_Reg32</font>
 						</control>
 						<control type="image">
-							<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+							<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							<left>50</left>
 							<width>104</width>
 							<height>104</height>
@@ -796,7 +796,7 @@
 							<font>Font_Reg32</font>
 						</control>
 						<control type="image">
-							<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+							<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 							<left>58</left>
 							<width>104</width>
 							<height>104</height>
@@ -955,7 +955,7 @@
 						<label>[B]$INFO[ListItem.ChannelNumber]  $INFO[ListItem.Label][/B]</label>
 					</control>
 					<control type="image">
-						<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+						<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 						<left>335</left>
 						<top>17</top>
 						<width>90</width>
@@ -984,7 +984,7 @@
 							<width>408</width>
 							<height>6</height>
 							<info>ListItem.Progress</info>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!String.IsEmpty(ListItem.Title)</visible>
 							<midtexture colordiffuse="$VAR[FontColorVar]">new_pvr/texturebg_white.png</midtexture>
 							<texturebg colordiffuse="white3">new_pvr/texturebg.png</texturebg>
 							<lefttexture>-</lefttexture>
@@ -1025,7 +1025,7 @@
 						<texture border="40" colordiffuse="$VAR[AreaColorVar]">buttons/roundedbutton-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+						<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 						<left>335</left>
 						<top>17</top>
 						<width>90</width>
@@ -1063,7 +1063,7 @@
 							<width>408</width>
 							<height>6</height>
 							<info>ListItem.Progress</info>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!String.IsEmpty(ListItem.Title)</visible>
 							<midtexture colordiffuse="$VAR[FontColorVar]">new_pvr/texturebg_white.png</midtexture>
 							<texturebg>new_pvr/texturebg.png</texturebg>
 							<lefttexture>-</lefttexture>
@@ -1120,7 +1120,7 @@
 					</control>
 <!-- 					TV Thumb instead of Tv channel logo on right side - Wall view START -->
 					<control type="image">
-						<visible>!StringCompare(ListItem.Icon,DefaultVideo.png)</visible>
+						<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
 						<left>2</left>
 						<top>-2</top>
 						<width>358</width>
@@ -1128,7 +1128,7 @@
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 
-						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb))  + !Player.HasVideo</visible>
+						<visible>String.IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb))  + !Player.HasVideo</visible>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
 					</control>
 					<control type="image">
@@ -1138,7 +1138,7 @@
 						<height>210</height>
 						<texture>$INFO[Window(home).Property(SkinHelper.PVR.Thumb)]</texture>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-						<visible>!IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + Skin.HasSetting(SkinHelper.EnablePVRThumbs)</visible>
 					</control>
 					<control type="image">
 						<left>4</left>
@@ -1146,7 +1146,7 @@
 						<width>358</width>
 						<height>198</height>
 						<texture>new_pvr/mod/PVRSmallBG.png</texture>
-						<visible>IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + IsEmpty(ListItem.Thumb)</visible>
+						<visible>String.IsEmpty(Window(home).Property(SkinHelper.PVR.Thumb)) + !Player.HasVideo + String.IsEmpty(ListItem.Thumb)</visible>
 						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
 					</control>

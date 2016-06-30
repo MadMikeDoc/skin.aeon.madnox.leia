@@ -166,7 +166,7 @@
 							<label fallback="31006">$INFO[ListItem.Property(publisher)]</label>
 						</control>
 						<control type="group">
-							<visible>!IsEmpty(ListItem.Property(rating))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(rating))</visible>
 							<control type="label">
 								<left>352</left>
 								<top>147</top>
@@ -184,7 +184,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>IsEmpty(ListItem.Property(rating))</visible>
+							<visible>String.IsEmpty(ListItem.Property(rating))</visible>
 							<control type="label">
 								<left>352</left>
 								<top>147</top>
@@ -220,13 +220,13 @@
 					<width>786</width>
 					<height>442</height>
 					<texture>common/black.png</texture>
-					<visible>!IsEmpty(ListItem.Property(videosizebig)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(videosizebig)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 				</control>
 				<control type="videowindow" id="2300">
 					<width>786</width>
 					<height>442</height>
 					<animation effect="fade" end="100" time="0" delay="880">Visible</animation>
-					<visible>!IsEmpty(ListItem.Property(videosizebig)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(videosizebig)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 				</control>
 			</control>
 		</control>
@@ -400,7 +400,7 @@
 							<height>0</height>
 							<texturefocus></texturefocus>
 							<texturenofocus></texturenofocus>
-							<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 							<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 							<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 						</control>
@@ -421,7 +421,7 @@
 						<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
 						<animation effect="rotatey" center="-75" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-6).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -437,7 +437,7 @@
 						<left>225</left>
 						<animation effect="rotatey" center="75" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-5).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -453,7 +453,7 @@
 						<left>375</left>
 						<animation effect="rotatey" center="225" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-4).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -469,7 +469,7 @@
 						<left>525</left>
 						<animation effect="rotatey" center="375" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-3).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -485,7 +485,7 @@
 						<left>675</left>
 						<animation effect="rotatey" center="525" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-2).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -503,7 +503,7 @@
 						<animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
 						<animation effect="rotatey" center="2145" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(5).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -519,7 +519,7 @@
 						<left>1440</left>
 						<animation effect="rotatey" center="1995" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(4).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -535,7 +535,7 @@
 						<left>1290</left>
 						<animation effect="rotatey" center="1845" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(3).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -551,7 +551,7 @@
 						<left>1140</left>
 						<animation effect="rotatey" center="1695" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(2).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -567,7 +567,7 @@
 						<left>990</left>
 						<animation effect="rotatey" center="1545" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(1).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -588,7 +588,7 @@
 							<animation effect="rotatey" center="1395" end="-65" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
 							<animation effect="rotatey" center="1395" start="65" end="65" time="0" condition="true">Conditional</animation>
 							<control type="group">
-								<visible>!IsEmpty(Container(51).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+								<visible>!String.IsEmpty(Container(51).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 								<control type="image">
 									<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
 									<include>MusicShowcaseThumb</include>
@@ -605,7 +605,7 @@
 							<visible>Container.OnNext</visible>
 							<animation effect="rotatey" center="608" end="-65" time="200" reversible="false" tween="quadratic">Hidden</animation>
 							<control type="group">
-								<visible>!IsEmpty(Container(51).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+								<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 								<control type="image">
 									<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-1).Icon]</texture>
 									<include>MusicShowcaseThumb</include>
@@ -629,7 +629,7 @@
 						<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
 						<animation effect="rotatey" center="1995" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(6).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -645,7 +645,7 @@
 						<left>1290</left>
 						<animation effect="rotatey" center="1845" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(5).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -661,7 +661,7 @@
 						<left>1140</left>
 						<animation effect="rotatey" center="1695" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(4).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -677,7 +677,7 @@
 						<left>990</left>
 						<animation effect="rotatey" center="1545" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(3).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -693,7 +693,7 @@
 						<left>840</left>
 						<animation effect="rotatey" center="1395" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(2).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -711,7 +711,7 @@
 						<animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
 						<animation effect="rotatey" center="-225" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-5).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -727,7 +727,7 @@
 						<left>75</left>
 						<animation effect="rotatey" center="-75" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-4).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -743,7 +743,7 @@
 						<left>225</left>
 						<animation effect="rotatey" center="75" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-3).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -759,7 +759,7 @@
 						<left>375</left>
 						<animation effect="rotatey" center="225" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-2).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -775,7 +775,7 @@
 						<left>525</left>
 						<animation effect="rotatey" center="375" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-1).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -796,7 +796,7 @@
 							<animation effect="rotatey" center="525" end="65" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
 							<animation effect="rotatey" center="525" start="-65" end="-65" time="0" condition="true">Conditional</animation>
 							<control type="group">
-								<visible>!IsEmpty(Container(51).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+								<visible>!String.IsEmpty(Container(51).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 								<control type="image">
 									<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
 									<include>MusicShowcaseThumb</include>
@@ -813,7 +813,7 @@
 							<visible>Container.OnPrevious</visible>
 							<animation effect="rotatey" center="1312" end="65" time="200" reversible="false" tween="quadratic">Hidden</animation>
 							<control type="group">
-								<visible>!IsEmpty(Container(51).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+								<visible>!String.IsEmpty(Container(51).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 								<control type="image">
 									<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(1).Icon]</texture>
 									<include>MusicShowcaseThumb</include>
@@ -854,7 +854,7 @@
 							<effect type="slide" end="-1192" time="640" tween="cubic" easing="inout" />
 						</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-5).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -876,7 +876,7 @@
 							<effect type="slide" end="-968" time="640" tween="cubic" easing="inout" />
 						</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-4).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -898,7 +898,7 @@
 							<effect type="slide" end="-742" time="640" tween="cubic" easing="inout" />
 						</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-3).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -920,7 +920,7 @@
 							<effect type="slide" end="-518" time="640" tween="cubic" easing="inout" />
 						</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-2).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -942,7 +942,7 @@
 							<effect type="slide" end="-292" time="640" tween="cubic" easing="inout" />
 						</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(-1).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -964,7 +964,7 @@
 							<effect type="slide" end="1192" time="640" tween="cubic" easing="inout" />
 						</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(5).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -986,7 +986,7 @@
 							<effect type="slide" end="968" time="640" tween="cubic" easing="inout" />
 						</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(4).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -1008,7 +1008,7 @@
 							<effect type="slide" end="742" time="640" tween="cubic" easing="inout" />
 						</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(3).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -1030,7 +1030,7 @@
 							<effect type="slide" end="518" time="640" tween="cubic" easing="inout" />
 						</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(2).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -1052,7 +1052,7 @@
 							<effect type="slide" end="292" time="640" tween="cubic" easing="inout" />
 						</animation>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem(1).Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -1067,7 +1067,7 @@
 					<control type="group">
 						<left>758</left>
 						<control type="group">
-							<visible>!IsEmpty(Container(51).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(51).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/cdcover_mask_aa.png" fallback="DefaultAudio.png">$INFO[ListItem.Icon]</texture>
 								<include>MusicShowcaseThumb</include>
@@ -1133,7 +1133,7 @@
 							<height>0</height>
 							<texturefocus></texturefocus>
 							<texturenofocus></texturenofocus>
-							<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 							<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 							<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 						</control>
@@ -1191,7 +1191,7 @@
 							<height>0</height>
 							<texturefocus></texturefocus>
 							<texturenofocus></texturenofocus>
-							<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 							<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 							<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 						</control>
@@ -1309,7 +1309,7 @@
 					<animation effect="slide" end="-135,0" time="200" reversible="false">Hidden</animation>
 					<control type="group">
 						<left>15</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-7).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-7).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<visible>Container.OnNext</visible>
 						<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
 						<animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -1325,7 +1325,7 @@
 					</control>
 					<control type="group">
 						<left>150</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-6).Icon]</texture>
@@ -1339,7 +1339,7 @@
 					</control>
 					<control type="group">
 						<left>285</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-5).Icon]</texture>
@@ -1353,7 +1353,7 @@
 					</control>
 					<control type="group">
 						<left>420</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-4).Icon]</texture>
@@ -1367,7 +1367,7 @@
 					</control>
 					<control type="group">
 						<left>555</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-3).Icon]</texture>
@@ -1381,7 +1381,7 @@
 					</control>
 					<control type="group">
 						<left>690</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-2).Icon]</texture>
@@ -1395,7 +1395,7 @@
 					</control>
 					<control type="group">
 						<left>1635</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<visible>!Container.OnNext</visible>
 						<animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
 						<animation effect="rotatey" center="2205" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -1411,7 +1411,7 @@
 					</control>
 					<control type="group">
 						<left>1500</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(5).Icon]</texture>
@@ -1425,7 +1425,7 @@
 					</control>
 					<control type="group">
 						<left>1365</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(4).Icon]</texture>
@@ -1439,7 +1439,7 @@
 					</control>
 					<control type="group">
 						<left>1230</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(3).Icon]</texture>
@@ -1453,7 +1453,7 @@
 					</control>
 					<control type="group">
 						<left>1095</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(2).Icon]</texture>
@@ -1467,7 +1467,7 @@
 					</control>
 					<control type="group">
 						<left>960</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(1).Icon]</texture>
@@ -1485,7 +1485,7 @@
 						<control type="group">
 							<left>825</left>
 							<visible>Container.OnNext</visible>
-							<visible>!IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<animation effect="rotatey" center="1395" end="-55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
 							<animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
 							<control type="image">
@@ -1500,7 +1500,7 @@
 						</control>
 						<control type="group">
 							<left>758</left>
-							<visible>!IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<visible>Container.OnNext</visible>
 							<animation effect="rotatey" center="608" end="-55" time="200" reversible="false" tween="quadratic">Hidden</animation>
 							<control type="image">
@@ -1522,7 +1522,7 @@
 					<animation effect="slide" end="135,0" time="200" reversible="false">Hidden</animation>
 					<control type="group">
 						<left>1500</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(7).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(7).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<visible>Container.OnPrevious</visible>
 						<animation effect="fade" start="100" end="0" time="200" reversible="false">Hidden</animation>
 						<animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -1538,7 +1538,7 @@
 					</control>
 					<control type="group">
 						<left>1365</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(6).Icon]</texture>
@@ -1552,7 +1552,7 @@
 					</control>
 					<control type="group">
 						<left>1230</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(5).Icon]</texture>
@@ -1566,7 +1566,7 @@
 					</control>
 					<control type="group">
 						<left>1095</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(4).Icon]</texture>
@@ -1580,7 +1580,7 @@
 					</control>
 					<control type="group">
 						<left>960</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(3).Icon]</texture>
@@ -1594,7 +1594,7 @@
 					</control>
 					<control type="group">
 						<left>825</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(2).Icon]</texture>
@@ -1608,7 +1608,7 @@
 					</control>
 					<control type="group">
 						<left>-120</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<visible>!Container.OnPrevious</visible>
 						<animation effect="fade" end="100" time="200" reversible="false">Visible</animation>
 						<animation effect="rotatey" center="-270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -1624,7 +1624,7 @@
 					</control>
 					<control type="group">
 						<left>15</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-5).Icon]</texture>
@@ -1638,7 +1638,7 @@
 					</control>
 					<control type="group">
 						<left>150</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-4).Icon]</texture>
@@ -1652,7 +1652,7 @@
 					</control>
 					<control type="group">
 						<left>285</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-3).Icon]</texture>
@@ -1666,7 +1666,7 @@
 					</control>
 					<control type="group">
 						<left>420</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-2).Icon]</texture>
@@ -1680,7 +1680,7 @@
 					</control>
 					<control type="group">
 						<left>555</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem(-1).Icon]</texture>
@@ -1698,7 +1698,7 @@
 						<control type="group">
 							<left>690</left>
 							<visible>Container.OnPrevious</visible>
-							<visible>!IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<animation effect="rotatey" center="540" end="55" time="200" reversible="false" tween="quadratic" easing="in">Hidden</animation>
 							<animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 							<control type="image">
@@ -1713,7 +1713,7 @@
 						</control>
 						<control type="group">
 							<left>758</left>
-							<visible>!IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<visible>Container.OnPrevious</visible>
 							<animation effect="rotatey" center="1328" end="55" time="200" reversible="false" tween="quadratic">Hidden</animation>
 							<control type="image">
@@ -1748,7 +1748,7 @@
 					<visible>Control.IsVisible(53) + !Control.IsVisible(6001) + !Control.IsVisible(6002) + Control.IsVisible(960)</visible>
 					<control type="group">
 						<left>15</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="818" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="818" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -1768,7 +1768,7 @@
 					</control>
 					<control type="group">
 						<left>150</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="682" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="682" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -1788,7 +1788,7 @@
 					</control>
 					<control type="group">
 						<left>285</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="548" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="548" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -1808,7 +1808,7 @@
 					</control>
 					<control type="group">
 						<left>420</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="412" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="412" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -1828,7 +1828,7 @@
 					</control>
 					<control type="group">
 						<left>555</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="278" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="278" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -1848,7 +1848,7 @@
 					</control>
 					<control type="group">
 						<left>690</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(-1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="142" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="142" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
@@ -1868,7 +1868,7 @@
 					</control>
 					<control type="group">
 						<left>1500</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(6).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="-818" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="-818" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -1888,7 +1888,7 @@
 					</control>
 					<control type="group">
 						<left>1365</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(5).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="-682" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="-682" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -1908,7 +1908,7 @@
 					</control>
 					<control type="group">
 						<left>1230</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(4).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="-548" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="-548" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -1928,7 +1928,7 @@
 					</control>
 					<control type="group">
 						<left>1095</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(3).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="-412" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="-412" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -1948,7 +1948,7 @@
 					</control>
 					<control type="group">
 						<left>960</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(2).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="-278" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="-278" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -1968,7 +1968,7 @@
 					</control>
 					<control type="group">
 						<left>825</left>
-						<visible>!IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+						<visible>!String.IsEmpty(Container(53).ListItemNoWrap(1).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 						<animation effect="slide" time="240" end="-142" tween="cubic" easing="in">WindowClose</animation>
 						<animation effect="slide" time="640" delay="240" end="0" start="-142" tween="cubic">WindowOpen</animation>
 						<animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
@@ -1989,7 +1989,7 @@
 					<control type="group">
 						<left>758</left>
 						<control type="group">
-							<visible>!IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
+							<visible>!String.IsEmpty(Container(53).ListItemNoWrap(0).FolderPath) | Skin.HasSetting(showcasewrap)</visible>
 							<control type="image">
 								<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="DefaultVideoBigPoster.png">$INFO[ListItem.Icon]</texture>
 								<include>MovieShowcaseThumb</include>
@@ -2057,7 +2057,7 @@
 							<height>0</height>
 							<texturefocus></texturefocus>
 							<texturenofocus></texturenofocus>
-							<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 							<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 							<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 						</control>
@@ -2151,7 +2151,7 @@
 							<height>0</height>
 							<texturefocus></texturefocus>
 							<texturenofocus></texturenofocus>
-							<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 							<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 							<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 						</control>
@@ -2327,7 +2327,7 @@
 								<height>0</height>
 								<texturefocus></texturefocus>
 								<texturenofocus></texturenofocus>
-								<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+								<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 								<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 								<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 							</control>
@@ -2408,7 +2408,7 @@
 								<height>0</height>
 								<texturefocus></texturefocus>
 								<texturenofocus></texturenofocus>
-								<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+								<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 								<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 								<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 							</control>
@@ -2748,7 +2748,7 @@
 									<height>0</height>
 									<texturefocus></texturefocus>
 									<texturenofocus></texturenofocus>
-									<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 									<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 									<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 								</control>
@@ -2837,7 +2837,7 @@
 									<height>0</height>
 									<texturefocus></texturefocus>
 									<texturenofocus></texturenofocus>
-									<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 									<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 									<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 								</control>
@@ -2926,7 +2926,7 @@
 									<height>0</height>
 									<texturefocus></texturefocus>
 									<texturenofocus></texturenofocus>
-									<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 									<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 									<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 								</control>
@@ -3017,7 +3017,7 @@
 							<height>0</height>
 							<texturefocus></texturefocus>
 							<texturenofocus></texturenofocus>
-							<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 							<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 							<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 						</control>
@@ -3104,7 +3104,7 @@
 									<height>0</height>
 									<texturefocus></texturefocus>
 									<texturenofocus></texturenofocus>
-									<visible>!IsEmpty(ListItem.Property(autoplayvideomain)) + !IsEmpty(ListItem.Property(gameplaymain))</visible>
+									<visible>!String.IsEmpty(ListItem.Property(autoplayvideomain)) + !String.IsEmpty(ListItem.Property(gameplaymain))</visible>
 									<animation delay="300" effect="fade" start="100" end="100">Focus</animation>
 									<onfocus>XBMC.PlayMedia($ESCINFO[ListItem.Property(gameplaymain)],1)</onfocus>
 								</control>

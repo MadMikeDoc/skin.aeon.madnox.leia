@@ -267,7 +267,7 @@
 					<width>936</width>
 					<height>494</height>
 					<control type="group">
-						<visible>IsEmpty(Control.GetLabel(130))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(130))</visible>
 						<control type="label">
 							<left>20</left>
 							<width>936</width>
@@ -808,7 +808,7 @@
 					<width>936</width>
 					<height>494</height>
 					<control type="group">
-						<visible>IsEmpty(Control.GetLabel(200))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(200))</visible>
 						<control type="label">
 							<left>20</left>
 							<width>936</width>

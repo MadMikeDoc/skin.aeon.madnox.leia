@@ -28,7 +28,7 @@
 			<height>147</height>
 			<aspectratio>keep</aspectratio>
 			<texture background="true">$INFO[Container.ListItem.Art(clearlogo)]</texture>
-			<visible>Container.Content(movies) + IsEmpty(Container.ListItem.Art(landscape))</visible>
+			<visible>Container.Content(movies) + String.IsEmpty(Container.ListItem.Art(landscape))</visible>
 		</control>
 		<control type="image">
 			<left>-3</left>
@@ -52,7 +52,7 @@
 			<bordersize>9</bordersize>
 		</control>
 		<control type="group">
-			<visible>Container.Content(episodes) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(disableepno)</visible>
+			<visible>Container.Content(episodes) + !String.IsEmpty(ListItem.Title) + !Skin.HasSetting(disableepno)</visible>
 			<control type="image">
 				<left>140</left>
 				<top>326</top>
@@ -113,15 +113,15 @@
 		<onup>7000</onup>
 		<ondown condition="[Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies)]] + !Skin.HasSetting(AlphabetScrollbar)">61</ondown>
 		<ondown condition="[Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies)]] + Skin.HasSetting(AlphabetScrollbar)">6022</ondown>
-		<ondown condition="[Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies)]] + !IsEmpty(ListItem.Trailer)">9000</ondown>
-		<ondown condition="[Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies)]] + IsEmpty(ListItem.Trailer)">7000</ondown>
+		<ondown condition="[Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies)]] + !String.IsEmpty(ListItem.Trailer)">9000</ondown>
+		<ondown condition="[Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies)]] + String.IsEmpty(ListItem.Trailer)">7000</ondown>
 		<orientation>horizontal</orientation>
 		<viewtype label="$LOCALIZE[31150]">BigWrap</viewtype>
 		<pagecontrol>61</pagecontrol>
 		<scrolltime tween="quadratic">300</scrolltime>
 		<focusposition>2</focusposition>
 		<preloaditems>2</preloaditems>
-		<visible>![!IsEmpty(Skin.String(DisableLandscapeVL)) + Window.IsActive(videos)]</visible>
+		<visible>![!String.IsEmpty(Skin.String(DisableLandscapeVL)) + Window.IsActive(videos)]</visible>
 		<visible>[Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Movies) | Container.Content(artists)]</visible>
 		<include>Animation_OpenCloseZoom_New</include>
 		<animation effect="slide" end="52" time="320" tween="cubic" easing="inout" condition="[Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeclearart)] + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)]">Conditional</animation>
@@ -205,7 +205,7 @@
 					<fadetime>200</fadetime>
 					<include>Animation_OpenCloseZoom_New</include>
 					<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
-					<animation effect="fade" delay="160" end="100" time="240" condition="!Stringcompare(Control.GetLabel(8822),empty.png)">Conditional</animation>
+					<animation effect="fade" delay="160" end="100" time="240" condition="!String.IsEqual(Control.GetLabel(8822),empty.png)">Conditional</animation>
 					<visible>Control.IsVisible(503) + Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)]</visible>
 					<visible>![Container.OnNext | Container.OnPrevious]</visible>
 				</control>
@@ -266,7 +266,7 @@
 				<height>220</height>
 				<texture>views/logo_tagline_gradient.png</texture>
 				<colordiffuse>ffffffff</colordiffuse>
-				<visible>![Container.Content(movies) + IsEmpty(ListItem.TagLine)]</visible>
+				<visible>![Container.Content(movies) + String.IsEmpty(ListItem.TagLine)]</visible>
 				<visible>Skin.HasSetting(landscapeonelogo) + [Container.Content(tvshows) | Container.Content(movies)]</visible>
 				<include>Animation_VisibleChange200</include>
 			</control>
@@ -291,22 +291,22 @@
 				<visible>[Skin.HasSetting(landscapeclearart) | Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)]</visible>
 				<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(0).Overlay,OverlayWatched.png)] |
 [Skin.HasSetting(newstatus) + SubString(ListItem(0).Overlay,OverlayUnWatched.png) + [[Container.Content(movies)
-+ [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(0).Label)
-| StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(0).Label)
-| StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(0).Label)
-| StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(0).Label)
-| StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(0).Label)]]
-| [[Container.Content(tvshows) | Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(0).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(0).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(0).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(0).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(0).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(0).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(0).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(0).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(0).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(0).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(0).Title)]]]]</visible>
++ [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(0).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(0).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(0).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(0).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(0).Label)]]
+| [[Container.Content(tvshows) | Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(0).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(0).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(0).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(0).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(0).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(0).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(0).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(0).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(0).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(0).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(0).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(0).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(0).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(0).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(0).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(0).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(0).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(0).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(0).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(0).Title)]]]]</visible>
 				<visible>[!Container.ListItem(0).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(0).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 				<include>Animation_VisibleChange200</include>
 			</control>
@@ -354,20 +354,20 @@
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="41" width="40">
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -398,20 +398,20 @@
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="35" width="35">
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -437,7 +437,7 @@
 			<animation effect="fade" start="10" end="10" time="160" tween="cubic" easing="inout" condition="true">Conditional</animation>
 		</control>
 		<control type="group">
-			<visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+			<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			<control type="label">
 				<left>13</left>
 				<top>100</top>
@@ -471,7 +471,7 @@
 			<animation effect="fade" start="10" end="10" time="160" tween="cubic" easing="inout" condition="true">Conditional</animation>
 		</control>
 		<control type="group">
-			<visible>IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(clearart))</visible>
+			<visible>String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(clearart))</visible>
 			<control type="label">
 				<left>13</left>
 				<top>100</top>

@@ -63,7 +63,7 @@
 						<textcolor>grey2</textcolor>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<pulseonselect>false</pulseonselect>
-						<visible allowhiddenfocus="true">Control.HasFocus(120) | ![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(120) | ![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,120)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -76,7 +76,7 @@
 						<textcolor>grey2</textcolor>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<pulseonselect>false</pulseonselect>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,121)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -89,7 +89,7 @@
 						<textcolor>grey2</textcolor>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<pulseonselect>false</pulseonselect>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,122)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -102,7 +102,7 @@
 						<textcolor>grey2</textcolor>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<pulseonselect>false</pulseonselect>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,123)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -115,7 +115,7 @@
 						<textcolor>grey2</textcolor>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<pulseonselect>false</pulseonselect>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,124)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -128,7 +128,7 @@
 						<textcolor>grey2</textcolor>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<pulseonselect>false</pulseonselect>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,125)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -141,7 +141,7 @@
 						<textcolor>grey2</textcolor>
 						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 						<pulseonselect>false</pulseonselect>
-						<visible>![StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)]</visible>
+						<visible>![String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)]</visible>
 						<onclick>SetProperty(itempress,126)</onclick>
 						<onclick>SetFocus(130)</onclick>
 					</control>
@@ -156,7 +156,7 @@
 						<pulseonselect>false</pulseonselect>
 						<onclick>SetProperty(itempress,100)</onclick>
 						<onclick>SetFocus(120)</onclick>
-						<visible allowhiddenfocus="true">Control.HasFocus(130) | StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)</visible>
+						<visible allowhiddenfocus="true">Control.HasFocus(130) | String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)</visible>
 						<ondown>SetFocus(102)</ondown>
 					</control>
 				</control>
@@ -165,7 +165,7 @@
 					<top>169</top>
 					<width>936</width>
 					<height>581</height>
-					<visible>StringCompare(Window.Property(itempress),120) | StringCompare(Window.Property(itempress),121) | StringCompare(Window.Property(itempress),122) | StringCompare(Window.Property(itempress),123) | StringCompare(Window.Property(itempress),124) | StringCompare(Window.Property(itempress),125) | StringCompare(Window.Property(itempress),126)</visible>
+					<visible>String.IsEqual(Window.Property(itempress),120) | String.IsEqual(Window.Property(itempress),121) | String.IsEqual(Window.Property(itempress),122) | String.IsEqual(Window.Property(itempress),123) | String.IsEqual(Window.Property(itempress),124) | String.IsEqual(Window.Property(itempress),125) | String.IsEqual(Window.Property(itempress),126)</visible>
 					<control type="group">
 						<width>936</width>
 						<height>49</height>

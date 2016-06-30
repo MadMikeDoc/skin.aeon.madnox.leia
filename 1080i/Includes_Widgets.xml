@@ -11,8 +11,8 @@
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Window.IsVisible(1199) | Window.IsVisible(1115)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Skin.HasSetting(Enable.WidgetHide) + !ControlGroup(90010).HasFocus">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Skin.HasSetting(Enable.PanelInfo) + ControlGroup(90020).HasFocus + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="!Skin.HasSetting(Enable.PanelInfo) + StringCompare(Container(9000).ListItem.Property(widgetPanelInfo.2),Enabled) + ControlGroup(90020).HasFocus + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)">Conditional</animation>
-			<visible>!IsEmpty(Container(9000).ListItem.Property(widgetStyle))</visible>
+			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="!Skin.HasSetting(Enable.PanelInfo) + String.IsEqual(Container(9000).ListItem.Property(widgetPanelInfo.2),Enabled) + ControlGroup(90020).HasFocus + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)">Conditional</animation>
+			<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetStyle))</visible>
 			<!-- Test Image
 			<control type="image">
 				<top>449</top>
@@ -38,8 +38,8 @@
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Window.IsVisible(1199) | Window.IsVisible(1115)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Skin.HasSetting(Enable.WidgetHide) + !ControlGroup(90020).HasFocus">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Skin.HasSetting(Enable.PanelInfo) + ControlGroup(90010).HasFocus + !SubString(Container(9000).ListItem.Property(widgetStyle),List)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="!Skin.HasSetting(Enable.PanelInfo) + StringCompare(Container(9000).ListItem.Property(widgetPanelInfo),Enabled) + ControlGroup(90010).HasFocus + !SubString(Container(9000).ListItem.Property(widgetStyle),List)">Conditional</animation>
-			<visible>!IsEmpty(Container(9000).ListItem.Property(widgetStyle.2))</visible>
+			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="!Skin.HasSetting(Enable.PanelInfo) + String.IsEqual(Container(9000).ListItem.Property(widgetPanelInfo),Enabled) + ControlGroup(90010).HasFocus + !SubString(Container(9000).ListItem.Property(widgetStyle),List)">Conditional</animation>
+			<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetStyle.2))</visible>
 			<!-- Test Image
 			<control type="image">
 				<top>90</top>
@@ -56,20 +56,20 @@
 	<!-- ******* WIDGET INFO ******** -->
 	<include name="InfoVisible1">
 		<visible>!Window.IsVisible(shutdownmenu) + !Window.IsVisible(favourites) + !Window.IsVisible(numericinput) + !Window.IsVisible(busydialog)</visible>
-		<visible>[Skin.HasSetting(Enable.PanelInfo) + Control.HasFocus($PARAM[id])] | [!Skin.HasSetting(Enable.PanelInfo) + StringCompare(Container(9000).ListItem.Property(widgetPanelInfo),Enabled) + Control.HasFocus($PARAM[id])]</visible>
+		<visible>[Skin.HasSetting(Enable.PanelInfo) + Control.HasFocus($PARAM[id])] | [!Skin.HasSetting(Enable.PanelInfo) + String.IsEqual(Container(9000).ListItem.Property(widgetPanelInfo),Enabled) + Control.HasFocus($PARAM[id])]</visible>
 		<animation effect="slide" end="0,950" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
 		<animation effect="fade" time="100" tween="sine" easing="inout">VisibleChange</animation>
 	</include>
 	<include name="InfoVisible2">
 		<visible>!Window.IsVisible(shutdownmenu) + !Window.IsVisible(favourites) + !Window.IsVisible(numericinput) + !Window.IsVisible(busydialog)</visible>
-		<visible>[Skin.HasSetting(Enable.PanelInfo) + Control.HasFocus($PARAM[id])] | [!Skin.HasSetting(Enable.PanelInfo) + StringCompare(Container(9000).ListItem.Property(widgetPanelInfo.2),Enabled) + Control.HasFocus($PARAM[id])]</visible>
+		<visible>[Skin.HasSetting(Enable.PanelInfo) + Control.HasFocus($PARAM[id])] | [!Skin.HasSetting(Enable.PanelInfo) + String.IsEqual(Container(9000).ListItem.Property(widgetPanelInfo.2),Enabled) + Control.HasFocus($PARAM[id])]</visible>
 		<animation effect="slide" end="0,-950" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
 		<animation effect="fade" time="100" tween="sine" easing="inout">VisibleChange</animation>
 	</include>
 	<include name="Info">
 		<!-- Poster -->
 		<control type="group">
-			<visible>IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + IsEmpty(Container($PARAM[id]).ListItem.ChannelName) + IsEmpty(Container($PARAM[id]).ListItem.Artist) + IsEmpty(Container($PARAM[id]).ListItem.AlbumArtist) + IsEmpty(Container($PARAM[id]).ListItem.AddonName) + !$PARAM[widgetSquare]</visible>
+			<visible>String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + String.IsEmpty(Container($PARAM[id]).ListItem.ChannelName) + String.IsEmpty(Container($PARAM[id]).ListItem.Artist) + String.IsEmpty(Container($PARAM[id]).ListItem.AlbumArtist) + String.IsEmpty(Container($PARAM[id]).ListItem.AddonName) + !$PARAM[widgetSquare]</visible>
 			<include content="InfoContent">
 				<param name="id">$PARAM[id]</param>
 				<param name="Texture">$VAR[HomeWidget$PARAM[id]PosterVar]</param>
@@ -86,7 +86,7 @@
 		</control>
 		<!-- Square -->
 		<control type="group">
-			<visible>!IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) | !IsEmpty(Container($PARAM[id]).ListItem.Artist) | !IsEmpty(Container($PARAM[id]).ListItem.AlbumArtist) | !IsEmpty(Container($PARAM[id]).ListItem.AddonName) | $PARAM[widgetSquare]</visible>
+			<visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) | !String.IsEmpty(Container($PARAM[id]).ListItem.Artist) | !String.IsEmpty(Container($PARAM[id]).ListItem.AlbumArtist) | !String.IsEmpty(Container($PARAM[id]).ListItem.AddonName) | $PARAM[widgetSquare]</visible>
 			<include content="InfoContent">
 				<param name="id">$PARAM[id]</param>
 				<param name="Texture">$VAR[HomeWidget$PARAM[id]PosterVar]</param>
@@ -105,7 +105,7 @@
 		</control>
 		<!-- Square - Keep Aspect -->
 		<control type="group">
-			<visible>!IsEmpty(Container($PARAM[id]).ListItem.ChannelName)</visible>
+			<visible>!String.IsEmpty(Container($PARAM[id]).ListItem.ChannelName)</visible>
 			<include content="InfoContent">
 				<param name="id">$PARAM[id]</param>
 				<param name="Texture">$VAR[HomeWidget$PARAM[id]PosterVar]</param>
@@ -142,14 +142,14 @@
 				<fadetime>400</fadetime>
 				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>IsEmpty(Window(Home).Property(Widget.CaseHome)) | SubString(Window(Home).Property(Widget.CaseHome),-)</visible>
+				<visible>String.IsEmpty(Window(Home).Property(Widget.CaseHome)) | SubString(Window(Home).Property(Widget.CaseHome),-)</visible>
 			</control>
 			<control type="image">
 				<width>206</width>
 				<height>310</height>
 				<texture background="true">$PARAM[Texture]</texture>
 				<fadetime>400</fadetime>
-				<visible>IsEmpty(Window(Home).Property(Widget.CaseHome)) | SubString(Window(Home).Property(Widget.CaseHome),-)</visible>
+				<visible>String.IsEmpty(Window(Home).Property(Widget.CaseHome)) | SubString(Window(Home).Property(Widget.CaseHome),-)</visible>
 			</control>
 			<control type="image">
 				<left>5</left>
@@ -192,7 +192,7 @@
 				<height>310</height>
 				<texture background="true">$VAR[HomeWidget$PARAM[id]InfoCaseVar]</texture>
 				<fadetime>400</fadetime>
-				<visible>!IsEmpty(Window(Home).Property(Widget.CaseHome))</visible>
+				<visible>!String.IsEmpty(Window(Home).Property(Widget.CaseHome))</visible>
 			</control>
 		</control>
 		<!-- Square Art -->
@@ -207,7 +207,7 @@
 				<fadetime>400</fadetime>
 				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
-				<visible>IsEmpty(Window(Home).Property(Widget.CaseHome)) | SubString(Window(Home).Property(Widget.CaseHome),-)</visible>
+				<visible>String.IsEmpty(Window(Home).Property(Widget.CaseHome)) | SubString(Window(Home).Property(Widget.CaseHome),-)</visible>
 			</control>
 			<control type="image">
 				<width>310</width>
@@ -215,7 +215,7 @@
 				<aspectratio aligny="$PARAM[Align]">$PARAM[Aspect]</aspectratio>
 				<texture background="true">$PARAM[Texture]</texture>
 				<fadetime>400</fadetime>
-				<visible>IsEmpty(Window(Home).Property(Widget.CaseHome)) | SubString(Window(Home).Property(Widget.CaseHome),-)</visible>
+				<visible>String.IsEmpty(Window(Home).Property(Widget.CaseHome)) | SubString(Window(Home).Property(Widget.CaseHome),-)</visible>
 			</control>
 			<control type="image">
 				<left>6</left>
@@ -242,7 +242,7 @@
 				<height>310</height>
 				<texture background="true">$VAR[HomeWidget$PARAM[id]InfoCaseVar]</texture>
 				<fadetime>400</fadetime>
-				<visible>!IsEmpty(Window(Home).Property(Widget.CaseHome))</visible>
+				<visible>!String.IsEmpty(Window(Home).Property(Widget.CaseHome))</visible>
 			</control>
 		</control>
 		<control type="grouplist">
@@ -481,7 +481,7 @@
 					<height>$PARAM[heightArt]</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture fallback="DefaultMovies.png">$VAR[HomeWidgetFanArtVar]</texture>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				</control>
 				<control type="image">
 					<left>$PARAM[leftArt]</left>
@@ -490,7 +490,7 @@
 					<height>$PARAM[heightArt]</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[HomeWidgetClearLogoVar]</texture>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				</control>
 				<control type="label">
 					<left>$PARAM[leftArt]</left>
@@ -504,7 +504,7 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<label>$VAR[HomeWidgetTitle2Var]</label>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
 				</control>
 				<control type="image">
 					<left>$PARAM[leftCase]</left>
@@ -535,7 +535,7 @@
 					<height>$PARAM[heightArt]</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture fallback="DefaultMovies.png">$VAR[HomeWidgetFanArtVar]</texture>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				</control>
 				<control type="image">
 					<left>$PARAM[leftArt]</left>
@@ -544,7 +544,7 @@
 					<height>$PARAM[heightArt]</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[HomeWidgetClearLogoVar]</texture>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				</control>
 				<control type="label">
 					<left>$PARAM[leftArt]</left>
@@ -558,7 +558,7 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<label>$VAR[HomeWidgetTitle2Var]</label>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
 				</control>
 				<control type="image">
 					<left>$PARAM[leftArt]</left>
@@ -1473,7 +1473,7 @@
 				<height>$PARAM[heightArt]</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<texture fallback="DefaultMovies.png">$VAR[HomeWidgetFanArtVar]</texture>
-				<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+				<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				<include>HomeWidgetTrans</include>
 			</control>
 			<control type="image">
@@ -1483,7 +1483,7 @@
 				<height>$PARAM[heightArt]</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$VAR[HomeWidgetClearLogoVar]</texture>
-				<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+				<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				<include>HomeWidgetTrans</include>
 			</control>
 			<control type="label">
@@ -1498,7 +1498,7 @@
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$VAR[HomeWidgetTitle2Var]</label>
-				<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+				<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
 				<include>HomeWidgetTrans</include>
 			</control>
 			<control type="image">
@@ -1551,7 +1551,7 @@
 					<height>$PARAM[heightArt]</height>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture fallback="DefaultMovies.png">$VAR[HomeWidgetFanArtVar]</texture>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				</control>
 				<control type="image">
 					<left>$PARAM[leftArt]</left>
@@ -1560,7 +1560,7 @@
 					<height>$PARAM[heightArt]</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[HomeWidgetClearLogoVar]</texture>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				</control>
 				<control type="label">
 					<left>$PARAM[leftArt]</left>
@@ -1574,7 +1574,7 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<label>$VAR[HomeWidgetTitle2Var]</label>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
 				</control>
 				<control type="image">
 					<left>$PARAM[leftArt]</left>
@@ -1630,7 +1630,7 @@
 			<property name="Fanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day0.FanartCode),,.jpg]</property>
 			<property name="WeatherMultiFanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day0.FanartCode)]$INFO[Window(weather).Property(Day0.FanartCode),/weather-,-00.jpg]</property>
 			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!IsEmpty(Window(Weather).Property(Day0.Title))</visible>
+			<visible>!String.IsEmpty(Window(Weather).Property(Day0.Title))</visible>
 		</item>
 	</include>
 	<include name="WeatherContentTomorrow">
@@ -1649,7 +1649,7 @@
 			<property name="Fanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day1.FanartCode),,.jpg]</property>
 			<property name="WeatherMultiFanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day1.FanartCode)]$INFO[Window(weather).Property(Day1.FanartCode),/weather-,-01.jpg]</property>
 			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!IsEmpty(Window(Weather).Property(Day1.Title))</visible>
+			<visible>!String.IsEmpty(Window(Weather).Property(Day1.Title))</visible>
 		</item>
 	</include>
 	<include name="WeatherContent">
@@ -1668,7 +1668,7 @@
 			<property name="Fanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day0.FanartCode),,.jpg]</property>
 			<property name="WeatherMultiFanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day0.FanartCode)]$INFO[Window(weather).Property(Day0.FanartCode),/weather-,-00.jpg]</property>
 			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!IsEmpty(Window(Weather).Property(Day0.Title))</visible>
+			<visible>!String.IsEmpty(Window(Weather).Property(Day0.Title))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Day1.Title)]</label>
@@ -1679,7 +1679,7 @@
 			<property name="Fanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day1.FanartCode),,.jpg]</property>
 			<property name="WeatherMultiFanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day1.FanartCode)]$INFO[Window(weather).Property(Day1.FanartCode),/weather-,-01.jpg]</property>
 			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!IsEmpty(Window(Weather).Property(Day1.Title))</visible>
+			<visible>!String.IsEmpty(Window(Weather).Property(Day1.Title))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Day2.Title)]</label>
@@ -1690,7 +1690,7 @@
 			<property name="Fanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day2.FanartCode),,.jpg]</property>
 			<property name="WeatherMultiFanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day2.FanartCode)]$INFO[Window(weather).Property(Day2.FanartCode),/weather-,-02.jpg]</property>
 			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!IsEmpty(Window(Weather).Property(Day2.Title))</visible>
+			<visible>!String.IsEmpty(Window(Weather).Property(Day2.Title))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Day3.Title)]</label>
@@ -1701,7 +1701,7 @@
 			<property name="Fanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day3.FanartCode),,.jpg]</property>
 			<property name="WeatherMultiFanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day3.FanartCode)]$INFO[Window(weather).Property(Day3.FanartCode),/weather-,-03.jpg]</property>
 			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!IsEmpty(Window(Weather).Property(Day3.Title))</visible>
+			<visible>!String.IsEmpty(Window(Weather).Property(Day3.Title))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Day4.Title)]</label>
@@ -1712,7 +1712,7 @@
 			<property name="Fanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day4.FanartCode),,.jpg]</property>
 			<property name="WeatherMultiFanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day4.FanartCode)]$INFO[Window(weather).Property(Day4.FanartCode),/weather-,-01.jpg]</property>
 			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!IsEmpty(Window(Weather).Property(Day4.Title))</visible>
+			<visible>!String.IsEmpty(Window(Weather).Property(Day4.Title))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Day5.Title)]</label>
@@ -1723,7 +1723,7 @@
 			<property name="Fanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day5.FanartCode),,.jpg]</property>
 			<property name="WeatherMultiFanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day5.FanartCode)]$INFO[Window(weather).Property(Day5.FanartCode),/weather-,-02.jpg]</property>
 			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!IsEmpty(Window(Weather).Property(Day5.Title))</visible>
+			<visible>!String.IsEmpty(Window(Weather).Property(Day5.Title))</visible>
 		</item>
 		<item>
 			<label>$INFO[Window(weather).Property(Day6.Title)]</label>
@@ -1734,7 +1734,7 @@
 			<property name="Fanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day6.FanartCode),,.jpg]</property>
 			<property name="WeatherMultiFanart">$INFO[Skin.String(WeatherFanartDir.path)]$INFO[Window(weather).Property(Day6.FanartCode)]$INFO[Window(weather).Property(Day6.FanartCode),/weather-,-03.jpg]</property>
 			<onclick>ActivateWindow(weather)</onclick>
-			<visible>!IsEmpty(Window(Weather).Property(Day6.Title))</visible>
+			<visible>!String.IsEmpty(Window(Weather).Property(Day6.Title))</visible>
 		</item>
 	</include>
 	<include name="SystemContent">
@@ -2084,15 +2084,15 @@
 		<control type="group">
 			<top>14</top>
 			<visible>!Window.IsActive(1115) + !Window.IsActive(1154) + !Window.IsActive(1199)</visible>
-			<visible>[IsEmpty(Control.GetLabel(4325)) + !Skin.HasSetting(movenowplayingwidget)] | [IsEmpty(Control.GetLabel(4321)) + Skin.HasSetting(movenowplayingwidget)]</visible>
+			<visible>[String.IsEmpty(Control.GetLabel(4325)) + !Skin.HasSetting(movenowplayingwidget)] | [String.IsEmpty(Control.GetLabel(4321)) + Skin.HasSetting(movenowplayingwidget)]</visible>
 			<visible>[Skin.HasSetting(lowermainmenu) + Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90010) + ![ControlGroup(90020).HasFocus + Skin.HasSetting(Enable.PanelInfo) + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)]] |
 				[!Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90010) + ![ControlGroup(90020).HasFocus + Skin.HasSetting(Enable.PanelInfo) + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)]] |
 				[!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90020) + ![ControlGroup(90010).HasFocus + Skin.HasSetting(Enable.PanelInfo) + !SubString(Container(9000).ListItem.Property(widgetStyle),List)]] |
 				[Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90020) + ![ControlGroup(90010).HasFocus + Skin.HasSetting(Enable.PanelInfo) + !SubString(Container(9000).ListItem.Property(widgetStyle),List)]]</visible>
-			<visible>[Skin.HasSetting(lowermainmenu) + Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90010) + ![ControlGroup(90020).HasFocus + !Skin.HasSetting(Enable.PanelInfo) + StringCompare(Container(9000).ListItem.Property(widgetPanelInfo.2),Enabled) + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)]] |
-				[!Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90010) + ![ControlGroup(90020).HasFocus + !Skin.HasSetting(Enable.PanelInfo) + StringCompare(Container(9000).ListItem.Property(widgetPanelInfo.2),Enabled) + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)]] |
-				[!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90020) + ![ControlGroup(90010).HasFocus + !Skin.HasSetting(Enable.PanelInfo) + StringCompare(Container(9000).ListItem.Property(widgetPanelInfo),Enabled) + !SubString(Container(9000).ListItem.Property(widgetStyle),List)]] |
-				[Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90020) + ![ControlGroup(90010).HasFocus + !Skin.HasSetting(Enable.PanelInfo) + StringCompare(Container(9000).ListItem.Property(widgetPanelInfo),Enabled) + !SubString(Container(9000).ListItem.Property(widgetStyle),List)]]</visible>
+			<visible>[Skin.HasSetting(lowermainmenu) + Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90010) + ![ControlGroup(90020).HasFocus + !Skin.HasSetting(Enable.PanelInfo) + String.IsEqual(Container(9000).ListItem.Property(widgetPanelInfo.2),Enabled) + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)]] |
+				[!Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90010) + ![ControlGroup(90020).HasFocus + !Skin.HasSetting(Enable.PanelInfo) + String.IsEqual(Container(9000).ListItem.Property(widgetPanelInfo.2),Enabled) + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)]] |
+				[!Skin.HasSetting(lowermainmenu) + Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90020) + ![ControlGroup(90010).HasFocus + !Skin.HasSetting(Enable.PanelInfo) + String.IsEqual(Container(9000).ListItem.Property(widgetPanelInfo),Enabled) + !SubString(Container(9000).ListItem.Property(widgetStyle),List)]] |
+				[Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90020) + ![ControlGroup(90010).HasFocus + !Skin.HasSetting(Enable.PanelInfo) + String.IsEqual(Container(9000).ListItem.Property(widgetPanelInfo),Enabled) + !SubString(Container(9000).ListItem.Property(widgetStyle),List)]]</visible>
 			<animation effect="slide" end="0,35" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
 			<include>Animation_Widgets</include>
 			<animation effect="slide" end="0,390" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(movenowplayingwidget) + Skin.HasSetting(lowermainmenu)">Conditional</animation>
@@ -2104,10 +2104,10 @@
 				<top>-650</top>
 				<width>1920</width>
 				<height>1080</height>
-				<animation type="Conditional" condition="Skin.HasSetting(rotationtimer) + Skin.HasSetting(rotatenowplayingpanel) + Skin.HasSetting(nowplayingpanel) + !IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.SimilarName))" reversible="false">
+				<animation type="Conditional" condition="Skin.HasSetting(rotationtimer) + Skin.HasSetting(rotatenowplayingpanel) + Skin.HasSetting(nowplayingpanel) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.SimilarName))" reversible="false">
 					<include>Animation_PanelFlipUp2</include>
 				</animation>
-				<animation type="Conditional" condition="!Skin.HasSetting(rotationtimer) + Skin.HasSetting(rotatenowplayingpanel) + Skin.HasSetting(nowplayingpanel) + !IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.SimilarName))" reversible="false">
+				<animation type="Conditional" condition="!Skin.HasSetting(rotationtimer) + Skin.HasSetting(rotatenowplayingpanel) + Skin.HasSetting(nowplayingpanel) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.SimilarName))" reversible="false">
 					<include>Animation_PanelFlipUp1</include>
 				</animation>
 				<animation type="Visible">
@@ -2222,7 +2222,7 @@
 			<control type="group">
 				<left>22</left>
 				<top>-680</top>
-				<visible>Skin.HasSetting(rotationtimer) + Skin.HasSetting(rotatenowplayingpanel) + Skin.HasSetting(nowplayingpanel) + !IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.SimilarName))</visible>
+				<visible>Skin.HasSetting(rotationtimer) + Skin.HasSetting(rotatenowplayingpanel) + Skin.HasSetting(nowplayingpanel) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.SimilarName))</visible>
 				<visible>[!Skin.HasSetting(nohomepageMusicinfo) + Player.HasAudio] | [!Skin.HasSetting(homepageVideoinfo) + Player.HasVideo]</visible>
 				<animation effect="fade" time="400">WindowOpen</animation>
 				<animation effect="fade" time="160">WindowClose</animation>
@@ -2430,7 +2430,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture fallback="DefaultVideo.png">$INFO[VideoPlayer.Cover]</texture>
 						<fadetime>IconCrossfadeTime</fadetime>
-						<visible>!IsEmpty(VideoPlayer.Cover)</visible>
+						<visible>!String.IsEmpty(VideoPlayer.Cover)</visible>
 					</control>
 				</control>
 			</control>
@@ -2543,7 +2543,7 @@
 						<fadetime>300</fadetime>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 						<texture background="true">$VAR[mviscdARTVar]</texture>
-						<visible>IsEmpty(Control.GetLabel(298629)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
+						<visible>String.IsEmpty(Control.GetLabel(298629)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
 					</control>
 					<control type="label">
 						<left>258</left>
@@ -2554,7 +2554,7 @@
 						<font>Hand_32</font>
 						<aligny>top</aligny>
 						<label> $INFO[MusicPlayer.AlbumArtist]</label>
-						<visible>IsEmpty(Control.GetLabel(298629)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
+						<visible>String.IsEmpty(Control.GetLabel(298629)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
 						<textcolor>black</textcolor>
 						<wrapmultiline>true</wrapmultiline>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
@@ -2568,7 +2568,7 @@
 						<font>Hand_32</font>
 						<aligny>top</aligny>
 						<label>[CR][CR][CR][CR][CR] $INFO[MusicPlayer.Album]</label>
-						<visible>IsEmpty(Control.GetLabel(298629)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
+						<visible>String.IsEmpty(Control.GetLabel(298629)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
 						<textcolor>black</textcolor>
 						<wrapmultiline>true</wrapmultiline>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
@@ -2648,7 +2648,7 @@
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<font>Font_Reg36_Caps</font>
 					<include>Furniture_HomeNowPlayingMetrics</include>
-					<visible>Substring(Control.GetLabel(8308),empty.png) | IsEmpty(Skin.String(ArtistsLogosPath))</visible>
+					<visible>Substring(Control.GetLabel(8308),empty.png) | String.IsEmpty(Skin.String(ArtistsLogosPath))</visible>
 					<animation effect="slide" time="320" tween="cubic" easing="inout" end="82" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
 				</control>
 				<control type="label">
@@ -2667,7 +2667,7 @@
 					<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Music.ClearLogo)]</texture>
 					<fadetime>400</fadetime>
 					<animation effect="fade" start="100" end="0" time="0" condition="Substring(Control.GetLabel(8308),empty.png)">Conditional</animation>
-					<visible>!IsEmpty(Skin.String(ArtistsLogosPath))</visible>
+					<visible>!String.IsEmpty(Skin.String(ArtistsLogosPath))</visible>
 					<animation effect="slide" time="320" tween="cubic" easing="inout" end="-98" condition="Skin.HasSetting(disablecdart)">Conditional</animation>
 				</control>
 				<control type="label">
@@ -2713,7 +2713,7 @@
 			<left>1436</left>
 			<top>672</top>
 			<animation effect="slide" start="575" end="0" time="560" tween="cubic" delay="320" condition="!Skin.HasSetting(nowplayingpanel)">WindowOpen</animation>
-			<visible>IsEmpty(Window(Visualisation).Property(ArtistSlideshowRefresh))</visible>
+			<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRefresh))</visible>
 			<animation effect="fade" time="320">VisibleChange</animation>
 			<control type="image">
 				<width>425</width>
@@ -2772,7 +2772,7 @@
 				<font>Font_Reg28_Caps</font>
 				<textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
 				<scroll>true</scroll>
-				<visible>!Skin.HasSetting(DisableLibraryStats) + !StringCompare(Control.GetLabel(4326),mixed)</visible>
+				<visible>!Skin.HasSetting(DisableLibraryStats) + !String.IsEqual(Control.GetLabel(4326),mixed)</visible>
 			</control>
 			<control type="fadelabel">
 				<left>15</left>
@@ -2792,7 +2792,7 @@
 				<textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
 				<pauseatend>10000</pauseatend>
 				<resetonlabelchange>false</resetonlabelchange>
-				<visible>!Skin.HasSetting(DisableLibraryStats) + StringCompare(Control.GetLabel(4326),mixed)</visible>
+				<visible>!Skin.HasSetting(DisableLibraryStats) + String.IsEqual(Control.GetLabel(4326),mixed)</visible>
 			</control>
 			<control type="label">
 				<left>780</left>

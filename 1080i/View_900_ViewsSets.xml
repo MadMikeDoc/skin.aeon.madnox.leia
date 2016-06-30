@@ -152,7 +152,7 @@
 				<top>910</top>
 				<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
 				<include>AudioFlagsVars</include>
-				<visible>IsEmpty(Container(5801).ListItem.Studio)</visible>
+				<visible>String.IsEmpty(Container(5801).ListItem.Studio)</visible>
 			</control>
 			<control type="label">
 				<left>1315</left>
@@ -165,7 +165,7 @@
 				<font>Font_Reg22_Caps</font>
 				<textcolor>grey</textcolor>
 				<wrapmultiline>true</wrapmultiline>
-				<visible>IsEmpty(Control.GetLabel(76)) + !Skin.HasSetting(DisableStudiosColorFlag)</visible>
+				<visible>String.IsEmpty(Control.GetLabel(76)) + !Skin.HasSetting(DisableStudiosColorFlag)</visible>
 			</control>
 			<control type="image" id="1110">
 				<animation effect="slide" end="109" condition="Control.IsVisible(512) | Control.IsVisible(550)">Conditional</animation>
@@ -181,7 +181,7 @@
 				<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 				<include>AudioFlagsVars</include>
 				<animation effect="slide" end="138" condition="Control.IsVisible(512) | Control.IsVisible(550)">Conditional</animation>
-				<visible>IsEmpty(Control.GetLabel(1110))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(1110))</visible>
 			</control>
 			<control type="image">
 				<top>920</top>
@@ -189,7 +189,7 @@
 				<height>22</height>
 				<aspectratio>scale</aspectratio>
 				<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
-				<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 				<include>Animation_VisibleChange200</include>
 				<fadetime>400</fadetime>
 			</control>
@@ -199,8 +199,8 @@
 				<height>22</height>
 				<aspectratio>scale</aspectratio>
 				<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
-				<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
-				<visible>!Stringcompare(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+				<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 				<include>Animation_VisibleChange200</include>
 				<fadetime>400</fadetime>
 			</control>
@@ -210,9 +210,9 @@
 				<height>22</height>
 				<aspectratio>scale</aspectratio>
 				<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
-				<visible>!IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
-				<visible>!Stringcompare(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
-				<visible>!Stringcompare(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+				<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
+				<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
 				<include>Animation_VisibleChange200</include>
 				<fadetime>400</fadetime>
 			</control>
@@ -373,7 +373,7 @@
 				<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[Container(5801).ListItem.Art(landscape)]</texture>
 				<bordertexture border="-2">black.png</bordertexture>
 				<animation effect="fade" start="0" end="100" time="350" tween="sine" easing="out" condition="true">Visible</animation>
-				<visible>Control.HasFocus(5801) + IsEmpty(Container(5801).ListItem.Art(fanart))</visible>
+				<visible>Control.HasFocus(5801) + String.IsEmpty(Container(5801).ListItem.Art(fanart))</visible>
 			</control>
 			<!-- Right List + Poster Focus -->
 			<control type="group">
@@ -482,20 +482,20 @@
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="41" width="40">
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -647,7 +647,7 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 						<include>Animation_ViewsCDart</include>
-						<visible>!IsEmpty(ListItem.Art(discart))</visible>
+						<visible>!String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 					<!--MAD - Fake Disc Art - Start -->
 					<control type="image">
@@ -660,7 +660,7 @@
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 						<include>Animation_ViewsCDart</include>
-						<visible>IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakediscart)</visible>
+						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakediscart)</visible>
 					</control>
 					<control type="image">
 						<left>87</left>
@@ -671,7 +671,7 @@
 						<texture background="true">$VAR[FakeDiscArtOverlay]</texture>
 						<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 						<include>Animation_ViewsCDart</include>
-						<visible>IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakediscart)</visible>
+						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakediscart)</visible>
 					</control>
 					<control type="image">
 						<left>87</left>
@@ -682,7 +682,7 @@
 						<texture background="true">$VAR[FakeDischand]</texture>
 						<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 						<include>Animation_ViewsCDart</include>
-						<visible>IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakedischandwriting) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakedischandwriting) + !Skin.Hassetting(Fakehanddisccolor)</visible>
 					</control>
 					<control type="image">
 						<left>87</left>
@@ -693,7 +693,7 @@
 						<texture background="true">$VAR[FakeDischandcolor]</texture>
 						<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 						<include>Animation_ViewsCDart</include>
-						<visible>IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(Fakehanddisccolor)</visible>
+						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(Fakehanddisccolor)</visible>
 					</control>
 					<control type="textbox">
 						<animation effect="rotate" start="02" end="-360" center="217,167" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
@@ -704,7 +704,7 @@
 						<height>170</height>
 						<align>center</align>
 						<font>Hand_16</font>
-						<visible>IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						<label> $INFO[ListItem.Label]</label>
 						<textcolor>black</textcolor>
 					</control>
@@ -715,7 +715,7 @@
 						<left>152</left>
 						<width>140</width>
 						<height>70</height>
-						<visible>!IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting)</visible>
+						<visible>!String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting)</visible>
 						<control type="image">
 							<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 						</control>
@@ -910,7 +910,7 @@
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 							<include>Animation_ViewsCDart</include>
-							<visible>!IsEmpty(ListItem.Art(discart))</visible>
+							<visible>!String.IsEmpty(ListItem.Art(discart))</visible>
 						</control>
 						<!--MAD - Fake Disc Art - Start -->
 						<control type="image">
@@ -923,7 +923,7 @@
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 							<include>Animation_ViewsCDart</include>
-							<visible>IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakediscart)</visible>
+							<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakediscart)</visible>
 						</control>
 						<control type="image">
 							<left>87</left>
@@ -934,7 +934,7 @@
 							<texture background="true">$VAR[FakeDiscArtOverlay]</texture>
 							<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 							<include>Animation_ViewsCDart</include>
-							<visible>IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakediscart)</visible>
+							<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakediscart)</visible>
 						</control>
 						<control type="image">
 							<left>87</left>
@@ -945,7 +945,7 @@
 							<texture background="true">$VAR[FakeDischand]</texture>
 							<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 							<include>Animation_ViewsCDart</include>
-							<visible>IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakedischandwriting) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+							<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakedischandwriting) + !Skin.Hassetting(Fakehanddisccolor)</visible>
 						</control>
 						<control type="image">
 							<left>87</left>
@@ -956,7 +956,7 @@
 							<texture background="true">$VAR[FakeDischandcolor]</texture>
 							<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 							<include>Animation_ViewsCDart</include>
-							<visible>IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(Fakehanddisccolor)</visible>
+							<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(Fakehanddisccolor)</visible>
 						</control>
 						<control type="textbox">
 							<animation effect="rotate" start="02" end="-360" center="217,167" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
@@ -967,7 +967,7 @@
 							<height>170</height>
 							<align>center</align>
 							<font>Hand_16</font>
-							<visible>IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<label> $INFO[ListItem.Label]</label>
 							<textcolor>black</textcolor>
 						</control>
@@ -978,7 +978,7 @@
 							<left>152</left>
 							<width>140</width>
 							<height>70</height>
-							<visible>!IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting)</visible>
+							<visible>!String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting)</visible>
 							<control type="image">
 								<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 							</control>

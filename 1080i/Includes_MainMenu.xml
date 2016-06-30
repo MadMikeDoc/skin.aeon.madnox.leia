@@ -39,9 +39,9 @@
 		<onup condition="Skin.HasSetting(lowermainmenu)  + !Control.IsVisible(4444) + !Control.IsVisible(4445)">SetFocus(9009)</onup>
 		<onup condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4445)">4445</onup>
 		<onup condition="!Skin.HasSetting(lowermainmenu) + !Control.IsVisible(4445)">SetFocus(9009)</onup>
-		<ondown condition="IsEmpty(Window(home).Property(DisableWidgets)) + !IntegerGreaterThan(Container(9010).NumItems,0) + !Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">4444</ondown> -->
-		<!-- <onback condition="!Skin.HasSetting(DisableWidgetToggle) + IsEmpty(Window(home).Property(DisableWidgets))">SetProperty(DisableWidgets,1,home)</onback>
-		<onback condition="!Skin.HasSetting(DisableWidgetToggle) + !IsEmpty(Window(home).Property(DisableWidgets))">ClearProperty(DisableWidgets,home)</onback> -->
+		<ondown condition="String.IsEmpty(Window(home).Property(DisableWidgets)) + !IntegerGreaterThan(Container(9010).NumItems,0) + !Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">4444</ondown> -->
+		<!-- <onback condition="!Skin.HasSetting(DisableWidgetToggle) + String.IsEmpty(Window(home).Property(DisableWidgets))">SetProperty(DisableWidgets,1,home)</onback>
+		<onback condition="!Skin.HasSetting(DisableWidgetToggle) + !String.IsEmpty(Window(home).Property(DisableWidgets))">ClearProperty(DisableWidgets,home)</onback> -->
 		<scrolltime tween="quadratic">300</scrolltime>
 		<include condition="Skin.HasSetting(mainmenuicons)">FocusPosition4</include>
 		<include condition="!Skin.HasSetting(mainmenuicons)">FocusPosition2</include>
@@ -429,7 +429,7 @@
 	<include name="LibraryStats">
 		<control type="group">
 			<visible>!Skin.HasSetting(DisableLibraryStats) + !Skin.HasSetting(AlternateTimeStats)</visible>
-			<visible>!IsEmpty(Control.GetLabel(4323)) | Window.IsActive(1131)</visible>
+			<visible>!String.IsEmpty(Control.GetLabel(4323)) | Window.IsActive(1131)</visible>
 			<animation effect="slide" end="-750,0" time="240">WindowClose</animation>
 			<animation effect="slide" start="-750,0" end="0,0" delay="WidgetSlideDelay" time="240" condition="!Window.Previous(startup)">WindowOpen</animation>
 			<animation effect="slide" start="-750" end="0" time="240">VisibleChange</animation>
@@ -470,7 +470,7 @@
 	</include>
 	<include name="PlayListStatsList">
 		<control type="list" id="43230">
-			<visible>StringCompare(Container(9000).ListItem.Property(InfoLine),Movie playlist) | StringCompare(Container(9000).ListItem.Property(InfoLine),TV Show playlist) | StringCompare(Container(9000).ListItem.Property(InfoLine),Music Video playlist)</visible>
+			<visible>String.IsEqual(Container(9000).ListItem.Property(InfoLine),Movie playlist) | String.IsEqual(Container(9000).ListItem.Property(InfoLine),TV Show playlist) | String.IsEqual(Container(9000).ListItem.Property(InfoLine),Music Video playlist)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1</width>
@@ -572,8 +572,8 @@
 		<control type="group">
 			<top>610</top>
 			<visible>[system.getbool(lookandfeel.enablerssfeeds)] + !Skin.HasSetting(DisableRSS)</visible>
-			<animation effect="slide" end="0,330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidget2Info)) + !Window.IsActive(1115)">Conditional</animation>
-			<animation effect="slide" end="0,-330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !IsEmpty(Window(home).Property(PanelWidgetInfo)) + !Window.IsActive(1115)">Conditional</animation>
+			<animation effect="slide" end="0,330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !String.IsEmpty(Window(home).Property(PanelWidget2Info)) + !Window.IsActive(1115)">Conditional</animation>
+			<animation effect="slide" end="0,-330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(rsshomelow) + !Skin.HasSetting(lowermainmenu) + !String.IsEmpty(Window(home).Property(PanelWidgetInfo)) + !Window.IsActive(1115)">Conditional</animation>
 			<animation effect="slide" end="1920,0" time="240">WindowClose</animation>
 			<animation effect="slide" start="1880,0" end="0,0" delay="WidgetSlideDelay" time="240" condition="!Window.Previous(startup)">WindowOpen</animation>
 			<animation effect="slide" start="1880,0" end="0,0" delay="2000" time="480" condition="Window.Previous(startup)">WindowOpen</animation>

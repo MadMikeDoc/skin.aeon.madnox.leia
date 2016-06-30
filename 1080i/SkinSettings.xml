@@ -737,7 +737,7 @@
 						<label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(CDWall_Folder_Path)][/COLOR]</label2>
 						<include>Default_SettingButton</include>
 						<onclick>Skin.Reset(CDWall_Folder_Path)</onclick>
-						<visible>!IsEmpty(Skin.String(CDWall_Folder_Path))</visible>
+						<visible>!String.IsEmpty(Skin.String(CDWall_Folder_Path))</visible>
 					</control>
 					<control type="button" id="460">
 						<label>$LOCALIZE[31455]</label>
@@ -762,11 +762,11 @@
 						<label>31459</label>
 						<label2>[COLOR $VAR[FontColorVar]]$VAR[LibraryStructureVar][/COLOR]</label2>
 						<include>Default_SettingButton</include>
-						<onclick condition="Stringcompare(Skin.String(LibraryStructure),1) | IsEmpty(Skin.String(LibraryStructure))">Skin.SetString(LibraryStructure,2)</onclick>
-						<onclick condition="Stringcompare(Skin.String(LibraryStructure),4)">Skin.SetString(LibraryStructure,1)</onclick>
-						<onclick condition="Stringcompare(Skin.String(LibraryStructure),3)">Skin.SetString(LibraryStructure,4)</onclick>
-						<onclick condition="Stringcompare(Skin.String(LibraryStructure),2)">Skin.SetString(LibraryStructure,3)</onclick>
-						<onclick condition="Stringcompare(Skin.String(LibraryStructure),1)">Skin.SetString(LibraryStructure,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(LibraryStructure),1) | String.IsEmpty(Skin.String(LibraryStructure))">Skin.SetString(LibraryStructure,2)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(LibraryStructure),4)">Skin.SetString(LibraryStructure,1)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(LibraryStructure),3)">Skin.SetString(LibraryStructure,4)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(LibraryStructure),2)">Skin.SetString(LibraryStructure,3)</onclick>
+						<onclick condition="String.IsEqual(Skin.String(LibraryStructure),1)">Skin.SetString(LibraryStructure,2)</onclick>
 					</control>
 				</control>
 			</control>

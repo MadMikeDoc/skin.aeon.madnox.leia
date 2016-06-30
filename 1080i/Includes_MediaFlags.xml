@@ -6,14 +6,14 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 		</control>
 		<control type="image">
@@ -21,7 +21,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
 		</control>
@@ -30,7 +30,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.4),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.4))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.4))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.4))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.4))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.3),ListItem.Property(AudioLanguage.4))</visible>
@@ -40,7 +40,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.5),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.5))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.5))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.5))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.5))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.3),ListItem.Property(AudioLanguage.5))</visible>
@@ -51,7 +51,7 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.6),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.6))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.6))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.6))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.6))</visible>
 			<visible>!String.IsEqual(ListItem.Property(AudioLanguage.3),ListItem.Property(AudioLanguage.6))</visible>
@@ -63,42 +63,42 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.7),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.7))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.7))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.8),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.8))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.8))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.9),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.9))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.9))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.10),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.10))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.10))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.11),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.11))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.11))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.12),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(AudioLanguage.12))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.12))</visible>
 		</control>
 	</include>
 	<include name="SubtitleFlags">
@@ -107,99 +107,99 @@
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.1),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.2),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.2))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.2))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.3),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.3))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.3))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.3))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.3))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.4),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.4))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.4))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.4))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.3),ListItem.Property(SubtitleLanguage.4))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.4))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.4))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.4))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.3),ListItem.Property(SubtitleLanguage.4))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.5),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.5))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.5))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.5))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.3),ListItem.Property(SubtitleLanguage.5))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.4),ListItem.Property(SubtitleLanguage.5))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.5))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.5))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.5))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.3),ListItem.Property(SubtitleLanguage.5))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.4),ListItem.Property(SubtitleLanguage.5))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.6),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.6))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.6))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.6))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.3),ListItem.Property(SubtitleLanguage.6))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.4),ListItem.Property(SubtitleLanguage.6))</visible>
-			<visible>!Stringcompare(ListItem.Property(SubtitleLanguage.5),ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.1),ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.2),ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.3),ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.4),ListItem.Property(SubtitleLanguage.6))</visible>
+			<visible>!String.IsEqual(ListItem.Property(SubtitleLanguage.5),ListItem.Property(SubtitleLanguage.6))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.7),,.png]</texture>
 			<aspectratio>keep</aspectratio>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.7))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.7))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.8),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.8))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.8))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.9),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.9))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.9))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.10),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.10))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.10))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.11),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.11))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.11))</visible>
 		</control>
 		<control type="image">
 			<width>28</width>
 			<height>28</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(SubtitleLanguage.12),,.png]</texture>
-			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.12))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.12))</visible>
 		</control>
 	</include>
 	<include name="OSDFlagVars">
@@ -267,7 +267,7 @@
 						<control type="image">
 							<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
 							<include>AudioFlagsVars</include>
-							<visible>IsEmpty(ListItem.Studio)</visible>
+							<visible>String.IsEmpty(ListItem.Studio)</visible>
 						</control>
 						<control type="label">
 							<left>-5</left>
@@ -279,7 +279,7 @@
 							<font>Font_Reg22_Caps</font>
 							<textcolor>grey</textcolor>
 							<wrapmultiline>true</wrapmultiline>
-							<visible>IsEmpty(Control.GetLabel(75)) + !Skin.HasSetting(DisableStudiosColorFlag)</visible>
+							<visible>String.IsEmpty(Control.GetLabel(75)) + !Skin.HasSetting(DisableStudiosColorFlag)</visible>
 						</control>
 					</control>
 					<control type="image" id="1160">
@@ -293,7 +293,7 @@
 						<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 						<include>AudioFlagsVars</include>
 						<animation effect="slide" end="138" condition="Control.IsVisible(512) | Control.IsVisible(550)">Conditional</animation>
-						<visible>IsEmpty(Control.GetLabel(1160))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(1160))</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -331,7 +331,7 @@
 							<height>22</height>
 							<aspectratio>scale</aspectratio>
 							<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
-							<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 							<include>Animation_VisibleChange200</include>
 							<fadetime>400</fadetime>
 						</control>
@@ -340,7 +340,7 @@
 							<height>22</height>
 							<aspectratio>scale</aspectratio>
 							<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
-							<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
 							<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 							<include>Animation_VisibleChange200</include>
 							<fadetime>400</fadetime>
@@ -350,7 +350,7 @@
 							<height>22</height>
 							<aspectratio>scale</aspectratio>
 							<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
-							<visible>!IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+							<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
 							<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
 							<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
 							<include>Animation_VisibleChange200</include>
@@ -360,7 +360,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>[[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.TVShowTitle)]</visible>
+				<visible>[[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.TVShowTitle)]</visible>
 				<animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
 				<animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
 				<control type="group">
@@ -386,7 +386,7 @@
 						<colordiffuse>white2</colordiffuse>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
-						<visible>IsEmpty(ListItem.Studio)</visible>
+						<visible>String.IsEmpty(ListItem.Studio)</visible>
 					</control>
 					<control type="group">
 						<top>-5</top>
@@ -538,7 +538,7 @@
 						<include>AudioFlagsVars</include>
 						<animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
 						<animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
-						<visible>IsEmpty(Control.GetLabel(1115))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(1115))</visible>
 					</control>
 				</control>
 			</control>
@@ -589,7 +589,7 @@
 				<fadetime>IconCrossfadeTime2</fadetime>
 				<colordiffuse>white2</colordiffuse>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<visible>!IsEmpty(ListItem.Thumb)</visible>
+				<visible>!String.IsEmpty(ListItem.Thumb)</visible>
 				<visible>![Control.IsVisible(50) + !Skin.HasSetting(slimlist)]</visible>
 				<visible>Container.Content(tvshows) | [Container.Content(seasons) + ListItem.IsFolder]</visible>
 			</control>
@@ -603,7 +603,7 @@
 				<fadetime>IconCrossfadeTime2</fadetime>
 				<colordiffuse>white2</colordiffuse>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<visible>!IsEmpty(ListItem.Thumb)</visible>
+				<visible>!String.IsEmpty(ListItem.Thumb)</visible>
 				<visible>![Control.IsVisible(50) + !Skin.HasSetting(slimlist)]</visible>
 				<visible>Container.Content(movies)</visible>
 			</control>
@@ -617,10 +617,10 @@
 				<fadetime>IconCrossfadeTime2</fadetime>
 				<colordiffuse>white2</colordiffuse>
 				<animation effect="fade" time="200">VisibleChange</animation>
-				<visible>!IsEmpty(ListItem.Thumb)</visible>
+				<visible>!String.IsEmpty(ListItem.Thumb)</visible>
 				<visible>![Control.IsVisible(50) + !Skin.HasSetting(slimlist)]</visible>
 				<visible>Container.Content(tvshows) | [Container.Content(seasons) + ListItem.IsFolder]</visible>
-				<visible>IsEmpty(ListItem.Studio)</visible>
+				<visible>String.IsEmpty(ListItem.Studio)</visible>
 			</control>
 			<control type="image">
 				<left>1400</left>
@@ -652,7 +652,7 @@
 
 			<control type="group">
 				<animation effect="slide"  end="-30,0" time="100" delay="150" condition="Container.Content(movies)">Conditional</animation>
-				<visible>[Container.Content(episodes) + !IsEmpty(ListItem.TVShowTitle)] | [Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)]</visible>
+				<visible>[Container.Content(episodes) + !String.IsEmpty(ListItem.TVShowTitle)] | [Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)]</visible>
 				<control type="image" id="1126">
 					<left>1820</left>
 					<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
@@ -662,11 +662,11 @@
 					<left>1790</left>
 					<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 					<include>OSDFlagVars</include>
-					<visible>IsEmpty(Control.GetLabel(1126))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(1126))</visible>
 				</control>
 			</control>
 			<control type="group">
-				<visible>Container.Content(tvshows) | [Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)]</visible>
+				<visible>Container.Content(tvshows) | [Container.Content(seasons) + !String.IsEmpty(ListItem.TVShowTitle)]</visible>
 				<control type="image" id="1116">
 					<left>1375</left>
 					<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
@@ -676,7 +676,7 @@
 					<left>1375</left>
 					<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 					<include>OSDFlagVars</include>
-					<visible>IsEmpty(Control.GetLabel(1116))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(1116))</visible>
 				</control>
 				<control type="group">
 					<control type="label">
@@ -724,7 +724,7 @@
 			<visible>!Control.IsVisible(506) + !Control.IsVisible(518) + !Skin.HasSetting(MusicPanelExtraInfo)</visible>
 			<include>Animation_FlagSlideDown</include>
 			<control type="group">
-				<visible>Container.Content(artists) + !IsEmpty(ListItem.DBID)</visible>
+				<visible>Container.Content(artists) + !String.IsEmpty(ListItem.DBID)</visible>
 				<visible>skin.hassetting(backendmode)</visible>
 				<animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
 				<animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
@@ -734,7 +734,7 @@
 					<control type="group">
 						<!--totals-->
 						<left>150</left>
-						<visible>!Stringcompare(Window(home).Property(actualViewtype),Video_RightList)</visible>
+						<visible>!String.IsEqual(Window(home).Property(actualViewtype),Video_RightList)</visible>
 						<control type="label">
 							<width>135</width>
 							<height>60</height>
@@ -822,7 +822,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Container.Content(albums) + !IsEmpty(ListItem.DBID)</visible>
+				<visible>Container.Content(albums) + !String.IsEmpty(ListItem.DBID)</visible>
 				<animation effect="slide" time="560" start="0,300" end="0,0" tween="cubic">Visible</animation>
 				<animation effect="slide" time="250" end="0,400" tween="cubic" easing="in">Hidden</animation>
 				<animation effect="slide" end="5,-30" time="0" condition="Control.IsVisible(50)">Conditional</animation>
@@ -881,7 +881,7 @@
 						<control type="image">
 							<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
 							<include>AudioFlagsVars</include>
-							<visible>IsEmpty(ListItem.Property(Album_Label))</visible>
+							<visible>String.IsEmpty(ListItem.Property(Album_Label))</visible>
 						</control>
 						<control type="label">
 							<left>-5</left>
@@ -893,7 +893,7 @@
 							<font>Font_Reg22_Caps</font>
 							<textcolor>grey</textcolor>
 							<wrapmultiline>true</wrapmultiline>
-							<visible>IsEmpty(Control.GetLabel(76))</visible>
+							<visible>String.IsEmpty(Control.GetLabel(76))</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -1019,7 +1019,7 @@
 				<control type="group">
 					<!-- Year -->
 					<include>Animation_VisibleChange200</include>
-					<visible>!IsEmpty(ListItem.Year)</visible>
+					<visible>!String.IsEmpty(ListItem.Year)</visible>
 					<control type="image">
 						<left>1470</left>
 						<width>135</width>
@@ -1050,7 +1050,7 @@
 				<control type="group">
 					<animation effect="slide" end="-1200,0" time="0" condition="Control.IsVisible(514)">Conditional</animation>
 					<!-- Genre -->
-					<visible>!IsEmpty(ListItem.Genre)</visible>
+					<visible>!String.IsEmpty(ListItem.Genre)</visible>
 					<include>Animation_VisibleChange200</include>
 					<control type="image">
 						<left>1795</left>
@@ -1127,11 +1127,11 @@
 						<left>1230</left>
 						<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 						<include>OSDFlagVars</include>
-						<visible>IsEmpty(Control.GetLabel(1285))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(1285))</visible>
 					</control>
 				</control>
 				<control type="group">
-					<visible>!IsEmpty(ListItem.Rating)</visible>
+					<visible>!String.IsEmpty(ListItem.Rating)</visible>
 					<left>1400</left>
 					<control type="image">
 						<texture>$VAR[ColorFlags]IMDB.png</texture>
@@ -1215,7 +1215,7 @@
 					<control type="image">
 						<texture >$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 						<include>AudioFlagsVars</include>
-						<visible>IsEmpty(Control.GetLabel(1117))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(1117))</visible>
 					</control>
 				</control>
 				<control type="image">
@@ -1241,7 +1241,7 @@
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<visible>!Control.IsVisible(57)</visible>
 					<visible>Container.Content(tvshows) | SubString(Container.FolderPath,plugin.video.the.trailers)</visible>
-					<visible>IsEmpty(ListItem.Studio)</visible>
+					<visible>String.IsEmpty(ListItem.Studio)</visible>
 				</control>
 			</control>
 			<control type="label">
@@ -1254,7 +1254,7 @@
 				<font>Font_Bold40</font>
 				<textcolor>floor</textcolor>
 				<include>Animation_FlagSlideDown</include>
-				<visible>[Container.Content(seasons) + !IsEmpty(ListItem.TVShowTitle)] + !Control.isVisible(52)</visible>
+				<visible>[Container.Content(seasons) + !String.IsEmpty(ListItem.TVShowTitle)] + !Control.isVisible(52)</visible>
 			</control>
 		</control>
 	</include>

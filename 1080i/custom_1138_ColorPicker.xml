@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1138">
 	<defaultcontrol always="true">10</defaultcontrol>
-	<onload condition="!Substring(Skin.CurrentTheme,whit) + StringCompare(Window(home).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_,home)</onload>
-	<onload condition="Substring(Skin.CurrentTheme,whit) + StringCompare(Window(home).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_white_,home)</onload>
-	<onload condition="!Substring(Skin.CurrentTheme,whit) + StringCompare(Window(home).Property(colordialog),font_color)">SetProperty(ColorTarget,font_,home)</onload>
-	<onload condition="Substring(Skin.CurrentTheme,whit) + StringCompare(Window(home).Property(colordialog),font_color)">SetProperty(ColorTarget,white_font_,home)</onload>
-	<onunload condition="StringCompare(Window(home).Property(colordialog),diffuse_color)">SetProperty(ColorOrigin,$INFO[Skin.String(diffuse_color)],home)</onunload>
-	<onunload condition="StringCompare(Window(home).Property(colordialog),font_color)">SetProperty(ColorOrigin,$INFO[Skin.String(font_color)],home)</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(music)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]music,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]videolibrary,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(videos) | Window.IsActive(script-videoextras-main.xml)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]videolibrary,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(tvchannels)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]PVR,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(pictures)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]pictures,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(1115)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]featured,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(skinsettings)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]settings,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(addonbrowser)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]addons,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]programs,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(musicplaylist)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]musicplaylist,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(videoplaylist)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]videoplaylist,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]mainmenu,$INFO[Window(home).Property(ColorOrigin)])</onunload>
-	<onunload condition="!IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(weather)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]weather,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onload condition="!Substring(Skin.CurrentTheme,whit) + String.IsEqual(Window(home).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_,home)</onload>
+	<onload condition="Substring(Skin.CurrentTheme,whit) + String.IsEqual(Window(home).Property(colordialog),diffuse_color)">SetProperty(ColorTarget,diffuse_white_,home)</onload>
+	<onload condition="!Substring(Skin.CurrentTheme,whit) + String.IsEqual(Window(home).Property(colordialog),font_color)">SetProperty(ColorTarget,font_,home)</onload>
+	<onload condition="Substring(Skin.CurrentTheme,whit) + String.IsEqual(Window(home).Property(colordialog),font_color)">SetProperty(ColorTarget,white_font_,home)</onload>
+	<onunload condition="String.IsEqual(Window(home).Property(colordialog),diffuse_color)">SetProperty(ColorOrigin,$INFO[Skin.String(diffuse_color)],home)</onunload>
+	<onunload condition="String.IsEqual(Window(home).Property(colordialog),font_color)">SetProperty(ColorOrigin,$INFO[Skin.String(font_color)],home)</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(music)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]music,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(videos) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]videolibrary,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(videos) | Window.IsActive(script-videoextras-main.xml)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]videolibrary,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(tvchannels)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]PVR,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(pictures)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]pictures,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(1115)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]featured,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(skinsettings)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]settings,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(addonbrowser)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]addons,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]programs,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(musicplaylist)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]musicplaylist,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(videoplaylist)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]videoplaylist,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | [Window.IsActive(home) | Window.IsActive(1130)]">Skin.SetString($INFO[Window(home).Property(ColorTarget)]mainmenu,$INFO[Window(home).Property(ColorOrigin)])</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(colorallareas)) | Window.IsActive(weather)">Skin.SetString($INFO[Window(home).Property(ColorTarget)]weather,$INFO[Window(home).Property(ColorOrigin)])</onunload>
 	<onunload>ClearProperty(colorallareas,home)</onunload>
 	<onunload>ClearProperty(colordialog,10000)</onunload>
 	<coordinates>
@@ -195,7 +195,7 @@
 						<label>Black</label>
 						<icon>common/black.png</icon>
 						<onclick>Skin.SetString($INFO[Window(home).Property(colordialog)],FF000000)</onclick>
-						<visible>Substring(Skin.CurrentTheme,whit) + StringCompare(Window(home).Property(colordialog),font_color)</visible>
+						<visible>Substring(Skin.CurrentTheme,whit) + String.IsEqual(Window(home).Property(colordialog),font_color)</visible>
 					</item>
 					<item>
 						<label>White</label>
@@ -223,9 +223,9 @@
 				<onup>10</onup>
 				<ondown>10</ondown>
 				<include>ColorChooserButton</include>
-				<onclick condition="IsEmpty(Window(home).Property(colorallareas))">SetProperty(colorallareas,1,home)</onclick>
-				<onclick condition="!IsEmpty(Window(home).Property(colorallareas))">ClearProperty(colorallareas,home)</onclick>
-				<selected>!IsEmpty(Window(home).Property(colorallareas))</selected>
+				<onclick condition="String.IsEmpty(Window(home).Property(colorallareas))">SetProperty(colorallareas,1,home)</onclick>
+				<onclick condition="!String.IsEmpty(Window(home).Property(colorallareas))">ClearProperty(colorallareas,home)</onclick>
+				<selected>!String.IsEmpty(Window(home).Property(colorallareas))</selected>
 			</control>
 			<control type="label">
 				<left>120</left>

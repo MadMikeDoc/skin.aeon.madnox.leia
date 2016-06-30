@@ -60,7 +60,7 @@
 			<top>74</top>
 			<width>1772</width>
 			<height>701</height>
-			<visible>!Skin.HasSetting(Enable.OnInfoMatch) | StringCompare(Window(Home).Property(Widget.Background),-) | StringCompare(Skin.String(Widget.Back),None)</visible>
+			<visible>!Skin.HasSetting(Enable.OnInfoMatch) | String.IsEqual(Window(Home).Property(Widget.Background),-) | String.IsEqual(Skin.String(Widget.Back),None)</visible>
 			<texture colordiffuse="FF0B0B0B" border="40">homewidgets/bg_default.png</texture>
 		</control>
 		<control type="image">
@@ -83,7 +83,7 @@
 		</control>
 		<!-- Portrait -->
 		<control type="group">
-			<visible>StringCompare(Window(Home).Property(Widget.Poster),movies) | StringCompare(Window(Home).Property(Widget.Poster),tvshows) | StringCompare(Window(Home).Property(Widget.Poster),episodes)</visible>
+			<visible>String.IsEqual(Window(Home).Property(Widget.Poster),movies) | String.IsEqual(Window(Home).Property(Widget.Poster),tvshows) | String.IsEqual(Window(Home).Property(Widget.Poster),episodes)</visible>
 			<control type="image">
 				<left></left>
 				<centerleft>50%</centerleft>
@@ -98,7 +98,7 @@
 				<width>446</width>
 				<height>649</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>[IsEmpty(Window(Home).Property(Widget.Case)) | SubString(Window(Home).Property(Widget.Case),-)] + !ControlGroup(816).HasFocus</visible>
+				<visible>[String.IsEmpty(Window(Home).Property(Widget.Case)) | SubString(Window(Home).Property(Widget.Case),-)] + !ControlGroup(816).HasFocus</visible>
 			</control>
 			<control type="image">
 				<left>112</left>
@@ -138,7 +138,7 @@
 				<width>446</width>
 				<height>649</height>
 				<texture>$INFO[Window(Home).Property(Widget.Case)]</texture>
-				<visible>!IsEmpty(Window(Home).Property(Widget.Case)) + !ControlGroup(816).HasFocus</visible>
+				<visible>!String.IsEmpty(Window(Home).Property(Widget.Case)) + !ControlGroup(816).HasFocus</visible>
 			</control>
 			<control type="image" id="8020">
 				<left>1427</left>
@@ -146,7 +146,7 @@
 				<width>392</width>
 				<height>392</height>
 				<texture>$INFO[Window(Home).Property(Widget.DiscArt)]</texture>
-				<visible>!IsEmpty(Control.GetLabel(8020))</visible>
+				<visible>!String.IsEmpty(Control.GetLabel(8020))</visible>
 			</control>
 			<control type="image">
 				<left>548</left>
@@ -182,7 +182,7 @@
 			<control type="group" id="816">
 				<visible>Skin.HasSetting(CastonWidget)</visible>
 				<control type="list" id="1000">
-					<visible>!IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(8020))</visible>
 					<content>$VAR[HomeWidgetCast]</content>
 					<left>548</left>
 					<top>652</top>
@@ -266,7 +266,7 @@
 					</focusedlayout>
 				</control>
 				<control type="list" id="1000">
-					<visible>IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(8020))</visible>
 					<content>$VAR[HomeWidgetCast]</content>
 					<left>548</left>
 					<top>652</top>
@@ -396,13 +396,13 @@
 					<font>Font_Bold49_Caps</font>
 					<textcolor>$VAR[HomeWidgetInfoIconColor]</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Year)]</label>
-					<visible>!IsEmpty(Control.GetLabel(1001))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1001))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1001))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1001))</visible>
 				</control>
 				<control type="image" id="1002">
 					<width>130</width>
@@ -412,13 +412,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsRating)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1002))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1002))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1002))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1002))</visible>
 				</control>
 				<control type="image" id="1003">
 					<width>130</width>
@@ -428,13 +428,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsStudio)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1003))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1003))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1003))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1003))</visible>
 				</control>
 				<control type="image" id="1004">
 					<width>130</width>
@@ -444,13 +444,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsResolution)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1004))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1004))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1004))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1004))</visible>
 				</control>
 				<control type="image" id="1005">
 					<width>130</width>
@@ -460,13 +460,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsSource)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1005))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1005))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1005))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1005))</visible>
 				</control>
 				<control type="image" id="1006">
 					<width>130</width>
@@ -476,13 +476,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsAspect)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1006))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1006))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1006))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1006))</visible>
 				</control>
 				<control type="image" id="1007">
 					<width>130</width>
@@ -492,13 +492,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsAudio)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1007))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1007))</visible>
 				</control>
 				<control type="grouplist">
 					<height>90</height>
 					<orientation>vertical</orientation>
 					<align>center</align>
-					<visible>!IsEmpty(Control.GetLabel(1007))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1007))</visible>
 					<!-- Audio Country Flags-->
 					<control type="image" id="1017">
 						<width>28</width>
@@ -507,7 +507,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<texture>$INFO[Window(Home).Property(Widget.FlagsAL1)]</texture>
-						<visible>!IsEmpty(Control.GetLabel(1017))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(1017))</visible>
 					</control>
 					<control type="image" id="1027">
 						<width>28</width>
@@ -516,7 +516,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<texture>$INFO[Window(Home).Property(Widget.FlagsAL2)]</texture>
-						<visible>!IsEmpty(Control.GetLabel(1027))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(1027))</visible>
 					</control>
 					<control type="image" id="1037">
 						<width>28</width>
@@ -525,19 +525,19 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<texture>$INFO[Window(Home).Property(Widget.FlagsAL3)]</texture>
-						<visible>!IsEmpty(Control.GetLabel(1037))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(1037))</visible>
 					</control>
 				</control>
 				<control type="image">
 					<width>18</width>
 					<texture>-</texture>
-					<visible>!IsEmpty(Control.GetLabel(1017)) | !IsEmpty(Control.GetLabel(1027)) | !IsEmpty(Control.GetLabel(1037))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1017)) | !String.IsEmpty(Control.GetLabel(1027)) | !String.IsEmpty(Control.GetLabel(1037))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1007))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1007))</visible>
 				</control>
 				<control type="image" id="1009">
 					<width>130</width>
@@ -552,7 +552,7 @@
 					<height>90</height>
 					<orientation>vertical</orientation>
 					<align>center</align>
-					<visible>!IsEmpty(Control.GetLabel(1009))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1009))</visible>
 					<!-- Subtitle Country Flags-->
 					<control type="image" id="1019">
 						<width>28</width>
@@ -561,7 +561,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<texture>$INFO[Window(Home).Property(Widget.FlagsSL1)]</texture>
-						<visible>!IsEmpty(Control.GetLabel(1019))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(1019))</visible>
 					</control>
 					<control type="image" id="1029">
 						<width>28</width>
@@ -570,7 +570,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<texture>$INFO[Window(Home).Property(Widget.FlagsSL2)]</texture>
-						<visible>!IsEmpty(Control.GetLabel(1029))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(1029))</visible>
 					</control>
 					<control type="image" id="1039">
 						<width>28</width>
@@ -579,19 +579,19 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<texture>$INFO[Window(Home).Property(Widget.FlagsSL3)]</texture>
-						<visible>!IsEmpty(Control.GetLabel(1039))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(1039))</visible>
 					</control>
 				</control>
 				<control type="image">
 					<width>18</width>
 					<texture>-</texture>
-					<visible>!IsEmpty(Control.GetLabel(1019)) | !IsEmpty(Control.GetLabel(1029)) | !IsEmpty(Control.GetLabel(1039))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1019)) | !String.IsEmpty(Control.GetLabel(1029)) | !String.IsEmpty(Control.GetLabel(1039))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1009))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1009))</visible>
 				</control>
 			</control>
 			<!-- Info -->
@@ -604,7 +604,7 @@
 					<height>35</height>
 					<texture>$VAR[Colortdefaulticons]DefaultTags.png</texture>
 					<colordiffuse>$VAR[HomeWidgetInfoIconColor]</colordiffuse>
-					<visible>!IsEmpty(Control.GetLabel(1010)) | !IsEmpty(Control.GetLabel(1011))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1010)) | !String.IsEmpty(Control.GetLabel(1011))</visible>
 				</control>
 				<control type="label">
 					<width>15</width>
@@ -615,7 +615,7 @@
 					<font>Font_Reg32_2</font>
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info1)]</label>
-					<visible>IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(8020))</visible>
 				</control>
 				<control type="label" id="1011">
 					<width>823</width>
@@ -623,7 +623,7 @@
 					<font>Font_Reg32_2</font>
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info1)]</label>
-					<visible>!IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(8020))</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -635,7 +635,7 @@
 					<height>35</height>
 					<texture>$VAR[Colortdefaulticons]DefaultAddon.png</texture>
 					<colordiffuse>$VAR[HomeWidgetInfoIconColor]</colordiffuse>
-					<visible>!IsEmpty(Control.GetLabel(1012)) | !IsEmpty(Control.GetLabel(1013))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1012)) | !String.IsEmpty(Control.GetLabel(1013))</visible>
 				</control>
 				<control type="label">
 					<width>15</width>
@@ -646,7 +646,7 @@
 					<font>Font_Reg32_2</font>
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info2)]</label>
-					<visible>IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(8020))</visible>
 				</control>
 				<control type="label" id="1013">
 					<width>823</width>
@@ -654,7 +654,7 @@
 					<font>Font_Reg32_2</font>
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info2)]</label>
-					<visible>!IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(8020))</visible>
 				</control>
 			</control>
 			<!-- Info Plot-->
@@ -671,7 +671,7 @@
 					<shadowcolor>black</shadowcolor>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>$INFO[Window(Home).Property(Widget.Plot)]</label>
-					<visible>IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(8020))</visible>
 				</control>
 				<control type="textbox">
 					<top>469</top>
@@ -683,7 +683,7 @@
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>$INFO[Window(Home).Property(Widget.Plot)]</label>
-					<visible>!IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(8020))</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -698,7 +698,7 @@
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>$INFO[Window(Home).Property(Widget.Plot)]</label>
-					<visible>IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(8020))</visible>
 				</control>
 				<control type="textbox">
 					<top>469</top>
@@ -710,7 +710,7 @@
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 					<label>$INFO[Window(Home).Property(Widget.Plot)]</label>
-					<visible>!IsEmpty(Control.GetLabel(8020))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(8020))</visible>
 				</control>
 			</control>
 			<!-- Info Buttons-->
@@ -741,7 +741,7 @@
 					<onclick>Dialog.Close(1115)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>[!IsEmpty(Window(Home).Property(Widget.FilePath)) + !StringCompare(Window(Home).Property(Widget),trakt) + !StringCompare(Window(Home).Property(Widget),rt) + !StringCompare(Window(Home).Property(Widget),tmdb)] | SubString(Window(Home).Property(Widget.FilePath),playmovie)</visible>
+					<visible>[!String.IsEmpty(Window(Home).Property(Widget.FilePath)) + !String.IsEqual(Window(Home).Property(Widget),trakt) + !String.IsEqual(Window(Home).Property(Widget),rt) + !String.IsEqual(Window(Home).Property(Widget),tmdb)] | SubString(Window(Home).Property(Widget.FilePath),playmovie)</visible>
 				</control>
 				<control type="button" id="8054">
 					<description>Play Button</description>
@@ -751,7 +751,7 @@
 					<onclick>Dialog.Close(1115)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>IsEmpty(Window(Home).Property(Widget.FilePath)) + !StringCompare(Window(Home).Property(Widget),trakt) + !StringCompare(Window(Home).Property(Widget),rt) + !StringCompare(Window(Home).Property(Widget),tmdb) + !StringCompare(Window(Home).Property(Widget.Type),tvshows)</visible>
+					<visible>String.IsEmpty(Window(Home).Property(Widget.FilePath)) + !String.IsEqual(Window(Home).Property(Widget),trakt) + !String.IsEqual(Window(Home).Property(Widget),rt) + !String.IsEqual(Window(Home).Property(Widget),tmdb) + !String.IsEqual(Window(Home).Property(Widget.Type),tvshows)</visible>
 				</control>
 				<control type="button" id="8055">
 					<description>Extended Info Open Button</description>
@@ -760,7 +760,7 @@
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(Widget.FolderPath)],noresume)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>!SubString(Window(Home).Property(Widget.FilePath),playtrailer) + !SubString(Window(Home).Property(Widget.FilePath),playmovie) + [StringCompare(Window(Home).Property(Widget),trakt) | StringCompare(Window(Home).Property(Widget),rt) | StringCompare(Window(Home).Property(Widget),tmdb) | SubString(Window(Home).Property(Widget.FilePath),extendedtvinfo)]</visible>
+					<visible>!SubString(Window(Home).Property(Widget.FilePath),playtrailer) + !SubString(Window(Home).Property(Widget.FilePath),playmovie) + [String.IsEqual(Window(Home).Property(Widget),trakt) | String.IsEqual(Window(Home).Property(Widget),rt) | String.IsEqual(Window(Home).Property(Widget),tmdb) | SubString(Window(Home).Property(Widget.FilePath),extendedtvinfo)]</visible>
 				</control>
 				<control type="button" id="8068">
 					<description>Open Video Library Button</description>
@@ -769,7 +769,7 @@
 					<onclick>Dialog.Close(1199)</onclick>
 					<onclick>ActivateWindow(Videos,$ESCINFO[Window(Home).Property(Widget.FolderPath)])</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>IsEmpty(Window(Home).Property(Widget.FilePath)) + [StringCompare(Window(Home).Property(Widget),library) | StringCompare(Window(Home).Property(Widget),playlist)] + StringCompare(Window(Home).Property(Widget.Target),video)</visible>
+					<visible>String.IsEmpty(Window(Home).Property(Widget.FilePath)) + [String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)] + String.IsEqual(Window(Home).Property(Widget.Target),video)</visible>
 				</control>
 				<control type="image" id="8056">
 					<width>2</width>
@@ -784,7 +784,7 @@
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(Widget.FilePath)],resume)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>IntegerGreaterThan(Window(Home).Property(Widget.Resume),1) + [StringCompare(Window(Home).Property(Widget),library) | StringCompare(Window(Home).Property(Widget),playlist)]</visible>
+					<visible>IntegerGreaterThan(Window(Home).Property(Widget.Resume),1) + [String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)]</visible>
 				</control>
 				<control type="image" id="8058">
 					<width>2</width>
@@ -799,7 +799,7 @@
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(Widget.Trailer)])</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>[!IsEmpty(Window(Home).Property(Widget.Trailer)) + !StringCompare(Window(Home).Property(Widget),trakt) + !StringCompare(Window(Home).Property(Widget),rt) + !StringCompare(Window(Home).Property(Widget),tmdb)] | [!IsEmpty(Window(Home).Property(Widget.Trailer)) + IntegerGreaterThan(Window(Home).Property(Widget.EIDBID),0)]</visible>
+					<visible>[!String.IsEmpty(Window(Home).Property(Widget.Trailer)) + !String.IsEqual(Window(Home).Property(Widget),trakt) + !String.IsEqual(Window(Home).Property(Widget),rt) + !String.IsEqual(Window(Home).Property(Widget),tmdb)] | [!String.IsEmpty(Window(Home).Property(Widget.Trailer)) + IntegerGreaterThan(Window(Home).Property(Widget.EIDBID),0)]</visible>
 				</control>
 				<control type="button" id="8060">
 					<description>Extended Info Trailer Button</description>
@@ -808,7 +808,7 @@
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(Widget.FolderPath)],noresume)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>SubString(Window(Home).Property(Widget.FilePath),playtrailer) + [StringCompare(Window(Home).Property(Widget),trakt) | StringCompare(Window(Home).Property(Widget),rt) | StringCompare(Window(Home).Property(Widget),tmdb) | SubString(Window(Home).Property(Widget.FilePath),extendedtvinfo)]</visible>
+					<visible>SubString(Window(Home).Property(Widget.FilePath),playtrailer) + [String.IsEqual(Window(Home).Property(Widget),trakt) | String.IsEqual(Window(Home).Property(Widget),rt) | String.IsEqual(Window(Home).Property(Widget),tmdb) | SubString(Window(Home).Property(Widget.FilePath),extendedtvinfo)]</visible>
 				</control>
 				<control type="image" id="8061">
 					<width>2</width>
@@ -823,7 +823,7 @@
 					<onclick>RunPlugin(plugin://plugin.video.couchpotato_manager/movies/add?title=$INFO[Window(Home).Property(Widget.Title)])</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>System.HasAddon(plugin.video.couchpotato_manager) + IsEmpty(Window(Home).Property(Widget.EIDBID)) + StringCompare(Window(Home).Property(Widget.Type),movies) + [StringCompare(Window(Home).Property(Widget),trakt) | StringCompare(Window(Home).Property(Widget),rt) | StringCompare(Window(Home).Property(Widget),tmdb)]</visible>
+					<visible>System.HasAddon(plugin.video.couchpotato_manager) + String.IsEmpty(Window(Home).Property(Widget.EIDBID)) + String.IsEqual(Window(Home).Property(Widget.Type),movies) + [String.IsEqual(Window(Home).Property(Widget),trakt) | String.IsEqual(Window(Home).Property(Widget),rt) | String.IsEqual(Window(Home).Property(Widget),tmdb)]</visible>
 				</control>
 				<control type="button" id="8063">
 					<description>Add to SickRage</description>
@@ -832,7 +832,7 @@
 					<onclick>RunPlugin(plugin://plugin.video.sickrage?action=addshow&amp;show_name=$INFO[Window(Home).Property(Widget.Title)])</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>System.HasAddon(plugin.video.sickrage) + IsEmpty(Window(Home).Property(Widget.EIDBID)) + StringCompare(Window(Home).Property(Widget.Type),tvshows) + [StringCompare(Window(Home).Property(Widget),trakt) | StringCompare(Window(Home).Property(Widget),tmdb)]</visible>
+					<visible>System.HasAddon(plugin.video.sickrage) + String.IsEmpty(Window(Home).Property(Widget.EIDBID)) + String.IsEqual(Window(Home).Property(Widget.Type),tvshows) + [String.IsEqual(Window(Home).Property(Widget),trakt) | String.IsEqual(Window(Home).Property(Widget),tmdb)]</visible>
 				</control>
 				<control type="image" id="8064">
 					<width>2</width>
@@ -847,7 +847,7 @@
 					<onclick>RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[Window(Home).Property(Widget.Title)],header=$ESCINFO[Window(Home).Property(Widget.Title)] YouTube Search)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>System.HasAddon(script.skin.helper.service) + System.HasAddon(plugin.video.youtube) + !StringCompare(Window(Home).Property(Widget.Type),episodes) + StringCompare(Window(Home).Property(Widget.Target),video)</visible>
+					<visible>System.HasAddon(script.skin.helper.service) + System.HasAddon(plugin.video.youtube) + !String.IsEqual(Window(Home).Property(Widget.Type),episodes) + String.IsEqual(Window(Home).Property(Widget.Target),video)</visible>
 				</control>
 				<control type="button" id="8066">
 					<description>Youtube Search</description>
@@ -856,7 +856,7 @@
 					<onclick>RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[Window(Home).Property(Widget.SubTitle)],header=$ESCINFO[Window(Home).Property(Widget.SubTitle)] YouTube Search)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>System.HasAddon(script.skin.helper.service) + System.HasAddon(plugin.video.youtube) + StringCompare(Window(Home).Property(Widget.Type),episodes)</visible>
+					<visible>System.HasAddon(script.skin.helper.service) + System.HasAddon(plugin.video.youtube) + String.IsEqual(Window(Home).Property(Widget.Type),episodes)</visible>
 				</control>
 				<control type="image" id="8067">
 					<width>2</width>
@@ -868,7 +868,7 @@
 		</control>
 		<!-- Square -->
 		<control type="group">
-			<visible>IsEmpty(Window(Home).Property(Widget.Poster))</visible>
+			<visible>String.IsEmpty(Window(Home).Property(Widget.Poster))</visible>
 			<control type="image">
 				<left></left>
 				<centerleft>50%</centerleft>
@@ -883,7 +883,7 @@
 				<width>649</width>
 				<height>649</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>IsEmpty(Window(Home).Property(Widget.Case)) | SubString(Window(Home).Property(Widget.Case),-)</visible>
+				<visible>String.IsEmpty(Window(Home).Property(Widget.Case)) | SubString(Window(Home).Property(Widget.Case),-)</visible>
 			</control>
 			<control type="image">
 				<left>114</left>
@@ -914,7 +914,7 @@
 				<width>392</width>
 				<height>392</height>
 				<texture>$INFO[Window(Home).Property(Widget.DiscArt)]</texture>
-				<visible>!IsEmpty(Control.GetLabel(8021))</visible>
+				<visible>!String.IsEmpty(Control.GetLabel(8021))</visible>
 			</control>
 			<control type="image">
 				<left>751</left>
@@ -958,13 +958,13 @@
 					<font>Font_Bold49_Caps</font>
 					<textcolor>$VAR[HomeWidgetInfoIconColor]</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Year)]</label>
-					<visible>!IsEmpty(Control.GetLabel(1021))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1021))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1021))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1021))</visible>
 				</control>
 				<control type="image" id="1022">
 					<width>140</width>
@@ -974,13 +974,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsStudio)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1022))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1022))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1022))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1022))</visible>
 				</control>
 				<control type="image" id="1023">
 					<width>140</width>
@@ -990,13 +990,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsResolution)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1023))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1023))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1023))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1023))</visible>
 				</control>
 				<control type="image" id="1024">
 					<width>140</width>
@@ -1006,13 +1006,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsSource)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1024))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1024))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1024))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1024))</visible>
 				</control>
 				<control type="image" id="1025">
 					<width>140</width>
@@ -1022,13 +1022,13 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsAspect)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1025))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1025))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1025))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1025))</visible>
 				</control>
 				<control type="image" id="1026">
 					<width>140</width>
@@ -1038,19 +1038,19 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture>$INFO[Window(Home).Property(Widget.FlagsAudio)]</texture>
-					<visible>!IsEmpty(Control.GetLabel(1026))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1026))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1026))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1026))</visible>
 				</control>
 				<control type="image">
 					<width>2</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[HomeWidgetInfoSepColor]">homewidgets/separator3.png</texture>
-					<visible>!IsEmpty(Control.GetLabel(1027))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1027))</visible>
 				</control>
 				<control type="image">
 					<width>260</width>
@@ -1060,7 +1060,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<texture fallback="rating0.png">$INFO[Window(Home).Property(Widget.StarRating)]</texture>
-					<visible>StringCompare(Window(Home).Property(Widget.Type),albums) | StringCompare(Window(Home).Property(Widget.Type),songs)</visible>
+					<visible>String.IsEqual(Window(Home).Property(Widget.Type),albums) | String.IsEqual(Window(Home).Property(Widget.Type),songs)</visible>
 				</control>
 			</control>
 			<!-- Info -->
@@ -1073,7 +1073,7 @@
 					<height>35</height>
 					<texture>$VAR[Colortdefaulticons]DefaultTags.png</texture>
 					<colordiffuse>$VAR[HomeWidgetInfoIconColor]</colordiffuse>
-					<visible>!IsEmpty(Control.GetLabel(1028)) | !IsEmpty(Control.GetLabel(1029))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1028)) | !String.IsEmpty(Control.GetLabel(1029))</visible>
 				</control>
 				<control type="label">
 					<width>15</width>
@@ -1084,7 +1084,7 @@
 					<font>Font_Reg32_2</font>
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info1)]</label>
-					<visible>IsEmpty(Control.GetLabel(8021))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(8021))</visible>
 				</control>
 				<control type="label" id="1029">
 					<width>620</width>
@@ -1092,7 +1092,7 @@
 					<font>Font_Reg32_2</font>
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info1)]</label>
-					<visible>!IsEmpty(Control.GetLabel(8021))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(8021))</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -1104,7 +1104,7 @@
 					<height>35</height>
 					<texture>$VAR[Colortdefaulticons]DefaultAddon.png</texture>
 					<colordiffuse>$VAR[HomeWidgetInfoIconColor]</colordiffuse>
-					<visible>!IsEmpty(Control.GetLabel(1030)) | !IsEmpty(Control.GetLabel(1031))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(1030)) | !String.IsEmpty(Control.GetLabel(1031))</visible>
 				</control>
 				<control type="label">
 					<width>15</width>
@@ -1115,7 +1115,7 @@
 					<font>Font_Reg32_2</font>
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info2)]</label>
-					<visible>IsEmpty(Control.GetLabel(8021))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(8021))</visible>
 				</control>
 				<control type="label" id="1031">
 					<width>620</width>
@@ -1123,7 +1123,7 @@
 					<font>Font_Reg32_2</font>
 					<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 					<label>$INFO[Window(Home).Property(Widget.Info2)]</label>
-					<visible>!IsEmpty(Control.GetLabel(8021))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(8021))</visible>
 				</control>
 			</control>
 			<!-- Info Plot -->
@@ -1137,7 +1137,7 @@
 				<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<label>$INFO[Window(Home).Property(Widget.Plot)]</label>
-				<visible>IsEmpty(Control.GetLabel(8021))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(8021))</visible>
 			</control>
 			<control type="textbox">
 				<top>469</top>
@@ -1149,7 +1149,7 @@
 				<textcolor>$VAR[HomeWidgetInfoTextColor]</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				<label>$INFO[Window(Home).Property(Widget.Plot)]</label>
-				<visible>!IsEmpty(Control.GetLabel(8021))</visible>
+				<visible>!String.IsEmpty(Control.GetLabel(8021))</visible>
 			</control>
 			<!-- Info Buttons -->
 			<control type="grouplist" id="8050">
@@ -1178,7 +1178,7 @@
 					<onclick>Dialog.Close(1115)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>!IsEmpty(Window(Home).Property(Widget.FilePath)) + [StringCompare(Window(Home).Property(Widget.Target),video) | StringCompare(Window(Home).Property(Widget.Target),music)] + !StringCompare(Window(Home).Property(Widget.Type),addon)</visible>
+					<visible>!String.IsEmpty(Window(Home).Property(Widget.FilePath)) + [String.IsEqual(Window(Home).Property(Widget.Target),video) | String.IsEqual(Window(Home).Property(Widget.Target),music)] + !String.IsEqual(Window(Home).Property(Widget.Type),addon)</visible>
 				</control>
 				<control type="button" id="8074">
 					<description>Play Button</description>
@@ -1188,7 +1188,7 @@
 					<onclick>Dialog.Close(1115)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>IsEmpty(Window(Home).Property(Widget.FilePath)) + [StringCompare(Window(Home).Property(Widget.Target),video) | StringCompare(Window(Home).Property(Widget.Target),music)] + !StringCompare(Window(Home).Property(Widget.Type),artists) + !StringCompare(Window(Home).Property(Widget.Type),addon)</visible>
+					<visible>String.IsEmpty(Window(Home).Property(Widget.FilePath)) + [String.IsEqual(Window(Home).Property(Widget.Target),video) | String.IsEqual(Window(Home).Property(Widget.Target),music)] + !String.IsEqual(Window(Home).Property(Widget.Type),artists) + !String.IsEqual(Window(Home).Property(Widget.Type),addon)</visible>
 				</control>
 				<control type="image" id="8075">
 					<width>2</width>
@@ -1203,7 +1203,7 @@
 					<onclick>Dialog.Close(1199)</onclick>
 					<onclick>ActivateWindow(Music,$ESCINFO[Window(Home).Property(Widget.FolderPath)])</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>[StringCompare(Window(Home).Property(Widget),library) | StringCompare(Window(Home).Property(Widget),playlist)] + StringCompare(Window(Home).Property(Widget.Target),music) + !SubString(Window(Home).Property(Widget.FolderPath),skin.helper) + !SubString(Window(Home).Property(Widget.FolderPath),library.data)</visible>
+					<visible>[String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)] + String.IsEqual(Window(Home).Property(Widget.Target),music) + !SubString(Window(Home).Property(Widget.FolderPath),skin.helper) + !SubString(Window(Home).Property(Widget.FolderPath),library.data)</visible>
 				</control>
 				<control type="button" id="8082">
 					<description>Open Video Library Button</description>
@@ -1212,7 +1212,7 @@
 					<onclick>Dialog.Close(1199)</onclick>
 					<onclick>ActivateWindow(Videos,$ESCINFO[Window(Home).Property(Widget.FolderPath)])</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>IsEmpty(Window(Home).Property(Widget.FilePath)) + [StringCompare(Window(Home).Property(Widget),library) | StringCompare(Window(Home).Property(Widget),playlist)] + StringCompare(Window(Home).Property(Widget.Target),video)</visible>
+					<visible>String.IsEmpty(Window(Home).Property(Widget.FilePath)) + [String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)] + String.IsEqual(Window(Home).Property(Widget.Target),video)</visible>
 				</control>
 				<control type="button" id="8083">
 					<description>Open Addon Button</description>
@@ -1221,7 +1221,7 @@
 					<onclick>Dialog.Close(1199)</onclick>
 					<onclick>ActivateWindow(Programs,$ESCINFO[Window(Home).Property(Widget.FolderPath)])</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>StringCompare(Window(Home).Property(Widget),addon) + StringCompare(Window(Home).Property(Widget.Type),addon)</visible>
+					<visible>String.IsEqual(Window(Home).Property(Widget),addon) + String.IsEqual(Window(Home).Property(Widget.Type),addon)</visible>
 				</control>
 				<control type="image" id="8084">
 					<width>2</width>
@@ -1236,7 +1236,7 @@
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(Widget.FilePath)],resume)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>IntegerGreaterThan(Window(Home).Property(Widget.Resume),1) + [StringCompare(Window(Home).Property(Widget),library) | StringCompare(Window(Home).Property(Widget),playlist)]</visible>
+					<visible>IntegerGreaterThan(Window(Home).Property(Widget.Resume),1) + [String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)]</visible>
 				</control>
 				<control type="image" id="8077">
 					<width>2</width>
@@ -1251,7 +1251,7 @@
 					<onclick>RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[Window(Home).Property(Widget.SubTitle)] official,header=$ESCINFO[Window(Home).Property(Widget.SubTitle)] YouTube Search)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>System.HasAddon(script.skin.helper.service) + System.HasAddon(plugin.video.youtube) + [StringCompare(Window(Home).Property(Widget),library) | StringCompare(Window(Home).Property(Widget),playlist)] + !StringCompare(Window(Home).Property(Widget.Type),artists) + [StringCompare(Window(Home).Property(Widget.Target),video) | StringCompare(Window(Home).Property(Widget.Target),music)]</visible>
+					<visible>System.HasAddon(script.skin.helper.service) + System.HasAddon(plugin.video.youtube) + [String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)] + !String.IsEqual(Window(Home).Property(Widget.Type),artists) + [String.IsEqual(Window(Home).Property(Widget.Target),video) | String.IsEqual(Window(Home).Property(Widget.Target),music)]</visible>
 				</control>
 				<control type="button" id="8079">
 					<description>Youtube Search</description>
@@ -1260,7 +1260,7 @@
 					<onclick>RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[Window(Home).Property(Widget.Title)] official,header=$ESCINFO[Window(Home).Property(Widget.Title)] YouTube Search)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>System.HasAddon(script.skin.helper.service) + System.HasAddon(plugin.video.youtube) + [StringCompare(Window(Home).Property(Widget),library) | StringCompare(Window(Home).Property(Widget),playlist)] + StringCompare(Window(Home).Property(Widget.Type),artists) + [StringCompare(Window(Home).Property(Widget.Target),video) | StringCompare(Window(Home).Property(Widget.Target),music)]</visible>
+					<visible>System.HasAddon(script.skin.helper.service) + System.HasAddon(plugin.video.youtube) + [String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)] + String.IsEqual(Window(Home).Property(Widget.Type),artists) + [String.IsEqual(Window(Home).Property(Widget.Target),video) | String.IsEqual(Window(Home).Property(Widget.Target),music)]</visible>
 				</control>
 				<control type="image" id="8080">
 					<width>2</width>

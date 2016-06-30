@@ -273,8 +273,8 @@
 						<textureradioon>special://skin/extras/icons/tv3.png</textureradioon>
 						<textureradiooff>special://skin/extras/icons/tv3.png</textureradiooff>
 						<include>Objects_MediaMenuButtonIcons1</include>
-						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
-						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
+						<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
+						<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
 					</control>
 					<control type="radiobutton" id="101">
 						<description>Guide</description>
@@ -283,8 +283,8 @@
 						<textureradioon>special://skin/extras/icons/ButtonEPG.png</textureradioon>
 						<textureradiooff>special://skin/extras/icons/ButtonEPG.png</textureradiooff>
 						<include>Objects_MediaMenuButtonIcons1</include>
-						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
-						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+						<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
+						<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
 						<visible>!Skin.HasSetting(sideblade_hideepgtimeline)</visible>
 					</control>
 					<control type="radiobutton" id="102">
@@ -294,8 +294,8 @@
 						<textureradiooff>special://skin/extras/icons/ButtonRecord.png</textureradiooff>
 						<label>19163</label>
 						<include>Objects_MediaMenuButtonIcons1</include>
-						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
-						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
+						<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
+						<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
 						<visible>!Skin.HasSetting(sideblade_hiderecordings)</visible>
 					</control>
 					<control type="radiobutton" id="103">
@@ -305,8 +305,8 @@
 						<textureradiooff>special://skin/extras/icons/alarm.png</textureradiooff>
 						<label>19040</label>
 						<include>Objects_MediaMenuButtonIcons1</include>
-						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
-						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
+						<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
+						<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
 						<visible>!Skin.HasSetting(sideblade_hidetimer)</visible>
 					</control>
 					<control type="radiobutton" id="104">
@@ -316,8 +316,8 @@
 						<textureradiooff>special://skin/extras/icons/magnifier.png</textureradiooff>
 						<label>137</label>
 						<include>Objects_MediaMenuButtonIcons1</include>
-						<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
-						<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
+						<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
+						<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
 						<visible>!Skin.HasSetting(sideblade_hidesearch)</visible>
 					</control>
 					<include>PVRMediaMenuTop</include>
@@ -348,7 +348,7 @@
 							<label>PVR Artwork ON</label>
 						<selected>Skin.HasSetting(SkinHelper.EnablePVRThumbs)</selected>
 						<onclick>Skin.ToggleSetting(SkinHelper.EnablePVRThumbs)</onclick>
-					</control> 
+					</control>
 					<!-- Include button to toggle skinhelper tv fanart onoff END -->
 				</control>
 			</control>
@@ -386,7 +386,7 @@
 				<width>1870</width>
 				<height>300</height>
 				<texture colordiffuse="$VAR[AreaColorVar]" border="35">osd/osd_settings_back.png</texture>
-				<visible>IsEmpty(Skin.String(LiveTV.InfobarType))</visible>
+				<visible>String.IsEmpty(Skin.String(LiveTV.InfobarType))</visible>
 			</control>
 			<control type="image" id="1">
 				<top>-40</top>
@@ -394,7 +394,7 @@
 				<width>3920</width>
 				<height>350</height>
 				<texture colordiffuse="black">home/nowplaying_shadow.png</texture>
-				<visible>StringCompare(Skin.String(LiveTV.InfobarType),2)</visible>
+				<visible>String.IsEqual(Skin.String(LiveTV.InfobarType),2)</visible>
 			</control>
 			<control type="image" id="1">
 				<top>96</top>
@@ -424,7 +424,7 @@
 				<texture>$INFO[VideoPlayer.Cover]</texture>
 				<aspectratio>keep</aspectratio>
 				<fadetime>IconCrossfadeTime2</fadetime>
-				<visible>!IsEmpty(VideoPlayer.Cover)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Cover)</visible>
 			</control>
 		</control>
 		<!-- Top Info (ChannelNr, Name, Date, Time & Back-end info) -->
@@ -494,7 +494,7 @@
 				<align>left</align>
 				<textcolor>white6</textcolor>
 				<label>$INFO[VideoPlayer.StartTime]</label>
-				<visible>!IsEmpty(VideoPlayer.Title)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 			</control>
 			<control type="label" id="1">
 				<left>535</left>
@@ -505,7 +505,7 @@
 				<align>left</align>
 				<scroll>true</scroll>
 				<label>$INFO[VideoPlayer.Title]</label>
-				<visible>!IsEmpty(VideoPlayer.Title)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 				<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
 			</control>
 			<control type="group" id="1">
@@ -527,7 +527,7 @@
 					<align>left</align>
 					<scroll>true</scroll>
 					<label>$INFO[VideoPlayer.Title]</label>
-					<visible>!IsEmpty(VideoPlayer.Title)</visible>
+					<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 				</control>
 			</control>
 			<control type="label" id="1">
@@ -539,7 +539,7 @@
 				<align>right</align>
 				<textcolor>white6</textcolor>
 				<label>$INFO[VideoPlayer.TimeRemaining(hh:mm)]</label>
-				<visible>!IsEmpty(VideoPlayer.Title)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 			</control>
 			<control type="label" id="1">
 				<left>380</left>
@@ -550,7 +550,7 @@
 				<align>left</align>
 				<textcolor>grey</textcolor>
 				<label>$INFO[VideoPlayer.NextStartTime]</label>
-				<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
 			</control>
 			<control type="label" id="1">
 				<left>535</left>
@@ -562,7 +562,7 @@
 				<textcolor>grey</textcolor>
 				<scroll>true</scroll>
 				<label>$INFO[VideoPlayer.NextTitle]</label>
-				<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
 			</control>
 			<control type="label" id="1">
 				<left>1400</left>
@@ -573,7 +573,7 @@
 				<align>right</align>
 				<textcolor>white6</textcolor>
 				<label>$INFO[VideoPlayer.NextDuration]</label>
-				<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
 			</control>
 			<control type="progress" id="1">
 				<left>380</left>
@@ -599,7 +599,7 @@
 				<align>left</align>
 				<scroll>true</scroll>
 				<label>No EPG</label>
-				<visible>!IsEmpty(VideoPlayer.Title)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 				<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
 			</control>
 		</control>
@@ -1057,7 +1057,7 @@
 				</control>
 			</control>
 			<control type="group" id="1">
-				<visible>!IsEmpty(Weather.Plugin)</visible>
+				<visible>!String.IsEmpty(Weather.Plugin)</visible>
 				<control type="label" id="1">
 					<left>1610</left>
 					<top>-15</top>
@@ -1080,7 +1080,7 @@
 				</control>
 			</control>
 			<control type="group" id="1">
-				<visible>IsEmpty(Weather.Plugin)</visible>
+				<visible>String.IsEmpty(Weather.Plugin)</visible>
 				<control type="label" id="1">
 					<left>1610</left>
 					<top>-15</top>
@@ -1126,7 +1126,7 @@
 				<align>left</align>
 				<textcolor>white6</textcolor>
 				<label>$INFO[VideoPlayer.StartTime]</label>
-				<visible>!IsEmpty(VideoPlayer.Title)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 			</control>
 			<control type="label" id="1">
 				<left>535</left>
@@ -1136,7 +1136,7 @@
 				<align>left</align>
 				<scroll>true</scroll>
 				<label>$INFO[VideoPlayer.Title]</label>
-				<visible>!IsEmpty(VideoPlayer.Title)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 				<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
 			</control>
 			<control type="label" id="1">
@@ -1147,7 +1147,7 @@
 				<align>right</align>
 				<textcolor>white6</textcolor>
 				<label>$INFO[VideoPlayer.TimeRemaining(hh:mm)]</label>
-				<visible>!IsEmpty(VideoPlayer.Title)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 			</control>
 			<control type="group" id="1">
 				<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
@@ -1166,7 +1166,7 @@
 					<align>left</align>
 					<scroll>true</scroll>
 					<label>$INFO[VideoPlayer.Title]</label>
-					<visible>!IsEmpty(VideoPlayer.Title)</visible>
+					<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 				</control>
 			</control>
 			<control type="label" id="1">
@@ -1178,7 +1178,7 @@
 				<align>left</align>
 				<textcolor>grey</textcolor>
 				<label>$INFO[VideoPlayer.NextStartTime]</label>
-				<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
 			</control>
 			<control type="label" id="1">
 				<left>535</left>
@@ -1190,7 +1190,7 @@
 				<textcolor>grey</textcolor>
 				<scroll>true</scroll>
 				<label>$INFO[VideoPlayer.NextTitle]</label>
-				<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
 			</control>
 			<control type="label" id="1">
 				<left>1450</left>
@@ -1201,7 +1201,7 @@
 				<align>right</align>
 				<textcolor>grey</textcolor>
 				<label>$INFO[VideoPlayer.NextEndTime]</label>
-				<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
 			</control>
 			<control type="progress" id="1">
 				<left>380</left>
@@ -1226,7 +1226,7 @@
 				<align>left</align>
 				<scroll>true</scroll>
 				<label>No EPG</label>
-				<visible>!IsEmpty(VideoPlayer.Title)</visible>
+				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 				<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
 			</control>
 		</control>
@@ -1318,7 +1318,7 @@
 							<width>80</width>
 							<height>16</height>
 							<info>ListItem.Progress</info>
-							<visible>!StringCompare(ListItem.Title,)</visible>
+							<visible>!String.IsEqual(ListItem.Title,)</visible>
 							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							<texturebg border="3">new_pvr/texturebg_border_white.png</texturebg>
 							<midtexture border="3">new_pvr/texturebg_white.png</midtexture>
@@ -1344,7 +1344,7 @@
 							<width>80</width>
 							<height>16</height>
 							<info>ListItem.Progress</info>
-							<visible>!StringCompare(ListItem.Title,)</visible>
+							<visible>!String.IsEqual(ListItem.Title,)</visible>
 							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							<texturebg border="3">new_pvr/texturebg_border_white.png</texturebg>
 							<midtexture border="3">new_pvr/texturebg_white.png</midtexture>
@@ -1405,7 +1405,7 @@
 							<width>80</width>
 							<height>16</height>
 							<info>ListItem.Progress</info>
-							<visible>!StringCompare(ListItem.Title,)</visible>
+							<visible>!String.IsEqual(ListItem.Title,)</visible>
 							<texturebg border="3">new_pvr/texturebg_border_white.png</texturebg>
 							<midtexture border="3">new_pvr/texturebg_white.png</midtexture>
 							<lefttexture>-</lefttexture>
@@ -1430,7 +1430,7 @@
 							<width>80</width>
 							<height>16</height>
 							<info>ListItem.Progress</info>
-							<visible>!StringCompare(ListItem.Title,)</visible>
+							<visible>!String.IsEqual(ListItem.Title,)</visible>
 							<texturebg border="3">new_pvr/texturebg_border_white.png</texturebg>
 							<midtexture border="3">new_pvr/texturebg_white.png</midtexture>
 							<lefttexture>-</lefttexture>

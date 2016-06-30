@@ -3,20 +3,20 @@
 	<defaultcontrol></defaultcontrol>
 	<include>Animation_DialogPopup</include>
 	<onload condition="Library.IsScanningVideo + Skin.HasSetting(UpdateArt.Enabled)">SetProperty(UpdateArt,1)</onload>
-	<onunload condition="!IsEmpty(Window.Property(UpdateArt)) + Skin.HasSetting(UpdateArt.Enabled)">XBMC.RunScript(script.artwork.downloader,silent=true)</onunload>
-	<onunload condition="!IsEmpty(Window.Property(UpdateArt)) + Skin.HasSetting(UpdateArt.Enabled)">ClearProperty(UpdateArt)</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist1.Call))">$INFO[Skin.String(SmartPlaylist1.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist2.Call))">$INFO[Skin.String(SmartPlaylist2.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist3.Call))">$INFO[Skin.String(SmartPlaylist3.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist4.Call))">$INFO[Skin.String(SmartPlaylist4.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist5.Call))">$INFO[Skin.String(SmartPlaylist5.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist6.Call))">$INFO[Skin.String(SmartPlaylist6.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist7.Call))">$INFO[Skin.String(SmartPlaylist7.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist8.Call))">$INFO[Skin.String(SmartPlaylist8.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist9.Call))">$INFO[Skin.String(SmartPlaylist9.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist10.Call))">$INFO[Skin.String(SmartPlaylist10.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist11.Call))">$INFO[Skin.String(SmartPlaylist11.Call)]</onunload>
-	<onunload condition="!IsEmpty(Skin.String(SmartPlaylist12.Call))">$INFO[Skin.String(SmartPlaylist12.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Window.Property(UpdateArt)) + Skin.HasSetting(UpdateArt.Enabled)">XBMC.RunScript(script.artwork.downloader,silent=true)</onunload>
+	<onunload condition="!String.IsEmpty(Window.Property(UpdateArt)) + Skin.HasSetting(UpdateArt.Enabled)">ClearProperty(UpdateArt)</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist1.Call))">$INFO[Skin.String(SmartPlaylist1.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist2.Call))">$INFO[Skin.String(SmartPlaylist2.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist3.Call))">$INFO[Skin.String(SmartPlaylist3.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist4.Call))">$INFO[Skin.String(SmartPlaylist4.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist5.Call))">$INFO[Skin.String(SmartPlaylist5.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist6.Call))">$INFO[Skin.String(SmartPlaylist6.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist7.Call))">$INFO[Skin.String(SmartPlaylist7.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist8.Call))">$INFO[Skin.String(SmartPlaylist8.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist9.Call))">$INFO[Skin.String(SmartPlaylist9.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist10.Call))">$INFO[Skin.String(SmartPlaylist10.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist11.Call))">$INFO[Skin.String(SmartPlaylist11.Call)]</onunload>
+	<onunload condition="!String.IsEmpty(Skin.String(SmartPlaylist12.Call))">$INFO[Skin.String(SmartPlaylist12.Call)]</onunload>
 	<controls>
 		<control type="group">
 			<left>1140</left>

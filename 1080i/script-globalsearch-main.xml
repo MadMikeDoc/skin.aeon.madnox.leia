@@ -135,61 +135,61 @@
 								<label>$LOCALIZE[20342]</label>
 								<label2>Found $INFO[Control.GetLabel(110)] items</label2>
 								<onclick>noop</onclick>
-								<visible>!IsEmpty(Control.GetLabel(110))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(110))</visible>
 							</item>
 							<item id="9">
 								<label>$LOCALIZE[344]</label>
 								<label2>Found $INFO[Control.GetLabel(210)] items</label2>
 								<onclick>noop</onclick>
-								<visible>!IsEmpty(Control.GetLabel(210))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(210))</visible>
 							</item>
 							<item id="2">
 								<label>$LOCALIZE[20343]</label>
 								<label2>Found $INFO[Control.GetLabel(120)] items</label2>
 								<onclick>noop</onclick>
-								<visible>!IsEmpty(Control.GetLabel(120))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(120))</visible>
 							</item>
 							<item id="3">
 								<label>$LOCALIZE[33054]</label>
 								<label2>Found $INFO[Control.GetLabel(130)] items</label2>
 								<onclick>noop</onclick>
-								<visible>!IsEmpty(Control.GetLabel(130))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(130))</visible>
 							</item>
 							<item id="4">
 								<label>$LOCALIZE[20360]</label>
 								<label2>Found $INFO[Control.GetLabel(140)] items</label2>
 								<onclick>noop</onclick>
-								<visible>!IsEmpty(Control.GetLabel(140))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(140))</visible>
 							</item>
 							<item id="5">
 								<label>$LOCALIZE[20389]</label>
 								<label2>Found $INFO[Control.GetLabel(150)] items</label2>
 								<onclick>noop</onclick>
-								<visible>!IsEmpty(Control.GetLabel(150))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(150))</visible>
 							</item>
 							<item id="6">
 								<label>$LOCALIZE[133]</label>
 								<label2>Found $INFO[Control.GetLabel(160)] items</label2>
 								<onclick>noop</onclick>
-								<visible>!IsEmpty(Control.GetLabel(160))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(160))</visible>
 							</item>
 							<item id="7">
 								<label>$LOCALIZE[132]</label>
 								<label2>Found $INFO[Control.GetLabel(170)] items</label2>
 								<onclick>noop</onclick>
-								<visible>!IsEmpty(Control.GetLabel(170))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(170))</visible>
 							</item>
 							<item id="8">
 								<label>$LOCALIZE[134]</label>
 								<label2>Found $INFO[Control.GetLabel(180)] items</label2>
 								<onclick>noop</onclick>
-								<visible>!IsEmpty(Control.GetLabel(180))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(180))</visible>
 							</item>
 							<item id="10">
 								<label>$LOCALIZE[19069]</label>
 								<label2>Found $INFO[Control.GetLabel(220)] items</label2>
 								<onclick>noop</onclick>
-								<visible>!IsEmpty(Control.GetLabel(220))</visible>
+								<visible>!String.IsEmpty(Control.GetLabel(220))</visible>
 							</item>
 							<item id="11">
 								<label>$ADDON[script.globalsearch 32299]</label>
@@ -274,7 +274,7 @@
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
 											<autoscroll>false</autoscroll>
-											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
+											<visible>String.IsEmpty(ListItem.Property(Plotoutline))</visible>
 										</control>
 										<control type="textbox">
 											<left>22</left>
@@ -349,7 +349,7 @@
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
 											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(111)</autoscroll>
-											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
+											<visible>String.IsEmpty(ListItem.Property(Plotoutline))</visible>
 										</control>
 										<control type="textbox">
 											<left>22</left>
@@ -436,7 +436,7 @@
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
 											<autoscroll>false</autoscroll>
-											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
+											<visible>String.IsEmpty(ListItem.Property(Plotoutline))</visible>
 										</control>
 										<control type="textbox">
 											<left>22</left>
@@ -511,7 +511,7 @@
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
 											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(211)</autoscroll>
-											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
+											<visible>String.IsEmpty(ListItem.Property(Plotoutline))</visible>
 										</control>
 										<control type="textbox">
 											<left>22</left>
@@ -597,7 +597,7 @@
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
 											<autoscroll>false</autoscroll>
-											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
+											<visible>String.IsEmpty(ListItem.Property(Plotoutline))</visible>
 										</control>
 										<control type="textbox">
 											<left>22</left>
@@ -672,7 +672,7 @@
 											<label>$INFO[ListItem.Property(Plot)]</label>
 											<font>Font_Reg32</font>
 											<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll) + Control.HasFocus(121)</autoscroll>
-											<visible>IsEmpty(ListItem.Property(Plotoutline))</visible>
+											<visible>String.IsEmpty(ListItem.Property(Plotoutline))</visible>
 										</control>
 										<control type="textbox">
 											<left>22</left>

@@ -169,7 +169,7 @@
 				<width>49</width>
 				<height>55</height>
 				<texture>views/multiplex_arrow2.png</texture>
-				<visible>Control.IsVisible(104) + IntegerGreaterThan(Container(100).NumPages,0) + !StringCompare(Container(100).CurrentPage,1)</visible>
+				<visible>Control.IsVisible(104) + IntegerGreaterThan(Container(100).NumPages,0) + !String.IsEqual(Container(100).CurrentPage,1)</visible>
 			</control>
 			<control type="image">
 				<description>Arrow right</description>
@@ -178,7 +178,7 @@
 				<width>49</width>
 				<height>55</height>
 				<texture>views/multiplex_arrow.png</texture>
-				<visible>Control.IsVisible(104) + IntegerGreaterThan(Container(100).NumPages,0) + !StringCompare(Container(100).CurrentPage,Container(100).NumPages)</visible>
+				<visible>Control.IsVisible(104) + IntegerGreaterThan(Container(100).NumPages,0) + !String.IsEqual(Container(100).CurrentPage,Container(100).NumPages)</visible>
 			</control>
 		</control>
 		<control type="label">

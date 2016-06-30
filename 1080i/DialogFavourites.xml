@@ -63,10 +63,10 @@
 			<label2>[COLOR $VAR[FontColorVar]]$VAR[FavoritesListTypeVar][/COLOR]</label2>
 			<font>Font_Bold33</font>
 			<textcolor>grey2</textcolor>
-			<onclick condition="Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))">Skin.SetString(FavoritesListType,2)</onclick>
-			<onclick condition="Stringcompare(Skin.String(FavoritesListType),3)">Skin.SetString(FavoritesListType,1)</onclick>
-			<onclick condition="Stringcompare(Skin.String(FavoritesListType),2)">Skin.SetString(FavoritesListType,3)</onclick>
-			<onclick condition="Stringcompare(Skin.String(FavoritesListType),1)">Skin.SetString(FavoritesListType,2)</onclick>
+			<onclick condition="String.IsEqual(Skin.String(FavoritesListType),1) | String.IsEmpty(Skin.String(FavoritesListType))">Skin.SetString(FavoritesListType,2)</onclick>
+			<onclick condition="String.IsEqual(Skin.String(FavoritesListType),3)">Skin.SetString(FavoritesListType,1)</onclick>
+			<onclick condition="String.IsEqual(Skin.String(FavoritesListType),2)">Skin.SetString(FavoritesListType,3)</onclick>
+			<onclick condition="String.IsEqual(Skin.String(FavoritesListType),1)">Skin.SetString(FavoritesListType,2)</onclick>
 			<onleft>450</onleft>
 			<onright>61</onright>
 			<onup>450</onup>
@@ -85,7 +85,7 @@
 			<pagecontrol>61</pagecontrol>
 			<scrolltime>0</scrolltime>
 			<orientation>vertical</orientation>
-			<itemlayout height="60" width="550" condition="Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))">
+			<itemlayout height="60" width="550" condition="String.IsEqual(Skin.String(FavoritesListType),1) | String.IsEmpty(Skin.String(FavoritesListType))">
 				<control type="image">
 					<width>550</width>
 					<height>60</height>
@@ -100,7 +100,7 @@
 					<info>ListItem.Label</info>
 				</control>
 			</itemlayout>
-			<focusedlayout height="60" width="550" condition="Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))">
+			<focusedlayout height="60" width="550" condition="String.IsEqual(Skin.String(FavoritesListType),1) | String.IsEmpty(Skin.String(FavoritesListType))">
 				<control type="image">
 					<width>550</width>
 					<height>60</height>
@@ -121,7 +121,7 @@
 					<info>ListItem.Label</info>
 				</control>
 			</focusedlayout>
-			<itemlayout height="90" width="800" condition="Stringcompare(Skin.String(FavoritesListType),2)">
+			<itemlayout height="90" width="800" condition="String.IsEqual(Skin.String(FavoritesListType),2)">
 				<control type="image">
 					<left>15</left>
 					<top>30</top>
@@ -146,7 +146,7 @@
 					<texture>$INFO[Listitem.Icon]</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout height="90" width="800" condition="Stringcompare(Skin.String(FavoritesListType),2)">
+			<focusedlayout height="90" width="800" condition="String.IsEqual(Skin.String(FavoritesListType),2)">
 				<control type="image">
 					<left>15</left>
 					<top>30</top>
@@ -177,7 +177,7 @@
 					<texture>$INFO[Listitem.Icon]</texture>
 				</control>
 			</focusedlayout>
-			<itemlayout height="185" width="790" condition="Stringcompare(Skin.String(FavoritesListType),3)">
+			<itemlayout height="185" width="790" condition="String.IsEqual(Skin.String(FavoritesListType),3)">
 				<control type="image">
 					<left>15</left>
 					<top>125</top>
@@ -202,7 +202,7 @@
 					<texture>$INFO[Listitem.Icon]</texture>
 				</control>
 			</itemlayout>
-			<focusedlayout height="185" width="790" condition="Stringcompare(Skin.String(FavoritesListType),3)">
+			<focusedlayout height="185" width="790" condition="String.IsEqual(Skin.String(FavoritesListType),3)">
 				<control type="image">
 					<left>15</left>
 					<top>125</top>
@@ -243,7 +243,7 @@
 			<texture background="true">$INFO[Container(450).Listitem.Icon]</texture>
 			<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 			<bordersize>7</bordersize>
-			<visible>Stringcompare(Skin.String(FavoritesListType),2)</visible>
+			<visible>String.IsEqual(Skin.String(FavoritesListType),2)</visible>
 		</control>
 		<control type="image">
 			<left>1289</left>
@@ -254,7 +254,7 @@
 			<texture background="true">$INFO[Container(450).Listitem.Icon]</texture>
 			<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 			<bordersize>7</bordersize>
-			<visible>Stringcompare(Skin.String(FavoritesListType),1) | IsEmpty(Skin.String(FavoritesListType))</visible>
+			<visible>String.IsEqual(Skin.String(FavoritesListType),1) | String.IsEmpty(Skin.String(FavoritesListType))</visible>
 		</control>
 		<control type="label">
 			<left>1634</left>

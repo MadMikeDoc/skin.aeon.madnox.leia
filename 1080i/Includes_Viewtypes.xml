@@ -94,9 +94,9 @@
 			<animation effect="fade" end="100" time="80" delay="80" reversible="false">Visible</animation>
 			<animation effect="fade" start="100" end="0" time="0" reversible="false">Hidden</animation>
 			<!-- MikeBZH44 : Add NoFloorLabel for Movies in Showcase view -->
-			<visible>[Control.IsVisible(503) + Skin.HasSetting(landscapeonelogo) + !Container.Content(episodes) + !Container.Content(seasons)] | Control.IsVisible(509) | Control.IsVisible(499) | [Control.IsVisible(500) + !StringCompare(Container.FolderName,youtube)] | Control.IsVisible(508) | [Control.IsVisible(501) + [[Container.Content(movies) + !Skin.HasSetting(NoFloorLabelMovies)] | [Container.Content(sets) + !Skin.HasSetting(NoFloorLabelMovies) | [IsEmpty(Container.ListItem.Art(clearlogo)) + !Skin.HasSetting(NoFloorLabelMovies)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(NoFloorLabelTVshows)]]]</visible>
+			<visible>[Control.IsVisible(503) + Skin.HasSetting(landscapeonelogo) + !Container.Content(episodes) + !Container.Content(seasons)] | Control.IsVisible(509) | Control.IsVisible(499) | [Control.IsVisible(500) + !String.IsEqual(Container.FolderName,youtube)] | Control.IsVisible(508) | [Control.IsVisible(501) + [[Container.Content(movies) + !Skin.HasSetting(NoFloorLabelMovies)] | [Container.Content(sets) + !Skin.HasSetting(NoFloorLabelMovies) | [String.IsEmpty(Container.ListItem.Art(clearlogo)) + !Skin.HasSetting(NoFloorLabelMovies)]] | [[Container.Content(tvshows) | Container.Content(seasons)] + !Skin.HasSetting(NoFloorLabelTVshows)]]]</visible>
 			<include>Animation_WindowFade200</include>
-			<visible>[Control.IsVisible(8822) + !Container.OnNext + !Container.OnPrevious + Stringcompare(Control.GetLabel(8822),empty.png)] | !Control.IsVisible(8822) | Container.Content(seasons) | Container.Content(albums)</visible>
+			<visible>[Control.IsVisible(8822) + !Container.OnNext + !Container.OnPrevious + String.IsEqual(Control.GetLabel(8822),empty.png)] | !Control.IsVisible(8822) | Container.Content(seasons) | Container.Content(albums)</visible>
 			<left>410</left>
 			<control type="label">
 				<top>1010</top>
@@ -159,7 +159,7 @@
 			<!-- MikeBZH44 : Add NoFloorLabel for Movies in Showcase view -->
 			<visible>[Control.IsVisible(501) + [Container.Content(tvshows) |Container.Content(seasons)] + Skin.HasSetting(ShowcaseBanner)]</visible>
 			<include>Animation_WindowFade200</include>
-			<visible>[Control.IsVisible(8822) + !Container.OnNext + !Container.OnPrevious + Stringcompare(Control.GetLabel(8822),empty.png)] | !Control.IsVisible(8822) | Container.Content(seasons) | Container.Content(albums)</visible>
+			<visible>[Control.IsVisible(8822) + !Container.OnNext + !Container.OnPrevious + String.IsEqual(Control.GetLabel(8822),empty.png)] | !Control.IsVisible(8822) | Container.Content(seasons) | Container.Content(albums)</visible>
 			<left>410</left>
 			<control type="image">
 				<left>224</left>
@@ -177,7 +177,7 @@
 				<height>96</height>
 				<aspectratio scalediffuse="false" align="left">keep</aspectratio>
 				<texture background="true" diffuse="thumbs/banner_mask.png">$VAR[LogoVarList]</texture>
-				<visible>IsEmpty(Container.ListItem.Art(banner)) + IsEmpty(Container.ListItem.Art(tvshow.banner))</visible>
+				<visible>String.IsEmpty(Container.ListItem.Art(banner)) + String.IsEmpty(Container.ListItem.Art(tvshow.banner))</visible>
 			</control>
 			<control type="label">
 				<left>236</left>
@@ -188,7 +188,7 @@
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font_Bold40</font>
 				<shadowcolor>black</shadowcolor>
-				<visible>IsEmpty(Container.ListItem.Art(banner)) + IsEmpty(Container.ListItem.Art(tvshow.banner)) + IsEmpty(Container.ListItem.Art(clearlogo))</visible>
+				<visible>String.IsEmpty(Container.ListItem.Art(banner)) + String.IsEmpty(Container.ListItem.Art(tvshow.banner)) + String.IsEmpty(Container.ListItem.Art(clearlogo))</visible>
 			</control>
 		</control>
 	</include>
@@ -354,375 +354,375 @@
 	<include name="OverlayVisibility-7">
 		<texture>$INFO[ListItem(-7).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-7).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(-7).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-7).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-7).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-7).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-7).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-7).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-7).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-7).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-7).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-7).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-7).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-7).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-7).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-7).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-7).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-7).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-7).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-7).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-7).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-7).Title)]]]]</visible>
++ SubString(ListItem(-7).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(-7).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(-7).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(-7).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(-7).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(-7).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(-7).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(-7).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(-7).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(-7).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(-7).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-7).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-7).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-7).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-7).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-7).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-7).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-7).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-7).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-7).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-7).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-7).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-7).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-7).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-7).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-7).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-7).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-7).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-7).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-7).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-7).Title)]]]]</visible>
 		<visible>[!Container.ListItem(-7).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(-7).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility-6">
 		<texture>$INFO[ListItem(-6).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-6).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(-6).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-6).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-6).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-6).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-6).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-6).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-6).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-6).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-6).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-6).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-6).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-6).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-6).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-6).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-6).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-6).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-6).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-6).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-6).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-6).Title)]]]]</visible>
++ SubString(ListItem(-6).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(-6).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(-6).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(-6).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(-6).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(-6).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(-6).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(-6).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(-6).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(-6).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(-6).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-6).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-6).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-6).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-6).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-6).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-6).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-6).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-6).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-6).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-6).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-6).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-6).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-6).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-6).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-6).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-6).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-6).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-6).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-6).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-6).Title)]]]]</visible>
 		<visible>[!Container.ListItem(-6).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(-6).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility-5">
 		<texture>$INFO[ListItem(-5).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-5).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(-5).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-5).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-5).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-5).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-5).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-5).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-5).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-5).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-5).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-5).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-5).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-5).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-5).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-5).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-5).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-5).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-5).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-5).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-5).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-5).Title)]]]]</visible>
++ SubString(ListItem(-5).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(-5).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(-5).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(-5).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(-5).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(-5).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(-5).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(-5).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(-5).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(-5).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(-5).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-5).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-5).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-5).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-5).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-5).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-5).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-5).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-5).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-5).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-5).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-5).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-5).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-5).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-5).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-5).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-5).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-5).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-5).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-5).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-5).Title)]]]]</visible>
 		<visible>[!Container.ListItem(-5).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(-5).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility-4">
 		<texture>$INFO[ListItem(-4).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-4).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(-4).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-4).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-4).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-4).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-4).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-4).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-4).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-4).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-4).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-4).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-4).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-4).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-4).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-4).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-4).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-4).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-4).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-4).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-4).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-4).Title)]]]]</visible>
++ SubString(ListItem(-4).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(-4).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(-4).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(-4).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(-4).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(-4).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(-4).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(-4).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(-4).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(-4).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(-4).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-4).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-4).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-4).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-4).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-4).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-4).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-4).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-4).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-4).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-4).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-4).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-4).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-4).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-4).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-4).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-4).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-4).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-4).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-4).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-4).Title)]]]]</visible>
 		<visible>[!Container.ListItem(-4).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(-4).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility-3">
 		<texture>$INFO[ListItem(-3).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-3).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(-3).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-3).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-3).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-3).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-3).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-3).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-3).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-3).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-3).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-3).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-3).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-3).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-3).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-3).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-3).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-3).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-3).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-3).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-3).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-3).Title)]]]]</visible>
++ SubString(ListItem(-3).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(-3).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(-3).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(-3).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(-3).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(-3).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(-3).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(-3).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(-3).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(-3).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(-3).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-3).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-3).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-3).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-3).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-3).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-3).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-3).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-3).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-3).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-3).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-3).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-3).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-3).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-3).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-3).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-3).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-3).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-3).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-3).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-3).Title)]]]]</visible>
 		<visible>[!Container.ListItem(-3).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(-3).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility-2">
 		<texture>$INFO[ListItem(-2).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-2).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(-2).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-2).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-2).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-2).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-2).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-2).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-2).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-2).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-2).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-2).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-2).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-2).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-2).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-2).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-2).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-2).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-2).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-2).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-2).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-2).Title)]]]]</visible>
++ SubString(ListItem(-2).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(-2).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(-2).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(-2).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(-2).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(-2).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(-2).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(-2).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(-2).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(-2).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(-2).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-2).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-2).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-2).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-2).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-2).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-2).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-2).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-2).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-2).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-2).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-2).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-2).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-2).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-2).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-2).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-2).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-2).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-2).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-2).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-2).Title)]]]]</visible>
 		<visible>[!Container.ListItem(-2).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(-2).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility-1">
 		<texture>$INFO[ListItem(-1).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(-1).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(-1).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(-1).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(-1).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(-1).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(-1).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(-1).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(-1).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(-1).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-1).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-1).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-1).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-1).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-1).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-1).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-1).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-1).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-1).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-1).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-1).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-1).Title)]]]]</visible>
++ SubString(ListItem(-1).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(-1).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(-1).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(-1).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(-1).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(-1).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(-1).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(-1).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(-1).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(-1).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(-1).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(-1).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(-1).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(-1).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(-1).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(-1).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(-1).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(-1).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(-1).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(-1).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(-1).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(-1).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(-1).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(-1).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(-1).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(-1).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(-1).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(-1).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(-1).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(-1).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(-1).Title)]]]]</visible>
 		<visible>[!Container.ListItem(-1).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(-1).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility0">
 		<texture>$INFO[ListItem(0).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(0).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(0).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(0).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(0).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(0).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(0).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(0).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(0).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(0).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(0).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(0).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(0).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(0).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(0).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(0).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(0).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(0).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(0).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(0).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(0).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(0).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(0).Title)]]]]</visible>
++ SubString(ListItem(0).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(0).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(0).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(0).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(0).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(0).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(0).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(0).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(0).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(0).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(0).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(0).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(0).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(0).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(0).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(0).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(0).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(0).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(0).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(0).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(0).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(0).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(0).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(0).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(0).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(0).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(0).Title)]]]]</visible>
 		<visible>[!Container.ListItem(0).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(0).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility1">
 		<texture>$INFO[ListItem(1).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(1).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(1).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(1).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(1).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(1).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(1).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(1).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(1).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(1).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(1).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(1).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(1).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(1).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(1).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(1).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(1).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(1).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(1).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(1).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(1).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(1).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(1).Title)]]]]</visible>
++ SubString(ListItem(1).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(1).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(1).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(1).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(1).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(1).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(1).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(1).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(1).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(1).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(1).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(1).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(1).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(1).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(1).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(1).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(1).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(1).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(1).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(1).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(1).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(1).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(1).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(1).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(1).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(1).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(1).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(1).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(1).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(1).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(1).Title)]]]]</visible>
 		<visible>[!Container.ListItem(1).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(1).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility2">
 		<texture>$INFO[ListItem(2).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(2).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(2).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(2).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(2).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(2).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(2).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(2).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(2).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(2).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(2).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(2).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(2).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(2).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(2).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(2).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(2).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(2).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(2).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(2).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(2).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(2).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(2).Title)]]]]</visible>
++ SubString(ListItem(2).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(2).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(2).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(2).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(2).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(2).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(2).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(2).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(2).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(2).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(2).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(2).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(2).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(2).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(2).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(2).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(2).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(2).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(2).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(2).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(2).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(2).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(2).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(2).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(2).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(2).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(2).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(2).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(2).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(2).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(2).Title)]]]]</visible>
 		<visible>[!Container.ListItem(2).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(2).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility3">
 		<texture>$INFO[ListItem(3).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(3).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(3).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(3).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(3).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(3).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(3).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(3).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(3).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(3).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(3).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(3).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(3).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(3).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(3).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(3).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(3).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(3).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(3).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(3).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(3).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(3).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(3).Title)]]]]</visible>
++ SubString(ListItem(3).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(3).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(3).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(3).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(3).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(3).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(3).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(3).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(3).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(3).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(3).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(3).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(3).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(3).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(3).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(3).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(3).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(3).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(3).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(3).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(3).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(3).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(3).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(3).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(3).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(3).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(3).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(3).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(3).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(3).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(3).Title)]]]]</visible>
 		<visible>[!Container.ListItem(3).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(3).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility4">
 		<texture>$INFO[ListItem(4).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(4).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(4).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(4).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(4).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(4).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(4).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(4).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(4).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(4).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(4).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(4).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(4).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(4).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(4).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(4).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(4).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(4).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(4).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(4).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(4).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(4).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(4).Title)]]]]</visible>
++ SubString(ListItem(4).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(4).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(4).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(4).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(4).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(4).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(4).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(4).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(4).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(4).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(4).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(4).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(4).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(4).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(4).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(4).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(4).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(4).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(4).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(4).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(4).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(4).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(4).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(4).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(4).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(4).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(4).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(4).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(4).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(4).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(4).Title)]]]]</visible>
 		<visible>[!Container.ListItem(4).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(4).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility5">
 		<texture>$INFO[ListItem(5).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(5).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(5).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(5).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(5).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(5).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(5).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(5).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(5).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(5).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(5).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(5).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(5).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(5).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(5).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(5).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(5).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(5).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(5).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(5).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(5).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(5).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(5).Title)]]]]</visible>
++ SubString(ListItem(5).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(5).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(5).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(5).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(5).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(5).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(5).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(5).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(5).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(5).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(5).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(5).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(5).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(5).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(5).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(5).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(5).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(5).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(5).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(5).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(5).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(5).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(5).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(5).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(5).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(5).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(5).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(5).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(5).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(5).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(5).Title)]]]]</visible>
 		<visible>[!Container.ListItem(5).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(5).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility6">
 		<texture>$INFO[ListItem(6).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(6).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(6).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(6).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(6).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(6).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(6).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(6).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(6).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(6).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(6).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(6).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(6).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(6).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(6).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(6).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(6).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(6).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(6).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(6).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(6).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(6).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(6).Title)]]]]</visible>
++ SubString(ListItem(6).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(6).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(6).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(6).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(6).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(6).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(6).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(6).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(6).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(6).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(6).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(6).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(6).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(6).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(6).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(6).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(6).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(6).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(6).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(6).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(6).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(6).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(6).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(6).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(6).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(6).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(6).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(6).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(6).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(6).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(6).Title)]]]]</visible>
 		<visible>[!Container.ListItem(6).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(6).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility7">
 		<texture>$INFO[ListItem(7).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(7).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(7).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(7).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(7).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(7).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(7).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(7).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(7).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(7).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(7).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(7).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(7).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(7).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(7).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(7).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(7).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(7).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(7).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(7).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(7).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(7).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(7).Title)]]]]</visible>
++ SubString(ListItem(7).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(7).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(7).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(7).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(7).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(7).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(7).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(7).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(7).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(7).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(7).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(7).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(7).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(7).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(7).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(7).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(7).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(7).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(7).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(7).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(7).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(7).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(7).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(7).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(7).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(7).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(7).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(7).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(7).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(7).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(7).Title)]]]]</visible>
 		<visible>[!Container.ListItem(7).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(7).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility8">
 		<texture>$INFO[ListItem(8).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(8).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(8).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(8).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(8).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(8).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(8).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(8).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(8).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(8).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(8).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(8).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(8).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(8).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(8).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(8).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(8).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(8).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(8).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(8).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(8).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(8).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(8).Title)]]]]</visible>
++ SubString(ListItem(8).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(8).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(8).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(8).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(8).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(8).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(8).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(8).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(8).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(8).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(8).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(8).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(8).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(8).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(8).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(8).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(8).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(8).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(8).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(8).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(8).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(8).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(8).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(8).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(8).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(8).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(8).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(8).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(8).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(8).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(8).Title)]]]]</visible>
 		<visible>[!Container.ListItem(8).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(8).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="OverlayVisibility9">
 		<texture>$INFO[ListItem(9).Overlay,thumbs/]</texture>
 		<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(9).Overlay,OverlayWatched.png)] | [Skin.HasSetting(newstatus)
-+ SubString(ListItem(9).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [StringCompare(Window(Home).Property(LatestMovie.1.Title),ListItem(9).Label)
-| StringCompare(Window(Home).Property(LatestMovie.2.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.3.Title),ListItem(9).Label)
-| StringCompare(Window(Home).Property(LatestMovie.4.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.5.Title),ListItem(9).Label)
-| StringCompare(Window(Home).Property(LatestMovie.6.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.7.Title),ListItem(9).Label)
-| StringCompare(Window(Home).Property(LatestMovie.8.Title),ListItem(9).Label) | StringCompare(Window(Home).Property(LatestMovie.9.Title),ListItem(9).Label)
-| StringCompare(Window(Home).Property(LatestMovie.10.Title),ListItem(9).Label)]] | [[Container.Content(tvshows)
-| Container.Content(seasons)] + [StringCompare(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(9).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(9).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(9).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(9).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(9).TvShowTitle) | StringCompare(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(9).TvShowTitle)
-| StringCompare(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(9).TvShowTitle)]] | [Container.Content(episodes)
-+ [StringCompare(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(9).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(9).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(9).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(9).Title)
-| StringCompare(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(9).Title) | StringCompare(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(9).Title)]]]]</visible>
++ SubString(ListItem(9).Overlay,OverlayUnWatched.png) + [[Container.Content(movies) + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(9).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(9).Label) | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(9).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(9).Label) | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(9).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(9).Label) | String.IsEqual(Window(Home).Property(LatestMovie.7.Title),ListItem(9).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.8.Title),ListItem(9).Label) | String.IsEqual(Window(Home).Property(LatestMovie.9.Title),ListItem(9).Label)
+| String.IsEqual(Window(Home).Property(LatestMovie.10.Title),ListItem(9).Label)]] | [[Container.Content(tvshows)
+| Container.Content(seasons)] + [String.IsEqual(Window(Home).Property(LatestEpisode.1.ShowTitle),ListItem(9).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.2.ShowTitle),ListItem(9).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.3.ShowTitle),ListItem(9).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.4.ShowTitle),ListItem(9).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.5.ShowTitle),ListItem(9).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.6.ShowTitle),ListItem(9).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.7.ShowTitle),ListItem(9).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.8.ShowTitle),ListItem(9).TvShowTitle) | String.IsEqual(Window(Home).Property(LatestEpisode.9.ShowTitle),ListItem(9).TvShowTitle)
+| String.IsEqual(Window(Home).Property(LatestEpisode.10.ShowTitle),ListItem(9).TvShowTitle)]] | [Container.Content(episodes)
++ [String.IsEqual(Window(Home).Property(LatestEpisode.1.EpisodeTitle),ListItem(9).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.2.EpisodeTitle),ListItem(9).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.3.EpisodeTitle),ListItem(9).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.4.EpisodeTitle),ListItem(9).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.5.EpisodeTitle),ListItem(9).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.6.EpisodeTitle),ListItem(9).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.7.EpisodeTitle),ListItem(9).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.8.EpisodeTitle),ListItem(9).Title)
+| String.IsEqual(Window(Home).Property(LatestEpisode.9.EpisodeTitle),ListItem(9).Title) | String.IsEqual(Window(Home).Property(LatestEpisode.10.EpisodeTitle),ListItem(9).Title)]]]]</visible>
 		<visible>[!Container.ListItem(9).IsResumable + Skin.HasSetting(InProgressFlag)] | [Container.ListItem(9).IsResumable + !Skin.HasSetting(InProgressFlag)] | !Skin.HasSetting(InProgressFlag)</visible>
 	</include>
 	<include name="ReloadWindowOnClick">
@@ -742,7 +742,7 @@
 			<width>1920</width>
 			<height>750</height>
 			<visible>Skin.HasSetting(infopane_panel2) + !Skin.HasSetting(infopanel_textonly)</visible>
-			<visible>Window.IsActive(1112) | Control.IsVisible(197) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
+			<visible>Window.IsActive(1112) | Control.IsVisible(197) | Control.HasFocus(7000) | String.IsEqual(Control.GetLabel(4421),infopanelon)</visible>
 			<visible>Control.IsVisible(9900)</visible>
 			<visible>Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(509) | Control.IsVisible(501) | [Control.IsVisible(57) + Skin.HasSetting(smallshiftview)]</visible>
 			<animation effect="slide" start="0,-1200" end="0,0" time="600" tween="cubic">VisibleChange</animation>
@@ -824,7 +824,7 @@
 				<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 				<bordersize>7</bordersize>
 				<animation effect="zoom" end="110" center="1800,270" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(no_infopane_panel) + Control.IsVisible(503)">Conditional</animation>
-				<visible>StringCompare(Control.GetLabel(4420),fanart) + [!Skin.HasSetting(infopanel_extrafanart) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+				<visible>String.IsEqual(Control.GetLabel(4420),fanart) + [!Skin.HasSetting(infopanel_extrafanart) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
 				<animation type="VisibleChange">
 					<effect type="fade" end="100" delay="320" time="160"/>
 				</animation>
@@ -841,7 +841,7 @@
 				<include condition="!Window.IsActive(pictures)">Aspectratio_Scale</include>
 				<timeperimage>3000</timeperimage>
 				<imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
-				<visible>StringCompare(Control.GetLabel(4420),fanart) + Skin.HasSetting(infopanel_extrafanart)</visible>
+				<visible>String.IsEqual(Control.GetLabel(4420),fanart) + Skin.HasSetting(infopanel_extrafanart)</visible>
 				<include>Animation_VisibleChange200</include>
 			</control>
 			<!-- END Extra Fanart by ShadowTek -->
@@ -865,7 +865,7 @@
 			<control type="group"> 	<!-- Left Panel -->
 				<left>230</left>
 				<top>-2</top>
-				<visible>StringCompare(Control.GetLabel(4420),fanart) | StringCompare(Control.GetLabel(4420),fourthumbs) | StringCompare(Control.GetLabel(4420),poster) | StringCompare(Control.GetLabel(4420),extrathumbs)</visible>
+				<visible>String.IsEqual(Control.GetLabel(4420),fanart) | String.IsEqual(Control.GetLabel(4420),fourthumbs) | String.IsEqual(Control.GetLabel(4420),poster) | String.IsEqual(Control.GetLabel(4420),extrathumbs)</visible>
 				<animation type="VisibleChange">
 					<effect type="fade" end="150" delay="320" time="160"/>
 				</animation>
@@ -942,14 +942,14 @@
 						<label>$INFO[ListItem.RatingAndVotes]</label>
 						<scrollspeed>200</scrollspeed>
 						<pauseatend>3000</pauseatend>
-						<visible>!IsEmpty(ListItem.Top250)</visible>
+						<visible>!String.IsEmpty(ListItem.Top250)</visible>
 					</control>
 					<control type="label">
 						<width>315</width>
 						<height>47</height>
 						<label fallback="31006">$VAR[FanartPanelValue4Var]</label>
 						<scroll>true</scroll>
-						<visible>IsEmpty(ListItem.Top250)</visible>
+						<visible>String.IsEmpty(ListItem.Top250)</visible>
 					</control>
 					<control type="label">
 						<width>420</width>
@@ -971,7 +971,7 @@
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
 					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 				</control>
 				<control type="textbox">   <!-- content bottom lvl1-->
 					<top>228</top>
@@ -980,7 +980,7 @@
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
 					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>!StringCompare(Control.GetLabel(4420),fanart) + !Skin.HasSetting(NoFlow)</visible>
+					<visible>!String.IsEqual(Control.GetLabel(4420),fanart) + !Skin.HasSetting(NoFlow)</visible>
 				</control>
 				<control type="textbox">    <!-- ?????? -->
 					<top>228</top>
@@ -989,7 +989,7 @@
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
 					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>!StringCompare(Control.GetLabel(4420),fanart) + Skin.HasSetting(NoFlow)</visible>
+					<visible>!String.IsEqual(Control.GetLabel(4420),fanart) + Skin.HasSetting(NoFlow)</visible>
 				</control>
 			</control>
 			<control type="group">  <!-- PANEL posters tv and movies !!! -->
@@ -1007,7 +1007,7 @@
 					<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 					<bordersize>7</bordersize>
 					<animation effect="zoom" end="100" center="1800,270" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(no_infopane_panel) + Control.IsVisible(503)">Conditional</animation>
-					<visible>StringCompare(Control.GetLabel(4420),poster) | StringCompare(Control.GetLabel(4420),extrathumbs)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),poster) | String.IsEqual(Control.GetLabel(4420),extrathumbs)</visible>
 				</control>
 				<!-- BEGIN Extra Fanart by ShadowTek -->
 				<control type="multiimage">
@@ -1021,7 +1021,7 @@
 					<include condition="!Window.IsActive(pictures)">Aspectratio_Scale</include>
 					<timeperimage>3000</timeperimage>
 					<imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
-					<visible>StringCompare(Control.GetLabel(4420),poster) | StringCompare(Control.GetLabel(4420),extrathumbs)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),poster) | String.IsEqual(Control.GetLabel(4420),extrathumbs)</visible>
 					<include>Animation_VisibleChange200</include>
 				</control>
 				<!-- END Extra Fanart by ShadowTek -->
@@ -1037,7 +1037,7 @@
 					<animation effect="rotatey" center="auto" start="-45" end="45" time="0" condition="true">Conditional</animation>
 					<camera x="1250" y="370"/>
 					<animation effect="zoom" end="112" time="0" delay="0" reversible="false" condition="true">Conditional</animation>
-					<visible>![StringCompare(Control.GetLabel(4420),fourthumbs) | StringCompare(Control.GetLabel(4420),fanart) | StringCompare(Control.GetLabel(4420),extrathumbs)]</visible>
+					<visible>![String.IsEqual(Control.GetLabel(4420),fourthumbs) | String.IsEqual(Control.GetLabel(4420),fanart) | String.IsEqual(Control.GetLabel(4420),extrathumbs)]</visible>
 				</control>
 				<!--  Posters for sets: ShadowTek -->
                 <control type="image">
@@ -1066,7 +1066,7 @@
 					<animation effect="rotatey" center="auto" start="-45" end="45" time="0" condition="true">Conditional</animation>
 					<camera x="1250" y="380"/>
 					<animation effect="zoom" end="112" time="0" delay="0" reversible="false" condition="true">Conditional</animation>
-					<visible>![StringCompare(Control.GetLabel(4420),fourthumbs) | StringCompare(Control.GetLabel(4420),fanart) | StringCompare(Control.GetLabel(4420),extrathumbs)]</visible>
+					<visible>![String.IsEqual(Control.GetLabel(4420),fourthumbs) | String.IsEqual(Control.GetLabel(4420),fanart) | String.IsEqual(Control.GetLabel(4420),extrathumbs)]</visible>
 				</control>
 			</control>
 			<!-- Right side -->
@@ -1074,7 +1074,7 @@
 				<visible>Container.Content(movies)</visible>
 				<control type="group">
 					<left>580</left>
-					<visible>StringCompare(Control.GetLabel(4420),fourthumbs)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fourthumbs)</visible>
 					<animation type="VisibleChange">
 						<effect type="fade" end="100" delay="320" time="160"/>
 					</animation>
@@ -1107,7 +1107,7 @@
 						<texture background="true" diffuse="thumbs/banner_mask.png">$INFO[Container.ListItem.Art(banner)]</texture>
 						<bordertexture border="12">thumbs/banner_shadow_b.png</bordertexture>
 						<bordersize>12</bordersize>
-						<visible>!StringCompare(Control.GetLabel(4420),fanart)</visible>
+						<visible>!String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 					</control>
 				</control>
 				<control type="group">
@@ -1192,7 +1192,7 @@
 				</control>
 			</control>
 			<control type="group">    <!-- TV SHOW PANEL RIGHT SIDE -->
-				<visible>Container.Content(tvshows) + StringCompare(Control.GetLabel(4420),fourthumbs) | StringCompare(Control.GetLabel(4420),fanart)</visible>
+				<visible>Container.Content(tvshows) + String.IsEqual(Control.GetLabel(4420),fourthumbs) | String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 				<animation type="VisibleChange">
 					<effect type="fade" end="100" delay="320" time="160"/>
 				</animation>
@@ -1210,7 +1210,7 @@
 						<fadetime>400</fadetime>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>StringCompare(Control.GetLabel(4420),fourthumbs)</visible>
+						<visible>String.IsEqual(Control.GetLabel(4420),fourthumbs)</visible>
 					</control>
 					<control type="image" id="9003">  <!--  tv season 4thumbs bottom right lvl 1 -->
 						<left>398</left>
@@ -1221,7 +1221,7 @@
 						<fadetime>400</fadetime>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>StringCompare(Control.GetLabel(4420),fourthumbs)</visible>
+						<visible>String.IsEqual(Control.GetLabel(4420),fourthumbs)</visible>
 					</control>
 					<control type="image" id="9004">  <!--  tv season Fanart bottom right lvl 1+2 -->
 						<left>398</left>
@@ -1232,7 +1232,7 @@
 						<fadetime>400</fadetime>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
+						<visible>String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 						<visible>!Container.Content(movies)</visible>
 					</control>
 					<control type="image">   <!-- tv season Fanart clearart top right panel LVL2+3-->
@@ -1242,7 +1242,7 @@
 						<height>160</height>
 						<texture background="true">$INFO[Container.ListItem.Art(tvshow.clearart)]</texture>
 						<fadetime>400</fadetime>
-						<visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
+						<visible>String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 					</control>
 					<control type="image">   <!-- tv season Fanart clearart top right panel LVL1 -->
 						<left>398</left>
@@ -1252,12 +1252,12 @@
 						<texture background="true">$INFO[Container.ListItem.Art(clearart)]</texture>
 						<fadetime>400</fadetime>
 						<bordersize>7</bordersize>
-						<visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
+						<visible>String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 					</control>
 				</control>
 				<control type="group">   <!-- TV 4thumbs Center panel -->
 					<left>580</left>
-					<animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo + StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
+					<animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo + String.IsEqual(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
 					<control type="image">  <!-- tv 4thumbs center clearart top right center -->
 						<left>367</left>
 						<top>122</top>
@@ -1267,7 +1267,7 @@
 						<texture background="true">$INFO[Container.ListItem.Art(clearart)]</texture>
 						<fadetime>400</fadetime>
 						<bordersize>7</bordersize>
-						<visible>!StringCompare(Control.GetLabel(4420),fanart)</visible>
+						<visible>!String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 					</control>
 					<control type="image" id="9005">  <!-- tv 4thumbs center banner bottom -->
 						<left>1</left>
@@ -1277,7 +1277,7 @@
 						<texture background="true" diffuse="thumbs/banner_mask.png">$INFO[Container.ListItem.Art(banner)]</texture>
 						<bordertexture border="12">thumbs/banner_shadow_b.png</bordertexture>
 						<bordersize>12</bordersize>
-						<visible>!StringCompare(Control.GetLabel(4420),fanart)</visible>
+						<visible>!String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 					</control>
 					<control type="image">    <!-- tv 4thumbs center character or logo top left center -->
 						<left>10</left>
@@ -1288,15 +1288,15 @@
 						<texture background="true">$VAR[InfoPanelCharacterArtVar]</texture>
 						<fadetime>400</fadetime>
 						<bordersize>7</bordersize>
-						<visible>!StringCompare(Control.GetLabel(4420),fanart)</visible>
+						<visible>!String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 					</control>
 				</control>
 			</control>
 			<control type="group">   <!--  trailer video center -->
 				<left>588</left>
 				<top>127</top>
-				<animation effect="slide" end="0,0" reversible="false" condition="StringCompare(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
-				<animation effect="zoom" center="auto" start="100" end="100" time="480" tween="back" reversible="false" condition="StringCompare(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
+				<animation effect="slide" end="0,0" reversible="false" condition="String.IsEqual(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
+				<animation effect="zoom" center="auto" start="100" end="100" time="480" tween="back" reversible="false" condition="String.IsEqual(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
 				<visible>Player.HasVideo</visible>
 				<animation effect="fade" end="100" time="0" delay="880">Visible</animation>
 				<control type="image">
@@ -1312,10 +1312,10 @@
 		</control>
 		<!-- BEGIN Next Aired -->
 		<control type="group">
-			<visible>[!Stringcompare(Control.GetLabel(4421),infopanelon) + !Control.IsVisible(750) + [Container.Content(tvshows) | Container.Content(seasons)]] + Skin.HasSetting(hidenextdayaired)</visible>
+			<visible>[!String.IsEqual(Control.GetLabel(4421),infopanelon) + !Control.IsVisible(750) + [Container.Content(tvshows) | Container.Content(seasons)]] + Skin.HasSetting(hidenextdayaired)</visible>
 			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="Control.IsVisible(7550)">Conditional</animation>
 			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(61)">Conditional</animation>
-			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="IsEmpty(Window(Home).Property(NextAired.NextDate))">Conditional</animation>
+			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="String.IsEmpty(Window(Home).Property(NextAired.NextDate))">Conditional</animation>
 			<animation effect="slide" end="0,-145" time="240" easing="in" tween="cubic">WindowClose</animation>
 			<animation effect="slide" end="0,40" time="320" easing="inout" tween="cubic" condition="Skin.HasSetting(FadedTopBar) | !Skin.HasSetting(ClassicTopBar)">Conditional</animation>
 			<control type="image">
@@ -1357,7 +1357,7 @@
 			<width>1920</width>
 			<height>750</height>
 			<visible>!Skin.HasSetting(infopane_panel2) + !Skin.HasSetting(infopanel_textonly)</visible>
-			<visible>Window.IsActive(1112) | Control.IsVisible(197) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
+			<visible>Window.IsActive(1112) | Control.IsVisible(197) | Control.HasFocus(7000) | String.IsEqual(Control.GetLabel(4421),infopanelon)</visible>
 			<visible>Control.IsVisible(9900)</visible>
 			<visible>Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(509) | Control.IsVisible(501) | [Control.IsVisible(57) + Skin.HasSetting(smallshiftview)]</visible>
 			<animation effect="slide" start="0,-1200" end="0,0" time="600" tween="cubic">VisibleChange</animation>
@@ -1405,7 +1405,7 @@
 				<animation effect="fade" start="100" end="17" time="40" condition="true">Conditional</animation>
 				<visible>![[Container.Content(tvshows) | Container.Content(movies) | Container.Content(artists)] + Control.IsVisible(503) + [Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)]]</visible>
 				<visible>!Control.isVisible(8822) + !Skin.HasSetting(LogoBehindPlot)</visible>
-				<animation type="Conditional" condition="Stringcompare(Control.GetLabel(4420),fanart) | Container.Content(seasons) | Container.Content(episodes)">
+				<animation type="Conditional" condition="String.IsEqual(Control.GetLabel(4420),fanart) | Container.Content(seasons) | Container.Content(episodes)">
 					<effect type="slide" end="-480,160" time="0"/>
 					<effect type="zoom" start="100" end="83" time="0" tween="cubic" easing="inout" center="auto"/>
 				</animation>
@@ -1468,7 +1468,7 @@
 				<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 				<bordersize>7</bordersize>
 				<animation effect="zoom" end="108" center="1800,270" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(no_infopane_panel) + Control.IsVisible(503)">Conditional</animation>
-				<visible>StringCompare(Control.GetLabel(4420),fanart) + !Skin.Hassetting(infopanel_extrafanart)</visible>
+				<visible>String.IsEqual(Control.GetLabel(4420),fanart) + !Skin.Hassetting(infopanel_extrafanart)</visible>
 				<animation type="VisibleChange">
 					<effect type="fade" end="100" delay="320" time="160"/>
 				</animation>
@@ -1485,7 +1485,7 @@
 				<include condition="!Window.IsActive(pictures)">Aspectratio_Scale</include>
 				<timeperimage>3000</timeperimage>
 				<imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
-				<visible>StringCompare(Control.GetLabel(4420),fanart) + Skin.Hassetting(infopanel_extrafanart)</visible>
+				<visible>String.IsEqual(Control.GetLabel(4420),fanart) + Skin.Hassetting(infopanel_extrafanart)</visible>
 				<include>Animation_VisibleChange200</include>
 			</control>
 			<!-- END Extra Fanart by ShadowTek -->
@@ -1508,9 +1508,9 @@
 			<control type="group">
 				<left>158</left>
 				<top>74</top>
-				<visible>StringCompare(Control.GetLabel(4420),fanart) | StringCompare(Control.GetLabel(4420),fourthumbs)</visible>
-				<animation effect="slide" end="472,0" time="0" easing="inout" tween="cubic" condition="StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo + StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
+				<visible>String.IsEqual(Control.GetLabel(4420),fanart) | String.IsEqual(Control.GetLabel(4420),fourthumbs)</visible>
+				<animation effect="slide" end="472,0" time="0" easing="inout" tween="cubic" condition="String.IsEqual(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo + String.IsEqual(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
 				<animation type="VisibleChange">
 					<effect type="fade" end="100" delay="320" time="160"/>
 				</animation>
@@ -1583,14 +1583,14 @@
 						<label>$INFO[ListItem.RatingAndVotes]</label>
 						<scrollspeed>200</scrollspeed>
 						<pauseatend>3000</pauseatend>
-						<visible>!IsEmpty(ListItem.Top250)</visible>
+						<visible>!String.IsEmpty(ListItem.Top250)</visible>
 					</control>
 					<control type="label">
 						<width>300</width>
 						<height>47</height>
 						<label fallback="31006">$VAR[FanartPanelValue4Var]</label>
 						<scroll>true</scroll>
-						<visible>IsEmpty(ListItem.Top250)</visible>
+						<visible>String.IsEmpty(ListItem.Top250)</visible>
 					</control>
 					<control type="label">
 						<width>420</width>
@@ -1612,7 +1612,7 @@
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
 					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 				</control>
 				<control type="textbox">
 					<top>209</top>
@@ -1621,7 +1621,7 @@
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
 					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>!StringCompare(Control.GetLabel(4420),fanart) + !Skin.HasSetting(NoFlow)</visible>
+					<visible>!String.IsEqual(Control.GetLabel(4420),fanart) + !Skin.HasSetting(NoFlow)</visible>
 				</control>
 				<control type="textbox">
 					<top>209</top>
@@ -1630,11 +1630,11 @@
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
 					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>!StringCompare(Control.GetLabel(4420),fanart) + Skin.HasSetting(NoFlow)</visible>
+					<visible>!String.IsEqual(Control.GetLabel(4420),fanart) + Skin.HasSetting(NoFlow)</visible>
 				</control>
 			</control>
 			<control type="group">
-				<visible>StringCompare(Control.GetLabel(4420),poster) | StringCompare(Control.GetLabel(4420),extrathumbs)</visible>
+				<visible>String.IsEqual(Control.GetLabel(4420),poster) | String.IsEqual(Control.GetLabel(4420),extrathumbs)</visible>
 				<animation type="VisibleChange">
 					<effect type="fade" end="100" delay="320" time="160"/>
 				</animation>
@@ -1648,7 +1648,7 @@
 					<fadetime>200</fadetime>
 					<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 					<bordersize>7</bordersize>
-					<visible>StringCompare(Control.GetLabel(4420),poster)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),poster)</visible>
 				</control>
 				<control type="image">
 					<left>1387.5</left>
@@ -1658,7 +1658,7 @@
 					<texture diffuse="thumbs/movieposter_mask.png">thumbs/thumb_glass.png</texture>
 					<bordertexture border="19.5">thumbs/poster_shadow.png</bordertexture>
 					<bordersize>19.5</bordersize>
-					<visible>StringCompare(Control.GetLabel(4420),poster)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),poster)</visible>
 				</control>
 				<control type="group">
 					<left>158</left>
@@ -1801,7 +1801,7 @@
 				<visible>Container.Content(movies)</visible>
 				<control type="group">
 					<left>155</left>
-					<visible>StringCompare(Control.GetLabel(4420),fourthumbs)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fourthumbs)</visible>
 					<animation type="VisibleChange">
 						<effect type="fade" end="100" delay="320" time="160"/>
 					</animation>
@@ -1855,7 +1855,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Container.Content(tvshows) + StringCompare(Control.GetLabel(4420),fourthumbs)</visible>
+				<visible>Container.Content(tvshows) + String.IsEqual(Control.GetLabel(4420),fourthumbs)</visible>
 				<animation type="VisibleChange">
 					<effect type="fade" end="100" delay="320" time="160"/>
 				</animation>
@@ -1906,10 +1906,10 @@
 			<control type="group">
 				<left>915</left>
 				<top>75</top>
-				<animation effect="slide" end="-348,-22" reversible="false" condition="StringCompare(Control.GetLabel(4420),poster) | StringCompare(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
-				<animation effect="zoom" center="auto" start="100" end="92" time="480" tween="back" reversible="false" condition="StringCompare(Control.GetLabel(4420),poster) | StringCompare(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
-				<animation effect="slide" end="-358,-38" reversible="false" condition="StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
-				<animation effect="zoom" center="auto" start="100" end="88" time="480" tween="back" reversible="false" condition="StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
+				<animation effect="slide" end="-348,-22" reversible="false" condition="String.IsEqual(Control.GetLabel(4420),poster) | String.IsEqual(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
+				<animation effect="zoom" center="auto" start="100" end="92" time="480" tween="back" reversible="false" condition="String.IsEqual(Control.GetLabel(4420),poster) | String.IsEqual(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
+				<animation effect="slide" end="-358,-38" reversible="false" condition="String.IsEqual(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
+				<animation effect="zoom" center="auto" start="100" end="88" time="480" tween="back" reversible="false" condition="String.IsEqual(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
 				<visible>Player.HasVideo</visible>
 				<animation effect="fade" end="100" time="0" delay="880">Visible</animation>
 				<control type="image">
@@ -1925,10 +1925,10 @@
 		</control>
 		<!-- BEGIN Next Aired -->
 		<control type="group">
-			<visible>[!Stringcompare(Control.GetLabel(4421),infopanelon) + !Control.IsVisible(750) + [Container.Content(tvshows) | Container.Content(seasons)]] + Skin.HasSetting(hidenextdayaired)</visible>
+			<visible>[!String.IsEqual(Control.GetLabel(4421),infopanelon) + !Control.IsVisible(750) + [Container.Content(tvshows) | Container.Content(seasons)]] + Skin.HasSetting(hidenextdayaired)</visible>
 			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="Control.IsVisible(7550)">Conditional</animation>
 			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(61)">Conditional</animation>
-			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="IsEmpty(Window(Home).Property(NextAired.NextDate))">Conditional</animation>
+			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="String.IsEmpty(Window(Home).Property(NextAired.NextDate))">Conditional</animation>
 			<animation effect="slide" end="0,-145" time="240" easing="in" tween="cubic">WindowClose</animation>
 			<animation effect="slide" end="0,40" time="320" easing="inout" tween="cubic" condition="Skin.HasSetting(FadedTopBar) | !Skin.HasSetting(ClassicTopBar)">Conditional</animation>
 			<control type="image">
@@ -1972,7 +1972,7 @@
 			<width>1920</width>
 			<height>350</height>
 			<visible>Skin.HasSetting(infopanel_textonly)</visible>
-			<visible>Window.IsActive(1112) | Control.IsVisible(197) | Control.HasFocus(7000) | Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
+			<visible>Window.IsActive(1112) | Control.IsVisible(197) | Control.HasFocus(7000) | String.IsEqual(Control.GetLabel(4421),infopanelon)</visible>
 			<visible>Control.IsVisible(9900)</visible>
 			<visible>Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(509) | Control.IsVisible(501) | [Control.IsVisible(57) + Skin.HasSetting(smallshiftview)]</visible>
 			<animation effect="slide" start="0,-1200" end="0,0" time="600" tween="cubic">VisibleChange</animation>
@@ -2060,8 +2060,8 @@
 			<control type="group">
 				<left>158</left>
 				<top>74</top>
-				<animation effect="slide" end="472,0" time="0" easing="inout" tween="cubic" condition="StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo + StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
+				<animation effect="slide" end="472,0" time="0" easing="inout" tween="cubic" condition="String.IsEqual(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="880" condition="Player.HasVideo + String.IsEqual(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
 				<animation type="VisibleChange">
 					<effect type="fade" end="100" delay="320" time="160"/>
 				</animation>
@@ -2134,14 +2134,14 @@
 						<label>$INFO[ListItem.RatingAndVotes]</label>
 						<scrollspeed>200</scrollspeed>
 						<pauseatend>3000</pauseatend>
-						<visible>!IsEmpty(ListItem.Top250)</visible>
+						<visible>!String.IsEmpty(ListItem.Top250)</visible>
 					</control>
 					<control type="label">
 						<width>300</width>
 						<height>47</height>
 						<label fallback="31006">$VAR[FanartPanelValue4Var]</label>
 						<scroll>true</scroll>
-						<visible>IsEmpty(ListItem.Top250)</visible>
+						<visible>String.IsEmpty(ListItem.Top250)</visible>
 					</control>
 					<control type="label">
 						<width>420</width>
@@ -2164,16 +2164,16 @@
 					<label>$VAR[FanartPanelPlotVar]</label>
 					<textcolor>white6</textcolor>
 					<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 				</control>
 			</control>
 			<control type="group">
 				<left>915</left>
 				<top>75</top>
-				<animation effect="slide" end="-348,-22" reversible="false" condition="StringCompare(Control.GetLabel(4420),poster) | StringCompare(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
-				<animation effect="zoom" center="auto" start="100" end="92" time="480" tween="back" reversible="false" condition="StringCompare(Control.GetLabel(4420),poster) | StringCompare(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
-				<animation effect="slide" end="-358,-38" reversible="false" condition="StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
-				<animation effect="zoom" center="auto" start="100" end="88" time="480" tween="back" reversible="false" condition="StringCompare(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
+				<animation effect="slide" end="-348,-22" reversible="false" condition="String.IsEqual(Control.GetLabel(4420),poster) | String.IsEqual(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
+				<animation effect="zoom" center="auto" start="100" end="92" time="480" tween="back" reversible="false" condition="String.IsEqual(Control.GetLabel(4420),poster) | String.IsEqual(Control.GetLabel(4420),extrathumbs)">Conditional</animation>
+				<animation effect="slide" end="-358,-38" reversible="false" condition="String.IsEqual(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
+				<animation effect="zoom" center="auto" start="100" end="88" time="480" tween="back" reversible="false" condition="String.IsEqual(Control.GetLabel(4420),fourthumbs)">Conditional</animation>
 				<visible>Player.HasVideo</visible>
 				<animation effect="fade" end="100" time="0" delay="880">Visible</animation>
 				<control type="image">
@@ -2189,10 +2189,10 @@
 		</control>
 		<!-- BEGIN Next Aired -->
 		<control type="group">
-			<visible>[!Stringcompare(Control.GetLabel(4421),infopanelon) + !Control.IsVisible(750) + [Container.Content(tvshows) | Container.Content(seasons)]] + Skin.HasSetting(hidenextdayaired)</visible>
+			<visible>[!String.IsEqual(Control.GetLabel(4421),infopanelon) + !Control.IsVisible(750) + [Container.Content(tvshows) | Container.Content(seasons)]] + Skin.HasSetting(hidenextdayaired)</visible>
 			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="Control.IsVisible(7550)">Conditional</animation>
 			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(61)">Conditional</animation>
-			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="IsEmpty(Window(Home).Property(NextAired.NextDate))">Conditional</animation>
+			<animation effect="slide" end="0,-145" time="320" easing="inout" tween="cubic" condition="String.IsEmpty(Window(Home).Property(NextAired.NextDate))">Conditional</animation>
 			<animation effect="slide" end="0,-145" time="240" easing="in" tween="cubic">WindowClose</animation>
 			<animation effect="slide" end="0,40" time="320" easing="inout" tween="cubic" condition="Skin.HasSetting(FadedTopBar) | !Skin.HasSetting(ClassicTopBar)">Conditional</animation>
 			<control type="image">
@@ -2250,7 +2250,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.7.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="-1600,0" delay="1500" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="auto" end="720" delay="1500" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2263,7 +2263,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.8.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="-1600,0" delay="1600" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="auto" end="720" delay="1600" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2276,7 +2276,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.9.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="1600,0" delay="1700" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="auto" end="-720" delay="1700" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2289,7 +2289,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.10.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.10.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.10.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="1600,0" delay="1700" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="auto" end="-720" delay="1700" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2304,7 +2304,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="2770,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2318,7 +2318,7 @@
 						<texture background="true" flipy="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
 						<colordiffuse>22FFFFFF</colordiffuse>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="2770,1124" end="-720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2333,7 +2333,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="-1600,0" delay="1300" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="3020,844" end="720" delay="1300" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2347,7 +2347,7 @@
 						<texture background="true" flipy="true">$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
 						<colordiffuse>22FFFFFF</colordiffuse>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="-1600,0" delay="1300" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="3020,1124" end="-720" delay="1300" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2362,7 +2362,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="-1600,0" delay="1400" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="3270,844" end="720" delay="1400" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2376,7 +2376,7 @@
 						<texture background="true" flipy="true">$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
 						<colordiffuse>22FFFFFF</colordiffuse>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="-1600,0" delay="1400" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="3270,1124" end="-720" delay="1400" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2393,7 +2393,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="1600,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="-850,844" end="-720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2407,7 +2407,7 @@
 						<texture background="true" flipy="true">$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
 						<colordiffuse>22FFFFFF</colordiffuse>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="1600,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="-850,1124" end="720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2422,7 +2422,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="1600,0" delay="1300" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="-1100,844" end="-720" delay="1300" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2436,7 +2436,7 @@
 						<texture background="true" flipy="true">$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
 						<colordiffuse>22FFFFFF</colordiffuse>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="1600,0" delay="1300" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="-1100,1124" end="720" delay="1300" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2451,7 +2451,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="1600,0" delay="1400" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="-1350,844" end="-720" delay="1400" time="1120" tween="quadratic" easing="out"/>
 						</animation>
@@ -2465,7 +2465,7 @@
 						<texture background="true" flipy="true">$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
 						<fadetime>4000</fadetime>
 						<colordiffuse>22FFFFFF</colordiffuse>
-						<animation type="Conditional" condition="Control.IsVisible(1970) + !IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))" reversible="true">
+						<animation type="Conditional" condition="Control.IsVisible(1970) + !String.IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))" reversible="true">
 							<effect type="slide" start="0,0" end="1600,0" delay="1400" time="1120" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="-1350,1124" end="720" delay="1400" time="1120" tween="quadratic" easing="out"/>
 						</animation>

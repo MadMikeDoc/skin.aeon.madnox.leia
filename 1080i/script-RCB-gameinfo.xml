@@ -40,7 +40,7 @@
 		</control>
 		<control type="videowindow">
 			<include>FullscreenDimensions</include>
-			<visible>!IsEmpty(ListItem.Property(videosizebig))</visible>
+			<visible>!String.IsEmpty(ListItem.Property(videosizebig))</visible>
 		</control>
 		<control type="image">
 			<top>404</top>
@@ -135,7 +135,7 @@
 				<label>31332</label>
 				<include>HiddenObject</include>
 				<onclick>PlayMedia($ESCINFO[ListItem.Property(gameplayinfo)],1)</onclick>
-				<visible>!IsEmpty(ListItem.Property(gameplayinfo))</visible>
+				<visible>!String.IsEmpty(ListItem.Property(gameplayinfo))</visible>
 			</control>
 		</control>
 		<control type="group">

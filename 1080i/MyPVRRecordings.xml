@@ -64,7 +64,7 @@
 					<top>480</top>
 					<include>Animation_OpenCloseZoom_New</include>
 					<include>Animation_VisibleChange200</include>
-					<visible>!IsEmpty(Container(50).ListItem.Title)</visible>
+					<visible>!String.IsEmpty(Container(50).ListItem.Title)</visible>
 					<control type="image">
 						<width>804</width>
 						<height>80</height>
@@ -154,7 +154,7 @@
 							<label>$INFO[ListItem.StartDate] - $INFO[ListItem.StartTime]</label>
 							<font>Font_Reg22</font>
 							<textcolor>grey</textcolor>
-							<visible>!IsEmpty(ListItem.StartDate) + !IsEmpty(ListItem.StartTime)</visible>
+							<visible>!String.IsEmpty(ListItem.StartDate) + !String.IsEmpty(ListItem.StartTime)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="55" width="924">
@@ -196,7 +196,7 @@
 							<label>$INFO[ListItem.StartDate] - $INFO[ListItem.StartTime]</label>
 							<font>Font_Reg22</font>
 							<textcolor>grey</textcolor>
-							<visible>!IsEmpty(ListItem.StartDate) + !IsEmpty(ListItem.StartTime)</visible>
+							<visible>!String.IsEmpty(ListItem.StartDate) + !String.IsEmpty(ListItem.StartTime)</visible>
 						</control>
 					</focusedlayout>
 				</control>

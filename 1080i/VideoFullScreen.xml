@@ -4,8 +4,8 @@
 	<controls>
 		<control type="group" id="0">
 			<animation effect="slide" end="0,45" time="160" tween="cubic" condition="Window.IsVisible(seekbar) + !Skin.HasSetting(Show_Info_Paused)">Conditional</animation>
-			<animation effect="slide" end="0,165" time="160" tween="cubic" condition="[Window.IsVisible(seekbar) + Skin.HasSetting(Show_Info_Paused)] | [Window.IsVisible(fullscreeninfo) + IsEmpty(Window(home).Property(morefullscreeninfo)) + Player.Paused]">Conditional</animation>
-			<animation effect="slide" end="0,135" time="160" tween="cubic" condition="!VideoPlayer.Content(LiveTV) + Window.IsVisible(fullscreeninfo) + IsEmpty(Window(home).Property(morefullscreeninfo)) + !Player.Paused">Conditional</animation>
+			<animation effect="slide" end="0,165" time="160" tween="cubic" condition="[Window.IsVisible(seekbar) + Skin.HasSetting(Show_Info_Paused)] | [Window.IsVisible(fullscreeninfo) + String.IsEmpty(Window(home).Property(morefullscreeninfo)) + Player.Paused]">Conditional</animation>
+			<animation effect="slide" end="0,135" time="160" tween="cubic" condition="!VideoPlayer.Content(LiveTV) + Window.IsVisible(fullscreeninfo) + String.IsEmpty(Window(home).Property(morefullscreeninfo)) + !Player.Paused">Conditional</animation>
 			<!-- codec infos -->
 			<control type="image">
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -307,13 +307,13 @@
 				<effect type="fade" time="160" start="100" end="0" />
 				<effect type="slide" time="160" end="0,-98" easing="in" tween="cubic" />
 			</animation>
-			<visible>[Player.Seeking | [Player.DisplayAfterSeek + [!IsEmpty(Player.SeekOffset) | !IsEmpty(Player.Chapter)]] | Player.Forwarding | Player.Rewinding] + ![Player.Paused|[Player.Paused+Player.Seeking] | [Player.Paused+Player.DisplayAfterSeek]]</visible>
+			<visible>[Player.Seeking | [Player.DisplayAfterSeek + [!String.IsEmpty(Player.SeekOffset) | !String.IsEmpty(Player.Chapter)]] | Player.Forwarding | Player.Rewinding] + ![Player.Paused|[Player.Paused+Player.Seeking] | [Player.Paused+Player.DisplayAfterSeek]]</visible>
 			<control type="image" id="1">
 				<posx>704</posx>
 				<width>513</width>
 				<height>87</height>
 				<texture flipy="true">osd/osd_top_bar.png</texture>
-				<visible>[[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek] | [[Player.Paused + Player.Caching] + !Player.Seeking] | Player.Seeking|[Player.DisplayAfterSeek + ![player.forwarding | player.rewinding] + !IsEmpty(Player.SeekOffset)]</visible>
+				<visible>[[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek] | [[Player.Paused + Player.Caching] + !Player.Seeking] | Player.Seeking|[Player.DisplayAfterSeek + ![player.forwarding | player.rewinding] + !String.IsEmpty(Player.SeekOffset)]</visible>
 			</control>
 			<control type="label" id="1">
 				<posx>750</posx>
@@ -328,9 +328,9 @@
 		</control>
 		<control type="group" id="2">
 			<visible>[Player.ShowInfo|Player.Forwarding|Player.Seeking] + ![Window.IsVisible(fullscreeninfo) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
-			<visible>VideoPlayer.Content(LiveTV) + !IsEmpty(VideoPlayer.ChannelName)</visible>
-			<include condition="IsEmpty(Skin.String(LiveTV.InfobarType)) | StringCompare(Skin.String(LiveTV.InfobarType),2)">FullScreenInfoBarLiveTV</include>
-			<include condition="StringCompare(Skin.String(LiveTV.InfobarType),1)">FullScreenInfoBarLiveTV_Compact</include>
+			<visible>VideoPlayer.Content(LiveTV) + !String.IsEmpty(VideoPlayer.ChannelName)</visible>
+			<include condition="String.IsEmpty(Skin.String(LiveTV.InfobarType)) | String.IsEqual(Skin.String(LiveTV.InfobarType),2)">FullScreenInfoBarLiveTV</include>
+			<include condition="String.IsEqual(Skin.String(LiveTV.InfobarType),1)">FullScreenInfoBarLiveTV_Compact</include>
 		</control>
 	</controls>
 </window>

@@ -11,7 +11,7 @@
 					<top>155</top>
 					<width>955</width>
 					<height>807</height>
-					<visible>![!IsEmpty(Skin.String(DisableInfoWallVL)) + Window.IsActive(videos)] + !IsEmpty(Container.FolderPath) + !Container.Content(years)</visible>
+					<visible>![!String.IsEmpty(Skin.String(DisableInfoWallVL)) + Window.IsActive(videos)] + !String.IsEmpty(Container.FolderPath) + !Container.Content(years)</visible>
 					<onleft>9000</onleft>
 					<onright condition="!Skin.HasSetting(AlphabetScrollbar)">60</onright>
 					<onright condition="Skin.HasSetting(AlphabetScrollbar)">6007</onright>
@@ -1099,7 +1099,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<font>Font_Bold40</font>
 							<shadowcolor>black</shadowcolor>
-							<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						</control>
 						<control type="image">
 							<left>805</left>
@@ -1149,7 +1149,7 @@
 									<label>$INFO[ListItem.Label]</label>
 									<font>Font_Bold40</font>
 									<shadowcolor>black</shadowcolor>
-									<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+									<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 								</control>
 								<control type="image">
 									<left>789</left>
@@ -1202,7 +1202,7 @@
 									<label>$INFO[ListItem.Label]</label>
 									<font>Font_Bold40</font>
 									<shadowcolor>black</shadowcolor>
-									<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+									<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 								</control>
 								<control type="image">
 									<left>805</left>
@@ -1364,14 +1364,14 @@
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>white</textcolor>
-							<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+							<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 						</control>
 						<control type="label">
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>$VAR[TitleColorVar]</textcolor>
 							<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-							<visible>StringCompare(ListItem.Label,Container(512).ListItem.SortLetter)</visible>
+							<visible>String.IsEqual(ListItem.Label,Container(512).ListItem.SortLetter)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="33" width="30">
@@ -1379,7 +1379,7 @@
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>$VAR[TitleColorVar]</textcolor>
-							<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+							<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 						</control>
 					</focusedlayout>
 					<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -1394,7 +1394,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true" fallback="empty.png">$INFO[Container.ListItem.Art(clearlogo)]</texture>
 						<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
-						<animation effect="fade" delay="80" end="100" time="240" condition="!Stringcompare(Control.GetLabel(8827),empty.png)">Conditional</animation>
+						<animation effect="fade" delay="80" end="100" time="240" condition="!String.IsEqual(Control.GetLabel(8827),empty.png)">Conditional</animation>
 						<visible>[Skin.HasSetting(movielogosfloor) + Container.Content(movies)] | Container.Content(sets) | [Skin.HasSetting(tvshowlogosfloor) + Container.Content(tvshows)]</visible>
 					</control>
 					<control type="image" id="8827">
@@ -1405,7 +1405,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true" fallback="empty.png">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Label]\logo.png</texture>
 						<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
-						<animation effect="fade" delay="80" end="100" time="240" condition="!Stringcompare(Control.GetLabel(8827),empty.png)">Conditional</animation>
+						<animation effect="fade" delay="80" end="100" time="240" condition="!String.IsEqual(Control.GetLabel(8827),empty.png)">Conditional</animation>
 						<visible>[Skin.HasSetting(artistslogosfloor) + Container.Content(artists)]</visible>
 					</control>
 					<control type="image" id="8827">
@@ -1417,11 +1417,11 @@
 						<texture background="true" diffuse="thumbs/banner_mask.png" fallback="empty.png">$INFO[Container.ListItem.Art(banner)]</texture>
 						<fadetime>200</fadetime>
 						<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
-						<animation effect="fade" delay="160" end="100" time="240" condition="!Stringcompare(Control.GetLabel(8827),empty.png)">Conditional</animation>
+						<animation effect="fade" delay="160" end="100" time="240" condition="!String.IsEqual(Control.GetLabel(8827),empty.png)">Conditional</animation>
 						<visible>Skin.HasSetting(tvshowbannersfloor) + Container.Content(tvshows)</visible>
 					</control>
 					<control type="group">
-						<visible>[Control.IsVisible(8827) + !Container.OnNext + !Container.OnPrevious + Stringcompare(Control.GetLabel(8827),empty.png)] | !Control.IsVisible(8827)</visible>
+						<visible>[Control.IsVisible(8827) + !Container.OnNext + !Container.OnPrevious + String.IsEqual(Control.GetLabel(8827),empty.png)] | !Control.IsVisible(8827)</visible>
 						<control type="label">
 							<posx>1100</posx>
 							<posy>170</posy>
@@ -1518,7 +1518,7 @@
 							<fadetime>400</fadetime>
 							<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 							<bordersize>7</bordersize>
-							<visible>Skin.HasSetting(SkinHelperAnimations) + !IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart)) + !Skin.HasSetting(InfoWallDisableAnimatedFanart)</visible>
+							<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart)) + !Skin.HasSetting(InfoWallDisableAnimatedFanart)</visible>
 						</control>
 
 
@@ -1554,7 +1554,7 @@
 							<height>444</height>
 							<label>$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Label]\fanart.jpg</label>
 							<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
-							<animation effect="fade" delay="80" end="100" time="240" condition="!Stringcompare(Control.GetLabel(8827),empty.png)">Conditional</animation>
+							<animation effect="fade" delay="80" end="100" time="240" condition="!String.IsEqual(Control.GetLabel(8827),empty.png)">Conditional</animation>
 							<visible>Container.Content(artists)</visible>
 						</control>
 

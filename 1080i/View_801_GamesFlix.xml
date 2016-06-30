@@ -13,7 +13,7 @@
 				<fadetime>100</fadetime>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				<texture background="true">special://skin/extras/games/logos/$INFO[ListItem.Label].png</texture>
-				<visible>!IsEmpty(Container.ListItem.Art(fanart))</visible>
+				<visible>!String.IsEmpty(Container.ListItem.Art(fanart))</visible>
 			</control>
 			<!-- End Games Logo -->
 			<!-- MAD - Fake Logos -->
@@ -29,7 +29,7 @@
 				<font>font_SimplerE3D_bold</font>
 				<!--font>unique</font-->
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
-				<visible>IsEmpty(Control.GetLabel(4292))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(4292))</visible>
 			</control>
 			<!-- Multiple Fanart -->
 			<control type="multiimage" id="5900">
@@ -59,7 +59,7 @@
 				<fadetime>500</fadetime>
 				<timeperimage>3000</timeperimage>
 				<imagepath background="true" diffuse="views/KodiFlix/fanart_diffuse2.png">special://skin/backgrounds/games/</imagepath>
-				<visible>IsEmpty(Control.GetLabel(5900)) + IsEmpty(Container.ListItem.Art(fanart)) + !ListItem.IsParentFolder</visible>
+				<visible>String.IsEmpty(Control.GetLabel(5900)) + String.IsEmpty(Container.ListItem.Art(fanart)) + !ListItem.IsParentFolder</visible>
 				<include>Animation_VisibleChange200</include>
 			</control>
 			<!-- End Multiple Fanart -->
@@ -76,19 +76,19 @@
 						<width>580</width>
 						<textcolor>white</textcolor>
 						<include>GamesFlixButtonsValues</include>
-						<visible>!IsEmpty(ListItem.Studio)</visible>
+						<visible>!String.IsEmpty(ListItem.Studio)</visible>
 					</control>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]Genre: [/COLOR][COLOR white]$INFO[ListItem.Genre][/COLOR]</label>
 						<width>650</width>
 						<include>GamesFlixButtonsValues</include>
-						<visible>!IsEmpty(ListItem.Genre)</visible>
+						<visible>!String.IsEmpty(ListItem.Genre)</visible>
 					</control>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]Released: [/COLOR][COLOR white]$INFO[ListItem.Year][/COLOR]</label>
 						<width>650</width>
 						<include>GamesFlixButtonsValues</include>
-						<visible>!IsEmpty(ListItem.Year)</visible>
+						<visible>!String.IsEmpty(ListItem.Year)</visible>
 					</control>
 				</control>
 			</control>

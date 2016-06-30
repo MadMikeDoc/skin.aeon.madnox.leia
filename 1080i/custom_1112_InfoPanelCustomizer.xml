@@ -66,16 +66,16 @@
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[LandscapeThumbSettingsVar][/COLOR]</label2>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(LandscapeThumb)</onclick>
-					<visible>[Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) | Stringcompare(Window(home).Property(actualViewtype),Landscape)] + Container.Content(episodes)</visible>
-					<enable>!Stringcompare(Control.GetLabel(4421),infopaneloff)</enable>
+					<visible>[String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) | String.IsEqual(Window(home).Property(actualViewtype),Landscape)] + Container.Content(episodes)</visible>
+					<enable>!String.IsEqual(Control.GetLabel(4421),infopaneloff)</enable>
 				</control>
 				<control type="button" id="905">
 					<label>$LOCALIZE[31959]:</label>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[TVLandscapeThumbSettingsVar][/COLOR]</label2>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(TVLandscapeThumb)</onclick>
-					<visible>[Stringcompare(Window(home).Property(actualViewtype),Landscape) | Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) | Stringcompare(Window(home).Property(actualViewtype),Banners)] + [[Container.Content(tvshows) + ![Skin.HasSetting(tvposterinfopane) | Skin.HasSetting(tvthumbsinfopane)]] | Container.Content(seasons)]</visible>
-					<enable>!Stringcompare(Control.GetLabel(4421),infopaneloff)</enable>
+					<visible>[String.IsEqual(Window(home).Property(actualViewtype),Landscape) | String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) | String.IsEqual(Window(home).Property(actualViewtype),Banners)] + [[Container.Content(tvshows) + ![Skin.HasSetting(tvposterinfopane) | Skin.HasSetting(tvthumbsinfopane)]] | Container.Content(seasons)]</visible>
+					<enable>!String.IsEqual(Control.GetLabel(4421),infopaneloff)</enable>
 				</control>
 				<control type="radiobutton" id="1625">
 					<label>31696</label>
@@ -131,7 +131,7 @@
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(hidenextdayaired)</onclick>
 					<selected>Skin.HasSetting(hidenextdayaired)</selected>
-					<visible>[[Stringcompare(Window(home).Property(actualViewtype),Landscape) | Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies)] + [[Container.Content(tvshows) + ![Skin.HasSetting(tvposterinfopane) | Skin.HasSetting(tvthumbsinfopane)]] | Container.Content(seasons)]] + !Stringcompare(Control.GetLabel(4421),infopanelon)</visible>
+					<visible>[[String.IsEqual(Window(home).Property(actualViewtype),Landscape) | String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies)] + [[Container.Content(tvshows) + ![Skin.HasSetting(tvposterinfopane) | Skin.HasSetting(tvthumbsinfopane)]] | Container.Content(seasons)]] + !String.IsEqual(Control.GetLabel(4421),infopanelon)</visible>
 				</control>
 			</control>
 			<control type="panel" id="451">
@@ -160,7 +160,7 @@
 						<height>122</height>
 						<info>ListItem.Thumb</info>
 						<aspectratio>keep</aspectratio>
-						<visible>Stringcompare(Control.GetLabel(4420),ListItem.Property(Type))</visible>
+						<visible>String.IsEqual(Control.GetLabel(4420),ListItem.Property(Type))</visible>
 					</control>
 					<control type="label">
 						<left></left>
@@ -192,7 +192,7 @@
 						<height>122</height>
 						<info>ListItem.Thumb</info>
 						<aspectratio>keep</aspectratio>
-						<visible>Stringcompare(Control.GetLabel(4420),ListItem.Property(type))</visible>
+						<visible>String.IsEqual(Control.GetLabel(4420),ListItem.Property(type))</visible>
 					</control>
 					<control type="label">
 						<left></left>
@@ -303,36 +303,36 @@
 					<label>1 $LOCALIZE[31007]</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.SetString(InfopanelDelay,1)</onclick>
-					<enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>
-					<selected>Stringcompare(Skin.String(InfopanelDelay),1)</selected>
+					<enable>String.IsEqual(Control.GetLabel(4421),infopanelonauto)</enable>
+					<selected>String.IsEqual(Skin.String(InfopanelDelay),1)</selected>
 				</control>
 				<control type="radiobutton" id="1201">
 					<label>2 $LOCALIZE[31007]</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.SetString(InfopanelDelay,2)</onclick>
-					<enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>
-					<selected>Stringcompare(Skin.String(InfopanelDelay),2)</selected>
+					<enable>String.IsEqual(Control.GetLabel(4421),infopanelonauto)</enable>
+					<selected>String.IsEqual(Skin.String(InfopanelDelay),2)</selected>
 				</control>
 				<control type="radiobutton" id="1202">
 					<label>3 $LOCALIZE[31007]</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.SetString(InfopanelDelay,3)</onclick>
-					<enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>
-					<selected>Stringcompare(Skin.String(InfopanelDelay),3)</selected>
+					<enable>String.IsEqual(Control.GetLabel(4421),infopanelonauto)</enable>
+					<selected>String.IsEqual(Skin.String(InfopanelDelay),3)</selected>
 				</control>
 				<control type="radiobutton" id="1203">
 					<label>4 $LOCALIZE[31007]</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.SetString(InfopanelDelay,4)</onclick>
-					<enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>
-					<selected>Stringcompare(Skin.String(InfopanelDelay),4)</selected>
+					<enable>String.IsEqual(Control.GetLabel(4421),infopanelonauto)</enable>
+					<selected>String.IsEqual(Skin.String(InfopanelDelay),4)</selected>
 				</control>
 				<control type="radiobutton" id="1204">
 					<label>5 $LOCALIZE[31007]</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.SetString(InfopanelDelay,5)</onclick>
-					<enable>Stringcompare(Control.GetLabel(4421),infopanelonauto)</enable>
-					<selected>Stringcompare(Skin.String(InfopanelDelay),5)</selected>
+					<enable>String.IsEqual(Control.GetLabel(4421),infopanelonauto)</enable>
+					<selected>String.IsEqual(Skin.String(InfopanelDelay),5)</selected>
 				</control>
 			</control>
 		</control>

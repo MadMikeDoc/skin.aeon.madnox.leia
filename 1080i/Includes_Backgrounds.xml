@@ -79,7 +79,7 @@
 				<control type="group">
 					<left>100</left>
 					<top>50</top>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
 					<animation effect="fade" time="320">VisibleChange</animation>
 					<control type="group">
 						<animation effect="zoom" start="180" end="180" center="138,190" time="0" tween="linear" condition="true">Conditional</animation>
@@ -108,7 +108,7 @@
 					<left>1500</left>
 					<top>480</top>
 					<animation effect="fade" time="320">VisibleChange</animation>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
 					<control type="group">
 						<animation effect="zoom" start="180" end="180" center="138,190" time="0" tween="linear" condition="true">Conditional</animation>
 						<animation effect="rotate" center="138,190" start="10" end="10" time="0" condition="true">Conditional</animation>
@@ -135,7 +135,7 @@
 				<control type="group">
 					<left>500</left>
 					<top>270</top>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
 					<animation effect="fade" time="320">VisibleChange</animation>
 					<control type="group">
 						<animation effect="zoom" start="180" end="180" center="138,190" time="0" tween="linear" condition="true">Conditional</animation>
@@ -163,7 +163,7 @@
 				<control type="group">
 					<left>750</left>
 					<top>0</top>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
 					<animation effect="fade" time="320">VisibleChange</animation>
 					<control type="group">
 						<animation effect="zoom" start="180" end="180" center="138,190" time="0" tween="linear" condition="true">Conditional</animation>
@@ -191,7 +191,7 @@
 				<control type="group">
 					<left>150</left>
 					<top>400</top>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
 					<animation effect="fade" time="320">VisibleChange</animation>
 					<control type="group">
 						<animation effect="zoom" start="180" end="180" center="138,190" time="0" tween="linear" condition="true">Conditional</animation>
@@ -219,7 +219,7 @@
 				<control type="group">
 					<left>1380</left>
 					<top>650</top>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.8.Art(poster)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(poster)))</visible>
 					<animation effect="fade" time="320">VisibleChange</animation>
 					<control type="group">
 						<animation effect="zoom" start="180" end="180" center="138,190" time="0" tween="linear" condition="true">Conditional</animation>
@@ -247,7 +247,7 @@
 				<control type="group">
 					<left>1050</left>
 					<top>500</top>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.7.Art(poster)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(poster)))</visible>
 					<animation effect="fade" time="320">VisibleChange</animation>
 					<control type="group">
 						<animation effect="zoom" start="180" end="180" center="138,190" time="0" tween="linear" condition="true">Conditional</animation>
@@ -275,7 +275,7 @@
 				<control type="group">
 					<left>400</left>
 					<top>700</top>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.9.Art(poster)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(poster)))</visible>
 					<animation effect="fade" time="320">VisibleChange</animation>
 					<control type="group">
 						<animation effect="zoom" start="180" end="180" center="138,190" time="0" tween="linear" condition="true">Conditional</animation>
@@ -303,7 +303,7 @@
 				<control type="group">
 					<left>800</left>
 					<top>600</top>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.10.Art(poster)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.10.Art(poster)))</visible>
 					<animation effect="fade" time="320">VisibleChange</animation>
 					<control type="group">
 						<animation effect="zoom" start="180" end="180" center="138,190" time="0" tween="linear" condition="true">Conditional</animation>
@@ -331,7 +331,7 @@
 				<control type="group">
 					<left>1400</left>
 					<top>30</top>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
 					<animation effect="fade" time="320">VisibleChange</animation>
 					<control type="group">
 						<animation effect="zoom" start="180" end="180" center="138,190" time="0" tween="linear" condition="true">Conditional</animation>

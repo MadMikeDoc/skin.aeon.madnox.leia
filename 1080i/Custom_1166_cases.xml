@@ -92,7 +92,7 @@
 						<bordersize>-3</bordersize>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<aspectratio>keep</aspectratio>
-						<visible>Stringcompare(ListItem.Property(casetype),clearcases)</visible>
+						<visible>String.IsEqual(ListItem.Property(casetype),clearcases)</visible>
 					</control>
 					<control type="image">
 						<width>250</width>
@@ -101,7 +101,7 @@
 						<bordersize>-3</bordersize>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<aspectratio>keep</aspectratio>
-						<visible>Stringcompare(ListItem.Property(casetype),colorcases)</visible>
+						<visible>String.IsEqual(ListItem.Property(casetype),colorcases)</visible>
 					</control>
 					<control type="image">
 						<width>250</width>
@@ -110,7 +110,7 @@
 						<bordersize>-3</bordersize>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<aspectratio>keep</aspectratio>
-						<visible>Stringcompare(ListItem.Property(casetype),dbdvd)</visible>
+						<visible>String.IsEqual(ListItem.Property(casetype),dbdvd)</visible>
 					</control>
 					<control type="image">
 						<width>250</width>
@@ -119,7 +119,7 @@
 						<bordersize>-3</bordersize>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<aspectratio>keep</aspectratio>
-						<visible>Stringcompare(ListItem.Property(casetype),none)</visible>
+						<visible>String.IsEqual(ListItem.Property(casetype),none)</visible>
 					</control>
 					<control type="label">
 						<left></left>
@@ -139,7 +139,7 @@
 						<onclick>Skin.SetBool(clearcases)</onclick>
 						<onclick>Skin.SetBool(usecases)</onclick>
 						<property name="casetype">clearcases</property>
-						<visible>[Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) | Stringcompare(Window(home).Property(actualViewtype),Wall_Large) | Stringcompare(Window(home).Property(actualViewtype),Video_RightList) | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),AddonWall) | Stringcompare(Window(home).Property(actualViewtype),KodiFlixView)] + Container.Content(movies) | Container.Content(sets)</visible>
+						<visible>[String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) | String.IsEqual(Window(home).Property(actualViewtype),Wall_Large) | String.IsEqual(Window(home).Property(actualViewtype),Video_RightList) | String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.IsEqual(Window(home).Property(actualViewtype),AddonWall) | String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView)] + Container.Content(movies) | Container.Content(sets)</visible>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[31248]</label>
@@ -149,7 +149,7 @@
 						<onclick>Skin.Reset(clearcases)</onclick>
 						<onclick>Skin.Reset(Colorcases)</onclick>
 						<property name="casetype">dbdvd</property>
-						<visible>[Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) | Stringcompare(Window(home).Property(actualViewtype),Wall_Large) | Stringcompare(Window(home).Property(actualViewtype),Video_RightList) | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),AddonWall) | Stringcompare(Window(home).Property(actualViewtype),KodiFlixView)] + Container.Content(movies) | Container.Content(sets)</visible>
+						<visible>[String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) | String.IsEqual(Window(home).Property(actualViewtype),Wall_Large) | String.IsEqual(Window(home).Property(actualViewtype),Video_RightList) | String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.IsEqual(Window(home).Property(actualViewtype),AddonWall) | String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView)] + Container.Content(movies) | Container.Content(sets)</visible>
 					</item>
 					<item id="3">
 						<label>$LOCALIZE[31182]</label>
@@ -159,7 +159,7 @@
 						<onclick>Skin.Reset(clearcases)</onclick>
 						<onclick>Skin.SetBool(Colorcases)</onclick>
 						<property name="casetype">colorcases</property>
-						<visible>[Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) | Stringcompare(Window(home).Property(actualViewtype),Wall_Large) | Stringcompare(Window(home).Property(actualViewtype),Video_RightList) | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),AddonWall) | Stringcompare(Window(home).Property(actualViewtype),KodiFlixView)] + Container.Content(movies) | Container.Content(sets)</visible>
+						<visible>[String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) | String.IsEqual(Window(home).Property(actualViewtype),Wall_Large) | String.IsEqual(Window(home).Property(actualViewtype),Video_RightList) | String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.IsEqual(Window(home).Property(actualViewtype),AddonWall) | String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView)] + Container.Content(movies) | Container.Content(sets)</visible>
 					</item>
 					<item id="4">
 						<label>$LOCALIZE[106]</label>
@@ -168,7 +168,7 @@
 						<onclick>Skin.Reset(clearcases)</onclick>
 						<onclick>Skin.Reset(usecases)</onclick>
 						<property name="casetype">none</property>
-						<visible>[Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies) | Stringcompare(Window(home).Property(actualViewtype),Wall_Large) | Stringcompare(Window(home).Property(actualViewtype),Video_RightList) | Stringcompare(Window(home).Property(actualViewtype),Shift) | Stringcompare(Window(home).Property(actualViewtype),AddonWall) | Stringcompare(Window(home).Property(actualViewtype),KodiFlixView)] + Container.Content(movies) | Container.Content(sets)</visible>
+						<visible>[String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) | String.IsEqual(Window(home).Property(actualViewtype),Wall_Large) | String.IsEqual(Window(home).Property(actualViewtype),Video_RightList) | String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.IsEqual(Window(home).Property(actualViewtype),AddonWall) | String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView)] + Container.Content(movies) | Container.Content(sets)</visible>
 					</item>
 					<!-- MAD - Original case selection for Infowall - updated above to get correct cases -->
 					<!--item id="5">
@@ -178,7 +178,7 @@
                         <onclick>Skin.SetBool(useclearcasesinfowall2)</onclick>
 						<onclick>Skin.Reset(usecasesinfowall)</onclick>
 						<onclick>Skin.Reset(ColorcasesAddonWall)</onclick>
-						<visible>Stringcompare(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
+						<visible>String.IsEqual(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
                     </item>
                     <item id="6">
                         <label>$LOCALIZE[31248]</label>
@@ -187,7 +187,7 @@
 						<onclick>Skin.Reset(useclearcasesinfowall2)</onclick>
 						<onclick>Skin.SetBool(usecasesinfowall)</onclick>
 						<onclick>Skin.Reset(ColorcasesAddonWall)</onclick>
-						<visible>Stringcompare(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
+						<visible>String.IsEqual(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
                     </item>
                     <item id="7">
                         <label>$LOCALIZE[31182]</label>
@@ -196,7 +196,7 @@
                         <onclick>Skin.SetBool(usecasesinfowall)</onclick>
 						<onclick>Skin.Reset(useclearcasesinfowall2)</onclick>
 						<onclick>Skin.SetBool(ColorcasesAddonWall)</onclick>
-						<visible>Stringcompare(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
+						<visible>String.IsEqual(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
                     </item>
                     <item id="8">
                         <label>$LOCALIZE[106]</label>
@@ -205,7 +205,7 @@
                         <onclick>Skin.Reset(useclearcasesinfowall2)</onclick>
 						<onclick>Skin.Reset(usecasesinfowall)</onclick>
 						<onclick>Skin.Reset(ColorcasesAddonWall)</onclick>
-						<visible>Stringcompare(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
+						<visible>String.IsEqual(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
                     </item-->
 					<item id="9">
 						<label>$LOCALIZE[31248]</label>
@@ -213,7 +213,7 @@
 						<thumb>views/db_dvd_focus.png</thumb>
 						<onclick>Skin.SetBool(usecaseslowlist)</onclick>
 						<onclick>Skin.Reset(ColorcasesLowList)</onclick>
-						<visible>Stringcompare(Window(home).Property(actualViewtype),LowList) + Container.Content(movies)</visible>
+						<visible>String.IsEqual(Window(home).Property(actualViewtype),LowList) + Container.Content(movies)</visible>
 					</item>
 					<item id="10">
 						<label>$LOCALIZE[31182]</label>
@@ -221,7 +221,7 @@
 						<thumb>views/casecolor_focus.png</thumb>
 						<onclick>Skin.SetBool(usecaseslowlist)</onclick>
 						<onclick>Skin.SetBool(ColorcasesLowList)</onclick>
-						<visible>Stringcompare(Window(home).Property(actualViewtype),LowList) + Container.Content(movies)</visible>
+						<visible>String.IsEqual(Window(home).Property(actualViewtype),LowList) + Container.Content(movies)</visible>
 					</item>
 					<item id="11">
 						<label>$LOCALIZE[106]</label>
@@ -229,7 +229,7 @@
 						<thumb>views/nonecases_focus.png</thumb>
 						<onclick>Skin.Reset(usecaseslowlist)</onclick>
 						<onclick>Skin.Reset(ColorcasesLowList)</onclick>
-						<visible>Stringcompare(Window(home).Property(actualViewtype),LowList) + Container.Content(movies)</visible>
+						<visible>String.IsEqual(Window(home).Property(actualViewtype),LowList) + Container.Content(movies)</visible>
 					</item>
 				</content>
 			</control>
@@ -267,21 +267,21 @@
 					<!-- invalid multiple selected tags -->
 					<!--<selected>Skin.HasSetting(Fakediscart)</selected>-->
 					<visible>Container.Content(movies) | Container.Content(sets)</visible>
-					<visible>[Substring(Window(home).Property(actualViewtype),Showcase) | [Stringcompare(Window(home).Property(actualViewtype),TriPanel) + !Stringcompare(Skin.String(TriPanelPosition),3)]]</visible>
+					<visible>[Substring(Window(home).Property(actualViewtype),Showcase) | [String.IsEqual(Window(home).Property(actualViewtype),TriPanel) + !String.IsEqual(Skin.String(TriPanelPosition),3)]]</visible>
 				</control>
 				<control type="radiobutton" id="1201">
 					<label>31018</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(showcasezoom)</onclick>
 					<selected>Skin.HasSetting(showcasezoom)</selected>
-					<visible>Container.Content(movies) + Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies)</visible>
+					<visible>Container.Content(movies) + String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies)</visible>
 				</control>
 				<control type="radiobutton" id="1202">
 					<label>31018</label>
 					<include>Objects_MediaMenuButtonAround</include>
 					<onclick>Skin.ToggleSetting(showcasesquarezoom)</onclick>
 					<selected>Skin.HasSetting(showcasesquarezoom)</selected>
-					<visible>[Container.Content(movies) | Container.Content(sets)] + Stringcompare(Window(home).Property(actualViewtype),ShowcaseSquare)</visible>
+					<visible>[Container.Content(movies) | Container.Content(sets)] + String.IsEqual(Window(home).Property(actualViewtype),ShowcaseSquare)</visible>
 				</control>
 				<control type="radiobutton" id="1203">
 					<label>$LOCALIZE[31812]</label>
@@ -292,7 +292,7 @@
 					<onclick>Skin.Reset(Fakehandtop)</onclick>
 					<onclick>Skin.Reset(Fakehandbottom)</onclick>
 					<selected>Skin.HasSetting(lowlistcdart)</selected>
-					<visible>[Container.Content(movies) | Container.Content(sets)] + Stringcompare(Window(home).Property(actualViewtype),LowList)</visible>
+					<visible>[Container.Content(movies) | Container.Content(sets)] + String.IsEqual(Window(home).Property(actualViewtype),LowList)</visible>
 				</control>
 				<!-- MikeBZH44 Start -->
 				<control type="radiobutton" id="1206">
@@ -303,7 +303,7 @@
 					<onclick>Skin.Reset(showcasecdart)</onclick>
 					<onclick>Skin.ToggleSetting(MikeCasesMod)</onclick>
 					<selected>Skin.HasSetting(MikeCasesMod)</selected>
-					<visible>[Container.Content(movies) | Container.Content(sets)] + Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies)</visible>
+					<visible>[Container.Content(movies) | Container.Content(sets)] + String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies)</visible>
 				</control>
 				<control type="radiobutton" id="1204">
 					<include>Objects_MediaMenuButtonAround</include>
@@ -311,14 +311,14 @@
 					<label>31430</label>
 					<onclick>Skin.ToggleSetting(NoCaseForMovieset)</onclick>
 					<selected>Skin.HasSetting(NoCaseForMovieset)</selected>
-					<visible>Skin.HasSetting(MikeCasesMod) + [[Container.Content(movies) | Container.Content(sets)] + Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies)]</visible>
+					<visible>Skin.HasSetting(MikeCasesMod) + [[Container.Content(movies) | Container.Content(sets)] + String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies)]</visible>
 				</control>
 				<control type="radiobutton" id="1207">
 					<include>Objects_MediaMenuButtonAround</include>
 					<label>31431</label>
 					<onclick>Skin.ToggleSetting(OpenBoxSet)</onclick>
 					<selected>Skin.HasSetting(OpenBoxSet)</selected>
-					<visible>Skin.HasSetting(NoCaseForMovieset) + [[Container.Content(movies) | Container.Content(sets)] + Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies)]</visible>
+					<visible>Skin.HasSetting(NoCaseForMovieset) + [[Container.Content(movies) | Container.Content(sets)] + String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies)]</visible>
 				</control>
 				<control type="radiobutton" id="1205">
 					<include>Objects_MediaMenuButtonAround</include>
@@ -326,7 +326,7 @@
 					<onclick>Skin.ToggleSetting(OpenCase)</onclick>
 					<onclick>Skin.SetBool(showcasecdart)</onclick>
 					<selected>Skin.HasSetting(OpenCase)</selected>
-					<visible>Skin.HasSetting(MikeCasesMod) + [[Container.Content(movies) | Container.Content(sets)] + Stringcompare(Window(home).Property(actualViewtype),ShowcaseMovies)]</visible>
+					<visible>Skin.HasSetting(MikeCasesMod) + [[Container.Content(movies) | Container.Content(sets)] + String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies)]</visible>
 				</control>
 				<!-- MikeBZH44 End -->
 				<!--MAD - New Fake Switches -->
@@ -340,7 +340,7 @@
 					<onclick>Skin.Reset(Fakehandbottom)</onclick>
 					<onclick>Skin.Reset(Fakedischandcolor)</onclick>
 					<selected>Skin.HasSetting(Fakediscart)</selected>
-					<visible>[Container.Content(movies) | Container.Content(sets)] + !Stringcompare(Window(home).Property(actualViewtype),AddonWall)+ !Stringcompare(Window(home).Property(actualViewtype),KodiFlixView)</visible>
+					<visible>[Container.Content(movies) | Container.Content(sets)] + !String.IsEqual(Window(home).Property(actualViewtype),AddonWall)+ !String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView)</visible>
 				</control>
 				<control type="radiobutton" id="17016">
 					<description>Fake CD/DiscArt Handwriting</description>
@@ -350,7 +350,7 @@
 					<onclick>Skin.ToggleSetting(Fakedischandwriting)</onclick>
 					<onclick>Skin.Reset(Fakediscart)</onclick>
 					<selected>Skin.HasSetting(Fakedischandwriting)</selected>
-					<visible>[Container.Content(movies) | Container.Content(sets)] + !Stringcompare(Window(home).Property(actualViewtype),AddonWall)+ !Stringcompare(Window(home).Property(actualViewtype),KodiFlixView)</visible>
+					<visible>[Container.Content(movies) | Container.Content(sets)] + !String.IsEqual(Window(home).Property(actualViewtype),AddonWall)+ !String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView)</visible>
 				</control>
 				<control type="radiobutton" id="17029">
 					<description>Fake CD/DiscArt Handwriting Disc Type - Color</description>
@@ -358,7 +358,7 @@
 					<label>31434</label>
 					<onclick>Skin.ToggleSetting(Fakehanddisccolor)</onclick>
 					<selected>Skin.HasSetting(Fakehanddisccolor)</selected>
-					<visible>[Container.Content(movies) | Container.Content(sets)] + !Stringcompare(Window(home).Property(actualViewtype),AddonWall) + Skin.HasSetting(Fakedischandwriting)+ !Stringcompare(Window(home).Property(actualViewtype),KodiFlixView)</visible>
+					<visible>[Container.Content(movies) | Container.Content(sets)] + !String.IsEqual(Window(home).Property(actualViewtype),AddonWall) + Skin.HasSetting(Fakedischandwriting)+ !String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView)</visible>
 				</control>
 				<control type="radiobutton" id="17025">
 					<description>Fake CD/DiscArt Handwriting position - Top</description>
@@ -366,7 +366,7 @@
 					<label>31435</label>
 					<onclick>Skin.ToggleSetting(Fakehandtop)</onclick>
 					<selected>Skin.HasSetting(Fakehandtop)</selected>
-					<visible>[Container.Content(movies) | Container.Content(sets)] + !Stringcompare(Window(home).Property(actualViewtype),AddonWall) + Skin.HasSetting(Fakedischandwriting) + Stringcompare(Window(home).Property(actualViewtype),LowList)</visible>
+					<visible>[Container.Content(movies) | Container.Content(sets)] + !String.IsEqual(Window(home).Property(actualViewtype),AddonWall) + Skin.HasSetting(Fakedischandwriting) + String.IsEqual(Window(home).Property(actualViewtype),LowList)</visible>
 				</control>
 				<!--MAD - Fake End -->
 			</control>

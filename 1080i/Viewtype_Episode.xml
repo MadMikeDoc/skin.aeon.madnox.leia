@@ -48,7 +48,7 @@
 				<preloaditems>2</preloaditems>
 				<pagecontrol>61</pagecontrol>
 				<visible>Container.Content(episodes) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(music)</visible>
-				<visible>![!IsEmpty(Skin.String(DisableEpisodeVL)) + Window.IsActive(videos)]</visible>
+				<visible>![!String.IsEmpty(Skin.String(DisableEpisodeVL)) + Window.IsActive(videos)]</visible>
 				<animation effect="slide" end="-40,0" time="240" tween="cubic" easing="inout" condition="Control.HasFocus(61)">Conditional</animation>
 				<animation effect="slide" end="-40,0" time="240" tween="cubic" easing="inout" condition="Control.HasFocus(6003)">Conditional</animation>
 				<animation effect="slide" end="-40,0" time="240" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
@@ -107,14 +107,14 @@
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>white</textcolor>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="label">
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>$VAR[TitleColorVar]</textcolor>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="33" width="30">
@@ -122,7 +122,7 @@
 						<align>center</align>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>$VAR[TitleColorVar]</textcolor>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -150,15 +150,15 @@
 				<height>300</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true" fallback="special://skin/media/blank.png">$VAR[SeasonDiscVar1]</texture>
-				<animation effect="slide" end="0,-0" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10301),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-183" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10301),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-250" time="0" condition="!StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-0" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-183" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-250" time="0" condition="!String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10201),special://skin/media/blank.png)">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" loop="true" reversible="false" condition="true">Conditional</animation>
 				<bordersize>0</bordersize>
 				<visible>!Skin.HasSetting(disableepisodeposter)</visible>
@@ -170,14 +170,14 @@
 				<height>300</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true" fallback="special://skin/media/blank.png">$VAR[SeasonDiscVar2]</texture>
-				<animation effect="slide" end="0,183" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,0" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-83" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-125" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-150" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-166" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-179" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-187" time="0" condition="!StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,183" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,0" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-83" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-125" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-150" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-166" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-179" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-187" time="0" condition="!String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10301),special://skin/media/blank.png)">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" loop="true" reversible="false" condition="true">Conditional</animation>
 				<bordersize>0</bordersize>
 				<visible>!Skin.HasSetting(disableepisodeposter)</visible>
@@ -189,13 +189,13 @@
 				<height>300</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true" fallback="special://skin/media/blank.png">$VAR[SeasonDiscVar3]</texture>
-				<animation effect="slide" end="0,250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,83" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-0" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-50" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-83" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-107" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-125" time="0" condition="!StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,83" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-0" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-50" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-83" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-107" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-125" time="0" condition="!String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10401),special://skin/media/blank.png)">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" loop="true" reversible="false" condition="true">Conditional</animation>
 				<bordersize>0</bordersize>
 				<visible>!Skin.HasSetting(disableepisodeposter)</visible>
@@ -207,12 +207,12 @@
 				<height>300</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true" fallback="special://skin/media/blank.png">$VAR[SeasonDiscVar4]</texture>
-				<animation effect="slide" end="0,250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,125" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,50" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-0" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-36" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-62" time="0" condition="!StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,125" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,50" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-0" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-36" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-62" time="0" condition="!String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10501),special://skin/media/blank.png)">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" loop="true" reversible="false" condition="true">Conditional</animation>
 				<bordersize>0</bordersize>
 				<visible>!Skin.HasSetting(disableepisodeposter)</visible>
@@ -224,11 +224,11 @@
 				<height>300</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true" fallback="special://skin/media/blank.png">$VAR[SeasonDiscVar5]</texture>
-				<animation effect="slide" end="0,250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10601),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,150" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,83" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,36" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,-0" time="0" condition="!StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10601),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,150" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,83" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,36" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,-0" time="0" condition="!String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10601),special://skin/media/blank.png)">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" loop="true" reversible="false" condition="true">Conditional</animation>
 				<bordersize>0</bordersize>
 				<visible>!Skin.HasSetting(disableepisodeposter)</visible>
@@ -240,10 +240,10 @@
 				<height>300</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true" fallback="special://skin/media/blank.png">$VAR[SeasonDiscVar6]</texture>
-				<animation effect="slide" end="0,250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10701),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,166" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,107" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,62" time="0" condition="!StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10701),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,166" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,107" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,62" time="0" condition="!String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10701),special://skin/media/blank.png)">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" loop="true" reversible="false" condition="true">Conditional</animation>
 				<bordersize>0</bordersize>
 				<visible>!Skin.HasSetting(disableepisodeposter)</visible>
@@ -255,9 +255,9 @@
 				<height>300</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true" fallback="special://skin/media/blank.png">$VAR[SeasonDiscVar7]</texture>
-				<animation effect="slide" end="0,250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + StringCompare(Control.GetLabel(10801),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,179" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,125" time="0" condition="!StringCompare(Control.GetLabel(10901),special://skin/media/blank.png) + !StringCompare(Control.GetLabel(10801),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,179" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,125" time="0" condition="!String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png) + !String.IsEqual(Control.GetLabel(10801),special://skin/media/blank.png)">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" loop="true" reversible="false" condition="true">Conditional</animation>
 				<bordersize>0</bordersize>
 				<visible>!Skin.HasSetting(disableepisodeposter)</visible>
@@ -269,8 +269,8 @@
 				<height>300</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true" fallback="special://skin/media/blank.png">$VAR[SeasonDiscVar8]</texture>
-				<animation effect="slide" end="0,250" time="0" condition="StringCompare(Control.GetLabel(10901),special://skin/media/blank.png)">Conditional</animation>
-				<animation effect="slide" end="0,187" time="0" condition="!StringCompare(Control.GetLabel(10901),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,250" time="0" condition="String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,187" time="0" condition="!String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png)">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" loop="true" reversible="false" condition="true">Conditional</animation>
 				<bordersize>0</bordersize>
 				<visible>!Skin.HasSetting(disableepisodeposter)</visible>
@@ -282,7 +282,7 @@
 				<height>300</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true" fallback="special://skin/media/blank.png">$VAR[SeasonDiscVar9]</texture>
-				<animation effect="slide" end="0,250" time="0" condition="!StringCompare(Control.GetLabel(10901),special://skin/media/blank.png)">Conditional</animation>
+				<animation effect="slide" end="0,250" time="0" condition="!String.IsEqual(Control.GetLabel(10901),special://skin/media/blank.png)">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" loop="true" reversible="false" condition="true">Conditional</animation>
 				<bordersize>0</bordersize>
 				<visible>!Skin.HasSetting(disableepisodeposter)</visible>
@@ -295,7 +295,7 @@
 				<height>480</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true">$VAR[cdArtMoviesVar]</texture>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + !IsEmpty(ListItem.Art(discart))</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + !String.IsEmpty(ListItem.Art(discart))</visible>
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
@@ -313,7 +313,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
 			</control>
 			<control type="image">
 				<left>80</left>
@@ -326,7 +326,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
 			</control>
 			<control type="image">
 				<left>80</left>
@@ -339,7 +339,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -353,7 +353,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -367,7 +367,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -381,7 +381,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -395,7 +395,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -409,7 +409,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -423,7 +423,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -437,7 +437,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -451,7 +451,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -465,7 +465,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -479,7 +479,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -492,7 +492,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
-				<visible>Skin.Hassetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.Hassetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + !Skin.Hassetting(Fakehanddisccolor)</visible>
 			</control>
 			<control type="image">
 				<left>80</left>
@@ -505,7 +505,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -519,7 +519,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -533,7 +533,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -547,7 +547,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -561,7 +561,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -575,7 +575,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -589,7 +589,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -603,7 +603,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -617,7 +617,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -631,7 +631,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -645,7 +645,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -658,7 +658,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
-				<visible>Skin.Hassetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.Hassetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(fakehanddisccolor)</visible>
 			</control>
 			<control type="image">
 				<left>80</left>
@@ -671,7 +671,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -685,7 +685,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -699,7 +699,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -713,7 +713,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -727,7 +727,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -741,7 +741,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -755,7 +755,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -769,7 +769,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -783,7 +783,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -797,7 +797,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -811,7 +811,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="textbox">
@@ -824,7 +824,7 @@
 				<font>Hand_26</font>
 				<align>center</align>
 				<!--aspectratio aligny="bottom">keep</aspectratio-->
-				<visible>Skin.Hassetting(EpisodeDiscArt) + IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + IsEmpty(ListItem.Art(clearlogo))</visible>
+				<visible>Skin.Hassetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				<label> $INFO[ListItem.Label]</label>
 				<textcolor>black</textcolor>
 			</control>
@@ -835,7 +835,7 @@
 				<top>353</top>
 				<width>230</width>
 				<height>70</height>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + Container.Content(movies) + !IsEmpty(ListItem.Art(clearlogo)) + IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 				<control type="image">
 					<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 				</control>
@@ -852,7 +852,7 @@
 					<height>300</height>
 					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))</visible>
 					<animation effect="slide" end="410,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -863,7 +863,7 @@
 					<height>300</height>
 					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.7.Art(discart))]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))</visible>
 					<animation effect="slide" end="410,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -874,7 +874,7 @@
 					<height>300</height>
 					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.8.Art(discart))]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))</visible>
 					<animation effect="slide" end="410,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -885,7 +885,7 @@
 					<height>300</height>
 					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.9.Art(discart))]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))</visible>
 					<animation effect="slide" end="410,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -896,7 +896,7 @@
 					<height>300</height>
 					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.10.Art(discart))]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.10.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.10.Art(discart)))</visible>
 					<animation effect="slide" end="410,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -908,7 +908,7 @@
 					<height>300</height>
 					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
 					<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -919,7 +919,7 @@
 					<height>300</height>
 					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
 					<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -930,7 +930,7 @@
 					<height>300</height>
 					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
 					<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -941,7 +941,7 @@
 					<height>300</height>
 					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))</visible>
 					<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -952,7 +952,7 @@
 					<height>300</height>
 					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))</visible>
 					<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -972,7 +972,7 @@
 					<fadetime>IconCrossfadeTime2</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>IsEmpty(Control.GetLabel(3822))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(3822))</visible>
 				</control>
 				<control type="image" id="3822">
 					<left>49</left>
@@ -1150,7 +1150,7 @@
 				<label>$INFO[ListItem.Episode]</label>
 				<font>Font_ShowcaseMainLabel2</font>
 				<textcolor>white</textcolor>
-				<animation type="Conditional" condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">
+				<animation type="Conditional" condition="String.IsEqual(ListItem.Overlay,OverlayWatched.png)">
 					<effect type="fade" end="30" time="0" easing="in" tween="cubic" />
 				</animation>
 				<visible>Container.Content(episodes)</visible>
@@ -1174,7 +1174,7 @@
 					<height>100</height>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<texture background="true">$VAR[LogoVarList]</texture>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				</control>
 				<control type="label">
 					<left>708</left>
@@ -1185,7 +1185,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font_Bold40</font>
 					<shadowcolor>black</shadowcolor>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				</control>
 				<control type="image">
 					<left>708</left>
@@ -1233,7 +1233,7 @@
 					<fadetime>400</fadetime>
 				</control>
 				<control type="group">
-					<visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+					<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					<control type="label">
 						<left>372</left>
 						<top>94</top>
@@ -1323,7 +1323,7 @@
 					<font>Font_Reg42_Caps</font>
 					<textcolor>$VAR[TitleColorVar]</textcolor>
 					<scrollspeed>40</scrollspeed>
-					<visible>!IsEmpty(ListItem.Title)</visible>
+					<visible>!String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>-112</left>
@@ -1335,8 +1335,8 @@
 					<label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</label>
 					<font>Font_Reg28</font>
 					<textcolor>grey</textcolor>
-					<visible>!IsEmpty(ListItem.Title) + !SubString(ListItem.Path,videodb://movies/sets/)</visible>
-					<!--visible>!IsEmpty(ListItem.Title) + !System.HasAddon(script.duration)</visible-->
+					<visible>!String.IsEmpty(ListItem.Title) + !SubString(ListItem.Path,videodb://movies/sets/)</visible>
+					<!--visible>!String.IsEmpty(ListItem.Title) + !System.HasAddon(script.duration)</visible-->
 				</control>
 				<control type="label">
 					<left>-112</left>
@@ -1348,8 +1348,8 @@
 					<label>$INFO[ListItem.Year]$INFO[Window(home).Property(Set.Movies.Runtime) • $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</label>
 					<font>Font_Reg28</font>
 					<textcolor>grey</textcolor>
-					<visible>!IsEmpty(ListItem.Title) + SubString(ListItem.Path,videodb://movies/sets/)</visible>
-					<!--visible>!IsEmpty(ListItem.Title) + !System.HasAddon(script.duration)</visible-->
+					<visible>!String.IsEmpty(ListItem.Title) + SubString(ListItem.Path,videodb://movies/sets/)</visible>
+					<!--visible>!String.IsEmpty(ListItem.Title) + !System.HasAddon(script.duration)</visible-->
 				</control>
 
 				<!--control type="label">
@@ -1362,7 +1362,7 @@
                     <label>$INFO[ListItem.Year] • $VAR[MovieDuration]$INFO[ListItem.RatingAndVotes, • ]</label>
                     <font>Font_Reg28</font>
                     <textcolor>grey</textcolor>
-                    <visible>!IsEmpty(ListItem.Title) + System.HasAddon(script.duration)</visible>
+                    <visible>!String.IsEmpty(ListItem.Title) + System.HasAddon(script.duration)</visible>
                 </control-->
 				<control type="textbox">
 					<left>99</left>
@@ -1430,7 +1430,7 @@
 					<font>Font_Reg42_Caps</font>
 					<textcolor>$VAR[TitleColorVar]</textcolor>
 					<scrollspeed>40</scrollspeed>
-					<visible>!IsEmpty(ListItem.Title)</visible>
+					<visible>!String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>-112</left>
@@ -1442,7 +1442,7 @@
 					<label>$INFO[ListItem.Date]$INFO[ListItem.Rating, • ]</label>
 					<font>Font_Reg28</font>
 					<textcolor>grey</textcolor>
-					<visible>!IsEmpty(ListItem.Title)</visible>
+					<visible>!String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="textbox">
 					<left>199</left>

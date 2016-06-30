@@ -124,7 +124,7 @@
 	</include>
 
 	<include name="WallContent">
-		<itemlayout height="268" width="275" condition="[!Container.Content(studios) + !Container.Content(directors) + !Container.Content(actors) + !Container.Content(years)] + ![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + [Skin.HasSetting(titlewall) | StringCompare(Container.FolderName,youtube)] + !Container.Content(episodes)">
+		<itemlayout height="268" width="275" condition="[!Container.Content(studios) + !Container.Content(directors) + !Container.Content(actors) + !Container.Content(years)] + ![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + [Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)] + !Container.Content(episodes)">
 			<control type="group">
 				<posx>20</posx>
 				<posy>23</posy>
@@ -209,7 +209,7 @@
 			</control>
 		</itemlayout>
 
-		<focusedlayout height="268" width="275" condition="[!Container.Content(studios) + !Container.Content(directors) + !Container.Content(actors) + !Container.Content(years)] + ![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + [Skin.HasSetting(titlewall) | StringCompare(Container.FolderName,youtube)] + !Container.Content(episodes)">
+		<focusedlayout height="268" width="275" condition="[!Container.Content(studios) + !Container.Content(directors) + !Container.Content(actors) + !Container.Content(years)] + ![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + [Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)] + !Container.Content(episodes)">
 			<control type="group">
 				<posx>20</posx>
 				<posy>23</posy>
@@ -555,7 +555,7 @@
 					<height>141</height>
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true">$VAR[LogoVarList]</texture>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				</control>
 				<control type="label">
 					<left></left>
@@ -566,7 +566,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font_Bold40</font>
 					<shadowcolor>black</shadowcolor>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				</control>
 				<control type="image">
 					<left>717</left>
@@ -620,7 +620,7 @@
 					<height>141</height>
 					<aspectratio align="center">keep</aspectratio>
 					<texture background="true">$VAR[LogoVarList]</texture>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner))</visible>
 				</control>
 				<control type="label">
 					<left></left>
@@ -631,7 +631,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font_Bold40</font>
 					<shadowcolor>black</shadowcolor>
-					<visible>IsEmpty(ListItem.Art(banner)) + IsEmpty(ListItem.Art(tvshow.banner)) + IsEmpty(ListItem.Art(clearlogo))</visible>
+					<visible>String.IsEmpty(ListItem.Art(banner)) + String.IsEmpty(ListItem.Art(tvshow.banner)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				</control>
 				<control type="group">
 					<top>5</top>
@@ -966,10 +966,10 @@
 			</control>
 		</focusedlayout>
 
-		<itemlayout width="208" height="201" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + ![Skin.HasSetting(titlewall) | StringCompare(Container.FolderName,youtube)]">
+		<itemlayout width="208" height="201" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + ![Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)]">
 			<include>WallIcons</include>
 		</itemlayout>
-		<focusedlayout width="208" height="201" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + ![Skin.HasSetting(titlewall) | StringCompare(Container.FolderName,youtube)]">
+		<focusedlayout width="208" height="201" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + ![Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)]">
 			<control type="group">
 				<animation type="Focus" reversible="false">
 					<effect type="zoom" center="auto" start="100" end="160" time="320" tween="cubic" />
@@ -989,8 +989,8 @@
 			<top>123</top>
 			<width>1665</width>
 			<height>820</height>
-			<visible>!IsEmpty(Container.FolderPath) | Window.IsActive(videoplaylist)</visible>
-			<visible>![!IsEmpty(Skin.String(DisableWallVL)) + Window.IsActive(videos)]</visible>
+			<visible>!String.IsEmpty(Container.FolderPath) | Window.IsActive(videoplaylist)</visible>
+			<visible>![!String.IsEmpty(Skin.String(DisableWallVL)) + Window.IsActive(videos)]</visible>
 			<viewtype label="31234">icon</viewtype>
 			<pagecontrol>61</pagecontrol>
 			<preloaditems>2</preloaditems>
@@ -1030,20 +1030,20 @@
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="41" width="40">
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -1073,20 +1073,20 @@
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="41" width="38">
 					<control type="image">
 						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control>
 				</focusedlayout>
 				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -1128,8 +1128,8 @@
 			<top>124</top>
 			<width>1665</width>
 			<height>805</height>
-			<visible>!IsEmpty(Container.FolderPath) | Window.IsActive(videoplaylist)</visible>
-			<visible>![!IsEmpty(Skin.String(DisableWallVL)) + Window.IsActive(videos)]</visible>
+			<visible>!String.IsEmpty(Container.FolderPath) | Window.IsActive(videoplaylist)</visible>
+			<visible>![!String.IsEmpty(Skin.String(DisableWallVL)) + Window.IsActive(videos)]</visible>
 			<viewtype label="31234">icon</viewtype>
 			<pagecontrol>72</pagecontrol>
 			<preloaditems>2</preloaditems>
@@ -1172,14 +1172,14 @@
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>white</textcolor>
-					<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+					<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 				</control>
 				<control type="label">
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>$VAR[TitleColorVar]</textcolor>
 					<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-					<visible>StringCompare(ListItem.Label,Container(500).ListItem.SortLetter)</visible>
+					<visible>String.IsEqual(ListItem.Label,Container(500).ListItem.SortLetter)</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout height="33" width="28">
@@ -1187,7 +1187,7 @@
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>$VAR[TitleColorVar]</textcolor>
-					<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+					<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 				</control>
 			</focusedlayout>
 			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
@@ -1256,7 +1256,7 @@
 				<font>Font_Reg36_Caps</font>
 				<shadowcolor>floorshadow</shadowcolor>
 				<textcolor>floor</textcolor>
-				<visible>StringCompare(Container.FolderName,youtube)</visible>
+				<visible>String.IsEqual(Container.FolderName,youtube)</visible>
 			</control>
 			<control type="label">
 				<left>460</left>
@@ -1269,7 +1269,7 @@
 				<textcolor>floor</textcolor>
 				<scroll>true</scroll>
 				<scrollspeed>30</scrollspeed>
-				<visible>StringCompare(Container.FolderName,youtube)</visible>
+				<visible>String.IsEqual(Container.FolderName,youtube)</visible>
 			</control>
 		</control>
 	</include>

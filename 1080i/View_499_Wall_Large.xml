@@ -564,7 +564,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + !IsEmpty(ListItem.Art(discart))</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + !String.IsEmpty(ListItem.Art(discart))</visible>
 						</control>
 						<control type="image">
 							<left>-5</left>
@@ -578,7 +578,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakediscart)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakediscart)</visible>
 						</control>
 						<control type="image">
 							<left>-5</left>
@@ -592,7 +592,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakediscart)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakediscart)</visible>
 						</control>
 						<control type="image">
 							<left>-5</left>
@@ -606,7 +606,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !SubString(ListItem(0).Path,videodb://movies/sets) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !SubString(ListItem(0).Path,videodb://movies/sets) + !Skin.Hassetting(Fakehanddisccolor)</visible>
 						</control>
 						<control type="image">
 							<left>-5</left>
@@ -620,10 +620,10 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !SubString(ListItem(0).Path,videodb://movies/sets) + Skin.Hassetting(fakehanddisccolor)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !SubString(ListItem(0).Path,videodb://movies/sets) + Skin.Hassetting(fakehanddisccolor)</visible>
 						</control>
 						<control type="textbox">
-							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + IsEmpty(Container.ListItem.Art(discart))" reversible="false">
+							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(Container.ListItem.Art(discart))" reversible="false">
 								<effect type="slide" start="0" end="85" center="auto" time="750" delay="5" tween="cubic" easing="inout"/>
 								<effect type="rotate" end="-360" center="90,137" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
@@ -634,12 +634,12 @@
 							<font>Hand_14</font>
 							<align>center</align>
 							<aligny>top</aligny>
-							<visible>Skin.HasSetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
 						</control>
 						<control type="group">
-							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + IsEmpty(Container.ListItem.Art(discart))" reversible="false">
+							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(Container.ListItem.Art(discart))" reversible="false">
 								<effect type="slide" start="0" end="85" center="auto" time="750" delay="5" tween="cubic" easing="inout"/>
 								<effect type="rotate" end="-360" center="90,137" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
@@ -647,7 +647,7 @@
 							<top>67</top>
 							<width>90</width>
 							<height>40</height>
-							<visible>Skin.HasSetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<control type="image">
 								<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 							</control>
@@ -896,7 +896,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + !IsEmpty(ListItem.Art(discart))</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + !String.IsEmpty(ListItem.Art(discart))</visible>
 						</control>
 						<control type="image">
 							<left>-3</left>
@@ -910,7 +910,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakediscart)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakediscart)</visible>
 						</control>
 						<control type="image">
 							<left>-3</left>
@@ -924,7 +924,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakediscart)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakediscart)</visible>
 						</control>
 						<control type="image">
 							<left>-5</left>
@@ -938,7 +938,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !SubString(ListItem(0).Path,videodb://movies/sets) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !SubString(ListItem(0).Path,videodb://movies/sets) + !Skin.Hassetting(Fakehanddisccolor)</visible>
 						</control>
 						<control type="image">
 							<left>-3</left>
@@ -952,10 +952,10 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + !IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !SubString(ListItem(0).Path,videodb://movies/sets) + Skin.Hassetting(fakehanddisccolor)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !SubString(ListItem(0).Path,videodb://movies/sets) + Skin.Hassetting(fakehanddisccolor)</visible>
 						</control>
 						<control type="textbox">
-							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + IsEmpty(Container.ListItem.Art(discart))" reversible="false">
+							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(Container.ListItem.Art(discart))" reversible="false">
 								<effect type="slide" start="20" end="85" center="auto" time="750" delay="5" tween="cubic" easing="inout"/>
 								<effect type="rotate" end="-360" center="43,99" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
@@ -966,12 +966,12 @@
 							<font>Hand_10</font>
 							<align>center</align>
 							<aligny>top</aligny>
-							<visible>Skin.HasSetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
 						</control>
 						<control type="group">
-							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + IsEmpty(Container.ListItem.Art(discart))" reversible="false">
+							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(Container.ListItem.Art(discart))" reversible="false">
 								<effect type="slide" start="20" end="85" center="auto" time="750" delay="5" tween="cubic" easing="inout"/>
 								<effect type="rotate" end="-360" center="43,99" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
@@ -979,7 +979,7 @@
 							<top>52</top>
 							<width>70</width>
 							<height>30</height>
-							<visible>Skin.HasSetting(WallLargeCDart) + IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<control type="image">
 								<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 							</control>
@@ -1251,14 +1251,14 @@
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>white</textcolor>
-					<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+					<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 				</control>
 				<control type="label">
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>$VAR[TitleColorVar]</textcolor>
 					<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-					<visible>StringCompare(ListItem.Label,Container(499).ListItem.SortLetter)</visible>
+					<visible>String.IsEqual(ListItem.Label,Container(499).ListItem.SortLetter)</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout height="33" width="28">
@@ -1266,7 +1266,7 @@
 					<align>center</align>
 					<label>$INFO[ListItem.Label]</label>
 					<textcolor>$VAR[TitleColorVar]</textcolor>
-					<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+					<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 				</control>
 			</focusedlayout>
 			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>

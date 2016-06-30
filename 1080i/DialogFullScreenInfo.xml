@@ -40,8 +40,8 @@
 				<onright>StepForward</onright>
 				<onup>BigStepForward</onup>
 				<ondown>BigStepBack</ondown>
-				<onclick condition="IsEmpty(Window(home).Property(LiveTVShowEpgNext))">SetProperty(LiveTVShowEpgNext,1,home)</onclick>
-				<onclick condition="!IsEmpty(Window(home).Property(LiveTVShowEpgNext))">ClearProperty(LiveTVShowEpgNext,home)</onclick>
+				<onclick condition="String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))">SetProperty(LiveTVShowEpgNext,1,home)</onclick>
+				<onclick condition="!String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))">ClearProperty(LiveTVShowEpgNext,home)</onclick>
 			</control>
 			<control type="group">
 				<top>128</top>
@@ -82,7 +82,7 @@
 				<label>$INFO[VideoPlayer.Title]</label>
 				<font>Font_ShowcaseMainLabel2_Caps</font>
 				<scroll>true</scroll>
-				<animation effect="slide" start="0,15" end="0,15" time="0" condition="[IsEmpty(Player.ChapterName) | SubString(Player.ChapterName,0,left)] + [[IsEmpty(VideoPlayer.Tagline) + VideoPlayer.Content(movies)] | [IsEmpty(VideoPlayer.Artist) + VideoPlayer.Content(musicvideos)]] | VideoPlayer.Content(files)">Conditional</animation>
+				<animation effect="slide" start="0,15" end="0,15" time="0" condition="[String.IsEmpty(Player.ChapterName) | SubString(Player.ChapterName,0,left)] + [[String.IsEmpty(VideoPlayer.Tagline) + VideoPlayer.Content(movies)] | [String.IsEmpty(VideoPlayer.Artist) + VideoPlayer.Content(musicvideos)]] | VideoPlayer.Content(files)">Conditional</animation>
 			</control>
 			<control type="label">
 				<left>510</left>
@@ -358,7 +358,7 @@
 					<control type="image">
 						<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
 						<include>OSDFlagVars</include>
-						<visible>IsEmpty(VideoPlayer.Studio)</visible>
+						<visible>String.IsEmpty(VideoPlayer.Studio)</visible>
 					</control>
 					<control type="label">
 						<left>5</left>
@@ -370,7 +370,7 @@
 						<font>Font_Reg22_Caps</font>
 						<textcolor>grey</textcolor>
 						<wrapmultiline>true</wrapmultiline>
-						<visible>IsEmpty(Control.GetLabel(76))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(76))</visible>
 					</control>
 				</control>
 				<control type="image" id="2117">
@@ -383,7 +383,7 @@
 					<left>325</left>
 					<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 					<include>OSDFlagVars</include>
-					<visible>!VideoPlayer.Content(files) + IsEmpty(Control.GetLabel(2117))</visible>
+					<visible>!VideoPlayer.Content(files) + String.IsEmpty(Control.GetLabel(2117))</visible>
 				</control>
 				<control type="image">
 					<left>1470</left>
@@ -404,7 +404,7 @@
 			</control>
 		</control>
 		<control type="group" id="9002">
-			<visible>IsEmpty(Window(home).Property(morefullscreeninfo)) + !Control.IsVisible(9004) + !Control.IsVisible(9005)</visible>
+			<visible>String.IsEmpty(Window(home).Property(morefullscreeninfo)) + !Control.IsVisible(9004) + !Control.IsVisible(9005)</visible>
 			<visible>!VideoPlayer.Content(LiveTV)</visible>
 			<animation type="Visible">
 				<effect type="fade" time="320" end="100"/>
@@ -435,7 +435,7 @@
 					<fadetime>IconCrossfadeTime2</fadetime>
 					<colordiffuse>white2</colordiffuse>
 					<texture fallback="">special://skin/extras/BigIcons/Subtitle.png</texture>
-					<visible>!IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
 				</control>
 				<control type="image">
 					<left>1820</left>
@@ -446,7 +446,7 @@
 					<fadetime>IconCrossfadeTime2</fadetime>
 					<colordiffuse>white2</colordiffuse>
 					<texture fallback="">special://skin/extras/BigIcons/Speaker.png</texture>
-					<visible>!IsEmpty(VideoPlayer.AudioLanguage)</visible>
+					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
 					<visible>!Substring(VideoPlayer.AudioLanguage,und)</visible>
 				</control>
 				<control type="image">
@@ -477,7 +477,7 @@
 			<animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
 			<animation effect="slide" end="-729,0" time="320" tween="quadratic">WindowClose</animation>
 			<animation effect="slide" start="-729,0" end="0,0" time="320" tween="quadratic">VisibleChange</animation>
-			<visible>!IsEmpty(Window(home).Property(morefullscreeninfo)) + !Control.IsVisible(9001) + !Control.IsVisible(9002) + !VideoPlayer.Content(LiveTV)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(morefullscreeninfo)) + !Control.IsVisible(9001) + !Control.IsVisible(9002) + !VideoPlayer.Content(LiveTV)</visible>
 			<control type="image">
 				<width>729</width>
 				<height>1080</height>
@@ -503,7 +503,7 @@
 			<animation effect="slide" start="1192,0" end="0,0" time="320" tween="quadratic">WindowOpen</animation>
 			<animation effect="slide" end="1192,0" time="320" tween="quadratic">WindowClose</animation>
 			<animation effect="slide" start="1192,0" end="0,0" time="320" tween="quadratic">VisibleChange</animation>
-			<visible>!VideoPlayer.Content(LiveTV) + !IsEmpty(Window(home).Property(morefullscreeninfo)) + !Window.IsActive(notification) + !Control.IsVisible(9001) + !Control.IsVisible(9002)</visible>
+			<visible>!VideoPlayer.Content(LiveTV) + !String.IsEmpty(Window(home).Property(morefullscreeninfo)) + !Window.IsActive(notification) + !Control.IsVisible(9001) + !Control.IsVisible(9002)</visible>
 			<control type="image">
 				<left>729</left>
 				<width>1192</width>
@@ -534,7 +534,7 @@
 						<height>50</height>
 						<label>$INFO[VideoPlayer.Title]</label>
 						<font>Font_Reg57_Caps</font>
-						<animation effect="slide" start="0,0" end="0,30" time="0" condition="[VideoPlayer.Content(movies) + IsEmpty(VideoPlayer.TagLine)] | VideoPlayer.Content(tvshows)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="0,30" time="0" condition="[VideoPlayer.Content(movies) + String.IsEmpty(VideoPlayer.TagLine)] | VideoPlayer.Content(tvshows)">Conditional</animation>
 						<visible>!Control.IsVisible(8822)</visible>
 						<scroll>true</scroll>
 					</control>
@@ -546,7 +546,7 @@
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
 						<usecontrolcoords>true</usecontrolcoords>
-						<visible>!IsEmpty(VideoPlayer.Tagline)</visible>
+						<visible>!String.IsEmpty(VideoPlayer.Tagline)</visible>
 						<control type="image" id="12020">
 							<left>0</left>
 							<top>6</top>
@@ -556,7 +556,7 @@
 							<texture background="true">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.Country,,.png]</texture>
 							<fadetime>200</fadetime>
 							<colordiffuse>AAFFFFFF</colordiffuse>
-							<visible>!IsEmpty(Control.GetLabel(12020))</visible>
+							<visible>!String.IsEmpty(Control.GetLabel(12020))</visible>
 							<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
 						</control>
 						<control type="label">
@@ -576,7 +576,7 @@
 						<font>Font_Reg32</font>
 						<textcolor>grey</textcolor>
 						<scroll>true</scroll>
-						<visible>VideoPlayer.Content(musicvideos) + !IsEmpty(VideoPlayer.Artist)</visible>
+						<visible>VideoPlayer.Content(musicvideos) + !String.IsEmpty(VideoPlayer.Artist)</visible>
 					</control>
 					<control type="label">
 						<width>1018</width>
@@ -585,7 +585,7 @@
 						<label>$INFO[VideoPlayer.TvShowTitle]</label>
 						<font>Font_Reg32</font>
 						<textcolor>grey</textcolor>
-						<visible>VideoPlayer.Content(episodes) + !IsEmpty(VideoPlayer.TvShowTitle)</visible>
+						<visible>VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.TvShowTitle)</visible>
 					</control>
 				</control>
 				<!-- First Row -->
@@ -609,7 +609,7 @@
 					<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<colordiffuse>grey</colordiffuse>
-					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) + IsEmpty(Control.GetLabel(11465))</visible>
+					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) + String.IsEmpty(Control.GetLabel(11465))</visible>
 				</control>
 				<control type="group">
 					<visible>!VideoPlayer.Content(episodes)</visible>
@@ -664,7 +664,7 @@
 							<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 							<animation effect="fade" time="200">VisibleChange</animation>
 							<colordiffuse>grey</colordiffuse>
-							<visible>IsEmpty(Control.GetLabel(1156))</visible>
+							<visible>String.IsEmpty(Control.GetLabel(1156))</visible>
 						</control>
 					</control>
 				</control>
@@ -743,7 +743,7 @@
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture>$VAR[ColorFlagsStudio]$INFO[VideoPlayer.Studio,,.png]</texture>
 						<colordiffuse>FF7c7c7c</colordiffuse>
-						<visible>!IsEmpty(Control.GetLabel(800011))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(800011))</visible>
 					</control>
 					<control type="label">
 						<left>310</left>
@@ -755,7 +755,7 @@
 						<font>Font_Reg22_Caps</font>
 						<textcolor>grey</textcolor>
 						<wrapmultiline>true</wrapmultiline>
-						<visible>IsEmpty(Control.GetLabel(800011))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(800011))</visible>
 					</control>
 				</control>
 				<!-- Second Row -->
@@ -884,7 +884,7 @@
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture>$VAR[ColorFlagsSource]source/$VAR[VideoSourceFlagVar,,.png]</texture>
 						<colordiffuse>FF7c7c7c</colordiffuse>
-						<visible>!IsEmpty(Control.GetLabel(900011))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(900011))</visible>
 					</control>
 					<control type="image" id="900012">
 						<width>121</width>
@@ -892,13 +892,13 @@
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture>$VAR[ColorFlagsSource]source/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
 						<colordiffuse>FF7c7c7c</colordiffuse>
-						<visible>IsEmpty(Control.GetLabel(900011))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(900011))</visible>
 						<animation effect="slide" end="0,-10" condition="true">Conditional</animation>
-						<visible>!IsEmpty(Control.GetLabel(900012))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(900012))</visible>
 					</control>
 					<control type="image">
 						<include>Furniture_FlagUpright</include>
-						<visible>!IsEmpty(Control.GetLabel(900012)) | !IsEmpty(Control.GetLabel(900011))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(900012)) | !String.IsEmpty(Control.GetLabel(900011))</visible>
 					</control>
 					<control type="image" id="900013">
 						<width>121</width>
@@ -906,11 +906,11 @@
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture fallback="flags/audio/defaultsound.png">$VAR[ColorFlagsAudio]audio/$INFO[VideoPlayer.AudioCodec]$INFO[VideoPlayer.AudioChannels,,.png]</texture>
 						<colordiffuse>FF7c7c7c</colordiffuse>
-						<visible>!IsEmpty(Control.GetLabel(900013))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(900013))</visible>
 					</control>
 					<control type="image">
 						<include>Furniture_FlagUpright</include>
-						<visible>!IsEmpty(Control.GetLabel(900013))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(900013))</visible>
 					</control>
 					<control type="image" id="900014">
 						<width>100</width>
@@ -919,11 +919,11 @@
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture>$VAR[ColorFlagsResolution]resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
 						<colordiffuse>FF7c7c7c</colordiffuse>
-						<visible>!IsEmpty(Control.GetLabel(900014))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(900014))</visible>
 					</control>
 					<control type="image">
 						<include>Furniture_FlagUpright</include>
-						<visible>!IsEmpty(Control.GetLabel(900014))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(900014))</visible>
 					</control>
 					<control type="image" id="900015">
 						<width>100</width>
@@ -932,11 +932,11 @@
 						<animation effect="slide" end="0,-7" condition="true">Conditional</animation>
 						<texture>$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
 						<colordiffuse>FF7c7c7c</colordiffuse>
-						<visible>!IsEmpty(Control.GetLabel(900015))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(900015))</visible>
 					</control>
 					<control type="image">
 						<include>Furniture_FlagUpright</include>
-						<visible>!IsEmpty(Control.GetLabel(900015))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(900015))</visible>
 					</control>
 					<control type="image">
 						<width>58</width>
@@ -964,8 +964,8 @@
 				<textcolor>grey</textcolor>
 				<focusedcolor>white2</focusedcolor>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<onclick condition="IsEmpty(Window(home).Property(morefullscreeninfo))">SetProperty(morefullscreeninfo,1,home)</onclick>
-				<onclick condition="!IsEmpty(Window(home).Property(morefullscreeninfo))">ClearProperty(morefullscreeninfo,home)</onclick>
+				<onclick condition="String.IsEmpty(Window(home).Property(morefullscreeninfo))">SetProperty(morefullscreeninfo,1,home)</onclick>
+				<onclick condition="!String.IsEmpty(Window(home).Property(morefullscreeninfo))">ClearProperty(morefullscreeninfo,home)</onclick>
 				<onleft>StepBack</onleft>
 				<onright>StepForward</onright>
 				<onup>BigStepForward</onup>
@@ -1043,7 +1043,7 @@
 					<texture>$INFO[VideoPlayer.Cover]</texture>
 				</control>
 				<control type="group">
-					<visible>IsEmpty(Window(home).Property(LiveTVShowEpgNext))</visible>
+					<visible>String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))</visible>
 					<control type="label">
 						<top>-690</top>
 						<width>1320</width>
@@ -1124,7 +1124,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!IsEmpty(Window(home).Property(LiveTVShowEpgNext))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))</visible>
 					<control type="label">
 						<top>15</top>
 						<width>1320</width>
@@ -1196,9 +1196,9 @@
 					<onright>StepForward</onright>
 					<onup>BigStepForward</onup>
 					<ondown>BigStepBack</ondown>
-					<onclick condition="IsEmpty(Window(home).Property(LiveTVShowEpgNext))">SetProperty(LiveTVShowEpgNext,1,home)</onclick>
-					<onclick condition="!IsEmpty(Window(home).Property(LiveTVShowEpgNext))">ClearProperty(LiveTVShowEpgNext,home)</onclick>
-					<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+					<onclick condition="String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))">SetProperty(LiveTVShowEpgNext,1,home)</onclick>
+					<onclick condition="!String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))">ClearProperty(LiveTVShowEpgNext,home)</onclick>
+					<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>
 				</control>
 				<control type="grouplist">
 					<left>6</left>
@@ -1214,7 +1214,7 @@
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture>$VAR[ColorFlagsSource]source/$VAR[VideoSourceFlagVar,,.png]</texture>
 						<colordiffuse>FF7c7c7c</colordiffuse>
-						<visible>!IsEmpty(Control.GetLabel(900011))</visible>
+						<visible>!String.IsEmpty(Control.GetLabel(900011))</visible>
 					</control>
 					<control type="image">
 						<top>-10</top>
@@ -1223,7 +1223,7 @@
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<texture fallback="flags/source/defaultsource.png">$VAR[ColorFlagsSource]source/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
 						<colordiffuse>FF7c7c7c</colordiffuse>
-						<visible>IsEmpty(Control.GetLabel(900011))</visible>
+						<visible>String.IsEmpty(Control.GetLabel(900011))</visible>
 					</control>
 					<control type="image">
 						<include>Furniture_FlagUpright</include>
@@ -1313,7 +1313,7 @@
 				</control>
 				<!-- Channel logo -->
 				<!-- <control type="image">
-					<visible>!StringCompare(VideoPlayer.Cover,DefaultVideo.png)</visible>
+					<visible>!String.IsEqual(VideoPlayer.Cover,DefaultVideo.png)</visible>
 					<left>1050</left>
 					<top>100</top>
 					<width>200</width>
@@ -1321,7 +1321,7 @@
 					<aspectratio>keep</aspectratio>
 					<align>center</align>
 					<texture>$INFO[VideoPlayer.Cover]</texture>
-					<visible>IsEmpty(VideoPlayer.PlotOutline)</visible>
+					<visible>String.IsEmpty(VideoPlayer.PlotOutline)</visible>
 				</control> -->
 				<control type="image"> <!-- Show\Movie poster -->
 					<left>1050</left>
@@ -1331,11 +1331,11 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture>http://localhost:52307/getthumb&amp;title=$INFO[VideoPlayer.Title]</texture>
-					<!-- <visible>!IsEmpty(VideoPlayer.PlotOutline)</visible> -->
+					<!-- <visible>!String.IsEmpty(VideoPlayer.PlotOutline)</visible> -->
 				</control>
 
 				<control type="group">
-					<visible>IsEmpty(Window(home).Property(LiveTVShowEpgNext))</visible>
+					<visible>String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))</visible>
 					<control type="label">
 						<top>-690</top>
 						<width>1320</width>
@@ -1364,7 +1364,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!IsEmpty(Window(home).Property(LiveTVShowEpgNext))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))</visible>
 					<control type="label">
 						<top>15</top>
 						<width>1320</width>
@@ -1420,10 +1420,10 @@
 					<onright>StepForward</onright>
 					<onup>BigStepForward</onup>
 					<ondown>BigStepBack</ondown>
-					<onclick condition="IsEmpty(Window(home).Property(LiveTVShowEpgNext))">SetProperty(LiveTVShowEpgNext,1,home)</onclick>
-					<onclick condition="!IsEmpty(Window(home).Property(LiveTVShowEpgNext))">ClearProperty(LiveTVShowEpgNext,home)</onclick>
+					<onclick condition="String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))">SetProperty(LiveTVShowEpgNext,1,home)</onclick>
+					<onclick condition="!String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))">ClearProperty(LiveTVShowEpgNext,home)</onclick>
 					<visible>false</visible>
-					<!--<visible>!IsEmpty(VideoPlayer.NextTitle)</visible>-->
+					<!--<visible>!String.IsEmpty(VideoPlayer.NextTitle)</visible>-->
 				</control>
 			</control>
 		</control>
@@ -1431,8 +1431,8 @@
 		<!-- Include FullScreenInfoBarLiveTV for LiveTV -->
 		<control type="group" id="9007">
 			<visible>VideoPlayer.Content(LiveTV) + Control.IsVisible(9006)</visible>
-			<include condition="IsEmpty(Skin.String(LiveTV.InfobarType)) | StringCompare(Skin.String(LiveTV.InfobarType),2)">FullScreenInfoBarLiveTV</include>
-			<include condition="StringCompare(Skin.String(LiveTV.InfobarType),1)">FullScreenInfoBarLiveTV_Compact</include>
+			<include condition="String.IsEmpty(Skin.String(LiveTV.InfobarType)) | String.IsEqual(Skin.String(LiveTV.InfobarType),2)">FullScreenInfoBarLiveTV</include>
+			<include condition="String.IsEqual(Skin.String(LiveTV.InfobarType),1)">FullScreenInfoBarLiveTV_Compact</include>
 		</control>
 	</controls>
 </window>

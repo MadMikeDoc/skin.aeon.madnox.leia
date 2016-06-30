@@ -82,7 +82,7 @@
 			<textcolor>grey2</textcolor>
 			<align>right</align>
 			<aligny>center</aligny>
-			<visible>!IsEmpty(ListItem.Label2)</visible>
+			<visible>!String.IsEmpty(ListItem.Label2)</visible>
 			<label>$INFO[ListItem.Label2]</label>
 		</control>
 		<control type="image">
@@ -140,7 +140,7 @@
 			<textcolor>white</textcolor>
 			<align>right</align>
 			<aligny>center</aligny>
-			<visible>!IsEmpty(ListItem.Label2)</visible>
+			<visible>!String.IsEmpty(ListItem.Label2)</visible>
 			<label>$INFO[ListItem.Label2]</label>
 		</control>
 		<control type="image">
@@ -362,7 +362,7 @@
 						<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultVideo.png">$VAR[VideoExtraLandscape]</texture>
 						<bordertexture border="20">thumbs/cd_shadow.png</bordertexture>
 						<bordersize>20</bordersize>
-						<visible>IsEmpty(ListItem.thumb)</visible>
+						<visible>String.IsEmpty(ListItem.thumb)</visible>
 					</control>
 					<control type="image">
 						<left>980</left>
@@ -503,7 +503,7 @@
 					<include>Animation_VisibleChange400</include>
 					<visible>Skin.HasSetting(ExtendedGlowMode)</visible>
 					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-					<visible>!IsEmpty(Control.GetLabel(3822)) | !IsEmpty(Control.GetLabel(3823))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(3822)) | !String.IsEmpty(Control.GetLabel(3823))</visible>
 				</control>
 				<control type="image" id="3822">
 					<left>49</left>
@@ -524,7 +524,7 @@
 					<texture background="true" diffuse="thumbs/movieposter_mask.png">$INFO[ListItem.thumb]</texture>
 					<bordertexture border="19.5">thumbs/poster_shadow.png</bordertexture>
 					<bordersize>19</bordersize>
-					<visible>!IsEmpty(ListItem.thumb)</visible>
+					<visible>!String.IsEmpty(ListItem.thumb)</visible>
 				</control>
 			</control>
 			<control type="image">

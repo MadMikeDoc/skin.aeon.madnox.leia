@@ -30,7 +30,7 @@
 					<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 					<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 					<visible>Substring(Container.FolderPath,musicdb://,left)</visible>
-					<visible>[Skin.HasSetting(musicextrafanart) + !IsEmpty(Skin.String(ArtistsLogosPath))] | Container.Content(genres)</visible>
+					<visible>[Skin.HasSetting(musicextrafanart) + !String.IsEmpty(Skin.String(ArtistsLogosPath))] | Container.Content(genres)</visible>
 				</control>
 				<control type="group">
 					<animation effect="fade" time="600">VisibleChange</animation>
@@ -43,7 +43,7 @@
 						<animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="9" end="9" time="0" condition="true">Conditional</animation>
 						<include>Animation_VisibleChange200</include>
-						<visible>!IsEmpty(Window(home).Property(Artist.Album.10.Thumb))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Artist.Album.10.Thumb))</visible>
 						<control type="image">
 							<left>54</left>
 							<top>17</top>
@@ -72,7 +72,7 @@
 						<animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<include>Animation_VisibleChange200</include>
-						<visible>!IsEmpty(Window(home).Property(Artist.Album.9.Thumb))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Artist.Album.9.Thumb))</visible>
 						<control type="image">
 							<left>54</left>
 							<top>17</top>
@@ -102,7 +102,7 @@
 						<animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation>
 						<include>Animation_VisibleChange200</include>
-						<visible>!IsEmpty(Window(home).Property(Artist.Album.8.Thumb))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Artist.Album.8.Thumb))</visible>
 						<control type="image">
 							<left>54</left>
 							<top>17</top>
@@ -132,7 +132,7 @@
 						<animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="-20" end="-20" time="0" condition="true">Conditional</animation>
 						<include>Animation_VisibleChange200</include>
-						<visible>!IsEmpty(Window(home).Property(Artist.Album.7.Thumb))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Artist.Album.7.Thumb))</visible>
 						<control type="image">
 							<left>54</left>
 							<top>17</top>
@@ -162,7 +162,7 @@
 						<animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation>
 						<include>Animation_VisibleChange200</include>
-						<visible>!IsEmpty(Window(home).Property(Artist.Album.6.Thumb))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Artist.Album.6.Thumb))</visible>
 						<control type="image">
 							<left>54</left>
 							<top>17</top>
@@ -191,7 +191,7 @@
 						<top>-100</top>
 						<animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="75" end="75" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(Window(home).Property(Artist.Album.5.Thumb))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Artist.Album.5.Thumb))</visible>
 						<include>Animation_VisibleChange200</include>
 						<control type="image">
 							<left>54</left>
@@ -221,7 +221,7 @@
 						<top>800</top>
 						<animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="45" end="45" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(Window(home).Property(Artist.Album.4.Thumb))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Artist.Album.4.Thumb))</visible>
 						<include>Animation_VisibleChange200</include>
 						<control type="image">
 							<left>54</left>
@@ -251,7 +251,7 @@
 						<top>360</top>
 						<animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="-15" end="-15" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(Window(home).Property(Artist.Album.2.Thumb))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Artist.Album.2.Thumb))</visible>
 						<include>Animation_VisibleChange200</include>
 						<control type="image">
 							<left>54</left>
@@ -281,7 +281,7 @@
 						<top>400</top>
 						<animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(Window(home).Property(Artist.Album.3.Thumb))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Artist.Album.3.Thumb))</visible>
 						<include>Animation_VisibleChange200</include>
 						<control type="image">
 							<left>54</left>
@@ -311,7 +311,7 @@
 						<top>200</top>
 						<animation effect="zoom" start="150" end="150" center="auto" time="0" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="3" end="3" time="0" condition="true">Conditional</animation>
-						<visible>!IsEmpty(Window(home).Property(Artist.Album.1.Thumb))</visible>
+						<visible>!String.IsEmpty(Window(home).Property(Artist.Album.1.Thumb))</visible>
 						<include>Animation_VisibleChange200</include>
 						<control type="image">
 							<left>54</left>
@@ -392,7 +392,7 @@
 			</control>
 			<control type="button" id="199">
 				<include>HiddenObject</include>
-				<visible>!Container.OnNext + !Container.OnPrevious + StringCompare(Control.GetLabel(4421),infopanelonauto)</visible>
+				<visible>!Container.OnNext + !Container.OnPrevious + String.IsEqual(Control.GetLabel(4421),infopanelonauto)</visible>
 				<visible>Control.IsVisible(509) | Control.IsVisible(503) | Control.IsVisible(57)</visible>
 				<include>DelayAnimations</include>
 			</control>
@@ -437,7 +437,7 @@
 				</control>
 				<control type="button" id="7000">
 					<include>HiddenObject</include>
-					<onfocus condition="Stringcompare(Control.GetLabel(4421),infopanelon)">SetFocus(9000)</onfocus>
+					<onfocus condition="String.IsEqual(Control.GetLabel(4421),infopanelon)">SetFocus(9000)</onfocus>
 					<onup>9000</onup>
 					<onleft condition="Control.IsVisible(509)">Control.Move(509,-1)</onleft>
 					<onright condition="Control.IsVisible(509)">Control.Move(509,1)</onright>
@@ -449,7 +449,7 @@
 					<onclick condition="Container.Content(artists) | Container.Content(albums)">Select</onclick>
 					<onclick>PlayMedia($ESCINFO[ListItem.FileNameAndPath])</onclick>
 					<visible>!Container.Content(songs)</visible>
-					<visible>!ListItem.IsParentFolder + !Stringcompare(Control.GetLabel(4421),infopaneloff)</visible>
+					<visible>!ListItem.IsParentFolder + !String.IsEqual(Control.GetLabel(4421),infopaneloff)</visible>
 				</control>
 				<include>MusicMediaFlags</include>
 				<include>FloorLabels</include>
@@ -472,7 +472,7 @@
 				<!--animation effect="slide" end="680,-626" time="0" easing="inout" tween="circle" condition="Control.IsVisible(53)">Conditional</animation>
 				<animation effect="zoom" start="100" end="140" center="auto" time="320" tween="circle" condition="Control.IsVisible(53)">Conditional</animation-->
 				<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
-				<animation effect="fade" delay="160" end="100" time="240" condition="!Stringcompare(Control.GetLabel(8822),empty.png)">Conditional</animation>
+				<animation effect="fade" delay="160" end="100" time="240" condition="!String.IsEqual(Control.GetLabel(8822),empty.png)">Conditional</animation>
 				<visible>[Skin.HasSetting(artistslogosfloor) + [Control.IsVisible(509) | Control.IsVisible(500) | Control.IsVisible(57)]] | Control.IsVisible(50)</visible>
 				<visible>![Container.OnNext | Container.OnPrevious] + Container.Content(artists)</visible>
 			</control>
@@ -521,7 +521,7 @@
 					<top>690</top>
 					<width>290</width>
 					<height>290</height>
-					<visible>!ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4294))</visible>
+					<visible>!ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + String.IsEmpty(Control.GetLabel(4294))</visible>
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="100" delay="2000" time="200" />
 					</animation>
@@ -537,7 +537,7 @@
 					<top>980</top>
 					<width>290</width>
 					<height>290</height>
-					<visible>!ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + IsEmpty(Control.GetLabel(4294))</visible>
+					<visible>!ListItem.IsParentFolder + Skin.HasSetting(Shelf3DFakeDiscs) + String.IsEmpty(Control.GetLabel(4294))</visible>
 					<animation type="Focus" reversible="false">
 						<effect type="fade" start="0" end="100" delay="2000" time="200" />
 					</animation>

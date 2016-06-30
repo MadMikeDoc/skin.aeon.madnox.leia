@@ -55,7 +55,7 @@
 					<label>•</label>
 					<font>Font_Reg32</font>
 					<textcolor>white</textcolor>
-					<visible>!IsEmpty(Control.Getlabel(501))</visible>
+					<visible>!String.IsEmpty(Control.Getlabel(501))</visible>
 				</control>
 				<control type="label" id="501">
 					<width min="40" max="800">auto</width>

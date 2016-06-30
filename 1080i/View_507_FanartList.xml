@@ -121,7 +121,7 @@
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsResolution]resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 					<include>AudioFlagsVars</include>
-					<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+					<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 					<include>VisibleFadeEffect</include>
 				</control><control type="image">
 					<posx>190</posx>
@@ -135,7 +135,7 @@
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[LibraryAudioFlagVar]</texture>
 					<include>AudioFlagsVars</include>
-					<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+					<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="image">
@@ -156,7 +156,7 @@
 					<posx>565</posx>
 					<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 					<include>AudioFlagsVars</include>
-					<visible>IsEmpty(Control.GetLabel(1190))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(1190))</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -169,7 +169,7 @@
 				<control type="group">
 					<posy>-5</posy>
 					<width>175</width>
-					<visible>!IsEmpty(ListItem.Property(TotalSeasons))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
 					<control type="label">
 						<posx>0</posx>
 						<posy>2</posy>
@@ -192,7 +192,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!IsEmpty(ListItem.Property(TotalEpisodes))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(TotalEpisodes))</visible>
 					<width>167</width>
 					<posx>165</posx>
 					<posy>-5</posy>
@@ -218,7 +218,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>!IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
+					<visible>!String.IsEmpty(ListItem.Property(UnWatchedEpisodes))</visible>
 					<width>200</width>
 					<posx>305</posx>
 					<posy>-1</posy>
@@ -250,7 +250,7 @@
 					<bordersize>2</bordersize>
 					<texture>$VAR[StudioImageVar]</texture>
 					<include>VisibleFadeEffect</include>
-					<visible>!IsEmpty(Control.GetLabel(800013))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(800013))</visible>
 				</control>
 				<control type="label">
 					<posx>330</posx>
@@ -261,7 +261,7 @@
 					<font>font10</font>
 					<textcolor>white</textcolor>
 					<wrapmultiline>true</wrapmultiline>
-					<visible>IsEmpty(Control.GetLabel(800013))</visible>
+					<visible>String.IsEmpty(Control.GetLabel(800013))</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -278,7 +278,7 @@
 					<bordersize>2</bordersize>
 				</control>
 				<control type="image">
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + IsEmpty(Container.Listitem.Art(fanart))</visible>
+					<visible>SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(Container.Listitem.Art(fanart))</visible>
 					<width>693</width>
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
@@ -297,7 +297,7 @@
 					<include condition="!Window.IsActive(pictures)">Aspectratio_Scale</include>
 					<timeperimage>3000</timeperimage>
 					<imagepath background="true" fallback="thumbs/fallback_episode_tp.png">$VAR[VideoExtraFanartVar]</imagepath>
-					<visible>StringCompare(Control.GetLabel(4420),fanart)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fanart)</visible>
 					<include>Animation_VisibleChange200</include>
 				</control>
 				<control type="image">
@@ -305,7 +305,7 @@
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true"  fallback="thumbs/fallback_episode_tp.png">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-					<visible>StringCompare(Control.GetLabel(4420),fanart) + SubString(ListItem.Path,videodb://movies/sets) + !IsEmpty(Container.ListItem.Art(extrafanart1))</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Container.ListItem.Art(extrafanart1))</visible>
 				</control>
 				<control type="image">
 					<visible>Container.Content(episodes)</visible>
@@ -318,7 +318,7 @@
 					<bordersize>2</bordersize>
 				</control>
 				<control type="image">
-					<visible>Skin.HasSetting(SkinHelperAnimations) + !IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart)) + !Skin.HasSetting(FanartListDisableAnimatedFanart)</visible>
+					<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart)) + !Skin.HasSetting(FanartListDisableAnimatedFanart)</visible>
 					<width>693</width>
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
@@ -381,7 +381,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label fallback="• • • •">$INFO[ListItem.Year]</label>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!String.IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="label">
 							<posx>110</posx>
@@ -441,7 +441,7 @@
 							<aligny>center</aligny>
 							<label fallback="• • • •">$INFO[ListItem.Year]</label>
 							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(507)">Conditional</animation>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!String.IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="label">
 							<posx>110</posx>
@@ -492,7 +492,7 @@
 							<align>left</align>
 							<aligny>center</aligny>
 							<label fallback="• • • •">$INFO[ListItem.Year]</label>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!String.IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="label">
 							<posx>110</posx>
@@ -536,7 +536,7 @@
 								<height>62</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
+								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -578,7 +578,7 @@
 							<aligny>center</aligny>
 							<label fallback="• • • •">$INFO[ListItem.Year]</label>
 							<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(507)">Conditional</animation>
-							<visible>!IsEmpty(ListItem.Title)</visible>
+							<visible>!String.IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="label">
 							<posx>110</posx>
@@ -622,7 +622,7 @@
 								<height>62</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
+								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -688,7 +688,7 @@
 								<height>68</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
+								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -762,7 +762,7 @@
 								<height>64</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
+								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -816,7 +816,7 @@
 								<height>76</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
+								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -878,7 +878,7 @@
 								<height>76</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + IsEmpty(ListItem.Overlay)</visible>
+								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -937,14 +937,14 @@
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>white</textcolor>
-							<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+							<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 						</control>
 						<control type="label">
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>$VAR[TitleColorVar]</textcolor>
 							<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-							<visible>StringCompare(ListItem.Label,Container.ListItem.SortLetter)</visible>
+							<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
 						</control>
 					</itemlayout>
 					<focusedlayout height="33" width="30">
@@ -952,7 +952,7 @@
 							<align>center</align>
 							<label>$INFO[ListItem.Label]</label>
 							<textcolor>$VAR[TitleColorVar]</textcolor>
-							<animation effect="fade" start="100" end="20" time="0" condition="!IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+							<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 						</control>
 					</focusedlayout>
 					<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>

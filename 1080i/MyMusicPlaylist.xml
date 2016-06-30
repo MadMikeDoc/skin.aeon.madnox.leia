@@ -20,7 +20,7 @@
 			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 			<visible>Substring(Container.FolderPath,musicdb://,left)</visible>
-			<visible>[Skin.HasSetting(musicextrafanart) + !IsEmpty(Skin.String(ArtistsLogosPath))] | Container.Content(genres)</visible>
+			<visible>[Skin.HasSetting(musicextrafanart) + !String.IsEmpty(Skin.String(ArtistsLogosPath))] | Container.Content(genres)</visible>
 		</control>
 		<include>CommonMediaPlayingBackground</include>
 		<include>Furniture_Showcase</include>
