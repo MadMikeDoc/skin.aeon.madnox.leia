@@ -66,8 +66,8 @@
 				<onright>10</onright>
 				<onup>11</onup>
 				<ondown>11</ondown>
-				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">buttons/roundedbutton-focus.png</texturefocus>
-				<texturenofocus>buttons/roundedbutton-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">buttons/roundedbutton-focusbig.png</texturefocus>
+				<texturenofocus>buttons/roundedbutton-nofocusbig.png</texturenofocus>
 			</control>
 			<control type="button" id="10">
 				<description>No button</description>
@@ -84,8 +84,8 @@
 				<onright>11</onright>
 				<onup>10</onup>
 				<ondown>10</ondown>
-				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">buttons/roundedbutton-focus.png</texturefocus>
-				<texturenofocus>buttons/roundedbutton-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">buttons/roundedbutton-focusbig.png</texturefocus>
+				<texturenofocus>buttons/roundedbutton-nofocusbig.png</texturenofocus>
 			</control>
 		</control>
 	</controls>
