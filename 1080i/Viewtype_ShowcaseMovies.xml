@@ -3147,25 +3147,25 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
 					</control>
 					<control type="group">
 						<left>20</left>
 						<top>-20</top>
 						<width>240</width>
 						<height>240</height>
-						<visible>String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.0.DiscArt))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-							<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.1.Art(poster))]</texture>
+							<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.Poster]</texture>
 						</control>
 						<control type="image">
 							<texture>thumbs/sets/cdarttop.png</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.0.Poster))</visible>
 						</control>
 						<control type="image">
 							<texture background="true">$VAR[BoxSetFakeDiscArtOverlay]</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.0.Poster))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -3177,7 +3177,7 @@
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 						<texture background="true" fallback="thumbs/sets/disc3.png" diffuse="thumbs/sets/disc3.png">$INFO[ListItem.Art(extrafanart1)]</texture>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(poster)))</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.0.Poster))</visible>
 					</control>
 					<control type="image">
 						<left>20</left>
@@ -3185,25 +3185,25 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
 					</control>
 					<control type="group">
 						<left>20</left>
 						<top>80</top>
 						<width>240</width>
 						<height>240</height>
-						<visible>String.IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.1.DiscArt))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-							<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.2.Art(poster))]</texture>
+							<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(Home).Property(SkinHelper.MovieSet.1.Poster)]</texture>
 						</control>
 						<control type="image">
 							<texture>thumbs/sets/cdarttop.png</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.1.Poster))</visible>
 						</control>
 						<control type="image">
 							<texture background="true">$VAR[BoxSetFakeDiscArtOverlay]</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.1.Poster))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -3215,7 +3215,7 @@
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 						<texture background="true" fallback="thumbs/sets/disc2.png" diffuse="thumbs/sets/disc2.png">$INFO[ListItem.Art(extrafanart1)]</texture>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(poster)))</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.1.Poster))</visible>
 					</control>
 					<control type="image">
 						<left>20</left>
@@ -3223,25 +3223,25 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
 					</control>
 					<control type="group">
 						<left>20</left>
 						<top>168</top>
 						<width>240</width>
 						<height>240</height>
-						<visible>String.IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.DiscArt))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-							<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.3.Art(poster))]</texture>
+							<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(Home).Property(SkinHelper.MovieSet.2.Poster)]</texture>
 						</control>
 						<control type="image">
 							<texture>thumbs/sets/cdarttop.png</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.Poster))</visible>
 						</control>
 						<control type="image">
 							<texture background="true">$VAR[BoxSetFakeDiscArtOverlay]</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.Poster))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -3253,7 +3253,7 @@
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 						<texture background="true" fallback="thumbs/sets/disc1.png" diffuse="thumbs/sets/disc1.png">$INFO[ListItem.Art(extrafanart1)]</texture>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(poster)))</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.2.Poster))</visible>
 					</control>
 					<control type="image">
 						<left>220</left>
@@ -3302,25 +3302,25 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true" flipx="true">$INFO[Window(home).Property(Set.Movie.7.Art(discart))]</texture>
+						<texture background="true" flipx="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.6.DiscArt)]</texture>
 					</control>
 					<control type="group">
 						<left>5</left>
 						<top>-20</top>
 						<width>240</width>
 						<height>240</height>
-						<visible>String.IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.6.DiscArt))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.7.Art(poster))]</texture>
+							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(Home).Property(SkinHelper.MovieSet.6.Poster)]</texture>
 						</control>
 						<control type="image">
 							<texture>thumbs/sets/cdarttop.png</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.6.Poster))</visible>
 						</control>
 						<control type="image">
 							<texture background="true">$VAR[BoxSetFakeDiscArtOverlay]</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.6.Poster))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -3332,7 +3332,7 @@
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="left" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc3.png" diffuse="thumbs/sets/disc3.png">$INFO[ListItem.Art(extrafanart1)]</texture>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(poster)))</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.6.DiscArt))</visible>
 					</control>
 					<control type="image">
 						<left>5</left>
@@ -3340,25 +3340,25 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true" flipx="true">$INFO[Window(home).Property(Set.Movie.8.Art(discart))]</texture>
+						<texture background="true" flipx="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.7.DiscArt)]</texture>
 					</control>
 					<control type="group">
 						<left>5</left>
 						<top>80</top>
 						<width>240</width>
 						<height>240</height>
-						<visible>String.IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.7.DiscArt))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.8.Art(poster))]</texture>
+							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(Home).Property(SkinHelper.MovieSet.7.Poster)]</texture>
 						</control>
 						<control type="image">
 							<texture>thumbs/sets/cdarttop.png</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.7.Poster))</visible>
 						</control>
 						<control type="image">
 							<texture background="true">$VAR[BoxSetFakeDiscArtOverlay]</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.7.Poster))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -3370,7 +3370,7 @@
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="left" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc2.png" diffuse="thumbs/sets/disc2.png">$INFO[ListItem.Art(extrafanart1)]</texture>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(poster)))</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.7.Poster))</visible>
 					</control>
 					<control type="image">
 						<left>5</left>
@@ -3378,25 +3378,25 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true" flipx="true">$INFO[Window(home).Property(Set.Movie.9.Art(discart))]</texture>
+						<texture background="true" flipx="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.8.DiscArt)]</texture>
 					</control>
 					<control type="group">
 						<left>5</left>
 						<top>168</top>
 						<width>240</width>
 						<height>240</height>
-						<visible>String.IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.8.DiscArt))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.9.Art(poster))]</texture>
+							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(Home).Property(SkinHelper.MovieSet.8.Poster)]</texture>
 						</control>
 						<control type="image">
 							<texture>thumbs/sets/cdarttop.png</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.8.Poster))</visible>
 						</control>
 						<control type="image">
 							<texture background="true">$VAR[BoxSetFakeDiscArtOverlay]</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.8.Poster))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -3408,10 +3408,10 @@
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="left" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc1.png" diffuse="thumbs/sets/disc1.png">$INFO[ListItem.Art(extrafanart1)]</texture>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(poster)))</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.8.Poster))</visible>
 					</control>
 					<control type="group">
-						<visible>String.IsEmpty(Window(home).Property(Set.Movie.9.Art(poster))) + String.IsEmpty(Window(home).Property(Set.Movie.8.Art(poster))) + String.IsEmpty(Window(home).Property(Set.Movie.7.Art(poster)))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.8.Poster)) + String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.7.Poster)) + String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.6.Poster))</visible>
 						<control type="image">
 							<left>15</left>
 							<top>-20</top>
@@ -3508,25 +3508,25 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true" flipx="true">$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</texture>
+						<texture background="true" flipx="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.3.DiscArt)]</texture>
 					</control>
 					<control type="group">
 						<left>-10</left>
 						<top>-20</top>
 						<width>240</width>
 						<height>240</height>
-						<visible>String.IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.3.DiscArt))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.4.Art(poster))]</texture>
+							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(Home).Property(SkinHelper.MovieSet.3.Poster)]</texture>
 						</control>
 						<control type="image">
 							<texture>thumbs/sets/cdarttop.png</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.3.Poster))</visible>
 						</control>
 						<control type="image">
 							<texture background="true">$VAR[BoxSetFakeDiscArtOverlay]</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.3.Poster))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -3538,7 +3538,7 @@
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="right" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc3.png" diffuse="thumbs/sets/disc3.png">$INFO[ListItem.Art(extrafanart1)]</texture>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.4.Art(poster)))</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.3.Poster))</visible>
 					</control>
 					<control type="image">
 						<left>-10</left>
@@ -3546,25 +3546,25 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true" flipx="true">$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</texture>
+						<texture background="true" flipx="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.4.DiscArt)]</texture>
 					</control>
 					<control type="group">
 						<left>-10</left>
 						<top>80</top>
 						<width>240</width>
 						<height>240</height>
-						<visible>String.IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.4.DiscArt))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.5.Art(poster))]</texture>
+							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(Home).Property(SkinHelper.MovieSet.4.Poster)]</texture>
 						</control>
 						<control type="image">
 							<texture>thumbs/sets/cdarttop.png</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.4.Poster))</visible>
 						</control>
 						<control type="image">
 							<texture background="true">$VAR[BoxSetFakeDiscArtOverlay]</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.4.Poster))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -3576,7 +3576,7 @@
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="right" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc2.png" diffuse="thumbs/sets/disc2.png">$INFO[ListItem.Art(extrafanart1)]</texture>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.5.Art(poster)))</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.4.Poster))</visible>
 					</control>
 					<control type="image">
 						<left>-10</left>
@@ -3584,25 +3584,25 @@
 						<width>240</width>
 						<height>240</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true" flipx="true">$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
+						<texture background="true" flipx="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.5.DiscArt)]</texture>
 					</control>
 					<control type="group">
 						<left>-10</left>
 						<top>168</top>
 						<width>240</width>
 						<height>240</height>
-						<visible>String.IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))</visible>
+						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.5.DiscArt))</visible>
 						<control type="image">
 							<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(Set.Movie.6.Art(poster))]</texture>
+							<texture background="true" flipx="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(Home).Property(SkinHelper.MovieSet.5.Poster)]</texture>
 						</control>
 						<control type="image">
 							<texture>thumbs/sets/cdarttop.png</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.5.Poster))</visible>
 						</control>
 						<control type="image">
 							<texture background="true">$VAR[BoxSetFakeDiscArtOverlay]</texture>
-							<visible>!String.IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
+							<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.5.Poster))</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -3614,7 +3614,7 @@
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="right" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc1.png" diffuse="thumbs/sets/disc1.png">$INFO[ListItem.Art(extrafanart1)]</texture>
-						<visible>!String.IsEmpty(Window(home).Property(Set.Movie.6.Art(poster)))</visible>
+						<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.MovieSet.5.Poster))</visible>
 					</control>
 				</control>
 				<control type="group">
