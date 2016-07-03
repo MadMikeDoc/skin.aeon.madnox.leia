@@ -113,7 +113,7 @@
 				<width>500</width>
 				<height>500</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture background="true">$INFO[Window(home).Property(Set.Movie.1.Art(Discart))]</texture>
+				<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1200" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
 			</control>
@@ -123,7 +123,7 @@
 				<width>500</width>
 				<height>500</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture background="true">$INFO[Window(home).Property(Set.Movie.2.Art(Discart))]</texture>
+				<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
 			</control>
@@ -133,7 +133,7 @@
 				<width>500</width>
 				<height>500</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture background="true">$INFO[Window(home).Property(Set.Movie.3.Art(Discart))]</texture>
+				<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="2000" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
 			</control>
@@ -331,7 +331,7 @@
 					<fadetime>IconCrossfadeTime2</fadetime>
 					<bordertexture border="19.5">thumbs/poster_shadow.png</bordertexture>
 					<bordersize>19</bordersize>
-					<visible>Skin.HasSetting(genrethumbs)</visible>
+					<visible>Skin.HasSetting(ListCase)</visible>
 				</control>
 				<control type="image">   	 	<!-- Extras Corner badge -->
 					<left>388</left>

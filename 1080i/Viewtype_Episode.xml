@@ -850,9 +850,9 @@
 					<top>210</top>
 					<width>300</width>
 					<height>300</height>
-					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.6.Art(discart))]</texture>
+					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.5.DiscArt)]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.6.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.DiscArt))</visible>
 					<animation effect="slide" end="410,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -861,9 +861,9 @@
 					<top>310</top>
 					<width>300</width>
 					<height>300</height>
-					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.7.Art(discart))]</texture>
+					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.6.DiscArt)]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.7.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.DiscArt))</visible>
 					<animation effect="slide" end="410,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -872,9 +872,9 @@
 					<top>410</top>
 					<width>300</width>
 					<height>300</height>
-					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.8.Art(discart))]</texture>
+					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.7.DiscArt)]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.8.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.DiscArt))</visible>
 					<animation effect="slide" end="410,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -883,9 +883,9 @@
 					<top>510</top>
 					<width>300</width>
 					<height>300</height>
-					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.9.Art(discart))]</texture>
+					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.8.DiscArt)]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.9.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.DiscArt))</visible>
 					<animation effect="slide" end="410,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -894,9 +894,9 @@
 					<top>610</top>
 					<width>300</width>
 					<height>300</height>
-					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.10.Art(discart))]</texture>
+					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.9.DiscArt)]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.10.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.DiscArt))</visible>
 					<animation effect="slide" end="410,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -906,9 +906,9 @@
 					<top>210</top>
 					<width>300</width>
 					<height>300</height>
-					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.1.Art(discart))]</texture>
+					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.1.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt))</visible>
 					<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -917,9 +917,9 @@
 					<top>310</top>
 					<width>300</width>
 					<height>300</height>
-					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.2.Art(discart))]</texture>
+					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.2.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.1.DiscArt))</visible>
 					<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -928,9 +928,9 @@
 					<top>410</top>
 					<width>300</width>
 					<height>300</height>
-					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.3.Art(discart))]</texture>
+					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.3.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.DiscArt))</visible>
 					<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -939,9 +939,9 @@
 					<top>510</top>
 					<width>300</width>
 					<height>300</height>
-					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.4.Art(discart))]</texture>
+					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.3.DiscArt)]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.4.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.DiscArt))</visible>
 					<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
@@ -950,9 +950,9 @@
 					<top>610</top>
 					<width>300</width>
 					<height>300</height>
-					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(Set.Movie.5.Art(discart))]</texture>
+					<texture background="true" diffuse="thumbs/cd_mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.4.DiscArt)]</texture>
 					<visible>Skin.HasSetting(EpisodeDiscArt)</visible>
-					<visible>!String.IsEmpty(Window(home).Property(Set.Movie.5.Art(discart)))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.DiscArt))</visible>
 					<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				</control>
