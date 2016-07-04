@@ -16,10 +16,9 @@
 				<top>180</top>
 				<width>1210</width>
 				<height>642</height>
-				<texture>osd/osd_settings_back_glow.png</texture>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">osd/osd_settings_back_glow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>PanelGlowFade</include>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 			</control>
 			<control type="image">
 				<left>356</left>
@@ -79,7 +78,7 @@
 				</control>
 				<control type="button" id="461">
 					<label>$LOCALIZE[31099]:</label>
-					<label2>[COLOR $VAR[FontColorVar]]$VAR[TopBarTypeLabelVar][/COLOR]</label2>
+					<label2>[COLOR $VAR[FontColorVar]] $VAR[TopBarTypeLabelVar][/COLOR]</label2>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick condition="!Skin.HasSetting(ClassicTopBar)+ !Skin.HasSetting(FadedTopBar)">Skin.SetBool(ClassicTopBar)</onclick>
 					<onclick condition="Skin.HasSetting(ClassicTopBar)">Skin.SetBool(FadedTopBar)</onclick>
@@ -89,7 +88,7 @@
 				</control>
 				<control type="button" id="462">
 					<label>$LOCALIZE[31677]:</label>
-					<label2>[COLOR $VAR[FontColorVar]]$VAR[TopBarLeftSideLabelVar][/COLOR]</label2>
+					<label2>[COLOR $VAR[FontColorVar]] $VAR[TopBarLeftSideLabelVar][/COLOR]</label2>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick condition="!Skin.HasSetting(breadcrumbslabel)">Skin.SetBool(breadcrumbslabel)</onclick>
 					<onclick condition="Skin.HasSetting(breadcrumbslabel)">Skin.Reset(GlobalNowPlaying)</onclick>

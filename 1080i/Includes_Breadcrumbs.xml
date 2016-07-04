@@ -119,9 +119,8 @@
 				<info>Player.Progress</info>
 				<texturebg>osd/info/osd_progress_back_cache.png</texturebg>
 				<lefttexture></lefttexture>
-				<midtexture>osd/info/osd_progress_mid.png</midtexture>
+				<midtexture colordiffuse="$VAR[HomeMenuTextFocusVar]">osd/info/osd_progress_mid.png</midtexture>
 				<righttexture></righttexture>
-				<colordiffuse>$VAR[HomeMenuTextFocusVar]</colordiffuse>
 				<visible>Player.HasMedia + Skin.HasSetting(ProgressNowPlaying)</visible>
 				<animation effect="fade" end="35" time="600" condition="Player.HasMedia">Conditional</animation>
 			</control>
@@ -130,17 +129,15 @@
 				<top>9</top>
 				<width>30</width>
 				<height>24</height>
-				<texture>VisualEqu/static/0.png</texture>
+				<texture colordiffuse="$VAR[TitleColorVar]">VisualEqu/static/0.png</texture>
 				<include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
 				<visible>Player.HasAudio + !Player.Playing</visible>
-				<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
 			</control>
 			<control type="image">
 				<width>54</width>
 				<height>38</height>
 				<aspectratio>keep</aspectratio>
-				<texture>common/logo_movies.png</texture>
-				<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[TitleColorVar]">common/logo_movies.png</texture>
 				<visible>Player.HasVideo</visible>
 				<include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
 			</control>
@@ -282,7 +279,7 @@
 						<visible>[SubString(Container.SortMethod,$LOCALIZE[551]) | SubString(Container.SortMethod,$LOCALIZE[561]) | SubString(Container.SortMethod,$LOCALIZE[558]) | SubString(Container.SortMethod,$LOCALIZE[557]) | SubString(Container.SortMethod,$LOCALIZE[556])]</visible>
 					</control>
 				</control>
-				<!-- ######################################################################### ScrollLabel ######################################################################### -->
+				<!--  ScrollLabel  -->
 				<control type="group">
 					<posx>870</posx>
 					<posy>455</posy>
@@ -296,8 +293,6 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<texture>views/ScrollLetter2.png</texture>
-						<!--texture>thumbs/thumbshadow.png</texture-->
-						<!--bordertexture border="7">thumbs/thumbnail_focused.png</bordertexture-->
 						<bordersize>1</bordersize>
 						<include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
 						<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Control.IsVisible(4051) + !Skin.HasSetting(ClassicTopBar)">Conditional</animation>
@@ -338,8 +333,7 @@
 					<top>-15</top>
 					<width>70</width>
 					<height>70</height>
-					<colordiffuse>white2</colordiffuse>
-					<texture>$VAR[Realweatherimg]$INFO[Weather.FanartCode].png</texture>
+					<texture colordiffuse="white2">$VAR[Realweatherimg]$INFO[Weather.FanartCode].png</texture>
 					<visible>!Skin.HasSetting(W_condition_image)</visible>
 					<visible>!Skin.HasSetting(shorterhomebars) + Skin.HasSetting(breadcrumbsweather)</visible>
 					<animation effect="slide" end="-20" time="320" condition="!Skin.HasSetting(W_condition_image)">Conditional</animation>

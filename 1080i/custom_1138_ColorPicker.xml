@@ -38,8 +38,7 @@
 				<top>-24</top>
 				<width>776</width>
 				<height>372</height>
-				<texture border="22">dialogs/scan_backg_shadow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" border="22">dialogs/scan_backg_shadow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>PanelGlowFade</include>
 				<include>Animation_VisibleChange400</include>
@@ -78,9 +77,8 @@
 					<control type="image">
 						<width>70</width>
 						<height>70</height>
-						<texture>views/addonwall_select.png</texture>
+						<texture colordiffuse="black" border="22">views/addonwall_select.png</texture>
 						<include>Animation_VisibleChange200</include>
-						<colordiffuse>black</colordiffuse>
 						<bordersize>1.7</bordersize>
 						<visible>Control.HasFocus(10)</visible>
 					</control>

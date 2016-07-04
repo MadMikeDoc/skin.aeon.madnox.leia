@@ -39,8 +39,7 @@
 					<top>-24</top>
 					<width>776</width>
 					<height>580</height>
-					<texture border="22">dialogs/scan_backg_shadow.png</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]" border="22">dialogs/scan_backg_shadow.png</texture>
 					<include>PanelGlowFade</include>
 					<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 					<include>Animation_VisibleChange400</include>
@@ -162,8 +161,7 @@
 				<top>395</top>
 				<width>50</width>
 				<height>50</height>
-				<texture>common/white.png</texture>
-				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[FontColorVar]">common/white.png</texture>
 			</control>
 		</control>
 	</controls>

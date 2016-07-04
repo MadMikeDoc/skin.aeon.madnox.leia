@@ -4,7 +4,6 @@
 	<onload condition="Window.IsActive(1121)">Dialog.Close(1121)</onload>
 	<onload condition="Skin.HasSetting(quicklistmenu)">ActivateWindow(1121)</onload>
 	<defaultcontrol always="true">800</defaultcontrol>
-
 	<coordinates>
 		<left>0</left>
 		<top>0</top>

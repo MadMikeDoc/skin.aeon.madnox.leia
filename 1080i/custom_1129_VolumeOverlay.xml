@@ -23,8 +23,7 @@
 				<top>-4</top>
 				<width>332</width>
 				<height>162</height>
-				<texture>dialogs/scan_backg_shadow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">dialogs/scan_backg_shadow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>PanelGlowFade</include>
 				<include>Animation_VisibleChange400</include>
@@ -44,18 +43,9 @@
 					<width>150</width>
 					<height>150</height>
 					<align>center</align>
-					<texture>$VAR[VolumeIconVar]</texture>
+					<texture colordiffuse="$VAR[VolumeColorVar]">$VAR[VolumeIconVar]</texture>
 					<fadetime>0</fadetime>
-					<colordiffuse>$VAR[VolumeColorVar]</colordiffuse>
 				</control>
-				<!-- 			    <control type="image">
-                    <left>40</left>
-                    <top>45</top>
-                    <width>55</width>
-                    <height>55</height>
-                    <texture>dialogs/volume.png</texture>
-                    <colordiffuse>white2</colordiffuse>
-                </control> -->
 			</control>
 			<control type="group">
 				<visible>!player.passthrough</visible>
@@ -92,8 +82,7 @@
 					<top>30</top>
 					<width>100</width>
 					<height>100</height>
-					<texture>dialogs/mute.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">dialogs/mute.png</texture>
 				</control>
 				<control type="label">
 					<left>50</left>

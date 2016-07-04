@@ -39,35 +39,8 @@
 			<include>skinshortcuts-template-widget.2b.backgroundFanart</include>
 			<include>skinshortcuts-template-widget.2c.backgroundFanart</include>
 			<include>skinshortcuts-template-widget.2d.backgroundFanart</include>
-			<!-- <control type="image">
-				<aspectratio align="center" aligny="top">scale</aspectratio>
-				<texture background="true" fallback="special://skin/backgrounds/speakergrill.jpg">$INFO[Skin.String(LiveBG)]</texture>
-				<fadetime>600</fadetime>
-				<include>FullscreenDimensions</include>
-				<include>Animation_WindowFade250</include>
-				<animation effect="fade" time="400">Visible</animation>
-				<animation effect="fade" time="400">Hidden</animation>
-				<visible>Substring(Control.GetLabel(4322),case)</visible>
-			</control-->
 			<include>skinshortcuts-template-liveBackground</include>
-			<!--include condition="[Skin.HasSetting(homecdwall) | SubString(Skin.String(backgroundlist),cdwall)] + !String.IsEmpty(Skin.String(CDWall_Folder_Path))">cdwall-musicvisualisation</include>
-			<include condition="SubString(Skin.String(backgroundlist),moviewall)">MovieWall</include>
-			<control type="image">
-				<aspectratio align="center" aligny="top">scale</aspectratio>
-				<texture background="true">$VAR[HomeWidgetFanartVar]</texture>
-				<fadetime>600</fadetime>
-				<include>FullscreenDimensions</include>
-				<visible>[Control.HasFocus(8000) | Control.HasFocus(8020) | Control.HasFocus(7000) | Control.HasFocus(7020) | ControlGroup(5000).HasFocus | ControlGroup(6000).HasFocus] | [Player.HasAudio + Skin.HasSetting(musicfanarthome)]</visible>
-				<animation effect="fade" time="480">Visible</animation>
-				<animation effect="fade" time="480">Hidden</animation>
-				<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-				<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-			</control> -->
-			<!-- Music ExtraFanart -->
-			<!-- <include condition="!String.IsEmpty(Skin.String(ArtistsLogosPath))">MusicExtraFanartHome</include>
-			<include condition="Skin.HasSetting(artistslideshowhome)">MusicArtistSlideshowHome</include-->
 			<include>CommonMediaPlayingBackground</include>
-			<!--include condition="Substring(Skin.String(backgroundlist),weatherworldbackground) + System.HasAddon(script.widget.weatherworld)">WorldWeatherIcons</include> -->
 		</control>
 		<!-- Hidden button to activate bottom bar-->
 		<control type="button" id="9011">
@@ -384,16 +357,14 @@
 			<visible>![!String.IsEmpty(Window(home).Property(DisableWidgets)) + !Control.IsVisible(8995)]</visible>
 			<visible>![!String.IsEmpty(Window(home).Property(DisableWidgets)) + Player.HasVideo + Skin.HasSetting(ShowBackgroundVideo)]</visible>
 			<control type="image">
-				<texture>common/bgcolor.png</texture>
+				<texture colordiffuse="$INFO[Skin.String(BackgroundDarkness)]">common/bgcolor.png</texture>
 				<include>FullscreenDimensions</include>
-				<colordiffuse>$INFO[Skin.String(BackgroundDarkness)]</colordiffuse>
 			</control>
 			<control type="image">
 				<top>-150</top>
 				<width>1920</width>
 				<height>608</height>
-				<texture flipy="true">views/showcase_glow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" flipy="true">views/showcase_glow.png</texture>
 				<include>Animation_WindowFade200</include>
 				<include>Animation_VisibleChange400</include>
 				<animation effect="fade" start="100" end="80" time="4000" pulse="true" condition="true">conditional</animation>
@@ -403,8 +374,7 @@
 				<top>622</top>
 				<width>1920</width>
 				<height>608</height>
-				<texture>views/showcase_glow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">views/showcase_glow.png</texture>
 				<include>Animation_WindowFade200</include>
 				<include>Animation_VisibleChange400</include>
 				<animation effect="fade" start="100" end="80" time="4000" pulse="true" condition="true">conditional</animation>
@@ -461,8 +431,7 @@
 						<top>613</top>
 						<width>50</width>
 						<height>15</height>
-						<texture>arrowdown.png</texture>
-						<colordiffuse>white</colordiffuse>
+						<texture colordiffuse="white">arrowdown.png</texture>
 						<visible>Control.HasFocus(9000) + !Skin.HasSetting(showsubmenu) + IntegerGreaterThan(Container(9010).NumItems,0)</visible>
 						<animation effect="zoom" start="100,0" end="100,100" time="400" delay="160" tween="cubic" center="0,613" easing="inout">VisibleChange</animation>
 					</control>
@@ -477,8 +446,7 @@
 							<top>3</top>
 							<width>1300</width>
 							<height>87</height>
-							<texture>$VAR[SubMenuImageVar]</texture>
-							<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
+							<texture colordiffuse="$VAR[ExtendedColorVar]">$VAR[SubMenuImageVar]</texture>
 						</control>
 						<include condition="Skin.HasSetting(submenufixedlist)">SubMenuFixedList</include>
 						<include condition="!Skin.HasSetting(submenufixedlist)">SubMenuWrapList</include>
@@ -535,8 +503,7 @@
 						<top>453</top>
 						<width>1920</width>
 						<height>225</height>
-						<texture>home/homemenu_back_glow.png</texture>
-						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+						<texture colordiffuse="$VAR[ColorDiffuseVar]">home/homemenu_back_glow.png</texture>
 						<animation effect="zoom" end="125,100" center="960,500" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(smallermainmenu)">Conditional</animation>
 						<include>PanelGlowFade</include>
 						<include>Animation_VisibleChange400</include>
@@ -585,9 +552,8 @@
 				<top>-20</top>
 				<width>290</width>
 				<height>100</height>
-				<texture>home/fade.png</texture>
+				<texture colordiffuse="black">home/fade.png</texture>
 				<animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
-				<colordiffuse>black</colordiffuse>
 			</control>
 			<control type="image">
 				<left>0</left>
@@ -595,9 +561,8 @@
 				<width>65</width>
 				<height>49</height>
 				<aspectratio aligny="top">scale</aspectratio>
-				<texture>special://skin/extras/BigIcons/ButtonBack.png</texture>
+				<texture colordiffuse="white">special://skin/extras/BigIcons/ButtonBack.png</texture>
 				<animation effect="zoom" start="80" end="85" delay="400" time="840" center="auto" tween="cubic" easing="out" pulse="true" condition="true">Conditional</animation>
-				<colordiffuse>white</colordiffuse>
 			</control>
 			<control type="image">
 				<left>50</left>
@@ -606,8 +571,7 @@
 				<height>38</height>
 				<aspectratio aligny="top">scale</aspectratio>
 				<animation effect="fade" start="100" end="80" time="440" delay="800" center="auto" tween="cubic" easing="out" pulse="true" condition="true">Conditional</animation>
-				<texture>special://skin/extras/BigIcons/widgets.png</texture>
-				<colordiffuse>white4</colordiffuse>
+				<texture colordiffuse="white4">special://skin/extras/BigIcons/widgets.png</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -660,23 +624,8 @@
 					<texture>weather/key2.png</texture>
 				</control>
 			</control>
-			<!--<control type="button" id="22222">
-				<include>HiddenObject</include>
-				<onleft condition="String.IsEqual(Window(home).Property(WidgetPosition),Widget1)">Control.Move(5010,-1)</onleft>
-				<onright condition="String.IsEqual(Window(home).Property(WidgetPosition),Widget1)">Control.Move(5010,1)</onright>
-				<onup condition="String.IsEqual(Window(home).Property(WidgetPosition),Widget1)">SetFocus(5010)</onup>
-				<ondown condition="String.IsEqual(Window(home).Property(WidgetPosition),Widget1)">SetFocus(5010)</ondown>
-				<onback condition="String.IsEqual(Window(home).Property(WidgetPosition),Widget1)">SetFocus(5010)</onback>
-				<onleft condition="String.IsEqual(Window(home).Property(WidgetPosition),Widget2)">Control.Move(6010,-1)</onleft>
-				<onright condition="String.IsEqual(Window(home).Property(WidgetPosition),Widget2)">Control.Move(6010,1)</onright>
-				<onup condition="String.IsEqual(Window(home).Property(WidgetPosition),Widget2)">SetFocus(6010)</onup>
-				<ondown condition="String.IsEqual(Window(home).Property(WidgetPosition),Widget2)">SetFocus(6010)</ondown>
-				<onback condition="String.IsEqual(Window(home).Property(WidgetPosition),Widget2)">SetFocus(6010)</onback>
-			</control> -->
 		</control>
-
 		<!--Now Playing Music Info-->
-
 		<control type="group" id="89995">
 			<posy>260</posy>
 			<posx>15</posx>

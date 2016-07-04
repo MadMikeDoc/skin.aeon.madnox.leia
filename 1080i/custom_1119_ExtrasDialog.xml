@@ -13,10 +13,9 @@
 			<top>180</top>
 			<width>1212</width>
 			<height>730</height>
-			<texture>osd/osd_settings_back_glow.png</texture>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">osd/osd_settings_back_glow.png</texture>
 			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 			<include>PanelGlowFade</include>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 		</control>
 		<control type="image">
 			<left>357</left>

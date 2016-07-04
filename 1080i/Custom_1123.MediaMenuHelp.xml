@@ -10,8 +10,7 @@
 			<width>87</width>
 			<height>214</height>
 			<aspectratio>keep</aspectratio>
-			<texture>tooltip.png</texture>
-			<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
+			<texture colordiffuse="$VAR[ExtendedColorVar]">tooltip.png</texture>
 			<include>Animation_CommonFade</include>
 		</control>
 		<control type="group">
@@ -20,11 +19,10 @@
 				<top>492</top>
 				<width>25</width>
 				<height>25</height>
-				<texture>$VAR[Colortdefaulticons]DefaultFolderBack.png</texture>
+				<texture colordiffuse="$VAR[TitleColorVar]">$VAR[Colortdefaulticons]DefaultFolderBack.png</texture>
 				<animation effect="rotate" end="-90" center="auto" delay="240" time="640" condition="Window.IsActive(musicinformation) | Control.HasFocus(7000) | Control.IsVisible(508) | Control.IsVisible(501) | Control.IsVisible(503) | Control.IsVisible(510) | Control.IsVisible(57) | Control.IsVisible(516) | Control.IsVisible(509) | [Control.IsVisible(500) + !Skin.HasSetting(WallVertical)]">Conditional</animation>
 				<animation effect="rotate" end="-180" center="auto" delay="240" time="640" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 				<animation effect="rotate" start="-90" end="180" center="auto" delay="240" time="640" condition="Control.IsVisible(503) + Skin.HasSetting(landscapeonelogo) + Container.Content(movies)">Conditional</animation>
-				<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
 			</control>
 		</control>
 		<control type="image">
@@ -46,8 +44,7 @@
 			<control type="image">
 				<width>780</width>
 				<height>410</height>
-				<texture>dialogs/dialog_back_shadow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">dialogs/dialog_back_shadow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>PanelGlowFade</include>
 			</control>

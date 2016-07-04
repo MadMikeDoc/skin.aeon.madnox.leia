@@ -578,8 +578,7 @@
 					<width>75</width>
 					<height>75</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<colordiffuse>white3</colordiffuse>
+					<texture colordiffuse="white3">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
 					<left></left>
@@ -611,8 +610,7 @@
 					<width>75</width>
 					<height>75</height>
 					<aspectratio align="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
 					<left></left>

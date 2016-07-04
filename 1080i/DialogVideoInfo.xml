@@ -125,8 +125,7 @@
 									<left>-20</left>
 									<width>120</width>
 									<height>120</height>
-									<texture>$VAR[Imdb_250]</texture>
-									<colordiffuse>white2</colordiffuse>
+									<texture colordiffuse="white2">$VAR[Imdb_250]</texture>
 									<include>AudioFlagsVars</include>
 								</control>
 								<control type="label">
@@ -173,9 +172,8 @@
 										<width>42</width>
 										<height>35</height>
 										<aspectratio aligny="center" align="left">keep</aspectratio>
-										<texture background="true">$VAR[CountryFlagVar]</texture>
+										<texture colordiffuse="AAFFFFFF" background="true">$VAR[CountryFlagVar]</texture>
 										<fadetime>200</fadetime>
-										<colordiffuse>AAFFFFFF</colordiffuse>
 										<visible>!String.IsEmpty(Control.GetLabel(12020))</visible>
 									</control>
 									<control type="label">
@@ -286,13 +284,11 @@
 									<visible>[Container.Content(movies) | Container.Content(MusicVideos)] + Skin.HasSetting(ExtendedRatingVideoinfo) + !Skin.HasSetting(DisableRatingColorFlag)</visible>
 									<control type="image" id="9108">
 										<aspectratio align="center">keep</aspectratio>
-										<texture>$VAR[ColorFlagsRatingextended]$VAR[RatingFlagVar,,.png]</texture>
-										<colordiffuse>white2</colordiffuse>
+										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsRatingextended]$VAR[RatingFlagVar,,.png]</texture>
 									</control>
 									<control type="image">
 										<aspectratio align="center">keep</aspectratio>
-										<texture>$VAR[ColorFlagsRatingextended]MPAA_NR_Certificate_US.png</texture>
-										<colordiffuse>white2</colordiffuse>
+										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsRatingextended]MPAA_NR_Certificate_US.png</texture>
 										<visible>String.IsEmpty(Control.GetLabel(9108))</visible>
 									</control>
 								</control>
@@ -303,13 +299,11 @@
 									<visible>[Container.Content(movies) | Container.Content(MusicVideos)] + !Skin.HasSetting(ExtendedRatingVideoinfo) + !Skin.HasSetting(DisableRatingColorFlag)</visible>
 									<control type="image" id="9109">
 										<aspectratio align="center">keep</aspectratio>
-										<texture>$VAR[ColorFlagsRatingextended]$VAR[RatingFlagVar,,.png]</texture>
-										<colordiffuse>white2</colordiffuse>
+										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsRatingextended]$VAR[RatingFlagVar,,.png]</texture>
 									</control>
 									<control type="image">
 										<aspectratio align="center">keep</aspectratio>
-										<texture>$VAR[ColorFlagsRatingextended]MPAA_NR_Certificate_US.png</texture>
-										<colordiffuse>white2</colordiffuse>
+										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsRatingextended]MPAA_NR_Certificate_US.png</texture>
 										<visible>String.IsEmpty(Control.GetLabel(9109))</visible>
 									</control>
 								</control>
@@ -320,14 +314,12 @@
 									<control type="image" id="9110">
 										<top>5</top>
 										<aspectratio align="center">keep</aspectratio>
-										<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
-										<colordiffuse>white2</colordiffuse>
+										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
 									</control>
 									<control type="image">
 										<top>5</top>
 										<aspectratio align="center">keep</aspectratio>
-										<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
-										<colordiffuse>white2</colordiffuse>
+										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 										<visible>String.IsEmpty(Control.GetLabel(9110))</visible>
 									</control>
 								</control>
@@ -339,14 +331,12 @@
 									<control type="image" id="9111">
 										<top>5</top>
 										<aspectratio align="center">keep</aspectratio>
-										<texture>$VAR[ColorFlagsTVRatingextended]$VAR[RatingFlagVar,,.png]</texture>
-										<colordiffuse>white2</colordiffuse>
+										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsTVRatingextended]$VAR[RatingFlagVar,,.png]</texture>
 									</control>
 									<control type="image">
 										<top>5</top>
 										<aspectratio align="center">keep</aspectratio>
-										<texture>$VAR[ColorFlagsTVRatingextended]MPAA_NR_Certificate_US.png</texture>
-										<colordiffuse>white2</colordiffuse>
+										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsTVRatingextended]MPAA_NR_Certificate_US.png</texture>
 										<visible>String.IsEmpty(Control.GetLabel(9111))</visible>
 									</control>
 								</control>
@@ -399,8 +389,7 @@
 										<width>155</width>
 										<height>68</height>
 										<aspectratio>keep</aspectratio>
-										<texture>$VAR[ColortvguideFlags]$INFO[Window(Home).Property(NextAired.StatusID)].png</texture>
-										<colordiffuse>white2</colordiffuse>
+										<texture colordiffuse="white2" background="true">$VAR[ColortvguideFlags]$INFO[Window(Home).Property(NextAired.StatusID)].png</texture>
 									</control>
 								</control>
 								<control type="group">
@@ -470,8 +459,7 @@
 										<width>150</width>
 										<height>74</height>
 										<aspectratio aligny="center" align="center">keep</aspectratio>
-										<texture>$VAR[ColorFlagsStudio]$INFO[ListItem.Studio,,.png]</texture>
-										<colordiffuse>white2</colordiffuse>
+										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsStudio]$INFO[ListItem.Studio,,.png]</texture>
 										<visible>!String.IsEmpty(Control.GetLabel(800011))</visible>
 									</control>
 									<control type="label">
@@ -506,8 +494,7 @@
 									<height>45</height>
 									<top>2</top>
 									<aspectratio align="center">keep</aspectratio>
-									<colordiffuse>white</colordiffuse>
-									<texture>$VAR[Colortdefaulticons]DefaultCountry.png</texture>
+									<texture colordiffuse="white" background="true">$VAR[Colortdefaulticons]DefaultCountry.png</texture>
 								</control>
 								<control type="label">
 									<width>840</width>
@@ -529,8 +516,7 @@
 									<width>50</width>
 									<height>50</height>
 									<aspectratio align="right">keep</aspectratio>
-									<colordiffuse>white</colordiffuse>
-									<texture>$VAR[Colortdefaulticons]director-icon.png</texture>
+									<texture colordiffuse="white" background="true">$VAR[Colortdefaulticons]director-icon.png</texture>
 								</control>
 								<control type="label">
 									<left>180</left>
@@ -553,8 +539,7 @@
 									<top>2</top>
 									<height>45</height>
 									<aspectratio align="center">keep</aspectratio>
-									<colordiffuse>white</colordiffuse>
-									<texture>$VAR[Colortdefaulticons]DefaultInProgressShows.png</texture>
+									<texture colordiffuse="white">$VAR[Colortdefaulticons]DefaultInProgressShows.png</texture>
 								</control>
 								<control type="label">
 									<width>840</width>
@@ -574,8 +559,7 @@
 									<width>50</width>
 									<height>50</height>
 									<aspectratio align="right">keep</aspectratio>
-									<colordiffuse>white</colordiffuse>
-									<texture>$VAR[Colortdefaulticons]writer-icon.png</texture>
+									<texture colordiffuse="white">$VAR[Colortdefaulticons]writer-icon.png</texture>
 								</control>
 								<control type="label">
 									<left>180</left>
@@ -658,7 +642,6 @@
 										<visible>[!String.IsEmpty(ListItem.Art(discart)) | [Skin.HasSetting(Fakediscart) + Container.Content(movies)]] | !String.IsEmpty(ListItem.Art(characterart)) | !String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
 									</control>
 								</control>
-
 							</control>
 							<control type="image">
 								<left>780</left>
@@ -695,8 +678,7 @@
 									<width>100</width>
 									<height>62</height>
 									<aspectratio>keep</aspectratio>
-									<texture>$VAR[ColorFlagsSource]source/$VAR[SourceFlagVar,,.png]</texture>
-									<colordiffuse>white2</colordiffuse>
+									<texture colordiffuse="white2">$VAR[ColorFlagsSource]source/$VAR[SourceFlagVar,,.png]</texture>
 									<visible>!String.IsEmpty(Control.GetLabel(900011))</visible>
 								</control>
 								<control type="image" id="900012">
@@ -704,8 +686,7 @@
 									<width>126</width>
 									<height>62</height>
 									<aspectratio>keep</aspectratio>
-									<texture>$VAR[ColorFlagsSource]Source/$INFO[ListItem.VideoCodec,,.png]</texture>
-									<colordiffuse>white2</colordiffuse>
+									<texture colordiffuse="white2">$VAR[ColorFlagsSource]Source/$INFO[ListItem.VideoCodec,,.png]</texture>
 									<visible>String.IsEmpty(Control.GetLabel(900011))</visible>
 									<visible>!String.IsEmpty(Control.GetLabel(900012))</visible>
 								</control>
@@ -718,8 +699,7 @@
 									<width>126</width>
 									<height>62</height>
 									<aspectratio>keep</aspectratio>
-									<texture>$VAR[LibraryAudioFlagVar]</texture>
-									<colordiffuse>white2</colordiffuse>
+									<texture colordiffuse="white2">$VAR[LibraryAudioFlagVar]</texture>
 									<visible>!String.IsEmpty(Control.GetLabel(900013))</visible>
 								</control>
 								<control type="image">
@@ -731,8 +711,7 @@
 									<width>126</width>
 									<height>62</height>
 									<aspectratio>keep</aspectratio>
-									<texture>$VAR[ColorFlagsAudio]audio/$INFO[Window.Property(AudioCodec.2)]$INFO[Window.Property(AudioChannels.2),,.png]</texture>
-									<colordiffuse>white2</colordiffuse>
+									<texture colordiffuse="white2">$VAR[ColorFlagsAudio]audio/$INFO[Window.Property(AudioCodec.2)]$INFO[Window.Property(AudioChannels.2),,.png]</texture>
 									<visible>!String.IsEmpty(Control.GetLabel(90013)) + ![String.IsEqual(Window.Property(AudioCodec.1),Window.Property(AudioCodec.2)) + String.IsEqual(Window.Property(AudioChannels.1),Window.Property(AudioChannels.2))]</visible>
 								</control>
 								<control type="image">
@@ -744,8 +723,7 @@
 									<width>80</width>
 									<height>62</height>
 									<aspectratio>keep</aspectratio>
-									<texture>$VAR[ColorFlagsResolution]resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
-									<colordiffuse>white2</colordiffuse>
+									<texture colordiffuse="white2">$VAR[ColorFlagsResolution]resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
 									<visible>!String.IsEmpty(Control.GetLabel(900014))</visible>
 								</control>
 								<control type="image">
@@ -757,8 +735,7 @@
 									<width>126</width>
 									<height>62</height>
 									<aspectratio>keep</aspectratio>
-									<texture>$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
-									<colordiffuse>white2</colordiffuse>
+									<texture colordiffuse="white2">$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 									<visible>!String.IsEmpty(Control.GetLabel(900015))</visible>
 								</control>
 								<control type="image">
@@ -770,8 +747,7 @@
 									<width>100</width>
 									<height>62</height>
 									<aspectratio aligny="center" align="center">keep</aspectratio>
-									<texture>$VAR[ColorFlags]cc.png</texture>
-									<colordiffuse>white2</colordiffuse>
+									<texture colordiffuse="white2">$VAR[ColorFlags]cc.png</texture>
 									<visible>!String.String.IsEmpty(ListItem.SubtitleLanguage)</visible>
 								</control>
 								<!-- Language flags -->
@@ -910,8 +886,7 @@
 									<width>97</width>
 									<height>75</height>
 									<aspectratio aligny="top" align="right">keep</aspectratio>
-									<texture>$VAR[Colortdefaulticons]DefaultTVShows.png</texture>
-									<colordiffuse>white</colordiffuse>
+									<texture colordiffuse="white">$VAR[Colortdefaulticons]DefaultTVShows.png</texture>
 								</control>
 								<control type="group">
 									<control type="label">
@@ -1391,13 +1366,9 @@
 								</item>
 								<item>
 									<label>31096</label>
-									<!--onclick condition="String.IsEqual(Window(home).Property(ListType),Actors)">ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[Container(600).Listitem.Label]),return)</onclick>
-								<onclick condition="String.IsEqual(Window(home).Property(ListType),Writer)">ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Writer],return)</onclick>
-								<onclick condition="String.IsEqual(Window(home).Property(ListType),Director)">ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.Director],return)</onclick-->
 									<onclick condition="String.IsEqual(Window(home).Property(ListType),Actors)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[Container(600).ListItem.Label],header=$INFO[Container(600).ListItem.Label] YouTube Search)</onclick>
 									<onclick condition="String.IsEqual(Window(home).Property(ListType),Writer)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Writer],header=$INFO[ListItem.Writer] Youtube Search)</onclick>
 									<onclick condition="String.IsEqual(Window(home).Property(ListType),Director)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Director],header=$INFO[ListItem.Director] Youtube Search)</onclick>
-									<!--onclick>Action(Close)</onclick-->
 								</item>
 								<item>
 									<label>31066</label>

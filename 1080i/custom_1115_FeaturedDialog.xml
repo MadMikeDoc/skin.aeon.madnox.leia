@@ -2,12 +2,9 @@
 <window id="1115" type="dialog">
 	<defaultcontrol>40</defaultcontrol>
 	<backgroundcolor>backgroundcolor</backgroundcolor>
-	<!--onload condition="!String.IsEmpty(Window(home).Property(FeaturedSetup))">ActivateWindow(1128)</onload-->
 	<onload condition="Window.Previous(SkinSettings)">ActivateWindow(1128)</onload>
 	<onload condition="Window.Previous(home)">SetFocus(5012)</onload>
 	<onload>SetFocus(5000)</onload>
-	<!-- <onunload>CancelAlarm(Tile,true)</onunload>
-    <onunload>CancelAlarm(TileTwo,true)</onunload> -->
 	<onunload condition="Window.IsActive(1147)">Action(PreviousMenu)</onunload>
 	<coordinates>
 		<left>0</left>
@@ -242,8 +239,7 @@
 						<top>450</top>
 						<width>1332</width>
 						<height>160</height>
-						<texture border="50">featured/panel_featured_shadow.png</texture>
-						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+						<texture colordiffuse="$VAR[ColorDiffuseVar]" border="50">featured/panel_featured_shadow.png</texture>
 						<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 						<include>PanelGlowFade</include>
 					</control>
@@ -294,16 +290,14 @@
 						<top>482</top>
 						<width>100</width>
 						<height>100</height>
-						<texture>common/DefaultSearch.png</texture>
-						<colordiffuse>white</colordiffuse>
+						<texture colordiffuse="white">common/DefaultSearch.png</texture>
 					</control>
 					<control type="image">
 						<left>21</left>
 						<top>471</top>
 						<width>1290</width>
 						<height>118</height>
-						<texture border="10">featured/search_tile_fo.png</texture>
-						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+						<texture colordiffuse="$VAR[ColorDiffuseVar]" border="10">featured/search_tile_fo.png</texture>
 						<visible>Control.HasFocus(3001)</visible>
 					</control>
 					<control type="button" id="3001">
@@ -343,8 +337,6 @@
 					<onright>6012</onright>
 					<onleft>3012</onleft>
 					<ondown>5001</ondown>
-					<!-- <onfocus>AlarmClock(Tile,Control.Move(5002,1),00:04,silent,loop)</onfocus>
-                    <onfocus>AlarmClock(TileTwo,Control.Move(5003,1),00:07,silent,loop)</onfocus> -->
 					<onclick>Action(Close)</onclick>
 					<onclick>ActivateWindow(videos,root,return)</onclick>
 				</control>
@@ -503,8 +495,7 @@
 						<top>26</top>
 						<width>904</width>
 						<height>560</height>
-						<texture border="6">views/addonwall_select.png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="6">views/addonwall_select.png</texture>
 						<include>Animation_VisibleChange200</include>
 						<visible>Control.HasFocus(5009)</visible>
 					</control>
@@ -513,8 +504,7 @@
 						<top>26</top>
 						<width>376</width>
 						<height>560</height>
-						<texture border="6">views/addonwall_select.png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="6">views/addonwall_select.png</texture>
 						<include>Animation_VisibleChange200</include>
 						<visible>Control.HasFocus(5011)</visible>
 					</control>
@@ -524,7 +514,6 @@
 						<width>1290</width>
 						<height>570</height>
 						<texture colordiffuse="$VAR[DialogColorVar]">featured/panel_featured_overlay.png</texture>
-
 					</control>
 				</control>
 			</control>
@@ -706,8 +695,7 @@
 						<top>26</top>
 						<width>904</width>
 						<height>560</height>
-						<texture border="6">views/addonwall_select.png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="6">views/addonwall_select.png</texture>
 						<include>Animation_VisibleChange200</include>
 						<visible>Control.HasFocus(6010)</visible>
 					</control>
@@ -716,8 +704,7 @@
 						<top>26</top>
 						<width>376</width>
 						<height>560</height>
-						<texture border="6">views/addonwall_select.png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="6">views/addonwall_select.png</texture>
 						<include>Animation_VisibleChange200</include>
 						<visible>Control.HasFocus(6011)</visible>
 					</control>
@@ -856,8 +843,7 @@
 								<control type="image">
 									<width>376</width>
 									<height>140</height>
-									<texture fallback="KODI_Logo.png">common/bgcolor.png</texture>
-									<colordiffuse>60FFFFFF</colordiffuse>
+									<texture colordiffuse="60FFFFFF" fallback="KODI_Logo.png">common/bgcolor.png</texture>
 								</control>
 								<control type="group">
 									<top>5</top>
@@ -902,8 +888,7 @@
 								<control type="image">
 									<width>376</width>
 									<height>140</height>
-									<texture fallback="KODI_Logo.png">common/bgcolor.png</texture>
-									<colordiffuse>60FFFFFF</colordiffuse>
+									<texture colordiffuse="60FFFFFF" fallback="KODI_Logo.png">common/bgcolor.png</texture>
 								</control>
 								<control type="group">
 									<top>5</top>
@@ -942,8 +927,7 @@
 									<top>-5</top>
 									<width>376</width>
 									<height>140</height>
-									<texture>common/blank.png</texture>
-									<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+									<texture colordiffuse="$VAR[FocusTextureColorVar]">common/blank.png</texture>
 									<bordertexture border="5">views/addonwall_select.png</bordertexture>
 									<bordersize>5</bordersize>
 									<visible>Control.HasFocus(7003)</visible>
@@ -957,8 +941,7 @@
 						<top>26</top>
 						<width>904</width>
 						<height>560</height>
-						<texture border="6">views/addonwall_select.png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="6">views/addonwall_select.png</texture>
 						<include>Animation_VisibleChange200</include>
 						<visible>Control.HasFocus(7010)</visible>
 					</control>
@@ -1101,8 +1084,7 @@
 								<control type="image">
 									<width>720</width>
 									<height>140</height>
-									<texture fallback="KODI_Logo.png">common/bgcolor.png</texture>
-									<colordiffuse>60FFFFFF</colordiffuse>
+									<texture colordiffuse="60FFFFFF" fallback="KODI_Logo.png">common/bgcolor.png</texture>
 								</control>
 								<control type="group">
 									<top>5</top>
@@ -1147,8 +1129,7 @@
 								<control type="image">
 									<width>720</width>
 									<height>140</height>
-									<texture fallback="KODI_Logo.png">common/bgcolor.png</texture>
-									<colordiffuse>60FFFFFF</colordiffuse>
+									<texture colordiffuse="60FFFFFF" fallback="KODI_Logo.png">common/bgcolor.png</texture>
 								</control>
 								<control type="group">
 									<top>5</top>
@@ -1157,9 +1138,7 @@
 										<top>-5</top>
 										<width>720</width>
 										<height>140</height>
-										<texture>common/blank.png</texture>
-										<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-										<bordertexture border="5">views/addonwall_select.png</bordertexture>
+										<texture colordiffuse="$VAR[FocusTextureColorVar]">common/blank.png</texture>
 										<bordersize>5</bordersize>
 										<visible>Control.HasFocus(8003)</visible>
 									</control>
@@ -1200,8 +1179,7 @@
 						<top>26</top>
 						<width>560</width>
 						<height>560</height>
-						<texture border="6">views/addonwall_select.png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="6">views/addonwall_select.png</texture>
 						<include>Animation_VisibleChange200</include>
 						<visible>Control.HasFocus(8010)</visible>
 					</control>
@@ -1344,8 +1322,7 @@
 								<control type="image">
 									<width>720</width>
 									<height>140</height>
-									<texture fallback="KODI_Logo.png">common/bgcolor.png</texture>
-									<colordiffuse>60FFFFFF</colordiffuse>
+									<texture colordiffuse="60FFFFFF" fallback="KODI_Logo.png">common/bgcolor.png</texture>
 								</control>
 								<control type="group">
 									<top>5</top>
@@ -1390,8 +1367,7 @@
 								<control type="image">
 									<width>720</width>
 									<height>140</height>
-									<texture fallback="KODI_Logo.png">common/bgcolor.png</texture>
-									<colordiffuse>60FFFFFF</colordiffuse>
+									<texture colordiffuse="60FFFFFF" fallback="KODI_Logo.png">common/bgcolor.png</texture>
 								</control>
 								<control type="group">
 									<top>5</top>
@@ -1428,8 +1404,7 @@
 									<top>-5</top>
 									<width>720</width>
 									<height>140</height>
-									<texture>common/blank.png</texture>
-									<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+									<texture colordiffuse="$VAR[FocusTextureColorVar]">common/blank.png</texture>
 									<bordertexture border="5">views/addonwall_select.png</bordertexture>
 									<bordersize>5</bordersize>
 									<visible>Control.HasFocus(9003)</visible>
@@ -1443,8 +1418,7 @@
 						<top>26</top>
 						<width>560</width>
 						<height>560</height>
-						<texture border="6">views/addonwall_select.png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="6">views/addonwall_select.png</texture>
 						<include>Animation_VisibleChange200</include>
 						<visible>Control.HasFocus(9010)</visible>
 					</control>
@@ -1464,8 +1438,7 @@
 			<control type="image">
 				<width>1920</width>
 				<height>87</height>
-				<texture flipy="true">home/nav_back_shadow.png</texture>
-				<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ExtendedColorVar]" flipy="true">home/nav_back_shadow.png</texture>
 			</control>
 			<control type="group">
 				<control type="grouplist">
@@ -1480,8 +1453,7 @@
 						<width>40</width>
 						<height>40</height>
 						<aspectratio>keep</aspectratio>
-						<texture>common/featured_icon.png</texture>
-						<colordiffuse>$VAR[BreadCrumbsContentColorVar]</colordiffuse>
+						<texture colordiffuse="$VAR[BreadCrumbsContentColorVar]">common/featured_icon.png</texture>
 					</control>
 					<control type="label">
 						<label>$LOCALIZE[137]</label>
