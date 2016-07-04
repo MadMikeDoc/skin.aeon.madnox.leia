@@ -54,10 +54,10 @@
 				</control>
 				<control type="image">
 					<left>1000</left>
-					<top>918</top>
-					<width>30</width>
-					<height>20</height>
-					<texture colordiffuse="$VAR[FocusTextureColorVar]">arrowdown.png</texture>
+					<top>1035</top>
+					<width>60</width>
+					<height>40</height>
+					<texture colordiffuse="$VAR[FocusTextureColorVar]">arrowdown2.png</texture>
 					<include>Animation_VisibleChange200</include>
 					<visible>Container(5).HasNext</visible>
 				</control>
@@ -96,8 +96,10 @@
 				<include>Default_SettingButton</include>
 			</control>
 			<control type="image" id="11">
-				<include>HiddenObject</include>
-			</control>
+				<description>separator image</description>
+				<height>7</height>
+				<texture colordiffuse="$VAR[FocusTextureColorVar]" border="15">settings/settings_separator2.png</texture>
+			</control>	
 			<control type="label" id="14">
 				<description>Default Label</description>
 				<width>1256</width>
@@ -111,6 +113,14 @@
 				<textcolor>$VAR[FocusTextureColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
+			<control type="image">
+				<description>bottom separator image</description>
+				<left>389</left>
+				<top>922</top>
+				<width>1467</width>
+				<height>7</height>
+				<texture colordiffuse="$VAR[FocusTextureColorVar]" border="15">settings/settings_separator2.png</texture>
+			</control>	
 		</control>
 		<control type="group">
 			<include>Animation_HideBreadCrumbs</include>
