@@ -778,7 +778,6 @@
 		<radioleft>508</radioleft>
 	</include>
 	<include name="DialogVideoInfoButton">
-		<!--width>280</width-->
 		<width>280</width>
 		<height>90</height>
 		<textoffsetx>0</textoffsetx>

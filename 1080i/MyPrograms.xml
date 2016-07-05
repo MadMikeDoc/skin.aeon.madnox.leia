@@ -11,16 +11,11 @@
 			<include>HiddenObject</include>
 		</control>
 		<control type="multiimage">
-			<!--visible>![Control.IsVisible(801) | Control.IsVisible(802) | Control.IsVisible(803)]</visible-->
 			<imagepath background="true">$VAR[AddonBrowserFanartVar]</imagepath>
 			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 		</control>
 		<include>VideoBackground</include>
-		<control type="group">
-			<visible>Control.IsVisible(501) | Control.IsVisible(509)</visible>
-			<include>ShowcaseInfoPaneMusic</include>
-		</control>
 		<include>Furniture_Glow</include>
 		<include>Furniture_Showcase</include>
 		<include>WallPanel</include>

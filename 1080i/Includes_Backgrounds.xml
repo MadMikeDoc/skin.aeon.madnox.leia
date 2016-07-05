@@ -35,14 +35,17 @@
 			</control>
 		</control>
 	</include>
-
 	<include name="NodeFadeLabels">
 		<control type="fadelabel" id="4324">
+			<top>-100</top>
+			<width>2560</width>
+			<height>0</height>
 			<pauseatend>7500</pauseatend>
-			<width>11479</width>
-			<height>118</height>
-			<font>Font_Reg57</font>
-			<textcolor>00FFFFFF</textcolor>
+			<scrollspeed>20</scrollspeed>
+			<scrollout>false</scrollout>
+			<font>font10</font>
+			<textcolor>white</textcolor>
+			<randomize>true</randomize>
 			<label>$INFO[Window(Home).Property(Set.Movie.1.Art(fanart))]</label>
 			<label>$INFO[Window(Home).Property(Set.Movie.2.Art(fanart))]</label>
 			<label>$INFO[Window(Home).Property(Set.Movie.3.Art(fanart))]</label>
@@ -63,7 +66,7 @@
 			<label>$INFO[Window(Home).Property(Set.Movie.18.Art(fanart))]</label>
 			<label>$INFO[Window(Home).Property(Set.Movie.19.Art(fanart))]</label>
 			<label>$INFO[Window(Home).Property(Set.Movie.20.Art(fanart))]</label>
-			<visible>[Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets/,left)]</visible>
+			<visible>[Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>!ListItem.IsParentFolder</visible>
 		</control>
 	</include>
@@ -74,7 +77,7 @@
 			<include>Animation_WindowFade250</include>
 			<visible>Skin.HasSetting(livenodecovers)</visible>
 			<visible>!ListItem.IsParentFolder</visible>
-			<visible>[Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets/,left)]</visible>
+			<visible>[Container.Content(tags) | Container.Content(directors) | Container.Content(actors) | Container.Content(genres) | Container.Content(studios) | Container.Content(countries) | Container.Content(years) | Container.Content(sets) | ListItem.IsCollection]</visible>
 			<control type="group">
 				<control type="group">
 					<left>100</left>
@@ -380,7 +383,6 @@
 			<control type="image">
 				<texture>common/black.png</texture>
 				<include>FullscreenDimensions</include>
-				<colordiffuse>FF000000</colordiffuse>
 			</control>
 			<control type="videowindow">
 				<include>FullscreenDimensions</include>
@@ -390,7 +392,7 @@
 	</include>
 	<include name="CommonMediaPlayingBackground">
 		<control type="image">
-			<texture colordiffuse="FF000000">common/black.png</texture>
+			<texture>common/black.png</texture>
 			<include>FullscreenDimensions</include>
 			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)</visible>
 		</control>
@@ -445,8 +447,6 @@
 
 	<variable name="MusicVisBackgroundVar">
 		<value condition="SubString(Control.GetLabel(4322),playlist,right)">$INFO[Skin.String(MusicViz.Playlist)]</value>
-		<!--value condition="SubString(Control.GetLabel(4322),dailybabe2,right)">plugin://script.extendedinfo?info=dailybabe</value>
-		<value condition="SubString(Control.GetLabel(4322),dailybabe,right)">plugin://script.extendedinfo?info=dailybabes</value-->
 		<value condition="SubString(Control.GetLabel(4322),recentmovies,right)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</value>
 		<value condition="SubString(Control.GetLabel(4322),randommovies,right)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
 		<value condition="SubString(Control.GetLabel(4322),watchlistmovies,right)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</value>

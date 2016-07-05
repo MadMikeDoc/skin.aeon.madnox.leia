@@ -1386,11 +1386,9 @@
 						<ondown>60</ondown>
 						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic">200</scrolltime>
-						<control type="togglebutton" id="8">
+						<control type="button" id="8">
+							<label>$VAR[DialogVideoInfoButtonLabelVar]</label>
 							<include>DialogVideoInfoButton</include>
-							<label>208</label>
-							<altlabel>1024</altlabel>
-							<usealttexture>String.IsEqual(ListItem.DBType,tvshow)</usealttexture>
 						</control>
 						<control type="button" id="9">
 							<label>$LOCALIZE[13404] $INFO[ListItem.PercentPlayed,(,%)]</label>

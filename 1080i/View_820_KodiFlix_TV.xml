@@ -458,7 +458,7 @@
 					<width>71</width>
 					<align>center</align>
 					<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
-					<visible>!Substring(ListItem.Path,videodb://movies/sets/,left) + !Container.Content(episodes)  + System.HasAddon(script.duration) + [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | !Skin.Hassetting(KodiFlixCases)] + !ListItem.IsParentFolder</visible>
+					<visible>!ListItem.IsCollection + !Container.Content(episodes)  + System.HasAddon(script.duration) + [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | !Skin.Hassetting(KodiFlixCases)] + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
 					<left>486</left>
@@ -467,7 +467,7 @@
 					<width>71</width>
 					<align>center</align>
 					<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
-					<visible>!Substring(ListItem.Path,videodb://movies/sets/,left) + !Container.Content(episodes)  + !System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + !ListItem.IsParentFolder</visible>
+					<visible>!ListItem.IsCollection + !Container.Content(episodes)  + !System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
 					<left>386</left>
@@ -476,7 +476,7 @@
 					<width>71</width>
 					<align>center</align>
 					<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
-					<visible>!Substring(ListItem.Path,videodb://movies/sets/,left) + !Container.Content(episodes)  + System.HasAddon(script.duration) + [[Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(KodiFlixCases)]</visible>
+					<visible>!ListItem.IsCollection + !Container.Content(episodes)  + System.HasAddon(script.duration) + [[Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(KodiFlixCases)]</visible>
 					<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixTVHideFilmInfo)">
 						<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 						<effect type="slide" start="0,0" end="0,20" time="350" tween="cubic" easing="out" />
@@ -488,7 +488,7 @@
 					<width>71</width>
 					<align>center</align>
 					<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
-					<visible>!Substring(ListItem.Path,videodb://movies/sets/,left) + !Container.Content(episodes)  + !System.HasAddon(script.duration) + [[Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(KodiFlixCases)]</visible>
+					<visible>!ListItem.IsCollection + !Container.Content(episodes)  + !System.HasAddon(script.duration) + [[Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(KodiFlixCases)]</visible>
 					<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixTVHideFilmInfo)">
 						<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 						<effect type="slide" start="0,0" end="0,20" time="350" tween="cubic" easing="out" />
@@ -501,7 +501,7 @@
 					<width>71</width>
 					<align>center</align>
 					<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
-					<visible>!Substring(ListItem.Path,videodb://movies/sets/,left) + Container.Content(episodes) + !ListItem.IsParentFolder</visible>
+					<visible>!ListItem.IsCollection + Container.Content(episodes) + !ListItem.IsParentFolder</visible>
 					<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixTVHideFilmInfo) + Container.Content(episodes)">
 						<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 						<effect type="slide" start="0,0" end="0,80" time="350" tween="cubic" easing="out" />
@@ -1004,7 +1004,7 @@
 					<colordiffuse>white</colordiffuse>
 					<aspectratio align="left" aligny="center">stretch</aspectratio>
 					<texture background="true">flags/sets/sets.png</texture>
-					<visible>Substring(ListItem.Path,videodb://movies/sets/,left) + ListItem.IsFolder + !String.IsEmpty(ListItem.Title)</visible>
+					<visible>ListItem.IsCollection + ListItem.IsFolder + !String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -1032,7 +1032,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$VAR[KodiFlix.Duration]</label>
-					<visible>[Container.Content(Movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] + [!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration,0)]</visible>
+					<visible>[Container.Content(Movies) + !ListItem.IsCollection] + [!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration,0)]</visible>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -1046,7 +1046,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label> • $INFO[Window(home).Property(Set.Movies.Runtime)] $LOCALIZE[12391]</label>
-					<visible>[Container.Content(Movies) | Container.Content(sets)] + SubString(ListItem.Path,videodb://movies/sets/,left)</visible>
+					<visible>[Container.Content(Movies) | Container.Content(sets)] + ListItem.IsCollection</visible>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -1104,7 +1104,7 @@
 					<colordiffuse>white</colordiffuse>
 					<aspectratio align="left" aligny="center">stretch</aspectratio>
 					<texture background="true">flags/sets/sets.png</texture>
-					<visible>Substring(ListItem.Path,videodb://movies/sets/,left) + ListItem.IsFolder + !String.IsEmpty(ListItem.Title)</visible>
+					<visible>ListItem.IsCollection + ListItem.IsFolder + !String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -1132,7 +1132,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$VAR[KodiFlix.Duration]</label>
-					<visible>[Container.Content(Movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] + [!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration,0)]</visible>
+					<visible>[Container.Content(Movies) + !ListItem.IsCollection] + [!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration,0)]</visible>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -1146,7 +1146,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label> • $INFO[Window(home).Property(Set.Movies.Runtime)] $LOCALIZE[12391]</label>
-					<visible>[Container.Content(Movies) | Container.Content(sets)] + SubString(ListItem.Path,videodb://movies/sets/,left)</visible>
+					<visible>[Container.Content(Movies) | Container.Content(sets)] + ListItem.IsCollection</visible>
 				</control>
 			</control>
 			<!--content container-->

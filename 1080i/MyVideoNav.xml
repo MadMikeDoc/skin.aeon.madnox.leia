@@ -51,7 +51,7 @@
 			<!-- no info-->
 			<include>HiddenObject</include>
 			<visible>!Container.Content()</visible>
-			<visible>!SubString(ListItem.Path,videodb://movies/sets/,left) | skin.hassetting(backendmode)</visible>
+			<visible>!ListItem.IsCollection | skin.hassetting(backendmode)</visible>
 			<visible>!ListItem.IsParentFolder</visible>
 			<visible>!Container.Content(years)</visible>
 			<visible>!Container.Content(genres)</visible>
@@ -94,7 +94,7 @@
 				<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 				<animation effect="fade" start="100" end="50" time="640">Hidden</animation>
 				<visible>Container.Content(movies) | Container.Content(sets)</visible>
-				<!--visible>[[Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] | [Container.Content(movies) + Skin.HasSetting(RotateFanart) + SubString(ListItem.Path,videodb://movies/sets/,left)]] | [Container.Content(sets) + Skin.HasSetting(RotateFanart)]</visible-->
+				<!--visible>[[Container.Content(movies) + !ListItem.IsCollection] | [Container.Content(movies) + Skin.HasSetting(RotateFanart) + ListItem.IsCollection]] | [Container.Content(sets) + Skin.HasSetting(RotateFanart)]</visible-->
 			</control>
 			<control type="multiimage" id="4200">
 				<imagepath background="true" fallback="special://skin/backgrounds/tvshows/">$VAR[TVShowFanartVar]</imagepath>
