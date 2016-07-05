@@ -536,7 +536,7 @@
 								<height>62</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -549,7 +549,7 @@
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>grey3</textcolor>
 								<textoffsetx>18</textoffsetx>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
 						</control>
 					</itemlayout>
@@ -622,7 +622,7 @@
 								<height>62</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -635,7 +635,7 @@
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>white</textcolor>
 								<textoffsetx>18</textoffsetx>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
 						</control>
 					</focusedlayout>
@@ -688,7 +688,7 @@
 								<height>68</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -701,7 +701,7 @@
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>grey3</textcolor>
 								<textoffsetx>18</textoffsetx>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
 						</control>
 					</itemlayout>
@@ -762,7 +762,7 @@
 								<height>64</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -775,7 +775,7 @@
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>white</textcolor>
 								<textoffsetx>18</textoffsetx>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
 						</control>
 					</focusedlayout>
@@ -816,7 +816,7 @@
 								<height>76</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -829,7 +829,7 @@
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>grey3</textcolor>
 								<textoffsetx>18</textoffsetx>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
 						</control>
 					</itemlayout>
@@ -878,7 +878,7 @@
 								<height>76</height>
 								<texture>overlays/list/OverlayUnWatched.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) + String.IsEmpty(ListItem.Overlay)</visible>
 							</control>
 							<control type="label">
 								<posx>24</posx>
@@ -891,7 +891,7 @@
 								<label>$VAR[ListOverlayEpisodesVar]</label>
 								<textcolor>white</textcolor>
 								<textoffsetx>18</textoffsetx>
-								<visible>IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
+								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
 						</control>
 					</focusedlayout>

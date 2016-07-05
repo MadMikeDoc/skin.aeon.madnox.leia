@@ -801,7 +801,7 @@
 					<textcolor>white6</textcolor>
 					<align>center</align>
 					<font>Font_Bold15_Caps</font>
-					<visible>IntegerGreaterThan(ListItem.Top250,3)</visible>
+					<visible>Integer.IsGreater(ListItem.Top250,3)</visible>
 				</control>
 			</control>
 			<control type="image">   <!-- language flag -->
@@ -1430,7 +1430,7 @@
 					<textcolor>white6</textcolor>
 					<align>center</align>
 					<font>Font_Bold15_Caps</font>
-					<visible>IntegerGreaterThan(ListItem.Top250,3)</visible>
+					<visible>Integer.IsGreater(ListItem.Top250,3)</visible>
 				</control>
 			</control>
 			<control type="image">
@@ -2030,7 +2030,7 @@
 					<textcolor>white6</textcolor>
 					<align>center</align>
 					<font>Font_Bold15_Caps</font>
-					<visible>IntegerGreaterThan(ListItem.Top250,3)</visible>
+					<visible>Integer.IsGreater(ListItem.Top250,3)</visible>
 				</control>
 			</control>
 			<control type="image">

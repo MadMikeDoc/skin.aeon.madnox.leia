@@ -1756,7 +1756,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/battery_100.jpg</property>
 			<property name="Label3">Remains</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.BatteryLevel,60)</visible>
+			<visible>Integer.IsGreater(System.BatteryLevel,60)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1767,7 +1767,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/battery_50.jpg</property>
 			<property name="Label3">Remains</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.BatteryLevel,20) + !IntegerGreaterThan(System.BatteryLevel,60)</visible>
+			<visible>Integer.IsGreater(System.BatteryLevel,20) + !Integer.IsGreater(System.BatteryLevel,60)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1778,7 +1778,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/battery_10.jpg</property>
 			<property name="Label3">Remains</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.BatteryLevel,5) + !IntegerGreaterThan(System.BatteryLevel,20)</visible>
+			<visible>Integer.IsGreater(System.BatteryLevel,5) + !Integer.IsGreater(System.BatteryLevel,20)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1789,7 +1789,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/battery_critical.jpg</property>
 			<property name="Label3">Remains</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.BatteryLevel,0) + !IntegerGreaterThan(System.BatteryLevel,5)</visible>
+			<visible>Integer.IsGreater(System.BatteryLevel,0) + !Integer.IsGreater(System.BatteryLevel,5)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1822,7 +1822,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/video.jpg</property>
 			<property name="Label3">$INFO[System.fps] FPS</property>
 			<property name="isSystemInfo">true</property>
-			<visible>!IntegerGreaterThan(System.GPUTemperature,0)</visible>
+			<visible>!Integer.IsGreater(System.GPUTemperature,0)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1833,7 +1833,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/video.jpg</property>
 			<property name="Label3">$INFO[System.fps] FPS $INFO[System.GPUTemperature]</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.GPUTemperature,0)</visible>
+			<visible>Integer.IsGreater(System.GPUTemperature,0)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1844,7 +1844,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/cpu.jpg</property>
 			<property name="Label3">$INFO[System.CpuFrequency] $INFO[System.CPUTemperature]</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.CPUTemperature,0)</visible>
+			<visible>Integer.IsGreater(System.CPUTemperature,0)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1855,7 +1855,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/cpu.jpg</property>
 			<property name="Label3">$INFO[System.CpuFrequency]</property>
 			<property name="isSystemInfo">true</property>
-			<visible>!IntegerGreaterThan(System.CPUTemperature,0)</visible>
+			<visible>!Integer.IsGreater(System.CPUTemperature,0)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1921,7 +1921,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/battery_100.jpg</property>
 			<property name="Label3">Remains</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.BatteryLevel,60)</visible>
+			<visible>Integer.IsGreater(System.BatteryLevel,60)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1932,7 +1932,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/battery_50.jpg</property>
 			<property name="Label3">Remains</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.BatteryLevel,20) + !IntegerGreaterThan(System.BatteryLevel,60)</visible>
+			<visible>Integer.IsGreater(System.BatteryLevel,20) + !Integer.IsGreater(System.BatteryLevel,60)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1943,7 +1943,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/battery_10.jpg</property>
 			<property name="Label3">Remains</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.BatteryLevel,5) + !IntegerGreaterThan(System.BatteryLevel,20)</visible>
+			<visible>Integer.IsGreater(System.BatteryLevel,5) + !Integer.IsGreater(System.BatteryLevel,20)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -1954,7 +1954,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/battery_critical.jpg</property>
 			<property name="Label3">Remains</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.BatteryLevel,0) + !IntegerGreaterThan(System.BatteryLevel,5)</visible>
+			<visible>Integer.IsGreater(System.BatteryLevel,0) + !Integer.IsGreater(System.BatteryLevel,5)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 	</include>
@@ -1991,7 +1991,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/video.jpg</property>
 			<property name="Label3">$INFO[System.fps] FPS</property>
 			<property name="isSystemInfo">true</property>
-			<visible>!IntegerGreaterThan(System.GPUTemperature,0)</visible>
+			<visible>!Integer.IsGreater(System.GPUTemperature,0)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -2002,7 +2002,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/video.jpg</property>
 			<property name="Label3">$INFO[System.fps] FPS $INFO[System.GPUTemperature]</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.GPUTemperature,0)</visible>
+			<visible>Integer.IsGreater(System.GPUTemperature,0)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 	</include>
@@ -2015,7 +2015,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/cpu.jpg</property>
 			<property name="Label3">$INFO[System.CpuFrequency] $INFO[System.CPUTemperature]</property>
 			<property name="isSystemInfo">true</property>
-			<visible>IntegerGreaterThan(System.CPUTemperature,0)</visible>
+			<visible>Integer.IsGreater(System.CPUTemperature,0)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 		<item>
@@ -2026,7 +2026,7 @@
 			<property name="Fanart">homewidgets/systeminfo/fanart/cpu.jpg</property>
 			<property name="Label3">$INFO[System.CpuFrequency]</property>
 			<property name="isSystemInfo">true</property>
-			<visible>!IntegerGreaterThan(System.CPUTemperature,0)</visible>
+			<visible>!Integer.IsGreater(System.CPUTemperature,0)</visible>
 			<onclick>ActivateWindow(systeminfo)</onclick>
 		</item>
 	</include>

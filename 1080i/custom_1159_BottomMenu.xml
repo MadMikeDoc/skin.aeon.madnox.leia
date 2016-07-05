@@ -122,7 +122,7 @@
 						<thumb>dialogs/circle/$INFO[Container(8014).ListItem.PercentPlayed].png</thumb>
 						<onclick>Dialog.Close(1159)</onclick>
 						<onclick>ActivateWindow(videos,special://skin/extras/Playlists/MoviesInProgress.xsp,return)</onclick>
-						<visible>IntegerGreaterThan(Container(8014).NumItems,0)</visible>
+						<visible>Integer.IsGreater(Container(8014).NumItems,0)</visible>
 					</item>
 					<item id="2">
 						<label>$LOCALIZE[31831]</label>

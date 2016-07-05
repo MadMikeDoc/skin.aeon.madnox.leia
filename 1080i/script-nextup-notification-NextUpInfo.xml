@@ -42,7 +42,7 @@
 				</control>
 				<control type="image">
 					<visible>!Control.HasFocus(3012)</visible>
-					<visible>IntegerGreaterThan(Player.TimeRemaining(ss),30)</visible>
+					<visible>Integer.IsGreater(Player.TimeRemaining(ss),30)</visible>
 					<left>227</left>
 					<top>120</top>
 					<width>128</width>
@@ -60,7 +60,7 @@
 				</control>
 				<control type="image">
 					<visible>Control.HasFocus(3012)</visible>
-					<visible>IntegerGreaterThan(Player.TimeRemaining(ss),30)</visible>
+					<visible>Integer.IsGreater(Player.TimeRemaining(ss),30)</visible>
 					<left>227</left>
 					<top>120</top>
 					<width>128</width>
@@ -78,7 +78,7 @@
 				</control>
 				<control type="image">
 					<visible>!Control.HasFocus(3012)</visible>
-					<visible>!IntegerGreaterThan(Player.TimeRemaining(ss),30)</visible>
+					<visible>!Integer.IsGreater(Player.TimeRemaining(ss),30)</visible>
 					<left>227</left>
 					<top>120</top>
 					<width>128</width>
@@ -96,7 +96,7 @@
 				</control>
 				<control type="image">
 					<visible>Control.HasFocus(3012)</visible>
-					<visible>!IntegerGreaterThan(Player.TimeRemaining(ss),30)</visible>
+					<visible>!Integer.IsGreater(Player.TimeRemaining(ss),30)</visible>
 					<left>227</left>
 					<top>120</top>
 					<width>128</width>

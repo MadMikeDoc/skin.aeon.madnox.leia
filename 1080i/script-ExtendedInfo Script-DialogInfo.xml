@@ -233,7 +233,7 @@
 						<height>446</height>
 						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
-						<visible>IntegerGreaterThan(Container(150).NumItems,0)</visible>
+						<visible>Integer.IsGreater(Container(150).NumItems,0)</visible>
 						<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 						<itemlayout height="440" width="297">
 							<control type="image">
@@ -388,7 +388,7 @@
 						<height>446</height>
 						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
-						<visible>IntegerGreaterThan(Container(250).NumItems,0)</visible>
+						<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
 						<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 						<itemlayout height="440" width="297">
 							<control type="image">
@@ -544,7 +544,7 @@
 						<orientation>horizontal</orientation>
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
-						<visible>IntegerGreaterThan(Container(350).NumItems,0)</visible>
+						<visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
 						<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 						<itemlayout height="440" width="594">
 							<control type="image">
@@ -623,7 +623,7 @@
 						<height>446</height>
 						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
-						<visible>IntegerGreaterThan(Container(550).NumItems,0)</visible>
+						<visible>Integer.IsGreater(Container(550).NumItems,0)</visible>
 						<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 						<itemlayout height="440" width="297">
 							<control type="image">
@@ -779,7 +779,7 @@
 						<orientation>horizontal</orientation>
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
-						<visible>IntegerGreaterThan(Container(450).NumItems,0)</visible>
+						<visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
 						<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 						<itemlayout height="446" width="297">
 							<control type="image">
@@ -821,7 +821,7 @@
 						<orientation>horizontal</orientation>
 						<preloaditems>2</preloaditems>
 						<scrolltime tween="quadratic" easing="out">300</scrolltime>
-						<visible>IntegerGreaterThan(Container(750).NumItems,0)</visible>
+						<visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
 						<animation effect="fade" start="0" end="100" time="500" tween="sine" easing="inout">VisibleChange</animation>
 						<itemlayout height="440" width="594">
 							<control type="image">

@@ -30,7 +30,7 @@
 			<height>74</height>
 			<texture>loader.gif</texture>
 			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-			<visible>!IntegerGreaterThan(Container(100).NumPages,0) | ![Container(100).OnNext | Container(100).OnPrevious]</visible>
+			<visible>!Integer.IsGreater(Container(100).NumPages,0) | ![Container(100).OnNext | Container(100).OnPrevious]</visible>
 			<animation effect="fade" time="160" delay="400" reversible="false">Visible</animation>
 		</control>
 		<control type="wraplist" id="100">
@@ -160,7 +160,7 @@
 				<align>right</align>
 				<label>$INFO[Window.Property(Category)] ($INFO[Container(100).CurrentPage]/$INFO[Container(100).NumPages])</label>
 				<include>BreadcrumbsLabel</include>
-				<visible>IntegerGreaterThan(Container(100).NumPages,0)</visible>
+				<visible>Integer.IsGreater(Container(100).NumPages,0)</visible>
 			</control>
 			<control type="image">
 				<description>Arrow left</description>
@@ -169,7 +169,7 @@
 				<width>49</width>
 				<height>55</height>
 				<texture>views/multiplex_arrow2.png</texture>
-				<visible>Control.IsVisible(104) + IntegerGreaterThan(Container(100).NumPages,0) + !String.IsEqual(Container(100).CurrentPage,1)</visible>
+				<visible>Control.IsVisible(104) + Integer.IsGreater(Container(100).NumPages,0) + !String.IsEqual(Container(100).CurrentPage,1)</visible>
 			</control>
 			<control type="image">
 				<description>Arrow right</description>
@@ -178,7 +178,7 @@
 				<width>49</width>
 				<height>55</height>
 				<texture>views/multiplex_arrow.png</texture>
-				<visible>Control.IsVisible(104) + IntegerGreaterThan(Container(100).NumPages,0) + !String.IsEqual(Container(100).CurrentPage,Container(100).NumPages)</visible>
+				<visible>Control.IsVisible(104) + Integer.IsGreater(Container(100).NumPages,0) + !String.IsEqual(Container(100).CurrentPage,Container(100).NumPages)</visible>
 			</control>
 		</control>
 		<control type="label">

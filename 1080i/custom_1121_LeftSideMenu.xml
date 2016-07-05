@@ -2,7 +2,7 @@
 <window type="dialog" id="1121">
 	<defaultcontrol always="true">9011</defaultcontrol>
 	<onload>Dialog.Close(111)</onload>
-	<onload condition="String.IsEmpty(Window(home).Property(viewtypeselect)) + !IntegerGreaterThan(Container(9011).NumItems,0)">Close</onload>
+	<onload condition="String.IsEmpty(Window(home).Property(viewtypeselect)) + !Integer.IsGreater(Container(9011).NumItems,0)">Close</onload>
 	<onunload>ClearProperty(quicknavsetup,home)</onunload>
 	<onunload>ClearProperty(viewtypeselect,home)</onunload>
 	<animation type="WindowClose">

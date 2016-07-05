@@ -5,8 +5,8 @@
 	<!-- Live DVD/BD Cases -->
 	<include name="LiveBG">
 		<control type="group">
-			<visible>[Control.HasFocus(9010) + SubString(Container(9010).ListItem.Property(background),.Live,right) + IntegerGreaterThan(Container(8011).NumItems,0)] |
-				[SubString(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + SubString(Container(9010).ListItem.Property(background),FanartList,right) + IntegerGreaterThan(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))]] |
+			<visible>[Control.HasFocus(9010) + SubString(Container(9010).ListItem.Property(background),.Live,right) + Integer.IsGreater(Container(8011).NumItems,0)] |
+				[SubString(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + SubString(Container(9010).ListItem.Property(background),FanartList,right) + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))]] |
 				SubString(Control.GetLabel(4322),case)</visible>
 			<!-- Background image -->
 			<control type="image">
@@ -23,8 +23,8 @@
 			<control type="group">
 				<animation effect="fade" time="600">VisibleChange</animation>
 				<include>Animation_WindowFade250</include>
-				<visible>[Control.HasFocus(9010) + SubString(Container(9010).ListItem.Property(background),.Live,right) + IntegerGreaterThan(Container(8011).NumItems,0) + SubString(Container(9010).ListItem.Property(backgroundCase),DVD)] |
-					[SubString(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + [SubString(Container(9010).ListItem.Property(background),FanartList,right) | SubString(Container(9010).ListItem.Property(background),.Live,right)] + IntegerGreaterThan(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + SubString(Container(9000).ListItem.Property(backgroundCase),DVD)] |
+				<visible>[Control.HasFocus(9010) + SubString(Container(9010).ListItem.Property(background),.Live,right) + Integer.IsGreater(Container(8011).NumItems,0) + SubString(Container(9010).ListItem.Property(backgroundCase),DVD)] |
+					[SubString(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + [SubString(Container(9010).ListItem.Property(background),FanartList,right) | SubString(Container(9010).ListItem.Property(background),.Live,right)] + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + SubString(Container(9000).ListItem.Property(backgroundCase),DVD)] |
 					SubString(Control.GetLabel(4322),dvdcase,left)</visible>
 				<control type="group">
 					<control type="group">
@@ -264,8 +264,8 @@
 			<control type="group">
 				<animation effect="fade" time="600">VisibleChange</animation>
 				<include>Animation_WindowFade250</include>
-				<visible>[Control.HasFocus(9010) + SubString(Container(9010).ListItem.Property(background),.Live,right) + IntegerGreaterThan(Container(8011).NumItems,0) + SubString(Container(9010).ListItem.Property(backgroundCase),CD)] |
-					[SubString(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + [SubString(Container(9010).ListItem.Property(background),FanartList,right) | SubString(Container(9010).ListItem.Property(background),.Live,right)] + IntegerGreaterThan(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + SubString(Container(9000).ListItem.Property(backgroundCase),CD)] |
+				<visible>[Control.HasFocus(9010) + SubString(Container(9010).ListItem.Property(background),.Live,right) + Integer.IsGreater(Container(8011).NumItems,0) + SubString(Container(9010).ListItem.Property(backgroundCase),CD)] |
+					[SubString(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + [SubString(Container(9010).ListItem.Property(background),FanartList,right) | SubString(Container(9010).ListItem.Property(background),.Live,right)] + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + SubString(Container(9000).ListItem.Property(backgroundCase),CD)] |
 					SubString(Control.GetLabel(4322),case,left)</visible>
 				<control type="group">
 					<left>-200</left>
@@ -605,8 +605,8 @@
 			<control type="group">
 				<animation effect="fade" time="480">VisibleChange</animation>
 				<include>Animation_WindowFade250</include>
-				<visible>[Control.HasFocus(9010) + SubString(Container(9010).ListItem.Property(background),.Live,right) + IntegerGreaterThan(Container(8011).NumItems,0) + String.IsEmpty(Container(9010).ListItem.Property(backgroundCase))] |
-					[SubString(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + [SubString(Container(9010).ListItem.Property(background),FanartList,right) | SubString(Container(9010).ListItem.Property(background),.Live,right)] + IntegerGreaterThan(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + String.IsEmpty(Container(9000).ListItem.Property(backgroundCase))] |
+				<visible>[Control.HasFocus(9010) + SubString(Container(9010).ListItem.Property(background),.Live,right) + Integer.IsGreater(Container(8011).NumItems,0) + String.IsEmpty(Container(9010).ListItem.Property(backgroundCase))] |
+					[SubString(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + [SubString(Container(9010).ListItem.Property(background),FanartList,right) | SubString(Container(9010).ListItem.Property(background),.Live,right)] + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + String.IsEmpty(Container(9000).ListItem.Property(backgroundCase))] |
 					SubString(Control.GetLabel(4322),nocase,left)</visible>
 				<control type="group">
 					<left>-200</left>
@@ -1420,7 +1420,7 @@
 	</variable>
 
 	<variable name="LiveBGBackground">
-		<value condition="Window.IsVisible(Home) + Control.HasFocus(9010) + String.IsEqual(Container(9010).ListItem.Property(Playlist.Live)) + IntegerGreaterThan(Container(8011).NumItems,0)">$INFO[Container(9010).ListItem.Property(backgroundLive)]</value>
+		<value condition="Window.IsVisible(Home) + Control.HasFocus(9010) + String.IsEqual(Container(9010).ListItem.Property(Playlist.Live)) + Integer.IsGreater(Container(8011).NumItems,0)">$INFO[Container(9010).ListItem.Property(backgroundLive)]</value>
 		<value condition="Window.IsVisible(Home)">$INFO[Container(9000).ListItem.Property(backgroundLive)]</value>
 		<value>$INFO[Skin.String(LiveBG)]</value>
 	</variable>

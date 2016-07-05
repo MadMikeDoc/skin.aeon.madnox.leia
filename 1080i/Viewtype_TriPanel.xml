@@ -625,8 +625,8 @@
 					<height>765</height>
 					<pagecontrol>70</pagecontrol>
 					<onright>5211</onright>
-<!-- 				<onleft condition="!IntegerGreaterThan(Container.NumPages,1)">9000</onleft>
-					<onleft condition="IntegerGreaterThan(Container.NumPages,1)">70</onleft> -->
+<!-- 				<onleft condition="!Integer.IsGreater(Container.NumPages,1)">9000</onleft>
+					<onleft condition="Integer.IsGreater(Container.NumPages,1)">70</onleft> -->
 					<onleft condition="!Skin.HasSetting(AlphabetScrollbar)">70</onleft>
 					<onleft condition="Skin.HasSetting(AlphabetScrollbar)">6010</onleft>
 					<onup>52</onup>

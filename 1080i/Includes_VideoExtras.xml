@@ -48,7 +48,7 @@
 				<height>101</height>
 				<aspectratio align="center">keep</aspectratio>
 				<texture background="true">thumbs/OverlayWatched.png</texture>
-				<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+				<visible>Integer.IsGreater(ListItem.PlayCount,0)</visible>
 			</control>
 		</control>
 	</include>
@@ -100,7 +100,7 @@
 			<height>45</height>
 			<!-- Default XBMC Icon -->
 			<texture>OverlayWatched.png</texture>
-			<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+			<visible>Integer.IsGreater(ListItem.PlayCount,0)</visible>
 		</control>
 	</include>
 	<include name="VideoExtras_Layoutfocus">
@@ -158,7 +158,7 @@
 			<width>45</width>
 			<height>45</height>
 			<texture>OverlayWatched.png</texture>
-			<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+			<visible>Integer.IsGreater(ListItem.PlayCount,0)</visible>
 		</control>
 	</include>
 
@@ -317,7 +317,7 @@
 						<height>45</height>
 						<!-- Default XBMC Icon -->
 						<texture>OverlayWatched.png</texture>
-						<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+						<visible>Integer.IsGreater(ListItem.PlayCount,0)</visible>
 					</control>
 					<control type="image">
 						<left>1230</left>
@@ -326,7 +326,7 @@
 						<height>45</height>
 						<!-- Default XBMC Icon -->
 						<texture>common/new.png</texture>
-						<visible>!ListItem.IsResumable + !IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+						<visible>!ListItem.IsResumable + !Integer.IsGreater(ListItem.PlayCount,0)</visible>
 					</control>
 					<control type="label">
 						<left>1220</left>
@@ -409,7 +409,7 @@
 								<height>101</height>
 								<aspectratio align="center">keep</aspectratio>
 								<texture background="true">thumbs/OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+								<visible>Integer.IsGreater(ListItem.PlayCount,0)</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -431,7 +431,7 @@
 								<height>45</height>
 								<!-- Default XBMC Icon -->
 								<texture>OverlayWatched.png</texture>
-								<visible>IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+								<visible>Integer.IsGreater(ListItem.PlayCount,0)</visible>
 							</control>
 							<control type="image">
 								<left>0</left>
@@ -440,7 +440,7 @@
 								<height>45</height>
 								<!-- Default XBMC Icon -->
 								<texture>common/new.png</texture>
-								<visible>!ListItem.IsResumable + !IntegerGreaterThan(ListItem.PlayCount,0)</visible>
+								<visible>!ListItem.IsResumable + !Integer.IsGreater(ListItem.PlayCount,0)</visible>
 							</control>
 						</control>
 						<control type="label">

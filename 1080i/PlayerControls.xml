@@ -4,7 +4,7 @@
 	<!--<include>Animation_DialogZoom</include>-->
 	<onload>Dialog.Close(1121)</onload>
 	<onload condition="Window.IsActive(script.pseudotv.TVOverlay.xml)">Dialog.Close(114)</onload>
-	<onload condition="!IntegerGreaterThan(Container(9011).NumItems,0) + !Player.HasMedia">Close</onload>
+	<onload condition="!Integer.IsGreater(Container(9011).NumItems,0) + !Player.HasMedia">Close</onload>
 	<onunload>ClearProperty(quicknavsetup,home)</onunload>
 	<controls>
 		<include>DialogBackFade</include>
@@ -22,7 +22,7 @@
 			<animation effect="slide" end="0,-730" start="0,-473" time="400" tween="cubic" delay="160">WindowClose</animation>
 			<animation effect="slide" end="0,100" time="400" tween="cubic" delay="160" condition="Player.HasMedia">Conditional</animation>
 			<animation effect="slide" end="0,-473" time="400" tween="cubic" delay="160" condition="Window.IsActive(1154)">Conditional</animation>
-			<animation effect="slide" end="0,-135" time="0" condition="!IntegerGreaterThan(Container(9011).NumItems,0)">Conditional</animation>
+			<animation effect="slide" end="0,-135" time="0" condition="!Integer.IsGreater(Container(9011).NumItems,0)">Conditional</animation>
 			<!--         <control type="button" id="451">
 
             <left>-30</left>
@@ -46,7 +46,7 @@
 					<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
 				</control>
 				<control type="group" id="301">
-					<animation effect="slide" end="0,135" time="0" condition="!IntegerGreaterThan(Container(9011).NumItems,0)">Conditional</animation>
+					<animation effect="slide" end="0,135" time="0" condition="!Integer.IsGreater(Container(9011).NumItems,0)">Conditional</animation>
 					<control type="group">
 						<top>355</top>
 						<visible>Player.HasVideo</visible>
@@ -61,7 +61,7 @@
 					</control>
 				</control>
 				<control type="list" id="9011">
-					<visible>IntegerGreaterThan(Container(9011).NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container(9011).NumItems,0)</visible>
 					<top>472</top>
 					<width>1920</width>
 					<height>135</height>

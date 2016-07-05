@@ -137,7 +137,7 @@
 									<textcolor>black</textcolor>
 									<align>center</align>
 									<font>Font_Bold28</font>
-									<visible>IntegerGreaterThan(ListItem.Top250,3)</visible>
+									<visible>Integer.IsGreater(ListItem.Top250,3)</visible>
 								</control>
 							</control>
 							<control type="grouplist">

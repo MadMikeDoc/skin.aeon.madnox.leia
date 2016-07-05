@@ -1002,7 +1002,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$VAR[KodiFlix.Duration]</label>
-					<visible>[Container.Content(Movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] + [!String.IsEmpty(ListItem.Duration) + IntegerGreaterThan(ListItem.Duration,0)]</visible>
+					<visible>[Container.Content(Movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] + [!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration,0)]</visible>
 				</control>
 				<control type="label">
 					<left>0</left>
@@ -1098,7 +1098,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$VAR[KodiFlix.Duration]</label>
-					<visible>[Container.Content(Movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] + [!String.IsEmpty(ListItem.Duration) + IntegerGreaterThan(ListItem.Duration,0)]</visible>
+					<visible>[Container.Content(Movies) + !SubString(ListItem.Path,videodb://movies/sets/,left)] + [!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration,0)]</visible>
 				</control>
 				<control type="label">
 					<left>0</left>

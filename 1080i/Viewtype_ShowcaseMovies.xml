@@ -5,7 +5,7 @@
 		<top>540</top>
 		<width>2058</width>
 		<height>525</height>
-		<visible>[!Container.Content(episodes) | SubString(Container.FolderPath,videodb://recentlyaddedepisodes/)] + !Container.Content(addons)</visible>
+		<visible>[!Container.Content(episodes) | String.Contains(Container.FolderPath,videodb://recentlyaddedepisodes/)] + !Container.Content(addons)</visible>
 		<visible>![!String.IsEmpty(Skin.String(DisableShowcaseVL)) + Window.IsActive(videos)]</visible>
 		<onleft>501</onleft>
 		<onright>501</onright>
@@ -29,7 +29,7 @@
 					<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
 					<include>MovieShowcaseThumb</include>
 					<!-- MikeBZH44 start : No case for movieset -->
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 					<!-- MikeBZH44 end -->
 				</control>
@@ -37,7 +37,7 @@
 					<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
 					<include>MovieShowcaseThumb</include>
 					<!-- MikeBZH44 start : No case for movieset -->
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 					<!-- MikeBZH44 end -->
 				</control>
@@ -45,13 +45,13 @@
 				<control type="image">
 					<include>MovieShowcaseDVDCoverVarsSets</include>
 					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
-					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
 					<include>MovieShowcaseDVDCoverVarsSets</include>
 					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
-					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<!-- MikeBZH44 end -->
@@ -60,19 +60,19 @@
 				<control type="image">
 					<include>MovieShowcaseThumbDimensions</include>
 					<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets) + Skin.HasSetting(usecases) + [container.content(movies) | Container.Content(musicvideos)]]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets) + Skin.HasSetting(usecases) + [container.content(movies) | Container.Content(musicvideos)]]</visible>
 				</control>
 				<control type="image">
 					<include>MovieShowcaseDVDCoverVars</include>
 					<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 				</control>
 				<!-- MikeBZH44 end -->
 				<control type="image">
 					<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
 					<include>MovieShowcaseThumbReflection</include>
 					<!-- MikeBZH44 start : No case for movieset -->
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 					<!-- MikeBZH44 end -->
 				</control>
@@ -80,7 +80,7 @@
 					<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
 					<include>MovieShowcaseThumbReflection</include>
 					<!-- MikeBZH44 start : No case for movieset -->
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 					<!-- MikeBZH44 end -->
 				</control>
@@ -88,13 +88,13 @@
 				<control type="image">
 					<include>MovieShowcaseThumbReflectionMovieset</include>
 					<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
-					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
 					<include>MovieShowcaseThumbReflectionMovieset</include>
 					<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
-					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<!-- MikeBZH44 end -->
@@ -117,14 +117,14 @@
 				<!-- MikeBZH44 start : No case for movieset -->
 				<control type="image">
 					<include>MovieShowcaseThumbReflectionDVD</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 				</control>
 				<!-- MikeBZH44 end -->
 				<control type="image">
 					<include>WatchedOverlayShowCase</include>
 					<include>OverlayVisibility0</include>
 					<!-- MikeBZH44 start : No case for movieset -->
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 					<!-- MikeBZH44 end -->
 				</control>
 				<control type="image">
@@ -155,7 +155,7 @@
 				<control type="image">
 					<include>MovieShowcaseDVDCoverVars</include>
 					<texture background="true" fallback="thumbs/boxes/default_case.png">thumbs/boxes/$VAR[ShowcaseCasePathVar]/back_$VAR[GlobalCaseVar]</texture>
-					<visible>Skin.HasSetting(usecases) + [Container.Content(movies) | Container.Content(sets)] + ![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>Skin.HasSetting(usecases) + [Container.Content(movies) | Container.Content(sets)] + ![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 				</control>
 				<!-- Display Movie disc -->
 				<include>MovieShowcaseDisc</include>
@@ -166,7 +166,7 @@
 					<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
 					<!-- MikeBZH44 start : Open case + No case for movieset -->
 					<include>ShowcaseOpenCase</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 					<!-- MikeBZH44 end -->
 				</control>
@@ -175,7 +175,7 @@
 					<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
 					<!-- MikeBZH44 start : Open case + No case for movieset -->
 					<include>ShowcaseOpenCase</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 					<!-- MikeBZH44 end -->
 				</control>
@@ -195,14 +195,14 @@
 				<control type="image">
 					<include>MovieShowcaseDVDCoverVarsSets</include>
 					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
-					<visible>[Skin.HasSetting(usecases) + [Container.Content(movies) | Container.Content(sets)] + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>[Skin.HasSetting(usecases) + [Container.Content(movies) | Container.Content(sets)] + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 					<animation effect="fade" start="100" end="0" time="100" delay="150" condition="[Control.IsVisible(1970) + Skin.HasSetting(OpenCase)] + Skin.HasSetting(noflow)">Conditional</animation>
 				</control>
 				<control type="image">
 					<include>MovieShowcaseDVDCoverVarsSets</include>
 					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
-					<visible>[Skin.HasSetting(usecases) + [Container.Content(movies) | Container.Content(sets)] + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>[Skin.HasSetting(usecases) + [Container.Content(movies) | Container.Content(sets)] + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 					<animation effect="fade" start="100" end="0" time="100" delay="150" condition="[Control.IsVisible(1970) + Skin.HasSetting(OpenCase)] + Skin.HasSetting(noflow)">Conditional</animation>
 				</control>
@@ -212,7 +212,7 @@
 					<include>MovieShowcaseThumbDimensions</include>
 					<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 					<include>ShowcaseOpenCase</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 				</control>
 				<!-- Front case -->
 				<control type="image">
@@ -220,7 +220,7 @@
 					<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
 					<!-- MikeBZH44 start : Open case + No case for movieset -->
 					<include>ShowcaseOpenCase</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 					<!-- MikeBZH44 end -->
 				</control>
@@ -229,7 +229,7 @@
 					<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
 					<!-- MikeBZH44 start : Open case + No case for movieset -->
 					<include>ShowcaseOpenCase</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 					<!-- MikeBZH44 end -->
 				</control>
@@ -239,7 +239,7 @@
 					<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
 					<!-- MikeBZH44 start : Open case + No case for movieset -->
 					<include>ShowcaseOpenCase</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 					<!-- MikeBZH44 end -->
 				</control>
@@ -248,7 +248,7 @@
 					<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
 					<!-- MikeBZH44 start : Open case + No case for movieset -->
 					<include>ShowcaseOpenCase</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 					<!-- MikeBZH44 end -->
 				</control>
@@ -256,13 +256,13 @@
 				<control type="image">
 					<include>MovieShowcaseThumbReflectionMovieset</include>
 					<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
-					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
 					<include>MovieShowcaseThumbReflectionMovieset</include>
 					<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
-					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+					<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<!-- MikeBZH44 end -->
@@ -274,7 +274,7 @@
 					<include>MovieShowcaseThumbReflectionDVD</include>
 					<!-- MikeBZH44 start : Open case + No case for movieset -->
 					<include>ShowcaseOpenCase</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<!-- MikeBZH44 end -->
 				</control>
 				<!-- Front case -->
@@ -283,7 +283,7 @@
 					<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
 					<!-- MikeBZH44 start : Open case + No case for movieset -->
 					<include>ShowcaseOpenCase</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<!-- MikeBZH44 end -->
 				</control>
 				<control type="image">
@@ -291,7 +291,7 @@
 					<include>OverlayVisibility0</include>
 					<!-- MikeBZH44 start : Open case + No case for movieset -->
 					<include>ShowcaseOpenCaseWatched</include>
-					<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 					<!-- MikeBZH44 end -->
 				</control>
 				<control type="image">
@@ -708,7 +708,7 @@
 							<control type="image">
 								<include>MovieShowcaseDVDCoverVars</include>
 								<texture background="true" fallback="thumbs/boxes/default_case.png">thumbs/boxes/$VAR[ShowcaseCasePathVar]/back_$VAR[ShowcaseCase0Var]</texture>
-								<visible>Skin.HasSetting(usecases) + [Container.Content(movies) | Container.Content(sets)] + ![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+								<visible>Skin.HasSetting(usecases) + [Container.Content(movies) | Container.Content(sets)] + ![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 							</control>
 							<!-- Display Movie disc -->
 							<include>MovieShowcaseDisc</include>
@@ -719,7 +719,7 @@
 								<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
 								<!-- MikeBZH44 start : Open case + No case for movieset -->
 								<include>ShowcaseOpenCase</include>
-								<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+								<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 								<visible>!Skin.HasSetting(genrethumbs)</visible>
 								<!-- MikeBZH44 end -->
 							</control>
@@ -728,7 +728,7 @@
 								<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
 								<!-- MikeBZH44 start : Open case + No case for movieset -->
 								<include>ShowcaseOpenCase</include>
-								<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+								<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 								<visible>Skin.HasSetting(genrethumbs)</visible>
 								<!-- MikeBZH44 end -->
 							</control>
@@ -748,13 +748,13 @@
 							<control type="image">
 								<include>MovieShowcaseDVDCoverVarsSets</include>
 								<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
-								<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)] + !Skin.HasSetting(OpenBoxSet)</visible>
+								<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)] + !Skin.HasSetting(OpenBoxSet)</visible>
 								<visible>!Skin.HasSetting(genrethumbs)</visible>
 							</control>
 							<control type="image">
 								<include>MovieShowcaseDVDCoverVarsSets</include>
 								<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
-								<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)] + !Skin.HasSetting(OpenBoxSet)</visible>
+								<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)] + !Skin.HasSetting(OpenBoxSet)</visible>
 								<visible>Skin.HasSetting(genrethumbs)</visible>
 							</control>
 							<!-- MikeBZH44 end -->
@@ -764,7 +764,7 @@
 								<include>MovieShowcaseThumbDimensions</include>
 								<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 								<include>ShowcaseOpenCase</include>
-								<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+								<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 							</control>
 							<!-- Front case -->
 							<control type="image">
@@ -772,7 +772,7 @@
 								<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase0Var]</texture>
 								<!-- MikeBZH44 start : Open case + No case for movieset -->
 								<include>ShowcaseOpenCase</include>
-								<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+								<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 								<!-- MikeBZH44 end -->
 							</control>
 							<!-- Movie thumbnail reflection -->
@@ -781,7 +781,7 @@
 								<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
 								<!-- MikeBZH44 start : Open case + No case for movieset -->
 								<include>ShowcaseOpenCase</include>
-								<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+								<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 								<visible>!Skin.HasSetting(genrethumbs)</visible>
 								<!-- MikeBZH44 end -->
 							</control>
@@ -790,7 +790,7 @@
 								<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
 								<!-- MikeBZH44 start : Open case + No case for movieset -->
 								<include>ShowcaseOpenCase</include>
-								<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+								<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 								<visible>Skin.HasSetting(genrethumbs)</visible>
 								<!-- MikeBZH44 end -->
 							</control>
@@ -803,7 +803,7 @@
 								<include>MovieShowcaseThumbReflectionDVD</include>
 								<!-- MikeBZH44 start : Open case + No case for movieset -->
 								<include>ShowcaseOpenCase</include>
-								<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+								<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 								<!-- MikeBZH44 end -->
 							</control>
 							<control type="image">
@@ -811,7 +811,7 @@
 								<include>OverlayVisibility0</include>
 								<!-- MikeBZH44 start : Open case + No case for movieset -->
 								<include>ShowcaseOpenCaseWatched</include>
-								<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+								<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)]</visible>
 								<!-- MikeBZH44 end -->
 							</control>
 							<control type="image">
@@ -1070,7 +1070,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-7Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1078,7 +1078,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-7Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1098,13 +1098,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-7Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-7Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -1117,21 +1117,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-7Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-7Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1139,7 +1139,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-7Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1147,27 +1147,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-7Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-7Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility-7</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-7).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 	</include>
@@ -1177,7 +1177,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-6Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1185,7 +1185,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-6Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1209,13 +1209,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-6Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-6Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -1224,21 +1224,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-6Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-6Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1246,7 +1246,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-6Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1254,27 +1254,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-6Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-6Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility-6</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-6).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 	</include>
@@ -1284,7 +1284,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-5Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1292,7 +1292,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-5Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1316,14 +1316,14 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-5Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-5Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		>
@@ -1333,21 +1333,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-5Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-5Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1355,7 +1355,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-5Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1363,27 +1363,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem5Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem5Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility-5</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-5).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 	</include>
@@ -1393,7 +1393,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-4Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1401,7 +1401,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-4Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1425,13 +1425,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-4Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-4Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -1440,21 +1440,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-4Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-4Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1462,7 +1462,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-4Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1470,27 +1470,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-4Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-4Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility-4</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-4).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 	</include>
@@ -1500,7 +1500,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-3Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1508,7 +1508,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-3Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1532,13 +1532,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-3Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-3Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -1547,21 +1547,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-3Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-3Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1569,7 +1569,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-3Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1577,27 +1577,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-3Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-3Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility-3</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-3).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 	</include>
@@ -1607,7 +1607,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-2Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1615,7 +1615,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-2Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1639,13 +1639,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-2Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-2Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -1654,21 +1654,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-2Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-2Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1676,7 +1676,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-2Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1684,27 +1684,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-2Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-2Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility-2</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-2).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
@@ -1719,7 +1719,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-1Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1727,7 +1727,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-1Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1751,13 +1751,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-1Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-1Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -1766,21 +1766,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase-1Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-1Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1788,7 +1788,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-1Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1796,27 +1796,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-1Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem-1Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility-1</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(-1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(-1).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
@@ -1836,7 +1836,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1844,7 +1844,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1868,13 +1868,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -1883,21 +1883,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase0Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1905,7 +1905,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1913,27 +1913,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem0Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility0</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(0).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
@@ -1953,7 +1953,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem1Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1961,7 +1961,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem1Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -1985,13 +1985,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem1Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem1Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -2000,21 +2000,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase1Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem1Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2022,7 +2022,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem1Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2030,27 +2030,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem1Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem1Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility1</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(1).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(1).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
@@ -2070,7 +2070,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem2Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2078,7 +2078,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem2Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2102,13 +2102,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem2Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem2Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -2117,21 +2117,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase2Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem2Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2139,7 +2139,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem2Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2147,27 +2147,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem2Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem2Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility2</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(2).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(2).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
@@ -2187,7 +2187,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem3Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2195,7 +2195,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem3Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2219,13 +2219,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem3Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem3Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -2234,21 +2234,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase3Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem3Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2256,7 +2256,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem3Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2264,27 +2264,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem3Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem3Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility3</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(3).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(3).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
@@ -2304,7 +2304,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem4Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2312,7 +2312,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem4Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2336,13 +2336,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem4Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem4Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -2351,21 +2351,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase4Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem4Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2373,7 +2373,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem4Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2381,27 +2381,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem4Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem4Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility4</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(4).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(4).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
@@ -2421,7 +2421,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem5Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2429,7 +2429,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem5Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2453,13 +2453,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem5Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem5Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -2468,21 +2468,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase5Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem5Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2490,7 +2490,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem5Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2498,27 +2498,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem5Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem5Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility5</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(5).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(5).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
@@ -2538,7 +2538,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem6Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2546,7 +2546,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem6Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2570,13 +2570,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem6Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem6Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -2585,21 +2585,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase6Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem6Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2607,7 +2607,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem6Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2615,27 +2615,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem6Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem6Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility6</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(6).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(6).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
@@ -2655,7 +2655,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem7Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2663,7 +2663,7 @@
 			<include>MovieShowcaseThumb</include>
 			<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem7Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)] | [!Skin.HasSetting(usecases)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2687,13 +2687,13 @@
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem7Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVarsSets</include>
 			<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem7Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
@@ -2702,21 +2702,21 @@
 			<include>MovieShowcaseThumbDimensions</include>
 			<texture diffuse="thumbs/thumb_mask.png">thumbs/thumb_glass.png</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseDVDCoverVars</include>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[ShowcaseCase7Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem7Var]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2724,7 +2724,7 @@
 			<include>MovieShowcaseThumbReflection</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem7Var1]</texture>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 			<!-- MikeBZH44 end -->
 		</control>
@@ -2732,27 +2732,27 @@
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem7Var]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)]</visible>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionMovieset</include>
 			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ShowcaseItem7Var1]</texture>
-			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)]</visible>
+			<visible>[Skin.HasSetting(usecases) + Container.Content(movies) + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)]</visible>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<!-- MikeBZH44 end -->
 		<control type="image">
 			<include>MovieShowcaseThumbReflectionDVD</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
 			<include>WatchedOverlayShowCase</include>
 			<include>OverlayVisibility7</include>
 			<!-- MikeBZH44 start : No case for movieset -->
-			<visible>![Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem(7).Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(7).Path,videodb://movies/sets)]</visible>
 			<!-- MikeBZH44 end -->
 		</control>
 		<control type="image">
@@ -2823,7 +2823,7 @@
 			<animation type="Conditional" condition="Control.IsVisible(961) + !Control.IsVisible(6000) + Skin.HasSetting(OpenCase)" reversible="true">
 				<effect type="rotate" start="0" center="auto" end="720" delay="2500" time="4300" tween="cubic" easing="inout"/>
 			</animation>
-			<visible>Skin.HasSetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+			<visible>Skin.HasSetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + Container.Content(movies) + !String.Contains(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + !Skin.Hassetting(Fakehanddisccolor)</visible>
 		</control>
 		<control type="image">
 			<left>26</left>
@@ -2837,7 +2837,7 @@
 			<animation type="Conditional" condition="Control.IsVisible(961) + !Control.IsVisible(6000) + Skin.HasSetting(OpenCase)" reversible="true">
 				<effect type="rotate" start="0" center="auto" end="720" delay="2500" time="4300" tween="cubic" easing="inout"/>
 			</animation>
-			<visible>Skin.HasSetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(fakehanddisccolor)</visible>
+			<visible>Skin.HasSetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + Container.Content(movies) + !String.Contains(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(fakehanddisccolor)</visible>
 		</control>
 		<control type="textbox">
 			<animation type="Conditional" condition="Skin.HasSetting(OpenCase)" reversible="true">
@@ -2851,7 +2851,7 @@
 			<align>center</align>
 			<aligny>top</aligny>
 			<textcolor>black</textcolor>
-			<visible>Skin.Hassetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(OpenCase) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+			<visible>Skin.Hassetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(OpenCase) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !String.Contains(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			<label>[CR][CR][CR][CR][CR] $INFO[ListItem.Title]</label>
 		</control>
 		<control type="group">
@@ -2862,7 +2862,7 @@
 			<top>98</top>
 			<width>145</width>
 			<height>40</height>
-			<visible>Skin.HasSetting(noflow) + Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
+			<visible>Skin.HasSetting(noflow) + Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !String.Contains(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
 			<control type="image">
 				<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 			</control>
@@ -2894,7 +2894,7 @@
 				<effect type="rotate" start="0" center="auto" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
 			</animation>
 			<bordersize>7</bordersize>
-			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !SubString(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.HasSetting(Fakediscart)</visible>
+			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !String.Contains(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.HasSetting(Fakediscart)</visible>
 		</control>
 		<control type="image">
 			<left>1426</left>
@@ -2908,7 +2908,7 @@
 				<effect type="rotate" start="0" center="auto" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
 			</animation>
 			<bordersize>7</bordersize>
-			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !SubString(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.Hassetting(fakediscart)</visible>
+			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !String.Contains(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.Hassetting(fakediscart)</visible>
 		</control>
 		<control type="image">
 			<left>1426</left>
@@ -2922,7 +2922,7 @@
 				<effect type="rotate" start="0" center="auto" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
 			</animation>
 			<bordersize>7</bordersize>
-			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !SubString(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !String.Contains(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting) + !Skin.Hassetting(Fakehanddisccolor)</visible>
 		</control>
 		<control type="image">
 			<left>1426</left>
@@ -2936,7 +2936,7 @@
 				<effect type="rotate" start="0" center="auto" end="720" delay="0" time="2300" tween="cubic" easing="inout"/>
 			</animation>
 			<bordersize>7</bordersize>
-			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !SubString(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting) + Skin.Hassetting(fakehanddisccolor)</visible>
+			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !String.Contains(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting) + Skin.Hassetting(fakehanddisccolor)</visible>
 		</control>
 		<control type="textbox">
 			<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="false">
@@ -2950,7 +2950,7 @@
 			<font>Hand_18</font>
 			<align>center</align>
 			<aligny>top</aligny>
-			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !SubString(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !String.Contains(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			<label>[CR][CR][CR][CR][CR] $INFO[ListItem.Label]</label>
 			<textcolor>black</textcolor>
 		</control>
@@ -2966,7 +2966,7 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<aspectratio>keep</aspectratio>
-			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !SubString(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
+			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !String.Contains(ListItem(0).Path,videodb://movies/sets) + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 		</control>
 		<control type="image">
@@ -3129,7 +3129,7 @@
 				<animation effect="zoom" start="100" end="90" center="145,217" time="500" delay="300" reversible="false" tween="cubic" condition="Control.IsVisible(1970) + !Skin.HasSetting(noflow)">Conditional</animation>
 				<animation effect="zoom" start="110" end="110" center="145,217" time="10" reversible="false" tween="cubic" condition="Control.IsVisible(1970) + Skin.HasSetting(noflow)">Conditional</animation>
 				<animation effect="zoom" start="100" end="195" time="640" easing="inout" tween="circle" center="140,390" condition="Skin.HasSetting(showcasezoom) + Skin.HasSetting(noflow)">Conditional</animation>
-				<visible>[container.content(sets) | container.content(movies)] + Skin.HasSetting(NoCaseForMovieset) + SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>[container.content(sets) | container.content(movies)] + Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem.Path,videodb://movies/sets)</visible>
 				<control type="group">
 					<control type="image">
 						<left>0</left>

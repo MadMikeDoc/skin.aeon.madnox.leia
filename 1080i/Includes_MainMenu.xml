@@ -39,7 +39,7 @@
 		<onup condition="Skin.HasSetting(lowermainmenu)  + !Control.IsVisible(4444) + !Control.IsVisible(4445)">SetFocus(9009)</onup>
 		<onup condition="!Skin.HasSetting(lowermainmenu) + Control.IsVisible(4445)">4445</onup>
 		<onup condition="!Skin.HasSetting(lowermainmenu) + !Control.IsVisible(4445)">SetFocus(9009)</onup>
-		<ondown condition="String.IsEmpty(Window(home).Property(DisableWidgets)) + !IntegerGreaterThan(Container(9010).NumItems,0) + !Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">4444</ondown> -->
+		<ondown condition="String.IsEmpty(Window(home).Property(DisableWidgets)) + !Integer.IsGreater(Container(9010).NumItems,0) + !Skin.HasSetting(lowermainmenu) + Control.IsVisible(4444)">4444</ondown> -->
 		<!-- <onback condition="!Skin.HasSetting(DisableWidgetToggle) + String.IsEmpty(Window(home).Property(DisableWidgets))">SetProperty(DisableWidgets,1,home)</onback>
 		<onback condition="!Skin.HasSetting(DisableWidgetToggle) + !String.IsEmpty(Window(home).Property(DisableWidgets))">ClearProperty(DisableWidgets,home)</onback> -->
 		<scrolltime tween="quadratic">300</scrolltime>
@@ -411,7 +411,7 @@
 					<height>45</height>
 					<texture>dialogs/circle/$INFO[Container(8014).ListItem.PercentPlayed].png</texture>
 					<colordiffuse>black</colordiffuse>
-					<visible>IntegerGreaterThan(Container(8014).NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container(8014).NumItems,0)</visible>
 				</control>
 				<control type="label">
 					<top>2</top>
@@ -421,7 +421,7 @@
 					<font>Font_Reg26_Caps</font>
 					<textcolor>black</textcolor>
 					<scroll>false</scroll>
-					<visible>IntegerGreaterThan(Container(8014).NumItems,0)</visible>
+					<visible>Integer.IsGreater(Container(8014).NumItems,0)</visible>
 				</control>
 			</control>
 		</control>
@@ -588,7 +588,7 @@
 				<effect type="fade" start="100" end="0" time="240" />
 				<effect type="slide" end="0,-40" time="240" tween="cubic" easing="inout" />
 			</animation>
-			<visible>[!Control.HasFocus(9010) + ![IntegerGreaterThan(Container(9010).NumItems,0) + Skin.HasSetting(showsubmenu)]] | Skin.HasSetting(rsshomelow)</visible>
+			<visible>[!Control.HasFocus(9010) + ![Integer.IsGreater(Container(9010).NumItems,0) + Skin.HasSetting(showsubmenu)]] | Skin.HasSetting(rsshomelow)</visible>
 			<control type="group">
 				<visible>Skin.HasSetting(alternativerss)</visible>
 				<animation effect="slide" end="0,429" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(rsshomelow) | WIndow.IsActive(1115)">Conditional</animation>

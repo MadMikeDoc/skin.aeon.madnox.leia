@@ -740,7 +740,7 @@
 	</include>
 	<include name="UnwatchedIcon">
 		<control type="group">
-			<visible>Skin.HasSetting(unwatchedicon) + [Container.Content(tvshows) | Container.Content(seasons)] + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)</visible>
+			<visible>Skin.HasSetting(unwatchedicon) + [Container.Content(tvshows) | Container.Content(seasons)] + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 			<control type="image">
 				<left>17</left>
 				<top>17</top>
