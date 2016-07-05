@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="Panel">
-		<onfocus>XBMC.RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>
+		<onfocus>RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>
 		<control type="image">
 			<texture colordiffuse="base">diffuseoverlay_blue.png</texture>
 			<include>FullscreenDimensions</include>

@@ -147,8 +147,7 @@
 			<visible>system.haslocks</visible>
 		</control>
 	</include>
-	<include name="MusicFilesButtons">
-		<!-- not integrated? -->
+	<!-- <include name="MusicFilesButtons">
 		<control type="button" id="7">
 			<label>136</label>
 			<include>Objects_MediaMenuButtonIcons</include>
@@ -180,7 +179,7 @@
 			<label>527</label>
 			<include>Objects_MediaMenuButtonIcons</include>
 		</control>
-	</include>
+	</include> -->
 	<include name="PicturesButtons">
 		<control type="button" id="6">
 			<label>13317</label>

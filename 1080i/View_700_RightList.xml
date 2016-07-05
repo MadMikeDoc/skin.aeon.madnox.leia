@@ -720,7 +720,7 @@
 						<!--visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + !System.Hasaddon(script.duration)</visible-->
 					</control>
 					<!--control type="label">
-						<onfocus>XBMC.RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>
+						<onfocus>RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>
 						<left>30</left>
 						<top>27</top>
 						<width>600</width>

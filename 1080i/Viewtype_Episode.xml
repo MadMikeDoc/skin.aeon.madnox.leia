@@ -39,7 +39,7 @@
 				<movement>3</movement>
 				<focusposition>4</focusposition>
 				<!-- invalid tag -->
-				<!--<onfocus>XBMC.RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>-->
+				<!--<onfocus>RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>-->
 				<onup>514</onup>
 				<ondown>514</ondown>
 				<onleft>9000</onleft>
