@@ -1062,12 +1062,11 @@
 			<top>3</top>
 			<width>404</width>
 			<height>403</height>
-			<texture background="true">thumbs/boxes/cd_shadow_light_shadow.png</texture>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]" background="true">thumbs/boxes/cd_shadow_light_shadow.png</texture>
 			<bordersize>16</bordersize>
 			<include>Animation_VisibleChange400</include>
 			<visible>Skin.HasSetting(ExtendedGlowMode) + !Skin.HasSetting(DisableGlowbar)</visible>
 			<include>PanelGlowFade</include>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 		</control>
 	</include>
 	<include name="MusicShowcaseThumbReflection">

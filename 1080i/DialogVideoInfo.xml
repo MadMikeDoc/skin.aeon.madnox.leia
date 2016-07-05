@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
-	<onload condition="Skin.HasSetting(UseExtendedInfo) + [Container.Content(movies) | String.IsEqual(Container.FolderPath,videodb://tvshows/titles/) + Substring(Container.FolderPath,videodb://tvshows/titles/,left) + !Container.Content(episodes) + !Container.Content(seasons)]">Action(close)</onload>
-	<onload condition="Skin.HasSetting(UseExtendedInfo) + [Container.Content(movies) | String.IsEqual(Container.FolderPath,videodb://tvshows/titles/) + Substring(Container.FolderPath,videodb://tvshows/titles/,left) + !Container.Content(episodes) + !Container.Content(seasons)]">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onload>
+	<onload condition="Skin.HasSetting(UseExtendedInfo) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(Container.FolderPath,videodb://tvshows/titles/) + Substring(Container.FolderPath,videodb://tvshows/titles/,left) + !String.IsEqual(ListItem.DBType,episode) + !Container.Content(seasons)]">Action(close)</onload>
+	<onload condition="Skin.HasSetting(UseExtendedInfo) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(Container.FolderPath,videodb://tvshows/titles/) + Substring(Container.FolderPath,videodb://tvshows/titles/,left) + !String.IsEqual(ListItem.DBType,episode) + !Container.Content(seasons)]">RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID])</onload>
 	<onload condition="!Skin.HasSetting(UseExtendedInfo)">ClearProperty(ActorFade)</onload>
 	<onload condition="!Skin.HasSetting(UseExtendedInfo) + Skin.HasSetting(TVTunes.Enabled) + System.HasAddon(script.tvtunes)">RunScript(script.tvtunes,backend=True)</onload>
 	<onload condition="!Skin.HasSetting(UseExtendedInfo) + System.HasAddon(script.videoextras) + !Skin.HasSetting(Enable.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
@@ -151,8 +151,8 @@
 									<height>50</height>
 									<label>$INFO[ListItem.Title]</label>
 									<font>Font_Bold56</font>
-									<animation effect="slide" start="0,0" end="0,30" time="0" condition="[Container.Content(movies) | Container.Content(tvshows)] + String.IsEmpty(ListItem.Genre)">Conditional</animation>
-									<animation effect="slide" start="0,0" end="0,30" time="0" condition="[Container.Content(musicvideos) + String.IsEmpty(ListItem.Artist)]">Conditional</animation>
+									<animation effect="slide" start="0,0" end="0,30" time="0" condition="[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + String.IsEmpty(ListItem.Genre)">Conditional</animation>
+									<animation effect="slide" start="0,0" end="0,30" time="0" condition="[String.IsEqual(ListItem.DBType,musicvideo) + String.IsEmpty(ListItem.Artist)]">Conditional</animation>
 									<scroll>true</scroll>
 								</control>
 								<control type="grouplist">
@@ -163,7 +163,7 @@
 									<itemgap>0</itemgap>
 									<orientation>horizontal</orientation>
 									<usecontrolcoords>true</usecontrolcoords>
-									<visible>[Container.Content(movies) | Container.Content(tvshows)] + !String.IsEmpty(ListItem.Genre)</visible>
+									<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)] + !String.IsEmpty(ListItem.Genre)</visible>
 									<control type="image" id="12020">
 										<left>0</left>
 										<top>6</top>
@@ -181,7 +181,7 @@
 										<font>Font_Reg32</font>
 										<textcolor>$VAR[FontColorVar]</textcolor>
 										<scroll>true</scroll>
-										<visible>Container.Content(tvshows)</visible>
+										<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
 									</control>
 									<control type="fadelabel">
 										<width>995</width>
@@ -192,7 +192,7 @@
 										<scrollspeed>20</scrollspeed>
 										<pauseatend>5000</pauseatend>
 										<scrollout>false</scrollout>
-										<visible>Container.Content(movies) + [String.IsEmpty(ListItem.OriginalTitle) | String.IsEqual(ListItem.OriginalTitle,ListItem.Title)]</visible>
+										<visible>String.IsEqual(ListItem.DBType,movie) + [String.IsEmpty(ListItem.OriginalTitle) | String.IsEqual(ListItem.OriginalTitle,ListItem.Title)]</visible>
 									</control>
 									<control type="fadelabel">
 										<width>995</width>
@@ -204,7 +204,7 @@
 										<scrollspeed>20</scrollspeed>
 										<pauseatend>5000</pauseatend>
 										<scrollout>false</scrollout>
-										<visible>Container.Content(movies) + !String.IsEmpty(ListItem.OriginalTitle) + !String.IsEqual(ListItem.OriginalTitle,ListItem.Title)</visible>
+										<visible>String.IsEqual(ListItem.DBType,movie) + !String.IsEmpty(ListItem.OriginalTitle) + !String.IsEqual(ListItem.OriginalTitle,ListItem.Title)</visible>
 									</control>
 								</control>
 								<control type="label">
@@ -215,7 +215,7 @@
 									<font>Font_Reg32</font>
 									<textcolor>grey</textcolor>
 									<scroll>true</scroll>
-									<visible>Container.Content(musicvideos) + !String.IsEmpty(ListItem.Artist)</visible>
+									<visible>String.IsEqual(ListItem.DBType,musicvideo) + !String.IsEmpty(ListItem.Artist)</visible>
 								</control>
 								<control type="label">
 									<width>1018</width>
@@ -224,7 +224,7 @@
 									<label>$INFO[ListItem.TvShowTitle]</label>
 									<font>Font_Reg32</font>
 									<textcolor>grey</textcolor>
-									<visible>Container.Content(episodes) + !String.IsEmpty(ListItem.TvShowTitle)</visible>
+									<visible>String.IsEqual(ListItem.DBType,episode) + !String.IsEmpty(ListItem.TvShowTitle)</visible>
 								</control>
 							</control>
 						</control>
@@ -248,7 +248,7 @@
 								<usecontrolcoords>true</usecontrolcoords>
 								<control type="group">
 									<width>259</width>
-									<visible>Container.Content(episodes)</visible>
+									<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 									<control type="label">
 										<left>4</left>
 										<top>-4</top>
@@ -273,13 +273,13 @@
 								<control type="image">
 									<height>79</height>
 									<include>Furniture_FlagUpright1</include>
-									<visible>Container.Content(episodes)</visible>
+									<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 								</control>
 								<control type="group">
 									<top>5</top>
 									<width>285</width>
 									<height>67</height>
-									<visible>[Container.Content(movies) | Container.Content(MusicVideos)] + Skin.HasSetting(ExtendedRatingVideoinfo) + !Skin.HasSetting(DisableRatingColorFlag)</visible>
+									<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)] + Skin.HasSetting(ExtendedRatingVideoinfo) + !Skin.HasSetting(DisableRatingColorFlag)</visible>
 									<control type="image" id="9108">
 										<aspectratio align="center">keep</aspectratio>
 										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsRatingextended]$VAR[RatingFlagVar,,.png]</texture>
@@ -294,7 +294,7 @@
 									<top>5</top>
 									<width>135</width>
 									<height>67</height>
-									<visible>[Container.Content(movies) | Container.Content(MusicVideos)] + !Skin.HasSetting(ExtendedRatingVideoinfo) + !Skin.HasSetting(DisableRatingColorFlag)</visible>
+									<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo)] + !Skin.HasSetting(ExtendedRatingVideoinfo) + !Skin.HasSetting(DisableRatingColorFlag)</visible>
 									<control type="image" id="9109">
 										<aspectratio align="center">keep</aspectratio>
 										<texture colordiffuse="white2" background="true">$VAR[ColorFlagsRatingextended]$VAR[RatingFlagVar,,.png]</texture>
@@ -308,7 +308,7 @@
 								<control type="group">
 									<width>135</width>
 									<height>67</height>
-									<visible>[Container.Content(tvshows) | Container.Content(episodes)] + !Skin.HasSetting(ExtendedTVRatingVideoinfo) + !Skin.HasSetting(DisableRatingColorFlag)</visible>
+									<visible>[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)] + !Skin.HasSetting(ExtendedTVRatingVideoinfo) + !Skin.HasSetting(DisableRatingColorFlag)</visible>
 									<control type="image" id="9110">
 										<top>5</top>
 										<aspectratio align="center">keep</aspectratio>
@@ -325,7 +325,7 @@
 									<left>10</left>
 									<width>285</width>
 									<height>77</height>
-									<visible>[Container.Content(tvshows) | Container.Content(episodes)] + Skin.HasSetting(ExtendedTVRatingVideoinfo) + !Skin.HasSetting(DisableRatingColorFlag)</visible>
+									<visible>[String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)] + Skin.HasSetting(ExtendedTVRatingVideoinfo) + !Skin.HasSetting(DisableRatingColorFlag)</visible>
 									<control type="image" id="9111">
 										<top>5</top>
 										<aspectratio align="center">keep</aspectratio>
@@ -341,11 +341,11 @@
 								<control type="image">
 									<height>79</height>
 									<include>Furniture_FlagUpright1</include>
-									<visible>[Container.Content(movies) | Container.Content(MusicVideos) | Container.Content(tvshows) | Container.Content(episodes)] + !Skin.HasSetting(DisableRatingColorFlag)</visible>
+									<visible>[String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,musicvideo) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,episode)] + !Skin.HasSetting(DisableRatingColorFlag)</visible>
 								</control>
 								<control type="group">
 									<width>155</width>
-									<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows)</visible>
+									<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow)</visible>
 									<control type="label">
 										<top>-1</top>
 										<width>155</width>
@@ -368,11 +368,11 @@
 								<control type="image">
 									<height>79</height>
 									<include>Furniture_FlagUpright1</include>
-									<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows)</visible>
+									<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow)</visible>
 								</control>
 								<control type="group">
 									<width>155</width>
-									<visible>Container.Content(tvshows)</visible>
+									<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
 									<control type="label">
 										<top>-5</top>
 										<width>155</width>
@@ -392,7 +392,7 @@
 								</control>
 								<control type="group">
 									<width>155</width>
-									<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+									<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode)</visible>
 									<control type="label">
 										<top>-1</top>
 										<width>155</width>
@@ -417,10 +417,10 @@
 									<top>1</top>
 									<height>79</height>
 									<include>Furniture_FlagUpright1</include>
-									<visible>!Container.Content(episodes) + !Container.Content(musicvideos)</visible>
+									<visible>!String.IsEqual(ListItem.DBType,episode) + !String.IsEqual(ListItem.DBType,musicvideo)</visible>
 								</control>
 								<control type="group">
-									<visible>!Container.Content(episodes)</visible>
+									<visible>!String.IsEqual(ListItem.DBType,episode)</visible>
 									<width>155</width>
 									<control type="label">
 										<top>-1</top>
@@ -448,7 +448,7 @@
 									<visible>Control.IsVisible(3300)</visible>
 								</control>
 								<control type="group" id="3300">
-									<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
+									<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
 									<visible>!String.IsEmpty(ListItem.Studio)</visible>
 									<width>175</width>
 									<left>20</left>
@@ -485,7 +485,7 @@
 								<orientation>horizontal</orientation>
 								<itemgap>12</itemgap>
 								<height>43</height>
-								<visible>Container.Content(tvshows)</visible>
+								<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
 								<usecontrolcoords>true</usecontrolcoords>
 								<control type="image">
 									<width>50</width>
@@ -508,7 +508,7 @@
 								<height>43</height>
 								<itemgap>12</itemgap>
 								<orientation>horizontal</orientation>
-								<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
+								<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
 								<control type="image">
 									<top>-6</top>
 									<width>50</width>
@@ -529,7 +529,7 @@
 								<!--NextEpisodeVar-->
 								<height>43</height>
 								<itemgap>12</itemgap>
-								<visible>Container.Content(tvshows)</visible>
+								<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
 								<orientation>horizontal</orientation>
 								<usecontrolcoords>true</usecontrolcoords>
 								<control type="image">
@@ -551,7 +551,7 @@
 								<orientation>horizontal</orientation>
 								<itemgap>12</itemgap>
 								<height>43</height>
-								<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
+								<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
 								<control type="image">
 									<top>-6</top>
 									<width>50</width>
@@ -582,7 +582,7 @@
 									<font>Font_Reg28_2</font>
 									<textcolor>$VAR[FontColorVar]</textcolor>
 									<visible>!String.IsEmpty(ListItem.tagline)</visible>
-									<visible>[String.IsEmpty(ListItem.Art(discart)) + [!Skin.HasSetting(Fakediscart) | !Container.Content(movies)]] + String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
+									<visible>[String.IsEmpty(ListItem.Art(discart)) + [!Skin.HasSetting(Fakediscart) | !String.IsEqual(ListItem.DBType,movie)]] + String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
 								</control>
 								<control type="label">
 									<label>[B]$INFO[ListItem.tagline][/B]</label>
@@ -592,7 +592,7 @@
 									<scroll>true</scroll>
 									<visible>!String.IsEmpty(ListItem.tagline)</visible>
 									<textcolor>$VAR[FontColorVar]</textcolor>
-									<visible>[!String.IsEmpty(ListItem.Art(discart)) | [Skin.HasSetting(Fakediscart) + Container.Content(movies)]] | !String.IsEmpty(ListItem.Art(characterart)) | !String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
+									<visible>[!String.IsEmpty(ListItem.Art(discart)) | [Skin.HasSetting(Fakediscart) + String.IsEqual(ListItem.DBType,movie)]] | !String.IsEmpty(ListItem.Art(characterart)) | !String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
 								</control>
 								<control type="group">
 									<control type="image">
@@ -602,7 +602,7 @@
 										<width>1046</width>
 										<height>300</height>
 										<texture border="40" colordiffuse="$INFO[Window(home).Property(VideoInfo.ImageColor)]" background="true">buttons/roundedbutton-nofocus.png</texture>
-										<visible>[String.IsEmpty(ListItem.Art(discart)) + [!Skin.HasSetting(Fakediscart) | !Container.Content(movies)]] + String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
+										<visible>[String.IsEmpty(ListItem.Art(discart)) + [!Skin.HasSetting(Fakediscart) | !String.IsEqual(ListItem.DBType,movie)]] + String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
 									</control>
 									<control type="textbox">
 										<width>994</width>
@@ -614,7 +614,7 @@
 										<font>Font_Reg28_2</font>
 										<pagecontrol>60</pagecontrol>
 										<autoscroll delay="20000" time="2000" repeat="15000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
-										<visible>[String.IsEmpty(ListItem.Art(discart)) + [!Skin.HasSetting(Fakediscart) | !Container.Content(movies)]] + String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
+										<visible>[String.IsEmpty(ListItem.Art(discart)) + [!Skin.HasSetting(Fakediscart) | !String.IsEqual(ListItem.DBType,movie)]] + String.IsEmpty(ListItem.Art(characterart)) + String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
 									</control>
 								</control>
 								<control type="group">
@@ -625,7 +625,7 @@
 										<width>790</width>
 										<height>300</height>
 										<texture border="40" colordiffuse="$INFO[Window(home).Property(VideoInfo.ImageColor)]" background="true">buttons/roundedbutton-nofocus.png</texture>
-										<visible>[!String.IsEmpty(ListItem.Art(discart)) | [Skin.HasSetting(Fakediscart) + Container.Content(movies)]] | !String.IsEmpty(ListItem.Art(characterart)) | !String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
+										<visible>[!String.IsEmpty(ListItem.Art(discart)) | [Skin.HasSetting(Fakediscart) + String.IsEqual(ListItem.DBType,movie)]] | !String.IsEmpty(ListItem.Art(characterart)) | !String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
 									</control>
 									<control type="textbox">
 										<width>725</width>
@@ -637,7 +637,7 @@
 										<font>Font_Reg28_2</font>
 										<pagecontrol>60</pagecontrol>
 										<autoscroll delay="20000" time="2000" repeat="15000">Skin.HasSetting(AutoScroll) + !Control.HasFocus(60)</autoscroll>
-										<visible>[!String.IsEmpty(ListItem.Art(discart)) | [Skin.HasSetting(Fakediscart) + Container.Content(movies)]] | !String.IsEmpty(ListItem.Art(characterart)) | !String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
+										<visible>[!String.IsEmpty(ListItem.Art(discart)) | [Skin.HasSetting(Fakediscart) + String.IsEqual(ListItem.DBType,movie)]] | !String.IsEmpty(ListItem.Art(characterart)) | !String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
 									</control>
 								</control>
 							</control>
@@ -670,7 +670,7 @@
 								<orientation>horizontal</orientation>
 								<itemgap>25</itemgap>
 								<usecontrolcoords>true</usecontrolcoords>
-								<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
+								<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
 								<control type="image" id="900011">
 									<top>5</top>
 									<width>100</width>
@@ -805,7 +805,7 @@
 							</control>
 							<control type="grouplist">
 								<orientation>horizontal</orientation>
-								<visible>Container.Content(tvshows)</visible>
+								<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
 								<left>0</left>
 								<top>872</top>
 								<height>200</height>
@@ -919,7 +919,7 @@
 					</control>
 					<control type="spincontrol" id="60">
 						<left>1820</left>
-						<animation effect="slide" start="0,0" end="-260,0" time="0" condition="[!String.IsEmpty(ListItem.Art(discart)) | [Skin.HasSetting(Fakediscart) + Container.Content(movies)]] | !String.IsEmpty(ListItem.Art(characterart)) | !String.IsEmpty(ListItem.Art(tvshow.characterart))">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-260,0" time="0" condition="[!String.IsEmpty(ListItem.Art(discart)) | [Skin.HasSetting(Fakediscart) + String.IsEqual(ListItem.DBType,movie)]] | !String.IsEmpty(ListItem.Art(characterart)) | !String.IsEmpty(ListItem.Art(tvshow.characterart))">Conditional</animation>
 						<animation effect="slide" start="0,0" end="0,30" time="0" condition="!String.IsEmpty(ListItem.Tagline)">Conditional</animation>
 						<top>630</top>
 						<width>50</width>
@@ -965,7 +965,7 @@
 							<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="1760,810" end="-720" time="700" tween="quadratic" easing="out"/>
 						</animation>
-						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + Skin.HasSetting(Fakediscart)</visible>
+						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + String.IsEqual(ListItem.DBType,movie) + !SubString(ListItem.Path,videodb://movies/sets/) + Skin.HasSetting(Fakediscart)</visible>
 					</control>
 					<control type="image">
 						<left>1610</left>
@@ -983,7 +983,7 @@
 							<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="1760,810" end="-720" time="700" tween="quadratic" easing="out"/>
 						</animation>
-						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + Skin.HasSetting(Fakediscart)</visible>
+						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + String.IsEqual(ListItem.DBType,movie) + !SubString(ListItem.Path,videodb://movies/sets/) + Skin.HasSetting(Fakediscart)</visible>
 					</control>
 					<!-- Fake Disc End -->
 					<control type="list" id="50">
@@ -1401,27 +1401,27 @@
 							<label>CinemaVision</label>
 							<onclick>Dialog.Close(MovieInformation)</onclick>
 							<onclick>RunScript(script.cinemavision,experience)</onclick>
-							<visible>System.HasAddon(script.cinemavision) + Container.Content(movies) + String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
+							<visible>System.HasAddon(script.cinemavision) + String.IsEqual(ListItem.DBType,movie) + String.IsEmpty(Window(Home).Property(script.cinemavision.running))</visible>
 						</control>
 						<control type="button" id="551">
 							<description>ExtendedInfo Movies</description>
 							<include>DialogVideoInfoButton</include>
 							<onclick>RunScript(script.extendedinfo,info=extendedinfo,dbid=$INFO[ListItem.DBID],name=$INFO[ListItem.Title])</onclick>
 							<label>Extended Info</label>
-							<visible>Container.Content(movies) + System.HasAddon(script.extendedinfo)</visible>
+							<visible>String.IsEqual(ListItem.DBType,movie) + System.HasAddon(script.extendedinfo)</visible>
 						</control>
 						<control type="button" id="552">
 							<description>ExtendedInfo TV Shows</description>
 							<include>DialogVideoInfoButton</include>
 							<onclick>RunScript(script.extendedinfo,info=extendedtvinfo,dbid=$INFO[ListItem.DBID])</onclick>
 							<label>Extended Info</label>
-							<visible>Container.Content(tvshows) + System.HasAddon(script.extendedinfo)</visible>
+							<visible>String.IsEqual(ListItem.DBType,tvshow) + System.HasAddon(script.extendedinfo)</visible>
 						</control>
 						<control type="button" id="11">
 							<label>$LOCALIZE[20410]</label>
 							<include>DialogVideoInfoButton</include>
 							<visible>!String.IsEmpty(ListItem.Trailer)</visible>
-							<visible>Container.Content(movies) + ![substring(Container.FolderPath,plugin://) + substring(Container.FolderPath,trailer)]</visible>
+							<visible>String.IsEqual(ListItem.DBType,movie) + ![substring(Container.FolderPath,plugin://) + substring(Container.FolderPath,trailer)]</visible>
 						</control>
 						<control type="button" id="440">
 							<label>$LOCALIZE[31886]</label>
@@ -1429,14 +1429,14 @@
 							<visible>String.IsEmpty(ListItem.Trailer)</visible>
 							<onclick>Action(Close)</onclick>
 							<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.OriginalTitle]+Trailer)</onclick>
-							<visible>Container.Content(movies) + ![substring(Container.FolderPath,plugin://) + substring(Container.FolderPath,trailer)]</visible>
+							<visible>String.IsEqual(ListItem.DBType,movie) + ![substring(Container.FolderPath,plugin://) + substring(Container.FolderPath,trailer)]</visible>
 						</control>
 						<control type="button" id="550">
 							<label>$LOCALIZE[24069] $LOCALIZE[4]</label>
 							<width>325</width>
 							<include>DialogVideoInfoButton</include>
 							<onclick>RunScript(script.tv.show.next.aired,updateshow=$INFO[ListItem.Label])</onclick>
-							<visible>Container.Content(tvshows)</visible>
+							<visible>String.IsEqual(ListItem.DBType,tvshow)</visible>
 						</control>
 						<control type="grouplist" id="6100">
 							<width>276</width>
