@@ -27,8 +27,7 @@
 				<left>15</left>
 				<width>750</width>
 				<height>60</height>
-				<texture>osd/osd_settings_buttonnf.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">osd/osd_settings_buttonnf.png</texture>
 			</control>
 			<control type="label" id="1">
 				<width>780</width>

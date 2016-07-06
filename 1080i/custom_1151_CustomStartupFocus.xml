@@ -10,8 +10,7 @@
 				<top>60</top>
 				<width>340</width>
 				<height>880</height>
-				<texture border="20">osd/osd_settings_back_glow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" border="20">osd/osd_settings_back_glow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>PanelGlowFade</include>
 			</control>
@@ -34,8 +33,7 @@
 					<control type="image">
 						<width>300</width>
 						<height>40</height>
-						<texture>button-nofocus.png</texture>
-						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+						<texture colordiffuse="$VAR[ColorDiffuseVar]">button-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left></left>
@@ -52,8 +50,7 @@
 						<control type="image">
 							<width>300</width>
 							<height>40</height>
-							<texture border="8">views/tripanel/listselect_fo.png</texture>
-							<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+							<texture colordiffuse="$VAR[ColorDiffuseVar]" border="8">views/tripanel/listselect_fo.png</texture>
 						</control>
 						<control type="label">
 							<left></left>

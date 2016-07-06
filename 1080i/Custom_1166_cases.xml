@@ -25,8 +25,7 @@
 				<top>580</top>
 				<width>950</width>
 				<height>655</height>
-				<texture border="50">osd/osd_settings_back_glow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" border="50">osd/osd_settings_back_glow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>Animation_VisibleChange400</include>
 				<include>PanelGlowFade</include>
@@ -88,36 +87,32 @@
 					<control type="image">
 						<width>250</width>
 						<height>122</height>
-						<texture border="1">views/clearcases_focus_frame.png</texture>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="1">views/clearcases_focus_frame.png</texture>
 						<bordersize>-3</bordersize>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<aspectratio>keep</aspectratio>
 						<visible>String.IsEqual(ListItem.Property(casetype),clearcases)</visible>
 					</control>
 					<control type="image">
 						<width>250</width>
 						<height>122</height>
-						<texture border="1">views/casecolor_focus_frame.png</texture>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="1">views/casecolor_focus_frame.png</texture>
 						<bordersize>-3</bordersize>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<aspectratio>keep</aspectratio>
 						<visible>String.IsEqual(ListItem.Property(casetype),colorcases)</visible>
 					</control>
 					<control type="image">
 						<width>250</width>
 						<height>122</height>
-						<texture border="1">views/db_dvd_focus_frame.png</texture>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="1">views/db_dvd_focus_frame.png</texture>
 						<bordersize>-3</bordersize>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<aspectratio>keep</aspectratio>
 						<visible>String.IsEqual(ListItem.Property(casetype),dbdvd)</visible>
 					</control>
 					<control type="image">
 						<width>250</width>
 						<height>122</height>
-						<texture border="1">views/nonecases_focus_frame.png</texture>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="1">views/nonecases_focus_frame.png</texture>
 						<bordersize>-3</bordersize>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 						<aspectratio>keep</aspectratio>
 						<visible>String.IsEqual(ListItem.Property(casetype),none)</visible>
 					</control>
@@ -170,43 +165,6 @@
 						<property name="casetype">none</property>
 						<visible>[String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) | String.IsEqual(Window(home).Property(actualViewtype),Wall_Large) | String.IsEqual(Window(home).Property(actualViewtype),Video_RightList) | String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.IsEqual(Window(home).Property(actualViewtype),AddonWall) | String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView)] + Container.Content(movies) | Container.Content(sets)</visible>
 					</item>
-					<!-- MAD - Original case selection for Infowall - updated above to get correct cases -->
-					<!--item id="5">
-                        <label>$LOCALIZE[31282]</label>
-                        <icon>views/clearcases.png</icon>
-                        <thumb>views/clearcases_focus.png</thumb>
-                        <onclick>Skin.SetBool(useclearcasesinfowall2)</onclick>
-						<onclick>Skin.Reset(usecasesinfowall)</onclick>
-						<onclick>Skin.Reset(ColorcasesAddonWall)</onclick>
-						<visible>String.IsEqual(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
-                    </item>
-                    <item id="6">
-                        <label>$LOCALIZE[31248]</label>
-                        <icon>views/db_dvd.png</icon>
-                        <thumb>views/db_dvd_focus.png</thumb>
-						<onclick>Skin.Reset(useclearcasesinfowall2)</onclick>
-						<onclick>Skin.SetBool(usecasesinfowall)</onclick>
-						<onclick>Skin.Reset(ColorcasesAddonWall)</onclick>
-						<visible>String.IsEqual(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
-                    </item>
-                    <item id="7">
-                        <label>$LOCALIZE[31182]</label>
-                        <icon>views/casecolor.png</icon>
-                        <thumb>views/casecolor_focus.png</thumb>
-                        <onclick>Skin.SetBool(usecasesinfowall)</onclick>
-						<onclick>Skin.Reset(useclearcasesinfowall2)</onclick>
-						<onclick>Skin.SetBool(ColorcasesAddonWall)</onclick>
-						<visible>String.IsEqual(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
-                    </item>
-                    <item id="8">
-                        <label>$LOCALIZE[106]</label>
-                        <icon>views/nonecases.png</icon>
-                        <thumb>views/nonecases_focus.png</thumb>
-                        <onclick>Skin.Reset(useclearcasesinfowall2)</onclick>
-						<onclick>Skin.Reset(usecasesinfowall)</onclick>
-						<onclick>Skin.Reset(ColorcasesAddonWall)</onclick>
-						<visible>String.IsEqual(Window(home).Property(actualViewtype),AddonWall) + Container.Content(movies)</visible>
-                    </item-->
 					<item id="9">
 						<label>$LOCALIZE[31248]</label>
 						<icon>views/db_dvd.png</icon>

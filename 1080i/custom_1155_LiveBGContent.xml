@@ -10,8 +10,7 @@
 				<top>100</top>
 				<width>1240</width>
 				<height>560</height>
-				<texture border="20">osd/osd_settings_back_glow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" border="20">osd/osd_settings_back_glow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>PanelGlowFade</include>
 			</control>
@@ -145,8 +144,7 @@
 					<control type="image">
 						<width>300</width>
 						<height>60</height>
-						<texture>button-nofocus.png</texture>
-						<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+						<texture colordiffuse="$VAR[ColorDiffuseVar]">button-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<width>300</width>
@@ -179,8 +177,7 @@
 						<control type="image">
 							<width>300</width>
 							<height>60</height>
-							<texture>button-nofocus.png</texture>
-							<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+							<texture colordiffuse="$VAR[ColorDiffuseVar]">button-nofocus.png</texture>
 						</control>
 						<control type="label">
 							<width>300</width>
@@ -288,18 +285,6 @@
 						<onclick>Dialog.Close(1155)</onclick>
 						<visible>Library.HasContent(tvshows) + String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
 					</item>
-					<!--item>
-                        <label>31820</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,nocasedailybabe)</onclick>
-                        <onclick>Dialog.Close(1155)</onclick>
-                        <visible>String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
-                    </item>
-                    <item>
-                        <label>Today Babe</label>
-                        <onclick>Skin.SetString(ItemToEdit.MultiFanart,nocasedailybabe2)</onclick>
-                        <onclick>Dialog.Close(1155)</onclick>
-                        <visible>String.IsEqual(Window(Home).Property(LiveCasesType),Pics)</visible>
-                    </item-->
 					<item>
 						<label>559</label>
 						<onclick>Skin.SetString(ItemToEdit.MultiFanart,nocaseplaylist)</onclick>

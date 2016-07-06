@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="1168" type="dialog">
 	<defaultcontrol always="true">500</defaultcontrol>
-
 	<coordinates>
 		<left>180</left>
 		<top>-400</top>
@@ -25,8 +24,7 @@
 				<top>580</top>
 				<width>1050</width>
 				<height>615</height>
-				<texture border="50">osd/osd_settings_back_glow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" border="50">osd/osd_settings_back_glow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>Animation_VisibleChange400</include>
 				<include>PanelGlowFade</include>
@@ -70,9 +68,8 @@
 					<control type="image">
 						<width>324</width>
 						<height>60</height>
-						<texture border="8">views/tripanel/listselect_fo.png</texture>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(500)">Conditional</animation>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					</control>
 					<control type="label">
 						<width>400</width>
@@ -554,40 +551,35 @@
 					<width>96</width>
 					<height>47</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsAspectRatio]aspectratio/2.55.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsAspectRatio]aspectratio/2.55.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsAudio]audio/ac33.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsAudio]audio/ac33.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsRating]rating/MPAA_NC-17_Certificate_US.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsRating]rating/MPAA_NC-17_Certificate_US.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsResolution]resolution/1080.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsResolution]resolution/1080.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsSource]source/bluray.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsSource]source/bluray.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="700">
@@ -603,48 +595,42 @@
 					<width>96</width>
 					<height>47</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsAspectRatio]aspectratio/2.55.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsAspectRatio]aspectratio/2.55.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsAudio]audio/ac33.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsAudio]audio/ac33.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsRating]rating/MPAA_NC-17_Certificate_US.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsRating]rating/MPAA_NC-17_Certificate_US.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsResolution]resolution/1080.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsResolution]resolution/1080.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsSource]source/bluray.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsSource]source/bluray.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsStudio]Warner Brothers.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsStudio]Warner Brothers.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="700">
@@ -660,24 +646,21 @@
 					<width>167</width>
 					<height>109</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsStudio]Warner Brothers.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsStudio]Warner Brothers.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>167</width>
 					<height>109</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsStudio]Walt Disney Pictures.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsStudio]Walt Disney Pictures.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>167</width>
 					<height>109</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsStudio]Fox 2000 Pictures.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsStudio]Fox 2000 Pictures.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="700">
@@ -693,16 +676,14 @@
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsLanguage]eng.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsLanguage]eng.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsLanguage]USA.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsLanguage]ger.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="700">
@@ -718,40 +699,35 @@
 					<width>96</width>
 					<height>47</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsAspectRatio]aspectratio/2.55.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsAspectRatio]aspectratio/2.55.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsAudio]audio/ac33.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsAudio]audio/ac33.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsRating]rating/MPAA_NC-17_Certificate_US.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsRating]rating/MPAA_NC-17_Certificate_US.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsResolution]resolution/1080.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsResolution]resolution/1080.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>96</width>
 					<height>55</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsSource]source/bluray.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsSource]source/bluray.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="700">
@@ -767,48 +743,42 @@
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[Colortdefaulticons]DefaultFolderBackList.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultFolderBackList.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[Colortdefaulticons]DefaultRecentlyAddedMusicVideos.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultRecentlyAddedMusicVideos.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[Colortdefaulticons]DefaultAddonVideo.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultAddonVideo.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[Colortdefaulticons]DefaultActor.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultActor.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[Colortdefaulticons]DefaultAddonMusicVideoInfo.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultAddonMusicVideoInfo.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[Colortdefaulticons]DefaultMoviesRecentlyPlayed.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultMoviesRecentlyPlayed.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="700">
@@ -824,18 +794,16 @@
 					<width>240</width>
 					<height>335</height>
 					<aspectratio>scale</aspectratio>
-					<texture>special://skin/extras/genre/video/iconsBW/DefaultGrayGenre.jpg</texture>
+					<texture colordiffuse="white2">special://skin/extras/genre/video/iconsBW/DefaultGrayGenre.jpg</texture>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
-					<colordiffuse>white2</colordiffuse>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>240</width>
 					<height>335</height>
 					<aspectratio>scale</aspectratio>
-					<texture>special://skin/extras/genre/video/icons/DefaultColorGenre.jpg</texture>
+					<texture colordiffuse="white2">special://skin/extras/genre/video/icons/DefaultColorGenre.jpg</texture>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
-					<colordiffuse>white2</colordiffuse>
 				</control>
 			</control>
 			<control type="group" id="700">
@@ -859,8 +827,7 @@
 						<width>122</width>
 						<height>60</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ColortvguideFlags]0.png</texture>
-						<colordiffuse>white2</colordiffuse>
+						<texture colordiffuse="white2">$VAR[ColortvguideFlags]0.png</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -880,8 +847,7 @@
 						<width>122</width>
 						<height>60</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ColortvguideFlags]1.png</texture>
-						<colordiffuse>white2</colordiffuse>
+						<texture colordiffuse="white2">$VAR[ColortvguideFlags]1.png</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -901,8 +867,7 @@
 						<width>122</width>
 						<height>60</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ColortvguideFlags]2.png</texture>
-						<colordiffuse>white2</colordiffuse>
+						<texture colordiffuse="white2">$VAR[ColortvguideFlags]2.png</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -922,8 +887,7 @@
 						<width>122</width>
 						<height>60</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ColortvguideFlags]4.png</texture>
-						<colordiffuse>white2</colordiffuse>
+						<texture colordiffuse="white2">$VAR[ColortvguideFlags]4.png</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -943,8 +907,7 @@
 						<width>122</width>
 						<height>60</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ColortvguideFlags]6.png</texture>
-						<colordiffuse>white2</colordiffuse>
+						<texture colordiffuse="white2">$VAR[ColortvguideFlags]6.png</texture>
 					</control>
 				</control>
 			</control>
@@ -961,40 +924,35 @@
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlags]posters/imdb.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlags]posters/imdb.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlags]cc.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlags]cc.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlags]time.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlags]time.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlags]IMDB.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlags]IMDB.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlags]year.png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlags]year.png</texture>
 				</control>
 			</control>
 			<control type="label">

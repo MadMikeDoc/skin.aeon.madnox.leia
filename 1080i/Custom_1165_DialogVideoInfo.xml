@@ -13,10 +13,9 @@
 			<top>180</top>
 			<width>1212</width>
 			<height>630</height>
-			<texture>osd/osd_settings_back_glow.png</texture>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">osd/osd_settings_back_glow.png</texture>
 			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 			<include>PanelGlowFade</include>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 		</control>
 		<control type="image">
 			<left>357</left>
@@ -63,7 +62,6 @@
 				<onclick>Skin.ToggleSetting(Enable.videoextras)</onclick>
 				<selected>Skin.HasSetting(Enable.videoextras)</selected>
 			</control>
--
 			<control type="radiobutton" id="112">
 				<label>Enable MPAA rating description</label>
 				<include>Objects_CommonSettingsButton</include>
@@ -76,13 +74,6 @@
 				<onclick>Dialog.Close(1165)</onclick>
 				<onclick>ActivateWindow(1169)</onclick>
 			</control>
-			<!-- MAD - New switch for Alt Dialog Info Screen - Not complete: onup issues -->
-			<!--control type="radiobutton" id="17033">
-				<label>Alternate Info Screen</label>
-				<include>Objects_CommonSettingsButton</include>
-				<onclick>Skin.ToggleSetting(AltInfoScreen)</onclick>
-				<selected>Skin.HasSetting(AltInfoScreen)</selected>
-			</control-->
 		</control>
 		<control type="scrollbar" id="60">
 			<include>Objects_CommonSettingsScrollbar</include>

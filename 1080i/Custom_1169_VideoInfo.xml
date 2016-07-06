@@ -25,8 +25,7 @@
 				<top>580</top>
 				<width>950</width>
 				<height>415</height>
-				<texture border="50">osd/osd_settings_back_glow.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]" border="50">osd/osd_settings_back_glow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>Animation_VisibleChange400</include>
 				<include>PanelGlowFade</include>
@@ -259,8 +258,7 @@
 					<width>200</width>
 					<height>90</height>
 					<aspectratio>keep</aspectratio>
-					<texture>flags/rating/$VAR[RatingFlagVar,,.png]</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">flags/rating/$VAR[RatingFlagVar,,.png]</texture>
 					<visible>![Skin.HasSetting(RatingColorFlag) | Skin.HasSetting(RatingColorFlagreloaded)]</visible>
 				</control>
 				<control type="image">
@@ -268,8 +266,7 @@
 					<width>200</width>
 					<height>90</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
 					<visible>!Skin.HasSetting(ExtendedRatingVideoinfo)</visible>
 				</control>
 				<control type="image">
@@ -278,8 +275,7 @@
 					<width>330</width>
 					<height>90</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsRating]rating/info/$VAR[RatingFlagVar,,.png]</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsRating]rating/info/$VAR[RatingFlagVar,,.png]</texture>
 					<visible>Skin.HasSetting(ExtendedRatingVideoinfo)</visible>
 				</control>
 			</control>
@@ -292,8 +288,7 @@
 					<width>200</width>
 					<height>90</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -314,8 +309,7 @@
 					<width>155</width>
 					<height>68</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColortvguideFlags]$INFO[Window(Home).Property(NextAired.StatusID)].png</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$VAR[ColortvguideFlags]$INFO[Window(Home).Property(NextAired.StatusID)].png</texture>
 				</control>
 			</control>
 		</control>
