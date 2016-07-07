@@ -18,9 +18,8 @@
 				<top>36</top>
 				<width>1846</width>
 				<height>1006</height>
-				<texture>settings/settings_panelback_shadow.png</texture>
+				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">settings/settings_panelback_shadow.png</texturefocus>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			</control>
 			<control type="image">
 				<left>34</left>
@@ -77,11 +76,10 @@
 				<height>74</height>
 				<textoffsetx>40</textoffsetx>
 				<textoffsety>18</textoffsety>
-				<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<font>Font_Bold34</font>
 				<textcolor>grey</textcolor>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			</control>
 			<control type="button" id="3">
 				<textoffsetx>40</textoffsetx>
@@ -89,11 +87,10 @@
 			</control>
 			<control type="radiobutton" id="4">
 				<textoffsetx>40</textoffsetx>
-				<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-				<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]">settings/settings_radiobuttonoff.png</texturenofocus>
 				<textcolor>grey2</textcolor>
 				<font>Font_Reg32</font>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			</control>
 			<control type="spincontrolex" id="5">
 				<textoffsetx>40</textoffsetx>
@@ -123,7 +120,7 @@
 				<control type="button" id="10">
 					<width>324</width>
 					<height>97</height>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>186</label>
 					<onleft>12</onleft>
@@ -134,12 +131,11 @@
 					<ondown>2</ondown>
 					<font>Font_Bold34</font>
 					<textcolor>grey</textcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="11">
 					<width>324</width>
 					<height>97</height>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>222</label>
 					<onleft>10</onleft>
@@ -150,12 +146,11 @@
 					<ondown>2</ondown>
 					<font>Font_Bold34</font>
 					<textcolor>grey</textcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="12">
 					<width>324</width>
 					<height>97</height>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>409</label>
 					<onleft>11</onleft>
@@ -166,7 +161,6 @@
 					<ondown>2</ondown>
 					<font>Font_Bold34</font>
 					<textcolor>grey</textcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 			</control>
 		</control>

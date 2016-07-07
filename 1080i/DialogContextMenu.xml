@@ -196,8 +196,7 @@
 			<top>-39</top>
 			<width>462</width>
 			<height>39</height>
-			<texture>$VAR[ContextTopVar]</texture>
-			<colordiffuse>$VAR[SpotColorVar2]</colordiffuse>
+			<texture colordiffuse="$VAR[SpotColorVar2]">$VAR[ContextTopVar]</texture>
 		</control>
 		<control type="button" id="1000">
 			<width>462</width>

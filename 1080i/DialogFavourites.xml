@@ -15,8 +15,7 @@
 			<top>80</top>
 			<width>1608</width>
 			<height>922</height>
-			<texture>osd/osd_settings_back_glow.png</texture>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">osd/osd_settings_back_glow.png</texture>
 			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 			<include>PanelGlowFade</include>
 		</control>
@@ -57,7 +56,7 @@
 			<width>346</width>
 			<height>60</height>
 			<textoffsetx>20</textoffsetx>
-			<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<label>$LOCALIZE[31272]</label>
 			<label2>[COLOR $VAR[FontColorVar]]$VAR[FavoritesListTypeVar][/COLOR]</label2>
@@ -71,7 +70,6 @@
 			<onright>61</onright>
 			<onup>450</onup>
 			<ondown>450</ondown>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 		</control>
 		<control type="panel" id="450">
 			<left>185</left>
@@ -109,9 +107,8 @@
 				<control type="image">
 					<width>550</width>
 					<height>60</height>
-					<texture border="8">views/tripanel/listselect_fo.png</texture>
+					<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 					<visible>Control.HasFocus(450)</visible>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 				<control type="label">
 					<left>45</left>
@@ -157,9 +154,8 @@
 				<control type="image">
 					<width>765</width>
 					<height>90</height>
-					<texture border="8">views/tripanel/listselect_fo.png</texture>
+					<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 					<visible>Control.HasFocus(450)</visible>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 				<control type="label">
 					<left>150</left>
@@ -213,9 +209,8 @@
 				<control type="image">
 					<width>765</width>
 					<height>185</height>
-					<texture border="8">views/tripanel/listselect_fo.png</texture>
+					<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 					<visible>Control.HasFocus(450)</visible>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 				<control type="label">
 					<left>205</left>

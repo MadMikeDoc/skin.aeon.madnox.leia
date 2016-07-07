@@ -433,8 +433,7 @@
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime2</fadetime>
-					<colordiffuse>white2</colordiffuse>
-					<texture fallback="">special://skin/extras/BigIcons/Subtitle.png</texture>
+					<texture colordiffuse="white2" fallback="">special://skin/extras/BigIcons/Subtitle.png</texture>
 					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
 				</control>
 				<control type="image">
@@ -444,8 +443,7 @@
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime2</fadetime>
-					<colordiffuse>white2</colordiffuse>
-					<texture fallback="">special://skin/extras/BigIcons/Speaker.png</texture>
+					<texture colordiffuse="white2" fallback="">special://skin/extras/BigIcons/Speaker.png</texture>
 					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
 					<visible>!Substring(VideoPlayer.AudioLanguage,und)</visible>
 				</control>
@@ -456,8 +454,7 @@
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime2</fadetime>
-					<colordiffuse>white2</colordiffuse>
-					<texture fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.AudioLanguage,,.png]</texture>
+					<texture colordiffuse="white2" fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.AudioLanguage,,.png]</texture>
 				</control>
 				<control type="image">
 					<left>1860</left>
@@ -466,9 +463,8 @@
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
 					<fadetime>IconCrossfadeTime2</fadetime>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2" fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.SubtitlesLanguage,,.png]</texture>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<texture fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.SubtitlesLanguage,,.png]</texture>
 				</control>
 			</control>
 		</control>
@@ -493,8 +489,7 @@
 				<left>709</left>
 				<width>40</width>
 				<height>1080</height>
-				<texture>common/topbar_down.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">common/topbar_down.png</texture>
 				<include>TopbarPulseAnimationRight</include>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 			</control>
@@ -519,8 +514,7 @@
 					<top>90</top>
 					<width>1042</width>
 					<height>854</height>
-					<texture>info/info_panellines_movie.png</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">info/info_panellines_movie.png</texture>
 				</control>
 				<control type="grouplist">
 					<left>0</left>
@@ -553,9 +547,8 @@
 							<width>42</width>
 							<height>35</height>
 							<aspectratio aligny="center" align="left">keep</aspectratio>
-							<texture background="true">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.Country,,.png]</texture>
+							<texture colordiffuse="white2" background="true">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.Country,,.png]</texture>
 							<fadetime>200</fadetime>
-							<colordiffuse>AAFFFFFF</colordiffuse>
 							<visible>!String.IsEmpty(Control.GetLabel(12020))</visible>
 							<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
 						</control>
@@ -595,9 +588,8 @@
 					<width>249</width>
 					<height>57</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsRating]rating/info/$VAR[RatingFlagVar,,.png]</texture>
+					<texture colordiffuse="grey">$VAR[ColorFlagsRating]rating/info/$VAR[RatingFlagVar,,.png]</texture>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<colordiffuse>grey</colordiffuse>
 					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos)</visible>
 				</control>
 				<control type="image">
@@ -606,9 +598,8 @@
 					<width>249</width>
 					<height>57</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
+					<texture colordiffuse="grey">$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<colordiffuse>grey</colordiffuse>
 					<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) + String.IsEmpty(Control.GetLabel(11465))</visible>
 				</control>
 				<control type="group">
@@ -653,17 +644,15 @@
 							<left>285</left>
 							<top>87</top>
 							<aspectratio align="center">keep</aspectratio>
-							<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
+							<texture colordiffuse="grey">$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
 							<animation effect="fade" time="200">VisibleChange</animation>
-							<colordiffuse>grey</colordiffuse>
 						</control>
 						<control type="image">
 							<left>285</left>
 							<top>87</top>
 							<aspectratio align="center">keep</aspectratio>
-							<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
+							<texture colordiffuse="grey">$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
 							<animation effect="fade" time="200">VisibleChange</animation>
-							<colordiffuse>grey</colordiffuse>
 							<visible>String.IsEmpty(Control.GetLabel(1156))</visible>
 						</control>
 					</control>
@@ -716,8 +705,7 @@
 						<top>16</top>
 						<width>121</width>
 						<height>50</height>
-						<texture>$VAR[ColorFlags]posters/imdb.png</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey">$VAR[ColorFlags]posters/imdb.png</texture>
 						<include>AudioFlagsVars</include>
 					</control>
 					<control type="label">
@@ -741,8 +729,7 @@
 						<width>116</width>
 						<height>79</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture>$VAR[ColorFlagsStudio]$INFO[VideoPlayer.Studio,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey">$VAR[ColorFlagsStudio]$INFO[VideoPlayer.Studio,,.png]</texture>
 						<visible>!String.IsEmpty(Control.GetLabel(800011))</visible>
 					</control>
 					<control type="label">
@@ -882,16 +869,14 @@
 						<width>140</width>
 						<height>70</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture>$VAR[ColorFlagsSource]source/$VAR[VideoSourceFlagVar,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey">$VAR[ColorFlagsSource]source/$VAR[VideoSourceFlagVar,,.png]</texture>
 						<visible>!String.IsEmpty(Control.GetLabel(900011))</visible>
 					</control>
 					<control type="image" id="900012">
 						<width>121</width>
 						<height>90</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture>$VAR[ColorFlagsSource]source/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey">$VAR[ColorFlagsSource]source/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
 						<visible>String.IsEmpty(Control.GetLabel(900011))</visible>
 						<animation effect="slide" end="0,-10" condition="true">Conditional</animation>
 						<visible>!String.IsEmpty(Control.GetLabel(900012))</visible>
@@ -904,8 +889,7 @@
 						<width>121</width>
 						<height>70</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture fallback="flags/audio/defaultsound.png">$VAR[ColorFlagsAudio]audio/$INFO[VideoPlayer.AudioCodec]$INFO[VideoPlayer.AudioChannels,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey"> fallback="flags/audio/defaultsound.png">$VAR[ColorFlagsAudio]audio/$INFO[VideoPlayer.AudioCodec]$INFO[VideoPlayer.AudioChannels,,.png]</texture>
 						<visible>!String.IsEmpty(Control.GetLabel(900013))</visible>
 					</control>
 					<control type="image">
@@ -917,8 +901,7 @@
 						<height>85</height>
 						<animation effect="slide" end="0,-7" condition="true">Conditional</animation>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture>$VAR[ColorFlagsResolution]resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey">$VAR[ColorFlagsResolution]resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
 						<visible>!String.IsEmpty(Control.GetLabel(900014))</visible>
 					</control>
 					<control type="image">
@@ -930,8 +913,7 @@
 						<height>83</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
 						<animation effect="slide" end="0,-7" condition="true">Conditional</animation>
-						<texture>$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey">$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
 						<visible>!String.IsEmpty(Control.GetLabel(900015))</visible>
 					</control>
 					<control type="image">
@@ -942,8 +924,7 @@
 						<width>58</width>
 						<height>70</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture>$VAR[ColorFlags]cc.png</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey">$VAR[ColorFlags]cc.png</texture>
 						<visible>VideoPlayer.HasSubtitles</visible>
 					</control>
 				</control>
@@ -957,13 +938,12 @@
 				<textoffsety>4</textoffsety>
 				<align>center</align>
 				<aligny>top</aligny>
-				<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-				<texturenofocus>dialogs/context_nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]">dialogs/context_nofocus.png</texturenofocus>
 				<label>$LOCALIZE[31064]</label>
 				<font>Font_Reg30_2</font>
 				<textcolor>grey</textcolor>
 				<focusedcolor>white2</focusedcolor>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick condition="String.IsEmpty(Window(home).Property(morefullscreeninfo))">SetProperty(morefullscreeninfo,1,home)</onclick>
 				<onclick condition="!String.IsEmpty(Window(home).Property(morefullscreeninfo))">ClearProperty(morefullscreeninfo,home)</onclick>
 				<onleft>StepBack</onleft>
@@ -997,8 +977,7 @@
 				<left>709</left>
 				<width>40</width>
 				<height>1080</height>
-				<texture>common/topbar_top.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">common/topbar_top.png</texture>
 				<include>TopbarPulseAnimationLeft</include>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 			</control>
@@ -1024,8 +1003,7 @@
 					<top>90</top>
 					<width>1042</width>
 					<height>710</height>
-					<texture>info/info_panellines_livetv.png</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]">info/info_panellines_livetv.png</texture>
 				</control>
 				<control type="image">
 					<left>1100</left>
@@ -1212,8 +1190,7 @@
 						<width>140</width>
 						<height>70</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture>$VAR[ColorFlagsSource]source/$VAR[VideoSourceFlagVar,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey">$VAR[ColorFlagsSource]source/$VAR[VideoSourceFlagVar,,.png]</texture>
 						<visible>!String.IsEmpty(Control.GetLabel(900011))</visible>
 					</control>
 					<control type="image">
@@ -1221,8 +1198,7 @@
 						<width>132</width>
 						<height>70</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture fallback="flags/source/defaultsource.png">$VAR[ColorFlagsSource]source/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey" fallback="flags/source/defaultsource.png">$VAR[ColorFlagsSource]source/$INFO[VideoPlayer.VideoCodec,,.png]</texture>
 						<visible>String.IsEmpty(Control.GetLabel(900011))</visible>
 					</control>
 					<control type="image">
@@ -1233,8 +1209,7 @@
 						<width>161</width>
 						<height>70</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture fallback="flags/audio/defaultsound.png">$VAR[ColorFlagsAudio]audio/$INFO[VideoPlayer.AudioCodec]$INFO[VideoPlayer.AudioChannels,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey" fallback="flags/audio/defaultsound.png">$VAR[ColorFlagsAudio]audio/$INFO[VideoPlayer.AudioCodec]$INFO[VideoPlayer.AudioChannels,,.png]</texture>
 					</control>
 					<control type="image">
 						<include>Furniture_FlagUpright</include>
@@ -1243,8 +1218,7 @@
 						<width>100</width>
 						<height>70</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture fallback="flags/resolution/defaultscreen.png">$VAR[ColorFlagsResolution]resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey" fallback="flags/resolution/defaultscreen.png">$VAR[ColorFlagsResolution]resolution/$INFO[VideoPlayer.VideoResolution,,.png]</texture>
 					</control>
 					<control type="image">
 						<include>Furniture_FlagUpright</include>
@@ -1254,8 +1228,7 @@
 						<width>132</width>
 						<height>70</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture fallback="flags/aspectratio/defaultaspect.png">$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey" fallback="flags/aspectratio/defaultaspect.png">$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
 					</control>
 					<control type="image">
 						<include>Furniture_FlagUpright</include>
@@ -1264,8 +1237,7 @@
 						<width>58</width>
 						<height>70</height>
 						<aspectratio aligny="center" align="center">keep</aspectratio>
-						<texture>$VAR[ColorFlags]cc.png</texture>
-						<colordiffuse>FF7c7c7c</colordiffuse>
+						<texture colordiffuse="grey">$VAR[ColorFlags]cc.png</texture>
 						<visible>VideoPlayer.HasSubtitles</visible>
 					</control>
 				</control>
@@ -1299,8 +1271,7 @@
 					<top>84</top>
 					<width>1320</width>
 					<height>1</height>
-					<texture>new_pvr/osd_back_pvr_line_white.png</texture>
-					<colordiffuse>$VAR[SubTitleColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[SubTitleColorVar]">new_pvr/osd_back_pvr_line_white.png</texture>
 				</control>
 				<control type="image"> <!-- Logo background -->
 					<left>1050</left>
@@ -1333,7 +1304,6 @@
 					<texture>http://localhost:52307/getthumb&amp;title=$INFO[VideoPlayer.Title]</texture>
 					<!-- <visible>!String.IsEmpty(VideoPlayer.PlotOutline)</visible> -->
 				</control>
-
 				<control type="group">
 					<visible>String.IsEmpty(Window(home).Property(LiveTVShowEpgNext))</visible>
 					<control type="label">

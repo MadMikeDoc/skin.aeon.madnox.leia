@@ -100,8 +100,7 @@
 					<width>240</width>
 					<height>38</height>
 					<aspectratio>keep</aspectratio>
-					<texture>$INFO[ListItem.AddonStarRating)]</texture>
-					<colordiffuse>white2</colordiffuse>
+					<texture colordiffuse="white2">$INFO[ListItem.AddonStarRating)]</texture>
 				</control>
 				<control type="label">
 					<left>30</left>
@@ -203,12 +202,11 @@
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>24020</label>
 					<font>Font_Bold34</font>
 					<textcolor>grey</textcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<focusedcolor>white2</focusedcolor>
 				</control>
 				<control type="button" id="8">
@@ -216,12 +214,11 @@
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>24069</label>
 					<font>Font_Bold34</font>
 					<textcolor>grey</textcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<focusedcolor>white2</focusedcolor>
 				</control>
 				<control type="button" id="6">
@@ -229,12 +226,11 @@
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>24022</label>
 					<font>Font_Bold34</font>
 					<textcolor>grey</textcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<focusedcolor>white2</focusedcolor>
 				</control>
 				<control type="button" id="7">
@@ -242,12 +238,11 @@
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>24021</label>
 					<font>Font_Bold34</font>
 					<textcolor>grey</textcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<focusedcolor>white2</focusedcolor>
 				</control>
 				<control type="radiobutton" id="13">
@@ -255,12 +250,11 @@
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-					<texturenofocus border="3">osd/osd_settings_buttonnf.png</texturenofocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="3">osd/osd_settings_buttonnf.png</texturenofocus>
 					<label>21340</label>
 					<font>Font_Bold34</font>
 					<textcolor>grey</textcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<focusedcolor>white2</focusedcolor>
 				</control>
 				<control type="button" id="10">
@@ -268,12 +262,11 @@
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>24036</label>
 					<font>Font_Bold34</font>
 					<textcolor>grey</textcolor>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 					<focusedcolor>white2</focusedcolor>
 				</control>
 			</control>
