@@ -62,8 +62,7 @@
 				<top>69</top>
 				<width>980</width>
 				<height>261</height>
-				<texture>dialogs/addsource_highlighttop.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">dialogs/addsource_highlighttop.png</texture>
 				<include>Animation_CommonFade</include>
 				<visible>Control.HasFocus(10)</visible>
 			</control>
@@ -108,8 +107,7 @@
 				<top>382</top>
 				<width>980</width>
 				<height>76</height>
-				<texture>dialogs/addsource_highlight.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">dialogs/addsource_highlight.png</texture>
 				<include>Animation_CommonFade</include>
 				<visible>Control.HasFocus(12)</visible>
 			</control>
@@ -120,7 +118,7 @@
 					<width>230</width>
 					<height>62</height>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>1024</label>
 					<font>Font_Reg32</font>
@@ -128,14 +126,13 @@
 					<onright>10</onright>
 					<onup>18</onup>
 					<ondown>13</ondown>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="13">
 					<top>62</top>
 					<width>230</width>
 					<height>62</height>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>15019</label>
 					<font>Font_Reg32</font>
@@ -143,14 +140,13 @@
 					<onright>10</onright>
 					<onup>11</onup>
 					<ondown>14</ondown>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="14">
 					<top>123</top>
 					<width>230</width>
 					<height>62</height>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>1210</label>
 					<font>Font_Reg32</font>
@@ -158,14 +154,13 @@
 					<onright>10</onright>
 					<onup>13</onup>
 					<ondown>19</ondown>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="19">
 					<top>184</top>
 					<width>230</width>
 					<height>62</height>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>222</label>
 					<font>Font_Reg32</font>
@@ -173,14 +168,13 @@
 					<onright>12</onright>
 					<onup>14</onup>
 					<ondown>18</ondown>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 				<control type="button" id="18">
 					<top>246</top>
 					<width>230</width>
 					<height>62</height>
 					<textoffsetx>30</textoffsetx>
-					<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>186</label>
 					<font>Font_Reg32</font>
@@ -188,15 +182,13 @@
 					<onright>12</onright>
 					<onup>19</onup>
 					<ondown>11</ondown>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 			</control>
 			<control type="image">
 				<left>1</left>
 				<width>1270</width>
 				<height>492</height>
-				<texture>dialogs/addsource_front.png</texture>
-				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+				<texture colordiffuse="$VAR[ColorDiffuseVar]">dialogs/addsource_front.png</texture>
 			</control>
 		</control>
 	</controls>

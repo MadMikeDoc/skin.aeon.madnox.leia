@@ -42,8 +42,7 @@
 			<top>55</top>
 			<width>640</width>
 			<height>60</height>
-			<texture border="1">osd/osd_settings_buttonnf.png</texture>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]" border="1">osd/osd_settings_buttonnf.png</texture>
 		</control>
 		<control type="list" id="11">
 			<left>18</left>
@@ -62,8 +61,7 @@
 					<top>0</top>
 					<width>640</width>
 					<height>80</height>
-					<texture border="1">osd/osd_settings_buttonnf.png</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]" border="1">osd/osd_settings_buttonnf.png</texture>
 				</control>
 				<control type="label">
 					<left>35</left>
@@ -107,16 +105,14 @@
 					<top>0</top>
 					<width>640</width>
 					<height>80</height>
-					<texture border="1">osd/osd_settings_buttonnf.png</texture>
-					<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+					<texture colordiffuse="$VAR[ColorDiffuseVar]" border="1">osd/osd_settings_buttonnf.png</texture>
 				</control>
 				<control type="image">
 					<left>10</left>
 					<width>640</width>
 					<height>80</height>
-					<texture border="8">views/tripanel/listselect_fo.png</texture>
+					<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 					<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(11)">Conditional</animation>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				</control>
 				<control type="label">
 					<left>35</left>

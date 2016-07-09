@@ -49,15 +49,13 @@
 		</control>
 		<control type="button" id="7">
 			<height>70</height>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">button-nofocus.png</texturenofocus>
 			<font>Font_Reg30</font>
 			<textcolor>grey2</textcolor>
 		</control>
 		<control type="radiobutton" id="8">
 			<height>70</height>
-			<texturenofocus border="5">button-nofocus.png</texturenofocus>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">button-nofocus.png</texturenofocus>
 			<font>Font_Reg30</font>
 			<textcolor>grey2</textcolor>
 		</control>
@@ -65,7 +63,6 @@
 			<height>70</height>
 			<aligny>center</aligny>
 			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">button-nofocus.png</texturenofocus>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			<font>Font_Reg30</font>
 			<textcolor>grey2</textcolor>
 		</control>
@@ -80,7 +77,6 @@
 			<textoffsetx>13</textoffsetx>
 			<aligny>center</aligny>
 			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">button-nofocus.png</texturenofocus>
-			<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			<font>Font_Reg30</font>
 			<textcolor>grey2</textcolor>
 		</control>
@@ -96,8 +92,7 @@
 				<description>Ok Button</description>
 				<height>70</height>
 				<width>570</width>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+				<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">button-nofocus.png</texturenofocus>
 				<font>Font_Reg30</font>
 				<textcolor>grey2</textcolor>
 				<label>186</label>
@@ -106,8 +101,7 @@
 				<description>Cancel Button</description>
 				<height>70</height>
 				<width>570</width>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+				<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">button-nofocus.png</texturenofocus>
 				<font>Font_Reg30</font>
 				<textcolor>grey2</textcolor>
 				<label>222</label>
@@ -116,8 +110,7 @@
 				<description>Clear Button</description>
 				<height>70</height>
 				<width>570</width>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+				<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">button-nofocus.png</texturenofocus>
 				<font>Font_Reg30</font>
 				<textcolor>grey2</textcolor>
 				<label>192</label>

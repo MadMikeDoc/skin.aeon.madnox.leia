@@ -512,8 +512,7 @@
 					<width>90</width>
 					<height>87</height>
 					<aspectratio>keep</aspectratio>
-					<colordiffuse>FFe5e5e5</colordiffuse>
-					<texture flipx="true">osd/ff.png</texture>
+					<texture colordiffuse="FFe5e5e5" flipx="true">osd/ff.png</texture>
 					<animation effect="fade" start="100" end="60" time="1000" pulse="true" condition="true">Conditional</animation>
 					<top>3</top>
 					<visible>Player.Rewinding</visible>
@@ -526,8 +525,7 @@
 					<width>90</width>
 					<height>87</height>
 					<aspectratio>keep</aspectratio>
-					<colordiffuse>FFe5e5e5</colordiffuse>
-					<texture>osd/ff.png</texture>
+					<texture colordiffuse="FFe5e5e5">osd/ff.png</texture>
 					<animation effect="fade" start="100" end="60" time="1000" pulse="true" condition="true">Conditional</animation>
 					<top>3</top>
 					<visible>Player.Forwarding</visible>
@@ -645,8 +643,7 @@
 						<width>90</width>
 						<height>87</height>
 						<aspectratio>keep</aspectratio>
-						<colordiffuse>FFe5e5e5</colordiffuse>
-						<texture flipx="true">osd/ff.png</texture>
+						<texture colordiffuse="FFe5e5e5" flipx="true">osd/ff.png</texture>
 						<animation effect="fade" start="100" end="60" time="1000" pulse="true" condition="true">Conditional</animation>
 						<top>3</top>
 						<visible>Player.Rewinding</visible>
@@ -659,8 +656,7 @@
 						<width>90</width>
 						<height>87</height>
 						<aspectratio>keep</aspectratio>
-						<colordiffuse>FFe5e5e5</colordiffuse>
-						<texture>osd/ff.png</texture>
+						<texture colordiffuse="FFe5e5e5">osd/ff.png</texture>
 						<animation effect="fade" start="100" end="60" time="1000" pulse="true" condition="true">Conditional</animation>
 						<top>3</top>
 						<visible>Player.Forwarding</visible>
@@ -778,8 +774,7 @@
 				<control type="image">
 					<width>1920</width>
 					<height>135</height>
-					<texture flipy="true">osd/osd_back.png</texture>
-					<colordiffuse>$VAR[DialogColorVar]</colordiffuse>
+					<texture colordiffuse="$VAR[DialogColorVar]" flipx="true">osd/osd_back.png</texture>
 				</control>
 				<control type="group">
 					<top>84</top>
@@ -905,8 +900,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>IconCrossfadeTime2</fadetime>
-						<colordiffuse>white2</colordiffuse>
-						<texture fallback="">special://skin/extras/BigIcons/Subtitle.png</texture>
+						<texture colordiffuse="white2" fallback="">special://skin/extras/BigIcons/Subtitle.png</texture>
 						<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
 					</control>
 					<control type="image">
@@ -916,8 +910,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>IconCrossfadeTime2</fadetime>
-						<colordiffuse>white2</colordiffuse>
-						<texture fallback="">special://skin/extras/BigIcons/Speaker.png</texture>
+						<texture colordiffuse="white2" fallback="">special://skin/extras/BigIcons/Speaker.png</texture>
 						<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
 						<visible>!Substring(VideoPlayer.AudioLanguage,und)</visible>
 					</control>
@@ -928,8 +921,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>IconCrossfadeTime2</fadetime>
-						<colordiffuse>white2</colordiffuse>
-						<texture fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.AudioLanguage,,.png]</texture>
+						<texture colordiffuse="white2" fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.AudioLanguage,,.png]</texture>
 					</control>
 					<control type="image">
 						<left>1860</left>
@@ -938,9 +930,8 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>IconCrossfadeTime2</fadetime>
-						<colordiffuse>white2</colordiffuse>
+						<texture colordiffuse="white2" fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.SubtitlesLanguage,,.png]</texture>
 						<animation effect="fade" time="200">VisibleChange</animation>
-						<texture fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.SubtitlesLanguage,,.png]</texture>
 					</control>
 				</control>
 			</control>

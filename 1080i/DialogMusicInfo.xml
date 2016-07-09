@@ -143,12 +143,11 @@
 					<control type="group">
 						<width>198</width>
 						<control type="image" id="800011">
-							<colordiffuse>grey</colordiffuse>
+							<texture colordiffuse="grey">$INFO[ListItem.Property(Album_Label),flags/music/recordlabel/,.png]</texture>
 							<width>198</width>
 							<height>88</height>
 							<include>MediaFlagVars</include>
 							<bordersize>2</bordersize>
-							<texture>$INFO[ListItem.Property(Album_Label),flags/music/recordlabel/,.png]</texture>
 						</control>
 						<control type="label">
 							<left>0</left>
@@ -208,9 +207,8 @@
 					</control>
 					<control type="image">
 						<width>260</width>
-						<colordiffuse>grey</colordiffuse>
+						<texture colordiffuse="grey" fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
 						<include>MediaFlagVars</include>
-						<texture fallback="rating0.png">$INFO[ListItem.StarRating]</texture>
 					</control>
 					<control type="image">
 						<width>2</width>
@@ -275,8 +273,7 @@
 							<height>100</height>
 							<visible>Control.HasFocus(300)</visible>
 							<include>VisibleFadeEffect</include>
-							<texture border="8">views/tripanel/listselect_fo.png</texture>
-							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+							<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 						</control>
 						<control type="label">
 							<top>50</top>
@@ -502,8 +499,7 @@
 						<control type="image">
 							<width>593</width>
 							<height>84</height>
-							<texture border="8">views/tripanel/listselect_fo.png</texture>
-							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+							<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeEffect</include>
 						</control>
@@ -565,8 +561,7 @@
 						<control type="image">
 							<width>593</width>
 							<height>84</height>
-							<texture border="8">views/tripanel/listselect_fo.png</texture>
-							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+							<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 							<visible>Control.HasFocus(50)</visible>
 							<include>VisibleFadeEffect</include>
 						</control>

@@ -33,8 +33,7 @@
 				<top>204</top>
 				<width>1923</width>
 				<height>980</height>
-				<texture>home/nowplaying_shadow.png</texture>
-				<colordiffuse>grey2</colordiffuse>
+				<texture colordiffuse="grey2">home/nowplaying_shadow.png</texture>
 			</control>
 			<control type="panel" id="5">
 				<top>660</top>
@@ -108,8 +107,7 @@
 						<control type="image">
 							<width>640</width>
 							<height>60</height>
-							<texture border="8">views/tripanel/listselect_fo.png</texture>
-							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+							<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
 						</control>
 						<control type="label">
 							<left>10</left>

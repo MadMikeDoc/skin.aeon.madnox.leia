@@ -19,8 +19,7 @@
 			<top>180</top>
 			<width>1210</width>
 			<height>722</height>
-			<texture>osd/osd_settings_back_glow.png</texture>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
+			<texture colordiffuse="$VAR[ColorDiffuseVar]">osd/osd_settings_back_glow.png</texture>
 			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 			<include>PanelGlowFade</include>
 		</control>
@@ -68,23 +67,21 @@
 				<width>365</width>
 				<height>60</height>
 				<align>center</align>
-				<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus border="8">-</texturenofocus>
 				<label>186</label>
 				<font>Font_Bold33</font>
 				<textcolor>grey2</textcolor>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			</control>
 			<control type="button" id="7">
 				<width>365</width>
 				<height>60</height>
 				<align>center</align>
-				<texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus border="8">-</texturenofocus>
 				<label>-</label>
 				<font>Font_Bold33</font>
 				<textcolor>grey2</textcolor>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			</control>
 		</control>
 		<control type="label">
@@ -141,8 +138,7 @@
 					<control type="image">
 						<width>1172</width>
 						<height>60</height>
-						<texture border="8">views/tripanel/listselect_fo.png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(3)">Conditional</animation>
 					</control>
 					<control type="label">
@@ -218,8 +214,7 @@
 						<left>8</left>
 						<width>765</width>
 						<height>90</height>
-						<texture border="8">views/tripanel/listselect_fo.png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 						<animation effect="fade" start="100" end="50" time="160" condition="!Control.HasFocus(6)">Conditional</animation>
 					</control>
 					<control type="label">
