@@ -1453,7 +1453,7 @@
 						<width>40</width>
 						<height>40</height>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[BreadCrumbsContentColorVar]">common/featured_icon.png</texture>
+						<texture colordiffuse="grey">common/featured_icon.png</texture>
 					</control>
 					<control type="label">
 						<label>$LOCALIZE[137]</label>

@@ -2436,7 +2436,7 @@
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
 					<texture>common/featured_icon.png</texture>
-					<colordiffuse>$VAR[BreadCrumbsContentColorVar]</colordiffuse>
+					<colordiffuse>grey</colordiffuse>
 					<visible>!Window.IsActive(visualisation)</visible>
 				</control>
 				<control type="group">
@@ -2448,7 +2448,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>common/wrench.png</texture>
-						<colordiffuse>$VAR[BreadCrumbsContentColorVar]</colordiffuse>
+						<colordiffuse>grey</colordiffuse>
 					</control>
 					<control type="image">
 						<top>6</top>
@@ -2458,7 +2458,7 @@
 						<animation effect="rotate" end="-90" center="auto" time="0" condition="true">Conditional</animation>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[Colortdefaulticons]DefaultFolderBack.png</texture>
-						<colordiffuse>$VAR[BreadCrumbsContentColorVar]</colordiffuse>
+						<colordiffuse>grey</colordiffuse>
 					</control>
 				</control>
 				<control type="label">

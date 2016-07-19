@@ -167,10 +167,6 @@
 		<value condition="Skin.HasSetting(colorpanels)">$VAR[ColorDiffuseVar]</value>
 		<value>FFFFFFFF</value>
 	</variable>
-	<variable name="QuickNavButtonLabelVar">
-		<value condition="String.IsEmpty(Window(home).Property(quicknavsetup))">$LOCALIZE[31860]</value>
-		<value>$LOCALIZE[13009]</value>
-	</variable>
 	<variable name="GlowModeLabelVar">
 		<value condition="!Skin.HasSetting(DisableGlowbar) + Skin.HasSetting(ExtendedGlowMode)">$LOCALIZE[31082]</value>
 		<value condition="!Skin.HasSetting(DisableGlowbar) + !Skin.HasSetting(ExtendedGlowMode)">$LOCALIZE[630]</value>
@@ -2602,11 +2598,6 @@
 		<value condition="Skin.HasSetting(artistslideshowhome)">$LOCALIZE[24000]</value>
 		<value>$LOCALIZE[106]</value>
 	</variable>
-	<variable name="HomeFSImageVar">
-		<!-- <value condition="Control.HasFocus(22222) + String.IsEqual(Window(home).Property(WidgetPosition),Widget1)">$INFO[Container(5010).ListItem.Thumb]</value> -->
-		<value condition="Control.HasFocus(22222)">$INFO[Container(6010).ListItem.Thumb]</value>
-		<value>-</value>
-	</variable>
 	<variable name="VideoFanArtLabelVar">
 		<value condition="[Container.Content(seasons) + Skin.HasSetting(extrafanartseasons)] | [Container.Content(tvshows) + Skin.HasSetting(extrafanarttvshows)] | [Container.Content(episodes) + Skin.HasSetting(extrafanartepisodes)] | [Container.Content(movies) + Skin.HasSetting(extrafanartmovies)] | [Container.Content(musicvideos) + Skin.HasSetting(extrafanartmusicvideos)]">$LOCALIZE[31047]</value>
 		<value condition="[Skin.HasSetting(NoVideoLibraryFanartMusicVideos)  + Container.Content(musicvideos)] | [Skin.HasSetting(NoVideoLibraryFanartTVShows)  + [Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]] | [Skin.HasSetting(NoVideoLibraryFanart)  + ![Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]]">$LOCALIZE[106]</value>
@@ -2649,65 +2640,12 @@
 		<value condition="String.IsEqual(Control.GetLabel(4421),infopanelon)">$LOCALIZE[31429]</value>
 		<value condition="String.IsEqual(Control.GetLabel(4421),infopanelonauto)">$LOCALIZE[31194]</value>
 		<value condition="String.IsEqual(Control.GetLabel(4421),infopanelonmanual)">$LOCALIZE[413]</value>
-		<!--         <value condition="[Container.Content(tvshows) + !String.IsEqual(Skin.String(actualViewtype),banners)] | Container.Content(seasons) | Container.Content(episodes)">$LOCALIZE[413]</value>        <value condition="[Container.Content(tvshows) + String.IsEqual(Skin.String(actualViewtype),banners)]">$LOCALIZE[474]</value> 		-->
 		<value>$LOCALIZE[413]</value>
 	</variable>
 	<variable name="TopBarTypeLabelVar">
 		<value condition="Skin.HasSetting(ClassicTopBar)">$LOCALIZE[31038]</value>
 		<value condition="Skin.HasSetting(FadedTopBar)">$LOCALIZE[31054]</value>
 		<value>$LOCALIZE[31036]</value>
-	</variable>
-	<variable name="BreadCrumbsContentColorVar">
-		<value>grey</value>
-	</variable>
-	<variable name="CustomItemFanartLabelVar">
-		<value condition="String.IsEmpty(Skin.String(ItemToEdit.MultiFanart))">$LOCALIZE[571]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.MultiFanart),dvdcase,left)">$LOCALIZE[31824]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.MultiFanart),nocase,left)">$LOCALIZE[31826]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.MultiFanart),case,left)">$LOCALIZE[31825]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.MultiFanart),weather)">$LOCALIZE[31035]</value>
-		<value condition="SubString(Skin.String(ItemToEdit.MultiFanart),recentmovies)">$LOCALIZE[31323]</value>
-		<value condition="SubString(Skin.String(ItemToEdit.MultiFanart),randommovies)">$LOCALIZE[31222]</value>
-		<value condition="SubString(Skin.String(ItemToEdit.MultiFanart),watchlistmovies)">$LOCALIZE[31335]</value>
-		<value condition="SubString(Skin.String(ItemToEdit.MultiFanart),recenttv)">$LOCALIZE[31324]</value>
-		<value condition="SubString(Skin.String(ItemToEdit.MultiFanart),randomtv)">$LOCALIZE[31220]</value>
-		<value condition="SubString(Skin.String(ItemToEdit.MultiFanart),watchlisttv)">$LOCALIZE[31464]</value>
-		<value condition="SubString(Skin.String(ItemToEdit.MultiFanart),recentalbums)">$LOCALIZE[31359]</value>
-		<value condition="SubString(Skin.String(ItemToEdit.MultiFanart),randomalbums)">$LOCALIZE[31068]</value>
-		<value condition="SubString(Skin.String(ItemToEdit.MultiFanart),randomaddons)">$LOCALIZE[31070]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.MultiFanart),recentmusicvideo)">$LOCALIZE[31081]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.MultiFanart),randommusicvideo)">$LOCALIZE[31091]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.MultiFanart),watchlistmusicvideo)">$LOCALIZE[31712]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.MultiFanart),actor)">$LOCALIZE[31336]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.MultiFanart),watchlistalbums)">$LOCALIZE[31326]</value>
-		<!-- <value condition="String.IsEqual(Skin.String(ItemToEdit.MultiFanart),widgetfanart)">$LOCALIZE[31094]</value>-->
-		<value>$LOCALIZE[31630]</value>
-	</variable>
-	<variable name="CustomSubMenuItemsVar">
-		<value condition="Substring(Skin.String(ItemToEdit.Submenu),custom,left)">$LOCALIZE[31630]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.Submenu),custom)">+ $LOCALIZE[31630]</value>
-	</variable>
-	<variable name="CustomItemSubmenuLabelVar">
-		<value condition="String.IsEmpty(Skin.String(ItemToEdit.Submenu))">$LOCALIZE[106]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.Submenu),video,left)">$LOCALIZE[31504]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.Submenu),movie,left)">$LOCALIZE[31502]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.Submenu),tv,left)">$LOCALIZE[31503]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.Submenu),pvr,left)">$LOCALIZE[31017]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.Submenu),shutdown,left)">$LOCALIZE[31508]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.Submenu),settings,left)">$LOCALIZE[31506]</value>
-		<value condition="Substring(Skin.String(ItemToEdit.Submenu),music,left)">$LOCALIZE[31501]</value>
-		<value/>
-	</variable>
-	<variable name="CustomItemTypeNameVar">
-		<value condition="String.IsEqual(Skin.String(ItemToEdit.Type),0)">$LOCALIZE[31945]</value>
-		<value condition="String.IsEqual(Skin.String(ItemToEdit.Type),1)">$LOCALIZE[31946]</value>
-		<value condition="String.IsEqual(Skin.String(ItemToEdit.Type),2)">$LOCALIZE[31947]</value>
-		<value condition="String.IsEqual(Skin.String(ItemToEdit.Type),3)">$LOCALIZE[31948]</value>
-		<value condition="String.IsEqual(Skin.String(ItemToEdit.Type),4)">$LOCALIZE[31949]</value>
-		<value condition="String.IsEqual(Skin.String(ItemToEdit.Type),5)">$LOCALIZE[31950]</value>
-		<value condition="String.IsEqual(Skin.String(ItemToEdit.Type),6)">$LOCALIZE[31953]</value>
-		<value condition="String.IsEqual(Skin.String(ItemToEdit.Type),7) | String.IsEqual(Skin.String(ItemToEdit.Type),custom)">$LOCALIZE[31951]</value>
-		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="ContextMenuLabel2001">
 		<value condition="Container.Content(Artists) + Window.IsVisible(music)">$LOCALIZE[31074]</value>
@@ -2936,31 +2874,6 @@
 		<value condition="!String.IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
 		<value>$INFO[Player.Art(clearlogo)]</value>
 	</variable>
-	<variable name="HomeCustomStartupFocus">
-		<value condition="String.IsEqual(Container(9000).ListItem(1).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,1)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(2).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,2)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(3).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,3)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(4).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,4)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(5).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,5)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(6).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,6)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(7).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,7)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(8).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,8)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(9).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,9)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(10).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,10)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(11).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,11)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(12).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,12)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(13).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,13)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(14).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,14)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(15).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,15)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(16).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,16)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(17).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,17)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(18).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,18)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(19).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,19)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(20).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,20)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(21).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,21)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(22).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,22)</value>
-		<value condition="String.IsEqual(Container(9000).ListItem(23).Label,Skin.String(CustomFocusOffset))">Control.Move(9000,23)</value>
-	</variable>
 	<variable name="AlternateTimeAndStatsLabelVar">
 		<value>[COLOR grey]$INFO[Window(Weather).Property(Current.Condition)]  •  [/COLOR]$INFO[Window(weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits] [COLOR grey] •  $INFO[System.Date]  •[/COLOR]  $INFO[System.Time]</value>
 	</variable>
@@ -2980,10 +2893,6 @@
 		<value condition="Container.Content(movies) + ListItem.IsCollection">DefaultFolder.png</value>
 		<value condition="SubString(ListItem.Icon,Default,left)">$INFO[ListItem.Icon]</value>
 		<value>$INFO[ListItem.ActualIcon]</value>
-	</variable>
-	<variable name="LiveBGCase">
-		<value condition="Substring(Control.GetLabel(4322),clearcase)">$INFO[Skin.String(LiveBGCase)]</value>
-		<value>$INFO[Skin.String(LiveBGCase)]</value>
 	</variable>
 	<variable name="LiveBGCaseLib">
 		<value condition="String.IsEqual(Skin.String(LiveBGCase),movies)">$LOCALIZE[31282]</value>
@@ -3451,18 +3360,6 @@
 		<value condition="SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)">common/discart/4k.png</value>
 		<value>common/discart/$INFO[ListItem.VideoResolution]p.png</value>
 	</variable>
-	<variable name="DialogAlbumInfoTopLabelVar">
-		<value condition="Container.Content(artists)">$INFO[ListItem.Artist]</value>
-		<value>[COLOR white2]$INFO[ListItem.Album][/COLOR]$INFO[ListItem.Year, [,] ]</value>
-	</variable>
-	<variable name="ArtistInfoTextBoxVar">
-		<value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description),$LOCALIZE[21887]:  [COLOR white6],[/COLOR]]</value>
-		<value>$INFO[Window(home).Property(Description),$LOCALIZE[24016]:  [COLOR white6],[/COLOR][CR]]</value>
-	</variable>
-	<variable name="YouTubeContentVar">
-		<value condition="Container.Content(albums)">plugin://script.extendedinfo?info=youtubesearch&amp;&amp;id=$ESCINFO[ListItem.Artist] $ESCINFO[ListItem.Album]</value>
-		<value>plugin://script.extendedinfo?info=youtubesearch&amp;&amp;id=$ESCINFO[ListItem.Artist] Music</value>
-	</variable>
 	<variable name="KodiFlix.Label">
 		<value condition="ListItem.IsPlaying">[COLOR=$VAR[FocusTextureColorVar]]$INFO[ListItem.Label][/COLOR]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Title]</value>
@@ -3592,12 +3489,6 @@
 		<value condition="Skin.HasSetting(KodiFlixExtrasDelay_10)">10 seconds</value>
 		<value condition="Skin.HasSetting(KodiFlixExtrasDelay_20)">20 seconds</value>
 		<value condition="Skin.HasSetting(KodiFlixExtrasDelay_30)">30 seconds</value>
-	</variable>
-	<variable name="NowPlayingDiscVar">
-		<value condition="!String.IsEmpty(Player.Art(discart))">$INFO[Player.Art(discart)]</value>
-		<value condition="Integer.IsGreater(VideoPlayer.VideoResolution,719)">common/cdart/bd.png</value>
-		<value condition="!String.IsEmpty(VideoPlayer.VideoResolution)">common/cdart/default.png</value>
-		<value condition="Player.HasAudio">$INFO[Player.FolderPath]cdart.png</value>
 	</variable>
 	<variable name="Shelf3DLabel1Var">
 		<value condition="[Container.Content(movies) | Container.Content(episodes) | Container.Content(sets)] + !String.IsEmpty(Window(home).Property(Set.Movies.Director))">[COLOR $VAR[FontColorVar]]$LOCALIZE[31156]:[/COLOR] $INFO[Window(home).Property(Set.Movies.Director)]</value>
@@ -3733,10 +3624,6 @@
 		<value>common/discart/$INFO[Window(Home).Property(SkinHelper.MovieSet.2.Resolution)]p.png</value>
 	</variable>
 	<!-- Weather VARS -->
-	<variable name="WeatherCurrentConditionIconVar">
-		<value condition="!String.IsEmpty(Skin.String(weathericons.path))">$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Current.FanartCode),,.png]</value>
-		<value>$INFO[Window(weather).Property(Current.ConditionIcon)]</value>
-	</variable>
 	<variable name="WeatherOverviewIcon0Var">
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path))">$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Day0.FanartCode),,.png]</value>
 		<value>$INFO[Window(weather).Property(Day0.OutlookIcon)]</value>
@@ -3764,10 +3651,6 @@
 	<variable name="WeatherOverviewIcon6Var">
 		<value condition="!String.IsEmpty(Skin.String(weathericons.path))">$INFO[Skin.String(weathericons.path)]$INFO[Window(weather).Property(Day6.FanartCode),,.png]</value>
 		<value>$INFO[Window(weather).Property(Day6.OutlookIcon)]</value>
-	</variable>
-	<variable name="WeatherIconsPathVar">
-		<value condition="!String.IsEmpty(Skin.String(weathericons.path))">$INFO[Skin.String(weathericons.path)]</value>
-		<value>resource://resource.images.weathericons.default/</value>
 	</variable>
 	<!-- Featured dialog variables -->
 	<variable name="featured5002Art">
@@ -4358,48 +4241,6 @@
 	<variable name="MusicPanelGermanVar">
 		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.Music.AlbumCount),1)">$LOCALIZE[31488]</value>
 		<value>$LOCALIZE[31489]</value>
-	</variable>
-	<!--Label-->
-	<variable name="MusicExtraInfo1LabelVar">
-		<value condition="Container.Content(songs)">Duration :</value>
-		<value condition="Container.Content(artists)">$LOCALIZE[132]</value>
-	</variable>
-	<variable name="MusicInfoLabel1Var">
-		<value condition="Container.Content(songs)">$INFO[ListItem.Duration]</value>
-		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Genre)]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator]</value>
-		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]</value>
-	</variable>
-	<variable name="MusicInfoLabel2Var">
-		<value condition="Container.Content(songs) + String.IsEmpty(Container.ListItem.PlayCount)">0</value>
-		<value condition="Container.Content(songs)">$INFO[ListItem.PlayCount]</value>
-		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Style)]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Style)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator]</value>
-		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]</value>
-	</variable>
-	<variable name="MusicInfoLabel3Var">
-		<value condition="Container.Content(songs)">$INFO[ListItem.LastPlayed]</value>
-		<value condition="Container.Content(albums)">$INFO[ListItem.Property(Album_Mood)]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Mood)]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.AddonCreator]</value>
-		<value condition="[Window.IsActive(programs) + !Container.Content(addons)]">$INFO[ListItem.Writer]</value><value condition="Container.Content(addons)">$LOCALIZE[21863]:</value>
-	</variable>
-	<variable name="MusicInfoTextLabel1Var">
-		<value condition="Container.Content(songs)">Duration: </value>
-		<value condition="Container.Content(addons)">$LOCALIZE[21863]:</value>
-		<value>$LOCALIZE[515]:</value>
-	</variable>
-	<variable name="MusicInfoTextLabel2Var">
-		<value condition="Container.Content(songs)">Playcount: </value>
-		<value condition="Container.Content(albums) | Container.Content(artists)">Style: </value>
-		<value>$LOCALIZE[515]:</value>
-	</variable>
-	<variable name="MusicInfoTextLabel3Var">
-		<value condition="Container.Content(songs)">Last Played: </value>
-		<value condition="Container.Content(albums) | Container.Content(artists)">Mood :</value>
-		<value>$LOCALIZE[515]:</value>
 	</variable>
 	<variable name="AcademyAward">
 		<value condition="String.IsEqual(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp)">PICTURE</value>

@@ -171,7 +171,7 @@
 					<control type="label">
 						<width min="15" max="1920">auto</width>
 						<height>38</height>
-						<label>[COLOR $VAR[BreadCrumbsContentColorVar]]$INFO[System.Date][/COLOR][COLOR=time]$INFO[System.Time,  •  ][/COLOR]       </label>
+						<label>[COLOR grey]$INFO[System.Date][/COLOR][COLOR=time]$INFO[System.Time,  •  ][/COLOR]       </label>
 						<font>Font_Reg30_Caps</font>
 						<shadowcolor>bcshadow</shadowcolor>
 						<textcolor>grey</textcolor>

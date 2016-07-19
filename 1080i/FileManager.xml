@@ -300,7 +300,7 @@
 					<height>42</height>
 					<aspectratio>keep</aspectratio>
 					<texture>breadcrumbs/items.png</texture>
-					<colordiffuse>$VAR[BreadCrumbsContentColorVar]</colordiffuse>
+					<colordiffuse>grey</colordiffuse>
 					<include>Animation_WindowFade200</include>
 					<animation effect="slide" end="0,-2" time="0" condition="true">Conditional</animation>
 				</control>
@@ -319,7 +319,7 @@
 					<height>42</height>
 					<aspectratio>keep</aspectratio>
 					<texture>breadcrumbs/pages.png</texture>
-					<colordiffuse>$VAR[BreadCrumbsContentColorVar]</colordiffuse>
+					<colordiffuse>grey</colordiffuse>
 					<include>Animation_WindowFade200</include>
 					<animation effect="slide" end="0,-3" time="0" condition="true">Conditional</animation>
 				</control>
