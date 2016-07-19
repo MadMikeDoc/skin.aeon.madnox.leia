@@ -152,7 +152,7 @@
 					<animation type="Conditional" reversible="false" condition="!Container.OnNext + !Container.OnPrevious">
 						<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" loop="false" tween="cubic" easing="inout" />
 					</animation>
-					<visible>Skin.Hassetting(discrightlist) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakediscart) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
+					<visible>Skin.Hassetting(discrightlist) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakediscart) + !ListItem.IsCollection</visible>
 				</control>
 				<control type="image">
 					<top>-205</top>
@@ -168,7 +168,7 @@
 					<animation type="Conditional" reversible="false" condition="!Container.OnNext + !Container.OnPrevious">
 						<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" loop="false" tween="cubic" easing="inout" />
 					</animation>
-					<visible>Skin.Hassetting(discrightlist) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakediscart) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
+					<visible>Skin.Hassetting(discrightlist) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakediscart) + !ListItem.IsCollection</visible>
 				</control>
 				<control type="image">
 					<top>-205</top>
@@ -184,7 +184,7 @@
 					<animation type="Conditional" reversible="false" condition="!Container.OnNext + !Container.OnPrevious">
 						<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" loop="false" tween="cubic" easing="inout" />
 					</animation>
-					<visible>Skin.Hassetting(discrightlist) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+					<visible>Skin.Hassetting(discrightlist) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				</control>
 				<control type="image">
 					<top>-205</top>
@@ -200,7 +200,7 @@
 					<animation type="Conditional" reversible="false" condition="!Container.OnNext + !Container.OnPrevious">
 						<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" loop="false" tween="cubic" easing="inout" />
 					</animation>
-					<visible>Skin.Hassetting(discrightlist) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.Hassetting(Fakehanddisccolor)</visible>
+					<visible>Skin.Hassetting(discrightlist) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + Skin.Hassetting(Fakehanddisccolor)</visible>
 				</control>
 				<control type="textbox">
 					<animation effect="rotate" end="-360" center="216,-8" time="6400" delay="1200" loop="false" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
@@ -210,7 +210,7 @@
 					<height>170</height>
 					<align>center</align>
 					<font>Hand_28</font>
-					<visible>Skin.Hassetting(discrightlist) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(Container.ListItem.Art(clearlogo))</visible>
+					<visible>Skin.Hassetting(discrightlist) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(Container.ListItem.Art(clearlogo))</visible>
 					<label> $INFO[ListItem.Label]</label>
 					<textcolor>black</textcolor>
 				</control>
@@ -220,7 +220,7 @@
 					<top>-153</top>
 					<width>230</width>
 					<height>70</height>
-					<visible>Skin.HasSetting(rightlistlogomovie) + Container.Content(movies) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
+					<visible>Skin.HasSetting(rightlistlogomovie) + Container.Content(movies) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(discart)) + !ListItem.IsCollection + Skin.HasSetting(Fakedischandwriting)</visible>
 					<control type="image">
 						<texture background="true" fallback="empty.png">$VAR[LogoVar]</texture>
 					</control>
@@ -272,7 +272,7 @@
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
-					<visible>!Skin.HasSetting(usecases) | SubString(ListItem.Path,videodb://movies/sets)</visible>
+					<visible>!Skin.HasSetting(usecases) | ListItem.IsCollection</visible>
 				</control>
 				<control type="image">
 					<left>-50</left>
@@ -282,7 +282,7 @@
 					<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
 					<aspectratio align="center" aligny="top">keep</aspectratio>
 					<bordersize>2</bordersize>
-					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(togglerightlistcovers) + [Skin.Hassetting(usecases) | Skin.Hassetting(clearcases)] + !SubString(ListItem.Path,videodb://movies/sets)</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(togglerightlistcovers) + [Skin.Hassetting(usecases) | Skin.Hassetting(clearcases)] + !ListItem.IsCollection</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -293,7 +293,7 @@
 				<include>VisibleFadeEffect</include>
 				<visible>Skin.HasSetting(inforightlist)</visible>
 				<control type="grouplist">
-					<visible>Container.Content(movies) + ![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+					<visible>Container.Content(movies) + ![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]Directed by:[/COLOR][CR]$INFO[ListItem.Director]</label>
 						<width>650</width>
@@ -309,7 +309,7 @@
 					</control>
 				</control>
 				<control type="grouplist">
-					<visible>[SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+					<visible>[ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]Directed by:[/COLOR][CR][COLOR white]$INFO[Window(home).Property(Set.Movies.Director)][/COLOR]</label>
 						<width>650</width>
@@ -422,7 +422,7 @@
 				<top>980</top>
 				<width>1840</width>
 				<height>90</height>
-				<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+				<visible>![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 				<control type="image">
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsSource]source/$VAR[SourceFlagVar,,.png]</texture>
@@ -668,7 +668,7 @@
 						<label>$INFO[Window(home).Property(Set.Movie.Count)]</label>
 						<textcolor>grey3</textcolor>
 						<textoffsetx>18</textoffsetx>
-						<visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
+						<visible>ListItem.IsCollection</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout height="85" width="806" condition="!Skin.HasSetting(rightlistalternate) + [Container.Content(movies) | Container.Content(sets)]">
@@ -692,7 +692,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>[COLOR $VAR[TitleColorVar]]$INFO[ListItem.Label][/COLOR]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+						<visible>![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="label">
 						<top>7</top>
@@ -704,7 +704,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>[COLOR $VAR[TitleColorVar]]$INFO[ListItem.Label][/COLOR]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>[SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+						<visible>[ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="label">
 						<left>30</left>
@@ -716,8 +716,8 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.RatingAndVotes,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
-						<!--visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + !System.Hasaddon(script.duration)</visible-->
+						<visible>![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
+						<!--visible>![ListItem.IsCollection + !ListItem.IsParentFolder] + !System.Hasaddon(script.duration)</visible-->
 					</control>
 					<!--control type="label">
 						<onfocus>RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>
@@ -730,7 +730,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.RatingAndVotes,, • ]$VAR[MovieDuration]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + System.Hasaddon(script.duration)</visible>
+						<visible>![ListItem.IsCollection + !ListItem.IsParentFolder] + System.Hasaddon(script.duration)</visible>
 					</control-->
 					<control type="label">
 						<left>630</left>
@@ -805,7 +805,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+						<visible>![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="label">
 						<top>7</top>
@@ -818,7 +818,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>[SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+						<visible>[ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="label">
 						<left>130</left>
@@ -830,7 +830,7 @@
 						<selectedcolor>selected</selectedcolor>
 						<label>$VAR[FloorSubLabelVar]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+						<visible>![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 					</control>
 					<control type="image">
 						<left>742</left>

@@ -88,7 +88,7 @@
 				<width>48</width>
 				<height>930</height>
 				<animation effect="fade" start="100" end="80" time="50" condition="Control.HasFocus(6003)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,60" time="50" condition="Control.HasFocus(6003) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,60" time="50" condition="Control.HasFocus(6003) + [Container.Content(sets) | ListItem.IsCollection]">Conditional</animation>
 				<texture>views/directory/sbl_framevertical.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6003) + Skin.HasSetting(AlphabetScrollbar)</visible>
@@ -492,7 +492,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
-				<visible>Skin.Hassetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.Hassetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + Skin.HasSetting(Fakedischandwriting) + !Skin.Hassetting(Fakehanddisccolor)</visible>
 			</control>
 			<control type="image">
 				<left>80</left>
@@ -658,7 +658,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
-				<visible>Skin.Hassetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.Hassetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(fakehanddisccolor)</visible>
 			</control>
 			<control type="image">
 				<left>80</left>
@@ -824,7 +824,7 @@
 				<font>Hand_26</font>
 				<align>center</align>
 				<!--aspectratio aligny="bottom">keep</aspectratio-->
-				<visible>Skin.Hassetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+				<visible>Skin.Hassetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				<label> $INFO[ListItem.Label]</label>
 				<textcolor>black</textcolor>
 			</control>
@@ -835,7 +835,7 @@
 				<top>353</top>
 				<width>230</width>
 				<height>70</height>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + Skin.HasSetting(Fakedischandwriting)</visible>
 				<control type="image">
 					<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 				</control>

@@ -398,7 +398,7 @@
 						<height>170</height>
 						<align>center</align>
 						<font>Hand_28</font>
-						<visible>String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+						<visible>String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						<label> $INFO[ListItem.Label]</label>
 						<textcolor>black</textcolor>
 						<animation effect="slide" end="0,-40" time="320" easing="inout" tween="cubic" condition="Skin.HasSetting(usecases)">Conditional</animation>
@@ -412,7 +412,7 @@
 						<top>203</top>
 						<width>230</width>
 						<height>70</height>
-						<visible>Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
+						<visible>Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + Skin.HasSetting(Fakedischandwriting)</visible>
 						<control type="image">
 							<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 						</control>

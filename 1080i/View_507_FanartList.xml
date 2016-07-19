@@ -278,7 +278,7 @@
 					<bordersize>2</bordersize>
 				</control>
 				<control type="image">
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(Container.Listitem.Art(fanart))</visible>
+					<visible>ListItem.IsCollection + String.IsEmpty(Container.Listitem.Art(fanart))</visible>
 					<width>693</width>
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
@@ -305,7 +305,7 @@
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true"  fallback="thumbs/fallback_episode_tp.png">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Container.ListItem.Art(extrafanart1))</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + ListItem.IsCollection + !String.IsEmpty(Container.ListItem.Art(extrafanart1))</visible>
 				</control>
 				<control type="image">
 					<visible>Container.Content(episodes)</visible>

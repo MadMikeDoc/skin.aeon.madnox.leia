@@ -412,7 +412,7 @@
 					<font>Hand_20</font>
 					<align>center</align>
 					<aligny>top</aligny>
-					<visible>Skin.HasSetting(showcasecdart) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(Container.ListItem.Art(clearlogo)) + !Control.IsVisible(750)</visible>
+					<visible>Skin.HasSetting(showcasecdart) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(Container.ListItem.Art(clearlogo)) + !Control.IsVisible(750)</visible>
 					<label> $INFO[ListItem.Label]</label>
 					<textcolor>black</textcolor>
 				</control>
@@ -428,7 +428,7 @@
 					<font>Hand_20</font>
 					<align>center</align>
 					<aligny>top</aligny>
-					<visible>Skin.HasSetting(showcasecdart) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(Container.ListItem.Art(clearlogo)) + !Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
+					<visible>Skin.HasSetting(showcasecdart) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(Container.ListItem.Art(clearlogo)) + !Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
 					<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Year] - $VAR[MovieDuration]</label>
 					<textcolor>black</textcolor>
 				</control>
@@ -437,7 +437,7 @@
 						<effect type="slide" start="0,0" end="-1600,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						<effect type="rotate" start="0" center="2670,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 					</animation>
-					<visible>Skin.HasSetting(showcasecdart) + Container.Content(movies) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + !Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
+					<visible>Skin.HasSetting(showcasecdart) + Container.Content(movies) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(discart)) + !ListItem.IsCollection + Skin.HasSetting(Fakedischandwriting) + !Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
 					<control type="image">
 						<left>2600</left>
 						<top>744</top>
@@ -472,7 +472,7 @@
 					<height>52</height>
 					<font>Hand_18</font>
 					<aspectratio aligny="bottom">keep</aspectratio>
-					<visible>Skin.HasSetting(showcasecdart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+					<visible>Skin.HasSetting(showcasecdart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					<label> $INFO[ListItem.Label]</label>
 					<textcolor>black</textcolor>
 					<wrapmultiline>true</wrapmultiline>
@@ -661,7 +661,7 @@
 					<font>Hand_20</font>
 					<align>center</align>
 					<aligny>top</aligny>
-					<visible>Skin.HasSetting(showcasecdart) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(Container.ListItem.Art(clearlogo)) + Control.IsVisible(750)</visible>
+					<visible>Skin.HasSetting(showcasecdart) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(Container.ListItem.Art(clearlogo)) + Control.IsVisible(750)</visible>
 					<label> $INFO[ListItem.Label]</label>
 					<textcolor>black</textcolor>
 				</control>
@@ -677,7 +677,7 @@
 					<font>Hand_20</font>
 					<align>center</align>
 					<aligny>top</aligny>
-					<visible>Skin.HasSetting(showcasecdart) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(Container.ListItem.Art(clearlogo)) + Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
+					<visible>Skin.HasSetting(showcasecdart) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(Container.ListItem.Art(clearlogo)) + Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
 					<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Year] - $VAR[MovieDuration]</label>
 					<textcolor>black</textcolor>
 				</control>
@@ -686,7 +686,7 @@
 						<effect type="slide" start="0,0" end="-1800,0" delay="1200" time="1120" tween="quadratic" easing="out"/>
 						<effect type="rotate" start="0" center="2670,844" end="720" delay="1200" time="1120" tween="quadratic" easing="out"/>
 					</animation>
-					<visible>Skin.HasSetting(showcasecdart) + Container.Content(movies) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting) + Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
+					<visible>Skin.HasSetting(showcasecdart) + Container.Content(movies) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(discart)) + !ListItem.IsCollection + Skin.HasSetting(Fakedischandwriting) + Control.IsVisible(750) + !ListItem.IsParentFolder</visible>
 					<control type="image">
 						<left>2600</left>
 						<top>744</top>
@@ -934,7 +934,7 @@
 				<!--Shelf 3D Discart - End -->
 				<!-- KodiFlix - Sets - Boxsets - Start -->
 				<control type="group">
-					<visible>Control.IsVisible(800) + !Skin.HasSetting(KodiFlixExtras) + Skin.HasSetting(KodiFlixMovieBoxsets) + Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt) + !Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+					<visible>Control.IsVisible(800) + !Skin.HasSetting(KodiFlixExtras) + Skin.HasSetting(KodiFlixMovieBoxsets) + Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt) + !Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + [Container.Content(sets) | ListItem.IsCollection]</visible>
 					<animation effect="slide" start="0,0" end="500,0" time="0" pulse="false" condition="Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="700,0" time="6000" pulse="false" condition="!Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
 					<animation effect="slide" start="0,0" end="750,0" time="6000" pulse="false" condition="Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>

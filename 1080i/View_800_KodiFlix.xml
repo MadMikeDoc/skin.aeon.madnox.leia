@@ -30,85 +30,85 @@
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<visible>!SubString(ListItem.Path,videodb://movies/sets) + [!Skin.HasSetting(NetFiixExtraFanart) | String.IsEmpty(Control.GetLabel(5900))] + !Skin.HasSetting(KodiFlixMoviesShortList)</visible>
+					<visible>!ListItem.IsCollection + [!Skin.HasSetting(NetFiixExtraFanart) | String.IsEmpty(Control.GetLabel(5900))] + !Skin.HasSetting(KodiFlixMoviesShortList)</visible>
 				</control>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse3.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<visible>!SubString(ListItem.Path,videodb://movies/sets) + [!Skin.HasSetting(NetFiixExtraFanart) | String.IsEmpty(Control.GetLabel(5900))] + Skin.HasSetting(KodiFlixMoviesShortList)  + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
+					<visible>!ListItem.IsCollection + [!Skin.HasSetting(NetFiixExtraFanart) | String.IsEmpty(Control.GetLabel(5900))] + Skin.HasSetting(KodiFlixMoviesShortList)  + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 				</control>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse4.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<visible>!SubString(ListItem.Path,videodb://movies/sets) + [!Skin.HasSetting(NetFiixExtraFanart) | String.IsEmpty(Control.GetLabel(5900))] + Skin.HasSetting(KodiFlixMoviesShortList)  + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(NetFlixMoviesHideFilmInfo) + Skin.HasSetting(KodiFlixMoviesLowerInfo)</visible>
+					<visible>!ListItem.IsCollection + [!Skin.HasSetting(NetFiixExtraFanart) | String.IsEmpty(Control.GetLabel(5900))] + Skin.HasSetting(KodiFlixMoviesShortList)  + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(NetFlixMoviesHideFilmInfo) + Skin.HasSetting(KodiFlixMoviesLowerInfo)</visible>
 				</control>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<visible>!SubString(ListItem.Path,videodb://movies/sets) + [!Skin.HasSetting(NetFiixExtraFanart) | String.IsEmpty(Control.GetLabel(5900))] + Skin.HasSetting(KodiFlixMoviesShortList)  + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(NetFlixMoviesHideFilmInfo) + !Skin.HasSetting(KodiFlixMoviesLowerInfo)</visible>
+					<visible>!ListItem.IsCollection + [!Skin.HasSetting(NetFiixExtraFanart) | String.IsEmpty(Control.GetLabel(5900))] + Skin.HasSetting(KodiFlixMoviesShortList)  + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(NetFlixMoviesHideFilmInfo) + !Skin.HasSetting(KodiFlixMoviesLowerInfo)</visible>
 				</control>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse5.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<visible>!SubString(ListItem.Path,videodb://movies/sets) + [!Skin.HasSetting(NetFiixExtraFanart) | String.IsEmpty(Control.GetLabel(5900))] + Skin.HasSetting(KodiFlixMoviesShortList)  + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(NetFlixMoviesHideFilmInfo)</visible>
+					<visible>!ListItem.IsCollection + [!Skin.HasSetting(NetFiixExtraFanart) | String.IsEmpty(Control.GetLabel(5900))] + Skin.HasSetting(KodiFlixMoviesShortList)  + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(NetFlixMoviesHideFilmInfo)</visible>
 				</control>
 				<control type="image" id="5901">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse.png">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + !Skin.HasSetting(KodiFlixMoviesShortList) + !Skin.HasSetting(NetFlixMoviesHideFilmInfo)</visible>
+					<visible>ListItem.IsCollection + !Skin.HasSetting(KodiFlixMoviesShortList) + !Skin.HasSetting(NetFlixMoviesHideFilmInfo)</visible>
 				</control>
 				<control type="image" id="5901">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse4.png">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + !Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(NetFlixMoviesHideFilmInfo) + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
+					<visible>ListItem.IsCollection + !Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(NetFlixMoviesHideFilmInfo) + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 				</control>
 				<control type="image" id="5901">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse5.png">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + !Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(NetFlixMoviesHideFilmInfo) + Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
+					<visible>ListItem.IsCollection + !Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(NetFlixMoviesHideFilmInfo) + Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 				</control>
 				<control type="image" id="5901">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse3.png">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(KodiFlixMoviesShortList) + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
+					<visible>ListItem.IsCollection + Skin.HasSetting(KodiFlixMoviesShortList) + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 				</control>
 				<control type="image" id="5901">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse4.png">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesLowerInfo) + !Skin.HasSetting(NetFlixMoviesHideFilmInfo)</visible>
+					<visible>ListItem.IsCollection + Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesLowerInfo) + !Skin.HasSetting(NetFlixMoviesHideFilmInfo)</visible>
 				</control>
 				<control type="image" id="5901">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse5.png">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesLowerInfo) + Skin.HasSetting(NetFlixMoviesHideFilmInfo)</visible>
+					<visible>ListItem.IsCollection + Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesLowerInfo) + Skin.HasSetting(NetFlixMoviesHideFilmInfo)</visible>
 				</control>
 				<control type="image" id="5901">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse.png">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesLowerInfo)</visible>
+					<visible>ListItem.IsCollection + Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesLowerInfo)</visible>
 				</control>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + !Skin.HasSetting(KodiFlixMoviesShortList) + String.IsEmpty(Control.GetLabel(5901))</visible>
+					<visible>ListItem.IsCollection + !Skin.HasSetting(KodiFlixMoviesShortList) + String.IsEmpty(Control.GetLabel(5901))</visible>
 				</control>
 				<control type="image">
 					<include condition="!Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartFullScreenDimensions</include>
 					<include condition="Skin.HasSetting(KodiFlixSmallFanart)">KodiFlixSmallFanartDimensions</include>
 					<texture background="true" diffuse="views/kodiflix/fanart_diffuse3.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<visible>SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(KodiFlixMoviesShortList) + String.IsEmpty(Control.GetLabel(5901))</visible>
+					<visible>ListItem.IsCollection + Skin.HasSetting(KodiFlixMoviesShortList) + String.IsEmpty(Control.GetLabel(5901))</visible>
 				</control>
 			</control>
 			<!--Extrafanart Options-->
@@ -393,7 +393,7 @@
 						<effect type="slide" start="0,0" end="0,240" delay="1000" time="350" tween="cubic" easing="out" />
 					</animation>
 					<itemgap>-20</itemgap>
-					<visible>Container.Content(movies) + ![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+					<visible>Container.Content(movies) + ![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]Directed by: [/COLOR]$INFO[ListItem.Director]</label>
 						<width>580</width>
@@ -415,7 +415,7 @@
 						<effect type="slide" start="0,0" end="0,240" delay="1000" time="350" tween="cubic" easing="out" />
 					</animation>
 					<itemgap>-20</itemgap>
-					<visible>[SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+					<visible>[ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[31156]: [/COLOR][COLOR white]$INFO[Window(home).Property(SkinHelper.MovieSet.Director)][/COLOR]</label>
 						<width>580</width>
@@ -1424,7 +1424,7 @@
 						<height>201</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo)) + [!SubString(ListItem.Path,videodb://movies/sets) | !Container.Content(sets)]</visible>
+						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo)) + [!ListItem.IsCollection | !Container.Content(sets)]</visible>
 						<bordersize>40</bordersize>
 						<include>KodiFlixDimAnimation</include>
 					</control>
@@ -1446,7 +1446,7 @@
 						<height>161</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture background="true" flipy="true">$INFO[ListItem.Art(clearlogo)]</texture>
-						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo)) + [!SubString(ListItem.Path,videodb://movies/sets) | !Container.Content(sets)]</visible>
+						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo)) + [!ListItem.IsCollection | !Container.Content(sets)]</visible>
 						<bordertexture border="15">thumbs/thumb_border_fade.png</bordertexture>
 						<bordersize>40</bordersize>
 						<animation type="Conditional" reversible="false" condition="true">
@@ -1493,7 +1493,7 @@
 						<height>201</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo)) + [!SubString(ListItem.Path,videodb://movies/sets) | !Container.Content(sets)]</visible>
+						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo)) + [!ListItem.IsCollection | !Container.Content(sets)]</visible>
 						<bordersize>40</bordersize>
 					</control>
 					<control type="image">
@@ -1512,7 +1512,7 @@
 						<height>201</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" >$INFO[ListItem.Art(clearlogo)]</texture>
-						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo)) + [!SubString(ListItem.Path,videodb://movies/sets) | !Container.Content(sets)]</visible>
+						<visible>!Container.Content(Episodes) + String.IsEmpty(ListItem.Art(landscape)) + !String.IsEmpty(ListItem.Art(clearlogo)) + [!ListItem.IsCollection | !Container.Content(sets)]</visible>
 						<bordertexture border="15">thumbs/thumb_border_fade.png</bordertexture>
 						<bordersize>40</bordersize>
 						<animation type="Conditional" reversible="false" condition="true">
@@ -2211,7 +2211,7 @@
 						<include>KodiFlixDimAnimation</include>
 						<animation effect="rotatey" start="-14" end="35" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
-						<visible>!Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+						<visible>!Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | ListItem.IsCollection]</visible>
 					</control>
 					<control type="image">
 						<left>5</left>
@@ -2222,7 +2222,7 @@
 						<include>KodiFlixDimAnimation</include>
 						<animation effect="rotatey" start="-4" end="47" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
-						<visible>Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+						<visible>Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | ListItem.IsCollection]</visible>
 					</control>
 					<control type="image">
 						<left>5</left>
@@ -2233,7 +2233,7 @@
 						<include>KodiFlixDimAnimation</include>
 						<animation effect="rotatey" start="-14" end="26" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
-						<visible>!Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)]</visible>
+						<visible>!Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
 					</control>
 					<control type="image">
 						<left>5</left>
@@ -2244,7 +2244,7 @@
 						<include>KodiFlixDimAnimation</include>
 						<animation effect="rotatey" start="-4" end="40" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
-						<visible>Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)]</visible>
+						<visible>Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
 					</control>
 					<control type="group">
 						<left>200</left>
@@ -2273,7 +2273,7 @@
 						<height>328</height>
 						<texture background="true">views/boxsets/frame3.png</texture>
 						<include>KodiFlixDimAnimation</include>
-						<visible>Container.Content(sets) | 	SubString(ListItem.Path,videodb://movies/sets)</visible>
+						<visible>Container.Content(sets) | 	ListItem.IsCollection</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -2284,7 +2284,7 @@
 						<include>KodiFlixDimAnimation</include>
 						<animation effect="rotatey" start="-4" end="36" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
-						<visible>[Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)] + Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
+						<visible>[Container.Content(movies) + !ListItem.IsCollection] + Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -2295,7 +2295,7 @@
 						<include>KodiFlixDimAnimation</include>
 						<animation effect="rotatey" start="-4" end="26" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
-						<visible>[Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)] + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
+						<visible>[Container.Content(movies) + !ListItem.IsCollection] + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 					</control>
 
 					<control type="image">
@@ -2309,7 +2309,7 @@
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 						<animation effect="rotate" center="auto" start="" end="-90" time="0" condition="true">Conditional</animation>
 						<camera x="300" y="370"/>
-						<visible>Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)</visible>
+						<visible>Container.Content(sets) | ListItem.IsCollection</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="[Container.Content(movies) | Container.Content(sets)] + Skin.HasSetting(KodiFlixMovieBoxsets)" width="236" height="356">
@@ -2345,7 +2345,7 @@
 							<animation effect="rotatey" start="-4" end="26" time="1110" condition="!Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
 							<animation effect="rotatey" start="-4" end="47" time="1110" condition="Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
 							<camera x="530" y="50"/>
-							<visible>Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt) + [Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)]</visible>
+							<visible>Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
 						</control>
 						<control type="image">
 							<left>7</left>
@@ -2356,7 +2356,7 @@
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-14" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="560" y="-10"/>
-							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | ListItem.IsCollection]</visible>
 						</control>
 						<control type="image">
 							<left>3</left>
@@ -2366,7 +2366,7 @@
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="45" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="-30"/>
-							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | ListItem.IsCollection]</visible>
 						</control>
 						<control type="image">
 							<left>4</left>
@@ -2376,7 +2376,7 @@
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-14" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
-							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | ListItem.IsCollection]</visible>
 						</control>
 						<control type="image">
 							<left>3</left>
@@ -2387,7 +2387,7 @@
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="47" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
-							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | ListItem.IsCollection]</visible>
 						</control>
 						<control type="image">
 							<left>5</left>
@@ -2398,7 +2398,7 @@
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="26" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
-							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)]</visible>
+							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
 						</control>
 						<control type="image">
 							<left>5</left>
@@ -2408,7 +2408,7 @@
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
-							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)]</visible>
+							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
 						</control>
 						<control type="image">
 							<left>5</left>
@@ -2418,7 +2418,7 @@
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-14" end="25" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
-							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)]</visible>
+							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
 						</control>
 						<control type="image">
 							<left>5</left>
@@ -2429,7 +2429,7 @@
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
-							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)]</visible>
+							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -2437,7 +2437,7 @@
 							<width>237</width>
 							<height>328</height>
 							<texture background="true">views/boxsets/frame3.png</texture>
-							<visible>[ListItem.IsParentFolder + Container.Content(sets)] | SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>[ListItem.IsParentFolder + Container.Content(sets)] | ListItem.IsCollection</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -2447,7 +2447,7 @@
 							<texture background="true">views/kodiflix/boxsets/$VAR[GlobalCaseVar]</texture>
 							<animation effect="rotatey" start="-4" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="50"/>
-							<visible>[ListItem.IsParentFolder + Container.Content(movies) +  Skin.HasSetting(KodiFlixMoviesCenterList)] | [Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)] + Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
+							<visible>[ListItem.IsParentFolder + Container.Content(movies) +  Skin.HasSetting(KodiFlixMoviesCenterList)] | [Container.Content(movies) + !ListItem.IsCollection] + Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 						</control>
 						<control type="image">
 							<left>0</left>
@@ -2457,7 +2457,7 @@
 							<texture background="true">views/kodiflix/boxsets/$VAR[GlobalCaseVar]</texture>
 							<animation effect="rotatey" start="-4" end="26" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="50"/>
-							<visible>!Skin.HasSetting(KodiFlixMoviesCenterList) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets) + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
+							<visible>!Skin.HasSetting(KodiFlixMoviesCenterList) + Container.Content(movies) + !ListItem.IsCollection + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 						</control>
 						<control type="group">
 							<visible>!Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases)</visible>
@@ -2470,7 +2470,7 @@
 								<aspectratio>stretch</aspectratio>
 								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 								<animation effect="rotate" center="auto" start="" end="-90" time="0" condition="true">Conditional</animation>
-								<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+								<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 							</control>
 							<control type="image">
 								<left>170</left>
@@ -2479,7 +2479,7 @@
 								<height>329</height>
 								<fadetime>100</fadetime>
 								<texture background="true">views/boxsets/lines.png</texture>
-								<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+								<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 							</control>
 						</control>
 					</control>
@@ -2669,7 +2669,7 @@
 				<top>980</top>
 				<width>1840</width>
 				<height>90</height>
-				<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+				<visible>![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 				<control type="image">
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsSource]source/$VAR[SourceFlagVar,,.png]</texture>
@@ -2846,7 +2846,7 @@
 				<width>1097</width>
 				<height>58</height>
 				<animation effect="fade" start="100" end="80" time="50" condition="Control.HasFocus(6019)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,60" time="50" condition="Control.HasFocus(6019) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,60" time="50" condition="Control.HasFocus(6019) + [Container.Content(sets) | ListItem.IsCollection]">Conditional</animation>
 				<texture>views/directory/sbl_backround.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6019) + Skin.HasSetting(AlphabetScrollbar)</visible>
@@ -2860,7 +2860,7 @@
 				<width>1188</width>
 				<height>100%</height>
 				<animation effect="fade" start="100" end="0" time="50" condition="!Control.HasFocus(6019)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,60" time="50" condition="Control.HasFocus(6019) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,60" time="50" condition="Control.HasFocus(6019) + [Container.Content(sets) | ListItem.IsCollection]">Conditional</animation>
 				<itemlayout height="41" width="40">
 					<!--control type="label">
 						<label>$INFO[ListItem.Label]</label>
@@ -3006,7 +3006,7 @@
 
 	<include name="Movie_Extras">
 		<control type="group">
-			<animation effect="slide" start="0,0" end="0,15" time="0" tween="sine" easing="out" condition="SubString(ListItem.Path,videodb://movies/sets) | [Container.Content(tvshows) | Container.Content(seasons)] | !Skin.HasSetting(KodiFlixCases)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,15" time="0" tween="sine" easing="out" condition="ListItem.IsCollection | [Container.Content(tvshows) | Container.Content(seasons)] | !Skin.HasSetting(KodiFlixCases)">Conditional</animation>
 			<animation effect="slide" start="2620,0" end="0,0" time="2650" tween="sine" easing="out" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixExtrasDelay_5)">Conditional</animation>
 			<animation effect="slide" start="2620,0" end="0,0" time="2650" tween="sine" easing="out" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixExtrasDelay_10)">Conditional</animation>
 			<animation effect="slide" start="2620,0" end="0,0" time="2650" tween="sine" easing="out" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixExtrasDelay_20)">Conditional</animation>
@@ -3037,7 +3037,7 @@
 				<posy>629</posy>
 				<posx>284</posx>
 				<orientation>horizontal</orientation>
-				<visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>ListItem.IsCollection</visible>
 				<control type="image" id="6601">
 					<width>254</width>
 					<height>254</height>
@@ -3097,7 +3097,7 @@
 				<posy>629</posy>
 				<posx>284</posx>
 				<orientation>horizontal</orientation>
-				<visible>SubString(ListItem.Path,videodb://movies/sets) + System.IdleTime(26)</visible>
+				<visible>ListItem.IsCollection + System.IdleTime(26)</visible>
 				<control type="image" id="6601">
 					<width>254</width>
 					<height>254</height>
@@ -3163,7 +3163,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6601)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6601)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3175,7 +3175,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6601)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6601)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3187,7 +3187,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6602)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.1.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6602)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.1.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3199,7 +3199,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6602)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.1.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6602)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.1.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3211,7 +3211,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6603)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6603)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3223,7 +3223,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6603)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6603)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3235,7 +3235,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6604)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6604)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3247,7 +3247,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6604)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6604)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3259,7 +3259,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6605)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6605)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3271,7 +3271,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6605)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6605)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3283,7 +3283,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6606)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6606)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3295,7 +3295,7 @@
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6606)) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6606)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))</visible>
 			</control>
 			<control type="Label">
 				<posy>594</posy>
@@ -3306,7 +3306,7 @@
 				<label>[COLOR $VAR[FocusTextureColorVar]]Artwork[/COLOR]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>[Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)] | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				<visible>[Container.Content(movies) + !ListItem.IsCollection] | Container.Content(tvshows) | Container.Content(seasons)</visible>
 				<include>KodiFlixExtrasClear</include>
 			</control>
 			<control type="Label">
@@ -3329,14 +3329,14 @@
 				<label>[COLOR $VAR[FocusTextureColorVar]]DiscArt[/COLOR]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>Container.Content(sets) | ListItem.IsCollection</visible>
 			</control>
 			<control type="grouplist">
 				<orientation>horizontal</orientation>
 				<itemgap>10</itemgap>
 				<posy>629</posy>
 				<posx>284</posx>
-				<visible>!SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsCollection</visible>
 				<include>KodiFlixExtrasClear</include>
 				<control type="image">
 					<width>254</width>
@@ -3344,7 +3344,7 @@
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
 					<fadetime>400</fadetime>
-					<visible>Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
+					<visible>Container.Content(movies) + !ListItem.IsCollection</visible>
 				</control>
 				<control type="image">
 					<width>254</width>
@@ -3389,7 +3389,7 @@
 			<control type="image">
 				<posy>629</posy>
 				<posx>284</posx>
-				<visible>!SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsCollection</visible>
 				<width>254</width>
 				<height>254</height>
 				<aspectratio>stretch</aspectratio>
@@ -3402,7 +3402,7 @@
 			<control type="image">
 				<posy>629</posy>
 				<posx>284</posx>
-				<visible>!SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsCollection</visible>
 				<width>254</width>
 				<height>254</height>
 				<aspectratio>stretch</aspectratio>
@@ -3416,7 +3416,7 @@
 				<orientation>vertical</orientation>
 				<posy>629</posy>
 				<posx>1374</posx>
-				<visible>!SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsCollection</visible>
 				<include>KodiFlixExtrasClear</include>
 				<control type="image">
 					<width>534</width>
@@ -3551,7 +3551,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -3576,7 +3576,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 11 - 3D FX -->
@@ -3605,7 +3605,7 @@
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 11 front -->
@@ -3633,7 +3633,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -3660,7 +3660,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -3685,7 +3685,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 10 - 3D FX -->
@@ -3714,7 +3714,7 @@
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 10 front -->
@@ -3742,7 +3742,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -3769,7 +3769,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -3794,7 +3794,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 9 - 3D FX -->
@@ -3823,7 +3823,7 @@
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 9 front -->
@@ -3851,7 +3851,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -3878,7 +3878,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -3903,7 +3903,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 8 - 3D FX -->
@@ -3932,7 +3932,7 @@
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 8 front -->
@@ -3960,7 +3960,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -3987,7 +3987,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -4012,7 +4012,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 7 - 3D FX -->
@@ -4041,7 +4041,7 @@
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 7 front -->
@@ -4069,7 +4069,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -4096,7 +4096,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -4121,7 +4121,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 6 - 3D FX -->
@@ -4150,7 +4150,7 @@
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 6 front -->
@@ -4178,7 +4178,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -4206,7 +4206,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -4232,7 +4232,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 5 - 3D FX -->
@@ -4261,7 +4261,7 @@
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 5 front -->
@@ -4289,7 +4289,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -4315,7 +4315,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -4339,7 +4339,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 4 - 3D FX -->
@@ -4367,7 +4367,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 4 front -->
@@ -4394,7 +4394,7 @@
 			</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -4420,7 +4420,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -4444,7 +4444,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 3 - 3D FX -->
@@ -4472,7 +4472,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 3 front -->
@@ -4499,7 +4499,7 @@
 			</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -4525,7 +4525,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -4549,7 +4549,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 2 - 3D FX -->
@@ -4577,7 +4577,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.1.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 2 front -->
@@ -4604,7 +4604,7 @@
 			</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -4630,7 +4630,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -4654,7 +4654,7 @@
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 1 - 3D FX -->
@@ -4682,7 +4682,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<!-- Disc 1 front -->
@@ -4709,7 +4709,7 @@
 			</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 
@@ -4722,7 +4722,7 @@
 			<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -4731,7 +4731,7 @@
 			<width>208</width>
 			<height>393</height>
 			<texture background="true">views/boxsets/frame2.png</texture>
-			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
 		<control type="image">
@@ -4748,7 +4748,7 @@
 			<animation effect="fade" start="100" end="0" time="200" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30)">Conditional</animation>
-			<visible>Skin.HasSetting(KodiFlixMovieBoxsets) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + !ListItem.IsParentFolder + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>Skin.HasSetting(KodiFlixMovieBoxsets) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 		</control>
 	</include>
 </includes>

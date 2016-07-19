@@ -808,98 +808,6 @@
 			<visible>!Skin.HasSetting(BlueOverlay)</visible>
 		</control>
 	</include>
-	<!--include name="QuickNavContent">
-        <item>
-            <label fallback="31502">$INFO[Skin.String(QuickNavItem1.Label)]</label>
-            <property name="Path" fallback="ReplaceWindow(Videos,MovieTitles,return)">$INFO[Skin.String(QuickNavItem1.Path)]</property>
-            <property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem1.Type)]</property>
-            <property name="DisableIcon">$INFO[Skin.String(QuickNavItem1.Disable)]</property>
-            <thumb fallback="special://skin/extras/BigIcons/Film.png">$INFO[Skin.String(QuickNavItem1.MultiFanart)]</thumb>
-            <onclick>SetProperty(MenuItem,QuickNavItem1,home)</onclick>
-            <onclick>SetFocus(810)</onclick>
-            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem1.Disable))</visible>
-        </item>
-        <item>
-            <label fallback="31503">$INFO[Skin.String(QuickNavItem2.Label)]</label>
-            <property name="Path" fallback="ReplaceWindow(Videos,TVShowTitles,return)">$INFO[Skin.String(QuickNavItem2.Path)]</property>
-            <property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem2.Type)]</property>
-            <property name="DisableIcon">$INFO[Skin.String(QuickNavItem2.Disable)]</property>
-            <thumb fallback="special://skin/extras/BigIcons/Television.png">$INFO[Skin.String(QuickNavItem2.MultiFanart)]</thumb>
-            <onclick>SetProperty(MenuItem,QuickNavItem2,home)</onclick>
-            <onclick>SetFocus(810)</onclick>
-            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem2.Disable))</visible>
-        </item>
-        <item>
-            <label fallback="31501">$INFO[Skin.String(QuickNavItem3.Label)]</label>
-            <property name="Path" fallback="ReplaceWindow(Music)">$INFO[Skin.String(QuickNavItem3.Path)]</property>
-            <property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem3.Type)]</property>
-            <property name="DisableIcon">$INFO[Skin.String(QuickNavItem3.Disable)]</property>
-            <thumb fallback="special://skin/extras/BigIcons/Headphone.png">$INFO[Skin.String(QuickNavItem3.MultiFanart)]</thumb>
-            <onclick>SetProperty(MenuItem,QuickNavItem3,home)</onclick>
-            <onclick>SetFocus(810)</onclick>
-            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem3.Disable))</visible>
-        </item>
-        <item>
-            <label fallback="20389">$INFO[Skin.String(QuickNavItem4.Label)]</label>
-            <property name="Path" fallback="ReplaceWindow(Videos,MusicVideoTitles,return)">$INFO[Skin.String(QuickNavItem4.Path)]</property>
-            <property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem4.Type)]</property>
-            <property name="DisableIcon">$INFO[Skin.String(QuickNavItem4.Disable)]</property>
-            <thumb fallback="special://skin/extras/BigIcons/Media.png">$INFO[Skin.String(QuickNavItem4.MultiFanart)]</thumb>
-            <onclick>SetProperty(MenuItem,QuickNavItem4,home)</onclick>
-            <onclick>SetFocus(810)</onclick>
-            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem4.Disable))</visible>
-        </item>
-        <item>
-            <label fallback="31017">$INFO[Skin.String(QuickNavItem5.Label)]</label>
-            <property name="Path" fallback="ActivateWindowAndFocus(PVR, 32,0, 11,0)">$INFO[Skin.String(QuickNavItem5.Path)]</property>
-            <property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem5.Type)]</property>
-            <property name="DisableIcon">$INFO[Skin.String(QuickNavItem5.Disable)]</property>
-            <thumb fallback="special://skin/extras/BigIcons/TV.png">$INFO[Skin.String(QuickNavItem5.MultiFanart)]</thumb>
-            <onclick>SetProperty(MenuItem,QuickNavItem5,home)</onclick>
-            <onclick>SetFocus(810)</onclick>
-            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem5.Disable))</visible>
-        </item>
-        <item>
-            <label fallback="1037">$INFO[Skin.String(QuickNavItem6.Label)]</label>
-            <property name="Path" fallback="ReplaceWindow(Videos,Addons,return)">$INFO[Skin.String(QuickNavItem6.Path)]</property>
-            <property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem6.Type)]</property>
-            <property name="DisableIcon">$INFO[Skin.String(QuickNavItem6.Disable)]</property>
-            <thumb fallback="special://skin/extras/BigIcons/Camcorder.png">$INFO[Skin.String(QuickNavItem6.MultiFanart)]</thumb>
-            <onclick>SetProperty(MenuItem,QuickNavItem6,home)</onclick>
-            <onclick>SetFocus(810)</onclick>
-            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem6.Disable))</visible>
-        </item>
-        <item>
-            <label fallback="31507">$INFO[Skin.String(QuickNavItem7.Label)]</label>
-            <property name="Path" fallback="ReplaceWindow(Programs,addons)">$INFO[Skin.String(QuickNavItem7.Path)]</property>
-            <property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem7.Type)]</property>
-            <property name="DisableIcon">$INFO[Skin.String(QuickNavItem7.Disable)]</property>
-            <thumb fallback="special://skin/extras/BigIcons/Puzzle.png">$INFO[Skin.String(QuickNavItem7.MultiFanart)]</thumb>
-            <onclick>SetProperty(MenuItem,QuickNavItem7,home)</onclick>
-            <onclick>SetFocus(810)</onclick>
-            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem7.Disable))</visible>
-        </item>
-        <item>
-            <label fallback="137">$INFO[Skin.String(QuickNavItem8.Label)]</label>
-            <property name="Path" fallback="RunScript(script.globalsearch)">$INFO[Skin.String(QuickNavItem8.Path)]</property>
-            <property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem8.Type)]</property>
-            <property name="DisableIcon">$INFO[Skin.String(QuickNavItem8.Disable)]</property>
-            <thumb fallback="special://skin/extras/BigIcons/Search.png">$INFO[Skin.String(QuickNavItem8.MultiFanart)]</thumb>
-            <onclick>SetProperty(MenuItem,QuickNavItem8,home)</onclick>
-            <onclick>SetFocus(810)</onclick>
-            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem8.Disable))</visible>
-        </item>
-        <item>
-            <label fallback="1036">$INFO[Skin.String(QuickNavItem9.Label)]</label>
-            <property name="Path" fallback="ActivateWindow(favourites)">$INFO[Skin.String(QuickNavItem9.Path)]</property>
-            <property name="Type" fallback="custom">$INFO[Skin.String(QuickNavItem9.Type)]</property>
-            <property name="DisableIcon">$INFO[Skin.String(QuickNavItem9.Disable)]</property>
-            <thumb fallback="special://skin/extras/BigIcons/Star.png">$INFO[Skin.String(QuickNavItem9.MultiFanart)]</thumb>
-            <onclick>SetProperty(MenuItem,QuickNavItem9,home)</onclick>
-            <onclick>SetFocus(810)</onclick>
-            <visible>!String.IsEmpty(Window(home).Property(quicknavsetup)) | String.IsEmpty(Skin.String(QuickNavItem9.Disable))</visible>
-        </item>
-    </include-->
 	<include name="FileManagerPanels">
 		<control type="image">
 			<left>105</left>
@@ -3321,8 +3229,8 @@
 		<!-- Audio Codec -->
 		<onfocus>SetProperty(Widget.FlagsAudio,$VAR[ColorFlagsAudio]audio/$INFO[Container($PARAM[id]).ListItem.AudioCodec]$INFO[Container($PARAM[id]).ListItem.AudioChannels,,.png],Home)</onfocus>
 		<!-- Audio Channels -->
-		<!--onfocus condition="Skin.HasSetting(coloredflags)">SetProperty(Widget.FlagsAudioChannels,$INFO[Container($PARAM[id]).ListItem.AudioChannels,flags/colored/channels/,.png],Home)</onfocus>
-        <onfocus condition="!Skin.HasSetting(coloredflags)">SetProperty(Widget.FlagsAudioChannels,$INFO[Container($PARAM[id]).ListItem.AudioChannels,flags/channels/,.png],Home)</onfocus-->
+		<!-- onfocus condition="Skin.HasSetting(coloredflags)">SetProperty(Widget.FlagsAudioChannels,$INFO[Container($PARAM[id]).ListItem.AudioChannels,flags/colored/channels/,.png],Home)</onfocus>
+        <onfocus condition="!Skin.HasSetting(coloredflags)">SetProperty(Widget.FlagsAudioChannels,$INFO[Container($PARAM[id]).ListItem.AudioChannels,flags/channels/,.png],Home)</onfocus -->
 		<!-- Subtitle Language -->
 		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.SubtitleLanguage)">SetProperty(Widget.FlagsCC,$VAR[ColorFlags]cc.png,Home)</onfocus>
 		<!--Audio Languages-->

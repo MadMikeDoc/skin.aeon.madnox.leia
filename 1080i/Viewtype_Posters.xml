@@ -2541,7 +2541,7 @@
 					<align>center</align>
 					<aligny>top</aligny>
 					<visible>Control.HasFocus(5106) + Skin.HasSetting(PostersDiscArt) + !Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + String.IsEmpty(ListItem.Art(clearlogo)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + Skin.HasSetting(Fakedischandwriting)</visible>
-					<!--visible>Skin.Hassetting(listcdart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo)) + !Skin.Hassetting(Fakehandtop)</visible-->
+					<!--visible>Skin.Hassetting(listcdart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo)) + !Skin.Hassetting(Fakehandtop)</visible-->
 					<label> $INFO[ListItem.Label]</label>
 					<textcolor>black</textcolor>
 				</control>
@@ -2562,7 +2562,7 @@
 					<include condition="!Skin.HasSetting(PostersCase)">FakeDiscPosNoCase</include>
 					<width>230</width>
 					<height>70</height>
-					<visible>Control.HasFocus(5106) + Skin.HasSetting(PostersDiscArt) + !Skin.HasSetting(PostersDiscArtRight) + Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
+					<visible>Control.HasFocus(5106) + Skin.HasSetting(PostersDiscArt) + !Skin.HasSetting(PostersDiscArtRight) + Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + Skin.HasSetting(Fakedischandwriting)</visible>
 					<control type="image">
 						<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 						<animation effect="slide" start="0,300" end="0,0" delay="1040" time="920" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
@@ -2722,7 +2722,7 @@
 					<top>368</top>
 					<width>230</width>
 					<height>70</height>
-					<visible>Control.HasFocus(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight) + Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem.Path,videodb://movies/sets) + Skin.HasSetting(Fakedischandwriting)</visible>
+					<visible>Control.HasFocus(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight) + Container.Content(movies) + !String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + Skin.HasSetting(Fakedischandwriting)</visible>
 					<control type="image">
 						<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 						<animation effect="slide" start="0,300" end="0,0" delay="1040" time="920" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>

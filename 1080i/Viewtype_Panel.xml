@@ -194,7 +194,7 @@
 							<font>Font_Reg32</font>
 							<textcolor>white6</textcolor>
 							<scroll>true</scroll>
-							<visible>!SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>!ListItem.IsCollection</visible>
 						</control>
 						<control type="label">
 							<width min="50" max="720">auto</width>
@@ -203,7 +203,7 @@
 							<font>Font_Reg32</font>
 							<textcolor>white6</textcolor>
 							<scroll>true</scroll>
-							<visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>ListItem.IsCollection</visible>
 						</control>
 					</control>
 					<control type="grouplist">
@@ -225,7 +225,7 @@
 							<font>Font_Reg32</font>
 							<textcolor>white6</textcolor>
 							<scroll>true</scroll>
-							<visible>!SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>!ListItem.IsCollection</visible>
 						</control>
 						<control type="label">
 							<width min="50" max="720">auto</width>
@@ -234,7 +234,7 @@
 							<font>Font_Reg32</font>
 							<textcolor>white6</textcolor>
 							<scroll>true</scroll>
-							<visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>ListItem.IsCollection</visible>
 						</control>
 					</control>
 					<control type="grouplist">
@@ -256,7 +256,7 @@
 							<font>Font_Reg32</font>
 							<textcolor>white6</textcolor>
 							<scroll>true</scroll>
-							<visible>!SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>!ListItem.IsCollection</visible>
 						</control>
 						<control type="label">
 							<width min="50" max="720">auto</width>
@@ -265,7 +265,7 @@
 							<font>Font_Reg32</font>
 							<textcolor>white6</textcolor>
 							<scroll>true</scroll>
-							<visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>ListItem.IsCollection</visible>
 						</control>
 					</control>
 					<control type="grouplist">
@@ -329,7 +329,7 @@
 							<font>Font_Reg32</font>
 							<textcolor>white6</textcolor>
 							<scroll>true</scroll>
-							<visible>!System.HasAddon(script.duration) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>!System.HasAddon(script.duration) + !ListItem.IsCollection</visible>
 						</control>
 						<control type="label">
 							<width min="50" max="720">auto</width>
@@ -360,7 +360,7 @@
 							<font>Font_Reg32</font>
 							<textcolor>white6</textcolor>
 							<scroll>true</scroll>
-							<visible>!SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>!ListItem.IsCollection</visible>
 						</control>
 						<control type="label">
 							<width min="50" max="720">auto</width>
@@ -369,7 +369,7 @@
 							<font>Font_Reg32</font>
 							<textcolor>white6</textcolor>
 							<scroll>true</scroll>
-							<visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>ListItem.IsCollection</visible>
 						</control>
 					</control>
 					<control type="grouplist">
@@ -564,7 +564,7 @@
 				<width>48</width>
 				<height>890</height>
 				<animation effect="fade" start="100" end="80" time="50" condition="Control.HasFocus(6005)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,60" time="50" condition="Control.HasFocus(6005) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,60" time="50" condition="Control.HasFocus(6005) + [Container.Content(sets) | ListItem.IsCollection]">Conditional</animation>
 				<texture>views/directory/sbl_framevertical.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6005) + Skin.HasSetting(AlphabetScrollbar)</visible>

@@ -52,10 +52,10 @@
 						<fadetime>400</fadetime>
 						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 						<bordersize>8</bordersize>
-						<visible>[!String.IsEmpty(ListItem.Art(banner)) + [!Skin.HasSetting(BannerInfoUseLogo) | !SubString(ListItem.Path,videodb://movies/sets) ]]| !String.IsEmpty(ListItem.Art(fanart)) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
+						<visible>[!String.IsEmpty(ListItem.Art(banner)) + [!Skin.HasSetting(BannerInfoUseLogo) | !ListItem.IsCollection ]]| !String.IsEmpty(ListItem.Art(fanart)) + !ListItem.IsCollection</visible>
 					</control>
 					<control type="group">
-						<visible>String.IsEmpty(ListItem.Art(banner)) | [Skin.HasSetting(BannerInfoUseLogo) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+						<visible>String.IsEmpty(ListItem.Art(banner)) | [Skin.HasSetting(BannerInfoUseLogo) + ListItem.IsCollection]</visible>
 						<control type="image">
 							<width>980</width>
 							<height>181</height>
@@ -64,7 +64,7 @@
 							<fadetime>400</fadetime>
 							<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 							<bordersize>8</bordersize>
-							<visible>!SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(ListItem.Art(fanart))</visible>
+							<visible>!ListItem.IsCollection + !String.IsEmpty(ListItem.Art(fanart))</visible>
 						</control>
 						<control type="image">
 							<width>400</width>
@@ -73,7 +73,7 @@
 							<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 							<fadetime>400</fadetime>
 							<bordersize>2</bordersize>
-							<visible>!SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>!ListItem.IsCollection</visible>
 						</control>
 						<control type="image">
 							<width>1000</width>
@@ -82,7 +82,7 @@
 							<texture background="true" fallback="thumbs/fallback_banner_tp.png">$INFO[ListItem.Art(clearlogo)]</texture>
 							<fadetime>400</fadetime>
 							<bordersize>2</bordersize>
-							<visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>ListItem.IsCollection</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -157,17 +157,17 @@
 							<aspectratio>stretch</aspectratio>
 							<texture background="true" fallback="thumbs/fallback_banner_tp.png">$VAR[BannerVar]</texture>
 							<fadetime>400</fadetime>
-							<visible>[!String.IsEmpty(ListItem.Art(banner)) + [!Skin.HasSetting(BannerInfoUseLogo) | !SubString(ListItem.Path,videodb://movies/sets) ]]| !String.IsEmpty(ListItem.Art(fanart)) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
+							<visible>[!String.IsEmpty(ListItem.Art(banner)) + [!Skin.HasSetting(BannerInfoUseLogo) | !ListItem.IsCollection ]]| !String.IsEmpty(ListItem.Art(fanart)) + !ListItem.IsCollection</visible>
 						</control>
 						<control type="group">
-							<visible>String.IsEmpty(ListItem.Art(banner)) | [Skin.HasSetting(BannerInfoUseLogo) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+							<visible>String.IsEmpty(ListItem.Art(banner)) | [Skin.HasSetting(BannerInfoUseLogo) + ListItem.IsCollection]</visible>
 							<control type="image">
 								<width>980</width>
 								<height>181</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 								<fadetime>400</fadetime>
-								<visible>!SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(ListItem.Art(fanart))</visible>
+								<visible>!ListItem.IsCollection + !String.IsEmpty(ListItem.Art(fanart))</visible>
 							</control>
 							<control type="image">
 								<description>background image</description>
@@ -177,7 +177,7 @@
 								<aspectratio>scale</aspectratio>
 								<texture border="40">listpanel_back.png</texture>
 								<fadetime>400</fadetime>
-								<visible>String.IsEmpty(ListItem.Art(fanart)) | SubString(ListItem.Path,videodb://movies/sets)</visible>
+								<visible>String.IsEmpty(ListItem.Art(fanart)) | ListItem.IsCollection</visible>
 							</control>
 							<control type="image">
 								<width>400</width>
@@ -186,7 +186,7 @@
 								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 								<fadetime>400</fadetime>
 								<bordersize>2</bordersize>
-								<visible>!SubString(ListItem.Path,videodb://movies/sets)</visible>
+								<visible>!ListItem.IsCollection</visible>
 							</control>
 							<control type="image">
 								<width>1000</width>
@@ -195,7 +195,7 @@
 								<texture background="true" fallback="thumbs/fallback_banner_tp.png">$INFO[ListItem.Art(clearlogo)]</texture>
 								<fadetime>400</fadetime>
 								<bordersize>2</bordersize>
-								<visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
+								<visible>ListItem.IsCollection</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -289,7 +289,7 @@
 					<height>385</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="thumbs/sets/backset.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Container.ListItem.Art(fanart))</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + ListItem.IsCollection + !String.IsEmpty(Container.ListItem.Art(fanart))</visible>
 				</control>
 				<control type="image">
 					<posx>1113</posx>
@@ -298,7 +298,7 @@
 					<height>385</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + SubString(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(Container.ListItem.Art(extrafanart1))</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + ListItem.IsCollection + !String.IsEmpty(Container.ListItem.Art(extrafanart1))</visible>
 				</control>
 				<control type="image">
 					<posx>1113</posx>
@@ -307,7 +307,7 @@
 					<height>385</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" fallback="thumbs/sets/backset.png">$INFO[Container.ListItem.Art(clearlogo)]</texture>
-					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + SubString(ListItem.Path,videodb://movies/sets) + String.IsEmpty(Container.ListItem.Art(extrafanart1)) + String.IsEmpty(ListItem.Art(fanart)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + ListItem.IsCollection + String.IsEmpty(Container.ListItem.Art(extrafanart1)) + String.IsEmpty(ListItem.Art(fanart)) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				</control>
 				<control type="multiimage">
 					<posx>1113</posx>
@@ -320,7 +320,7 @@
 					<include condition="!Window.IsActive(pictures)">Aspectratio_Scale</include>
 					<timeperimage>3000</timeperimage>
 					<imagepath background="true" fallback="thumbs/fallback_episode_tp.png">$VAR[VideoExtraFanartVar]</imagepath>
-					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
+					<visible>String.IsEqual(Control.GetLabel(4420),fanart) + !ListItem.IsCollection</visible>
 					<include>Animation_VisibleChange200</include>
 				</control>
 				<control type="image">
@@ -387,7 +387,7 @@
 				<texture background="true">$INFO[Container.ListItem.Art(clearlogo)]</texture>
 				<animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
 				<animation effect="slide" end="-60" time="0" condition="!Skin.HasSetting(infopaneldiscart)">Conditional</animation>
-				<visible>!Skin.HasSetting(LogoBehindPlot) + !SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>!Skin.HasSetting(LogoBehindPlot) + !ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
 				<posy>727</posy>
@@ -398,7 +398,7 @@
 				<texture background="true">$INFO[Container.ListItem.Art(clearlogo)]</texture>
 				<animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
 				<animation effect="slide" end="-60" time="0" condition="!Skin.HasSetting(infopaneldiscart)">Conditional</animation>
-				<visible>!Skin.HasSetting(LogoBehindPlot) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + !String.IsEmpty(Container.ListItem.Art(extrafanart1)) + String.IsEmpty(Container.ListItem.Art(clearart)) + SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>!Skin.HasSetting(LogoBehindPlot) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + !String.IsEmpty(Container.ListItem.Art(extrafanart1)) + String.IsEmpty(Container.ListItem.Art(clearart)) + ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
 				<posy>727</posy>
@@ -420,7 +420,7 @@
 				<texture background="true">$INFO[Container.ListItem.Art(clearlogo)]</texture>
 				<animation effect="fade" end="15" time="0" condition="true">Conditional</animation>
 				<animation effect="slide" end="-60" time="0" condition="!Skin.HasSetting(infopaneldiscart)">Conditional</animation>
-				<visible>!Skin.HasSetting(LogoBehindPlot) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(extrafanart1)) + !String.IsEmpty(Container.ListItem.Art(clearart)) + SubString(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>!Skin.HasSetting(LogoBehindPlot) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(extrafanart1)) + !String.IsEmpty(Container.ListItem.Art(clearart)) + ListItem.IsCollection</visible>
 			</control>
 			<control type="textbox">
 				<label>$VAR[VideoPlotVar]</label>
@@ -555,7 +555,7 @@
 				<top>984</top>
 				<width>1840</width>
 				<height>90</height>
-				<visible>Container.Content(movies) + ![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder]</visible>
+				<visible>Container.Content(movies) + ![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 				<control type="image">
 					<colordiffuse>floor</colordiffuse>
 					<texture>$VAR[ColorFlagsResolution]resolution/$INFO[ListItem.VideoResolution,,.png]</texture>
@@ -654,7 +654,7 @@
 				<width>48</width>
 				<height>920</height>
 				<animation effect="fade" start="100" end="80" time="50" condition="Control.HasFocus(6021)">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,60" time="50" condition="Control.HasFocus(6021) + [Container.Content(sets) | SubString(ListItem.Path,videodb://movies/sets)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,60" time="50" condition="Control.HasFocus(6021) + [Container.Content(sets) | ListItem.IsCollection]">Conditional</animation>
 				<texture>views/directory/sbl_framevertical.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<visible>Control.HasFocus(6021) + Skin.HasSetting(AlphabetScrollbar)</visible>

@@ -578,16 +578,8 @@
 			<control type="image">
 				<texture>common/bgcolor.png</texture>
 				<include>FullscreenDimensions</include>
-				<visible>Control.HasFocus(22222) | !String.IsEmpty(Window(home).Property(weatherwidget))</visible>
+				<visible>!String.IsEmpty(Window(home).Property(weatherwidget))</visible>
 				<include>Animation_VisibleChange400</include>
-			</control>
-			<control type="image">
-				<aspectratio>keep</aspectratio>
-				<texture background="true">$VAR[HomeFSImageVar]</texture>
-				<fadetime>600</fadetime>
-				<include>FullscreenDimensions</include>
-				<animation effect="fade" time="320">VisibleChange</animation>
-				<visible>Control.HasFocus(22222)</visible>
 			</control>
 			<control type="group">
 				<visible>!String.IsEmpty(Window(home).Property(weatherwidget))</visible>

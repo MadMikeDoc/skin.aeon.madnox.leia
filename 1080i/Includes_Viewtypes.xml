@@ -822,7 +822,7 @@
 				<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 				<bordersize>7</bordersize>
 				<animation effect="zoom" end="110" center="1800,270" time="320" tween="cubic" easing="inout" condition="Skin.HasSetting(no_infopane_panel) + Control.IsVisible(503)">Conditional</animation>
-				<visible>String.IsEqual(Control.GetLabel(4420),fanart) + [!Skin.HasSetting(infopanel_extrafanart) | SubString(ListItem.Path,videodb://movies/sets)]</visible>
+				<visible>String.IsEqual(Control.GetLabel(4420),fanart) + [!Skin.HasSetting(infopanel_extrafanart) | ListItem.IsCollection]</visible>
 				<animation type="VisibleChange">
 					<effect type="fade" end="100" delay="320" time="160"/>
 				</animation>
@@ -1051,7 +1051,7 @@
                     <animation effect="rotatey" center="auto" start="-45" end="45" time="0" condition="true">Conditional</animation>
                     <camera x="1250" y="370"/>
                     <animation effect="zoom" end="112" time="0" delay="0" reversible="false" condition="true">Conditional</animation>
-                    <visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
+                    <visible>ListItem.IsCollection</visible>
                 </control>
                 <!--  END Posters for sets: ShadowTek -->
 
@@ -1174,7 +1174,7 @@
 						<bordersize>7</bordersize>
 						<texture background="true">$VAR[ExtraThumb1Var]</texture>
 						<fadetime>400</fadetime>
-						<visible>SubString(ListItem.Path,videodb://movies/sets)</visible>
+						<visible>ListItem.IsCollection</visible>
 					</control>
 					<control type="image" id="9001">
 						<left>-50</left>
@@ -2236,7 +2236,7 @@
 			</animation>
 			<animation effect="zoom" start="100" end="195" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(501) + Skin.HasSetting(showcasezoom)">Conditional</animation>
 			<visible>[Control.IsVisible(501) + !Skin.HasSetting(OpenCase)] + Skin.HasSetting(showcasecdart)</visible>
-			<visible>![Skin.HasSetting(OpenBoxSet) + SubString(ListItem.Path,videodb://movies/sets)]</visible>
+			<visible>![Skin.HasSetting(OpenBoxSet) + ListItem.IsCollection]</visible>
 			<include>Animation_VisibleChange200</include>
 			<control type="group">
 				<control type="group">

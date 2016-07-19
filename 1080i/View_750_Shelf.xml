@@ -374,7 +374,7 @@
 					<colordiffuse>grey2</colordiffuse>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[StudioImageVar]</texture>
-					<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.Studio)]</visible>
+					<visible>![ListItem.IsCollection + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.Studio)]</visible>
 					<animation effect="rotatey" center="50" start="8" end="8" time="0" condition="true">Conditional</animation>
 				</control>
 				<control type="textbox">
@@ -455,7 +455,7 @@
 						<left>-100</left>
 						<bordersize>2</bordersize>
 						<texture>$VAR[StudioImageVar]</texture>
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.Studio)]</visible>
+						<visible>![ListItem.IsCollection + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.Studio)]</visible>
 						<width>140</width>
 						<height>115</height>
 						<aspectratio>keep</aspectratio>
@@ -477,7 +477,7 @@
 						<visible>String.IsEmpty(Control.GetLabel(84757))</visible>
 					</control>
 					<control type="image">
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.MPAA)]</visible>
+						<visible>![ListItem.IsCollection + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.MPAA)]</visible>
 						<left>45</left>
 						<aspectratio>keep</aspectratio>
 						<texture>$VAR[ColorFlagsRating]rating/$VAR[RatingFlagVar,,.png]</texture>
@@ -485,7 +485,7 @@
 						<visible>!Skin.HasSetting(coloredflags)</visible>
 					</control>
 					<control type="image">
-						<visible>![SubString(ListItem.Path,videodb://movies/sets) + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.MPAA)]</visible>
+						<visible>![ListItem.IsCollection + !ListItem.IsParentFolder] + [!Container.Content(seasons) + !String.IsEmpty(ListItem.MPAA)]</visible>
 						<left>-150</left>
 						<aspectratio>keep</aspectratio>
 						<aspectratio scalediffuse="false">center</aspectratio>
