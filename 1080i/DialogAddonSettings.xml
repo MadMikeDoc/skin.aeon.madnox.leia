@@ -18,7 +18,7 @@
 				<top>36</top>
 				<width>1846</width>
 				<height>1006</height>
-				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">settings/settings_panelback_shadow.png</texturefocus>
+				<texture colordiffuse="$VAR[FocusTextureColorVar]">settings/settings_panelback_shadow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 			</control>
 			<control type="image">

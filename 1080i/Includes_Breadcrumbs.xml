@@ -15,7 +15,7 @@
 		<height>38</height>
 		<font>Font_Reg30_Caps</font>
 		<shadowcolor>bcshadow</shadowcolor>
-		<textcolor>$VAR[BreadCrumbsContentColorVar]</textcolor>
+		<textcolor>grey</textcolor>
 		<scroll>true</scroll>
 		<include condition="![Window.IsActive(skinsettings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(systeminfo) | Window.IsActive(settings)]">Animation_WindowFade200</include>
 	</include>
