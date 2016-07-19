@@ -1933,7 +1933,6 @@
 		<onload condition="Window.IsActive(videos) | Window.IsActive(script-videoextras-main.xml)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_videolibrary)])</onload>
 		<onload condition="Window.IsActive(tvchannels)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_PVR)])</onload>
 		<onload condition="Window.IsActive(pictures)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_pictures)])</onload>
-		<onload condition="Window.IsActive(1115)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_featured)])</onload>
 		<onload condition="Window.IsActive(skinsettings)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_settings)])</onload>
 		<onload condition="Window.IsActive(addonbrowser)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_addons)])</onload>
 		<onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_programs)])</onload>
@@ -1947,7 +1946,6 @@
 		<onload condition="Window.IsActive(videos) | Window.IsActive(script-videoextras-main.xml)">Skin.SetString(font_color,$INFO[Skin.String(font_videolibrary)])</onload>
 		<onload condition="Window.IsActive(tvchannels)">Skin.SetString(font_color,$INFO[Skin.String(font_PVR)])</onload>
 		<onload condition="Window.IsActive(pictures)">Skin.SetString(font_color,$INFO[Skin.String(font_pictures)])</onload>
-		<onload condition="Window.IsActive(1115)">Skin.SetString(font_color,$INFO[Skin.String(font_featured)])</onload>
 		<onload condition="Window.IsActive(skinsettings)">Skin.SetString(font_color,$INFO[Skin.String(font_settings)])</onload>
 		<onload condition="Window.IsActive(addonbrowser)">Skin.SetString(font_color,$INFO[Skin.String(font_addons)])</onload>
 		<onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(font_color,$INFO[Skin.String(font_programs)])</onload>
@@ -1963,7 +1961,6 @@
 		<onload condition="Window.IsActive(videos) | Window.IsActive(script-videoextras-main.xml)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_videolibrary)])</onload>
 		<onload condition="Window.IsActive(tvchannels)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_PVR)])</onload>
 		<onload condition="Window.IsActive(pictures)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_pictures)])</onload>
-		<onload condition="Window.IsActive(1115)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_featured)])</onload>
 		<onload condition="Window.IsActive(skinsettings)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_settings)])</onload>
 		<onload condition="Window.IsActive(addonbrowser)">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_addons)])</onload>
 		<onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(diffuse_color,$INFO[Skin.String(diffuse_white_programs)])</onload>
@@ -1977,7 +1974,6 @@
 		<onload condition="Window.IsActive(videos) | Window.IsActive(script-videoextras-main.xml)">Skin.SetString(font_color,$INFO[Skin.String(white_font_videolibrary)])</onload>
 		<onload condition="Window.IsActive(tvchannels)">Skin.SetString(font_color,$INFO[Skin.String(white_font_PVR)])</onload>
 		<onload condition="Window.IsActive(pictures)">Skin.SetString(font_color,$INFO[Skin.String(white_font_pictures)])</onload>
-		<onload condition="Window.IsActive(1115)">Skin.SetString(font_color,$INFO[Skin.String(white_font_featured)])</onload>
 		<onload condition="Window.IsActive(skinsettings)">Skin.SetString(font_color,$INFO[Skin.String(white_font_settings)])</onload>
 		<onload condition="Window.IsActive(addonbrowser)">Skin.SetString(font_color,$INFO[Skin.String(white_font_addons)])</onload>
 		<onload condition="[Window.IsActive(programs) | Window.IsActive(script-Rom_Collection_Browser-main.xml)]">Skin.SetString(font_color,$INFO[Skin.String(white_font_programs)])</onload>
@@ -3225,116 +3221,6 @@
 		<texturefocus border="1">separator5.png</texturefocus>
 		<texturenofocus border="1">separator5.png</texturenofocus>
 		<onclick>noop</onclick>
-	</include>
-	<!-- Featured dialog info -->
-	<include name="featuredOnFocus">
-		<onfocus>SetProperty(SkinHelper.WidgetContainer,$PARAM[id],Home)</onfocus>
-		<onfocus>SetProperty(Widget,$PARAM[widget],Home)</onfocus>
-		<onfocus>SetProperty(Widget.Type,$PARAM[widgetType],Home)</onfocus>
-		<onfocus>SetProperty(Widget.FilePath,$INFO[Container($PARAM[id]).ListItem.FileNameAndPath],Home)</onfocus>
-		<onfocus>SetProperty(Widget.Resume,$INFO[Container($PARAM[id]).ListItem.PercentPlayed],Home)</onfocus>
-		<onfocus>SetProperty(Widget.Trailer,$INFO[Container($PARAM[id]).ListItem.Trailer],Home)</onfocus>
-		<!-- Art -->
-		<onfocus>SetProperty(Widget.Cover,$PARAM[Texture],Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.Cover,$INFO[Container($PARAM[id]).ListItem.Property(Fanart)],Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart)) + Skin.HasSetting(WeatherFanartDir.multi)">SetProperty(Widget.Cover,$INFO[Container($PARAM[id]).ListItem.Property(WeatherMultiFanart)],Home)</onfocus>
-		<onfocus>SetProperty(Widget.DiscArt,$INFO[Container($PARAM[id]).ListItem.Art(discart)],Home)</onfocus>
-		<!-- Info -->
-		<onfocus>SetProperty(Widget.Title,$PARAM[Title],Home)</onfocus>
-		<onfocus>SetProperty(Widget.SubTitle,$PARAM[subTitle],Home)</onfocus>
-		<onfocus>SetProperty(Widget.Info1,$PARAM[Info1],Home)</onfocus>
-		<onfocus>SetProperty(Widget.Info2,$PARAM[Info2],Home)</onfocus>
-		<onfocus>SetProperty(Widget.Plot,$PARAM[Plot],Home)</onfocus>
-		<onfocus>SetProperty(Widget.BackgroundColor,$VAR[DialogColorVar],Home)</onfocus>
-		<onfocus>SetProperty(Widget.Background,homewidgets/bg_default.png,Home)</onfocus>
-		<!-- Year -->
-		<onfocus>SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.Year],Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.AddonName)">SetProperty(Widget.Year,$INFO[Container($PARAM[id]).ListItem.AddonVersion],Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.Year,$INFO[System.FriendlyName],Home)</onfocus>
-		<!-- MPAA -->
-		<onfocus>SetProperty(Widget.FlagsRating,$INFO[Container($PARAM[id]).ListItem.MPAA,$VAR[ColorFlagsRating]rating/,.png],home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-G) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - G)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-G_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-PG) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-PG_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-14) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - 14)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-14_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-MA) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - MA)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-MA_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-Y7) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - Y7)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/tv-y7.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-Y) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - Y)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/tv-y.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,US:G) | SubString(Container($PARAM[id]).ListItem.MPAA,USA:G) | SubString(Container($PARAM[id]).ListItem.MPAA,Rated G)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_G_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,PG-13) | SubString(Container($PARAM[id]).ListItem.MPAA,PG - 13)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_PG-13_Certificate_US.png,home)</onfocus>
-		<onfocus condition="Substring(Container($PARAM[id]).ListItem.MPAA,Rated PG) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_PG_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,US:R) | SubString(Container($PARAM[id]).ListItem.MPAA,USA:R) | SubString(Container($PARAM[id]).ListItem.MPAA,Rated R) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,R)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_R_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,US:NC-17)| SubString(Container($PARAM[id]).ListItem.MPAA,USA:NC-17)| SubString(Container($PARAM[id]).ListItem.MPAA,Rated NC-17) | SubString(Container($PARAM[id]).ListItem.MPAA,Rated NC - 17)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_NC-17_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:U)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_U_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_PG_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:12A)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_12A_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:12)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_12_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:15)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_15_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:18)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_18_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:0) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 0)| SubString(Container($PARAM[id]).ListItem.MPAA,o.A)| SubString(Container($PARAM[id]).ListItem.MPAA,FSK 0)| String.IsEqual(Container($PARAM[id]).ListItem.MPAA,FSK:0)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-0.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:6) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 6) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,6) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 6) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:6)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-6.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:12) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 12) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,12) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 12) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:12)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:16) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 16) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,16) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 16) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:16)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-16.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:18) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 18) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,18) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 18) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:18)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-18.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,besorolás alatt)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_BA.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,korhatárra való tekintett nélkül megtekintetheto)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_KN.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,12 éven aluliak számára a megtekintése nagykorú felügyelete mellett ajánlott)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,16 éven aluliak számára nem ajánlott)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_16.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,18 éven aluliak számára nem ajánlott)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_18.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,France:U) | Substring(Container($PARAM[id]).ListItem.MPAA,partir de 3 ans) | Substring(Container($PARAM[id]).ListItem.MPAA,partir de 6 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csaU.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,France:-10) | Substring(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 10 ans) | Substring(Container($PARAM[id]).ListItem.MPAA,des propos ou des images peuvent heurter)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa10.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,France:-12) | Substring(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 12 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,France:-16) | Substring(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 16 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa16.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,France:-18) | Substring(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 18 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa18.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,전체)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_All.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,12세)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,15세)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_15.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,불가)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_18.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,제한)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_R.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:Livre) | SubString(Container($PARAM[id]).ListItem.MPAA,Livre)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_Livre.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:10) | SubString(Container($PARAM[id]).ListItem.MPAA,10 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_10.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:12) | SubString(Container($PARAM[id]).ListItem.MPAA,12 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:14) | SubString(Container($PARAM[id]).ListItem.MPAA,14 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_14.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:16) | SubString(Container($PARAM[id]).ListItem.MPAA,16 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_16.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:18) | SubString(Container($PARAM[id]).ListItem.MPAA,18 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_18.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Rated X)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_X_Certificate_US.png,home)</onfocus>
-		<!-- Studio -->
-		<onfocus condition="Skin.HasSetting(StudiosColorFlag) + !String.IsEmpty(Container($PARAM[id]).ListItem.Studio)">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Studio,resource://resource.images.studios.coloured/,.png],Home)</onfocus>
-		<onfocus condition="!Skin.HasSetting(StudiosColorFlag) + !String.IsEmpty(Container($PARAM[id]).ListItem.Studio)">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Studio,resource://resource.images.studios.white/,.png],Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Album_Label))">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Property(Album_Label)],Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.FlagsStudio,Homewidgets/systeminfo/square/system.png,Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart))">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Icon],Home)</onfocus>
-		<!-- VideoCodec -->
-		<onfocus>SetProperty(Widget.FlagsSource,$INFO[Container($PARAM[id]).ListItem.VideoCodec,flags/colored/source/,.png])</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,PDTV) | SubString(Container($PARAM[id]).ListItem.filename,sdtv) | SubString(Container($PARAM[id]).ListItem.filename,sd tv)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/sdtv.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,hdtv) | SubString(Container($PARAM[id]).ListItem.filename,hd tv)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/hdtv.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,hddvd) | SubString(Container($PARAM[id]).ListItem.filename,hd-dvd)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/hddvd.png,Home)</onfocus>
-		<onfocus condition="Container($PARAM[id]).ListItem.IsStereoscopic">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/bluray3d,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,bluray) | SubString(Container($PARAM[id]).ListItem.filename,blu-ray) | SubString(Container($PARAM[id]).ListItem.filename,bdrip) | SubString(Container($PARAM[id]).ListItem.filename,brrip)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/bluray.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,dvb)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/dvb.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,web-dl)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/web-dl.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,dvd) | String.IsEqual(Container($PARAM[id]).ListItem.FileExtension,iso) | String.IsEqual(Container($PARAM[id]).ListItem.FileExtension,ifo)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/dvd.png,Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart))">SetProperty(Widget.FlagsSource,$INFO[Window(weather).Property(WeatherProviderLogo)],Home)</onfocus>
-		<!-- Resolution -->
-		<onfocus>SetProperty(Widget.FlagsResolution,$VAR[ColorFlagsResolution]resolution/$INFO[Container($PARAM[id]).ListItem.VideoResolution,,.png],Home)</onfocus>
-		<!-- Aspect -->
-		<onfocus>SetProperty(Widget.FlagsAspect,$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[Container($PARAM[id]).ListItem.VideoAspect,,.png],Home)</onfocus>
-		<!-- Audio Codec -->
-		<onfocus>SetProperty(Widget.FlagsAudio,$VAR[ColorFlagsAudio]audio/$INFO[Container($PARAM[id]).ListItem.AudioCodec]$INFO[Container($PARAM[id]).ListItem.AudioChannels,,.png],Home)</onfocus>
-		<!-- Audio Channels -->
-		<!--onfocus condition="Skin.HasSetting(coloredflags)">SetProperty(Widget.FlagsAudioChannels,$INFO[Container($PARAM[id]).ListItem.AudioChannels,flags/colored/channels/,.png],Home)</onfocus>
-        <onfocus condition="!Skin.HasSetting(coloredflags)">SetProperty(Widget.FlagsAudioChannels,$INFO[Container($PARAM[id]).ListItem.AudioChannels,flags/channels/,.png],Home)</onfocus-->
-		<!-- Subtitle Language -->
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.SubtitleLanguage)">SetProperty(Widget.FlagsCC,$VAR[ColorFlags]cc.png,Home)</onfocus>
-		<!--Audio Languages-->
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(AudioLanguage.1))">SetProperty(Widget.FlagsAL1,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(AudioLanguage.1),,.png],Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(AudioLanguage.2))">SetProperty(Widget.FlagsAL2,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(AudioLanguage.2),,.png],Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(AudioLanguage.3))">SetProperty(Widget.FlagsAL3,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(AudioLanguage.3),,.png],Home)</onfocus>
-		<!--Subtitle Languages-->
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(SubtitleLanguage.1))">SetProperty(Widget.FlagsSL1,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(SubtitleLanguage.1),,.png],Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(SubtitleLanguage.2))">SetProperty(Widget.FlagsSL2,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(SubtitleLanguage.2),,.png],Home)</onfocus>
-		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(SubtitleLanguage.3))">SetProperty(Widget.FlagsSL3,$VAR[ColorFlagsLanguage]$INFO[Container($PARAM[id]).ListItem.Property(SubtitleLanguage.3),,.png],Home)</onfocus>
-		<!-- Open Window -->
-		<onfocus>ActivateWindow(1199)</onfocus>
 	</include>
 	<!-- PARAM Includes -->
 	<include name="VideoCastItem">

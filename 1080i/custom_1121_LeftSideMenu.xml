@@ -22,7 +22,7 @@
 			<animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
 		</control>
 		<control type="group">
-			<visible>Window.IsActive(skinsettings) | Window.IsActive(1115) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(LibrarySettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings) | Window.IsActive(home)</visible>
+			<visible>Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(LibrarySettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings) | Window.IsActive(home)</visible>
 			<animation type="WindowClose">
 				<effect type="slide" end="-490" time="320" easing="in" tween="cubic" />
 			</animation>

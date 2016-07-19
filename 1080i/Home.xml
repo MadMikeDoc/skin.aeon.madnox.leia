@@ -408,9 +408,9 @@
 		<include>Widget1</include>
 		<include>Widget2</include>
 		<control type="group">
-			<animation effect="slide" end="0,330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(lowermainmenu) + !String.IsEmpty(Window(home).Property(PanelWidget2Info)) + !Window.IsActive(1115)">Conditional</animation>
-			<animation effect="slide" end="0,-330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(lowermainmenu) + !String.IsEmpty(Window(home).Property(PanelWidgetInfo)) + !Window.IsActive(1115)">Conditional</animation>
-			<animation effect="slide" end="0,330" time="480" tween="cubic" delay="160" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + [Window.IsActive(1115) | Window.IsActive(1154)]">Conditional</animation>
+			<animation effect="slide" end="0,330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(lowermainmenu) + !String.IsEmpty(Window(home).Property(PanelWidget2Info))">Conditional</animation>
+			<animation effect="slide" end="0,-330" time="560" tween="cubic" delay="160" condition="!Skin.HasSetting(lowermainmenu) + !String.IsEmpty(Window(home).Property(PanelWidgetInfo))">Conditional</animation>
+			<animation effect="slide" end="0,330" time="480" tween="cubic" delay="160" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Window.IsActive(1154)">Conditional</animation>
 			<animation effect="slide" end="0,-383" time="480" tween="cubic" delay="160" easing="inout" condition="!Skin.HasSetting(lowermainmenu) + Window.IsActive(1199)">Conditional</animation>
 			<control type="group">
 				<top>472</top>
@@ -537,7 +537,7 @@
 		<control type="group">
 			<left>0</left>
 			<top>20</top>
-			<visible>!String.IsEmpty(Window(home).Property(DisableWidgets)) + !Player.HasMedia + !Window.IsActive(1115) + !Window.IsActive(1154)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(DisableWidgets)) + !Player.HasMedia + !Window.IsActive(1154)</visible>
 			<include>Animation_WindowFade200</include>
 			<animation type="Visible">
 				<effect type="zoom" start="150" end="100" center="960,540" time="400" tween="cubic" />

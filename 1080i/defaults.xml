@@ -13,7 +13,7 @@
 		<include>FullscreenDimensions</include>
 		<timeperimage>7000</timeperimage>
 		<randomize>true</randomize>
-		<include condition="![Window.IsActive(1115) | Window.IsActive(weather)]">Animation_WindowFade250</include>
+		<include condition="!Window.IsActive(weather)">Animation_WindowFade250</include>
 	</default>
 	<default type="label">
 		<left>0</left>

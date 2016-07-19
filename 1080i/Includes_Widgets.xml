@@ -2083,7 +2083,7 @@
 	<include name="Furniture_HomeNowPlaying">
 		<control type="group">
 			<top>14</top>
-			<visible>!Window.IsActive(1115) + !Window.IsActive(1154) + !Window.IsActive(1199)</visible>
+			<visible>!Window.IsActive(1154) + !Window.IsActive(1199)</visible>
 			<visible>[String.IsEmpty(Control.GetLabel(4325)) + !Skin.HasSetting(movenowplayingwidget)] | [String.IsEmpty(Control.GetLabel(4321)) + Skin.HasSetting(movenowplayingwidget)]</visible>
 			<visible>[Skin.HasSetting(lowermainmenu) + Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90010) + ![ControlGroup(90020).HasFocus + Skin.HasSetting(Enable.PanelInfo) + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)]] |
 				[!Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90010) + ![ControlGroup(90020).HasFocus + Skin.HasSetting(Enable.PanelInfo) + !SubString(Container(9000).ListItem.Property(widgetStyle.2),List)]] |
