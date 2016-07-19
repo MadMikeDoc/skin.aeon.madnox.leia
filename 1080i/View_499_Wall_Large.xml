@@ -43,7 +43,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 				<fadetime>400</fadetime>
-				<visible>String.Contains(ListItem(0).Path,videodb://movies/sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				<visible>ListItem.IsCollection | Container.Content(tvshows) | Container.Content(seasons)</visible>
 			</control>
 			<control type="image">
 				<posy>426</posy>
@@ -53,7 +53,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 				<fadetime>400</fadetime>
-				<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + Skin.Hassetting(usecases) + !Skin.Hassetting(clearcases) + !String.Contains(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + Skin.Hassetting(usecases) + !Skin.Hassetting(clearcases) + !ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
 				<posy>396</posy>
@@ -63,7 +63,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 				<fadetime>400</fadetime>
-				<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + Skin.Hassetting(usecases) + Skin.Hassetting(clearcases) + !String.Contains(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + Skin.Hassetting(usecases) + Skin.Hassetting(clearcases) + !ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
 				<posy>385</posy>
@@ -72,7 +72,7 @@
 				<height>444</height>
 				<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
 				<bordersize>2</bordersize>
-				<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + [Skin.Hassetting(usecases) + !Skin.Hassetting(clearcases)] + !String.Contains(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + [Skin.Hassetting(usecases) + !Skin.Hassetting(clearcases)] + !ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
 				<posy>360</posy>
@@ -82,7 +82,7 @@
 				<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
 				<!--aspectratio align="center" aligny="top">scale</aspectratio-->
 				<bordersize>2</bordersize>
-				<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + [Skin.Hassetting(usecases) + Skin.Hassetting(clearcases)] + !String.Contains(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + [Skin.Hassetting(usecases) + Skin.Hassetting(clearcases)] + !ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
 				<posy>389</posy>
@@ -98,7 +98,7 @@
 				<width>70</width>
 				<height>70</height>
 				<include>OverlayVisibility0</include>
-				<visible>String.Contains(ListItem.Path,videodb://movies/sets)</visible>
+				<visible>ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
 				<posy>426</posy>
@@ -206,7 +206,7 @@
 				<label>$INFO[ListItem.Director]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!ListItem.IsParentFolder + Container.Content(movies) + !String.Contains(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies) + !ListItem.IsCollection</visible>
 			</control>
 			<control type="label">
 				<posx>805</posx>
@@ -217,7 +217,7 @@
 				<label>$INFO[Window(0).Property(Set.Movies.Director)]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!ListItem.IsParentFolder + Container.Content(movies) + String.Contains(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies) + ListItem.IsCollection</visible>
 			</control>
 			<control type="label">
 				<posx>650</posx>
@@ -261,7 +261,7 @@
 				<label>$INFO[ListItem.Genre]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!ListItem.IsParentFolder + Container.Content(movies) + !String.Contains(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies) + !ListItem.IsCollection</visible>
 			</control>
 			<control type="label">
 				<posx>980</posx>
@@ -272,7 +272,7 @@
 				<label>$INFO[Window(0).Property(Set.Movies.Genre)]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
-				<visible>!ListItem.IsParentFolder + Container.Content(movies) + String.Contains(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsParentFolder + Container.Content(movies) + ListItem.IsCollection</visible>
 			</control>
 		</control>
 	</include>
@@ -526,7 +526,7 @@
 						<width>55</width>
 						<height>52</height>
 						<include>OverlayVisibility0</include>
-						<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
+						<visible>![Skin.HasSetting(NoCaseForMovieset) + ListItem.IsCollection]</visible>
 					</control>
 					<control type="image">  <!-- inactive watched badges movieset view -->
 						<left>127</left>
@@ -534,7 +534,7 @@
 						<width>55</width>
 						<height>52</height>
 						<include>OverlayVisibility0</include>
-						<visible>[Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
+						<visible>[Skin.HasSetting(NoCaseForMovieset) + ListItem.IsCollection]</visible>
 					</control>
 					<control type="image"> <!-- inactive resume badges -->
 						<left>126</left>
@@ -606,7 +606,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !String.Contains(ListItem(0).Path,videodb://movies/sets) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !ListItem.IsCollection + !Skin.Hassetting(Fakehanddisccolor)</visible>
 						</control>
 						<control type="image">
 							<left>-5</left>
@@ -620,7 +620,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !String.Contains(ListItem(0).Path,videodb://movies/sets) + Skin.Hassetting(fakehanddisccolor)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !ListItem.IsCollection + Skin.Hassetting(fakehanddisccolor)</visible>
 						</control>
 						<control type="textbox">
 							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(Container.ListItem.Art(discart))" reversible="false">
@@ -634,7 +634,7 @@
 							<font>Hand_14</font>
 							<align>center</align>
 							<aligny>top</aligny>
-							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !String.Contains(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
 						</control>
@@ -647,7 +647,7 @@
 							<top>67</top>
 							<width>90</width>
 							<height>40</height>
-							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !String.Contains(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<control type="image">
 								<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 							</control>
@@ -734,7 +734,7 @@
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
 							<aspectratio align="center" aligny="top">scale</aspectratio>
 							<bordersize>2</bordersize>
-							<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + [Skin.Hassetting(usecases) | Skin.Hassetting(clearcases)] + !String.Contains(ListItem(0).Path,videodb://movies/sets)</visible>
+							<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + [Skin.Hassetting(usecases) | Skin.Hassetting(clearcases)] + !ListItem.IsCollection</visible>
 						</control>
 						<!--Cases End -->
 						<control type="image">   <!-- movie watched badge bdcase/colorcase active -->
@@ -858,7 +858,7 @@
 						<width>50</width>
 						<height>47</height>
 						<include>OverlayVisibility0</include>
-						<visible>![Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
+						<visible>![Skin.HasSetting(NoCaseForMovieset) + ListItem.IsCollection]</visible>
 					</control>
 					<control type="image">  <!-- inactive watch badges movieset -->
 						<left>86</left>
@@ -866,7 +866,7 @@
 						<width>50</width>
 						<height>47</height>
 						<include>OverlayVisibility0</include>
-						<visible>[Skin.HasSetting(NoCaseForMovieset) + String.Contains(ListItem(0).Path,videodb://movies/sets)]</visible>
+						<visible>[Skin.HasSetting(NoCaseForMovieset) + ListItem.IsCollection]</visible>
 					</control>
 					<control type="image">    <!-- inactive resume badges -->
 						<left>86</left>
@@ -938,7 +938,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !String.Contains(ListItem(0).Path,videodb://movies/sets) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !ListItem.IsCollection + !Skin.Hassetting(Fakehanddisccolor)</visible>
 						</control>
 						<control type="image">
 							<left>-3</left>
@@ -952,7 +952,7 @@
 								<effect type="rotate" end="-360" center="auto" time="6400" delay="1200" tween="cubic" easing="inout"/>
 							</animation>
 							<bordersize>7</bordersize>
-							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !String.Contains(ListItem(0).Path,videodb://movies/sets) + Skin.Hassetting(fakehanddisccolor)</visible>
+							<visible>Skin.Hassetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(Fakedischandwriting) + !ListItem.IsCollection + Skin.Hassetting(fakehanddisccolor)</visible>
 						</control>
 						<control type="textbox">
 							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(Container.ListItem.Art(discart))" reversible="false">
@@ -966,7 +966,7 @@
 							<font>Hand_10</font>
 							<align>center</align>
 							<aligny>top</aligny>
-							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !String.Contains(ListItem.Path,videodb://movies/sets) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Title]</label>
 							<textcolor>black</textcolor>
 						</control>
@@ -979,7 +979,7 @@
 							<top>52</top>
 							<width>70</width>
 							<height>30</height>
-							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !String.Contains(ListItem.Path,videodb://movies/sets) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
+							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<control type="image">
 								<texture background="true" fallback="empty.png">$INFO[ListItem.Art(clearlogo)]</texture>
 							</control>
@@ -1059,7 +1059,7 @@
 							<!--aspectratio align="center" aligny="top">scale</aspectratio-->
 							<aspectratio>keep</aspectratio>
 							<bordersize>2</bordersize>
-							<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + [Skin.Hassetting(usecases) | Skin.Hassetting(clearcases)] + !String.Contains(ListItem(0).Path,videodb://movies/sets)</visible>
+							<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + [Skin.Hassetting(usecases) | Skin.Hassetting(clearcases)] + !ListItem.IsCollection</visible>
 						</control>
 						<!--Cases End -->
 						<control type="image">     <!-- movie watched badge bdcase/colorcase active -->

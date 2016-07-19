@@ -7,7 +7,7 @@
 			<width>375</width>
 			<height>512</height>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-			<visible>Container.Content(movies) + [Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases) + !Skin.HasSetting(colorcases)] + !SubString(ListItem(0).Path,videodb://movies/sets)</visible>
+			<visible>Container.Content(movies) + [Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases) + !Skin.HasSetting(colorcases)] + !ListItem.IsCollection</visible>
 		</control>
 		<control type="image">
 			<left>-43</left>
@@ -15,7 +15,7 @@
 			<width>372</width>
 			<height>511</height>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-			<visible>Container.Content(movies) + [Skin.HasSetting(usecases) + Skin.HasSetting(clearcases) + !Skin.HasSetting(colorcases)] + !SubString(ListItem(0).Path,videodb://movies/sets)</visible>
+			<visible>Container.Content(movies) + [Skin.HasSetting(usecases) + Skin.HasSetting(clearcases) + !Skin.HasSetting(colorcases)] + !ListItem.IsCollection</visible>
 		</control>
 		<control type="image">
 			<left>-52</left>
@@ -23,7 +23,7 @@
 			<width>386</width>
 			<height>526</height>
 			<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
-			<visible>Container.Content(movies) + [Skin.HasSetting(usecases) + Skin.HasSetting(colorcases)] + !SubString(ListItem(0).Path,videodb://movies/sets)</visible>
+			<visible>Container.Content(movies) + [Skin.HasSetting(usecases) + Skin.HasSetting(colorcases)] + !ListItem.IsCollection</visible>
 		</control>
 	</include>
 

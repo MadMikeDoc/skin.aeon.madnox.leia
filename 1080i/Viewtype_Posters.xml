@@ -2605,7 +2605,7 @@
 						<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[ListItem.Art(poster)]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight)">Conditional</animation><bordersize>7</bordersize>
-						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + !SubString(ListItem(0).Path,videodb://movies/sets) + Skin.Hassetting(fakediscart)</visible>
+						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + !ListItem.IsCollection + Skin.Hassetting(fakediscart)</visible>
 					</control>
 					<control type="image">
 						<left>660</left>
@@ -2616,7 +2616,7 @@
 						<texture background="true">$VAR[FakeDiscArtOverlay]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight)">Conditional</animation><bordersize>7</bordersize>
-						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem(0).Path,videodb://movies/sets)  + Container.Content(movies) + Skin.Hassetting(fakediscart)</visible>
+						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection  + Container.Content(movies) + Skin.Hassetting(fakediscart)</visible>
 					</control>
 					<control type="image">
 						<left>660</left>
@@ -2628,7 +2628,7 @@
 						<fadetime>4000</fadetime>
 						<colordiffuse>22FFFFFF</colordiffuse>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight)">Conditional</animation><bordersize>7</bordersize>
-						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + !String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem(0).Path,videodb://movies/sets)</visible>
+						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + !String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
 					</control>
 					<control type="image">
 						<left>660</left>
@@ -2641,7 +2641,7 @@
 						<colordiffuse>22FFFFFF</colordiffuse>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight)">Conditional</animation><bordersize>7</bordersize>
 						<bordersize>7</bordersize>
-						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + !SubString(ListItem(0).Path,videodb://movies/sets) + Skin.Hassetting(Fakediscart)</visible>
+						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + !ListItem.IsCollection + Skin.Hassetting(Fakediscart)</visible>
 					</control>
 					<control type="image">
 						<left>660</left>
@@ -2654,7 +2654,7 @@
 						<colordiffuse>22FFFFFF</colordiffuse>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight)">Conditional</animation><bordersize>7</bordersize>
 						<bordersize>7</bordersize>
-						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem(0).Path,videodb://movies/sets)  + Container.Content(movies) + Skin.Hassetting(fakediscart)</visible>
+						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection  + Container.Content(movies) + Skin.Hassetting(fakediscart)</visible>
 					</control>
 					<control type="image">
 						<left>660</left>
@@ -2665,7 +2665,7 @@
 						<texture background="true">$VAR[FakeDischand]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight)">Conditional</animation><bordersize>7</bordersize>
-						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem(0).Path,videodb://movies/sets)  + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting)</visible>
+						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection  + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting)</visible>
 					</control>
 					<control type="image">
 						<left>660</left>
@@ -2678,7 +2678,7 @@
 						<colordiffuse>22FFFFFF</colordiffuse>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight)">Conditional</animation><bordersize>7</bordersize>
 						<bordersize>7</bordersize>
-						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem(0).Path,videodb://movies/sets)  + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting)</visible>
+						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection  + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting)</visible>
 					</control>
 					<control type="image">
 						<left>660</left>
@@ -2689,7 +2689,7 @@
 						<texture background="true">$VAR[FakeDischandcolor]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight)">Conditional</animation><bordersize>7</bordersize>
-						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem(0).Path,videodb://movies/sets)  + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(fakehanddisccolor)</visible>
+						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection  + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(fakehanddisccolor)</visible>
 					</control>
 					<control type="image">
 						<left>660</left>
@@ -2702,7 +2702,7 @@
 						<colordiffuse>22FFFFFF</colordiffuse>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt) + Skin.HasSetting(PostersDiscArtRight)">Conditional</animation><bordersize>7</bordersize>
 						<bordersize>7</bordersize>
-						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !SubString(ListItem(0).Path,videodb://movies/sets)  + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(fakehanddisccolor)</visible>
+						<visible>Skin.HasSetting(PostersDiscArt)  + Skin.HasSetting(PostersDiscArtRight) + String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection  + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + Skin.Hassetting(fakehanddisccolor)</visible>
 					</control>
 					<control type="textbox">
 						<left>610</left>
@@ -2729,7 +2729,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>ListItem.IsCollection + [SubString(ListItem(0).Path,videodb://movies/sets) | Container.Content(sets)]</visible>
+					<visible>ListItem.IsCollection + [ListItem.IsCollection | Container.Content(sets)]</visible>
 					<visible>Control.HasFocus(5106) + Skin.HasSetting(PostersDiscArt)</visible>
 					<control type="image">
 						<left>1260</left>

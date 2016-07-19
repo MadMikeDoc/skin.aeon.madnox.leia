@@ -191,7 +191,7 @@
 				<width>168</width>
 				<height>165</height>
 				<include>OverlayVisibility0</include>
-				<visible>!SubString(ListItem(0).Path,videodb://movies/sets)</visible>
+				<visible>!ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
 				<left>1751</left>
@@ -1749,7 +1749,7 @@
 				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="835,0" delay="0" time="800" tween="cubic" easing="inout" condition="!Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus) + !Skin.HasSetting(KodiFlixTVShortList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="210,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">Conditional</animation>
-				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.HasSetting(KodiFlixClearArtView) + !Skin.HasSetting(KodiFlixDiscArtView)] + [!Skin.Hassetting(KodiFlixCases) | SubString(ListItem(0).Path,videodb://movies/sets) | !Skin.HasSetting(usecases)]</visible>
+				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.HasSetting(KodiFlixClearArtView) + !Skin.HasSetting(KodiFlixDiscArtView)] + [!Skin.Hassetting(KodiFlixCases) | ListItem.IsCollection | !Skin.HasSetting(usecases)]</visible>
 				<animation type="Focus" reversible="false" condition="Container(820).OnNext">
 					<effect type="slide" start="26,0" end="0,0" time="150" tween="Cubic" easing="out" />
 					<effect type="fade" start="20" end="100" time="750" delay="0" tween="sine" easing="out" />
@@ -1767,7 +1767,7 @@
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<texture border="15">views/addonwall_select.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.HasSetting(KodiFlixClearArtView) + !Skin.HasSetting(KodiFlixDiscArtView)] + [[Skin.Hassetting(KodiFlixCases) + !SubString(ListItem(0).Path,videodb://movies/sets)] + [Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases) + !Skin.HasSetting(colorcases)]]</visible>
+				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.HasSetting(KodiFlixClearArtView) + !Skin.HasSetting(KodiFlixDiscArtView)] + [[Skin.Hassetting(KodiFlixCases) + !ListItem.IsCollection] + [Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases) + !Skin.HasSetting(colorcases)]]</visible>
 				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="835,0" delay="0" time="800" tween="cubic" easing="inout" condition="!Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus) + !Skin.HasSetting(KodiFlixTVShortList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="210,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">Conditional</animation>
@@ -1788,7 +1788,7 @@
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<texture border="15">views/addonwall_select.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.HasSetting(KodiFlixClearArtView) + !Skin.HasSetting(KodiFlixDiscArtView)] + [[Skin.Hassetting(KodiFlixCases) + !SubString(ListItem(0).Path,videodb://movies/sets)] + [Skin.HasSetting(usecases) + Skin.HasSetting(colorcases) + !Skin.HasSetting(clearcases)]]</visible>
+				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.HasSetting(KodiFlixClearArtView) + !Skin.HasSetting(KodiFlixDiscArtView)] + [[Skin.Hassetting(KodiFlixCases) + !ListItem.IsCollection] + [Skin.HasSetting(usecases) + Skin.HasSetting(colorcases) + !Skin.HasSetting(clearcases)]]</visible>
 				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="835,0" delay="0" time="800" tween="cubic" easing="inout" condition="!Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus) + !Skin.HasSetting(KodiFlixTVShortList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="210,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">Conditional</animation>
@@ -1809,7 +1809,7 @@
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<texture border="15">views/addonwall_select.png</texture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.HasSetting(KodiFlixClearArtView) + !Skin.HasSetting(KodiFlixDiscArtView)] + [Skin.Hassetting(KodiFlixCases) + !SubString(ListItem(0).Path,videodb://movies/sets) + Skin.HasSetting(usecases) + Skin.HasSetting(clearcases)]</visible>
+				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.HasSetting(KodiFlixClearArtView) + !Skin.HasSetting(KodiFlixDiscArtView)] + [Skin.Hassetting(KodiFlixCases) + !ListItem.IsCollection + Skin.HasSetting(usecases) + Skin.HasSetting(clearcases)]</visible>
 				<animation effect="slide" start="0,0" end="620,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="835,0" delay="0" time="800" tween="cubic" easing="inout" condition="!Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus) + !Skin.HasSetting(KodiFlixTVShortList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="210,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">Conditional</animation>
@@ -1833,7 +1833,7 @@
 				<animation effect="slide" start="0,0" end="835,0" delay="0" time="800" tween="cubic" easing="inout" condition="!Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus) + !Skin.HasSetting(KodiFlixTVShortList)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="210,0" delay="0" time="800" tween="cubic" easing="inout" condition="Skin.Hassetting(KodiFlixTVCenterList) + Skin.HasSetting(KodiFlixTVCenterFocus)">Conditional</animation>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.HasSetting(KodiFlixClearArtView) + !Skin.HasSetting(KodiFlixDiscArtView)] + [!Skin.Hassetting(KodiFlixCases) | SubString(ListItem(0).Path,videodb://movies/sets) | !Skin.HasSetting(usecases)] | [[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(KodiFlixTVPosters)]</visible>
+				<visible>[[Container.Content(Movies) | Container.Content(Sets)] + ![[Container.Content(tvshows) | Container.Content(tvshows)] + Skin.HasSetting(KodiFlixBoxsets)] + !Skin.HasSetting(KodiFlixLandscapeView) + !Skin.HasSetting(KodiFlixClearArtView) + !Skin.HasSetting(KodiFlixDiscArtView)] + [!Skin.Hassetting(KodiFlixCases) | ListItem.IsCollection | !Skin.HasSetting(usecases)] | [[Container.Content(tvshows) | Container.Content(seasons)] + Skin.HasSetting(KodiFlixTVPosters)]</visible>
 			</control>
 			<control type="image">
 				<left>45</left>
