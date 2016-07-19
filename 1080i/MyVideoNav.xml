@@ -726,7 +726,7 @@
 						<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
 					</control>
 					<control type="group">
-						<animation effect="rotatey" center="1230" start="-12" end="-12" time="0" condition="!Skin.HasSetting(Shelf3DFlatDiscs)">Conditional + !String.IsEmpty($INFO[Window(home).Property(SkinHelper.MovieSet.0.Poster)])</animation>
+						<animation effect="rotatey" center="1230" start="-12" end="-12" time="0" condition="!Skin.HasSetting(Shelf3DFlatDiscs)">Conditional</animation>
 						<left>2530</left>
 						<top>704</top>
 						<width>290</width>

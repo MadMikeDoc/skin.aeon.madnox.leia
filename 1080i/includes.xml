@@ -42,7 +42,6 @@
 	<include file="Includes_LiveBG.xml" />
 	<include file="Includes_Visualization.xml"/>
 	<include file="Includes_Breadcrumbs.xml"/>
-	<include file="Includes_Weather.xml"/>
 	<include file="Includes_MainMenu.xml"/>
 	<include file="Includes_Widgets.xml"/>
 	<include file="Variables_Widgets.xml"/>
