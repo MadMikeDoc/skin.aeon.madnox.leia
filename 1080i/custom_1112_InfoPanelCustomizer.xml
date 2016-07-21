@@ -53,13 +53,6 @@
 				<onright>451</onright>
 				<onup>450</onup>
 				<ondown>450</ondown>
-
-				<!-- Infopanel Label start -->
-				<!--<control type="button" id="900">
-                    <label>$LOCALIZE[31166]</label>
-                    <include>Objects_MediaMenuLabelAlt2</include>
-                    <enable>no</enable>
-                </control>-->
 				<!-- Infopanel Label end -->
 				<control type="button" id="904">
 					<label>$LOCALIZE[31272]:</label>
