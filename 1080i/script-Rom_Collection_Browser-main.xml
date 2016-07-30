@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<backgroundcolor>backgroundcolor</backgroundcolor>
 	<defaultcontrol always="false">2</defaultcontrol>
 	<coordinates>
 		<left>0</left>

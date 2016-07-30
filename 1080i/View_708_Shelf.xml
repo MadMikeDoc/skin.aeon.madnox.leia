@@ -71,7 +71,7 @@
 					</control>
 				</control>
 				<control type="textbox">
-					<label>$VAR[VideoPlotVar]</label>
+					<label>$VAR[VideoPlotVar3]</label>
 					<top>345</top>
 					<left>136</left>
 					<width>970</width>

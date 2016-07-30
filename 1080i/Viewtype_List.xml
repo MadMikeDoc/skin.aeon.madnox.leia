@@ -871,7 +871,7 @@
 						<height>396</height>
 						<align>left</align>
 						<font>font_cdvv_20</font>
-						<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31152]:[/COLOR] $VAR[MovieDuration]</label>
+						<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31152]:[/COLOR] $INFO[ListItem.Duration]</label>
 					</control>
 					<!--Duration reflection-->
 					<!--control type="label">
@@ -881,7 +881,7 @@
 							<height>396</height>
 							<align>left</align>
 							<font>font_cdvv_20</font>
-							<label>$LOCALIZE[31152]: $VAR[MovieDuration]</label>
+							<label>$LOCALIZE[31152]: $INFO[ListItem.Duration]</label>
 							<animation effect="rotatex" start="180" end="180" time="0" condition="true">Conditional</animation>
 						</control-->
 

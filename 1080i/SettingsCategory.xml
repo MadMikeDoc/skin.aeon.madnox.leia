@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<backgroundcolor>backgroundcolor</backgroundcolor>
 	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
 	<animation type="WindowOpen" reversible="false" condition="![Window.Previous(settings) | Window.Previous(skinsettings)]">
 		<effect type="zoom" start="150" end="100" center="960,540" time="720" tween="cubic" />
@@ -99,7 +98,7 @@
 				<description>separator image</description>
 				<height>7</height>
 				<texture colordiffuse="$VAR[FocusTextureColorVar]" border="15">settings/settings_separator2.png</texture>
-			</control>	
+			</control>
 			<control type="label" id="14">
 				<description>Default Label</description>
 				<width>1256</width>
@@ -120,7 +119,7 @@
 				<width>1467</width>
 				<height>7</height>
 				<texture colordiffuse="$VAR[FocusTextureColorVar]" border="15">settings/settings_separator2.png</texture>
-			</control>	
+			</control>
 		</control>
 		<control type="group">
 			<include>Animation_HideBreadCrumbs</include>

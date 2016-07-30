@@ -499,14 +499,6 @@
 					<include>AudioFlagsVars</include>
 					<include>VisibleFadeEffect</include>
 				</control>
-				<!--control type="image">
-					<left>1200</left>
-					<colordiffuse>grey</colordiffuse>
-					<include>MediaFlagVars</include>
-					<texture>$VAR[PathFlagsAudioChannels]</texture>
-					<visible>!String.IsEmpty(ListItem.AudioChannels) + !Container.Content(seasons)</visible>
-					<include>VisibleFadeEffect</include>
-				</control-->
 				<control type="group">
 					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 					<include>VisibleFadeEffect</include>

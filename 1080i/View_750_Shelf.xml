@@ -104,7 +104,7 @@
 				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(Shelf3DFlatInfoPanel)">
 					<effect type="slide" start="0,0" end="-200,0" time="350" tween="cubic" easing="out" />
 				</animation>
-				<label>$VAR[VideoPlotVar]</label>
+				<label>$VAR[VideoPlotVar3]</label>
 				<top>290</top>
 				<left>286</left>
 				<include condition="!Skin.HasSetting(Shelf3DFlatInfoPanel)">3DPlotDimensions</include>

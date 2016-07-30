@@ -423,7 +423,7 @@
 				<visible>!Skin.HasSetting(LogoBehindPlot) + !String.IsEmpty(Container.ListItem.Art(clearlogo)) + String.IsEmpty(Container.ListItem.Art(extrafanart1)) + !String.IsEmpty(Container.ListItem.Art(clearart)) + ListItem.IsCollection</visible>
 			</control>
 			<control type="textbox">
-				<label>$VAR[VideoPlotVar]</label>
+				<label>$VAR[VideoPlotVar3]</label>
 				<posy>727</posy>
 				<posx>1130</posx>
 				<width>655</width>

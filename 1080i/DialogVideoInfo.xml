@@ -405,7 +405,7 @@
 										<width>155</width>
 										<height>60</height>
 										<align>center</align>
-										<label>$VAR[MovieDuration]</label>
+										<label>$INFO[ListItem.Duration]</label>
 										<font>Font_Bold34</font>
 										<textcolor>white2</textcolor>
 									</control>

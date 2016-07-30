@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="1158" type="window">
 	<defaultcontrol always="true">450</defaultcontrol>
-	<backgroundcolor>backgroundcolor</backgroundcolor>
 	<onload>Notification($LOCALIZE[31902],$LOCALIZE[31878])</onload>
 	<coordinates>
 		<left>0</left>

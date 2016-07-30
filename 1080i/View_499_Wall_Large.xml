@@ -236,7 +236,7 @@
 				<width>100</width>
 				<height>15</height>
 				<textcolor>white6</textcolor>
-				<label>$VAR[MovieDuration]</label>
+				<label>$INFO[ListItem.Duration]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
 				<visible>!ListItem.IsParentFolder + Container.Content(movies)</visible>
