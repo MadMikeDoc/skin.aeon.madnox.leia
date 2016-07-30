@@ -419,7 +419,7 @@
 	</variable>
 	<variable name="HomeWidgetInfoIconColor">
 		<value condition="Skin.HasSetting(AspectRatioColorFlag) | Skin.HasSetting(AudioColorFlag) | Skin.HasSetting(RatingColorFlag) | Skin.HasSetting(ResolutionColorFlag) | Skin.HasSetting(SourceColorFlag) | Skin.HasSetting(StudiosColorFlag)">FFFFFFFF</value>
-		<value condition="Skin.HasSetting(Colortdefaulticons)">FFFFFFFF</value>
+		<value condition="Skin.HasSetting(ColorDefaultIcons)">FFFFFFFF</value>
 		<value condition="Skin.HasSetting(Enable.GlobalWidgetBack) + Skin.HasSetting(Enable.OnInfoMatch) + [String.IsEqual(Skin.String(Widget.Back),Clear White) | String.IsEqual(Skin.String(Widget.Back),Colored Clear White)]">black</value>
 		<value condition="!Skin.HasSetting(Enable.GlobalWidgetBack) + Skin.HasSetting(Enable.OnInfoMatch) + String.IsEqual(Window(Home).Property(Widget.Background),homewidgets/bg_clearwhite.png)">black</value>
 		<value condition="Skin.HasSetting(Enable.GlobalWidgetBack) + Skin.HasSetting(Enable.OnInfoMatch) + [String.IsEqual(Skin.String(Widget.Back),Clear) | String.IsEqual(Skin.String(Widget.Back),Colored Clear)]">white6</value>

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<backgroundcolor>backgroundcolor</backgroundcolor>
 	<onload condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=2&amp;group=mainmenu|madnox-quicknav)</onload>
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,7)</onload>
-	<onload>ClearProperty(DontRunTVShowScripts,Home)</onload>
 	<onload condition="!Skin.HasSetting(backendmode)">Skin.SetBool(backendmode)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
@@ -340,15 +338,6 @@
 					<aspectratio>keep</aspectratio>
 				</control>
 			</control>
-		</control>
-		<control type="image">
-			<texture colordiffuse="base1">diffuseoverlay_blue.png</texture>
-			<include>FullscreenDimensions</include>
-			<animation effect="fade" time="200">WindowOpen</animation>
-			<animation effect="fade" time="200">WindowClose</animation>
-			<animation effect="fade" end="100" time="440" delay="160">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="320">Hidden</animation>
-			<visible>Skin.HasSetting(BlueOverlay)</visible>
 		</control>
 		<!-- Home Fullscreen Video -->
 		<control type="group">

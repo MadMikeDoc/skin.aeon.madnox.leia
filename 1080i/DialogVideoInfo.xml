@@ -489,7 +489,7 @@
 									<height>45</height>
 									<top>2</top>
 									<aspectratio align="center">keep</aspectratio>
-									<texture colordiffuse="white" background="true">$VAR[Colortdefaulticons]DefaultCountry.png</texture>
+									<texture colordiffuse="white" background="true">$VAR[ColorDefaultIcons]DefaultCountry.png</texture>
 								</control>
 								<control type="label">
 									<width>840</width>
@@ -511,7 +511,7 @@
 									<width>50</width>
 									<height>50</height>
 									<aspectratio align="right">keep</aspectratio>
-									<texture colordiffuse="white" background="true">$VAR[Colortdefaulticons]director-icon.png</texture>
+									<texture colordiffuse="white" background="true">$VAR[ColorDefaultIcons]director-icon.png</texture>
 								</control>
 								<control type="label">
 									<left>180</left>
@@ -534,7 +534,7 @@
 									<top>2</top>
 									<height>45</height>
 									<aspectratio align="center">keep</aspectratio>
-									<texture colordiffuse="white">$VAR[Colortdefaulticons]DefaultInProgressShows.png</texture>
+									<texture colordiffuse="white">$VAR[ColorDefaultIcons]DefaultInProgressShows.png</texture>
 								</control>
 								<control type="label">
 									<width>840</width>
@@ -554,7 +554,7 @@
 									<width>50</width>
 									<height>50</height>
 									<aspectratio align="right">keep</aspectratio>
-									<texture colordiffuse="white">$VAR[Colortdefaulticons]writer-icon.png</texture>
+									<texture colordiffuse="white">$VAR[ColorDefaultIcons]writer-icon.png</texture>
 								</control>
 								<control type="label">
 									<left>180</left>
@@ -881,7 +881,7 @@
 									<width>97</width>
 									<height>75</height>
 									<aspectratio aligny="top" align="right">keep</aspectratio>
-									<texture colordiffuse="white">$VAR[Colortdefaulticons]DefaultTVShows.png</texture>
+									<texture colordiffuse="white">$VAR[ColorDefaultIcons]DefaultTVShows.png</texture>
 								</control>
 								<control type="group">
 									<control type="label">
@@ -962,7 +962,7 @@
 							<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="1760,810" end="-720" time="700" tween="quadratic" easing="out"/>
 						</animation>
-						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + String.IsEqual(ListItem.DBType,movie) + !SubString(ListItem.Path,videodb://movies/sets/) + Skin.HasSetting(Fakediscart)</visible>
+						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + String.IsEqual(ListItem.DBType,movie) + !ListItem.IsCollection + Skin.HasSetting(Fakediscart)</visible>
 					</control>
 					<control type="image">
 						<left>1610</left>
@@ -980,7 +980,7 @@
 							<effect type="slide" start="0,0" end="4600" time="700" tween="quadratic" easing="out"/>
 							<effect type="rotate" start="0" center="1760,810" end="-720" time="700" tween="quadratic" easing="out"/>
 						</animation>
-						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + String.IsEqual(ListItem.DBType,movie) + !SubString(ListItem.Path,videodb://movies/sets/) + Skin.HasSetting(Fakediscart)</visible>
+						<visible>String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + String.IsEqual(ListItem.DBType,movie) + !ListItem.IsCollection + Skin.HasSetting(Fakediscart)</visible>
 					</control>
 					<!-- Fake Disc End -->
 					<control type="list" id="50">

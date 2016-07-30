@@ -2,7 +2,6 @@
 <includes>
 	<!-- Video RightList -->
 	<include name="Video_RightList">
-		<onload>RunScript(script.duration,backend=True)</onload>
 		<control type="group">
 			<visible>Control.IsVisible(700) + !Window.IsActive(addoninformation)</visible>
 			<include>ViewAnimation</include>
@@ -717,21 +716,7 @@
 						<label>$INFO[ListItem.RatingAndVotes,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
 						<visible>![ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
-						<!--visible>![ListItem.IsCollection + !ListItem.IsParentFolder] + !System.Hasaddon(script.duration)</visible-->
 					</control>
-					<!--control type="label">
-						<onfocus>RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>
-						<left>30</left>
-						<top>27</top>
-						<width>600</width>
-						<height>68</height>
-						<font>font13</font>
-						<align>right</align>
-						<selectedcolor>selected</selectedcolor>
-						<label>$INFO[ListItem.RatingAndVotes,, • ]$VAR[MovieDuration]</label>
-						<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(700)">Conditional</animation>
-						<visible>![ListItem.IsCollection + !ListItem.IsParentFolder] + System.Hasaddon(script.duration)</visible>
-					</control-->
 					<control type="label">
 						<left>630</left>
 						<top>8</top>

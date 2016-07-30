@@ -1491,7 +1491,7 @@
 							<fadetime>400</fadetime>
 							<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 							<bordersize>7</bordersize>
-							<visible>SubString(ListItem.Path,videodb://movies/sets/)</visible>
+							<visible>ListItem.IsCollection</visible>
 						</control>
 
 						<control type="multiimage">

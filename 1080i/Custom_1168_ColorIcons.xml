@@ -339,8 +339,8 @@
 				<control type="radiobutton" id="602">
 					<label>$LOCALIZE[31975]</label>
 					<include>Objects_SubMediaMenuButtonAround</include>
-					<onclick>Skin.ToggleSetting(Colortdefaulticons)</onclick>
-					<selected>Skin.HasSetting(Colortdefaulticons)</selected>
+					<onclick>Skin.ToggleSetting(ColorDefaultIcons)</onclick>
+					<selected>Skin.HasSetting(ColorDefaultIcons)</selected>
 				</control>
 			</control>
 			<control type="grouplist" id="600">
@@ -498,7 +498,7 @@
 					<onclick>Skin.Reset(SourceColorFlag)</onclick>
 					<onclick>Skin.Reset(StudiosColorFlag)</onclick>
 					<onclick>Skin.Reset(AllColorFlags)</onclick>
-					<onclick>Skin.Reset(Colortdefaulticons)</onclick>
+					<onclick>Skin.Reset(ColorDefaultIcons)</onclick>
 					<onclick>Skin.Reset(ColorFlags)</onclick>
 				</control>
 			</control>
@@ -743,42 +743,42 @@
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultFolderBackList.png</texture>
+					<texture colordiffuse="white2">$VAR[ColorDefaultIcons]DefaultFolderBackList.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultRecentlyAddedMusicVideos.png</texture>
+					<texture colordiffuse="white2">$VAR[ColorDefaultIcons]DefaultRecentlyAddedMusicVideos.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultAddonVideo.png</texture>
+					<texture colordiffuse="white2">$VAR[ColorDefaultIcons]DefaultAddonVideo.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultActor.png</texture>
+					<texture colordiffuse="white2">$VAR[ColorDefaultIcons]DefaultActor.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultAddonMusicVideoInfo.png</texture>
+					<texture colordiffuse="white2">$VAR[ColorDefaultIcons]DefaultAddonMusicVideoInfo.png</texture>
 				</control>
 				<control type="image">
 					<top>5</top>
 					<width>122</width>
 					<height>60</height>
 					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="white2">$VAR[Colortdefaulticons]DefaultMoviesRecentlyPlayed.png</texture>
+					<texture colordiffuse="white2">$VAR[ColorDefaultIcons]DefaultMoviesRecentlyPlayed.png</texture>
 				</control>
 			</control>
 			<control type="grouplist" id="700">

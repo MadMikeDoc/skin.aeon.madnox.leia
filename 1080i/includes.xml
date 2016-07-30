@@ -51,6 +51,9 @@
 	<include file="Includes_VideoExtras.xml"/>
 	<include file="script-skinshortcuts-includes.xml" />
 	<constant name="AutoScrollTime">2000</constant>
+	<constant name="FanartCrossfadeTime">500</constant>
+	<constant name="IconCrossfadeTime">400</constant>
+	<constant name="IconCrossfadeTime2">250</constant>
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>60</height>
 		<width>254</width>
@@ -769,34 +772,15 @@
 	</include>
 	<include name="DialogBackFade">
 		<control type="image">
-			<texture colordiffuse="base">diffuseoverlay_blue.png</texture>
-			<include>FullscreenDimensions</include>
-			<animation effect="fade" start="100" end="0" time="240" condition="Window.IsVisible(fullscreenvideo)">Conditional</animation>
-			<animation effect="fade" end="100" time="560">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
-			<visible>Skin.HasSetting(BlueOverlay)</visible>
-		</control>
-		<control type="image">
 			<texture colordiffuse="$VAR[SpotColorVar2]">diffuseoverlay.png</texture>
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" start="100" end="0" time="240" condition="Window.IsVisible(fullscreenvideo)">Conditional</animation>
 			<animation effect="fade" end="100" time="560">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
-			<visible>!Skin.HasSetting(BlueOverlay)</visible>
 		</control>
 	</include>
 	<include name="ContextMenuOverlay">
 		<control type="image">
-			<texture colordiffuse="base">diffuseoverlay_blue.png</texture>
-			<include>FullscreenDimensions</include>
-			<animation effect="fade" end="100" time="560">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
-			<visible>Window.IsActive(contextmenu)</visible>
-			<animation effect="fade" time="560">Visible</animation>
-			<animation effect="fade" time="320">Hidden</animation>
-			<visible>Skin.HasSetting(BlueOverlay)</visible>
-		</control>
-		<control type="image">
 			<texture colordiffuse="$VAR[SpotColorVar2]">diffuseoverlay.png</texture>
 			<include>FullscreenDimensions</include>
 			<animation effect="fade" end="100" time="560">WindowOpen</animation>
@@ -804,7 +788,6 @@
 			<visible>Window.IsActive(contextmenu)</visible>
 			<animation effect="fade" time="560">Visible</animation>
 			<animation effect="fade" time="320">Hidden</animation>
-			<visible>!Skin.HasSetting(BlueOverlay)</visible>
 		</control>
 	</include>
 	<include name="FileManagerPanels">

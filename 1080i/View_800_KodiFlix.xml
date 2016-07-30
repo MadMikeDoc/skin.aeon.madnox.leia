@@ -461,44 +461,13 @@
 					<effect type="slide" start="0,0" end="0,250" delay="1000" time="350" tween="cubic" easing="out" />
 				</animation>
 				<control type="image">
-					<left>386</left>
-					<top>374</top>
-					<height>30</height>
-					<width>71</width>
-					<align>center</align>
-					<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
-					<visible>!ListItem.IsCollection + !Container.Content(episodes)  + System.HasAddon(script.duration) + [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] | !Skin.Hassetting(KodiFlixCases)] + !ListItem.IsParentFolder</visible>
-				</control>
-				<control type="image">
 					<left>486</left>
 					<top>374</top>
 					<height>30</height>
 					<width>71</width>
 					<align>center</align>
 					<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
-					<visible>!ListItem.IsCollection + !Container.Content(episodes)  + !System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + !ListItem.IsParentFolder</visible>
-				</control>
-				<control type="image">
-					<left>386</left>
-					<top>374</top>
-					<height>30</height>
-					<width>71</width>
-					<align>center</align>
-					<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
-					<visible>!ListItem.IsCollection + !Container.Content(episodes)  + System.HasAddon(script.duration) + [[Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(KodiFlixCases)]</visible>
-					<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixMoviesHideFilmInfo) + !Skin.HasSetting(KodiFlixMovieBoxsets)">
-						<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-						<effect type="slide" start="0,0" end="0,20" time="350" tween="cubic" easing="out" />
-					</animation>
-				</control>
-				<control type="image">
-					<left>486</left>
-					<top>374</top>
-					<height>30</height>
-					<width>71</width>
-					<align>center</align>
-					<texture>stars/$INFO[ListItem.Rating,,.png]</texture>
-					<visible>!ListItem.IsCollection + !Container.Content(episodes)  + !System.HasAddon(script.duration) + [[Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(KodiFlixCases)]</visible>
+					<visible>!ListItem.IsCollection + !Container.Content(episodes) + [[Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(KodiFlixCases)]</visible>
 					<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixMoviesHideFilmInfo) + !Skin.HasSetting(KodiFlixMovieBoxsets)">
 						<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 						<effect type="slide" start="0,0" end="0,20" time="350" tween="cubic" easing="out" />
@@ -541,40 +510,12 @@
 					<effect type="slide" start="0,0" end="0,250" delay="1000" time="350" tween="cubic" easing="out" />
 				</animation>
 				<control type="image">
-					<left>460</left>
-					<top>364</top>
-					<width>65</width>
-					<height>60</height>
-					<texture>$VAR[Imdb_250]</texture>
-					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixIMDBIcon)</visible>
-				</control>
-				<control type="image">
-					<left>460</left>
-					<top>374</top>
-					<width>65</width>
-					<height>30</height>
-					<texture>imdb.png</texture>
-					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases) + !Skin.HasSetting(KodiFlixIMDBIcon)</visible>
-				</control>
-				<control type="Label">
-					<left>530</left>
-					<top>369</top>
-					<width>125</width>
-					<height>45</height>
-					<align>left</align>
-					<label>[B]$INFO[ListItem.Top250,#][/B]</label>
-					<font>font14</font>
-					<shadowcolor>77000000</shadowcolor>
-					<textcolor>fffeec900</textcolor>
-					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + !Skin.Hassetting(KodiFlixCases)</visible>
-				</control>
-				<control type="image">
 					<left>90</left>
 					<top>994</top>
 					<width>65</width>
 					<height>60</height>
 					<texture>$VAR[Imdb_250]</texture>
-					<visible>!String.IsEmpty(ListItem.Top250) + !System.HasAddon(script.duration) + Skin.HasSetting(KodiFlixIMDBIcon)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + Skin.HasSetting(KodiFlixIMDBIcon)</visible>
 				</control>
 				<control type="image">
 					<left>90</left>
@@ -582,7 +523,7 @@
 					<width>65</width>
 					<height>30</height>
 					<texture>imdb.png</texture>
-					<visible>!String.IsEmpty(ListItem.Top250) + !System.HasAddon(script.duration) + !Skin.HasSetting(KodiFlixIMDBIcon)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250) + !Skin.HasSetting(KodiFlixIMDBIcon)</visible>
 				</control>
 				<control type="Label">
 					<left>160</left>
@@ -594,57 +535,7 @@
 					<font>font14</font>
 					<shadowcolor>77000000</shadowcolor>
 					<textcolor>fffeec900</textcolor>
-					<visible>!String.IsEmpty(ListItem.Top250) + !System.HasAddon(script.duration)</visible>
-				</control>
-			</control>
-			<control type="group">
-				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixMoviesHideFilmInfo) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMovieBoxsets)">
-					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-					<effect type="slide" start="0,0" end="0,180" time="350" tween="cubic" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixMoviesHideFilmInfo) + !Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMovieBoxsets)">
-					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-					<effect type="slide" start="0,0" end="0,150" time="350" tween="cubic" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="Skin.HasSetting(NetFlixMoviesHideFilmInfo) + Skin.HasSetting(KodiFlixMoviesCenterList)">
-					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-					<effect type="slide" start="0,0" end="0,440" time="350" tween="cubic" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="!Skin.HasSetting(NetFlixMoviesHideFilmInfo) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixCases) + Skin.HasSetting(KodiFlixMoviesLowerInfo)">
-					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-					<effect type="slide" start="0,0" end="0,210" delay="1000" time="350" tween="cubic" easing="out" />
-				</animation>
-				<animation type="Conditional" reversible="false" condition="!Skin.HasSetting(NetFlixMoviesHideFilmInfo) + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixCases) + Skin.HasSetting(KodiFlixMoviesLowerInfo)">
-					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
-					<effect type="slide" start="0,0" end="0,250" delay="1000" time="350" tween="cubic" easing="out" />
-				</animation>
-				<control type="image">
-					<left>460</left>
-					<top>364</top>
-					<width>65</width>
-					<height>60</height>
-					<texture>$VAR[Imdb_250]</texture>
-					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + Skin.Hassetting(KodiFlixCases) + Skin.HasSetting(KodiFlixIMDBIcon)</visible>
-				</control>
-				<control type="image">
-					<left>460</left>
-					<top>374</top>
-					<width>65</width>
-					<height>30</height>
-					<texture>imdb.png</texture>
-					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + Skin.Hassetting(KodiFlixCases) + !Skin.HasSetting(KodiFlixIMDBIcon)</visible>
-				</control>
-				<control type="Label">
-					<left>530</left>
-					<top>369</top>
-					<width>125</width>
-					<height>45</height>
-					<align>left</align>
-					<label>[B]$INFO[ListItem.Top250,#][/B]</label>
-					<font>font14</font>
-					<shadowcolor>77000000</shadowcolor>
-					<textcolor>fffeec900</textcolor>
-					<visible>!String.IsEmpty(ListItem.Top250) + System.HasAddon(script.duration) + Skin.Hassetting(KodiFlixCases)</visible>
+					<visible>!String.IsEmpty(ListItem.Top250)</visible>
 				</control>
 			</control>
 			<!--Plot-->

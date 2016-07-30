@@ -6,8 +6,8 @@
 	<onload condition="System.HasAddon(script.toolbox)">RunScript(script.toolbox,daemon=True,radius=30)</onload>
 	<onload condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onload>
 	<!-- Intro Movie -->
-	<!--onload condition="!Skin.HasSetting(DisableIntro)">PlayMedia(special://skin/extras/intro.mp4,1)</onload-->
-	<!--onunload>PlayerControl(Stop)</onunload-->
+	<!-- onload condition="!Skin.HasSetting(DisableIntro)">PlayMedia(special://skin/extras/intro.mp4,1)</onload -->
+	<!-- onunload>PlayerControl(Stop)</onunload -->
 	<!-- Intro End -->
 	<onunload>Skin.SetString(SkinHelper.RandomFanartDelay,7)</onunload>
 	<animation type="WindowClose" reversible="false">
@@ -35,18 +35,16 @@
 			<animation effect="fade" start="100" end="0" time="7500">Focus</animation>
 		</control>
 		<control type="image">
-			<texture>common/white.png</texture>
+			<texture>common/black.png</texture>
 			<include>Animation_WindowFade200</include>
 			<include>FullscreenDimensions</include>
-			<colordiffuse>black</colordiffuse>
 		</control>
 		<control type="image">
 			<width>1920</width>
 			<height>1080</height>
 			<aspectratio scalediffuse="false">keep</aspectratio>
 			<texture>kodisplash.jpg</texture>
-			<!-- <colordiffuse>white</colordiffuse> -->
-			<!--visible>Skin.HasSetting(DisableIntro)</visible-->
+			<!-- visible>Skin.HasSetting(DisableIntro)</visible -->
 		</control>
 		<control type="image">
 			<left>923</left>
@@ -56,7 +54,7 @@
 			<texture colordiffuse="$VAR[ColorDiffuseVar]">spinner.png</texture>
 			<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="true">Conditional</animation>
 			<animation effect="fade" start="70" time="1200" condition="true" pulse="true">Conditional</animation>
-			<!--visible>Skin.HasSetting(DisableIntro)</visible-->
+			<!-- visible>Skin.HasSetting(DisableIntro)</visible -->
 		</control>
 		<control type="videowindow">
 			<include>FullscreenDimensions</include>

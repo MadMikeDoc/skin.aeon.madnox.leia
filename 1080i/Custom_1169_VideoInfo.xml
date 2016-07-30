@@ -155,8 +155,8 @@
 				<control type="radiobutton" id="1199">
 					<label>$LOCALIZE[31262]</label>
 					<include>Objects_MediaMenuButtonAround</include>
-					<onclick>Skin.ToggleSetting(Colortdefaulticons)</onclick>
-					<selected>Skin.HasSetting(Colortdefaulticons)</selected>
+					<onclick>Skin.ToggleSetting(ColorDefaultIcons)</onclick>
+					<selected>Skin.HasSetting(ColorDefaultIcons)</selected>
 					<visible>Container.Content(tvshows) | Container.Content(movies)</visible>
 				</control>
 				<control type="button" id="1200">

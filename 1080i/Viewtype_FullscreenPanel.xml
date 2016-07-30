@@ -2,12 +2,6 @@
 <includes>
 	<include name="Viewtype_FullscreenPanel">
 		<control type="group">
-			<control type="image">
-				<texture colordiffuse="base">diffuseoverlay_blue.png</texture>
-				<include>FullscreenDimensions</include>
-				<visible>Skin.HasSetting(infopanelbackground)</visible>
-				<visible>Skin.HasSetting(BlueOverlay)</visible>
-			</control>
 			<visible>Control.IsVisible(518)</visible>
 			<include>Animation_Widgets</include>
 			<control type="image">
@@ -19,17 +13,6 @@
 				<animation effect="fade" end="100" time="160">Visible</animation>
 				<animation effect="fade" start="100" end="0" time="160">Hidden</animation>
 				<visible>Skin.HasSetting(infopanelbackground)</visible>
-				<visible>!Skin.HasSetting(BlueOverlay)</visible>
-			</control>
-			<control type="image">
-				<include>FullscreenDimensions</include>
-				<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-				<animation effect="fade" time="200">WindowOpen</animation>
-				<animation effect="fade" time="200">WindowClose</animation>
-				<animation effect="fade" end="100" time="160">Visible</animation>
-				<animation effect="fade" start="100" end="0" time="160">Hidden</animation>
-				<visible>Skin.HasSetting(infopanelbackground)</visible>
-				<visible>Skin.HasSetting(BlueOverlay)</visible>
 			</control>
 			<control type="group">
 				<animation effect="zoom" start="96" end="85" center="960,435" time="320" tween="cubic" easing="inout" condition="!Skin.HasSetting(infopanelbackground)">Conditional</animation>
@@ -832,22 +815,12 @@
 
 					<focusedlayout width="1920" height="260" condition="[Container.Content(episodes) | Container.Content(tvshows)] + !Skin.HasSetting(infopanel2columns) + !Skin.HasSetting(infopanelfanart)">
 						<control type="image">
-							<left>390</left>
-							<top>15</top>
-							<width>1480</width>
-							<height>210</height>
-							<texture colordiffuse="1affffff">white.png</texture>
-							<bordersize>5</bordersize>
-							<visible>Skin.HasSetting(BlueOverlay)</visible>
-						</control>
-						<control type="image">
 							<top>10</top>
 							<width>1940</width>
 							<height>220</height>
 							<texture border="8">views/tripanel/listselect_fo.png</texture>
 							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 							<bordersize>5</bordersize>
-							<visible>!Skin.HasSetting(BlueOverlay)</visible>
 						</control>
 						<control type="image">
 							<left>5</left>

@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="LowListMusic">
-		<control type="image">
-			<texture colordiffuse="base">diffuseoverlay_blue.png</texture>
-			<include>FullscreenDimensions</include>
-			<visible>Control.IsVisible(506)</visible>
-			<visible>Skin.HasSetting(BlueOverlay)</visible>
-		</control>
 		<control type="group">
 			<visible>Control.IsVisible(506)</visible>
 			<control type="button" id="802">

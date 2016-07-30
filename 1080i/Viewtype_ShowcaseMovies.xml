@@ -2823,7 +2823,7 @@
 			<animation type="Conditional" condition="Control.IsVisible(961) + !Control.IsVisible(6000) + Skin.HasSetting(OpenCase)" reversible="true">
 				<effect type="rotate" start="0" center="auto" end="720" delay="2500" time="4300" tween="cubic" easing="inout"/>
 			</animation>
-			<visible>Skin.HasSetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + Container.Content(movies) + !String.Contains(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + !Skin.Hassetting(Fakehanddisccolor)</visible>
+			<visible>Skin.HasSetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + !Skin.Hassetting(Fakehanddisccolor)</visible>
 		</control>
 		<control type="image">
 			<left>26</left>
@@ -2837,7 +2837,7 @@
 			<animation type="Conditional" condition="Control.IsVisible(961) + !Control.IsVisible(6000) + Skin.HasSetting(OpenCase)" reversible="true">
 				<effect type="rotate" start="0" center="auto" end="720" delay="2500" time="4300" tween="cubic" easing="inout"/>
 			</animation>
-			<visible>Skin.HasSetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + Container.Content(movies) + !String.Contains(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(fakehanddisccolor)</visible>
+			<visible>Skin.HasSetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(fakehanddisccolor)</visible>
 		</control>
 		<control type="textbox">
 			<animation type="Conditional" condition="Skin.HasSetting(OpenCase)" reversible="true">

@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="Panel">
-		<onfocus>RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>
-		<control type="image">
-			<texture colordiffuse="base">diffuseoverlay_blue.png</texture>
-			<include>FullscreenDimensions</include>
-			<visible>Control.IsVisible(550)</visible>
-			<visible>Skin.HasSetting(BlueOverlay)</visible>
-		</control>
 		<control type="group">
 			<visible>Control.IsVisible(550)</visible>
 			<include>Animation_Widgets</include>
@@ -329,16 +322,7 @@
 							<font>Font_Reg32</font>
 							<textcolor>white6</textcolor>
 							<scroll>true</scroll>
-							<visible>!System.HasAddon(script.duration) + !ListItem.IsCollection</visible>
-						</control>
-						<control type="label">
-							<width min="50" max="720">auto</width>
-							<aligny>bottom</aligny>
-							<label fallback="N/A">$VAR[MovieDuration]</label>
-							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
-							<scroll>true</scroll>
-							<visible>System.HasAddon(script.duration)</visible>
+							<visible> + !ListItem.IsCollection</visible>
 						</control>
 					</control>
 					<control type="grouplist">

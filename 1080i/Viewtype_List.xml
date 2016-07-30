@@ -106,7 +106,7 @@
 		<control type="group">
 			<left>1390</left>
 			<top>155</top>
-			<visible>Skin.HasSetting(listcdart) + SubString(ListItem.Path,videodb://movies/sets/)</visible>
+			<visible>Skin.HasSetting(listcdart) + ListItem.IsCollection</visible>
 			<control type="image">
 				<left>-211</left>
 				<top>15</top>
@@ -166,7 +166,7 @@
 				<height>500</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true">$VAR[cdArtMoviesVar]</texture>
-				<visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + !String.IsEmpty(Container.ListItem.Art(discart))</visible>
+				<visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + !String.IsEmpty(Container.ListItem.Art(discart))</visible>
 				<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
@@ -182,7 +182,7 @@
 				<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
+				<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
 			</control>
 			<control type="image">
 				<left>-211</left>
@@ -194,7 +194,7 @@
 				<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
+				<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
 			</control>
 			<control type="image">
 				<left>-211</left>
@@ -228,7 +228,7 @@
 				<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="textbox">
@@ -503,7 +503,7 @@
 					<height>500</height>
 					<aspectratio align="right">keep</aspectratio>
 					<texture background="true">$VAR[cdArtMoviesVar]</texture>
-					<visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !String.IsEmpty(Container.ListItem.Art(discart))</visible>
+					<visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !ListItem.IsCollection + !String.IsEmpty(Container.ListItem.Art(discart))</visible>
 					<bordersize>7</bordersize>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="Container.Isvisible(40002) | Container.Isvisible(40003)">Conditional</animation>
 				</control>
@@ -518,7 +518,7 @@
 					<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 					<bordersize>7</bordersize>
-					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + Skin.HasSetting(Fakediscart)</visible>
+					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + Skin.HasSetting(Fakediscart)</visible>
 				</control>
 				<control type="image">
 					<left>-196</left>
@@ -530,7 +530,7 @@
 					<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 					<bordersize>7</bordersize>
-					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + Skin.HasSetting(Fakediscart)</visible>
+					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + Skin.HasSetting(Fakediscart)</visible>
 				</control>
 				<control type="image">
 					<left>-196</left>
@@ -564,7 +564,7 @@
 					<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 					<bordersize>7</bordersize>
-					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 					<bordersize>7</bordersize>
 				</control>
 				<control type="textbox">
@@ -1038,23 +1038,7 @@
 					<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[180]:[/COLOR] $INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 					<font>Font_Reg32</font>
 					<textcolor>white4</textcolor>
-					<visible>!System.HasAddon(script.duration) + !SubString(ListItem.Path,videodb://movies/sets/)</visible>
-				</control>
-				<control type="label">
-					<width min="0" max="1000">auto</width>
-					<height>40</height>
-					<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[180]:[/COLOR] $VAR[MovieDuration]</label>
-					<font>Font_Reg32</font>
-					<textcolor>white4</textcolor>
-					<visible>System.HasAddon(script.duration) + !SubString(ListItem.Path,videodb://movies/sets/)</visible>
-				</control>
-				<control type="label">
-					<width min="0" max="1000">auto</width>
-					<height>40</height>
-					<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[180]:[/COLOR] $INFO[Window(Home).Property(Set.Movies.runtime)] $LOCALIZE[12391]</label>
-					<font>Font_Reg32</font>
-					<textcolor>white4</textcolor>
-					<visible>System.HasAddon(script.duration) + SubString(ListItem.Path,videodb://movies/sets/)</visible>
+					<visible>!ListItem.IsCollection</visible>
 				</control>
 			</control>
 			<control type="textbox">
@@ -1103,7 +1087,7 @@
 					<height>500</height>
 					<aspectratio align="right">keep</aspectratio>
 					<texture background="true">$VAR[cdArtMoviesVar]</texture>
-					<visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + !String.IsEmpty(Container.ListItem.Art(discart))</visible>
+					<visible>Skin.HasSetting(listcdart) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + !String.IsEmpty(Container.ListItem.Art(discart))</visible>
 					<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 					<bordersize>7</bordersize>
@@ -1119,7 +1103,7 @@
 					<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 					<bordersize>7</bordersize>
-					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
+					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
 				</control>
 				<control type="image">
 					<left>-211</left>
@@ -1131,7 +1115,7 @@
 					<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 					<bordersize>7</bordersize>
-					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
+					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
 				</control>
 				<control type="image">
 					<left>-211</left>
@@ -1165,7 +1149,7 @@
 					<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 					<bordersize>7</bordersize>
-					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 					<bordersize>7</bordersize>
 				</control>
 				<control type="textbox">

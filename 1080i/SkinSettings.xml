@@ -173,25 +173,18 @@
 						<onclick>Skin.ToggleSetting(CasesonWidgets)</onclick>
 						<label>Cases on Widgets</label>
 					</control> -->
-					<!-- Disabled Blue Overlay by schimi -->
-					<!--<control type="radiobutton" id="140">
-						<include>Default_SettingRadioButton</include>
-						<selected>Skin.HasSetting(BlueOverlay)</selected>
-						<onclick>Skin.ToggleSetting(BlueOverlay)</onclick>
-						<label>Enable global Blue Overlay</label>
-					</control> -->
 					<control type="radiobutton" id="17031">
 						<label>31280</label>
 						<include>Default_SettingRadioButton</include>
 						<onclick>Skin.ToggleSetting(ShowScrollLetter)</onclick>
 						<selected>Skin.HasSetting(ShowScrollLetter)</selected>
 					</control>
-					<!--control type="radiobutton" id="17072">
+					<!-- control type="radiobutton" id="17072">
 						<label>31286</label>
 						<include>Default_SettingRadioButton</include>
 						<onclick>Skin.ToggleSetting(DisableIntro)</onclick>
 						<selected>Skin.HasSetting(DisableIntro)</selected>
-					</control-->
+					</control -->
 					<control type="radiobutton" id="17073">
 						<include>Default_SettingRadioButton</include>
 						<label>31288</label>

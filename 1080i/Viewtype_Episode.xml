@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="Viewtype_Episode">
-		<control type="image">
-			<texture colordiffuse="base">diffuseoverlay_blue.png</texture>
-			<include>FullscreenDimensions</include>
-			<visible>Control.IsVisible(514)</visible>
-			<visible>Skin.HasSetting(BlueOverlay)</visible>
-		</control>
 		<control type="group">
 			<visible>Control.IsVisible(514)</visible>
 			<include>Animation_VisibleChange400</include>
@@ -38,8 +32,6 @@
 				<orientation>vertical</orientation>
 				<movement>3</movement>
 				<focusposition>4</focusposition>
-				<!-- invalid tag -->
-				<!--<onfocus>RunScript(script.duration,duration=$INFO[ListItem.Duration])</onfocus>-->
 				<onup>514</onup>
 				<ondown>514</ondown>
 				<onleft>9000</onleft>
@@ -295,7 +287,7 @@
 				<height>480</height>
 				<aspectratio align="right">keep</aspectratio>
 				<texture background="true">$VAR[cdArtMoviesVar]</texture>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + !String.IsEmpty(ListItem.Art(discart))</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + !String.IsEmpty(ListItem.Art(discart))</visible>
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
@@ -313,7 +305,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
 			</control>
 			<control type="image">
 				<left>80</left>
@@ -326,7 +318,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
 			</control>
 			<control type="image">
 				<left>80</left>
@@ -339,7 +331,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -353,7 +345,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -367,7 +359,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -381,7 +373,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -395,7 +387,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -409,7 +401,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -423,7 +415,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -437,7 +429,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -451,7 +443,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -465,7 +457,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -479,7 +471,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)]</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)]</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -505,7 +497,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -519,7 +511,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -533,7 +525,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -547,7 +539,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -561,7 +553,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -575,7 +567,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -589,7 +581,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -603,7 +595,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -617,7 +609,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -631,7 +623,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -645,7 +637,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)] + !Skin.Hassetting(Fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -671,7 +663,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -685,7 +677,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -699,7 +691,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -713,7 +705,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -727,7 +719,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -741,7 +733,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -755,7 +747,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -769,7 +761,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -783,7 +775,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -797,7 +789,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="image">
@@ -811,7 +803,7 @@
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="textbox">
@@ -1335,8 +1327,7 @@
 					<label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</label>
 					<font>Font_Reg28</font>
 					<textcolor>grey</textcolor>
-					<visible>!String.IsEmpty(ListItem.Title) + !SubString(ListItem.Path,videodb://movies/sets/)</visible>
-					<!--visible>!String.IsEmpty(ListItem.Title) + !System.HasAddon(script.duration)</visible-->
+					<visible>!String.IsEmpty(ListItem.Title) + !ListItem.IsCollection</visible>
 				</control>
 				<control type="label">
 					<left>-112</left>
@@ -1348,22 +1339,8 @@
 					<label>$INFO[ListItem.Year]$INFO[Window(home).Property(Set.Movies.Runtime) • $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</label>
 					<font>Font_Reg28</font>
 					<textcolor>grey</textcolor>
-					<visible>!String.IsEmpty(ListItem.Title) + SubString(ListItem.Path,videodb://movies/sets/)</visible>
-					<!--visible>!String.IsEmpty(ListItem.Title) + !System.HasAddon(script.duration)</visible-->
+					<visible>!String.IsEmpty(ListItem.Title) + ListItem.IsCollection</visible>
 				</control>
-
-				<!--control type="label">
-                    <left>-112</left>
-                    <top>75</top>
-                    <width>950</width>
-                    <height>90</height>
-                    <align>right</align>
-                    <aligny>top</aligny>
-                    <label>$INFO[ListItem.Year] • $VAR[MovieDuration]$INFO[ListItem.RatingAndVotes, • ]</label>
-                    <font>Font_Reg28</font>
-                    <textcolor>grey</textcolor>
-                    <visible>!String.IsEmpty(ListItem.Title) + System.HasAddon(script.duration)</visible>
-                </control-->
 				<control type="textbox">
 					<left>99</left>
 					<top>114</top>

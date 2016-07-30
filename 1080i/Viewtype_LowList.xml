@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="LowList">
-		<control type="image">
-			<texture colordiffuse="base">diffuseoverlay_blue.png</texture>
-			<include>FullscreenDimensions</include>
-			<visible>Control.IsVisible(511)</visible>
-			<visible>Skin.HasSetting(BlueOverlay)</visible>
-		</control>
 		<control type="group">
 			<visible>Control.IsVisible(511)</visible>
 			<animation effect="slide" tween="cubic" easing="out" time="480" start="0,806" end="0,0">VisibleChange</animation>
@@ -168,7 +162,7 @@
 							<fadetime>400</fadetime>
 							<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 							<bordersize>7</bordersize>
-							<visible>!SubString(ListItem.Path,videodb://movies/sets/)</visible>
+							<visible>!ListItem.IsCollection</visible>
 						</control>
 						<control type="image">
 							<left>855</left>
@@ -180,7 +174,7 @@
 							<fadetime>400</fadetime>
 							<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 							<bordersize>7</bordersize>
-							<visible>SubString(ListItem.Path,videodb://movies/sets/)</visible>
+							<visible>ListItem.IsCollection</visible>
 						</control>
 						<control type="multiimage">
 							<left>862</left>
@@ -191,7 +185,7 @@
 							<imagepath background="true">$INFO[Container.ListItem.Path]/extrathumbs/</imagepath>
 							<fadetime>1000</fadetime>
 							<timeperimage>8000</timeperimage>
-							<visible>!SubString(ListItem.Path,videodb://movies/sets/)</visible>
+							<visible>!ListItem.IsCollection</visible>
 						</control>
 					</control>
 					<control type="image">
@@ -538,7 +532,7 @@
 				<animation effect="slide" end="-40,0" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(69)">Conditional</animation>
 				<animation effect="slide" end="0,-40" time="320" easing="inout" tween="cubic" condition="Skin.HasSetting(usecaseslowlist)">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(lowlistcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
+				<visible>Skin.HasSetting(lowlistcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="800" loop="false" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<animation effect="slide" start="0,300" end="0,0" delay="1000" time="800" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 			</control>
@@ -554,7 +548,7 @@
 				<animation effect="slide" end="-40,0" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(69)">Conditional</animation>
 				<animation effect="slide" end="0,-40" time="320" easing="inout" tween="cubic" condition="Skin.HasSetting(usecaseslowlist)">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(lowlistcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !SubString(ListItem.Path,videodb://movies/sets/) + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
+				<visible>Skin.HasSetting(lowlistcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakediscart)</visible>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="800" loop="false" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<animation effect="slide" start="0,300" end="0,0" delay="1000" time="800" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 			</control>

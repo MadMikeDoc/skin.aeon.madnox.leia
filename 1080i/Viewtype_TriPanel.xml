@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<include name="TriPanel">
-		<control type="image">
-			<texture colordiffuse="base">diffuseoverlay_blue.png</texture>
-			<include>FullscreenDimensions</include>
-			<visible>Control.IsVisible(52)</visible>
-			<visible>Control.IsVisible(9900)</visible>
-			<visible>Skin.HasSetting(BlueOverlay)</visible>
-		</control>
 		<control type="group">
 			<top>86</top>
 			<control type="group" id="5201">
@@ -1069,7 +1062,7 @@
 							<top>12</top>
 							<width>70</width>
 							<height>70</height>
-							<texture>$VAR[Colortdefaulticons]$VAR[SmallListIconVar]</texture>
+							<texture>$VAR[ColorDefaultIcons]$VAR[SmallListIconVar]</texture>
 							<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 							<visible>String.IsEmpty(ListItem.Year)</visible>
 						</control>
@@ -1154,7 +1147,7 @@
 							<top>12</top>
 							<width>70</width>
 							<height>70</height>
-							<texture>$VAR[Colortdefaulticons]$VAR[SmallListIconVar]</texture>
+							<texture>$VAR[ColorDefaultIcons]$VAR[SmallListIconVar]</texture>
 							<colordiffuse>white2</colordiffuse>
 							<visible>String.IsEmpty(ListItem.Year)</visible>
 						</control>
