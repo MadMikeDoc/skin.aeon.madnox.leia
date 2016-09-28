@@ -55,8 +55,8 @@
 			<textcolor>$VAR[TitleColorVar]</textcolor>
 		</control>
 		<control type="grouplist" id="9001">
-			<left>1170</left>
-			<top>465</top>
+			<left>1100</left>
+			<top>640</top>
 			<width>365</width>
 			<align>center</align>
 			<onleft>9000</onleft>
@@ -74,8 +74,8 @@
 				<textcolor>grey2</textcolor>
 			</control>
 			<control type="button" id="7">
-				<width>365</width>
-				<height>60</height>
+				<width>165</width>
+				<height>40</height>
 				<align>center</align>
 				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus border="8">-</texturenofocus>

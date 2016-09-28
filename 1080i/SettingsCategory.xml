@@ -56,7 +56,7 @@
 					<top>1035</top>
 					<width>60</width>
 					<height>40</height>
-					<texture colordiffuse="$VAR[FocusTextureColorVar]">arrowdown2.png</texture>
+					<texture colordiffuse="$VAR[DialogColorVar]">arrowdown2.png</texture>
 					<include>Animation_VisibleChange200</include>
 					<visible>Container(5).HasNext</visible>
 				</control>
@@ -75,7 +75,7 @@
 				<height>74</height>
 				<textoffsetx>20</textoffsetx>
 				<textoffsety>18</textoffsety>
-				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[DialogColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<font>Font_Bold34_Caps</font>
 				<textcolor>grey</textcolor>
@@ -97,7 +97,7 @@
 			<control type="image" id="11">
 				<description>separator image</description>
 				<height>7</height>
-				<texture colordiffuse="$VAR[FocusTextureColorVar]" border="15">settings/settings_separator2.png</texture>
+				<texture colordiffuse="$VAR[DialogColorVar]" border="15">settings/settings_separator2.png</texture>
 			</control>
 			<control type="label" id="14">
 				<description>Default Label</description>
@@ -109,7 +109,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>Font_Bold30_Caps</font>
-				<textcolor>$VAR[FocusTextureColorVar]</textcolor>
+				<textcolor>$VAR[DialogColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="image">
@@ -118,7 +118,7 @@
 				<top>922</top>
 				<width>1467</width>
 				<height>7</height>
-				<texture colordiffuse="$VAR[FocusTextureColorVar]" border="15">settings/settings_separator2.png</texture>
+				<texture colordiffuse="$VAR[DialogColorVar]" border="15">settings/settings_separator2.png</texture>
 			</control>
 		</control>
 		<control type="group">
@@ -150,7 +150,7 @@
 			<textoffsety>35</textoffsety>
 			<align>left</align>
 			<aligny>top</aligny>
-			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[DialogColorVar]">views/tripanel/listselect_fo.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
 			<font>Font_Bold34_Caps</font>
 			<textcolor>grey</textcolor>

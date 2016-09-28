@@ -505,7 +505,7 @@
 						<height>275</height>
 						<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 						<fadetime>400</fadetime>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>4</bordersize>
 						<colordiffuse>BAffffff</colordiffuse>
 						<visible>Skin.Hassetting(WallLargeTransparentPoster)</visible>
@@ -515,7 +515,7 @@
 						<height>275</height>
 						<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 						<fadetime>400</fadetime>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>4</bordersize>
 						<visible>!Skin.Hassetting(WallLargeTransparentPoster)</visible>
 					</control>
@@ -837,7 +837,7 @@
 						<height>207</height>
 						<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 						<fadetime>400</fadetime>
-						<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>3</bordersize>
 						<colordiffuse>BAffffff</colordiffuse>
 						<visible>Skin.Hassetting(WallLargeTransparentPoster)</visible>
@@ -847,7 +847,7 @@
 						<height>207</height>
 						<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 						<fadetime>400</fadetime>
-						<bordertexture border="3">thumbs/panel_border3.png</bordertexture>
+						<bordertexture border="3">thumbs/panel_border.png</bordertexture>
 						<bordersize>3</bordersize>
 						<visible>!Skin.Hassetting(WallLargeTransparentPoster)</visible>
 					</control>

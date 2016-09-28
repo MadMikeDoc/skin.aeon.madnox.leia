@@ -1052,6 +1052,7 @@
                     <camera x="1250" y="370"/>
                     <animation effect="zoom" end="112" time="0" delay="0" reversible="false" condition="true">Conditional</animation>
                     <visible>ListItem.IsCollection</visible>
+					<visible>![String.IsEqual(Control.GetLabel(4420),fourthumbs) | String.IsEqual(Control.GetLabel(4420),fanart) | String.IsEqual(Control.GetLabel(4420),extrathumbs)]</visible>
                 </control>
                 <!--  END Posters for sets: ShadowTek -->
 

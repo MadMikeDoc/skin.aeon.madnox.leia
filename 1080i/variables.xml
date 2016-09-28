@@ -59,7 +59,7 @@
 		<value condition="[Window.IsActive(weather)] + !String.IsEmpty(Skin.String(diffuse_weather))">$INFO[Skin.String(diffuse_weather)]</value>
 		<value condition="[Window.IsActive(1147) | Window.IsActive(script-globalsearch-main.xml)] + !String.IsEmpty(Skin.String(diffuse_featured))">$INFO[Skin.String(diffuse_featured)]</value>
 		<value condition="[Window.IsActive(1147) | Window.IsActive(script-videoextras-main.xml)] + !String.IsEmpty(Skin.String(diffuse_featured))">$INFO[Skin.String(diffuse_featured)]</value>
-		<value condition="[Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(LibrarySettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings)] + !String.IsEmpty(Skin.String(diffuse_settings))">$INFO[Skin.String(diffuse_settings)]</value>
+		<value condition="[Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(MediaSettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings)] + !String.IsEmpty(Skin.String(diffuse_settings))">$INFO[Skin.String(diffuse_settings)]</value>
 		<value condition="Window.IsActive(tvchannels) + !String.IsEmpty(Skin.String(diffuse_PVR))">$INFO[Skin.String(diffuse_PVR)]</value>
 		<value condition="[Window.IsActive(TVGuide)| Window.IsActive(TVChannels) | Window.IsActive(RadioChannels) | Window.IsActive(RadioGuide) | Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings) | Window.IsActive(TVTimers) | Window.IsActive(RadioTimers) | Window.IsActive(TVSearch) | Window.IsActive(RadioSearch)] + !String.IsEmpty(Skin.String(diffuse_PVR))">$INFO[Skin.String(diffuse_PVR)]</value>
 		<value>FF6DB9E5</value>
@@ -76,7 +76,7 @@
 		<value condition="[Window.IsActive(weather)] + !String.IsEmpty(Skin.String(diffuse_white_weather))">$INFO[Skin.String(diffuse_white_weather)]</value>
 		<value condition="[Window.IsActive(1147) | Window.IsActive(script-globalsearch-main.xml)] + !String.IsEmpty(Skin.String(diffuse_white_featured))">$INFO[Skin.String(diffuse_white_featured)]</value>
 		<value condition="[Window.IsActive(1147) | Window.IsActive(script-videoextras-main.xml)] + !String.IsEmpty(Skin.String(diffuse_white_featured))">$INFO[Skin.String(diffuse_white_featured)]</value>
-		<value condition="[Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(LibrarySettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings)] + !String.IsEmpty(Skin.String(diffuse_white_settings))">$INFO[Skin.String(diffuse_white_settings)]</value>
+		<value condition="[Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(MediaSettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings)] + !String.IsEmpty(Skin.String(diffuse_white_settings))">$INFO[Skin.String(diffuse_white_settings)]</value>
 		<value condition="Window.IsActive(tvchannels) + !String.IsEmpty(Skin.String(diffuse_white_PVR))">$INFO[Skin.String(diffuse_white_PVR)]</value>
 
 		<value>FFAAAAAA</value>
@@ -98,7 +98,7 @@
 		<value condition="[Window.IsActive(weather)] + !String.IsEmpty(Skin.String(font_weather))">$INFO[Skin.String(font_weather)]</value>
 		<value condition="[Window.IsActive(1147) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(script-globalsearch-infodialog.xml)] + !String.IsEmpty(Skin.String(font_featured))">$INFO[Skin.String(font_featured)]</value>
 		<value condition="[Window.IsActive(1147) | Window.IsActive(script-videoextras-main.xml)] + !String.IsEmpty(Skin.String(font_featured))">$INFO[Skin.String(font_featured)]</value>
-		<value condition="[Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(LibrarySettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings)] + !String.IsEmpty(Skin.String(font_settings))">$INFO[Skin.String(font_settings)]</value>
+		<value condition="[Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(MediaSettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings)] + !String.IsEmpty(Skin.String(font_settings))">$INFO[Skin.String(font_settings)]</value>
 		<value condition="Window.IsActive(tvchannels) + !String.IsEmpty(Skin.String(font_PVR))">$INFO[Skin.String(font_PVR)]</value>
 		<value condition="[Window.IsActive(TVGuide)| Window.IsActive(TVChannels) | Window.IsActive(RadioChannels) | Window.IsActive(RadioGuide) | Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings) | Window.IsActive(TVTimers) | Window.IsActive(RadioTimers) | Window.IsActive(TVSearch) | Window.IsActive(RadioSearch)] + !String.IsEmpty(Skin.String(font_PVR))">$INFO[Skin.String(font_PVR)]</value>
 		<value>white2</value>
@@ -115,7 +115,7 @@
 		<value condition="[Window.IsActive(weather)] + !String.IsEmpty(Skin.String(white_font_weather))">$INFO[Skin.String(white_font_weather)]</value>
 		<value condition="[Window.IsActive(1147) | Window.IsActive(script-globalsearch-main.xml) | Window.IsActive(script-globalsearch-infodialog.xml)] + !String.IsEmpty(Skin.String(white_font_featured))">$INFO[Skin.String(white_font_featured)]</value>
 		<value condition="[Window.IsActive(1147) | Window.IsActive(script-videoextras-main.xml)] + !String.IsEmpty(Skin.String(white_font_featured))">$INFO[Skin.String(white_font_featured)]</value>
-		<value condition="[Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(LibrarySettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings)] + !String.IsEmpty(Skin.String(white_font_settings))">$INFO[Skin.String(white_font_settings)]</value>
+		<value condition="[Window.IsActive(skinsettings) | Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(PlayerSettings) | Window.IsActive(systemsettings) | Window.IsActive(MediaSettings) | Window.IsActive(servicesettings) | Window.IsActive(InterfaceSettings) | Window.IsActive(profiles) | Window.IsActive(filemanager) | Window.IsActive(pvrsettings)] + !String.IsEmpty(Skin.String(white_font_settings))">$INFO[Skin.String(white_font_settings)]</value>
 		<value condition="Window.IsActive(tvchannels) + !String.IsEmpty(Skin.String(white_font_PVR))">$INFO[Skin.String(white_font_PVR)]</value>
 		<value>white2</value>
 	</variable>
@@ -2088,6 +2088,7 @@
 		<value>$LOCALIZE[31959]</value>
 	</variable>
 	<variable name="ListPosterVar">
+		<value condition="String.Contains(ListItem.Title,*)">$INFO[Container.Art(season.poster)]</value>
 		<value condition="Container.Content(tags)">$INFO[ListItem.Label,special://skin/extras/tags/video/icons/,.jpg]</value>
 		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
 		<value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/video/icons/,.jpg]</value>

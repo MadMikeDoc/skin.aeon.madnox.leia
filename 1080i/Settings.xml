@@ -155,7 +155,7 @@
 					<item id="3">
 						<label>$LOCALIZE[14203]</label>
 						<property name="description">$LOCALIZE[31402]</property>
-						<onclick>ActivateWindow(LibrarySettings)</onclick>
+						<onclick>ActivateWindow(MediaSettings)</onclick>
 						<icon>special://skin/backgrounds/system_icons/library.jpg</icon>
 					</item>
 					<item id="6">
