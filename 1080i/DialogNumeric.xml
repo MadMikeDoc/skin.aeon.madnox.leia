@@ -13,12 +13,13 @@
 			<control type="image">
 				<width>365</width>
 				<height>560</height>
+				<left>-24</left>
 				<texture border="40,100,40,100">keyboard/numeric_back.png</texture>
 			</control>
 			<control type="label" id="1">
-				<left>35</left>
-				<top>25</top>
-				<width>300</width>
+				<left>40</left>
+				<top>35</top>
+				<width>235</width>
 				<height>50</height>
 				<align>left</align>
 				<textoffsetx>15</textoffsetx>
@@ -28,7 +29,7 @@
 				<scrollspeed>20</scrollspeed>
 			</control>
 			<control type="label" id="4">
-				<left>50</left>
+				<left>32</left>
 				<top>472</top>
 				<width>250</width>
 				<height>50</height>
@@ -137,6 +138,7 @@
 				<control type="grouplist">
 					<orientation>horizontal</orientation>
 					<top>320</top>
+					<left>7</left>
 					<control type="button" id="23">
 						<label>DEL</label>
 						<onup>20</onup>
@@ -147,7 +149,6 @@
 						<include>Objects_SingleKeyOff</include>
 					</control>
 					<control type="button" id="21">
-						<left>63</left>
 						<label>186</label>
 						<onup>22</onup>
 						<ondown>13</ondown>
