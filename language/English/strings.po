@@ -1984,6 +1984,10 @@ msgctxt "#31492"
 msgid "Enable Playlist on Startup"
 msgstr ""
 
+msgctxt "#31493"
+msgid "Album review"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Pictures"
 msgstr ""

@@ -2019,8 +2019,8 @@
 		<value condition="Container.Content(albums)">flags/music/recordlabel/$INFO[ListItem.Property(Album_Label),,.png]</value>
 	</variable>
 	<variable name="ListImage2Var">
-		<value condition="Container.Content(albums) | Container.Content(songs) + String.IsEmpty(ListItem.Starrating) + !ListItem.IsParentFolder">stars/0.0.png</value>
-		<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.StarRating]</value>
+		<value condition="Container.Content(albums) | Container.Content(songs) + String.IsEmpty(ListItem.Rating) + !ListItem.IsParentFolder">stars/0.0.png</value>
+		<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.Rating]</value>
 		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)">$INFO[ListItem.Rating,stars/,.png]</value>
 	</variable>
 	<variable name="BreadcrumbsLabel2Var">
@@ -3941,5 +3941,11 @@
 		<value condition="Skin.HasSetting(KodiFlixTVSetCasesDelay_10)">10 seconds</value>
 		<value condition="Skin.HasSetting(KodiFlixTVSetCasesDelay_20)">20 seconds</value>
 		<value condition="Skin.HasSetting(KodiFlixTVSetCasesDelay_30)">30 seconds</value>
+	</variable>
+	<variable name="MusicInfoDetailsLabelVar">
+		<value condition="Control.HasFocus(900171) + Container.Content(albums)">$LOCALIZE[31493]</value>
+		<value condition="Control.HasFocus(900171) + [Container.Content(artists) | Container.Content(songs)]">$LOCALIZE[21887]</value>
+		<value condition="ControlGroup(9001).HasFocus(50) + Container.Content(albums)">$LOCALIZE[182]$INFO[Container(50).NumItems, [COLOR grey3](,)[/COLOR]]</value>
+		<value condition="ControlGroup(9001).HasFocus(50) + Container.Content(artists)">$LOCALIZE[21888]$INFO[Container(50).NumItems, [COLOR grey3](,)[/COLOR]]</value>
 	</variable>
 </includes>

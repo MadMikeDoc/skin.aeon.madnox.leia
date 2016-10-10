@@ -854,7 +854,7 @@
 						<width>118</width>
 						<height>24</height>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.StarRating]</texture>
+						<texture background="true">player_stars/$INFO[ListItem.Rating,,.png]</texture>
 					</control>
 				</control>
 				<control type="image">
@@ -950,7 +950,7 @@
 						<width>118</width>
 						<height>24</height>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
-						<texture background="true">$INFO[ListItem.StarRating]</texture>
+						<texture background="true">player_stars/$INFO[ListItem.Rating,,.png]</texture>
 					</control>
 				</control>
 				<control type="image">
