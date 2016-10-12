@@ -11,38 +11,24 @@
 		<effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
 	</animation>
 	<controls>
-		<include>CommonSettingsBackground</include>
-		<include>CommonMediaPlayingBackground</include>
-		<include>Furniture_SettingsFloor</include>
+		<control type="group">
+                        <include>CommonSettingsBackground</include>
+                        <include>CommonMediaPlayingBackground</include>
+                        <include>Furniture_SettingsFloor</include>
+                </control>
 		<control type="group">
 			<animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
-			<include>Furniture_SettingsBackPanel2</include>
-			<include>Furniture_SettingsInternalBackPanel</include>
-			<control type="image">
-				<left>498</left>
-				<top>87</top>
-				<width>1260</width>
-				<height>708</height>
-				<texture background="true">special://skin/backgrounds/system/systeminfo.jpg</texture>
-			</control>
-			<control type="image">
-				<left>498</left>
-				<top>87</top>
-				<width>1260</width>
-				<height>708</height>
-				<texture>common/bgcolor.png</texture>
-				<animation effect="fade" start="95" end="60" time="4000" pulse="true" condition="true">conditional</animation>
-			</control>
+			<include>Furniture_SettingsBackPanel</include>
 			<control type="grouplist" id="7000">
 				<left>63</left>
-				<top>180</top>
+				<top>195</top>
 				<width>434</width>
 				<height>1080</height>
 				<onup>7000</onup>
 				<ondown>7000</ondown>
 				<onleft>ActivateWindow(1121)</onleft>
 				<control type="button" id="95">
-					<width>434</width>
+					<width>324</width>
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
@@ -55,7 +41,7 @@
 					<focusedcolor>white2</focusedcolor>
 				</control>
 				<control type="button" id="94">
-					<width>434</width>
+					<width>324</width>
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
@@ -68,7 +54,7 @@
 					<focusedcolor>white2</focusedcolor>
 				</control>
 				<control type="button" id="96">
-					<width>434</width>
+					<width>324</width>
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
@@ -81,7 +67,7 @@
 					<focusedcolor>white2</focusedcolor>
 				</control>
 				<control type="button" id="97">
-					<width>434</width>
+					<width>324</width>
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
@@ -94,7 +80,7 @@
 					<focusedcolor>white2</focusedcolor>
 				</control>
 				<control type="button" id="98">
-					<width>434</width>
+					<width>324</width>
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
@@ -107,7 +93,7 @@
 					<focusedcolor>white2</focusedcolor>
 				</control>
 				<control type="button" id="99">
-					<width>434</width>
+					<width>324</width>
 					<height>74</height>
 					<textoffsetx>20</textoffsetx>
 					<textoffsety>18</textoffsety>
@@ -121,7 +107,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<left>510</left>
+				<left>415</left>
 				<top>195</top>
 				<control type="label" id="2">
 					<top>-700</top>
@@ -240,11 +226,8 @@
 					<info>system.memory(used)</info>
 				</control>
 			</control>
-			<control type="group">
-				<include>Furniture_SettingsInternalFrontPanel</include>
-			</control>
 			<control type="label">
-				<left>358</left>
+				<left>378</left>
 				<top>-800</top>
 				<width>1491</width>
 				<align>center</align>
@@ -258,6 +241,5 @@
 			<include>BreadcrumbsContent</include>
 			<include>Breadcrumbs_Furniture</include>
 		</control>
-		<include>Furniture_NowPlayingWidget</include>
 	</controls>
 </window>
