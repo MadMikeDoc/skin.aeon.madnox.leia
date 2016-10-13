@@ -491,7 +491,7 @@
 					</control>
 					<control type="label">
 						<left>94</left>
-						<top>50</top>
+						<top>60</top>
 						<width>240</width>
 						<height>308</height>
 						<align>center</align>
@@ -511,9 +511,8 @@
 						<height>308</height>
 						<align>center</align>
 						<font>Hand_26</font>
-						<aligny>top</aligny>
 						<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Album]</label>
-						<visible>String.IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)	</visible>
+						<visible>String.IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
 						<textcolor>black</textcolor>
 						<wrapmultiline>true</wrapmultiline>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>

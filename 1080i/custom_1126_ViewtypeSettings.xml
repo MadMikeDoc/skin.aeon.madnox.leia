@@ -1398,6 +1398,14 @@
 					<onclick condition="String.IsEqual(Skin.String(TriPanelSquarePosition),1)">Skin.SetString(TriPanelSquarePosition,2)</onclick>
 					<visible>String.IsEqual(Window(home).Property(actualViewtype),TriPanelSquare)</visible>
 				</control>
+				<control type="radiobutton" id="52001">
+					<label>Display CharacterArt</label>
+					<include>Objects_MediaMenuButtonAlt2</include>
+					<onclick>Skin.ToggleSetting(DisplayCharacterArt)</onclick>
+					<onclick>Skin.Reset(tripanelextrafanart)</onclick>
+					<selected>Skin.HasSetting(DisplayCharacterArt)</selected>
+					<visible>Substring(Window(home).Property(actualViewtype),Tripanel + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+				</control>
 				<!--Posters Options-->
 				<control type="radiobutton" id="1648">
 					<label>$LOCALIZE[31694]:</label>
@@ -1417,6 +1425,7 @@
 					<label>$LOCALIZE[31477] [LOWERCASE]$LOCALIZE[31069][/LOWERCASE]</label>
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(tripanelextrafanart)</onclick>
+					<onclick>Skin.Reset(DisplayCharacterArt)</onclick>
 					<selected>Skin.HasSetting(tripanelextrafanart)</selected>
 					<visible>String.IsEqual(Window(home).Property(actualViewtype),TriPanel)</visible>
 				</control>

@@ -179,8 +179,30 @@
 					<height>550</height>
 					<label>$VAR[GlobalPlotVar]</label>
 					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>!Skin.HasSetting(tripanelextrafanart)</visible>
+					<visible>!Skin.HasSetting(tripanelextrafanart) + [Container.Content(movies) | Container.Content(sets)]</visible>
 				</control>
+				<control type="textbox">
+					<left>145</left>
+					<top>286</top>
+					<width>434</width>
+					<height>550</height>
+					<label>$VAR[GlobalPlotVar]</label>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!Skin.HasSetting(tripanelextrafanart)  + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [!Skin.HasSetting(DisplayCharacterArt) | String.IsEmpty(Control.Getlabel(520001))]</visible>
+				</control>
+				<control type="image" id="520001">
+					<visible>!Skin.HasSetting(tripanelextrafanart)  + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(DisplayCharacterArt) + !String.IsEmpty(Control.Getlabel(520001))</visible>
+					<texture background="true">$VAR[CharacterArtVar]</texture>
+					<animation effect="fade" start="100" end="90" time="50" condition="true">Conditional</animation>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<bordersize>9</bordersize>
+					<left>145</left>
+					<top>286</top>
+					<width>434</width>
+					<height>550</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+				</control>
+				
 				<control type="textbox">
 					<left>145</left>
 					<top>287</top>
@@ -513,9 +535,31 @@
 					<width>480</width>
 					<height>550</height>
 					<label>$VAR[GlobalPlotVar]</label>
-					<visible>!Skin.HasSetting(tripanelextrafanart)</visible>
 					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!Skin.HasSetting(tripanelextrafanart) + [Container.Content(movies) | Container.Content(sets)]</visible>
 				</control>
+				<control type="textbox">
+					<left>102</left>
+					<top>290</top>
+					<width>480</width>
+					<height>550</height>
+					<label>$VAR[GlobalPlotVar]</label>
+					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+					<visible>!Skin.HasSetting(tripanelextrafanart)  + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [!Skin.HasSetting(DisplayCharacterArt) | String.IsEmpty(Control.Getlabel(520001))]</visible>
+				</control>
+				<control type="image" id="520001">
+					<visible>!Skin.HasSetting(tripanelextrafanart)  + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + Skin.HasSetting(DisplayCharacterArt) + !String.IsEmpty(Control.Getlabel(520001))</visible>
+					<texture background="true">$VAR[CharacterArtVar]</texture>
+					<animation effect="fade" start="100" end="90" time="50" condition="true">Conditional</animation>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+					<bordersize>9</bordersize>
+					<left>102</left>
+					<top>290</top>
+					<width>480</width>
+					<height>550</height>
+					<fadetime>IconCrossfadeTime</fadetime>
+				</control>
+				
 				<control type="textbox">
 					<left>102</left>
 					<top>292</top>

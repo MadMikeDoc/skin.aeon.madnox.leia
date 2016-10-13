@@ -59,6 +59,10 @@
 			<top>225</top>
 			<width>365</width>
 			<height>60</height>
+			<onleft>9000</onleft>
+			<onright>61</onright>
+			<ondown>9000</ondown>
+			<onup>9000</onup>
 			<control type="button" id="5">
 				<width>365</width>
 				<height>60</height>
