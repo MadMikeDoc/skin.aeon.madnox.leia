@@ -24,7 +24,7 @@
 				<animation effect="fade" start="100" end="0" time="160" tween="cubic" easing="inout" condition="[Window.IsActive(DialogPVRChannelManager.xml) | Window.IsActive(DialogPVRGroupManager.xml)]">Conditional</animation>
 				<control type="grouplist" id="3">
 					<left>63</left>
-					<top>180</top>
+					<top>195</top>
 					<width>326</width>
 					<height>768</height>
 					<onleft>ActivateWindow(1121)</onleft>
