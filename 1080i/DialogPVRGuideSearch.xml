@@ -298,7 +298,6 @@
 			<width>600</width>
 			<height>50</height>
 			<textoffsetx>10</textoffsetx>
-			<align>center</align>
 			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]">dialogs/setcontent_button_nofocus.png</texturenofocus>
 			<label>19124</label>
@@ -315,7 +314,6 @@
 			<width>600</width>
 			<height>50</height>
 			<textoffsetx>10</textoffsetx>
-			<align>center</align>
 			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]">dialogs/setcontent_button_nofocus.png</texturenofocus>
 			<label>19124</label>
