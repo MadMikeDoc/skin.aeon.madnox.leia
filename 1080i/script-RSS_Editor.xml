@@ -30,7 +30,7 @@
 			<font>Font_Reg32</font>
 			<shadowcolor>black</shadowcolor>
 		</control>
-		<control type="label" id="3">
+		<control type="label" id="4">
 			<left>30</left>
 			<top>90</top>
 			<width>1140</width>
@@ -80,7 +80,7 @@
 					<width>825</width>
 					<height>62</height>
 					<texture border="8">views/tripanel/listselect_fo.png</texture>
-					<visible>Control.hasfocus(14) | Control.HasFocus(10) | Control.HasFocus(11)</visible>
+					<visible>Control.hasfocus(14) | Control.HasFocus(10)</visible>
 				</control>
 				<control type="label">
 					<left>15</left>
