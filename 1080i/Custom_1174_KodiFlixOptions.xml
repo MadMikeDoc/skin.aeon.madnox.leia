@@ -22,9 +22,9 @@
 			<left>200</left>
 			<control type="image">
 				<left>285</left>
-				<top>580</top>
+				<top>570</top>
 				<width>950</width>
-				<height>885</height>
+				<height>985</height>
 				<texture colordiffuse="$VAR[ColorDiffuseVar]" border="50">osd/osd_settings_back_glow.png</texture>
 				<visible>!Skin.HasSetting(DisableGlowbar)</visible>
 				<include>Animation_VisibleChange400</include>
@@ -32,9 +32,9 @@
 			</control>
 			<control type="image">
 				<left>285</left>
-				<top>580</top>
+				<top>570</top>
 				<width>950</width>
-				<height>885</height>
+				<height>985</height>
 				<texture colordiffuse="$VAR[DialogColorVar]" border="50">osd/osd_settings_back.png</texture>
 			</control>
 			<control type="image">
@@ -292,6 +292,14 @@
 					<onclick>Skin.ToggleSetting(KodiFlixMovieBoxsetsDiscArt)</onclick>
 					<selected>Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt)</selected>
 					<visible>String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView) + Skin.HasSetting(KodiFlixMovieBoxsets)</visible>
+				</control>
+				<control type="radiobutton" id="80124">
+					<description>Kodi Boxsets Disc Art Position</description>
+					<include>Objects_MediaMenuButtonAround</include>
+					<label>Disc Art Front</label>
+					<onclick>Skin.ToggleSetting(KodiFlixMovieBoxsetsDiscArtPos)</onclick>
+					<selected>Skin.HasSetting(KodiFlixMovieBoxsetsDiscArtPos)</selected>
+					<visible>String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView) + Skin.HasSetting(KodiFlixMovieBoxsets) + Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt)</visible>
 				</control>
 				<control type="radiobutton" id="80117">
 					<description>Kodi Boxsets Active Cases</description>

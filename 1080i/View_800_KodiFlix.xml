@@ -2236,7 +2236,7 @@
 							<animation effect="rotatey" start="-4" end="26" time="1110" condition="!Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
 							<animation effect="rotatey" start="-4" end="47" time="1110" condition="Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
 							<camera x="530" y="50"/>
-							<visible>Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
+							<visible>Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt) + [Container.Content(movies) + !ListItem.IsCollection] + !Skin.HasSetting(KodiFlixMovieBoxsetsDiscArtPos)</visible>
 						</control>
 						<control type="image">
 							<left>7</left>
@@ -2350,6 +2350,24 @@
 							<camera x="530" y="50"/>
 							<visible>!Skin.HasSetting(KodiFlixMoviesCenterList) + Container.Content(movies) + !ListItem.IsCollection + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 						</control>
+						
+						<control type="image">
+							<left>125</left>
+							<top>149</top>
+							<width>180</width>
+							<height>180</height>
+							<aspectratio>keep</aspectratio>
+							<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+							<fadetime>4000</fadetime>
+							<animation effect="rotatey" start="-4" end="26" time="0" condition="!Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
+							<animation effect="rotatey" start="-4" end="47" time="0" condition="Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
+							<animation effect="rotatey" start="-4" end="26" time="0" condition="!Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
+							<animation effect="rotatey" start="-4" end="47" time="0" condition="Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
+							<camera x="530" y="50"/>
+							<visible>Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt) + [Container.Content(movies) + !ListItem.IsCollection] + Skin.HasSetting(KodiFlixMovieBoxsetsDiscArtPos)</visible>
+						</control>
+						
+						
 						<control type="group">
 							<visible>!Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases)</visible>
 							<control type="image">

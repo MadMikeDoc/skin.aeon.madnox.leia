@@ -1414,6 +1414,13 @@
 							<label>Extended Info</label>
 							<visible>String.IsEqual(ListItem.DBType,tvshow) + System.HasAddon(script.extendedinfo)</visible>
 						</control>
+						<control type="button" id="553">
+							<description>ExtendedInfo Episodes</description>
+							<include>DialogVideoInfoButton</include>
+							<onclick>RunScript(script.extendedinfo,info=openinfodialog)</onclick>
+							<label>Extended Info</label>
+							<visible>String.IsEqual(ListItem.DBType,episode) + System.HasAddon(script.extendedinfo)</visible>
+						</control>
 						<control type="button" id="11">
 							<label>$LOCALIZE[20410]</label>
 							<include>DialogVideoInfoButton</include>
