@@ -24,7 +24,6 @@
 			<width>90</width>
 			<height>90</height>
 			<texture colordiffuse="grey">special://skin/extras/BigIcons/Magicwand.png</texture>
-
 		</control>
 		<control type="label" id="2">
 			<posx>90</posx>
@@ -35,12 +34,11 @@
 			<font>Font_Bold33</font>
 			<textcolor>$VAR[FontColorVar]</textcolor>
 		</control>
-
 		<control type="grouplist" id="5">
 			<posx>0</posx>
 			<posy>100</posy>
 			<width>570</width>
-			<height>1080</height>
+			<height>910</height>
 			<pagecontrol>6</pagecontrol>
 			<onup>9001</onup>
 			<ondown>9001</ondown>
@@ -85,7 +83,7 @@
 			<height>70</height>
 		</control>
 		<control type="grouplist" id="9001">
-			<top>940</top>
+			<top>1010</top>
 			<onup>5</onup>
 			<ondown>5</ondown>
 			<control type="button" id="28">
