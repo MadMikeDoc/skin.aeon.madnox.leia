@@ -76,7 +76,7 @@
 					<animation effect="fade" start="100" end="0" time="200" condition="Window.IsVisible(script-globalsearch-infodialog.xml)">Conditional</animation>
 					<control type="list" id="9000">
 						<left>63</left>
-						<top>190</top>
+						<top>210</top>
 						<width>570</width>
 						<height>819</height>
 						<onright>200</onright>
