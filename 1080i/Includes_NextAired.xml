@@ -2141,7 +2141,7 @@
 				<effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
 			</animation>
 			<control type="group">
-				<top>-15</top>
+				<top>17</top>
 				<include>Furniture_SettingsBackPanel2</include>
 				<control type="group" id="9001">
 					<control type="list" id="200">
@@ -2260,7 +2260,7 @@
 				<control type="grouplist">
 					<description>Weekday labels</description>
 					<left>62</left>
-					<top>200</top>
+					<top>210</top>
 					<itemgap>0</itemgap>
 					<control type="button">
 						<label>[B]$VAR[TVDayLabelMon][/B]</label>
@@ -2322,7 +2322,7 @@
 				<control type="grouplist" id="2000">
 					<description>Weekday labels</description>
 					<left>62</left>
-					<top>200</top>
+					<top>210</top>
 					<itemgap>0</itemgap>
 					<control type="button" id="2001">
 						<label>[B]$VAR[TVDayLabelMon][/B]</label>
@@ -2395,7 +2395,7 @@
 				<effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
 			</animation>
 			<control type="group">
-				<top>-15</top>
+				<top>17</top>
 				<include>Furniture_SettingsBackPanel2</include>
 				<control type="group" id="9001">
 					<control type="list" id="200">
@@ -2658,7 +2658,7 @@
 				<control type="grouplist">
 					<description>Weekday labels</description>
 					<left>62</left>
-					<top>190</top>
+					<top>205</top>
 					<height>800</height>
 					<control type="button">
 						<label>$VAR[TVDayLabel1]</label>
@@ -2778,7 +2778,7 @@
 				<control type="grouplist" id="2000">
 					<description>Weekday labels</description>
 					<left>62</left>
-					<top>190</top>
+					<top>205</top>
 					<height>800</height>
 					<control type="button" id="2001">
 						<label>$VAR[TVDayLabel1]</label>

@@ -510,7 +510,7 @@
 		</control>
 		<control type="image">
 			<left>80</left>
-			<top>45</top>
+			<top>55</top>
 			<width>400</width>
 			<height>158</height>
 			<aspectratio>keep</aspectratio>
