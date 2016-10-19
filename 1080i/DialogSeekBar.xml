@@ -772,6 +772,7 @@
 					</control>
 				</control>
 				<control type="image">
+					<top>-7</top>
 					<width>1920</width>
 					<height>135</height>
 					<texture colordiffuse="$VAR[DialogColorVar]" flipx="true">osd/osd_back.png</texture>
