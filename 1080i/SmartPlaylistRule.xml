@@ -57,7 +57,7 @@
 					<disabledcolor>white2</disabledcolor>
 					<enable>no</enable>
 				</control>
-				<control type="spincontrolex" id="15">
+				<control type="button" id="15">
 					<left>267</left>
 					<top>178</top>
 					<width>477</width>
@@ -71,7 +71,7 @@
 					<ondown>17</ondown>
 					<include>Default_SettingButton</include>
 				</control>
-				<control type="spincontrolex" id="16">
+				<control type="button" id="16">
 					<left>744</left>
 					<top>178</top>
 					<width>530</width>
