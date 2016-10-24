@@ -173,6 +173,12 @@
 				<onclick>Skin.ToggleSetting(Enable.WidgetHide)</onclick>
 				<selected>Skin.HasSetting(Enable.WidgetHide)</selected>
 			</control>
+			<control type="radiobutton" id="326">
+				<include>Objects_CommonSettingsButton</include>
+				<label>  •  Disable Widget Fanart</label>
+				<onclick>Skin.ToggleSetting(Disable.WidgetFanart)</onclick>
+				<selected>Skin.HasSetting(Disable.WidgetFanart)</selected>
+			</control>
 			<control type="label" id="330">
 				<label>Widget Info</label>
 				<include>Objects_CommonSettingsButton</include>

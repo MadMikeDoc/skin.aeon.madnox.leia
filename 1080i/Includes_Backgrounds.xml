@@ -9,7 +9,7 @@
 			<animation effect="fade" time="480">Hidden</animation>
 			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
 			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
-			<visible>$PARAM[Visible] + !$PARAM[isWeather]</visible>
+			<visible>$PARAM[Visible] + !$PARAM[isWeather] + !Skin.HasSetting(Disable.WidgetFanart)</visible>
 		</control>
 		<control type="group">
 			<visible>$PARAM[Visible] + $PARAM[isWeather]</visible>
