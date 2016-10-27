@@ -1988,6 +1988,30 @@ msgctxt "#31493"
 msgid "Album review"
 msgstr ""
 
+msgctxt "#31494"
+msgid "Customize"
+msgstr ""
+
+msgctxt "#31495"
+msgid "PVR Artwork"
+msgstr ""
+
+msgctxt "#31496"
+msgid "Sideblade"
+msgstr ""
+
+msgctxt "#31497"
+msgid "Channel OSD"
+msgstr ""
+
+msgctxt "#31498"
+msgid "Extended Channel OSD"
+msgstr ""
+
+msgctxt "#31499"
+msgid "Switch places for progressbar & icon"
+msgstr ""
+
 msgctxt "#31500"
 msgid "Pictures"
 msgstr ""
@@ -2126,6 +2150,70 @@ msgstr ""
 
 msgctxt "#31534"
 msgid "Enable 'Alphabet' Scrollbar"
+msgstr ""
+
+msgctxt "#31535"
+msgid "Infobar"
+msgstr ""
+
+msgctxt "#31536"
+msgid "Infobar type:"
+msgstr ""
+
+msgctxt "#31537"
+msgid "Hide encryption information"
+msgstr ""
+
+msgctxt "#31538"
+msgid "Hide tuner information"
+msgstr ""
+
+msgctxt "#31539"
+msgid "Hide signal information"
+msgstr ""
+
+msgctxt "#31540"
+msgid "Timeline View"
+msgstr ""
+
+msgctxt "#31541"
+msgid "Channels display type:"
+msgstr ""
+
+msgctxt "#31542"
+msgid "Hide Guide"
+msgstr ""
+
+msgctxt "#31543"
+msgid "Hide Recordings"
+msgstr ""
+
+msgctxt "#31544"
+msgid "Hide Timer"
+msgstr ""
+
+msgctxt "#31545"
+msgid "Hide Search"
+msgstr ""
+
+msgctxt "#31546"
+msgid "Icon only"
+msgstr ""
+
+msgctxt "#31547"
+msgid "Name & Icon"
+msgstr ""
+
+msgctxt "#31548"
+msgid "Name only"
+msgstr ""
+
+msgctxt "#31549"
+msgid "Compact"
+msgstr ""
+
+msgctxt "#31550"
+msgid "Standard"
 msgstr ""
 
 msgctxt "#31600"
@@ -3406,3 +3494,16 @@ msgstr ""
 msgctxt "#31999"
 msgid "Login"
 msgstr ""
+
+
+
+
+
+
+
+
+
+
+
+
+

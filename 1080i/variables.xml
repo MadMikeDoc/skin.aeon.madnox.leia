@@ -2621,9 +2621,9 @@
 		<value condition="String.IsEqual(Skin.String(LiveTV.EpgViewChannels),2)">Skin.Reset(LiveTV.EpgViewChannels)</value>
 	</variable>
 	<variable name="LiveTvGuideTypeOptionsLabelVar">
-		<value condition="String.IsEqual(Skin.String(LiveTV.EpgViewChannels),1)">Icon only</value>
-		<value condition="String.IsEqual(Skin.String(LiveTV.EpgViewChannels),2)">Name &amp; Icon</value>
-		<value>Name only</value>
+		<value condition="String.IsEqual(Skin.String(LiveTV.EpgViewChannels),1)">$LOCALIZE[31546]</value>
+		<value condition="String.IsEqual(Skin.String(LiveTV.EpgViewChannels),2)">$LOCALIZE[31547]</value>
+		<value>$LOCALIZE[31548]</value>
 	</variable>
 	<variable name="LiveTvInfobarTypeOptionsClickVar">
 		<value condition="String.IsEmpty(Skin.String(LiveTV.InfobarType))">Skin.SetString(LiveTV.InfobarType,1)</value>
@@ -2631,9 +2631,9 @@
 		<value condition="String.IsEqual(Skin.String(LiveTV.InfobarType),2)">Skin.Reset(LiveTV.InfobarType)</value>
 	</variable>
 	<variable name="LiveTvInfobarTypeOptionsLabelVar">
-		<value condition="String.IsEqual(Skin.String(LiveTV.InfobarType),1)">Compact</value>
+		<value condition="String.IsEqual(Skin.String(LiveTV.InfobarType),1)">$LOCALIZE[31549]</value>
 		<value condition="String.IsEqual(Skin.String(LiveTV.InfobarType),2)">Nox</value>
-		<value>Standard</value>
+		<value>$LOCALIZE[31550]</value>
 	</variable>
 	<variable name="PlayerArtworkVar">
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>

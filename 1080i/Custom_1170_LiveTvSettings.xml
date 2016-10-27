@@ -30,7 +30,7 @@
 					<description>Fullscreen</description>
 					<width>240</width>
 					<height>50</height>
-					<label>Fullscreen</label>
+					<label>$LOCALIZE[31053]</label>
 					<font>Font_Bold28</font>
 					<texturenofocus>-</texturenofocus>
 					<textcolor>grey</textcolor>
@@ -41,7 +41,7 @@
 					<description>Guide</description>
 					<width>240</width>
 					<height>50</height>
-					<label>Guide</label>
+					<label>$LOCALIZE[31290]</label>
 					<font>Font_Bold28</font>
 					<texturenofocus>-</texturenofocus>
 					<textcolor>grey</textcolor>
@@ -52,7 +52,7 @@
 					<description>Sideblade</description>
 					<width>240</width>
 					<height>50</height>
-					<label>Sideblade</label>
+					<label>$LOCALIZE[31496]</label>
 					<font>Font_Bold28</font>
 					<texturenofocus>-</texturenofocus>
 					<textcolor>grey</textcolor>
@@ -68,7 +68,7 @@
 			<control type="label" id="200">
 				<height>30</height>
 				<width>750</width>
-				<label>[B]Fullscreen[/B]</label>
+				<label>[B]$LOCALIZE[31053][/B]</label>
 				<align>center</align>
 				<font>Font_Reg30_Caps</font>
 			</control>
@@ -86,18 +86,18 @@
 				<control type="label" id="200">
 					<height>52</height>
 					<width>756</width>
-					<label>Channel OSD</label>
+					<label>$LOCALIZE[31497]</label>
 					<include>Objects_MediaMenuLabelAlt2</include>
 					<aligny>center</aligny>
 				</control>
 				<control type="radiobutton" id="326">
-					<label>Extended Channel OSD</label>
+					<label>$LOCALIZE[31498]</label>
 					<width>756</width>
 					<onclick>Skin.ToggleSetting(alternatetvosd)</onclick>
 					<selected>Skin.HasSetting(alternatetvosd)</selected>
 				</control>
 				<control type="radiobutton" id="327">
-					<label>Switch places for progressbar &amp; icon</label>
+					<label>$LOCALIZE[31499]</label>
 					<width>756</width>
 					<onclick>Skin.ToggleSetting(iconleftprogressright)</onclick>
 					<selected>Skin.HasSetting(iconleftprogressright)</selected>
@@ -107,30 +107,30 @@
 					<width>756</width>
 					<height>52</height>
 					<include>Objects_MediaMenuLabelAlt2</include>
-					<label>Infobar</label>
+					<label>$LOCALIZE[31535]</label>
 					<aligny>center</aligny>
 				</control>
 				<control type="button" id="401">
 					<description>Infobar types</description>
 					<width>756</width>
-					<label>Infobar type:</label>
+					<label>$LOCALIZE[31536]</label>
 					<label2>[COLOR selected]$VAR[LiveTvInfobarTypeOptionsLabelVar][/COLOR]</label2>
 					<onclick>$VAR[LiveTvInfobarTypeOptionsClickVar]</onclick>
 				</control>
 				<control type="radiobutton" id="406">
-					<label>Hide encryption information</label>
+					<label>$LOCALIZE[31537]</label>
 					<onclick>Skin.ToggleSetting(infobar_hidetencrypt)</onclick>
 					<selected>Skin.HasSetting(infobar_hidetencrypt)</selected>
 					<width>756</width>
 				</control>
 				<control type="radiobutton" id="407">
-					<label>Hide tuner information</label>
+					<label>$LOCALIZE[31538]</label>
 					<onclick>Skin.ToggleSetting(infobar_hidetuners)</onclick>
 					<selected>Skin.HasSetting(infobar_hidetuners)</selected>
 					<width>756</width>
 				</control>
 				<control type="radiobutton" id="408">
-					<label>Hide signal information</label>
+					<label>$LOCALIZE[31539]</label>
 					<onclick>Skin.ToggleSetting(infobar_hidesignalinfo)</onclick>
 					<selected>Skin.HasSetting(infobar_hidesignalinfo)</selected>
 					<width>756</width>
@@ -144,7 +144,7 @@
 			<control type="label" id="200">
 				<height>30</height>
 				<width>750</width>
-				<label>[B]Guide[/B]</label>
+				<label>[B]$LOCALIZE[31290][/B]</label>
 				<align>center</align>
 				<font>Font_Reg30_Caps</font>
 			</control>
@@ -162,14 +162,14 @@
 				<control type="label" id="201">
 					<width>756</width>
 					<height>52</height>
-					<label>Timeline View</label>
+					<label>$LOCALIZE[31540]</label>
 					<include>Objects_MediaMenuLabelAlt2</include>
 					<aligny>center</aligny>
 				</control>
 				<control type="button" id="328">
 					<description>Epg timeline channel list</description>
 					<width>756</width>
-					<label>Channels display type:</label>
+					<label>$LOCALIZE[31541]</label>
 					<label2>[COLOR selected]$VAR[LiveTvGuideTypeOptionsLabelVar][/COLOR]</label2>
 					<onclick>$VAR[LiveTvGuideTypeOptionsClickVar]</onclick>
 				</control>
@@ -182,7 +182,7 @@
 			<control type="label" id="200">
 				<height>30</height>
 				<width>750</width>
-				<label>[B]Sideblade[/B]</label>
+				<label>[B]$LOCALIZE[31496][/B]</label>
 				<align>center</align>
 				<font>Font_Reg30_Caps</font>
 			</control>
@@ -198,25 +198,25 @@
 				<ondown>90503</ondown>
 				<scrolltime tween="sine" easing="out">0</scrolltime>
 				<control type="radiobutton" id="402">
-					<label>Hide Guide</label>
+					<label>$LOCALIZE[31542]</label>
 					<onclick>Skin.ToggleSetting(sideblade_hideepgtimeline)</onclick>
 					<selected>Skin.HasSetting(sideblade_hideepgtimeline)</selected>
 					<width>756</width>
 				</control>
 				<control type="radiobutton" id="403">
-					<label>Hide Recordings</label>
+					<label>$LOCALIZE[31543]</label>
 					<onclick>Skin.ToggleSetting(sideblade_hiderecordings)</onclick>
 					<selected>Skin.HasSetting(sideblade_hiderecordings)</selected>
 					<width>756</width>
 				</control>
 				<control type="radiobutton" id="404">
-					<label>Hide Timer</label>
+					<label>$LOCALIZE[31544]</label>
 					<onclick>Skin.ToggleSetting(sideblade_hidetimer)</onclick>
 					<selected>Skin.HasSetting(sideblade_hidetimer)</selected>
 					<width>756</width>
 				</control>
 				<control type="radiobutton" id="405">
-					<label>Hide Search</label>
+					<label>$LOCALIZE[31545]</label>
 					<onclick>Skin.ToggleSetting(sideblade_hidesearch)</onclick>
 					<selected>Skin.HasSetting(sideblade_hidesearch)</selected>
 					<width>756</width>
