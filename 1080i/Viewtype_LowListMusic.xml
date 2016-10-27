@@ -326,12 +326,12 @@
 						<visible>Container.Content(songs) | Container.Content(albums)</visible>
 					</control>
 					<control type="image">
-						<left>333</left>
+						<left>363</left>
 						<top>788</top>
-						<width>390</width>
-						<height>30</height>
+						<width>246</width>
+						<height>41</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.StarRating]</texture>
+						<texture fallback="flags/music/rating/rating0.png">flags/music/rating/rating$INFO[ListItem.UserRating].png</texture>
 						<animation effect="slide" end="0,75" time="120" condition="Container.Content(songs)">Conditional</animation>
 						<visible>Container.Content(songs) | Container.Content(albums)</visible>
 					</control>
@@ -417,6 +417,27 @@
 						<label fallback="547">$VAR[InfoWallTextboxVar]</label>
 						<textcolor>white3</textcolor>
 						<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Control.HasFocus(7002) + !String.IsEmpty(ListItem.UserRating)</visible>
+					<animation effect="slide" end="0,70" time="0" condition="Control.IsVisible(506)">Conditional</animation>
+					<control type="image">
+						<left>548</left>
+						<top>768</top>
+						<colordiffuse>floor</colordiffuse>
+						<include>MediaFlagVars</include>
+						<texture>userratings/frame.png</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image">
+						<left>583</left>
+						<top>748</top>
+						<height>60</height>
+						<width>60</width>
+						<colordiffuse>floor</colordiffuse>
+						<texture>userratings/$INFO[ListItem.UserRating].png</texture>
+						<include>VisibleFadeEffect</include>
 					</control>
 				</control>
 				<control type="group">
@@ -727,12 +748,12 @@
 							<visible>Container.Content(artists)</visible>
 						</control>
 						<control type="image">
-							<left>766</left>
-							<top>38</top>
-							<width>146</width>
-							<height>21</height>
+							<left>716</left>
+							<top>28</top>
+							<width>246</width>
+							<height>41</height>
 							<aspectratio>keep</aspectratio>
-							<texture>$INFO[ListItem.StarRating]</texture>
+							<texture fallback="flags/music/rating/rating0.png">flags/music/rating/rating$INFO[ListItem.UserRating].png</texture>
 							<colordiffuse>dcffffff</colordiffuse>
 							<visible>Container.Content(albums) | Container.Content(songs)</visible>
 						</control>
@@ -889,12 +910,12 @@
 							<visible>Container.Content(albums)</visible>
 						</control>
 						<control type="image">
-							<left>766</left>
-							<top>38</top>
-							<width>146</width>
-							<height>21</height>
+							<left>716</left>
+							<top>28</top>
+							<width>246</width>
+							<height>41</height>
 							<aspectratio>keep</aspectratio>
-							<texture>$INFO[ListItem.StarRating]</texture>
+							<texture fallback="flags/music/rating/rating0.png">flags/music/rating/rating$INFO[ListItem.UserRating].png</texture>
 							<colordiffuse>dcffffff</colordiffuse>
 							<visible>Container.Content(albums) | Container.Content(songs)</visible>
 						</control>

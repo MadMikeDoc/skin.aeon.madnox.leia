@@ -61,16 +61,16 @@
 		</control>
 	</include>
 	<include name="AddonBrowserButtons">
-		<control type="radiobutton" id="5">
-			<label>24063</label>
+		<control type="button" id="5">
+			<label>10004</label>
 			<include>Objects_MediaMenuButtonIcons</include>
 			<visible>Window.IsActive(Addonbrowser)</visible>
 		</control>
-		<control type="radiobutton" id="6">
+		<!--control type="radiobutton" id="6">
 			<label>25000</label>
 			<include>Objects_MediaMenuButtonIcons</include>
 			<visible>Window.IsActive(Addonbrowser)</visible>
-		</control>
+		</control-->
 		<control type="radiobutton" id="7">
 			<label>25001</label>
 			<include>Objects_MediaMenuButtonIcons</include>
@@ -584,7 +584,7 @@
 					<visible>Control.IsVisible(1666)</visible>
 				</control>
 				<control type="image">
-					<texture>special://skin/extras/BigIcons/AlarmClock.png</texture>
+					<texture>special://skin/extras/BigIcons/controlpanel.png</texture>
 					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(5)">Conditional</animation>
 					<include>MediaMenuIcons</include>
 					<visible>Control.IsVisible(5) + Window.IsActive(addonbrowser)</visible>

@@ -2440,7 +2440,7 @@
 					<control type="button" id="4">
 						<label>5</label>
 						<include>Objects_MediaMenuButtonAlt</include>
-						<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+						<onclick>ActivateWindow(servicesettings,weather)</onclick>
 					</control>
 					<control type="button" id="301">
 						<width>400</width>
