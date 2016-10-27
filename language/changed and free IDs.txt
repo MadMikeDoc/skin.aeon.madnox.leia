@@ -568,6 +568,56 @@ START HERE:
 
 31883	msgid "Art"
 
+31492	msgid "Enable Playlist on Startup"
+
+31493	msgid "Album review"
+
+31494	msgid "Customize"
+
+31495	msgid "PVR Artwork"
+
+31496	msgid "Sideblade"
+
+31497	msgid "Channel OSD"
+
+31498	msgid "Extended Channel OSD"
+
+31499	msgid "Switch places for progressbar &amp; icon"
+
+31535	msgid "Infobar"
+
+31536	msgid "Infobar type:"
+
+31537	msgid "Hide encryption information"
+
+31538	msgid "Hide tuner information"
+
+31539	msgid "Hide signal information"
+
+31540	msgid "Timeline View"
+
+31541	msgid "Channels display type:"
+
+31542	msgid "Hide Guide"
+
+31543	msgid "Hide Recordings"
+
+31544	msgid "Hide Timer"
+
+31545	msgid "Hide Search"
+
+31546	msgid "Icon only"
+
+31547	msgid "Name & Icon"
+
+31548	msgid "Name only"
+
+31549	msgid "Compact"
+
+31550	msgid "Standard"
+
+
+
 END HERE
 ###############################################################
 
@@ -581,31 +631,6 @@ FREE SLOTS !!!!!!!!!!!!!!! ( maybe not 100% accurate - please double check befor
 =============================================================================================
 
 
-31492
-31493
-31494
-31495
-31496
-31497
-31498
-31499
-
-31535
-31536
-31537
-31538
-31539
-31540
-31541
-31542
-31543
-31544
-31545
-31546
-31547
-31548
-31549
-31550
 31551
 31552
 31553

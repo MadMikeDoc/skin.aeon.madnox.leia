@@ -1113,7 +1113,7 @@
 							<top>494</top>
 							<width>260</width>
 							<height>389</height>
-							<aspectratio aligny="bottom">stretch</aspectratio>
+							<aspectratio aligny="center">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/player_thumbs/movieposter_mask.png">$VAR[PlayerPosterVar]</texture>
 							<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
 						</control>
@@ -1580,15 +1580,15 @@
 				</animation>
 				<control type="image">
 					<left>25</left>
-					<top>506</top>
+					<top>494</top>
 					<width>260</width>
 					<height>389</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
+					<aspectratio aligny="center">keep</aspectratio>
 					<texture background="true" diffuse="thumbs/player_thumbs/movieposter_mask.png">$VAR[PlayerPosterVar]</texture>
 				</control>
 				<control type="image">
 					<left>6</left>
-					<top>487</top>
+					<top>475</top>
 					<width>299</width>
 					<height>427</height>
 					<texture diffuse="thumbs/player_thumbs/movieposter_mask.png">thumbs/player_thumbs/thumb_glass_noreflect.png</texture>

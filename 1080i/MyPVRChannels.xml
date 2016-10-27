@@ -930,7 +930,7 @@
 				<ondown>52</ondown>
 				<pagecontrol>60</pagecontrol>
 				<preloaditems>2</preloaditems>
-				<viewtype label="Wall">icon</viewtype>
+				<viewtype label="$LOCALIZE[31234]">icon</viewtype>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
 				<itemlayout height="165" width="460">
 					<control type="image">

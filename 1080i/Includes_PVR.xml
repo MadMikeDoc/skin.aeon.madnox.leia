@@ -335,7 +335,7 @@
 						<onclick>ActivateWindow(1128)</onclick>
 					</control>
 					<control type="radiobutton" id="327">
-						<label>Customize</label>
+						<label>$LOCALIZE[31494]</label>
 						<textureradioon>special://skin/extras/icons/controlpanel.png</textureradioon>
 						<textureradiooff>special://skin/extras/icons/controlpanel.png</textureradiooff>
 						<include>Objects_MediaMenuButtonIcons1</include>
@@ -345,7 +345,7 @@
 					<control type="radiobutton" id="9231">
 						<include>ViewtypeSettingsButton</include>
 						<include>Objects_MediaMenuButtonIcons</include>
-							<label>PVR Artwork ON</label>
+							<label>$LOCALIZE[31495]</label>
 						<selected>Skin.HasSetting(SkinHelper.EnablePVRThumbs)</selected>
 						<onclick>Skin.ToggleSetting(SkinHelper.EnablePVRThumbs)</onclick>
 					</control>
