@@ -1169,7 +1169,7 @@ msgid "Use ExtendedInfo for Movies and Shows"
 msgstr ""
 
 msgctxt "#31289"
-msgid "Use Metdata Add-on for Actors"
+msgid "Use Metadata Add-on for Actors"
 msgstr ""
 
 msgctxt "#31290"
@@ -1389,7 +1389,7 @@ msgid "  •  Use Album Artist For Handwriting CD"
 msgstr ""
 
 msgctxt "#31344"
-msgid "  •  Alternativ Background"
+msgid "  •  Alternative Background"
 msgstr ""
 
 msgctxt "#31345"
@@ -1625,11 +1625,11 @@ msgid "[B]CONFIGURE LIBRARY SETTINGS[/B][CR][CR]· Configure General Settings[CR
 msgstr ""
 
 msgctxt "#31403"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]· Configure General Settings[CR]· Configure Customizers[CR]· Install Addons[CR]· Show Credits[CR]· Set Paths"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]· Configure General Settings[CR]· Configure Customizers[CR]· Show Credits[CR]· Set Paths"
 msgstr ""
 
 msgctxt "#31404"
-msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Choose a weather add-on [CR]· Set three cities to collect weather information"
+msgid "  •  Record Player"
 msgstr ""
 
 msgctxt "#31405"
@@ -1641,7 +1641,7 @@ msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]· Configure Display Settings[CR]
 msgstr ""
 
 msgctxt "#31407"
-msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Aeon Nox skin · Customize the home menu · Adjust the skin colors[CR]Change skin backgrounds"
+msgid "  •  Show Visualisation"
 msgstr ""
 
 msgctxt "#31408"
@@ -2214,6 +2214,26 @@ msgstr ""
 
 msgctxt "#31550"
 msgid "Standard"
+msgstr ""
+
+msgctxt "#31551"
+msgid "PLOT"
+msgstr ""
+
+msgctxt "#31552"
+msgid "CAST & ROLE"
+msgstr ""
+
+msgctxt "#31553"
+msgid "Colored Genres"
+msgstr ""
+
+msgctxt "#31554"
+msgid "Video Genres"
+msgstr ""
+
+msgctxt "#31555"
+msgid "Current Setting"
 msgstr ""
 
 msgctxt "#31600"
@@ -2858,10 +2878,6 @@ msgctxt "#31827"
 msgid "Widget Transparency"
 msgstr ""
 
-msgctxt "#31849"
-msgid "Show case on widget info button"
-msgstr ""
-
 msgctxt "#31858"
 msgid "Show list widget info"
 msgstr ""
@@ -3047,6 +3063,10 @@ msgctxt "#31848"
 msgid "Movie Genres"
 msgstr ""
 
+msgctxt "#31849"
+msgid "Show case on widget info button"
+msgstr ""
+
 msgctxt "#31850"
 msgid "Home Customizer"
 msgstr ""
@@ -3192,7 +3212,7 @@ msgid "PRESS ANY KEY"
 msgstr ""
 
 msgctxt "#31889"
-msgid "Next Tracks"
+msgid "Next Tracks:"
 msgstr ""
 
 msgctxt "#31890"

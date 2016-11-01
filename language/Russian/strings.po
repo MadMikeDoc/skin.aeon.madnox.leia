@@ -3,13 +3,12 @@
 # Addon id: skin.aeon.madnox
 # Addon Provider: Mike_Doc|schimi2k
 # Translators:
-# BytEvil <itemcode@mail.ru>, 2016
 msgid ""
 msgstr ""
-"Project-Id-Version: Aeon MadNox 4.1.9 for Krypton\n"
+"Project-Id-Version: Aeon MadNox 1.9.1 for Krypton\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2014-03-04 09:23+0000\n"
+"PO-Revision-Date: 2016-11-01 10:18+0400\n"
 "Last-Translator: BytEvil <itemcode@mail.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/aeon-nox-419-for-gotham/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -75,10 +74,8 @@ msgid "Timer"
 msgstr "Таймер"
 
 msgctxt "#31016"
-msgid ""
-"[B]CONFIGURE TV SETTINGS[/B][CR][CR]Tune new channels · Configure the "
-"electronic guide · Record your favourite programs"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ТВ[/B][CR][CR]Настройка каналов • Настройка телепрограммы • Запись избранных программ"
+msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]· Configure General Settings[CR]· Configure Menu/OSD[CR]· Configure Guide Settings[CR]· Configure Playback Settings[CR]· Configure Recording Settings[CR]· Configure Power Saving[CR]· Configure Parent Control[CR]· Configure Client Specific"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ТВ[/B][CR][CR]•Общие настройки•Настройка меню ТВ, информации на экране и сведений о канале[CR]•Настройка телепрограммы[CR]•Настройка просмотра и переключения каналов[CR]•Запись избранных программ[CR]•Родительский контроль"
 
 msgctxt "#31017"
 msgid "Live TV"
@@ -736,6 +733,22 @@ msgctxt "#31206"
 msgid "Youtube Most Popular"
 msgstr "Самое популярное на YouTube"
 
+msgctxt "#31211"
+msgid "Always show plot"
+msgstr "Всегда показывать краткое содержание"
+
+msgctxt "#31212"
+msgid "Transparent background"
+msgstr "Прозрачный фон"
+
+msgctxt "#31217"
+msgid "Setting Level"
+msgstr "Уровень настроек"
+
+msgctxt "#31218"
+msgid "Change mode"
+msgstr "Изменить режим"
+
 msgctxt "#31220"
 msgid "Random episodes"
 msgstr "Случайные серии"
@@ -856,9 +869,21 @@ msgctxt "#31249"
 msgid "New Series"
 msgstr "Новые серии"
 
+msgctxt "#31250"
+msgid "Finale"
+msgstr "Заключение"
+
 msgctxt "#31251"
 msgid "Unknown"
 msgstr "Неизвестно"
+
+msgctxt "#31252"
+msgid "Weather Condition instead of Image"
+msgstr "Словесное отображение погоды вместо значка"
+
+msgctxt "#31253"
+msgid "Disable Weather on Visualisation"
+msgstr "Не показывать сведения о погоде во время визуализации"
 
 msgctxt "#31255"
 msgid "Blu-ray Disc"
@@ -867,6 +892,22 @@ msgstr "Диск Blu-ray"
 msgctxt "#31256"
 msgid "Include already watched Items?"
 msgstr "Включать просмотренные файлы?"
+
+msgctxt "#31261"
+msgid "Customize Icons"
+msgstr "Изменение иконок"
+
+msgctxt "#31262"
+msgid "Default Icons"
+msgstr "Стандартные иконки"
+
+msgctxt "#31263"
+msgid "Mpaa Flags"
+msgstr "Рейтинг Mpaa"
+
+msgctxt "#31264"
+msgid "Colored Mpaa Flags"
+msgstr "Цветные флаги Mpaa"
 
 msgctxt "#31265"
 msgid "Smaller pop-up dialogs"
@@ -900,6 +941,14 @@ msgctxt "#31273"
 msgid "Enabled"
 msgstr "Вкл."
 
+msgctxt "#31274"
+msgid "Reloaded Mpaa Flags"
+msgstr "Флаги Mpaa Reloaded"
+
+msgctxt "#31275"
+msgid "Extended Rating"
+msgstr "Расширенный рейтинг"
+
 msgctxt "#31276"
 msgid "Set up the Aeon MadNox main menu"
 msgstr "Настройка главного меню Aeon MadNox"
@@ -907,6 +956,10 @@ msgstr "Настройка главного меню Aeon MadNox"
 msgctxt "#31277"
 msgid "Reset main menu to default"
 msgstr "Сбросить настройки главного до значений по-умолчанию"
+
+msgctxt "#31278"
+msgid "Set weather fanart"
+msgstr "Настройка фанарта погоды"
 
 msgctxt "#31279"
 msgid "Play trailers in fullscreen"
@@ -940,6 +993,14 @@ msgctxt "#31287"
 msgid "4 Thumbs"
 msgstr "4 эскиза"
 
+msgctxt "#31288"
+msgid "Use ExtendedInfo for Movies and Shows"
+msgstr "Использовать скрипт ExtendedInfo для просмотра сведений о фильмах и сериалах"
+
+msgctxt "#31289"
+msgid "Use Metadata Add-on for Actors"
+msgstr "Использовать дополнение Metadata для просмотра сведений об актерах"
+
 msgctxt "#31290"
 msgid "TV Guide"
 msgstr "ТВ-гид"
@@ -948,6 +1009,10 @@ msgctxt "#31291"
 msgid "BigFan"
 msgstr "Большой фанарт"
 
+msgctxt "#31292"
+msgid "Enable Skin Helper Extra Fanart"
+msgstr "Использовать доп.фанарты скрипта SkinHelper"
+
 msgctxt "#31293"
 msgid "Keep"
 msgstr "Сохранить"
@@ -955,6 +1020,10 @@ msgstr "Сохранить"
 msgctxt "#31295"
 msgid "Widget"
 msgstr "Виджет"
+
+msgctxt "#31296"
+msgid "Customize Quick Nav"
+msgstr "Изменить панель быстрой навигации"
 
 msgctxt "#31298"
 msgid "Set area color"
@@ -972,6 +1041,22 @@ msgctxt "#31309"
 msgid "Memory Used:"
 msgstr "Использовано памяти:"
 
+msgctxt "#31312"
+msgid " •  Media Case on info and paused screens"
+msgstr " •  Обложка диска в виде CD-бокса на панели информации и во время паузы"
+
+msgctxt "#31313"
+msgid " •  Movie DiscArt on info and paused screens"
+msgstr " •  Включить DiscArt на CD-боксе на панели информации и во время паузы"
+
+msgctxt "#31314"
+msgid "Plot and Cast on info and paused screens"
+msgstr "Отображать краткое содержание, актеров и их роли во время паузы"
+
+msgctxt "#31315"
+msgid "Hide Plot and Cast dark overlay"
+msgstr "Использовать прозрачную панель краткого содержания, актеров и их ролей во время паузы"
+
 msgctxt "#31316"
 msgid "Get artwork"
 msgstr "Доп. картинки"
@@ -983,6 +1068,10 @@ msgstr "Показывать сведения о погоде во время п
 msgctxt "#31318"
 msgid "Time Remaining When Paused"
 msgstr "Показывать оставшееся время во время паузы"
+
+msgctxt "#31320"
+msgid "Hide Visualisation behind Fanart"
+msgstr "Скрыть эффекты визуализации за фанартом"
 
 msgctxt "#31321"
 msgid "Karaoke song selector"
@@ -1012,9 +1101,13 @@ msgctxt "#31327"
 msgid "Most played ROMs"
 msgstr "Популярные ROM"
 
+msgctxt "#31328"
+msgid "     Alternate Music Visualisation 1"
+msgstr "     Вид музыкальной визуализации 1"
+
 msgctxt "#31329"
-msgid "In-progress TV Shows"
-msgstr "Просматриваемые сериалы"
+msgid "     Alternate Music Visualisation 2"
+msgstr "     Вид музыкальной визуализации 2"
 
 msgctxt "#31330"
 msgid "Random music"
@@ -1043,6 +1136,50 @@ msgstr "Просматриваемые"
 msgctxt "#31336"
 msgid "Today´s Actors"
 msgstr "Актеры дня"
+
+msgctxt "#31337"
+msgid "Show Alternate Layout 1"
+msgstr "Использовать вид отображения №1"
+
+msgctxt "#31338"
+msgid "  •  Show Info"
+msgstr "  •  Показывать дополнительные сведения"
+
+msgctxt "#31339"
+msgid "  •  Hide Next"
+msgstr "  •  Не показывать следующие треки"
+
+msgctxt "#31340"
+msgid "  •  Hide Time/Progress"
+msgstr "  •  Скрыть время проигрывания трека и прогресс-бар"
+
+msgctxt "#31341"
+msgid "  •  Rounded Cover"
+msgstr "  •  Скругленная обложка"
+
+msgctxt "#31342"
+msgid "  •  Color Artist Name"
+msgstr "  •  Выделять имя исполнителя другим цветом"
+
+msgctxt "#31343"
+msgid "  •  Use Album Artist For Handwriting CD"
+msgstr "  •  Отображать имя исполнителя на CD-диске"
+
+msgctxt "#31344"
+msgid "  •  Alternative Background"
+msgstr "  •  Альтернативный фон"
+
+msgctxt "#31345"
+msgid "Show Alternate Layout 2"
+msgstr "Использовать вид отображения №2"
+
+msgctxt "#31346"
+msgid "  •  Show Waveform Progress"
+msgstr "  •  Отображать прогресс-бар в форме волны"
+
+msgctxt "#31347"
+msgid "Customize Quick Nav"
+msgstr "Настройка панели быстрой навигации"
 
 msgctxt "#31351"
 msgid "Pause"
@@ -1096,6 +1233,18 @@ msgctxt "#31365"
 msgid "Get tune"
 msgstr "Мелодия"
 
+msgctxt "#31366"
+msgid "Small Posters"
+msgstr "Небольшие постеры"
+
+msgctxt "#31367"
+msgid "Movie Info"
+msgstr "Сведения о фильме"
+
+msgctxt "#31369"
+msgid "Show Track List"
+msgstr "Отображать трек-лист"
+
 msgctxt "#31372"
 msgid "Show Info"
 msgstr "Показывать сведения"
@@ -1107,6 +1256,10 @@ msgstr "Сейчас:"
 msgctxt "#31375"
 msgid "Animated"
 msgstr "Анимация"
+
+msgctxt "#31376"
+msgid "Display logo"
+msgstr "Показать логотип"
 
 msgctxt "#31377"
 msgid "cdART"
@@ -1140,6 +1293,10 @@ msgctxt "#31390"
 msgid "Skin default"
 msgstr "Стандартн."
 
+msgctxt "#31395"
+msgid "Disable Logo"
+msgstr "Не показывать логотип"
+
 msgctxt "#31396"
 msgid "BannerList"
 msgstr "Список баннеров"
@@ -1148,72 +1305,61 @@ msgctxt "#31397"
 msgid "Ended"
 msgstr "Окончание"
 
+msgctxt "#31399"
+msgid "Flat Discs"
+msgstr "Пластинка"
+
 msgctxt "#31400"
-msgid ""
-"[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language "
-"and region · Change file listing options[CR]Set up a screensaver · Activate "
-"different themes and fontsets for the current skin"
-msgstr "[B]НАСТРОЙКА ВНЕШНЕГО ВИДА[/B][CR][CR]Изменение обложки • Выбор языка и региона • Изменение настроек списка файлов[CR]Настройка хранителя экрана[CR]Выбор различных тем и шрифтов для обложки"
+msgid "[B]CONFIGURE INTERFACE SETTINGS[/B][CR][CR]· Configure Skin[CR]· Configure Regional[CR]· Configure Control[CR]· Configure Screensaver[CR]· Configure SkinMaster Lock[CR]· Configure Other"
+msgstr "[B]НАСТРОЙКА ВНЕШНЕГО ВИДА[/B][CR][CR]•Настройки обложки[CR]•Языковые и региональные настройки[CR]•Настройка управления[CR]•Настройка хранителя экрана и визуализации[CR]•Настройка общей блокировки[CR]•Выбор различных тем и шрифтов для обложки"
 
 msgctxt "#31401"
-msgid ""
-"[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video"
-" playback options · Change video listing options[CR]Set subtitle fonts"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ВИДЕО[/B][CR][CR]Управление медиатекой видео • Параметры воспроизведения видео[CR]Настройка списка видео • Настройка шрифта субтитров"
+msgid "[B]CONFIGURE PLAYER SETTINGS[/B][CR][CR]· Configure Video-Play Settings[CR]· Configure Music-Play Settings[CR]· Configure Discs Settings[CR]· Configure Pictures Settings[CR]· Configure Language Settings[CR]· Configure Accessibility"
+msgstr "[B]НАСТРОЙКА ПРОИГРЫВАТЕЛЯ[/B][CR][CR]•Настройка воспроизведения видео[CR]•Настройка воспроизведения музыки[CR]•Настройка воспроизведения DVD, Blu-ray и аудио-CD[CR]•Настройка слайд-шоу[CR]•Настройка языка аудио и субтитров[CR]•Специальные возможности"
 
 msgctxt "#31402"
-msgid ""
-"[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music"
-" playback options · Change music listing options[CR]Setup song submission · "
-"Set karaoke options"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ МУЗЫКИ[/B][CR][CR]Управление медиатекой аудио • Параметры воспроизведения аудио[CR]Настройка списка аудио • Настройка добавления песен • Настройка караоке"
+msgid "[B]CONFIGURE LIBRARY SETTINGS[/B][CR][CR]· Configure General Settings[CR]· Configure Video Settings[CR]· Configure Music Settings[CR]· Configure Pictures Settings[CR]· Configure Databases Settings"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ БИБЛИОТЕКИ[/B][CR][CR]•Общие настройки медиатеки[CR]•Настройка отображения списков медиатеки[CR]•Параметры видео-медиатеки[CR]•Параметры аудио-медиатеки[CR]•Параметры фото-медиатеки"
 
 msgctxt "#31403"
-msgid ""
-"[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · "
-"Configure slideshows"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ФОТО[/B][CR][CR]Параметры списка фото • Настройка слайд-шоу"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]· Configure General Settings[CR]· Configure Customizers[CR]· Show Credits[CR]· Set Paths"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ОБЛОЖКИ[/B][CR][CR]•Общие настройки обложки[CR]•Тонкая настройка главного меню[CR]•Создатели[CR]•Настройка путей"
 
 msgctxt "#31404"
-msgid ""
-"[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Choose a weather add-on · Set three"
-" cities to collect weather information"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ПОГОДЫ[/B][CR][CR]Выберите три города для сбора погодной информации"
+msgid "  •  Record Player"
+msgstr "  •  Эффект Record Player`а"
 
 msgctxt "#31405"
-msgid ""
-"[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and "
-"HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ СЛУЖБ[/B][CR][CR]Настройки управления Kodi по UPnP и HTTP • Настройки доступа к файлам[CR]Включение Zeroconf • Настройка AirPlay"
+msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]· Configure Device Name[CR]· Configure UPnP and HTTP[CR]· Configure Web Server[CR]· Configure AirPlay[CR]· Configure Weather"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ СЛУЖБ[/B][CR][CR]•Настройка имени устройства[CR]•Настройки управления Kodi по UPnP и HTTP[CR]•Настройки веб-сервера[CR]•Настройка AirPlay[CR]•Настройка погоды"
 
 msgctxt "#31406"
-msgid ""
-"[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · "
-"Configure audio output · Setup remote controls[CR]Set power saving options ·"
-" Enable debugging · Setup master lock"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ СИСТЕМЫ[/B][CR][CR]Настройка и калибровка дисплеев • Настройка вывода аудио • Настройка[CR]дистанционного управления • Настройка параметров энергосбережения • Включение отладки • Настройка блокировки"
+msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]· Configure Display Settings[CR]· Configure Audio Settings[CR]· Configure Internet Access[CR]· Configure Power Saving[CR]· Configure Addons Settings[CR]· Configure Logging Settings"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ СИСТЕМЫ[/B][CR][CR]•Настройка и калибровка дисплеев[CR]•Настройка вывода аудио[CR]•Настройка доступа в интернет[CR]•Настройка параметров энергосбережения[CR]•Настройка дополнений[CR]•Настройка логирования"
 
 msgctxt "#31407"
-msgid ""
-"[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]Setup the Aeon Nox skin · Customize "
-"the home menu · Adjust the skin colors[CR]Change skin backgrounds"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ ОБЛОЖКИ[/B][CR][CR]Настройка обложки Aeon Nox • Настройка главного меню • Выбор цветов обложки[CR]Изменение фона обложки"
+msgid "  •  Show Visualisation"
+msgstr "  •  Использовать визуализацию"
 
 msgctxt "#31408"
-msgid ""
-"[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed Add-ons · Browse for "
-"and install Add-ons from kodi.tv[CR]Modify Add-on settings"
-msgstr "[B]НАСТРОЙКА ДОПОЛНЕНИЙ[/B][CR][CR]Управление установленными дополнениями • Установка дополнений с kodi.tv[CR]Изменение настроек дополнений"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]· Manage your installed Add-ons[CR]· Browse for and install Add-ons[CR]· Modify Add-on settings"
+msgstr "[B]НАСТРОЙКА ДОПОЛНЕНИЙ[/B][CR][CR]•Управление установленными дополнениями[CR]•Поиск и установка дополнений[CR]•Изменение настроек дополнений"
 
 msgctxt "#31409"
-msgid ""
-"[B]MONITOR YOUR SYSTEM[/B][CR][CR]Check out your hardware · Monitor CPU "
-"usage[CR]Check Kodi revision number"
-msgstr "[B]Мониторинг системы[/B][CR][CR]Проверка оборудования • Мониторинг загрузки CPU[CR]Номер версии Kodi"
+msgid "[B]SYSTEM INFORMATION[/B][CR][CR]· Show Summary[CR]· Show Storage[CR]· Show Network[CR]· Show Video[CR]· Show Hardware[CR]· Show PVR Service"
+msgstr "[B]Мониторинг системы[/B][CR][CR]•Общая информация[CR]•Сведения о накопителях[CR]•Сведения о сетевых настройках[CR]•Сведения об оборудовании[CR]•Сведения о службе PVR"
+
+msgctxt "#31410"
+msgid "[B]CONFIGURE USER PROFILES[/B][CR][CR]· Configure Login[CR]· Manage Profiles"
+msgstr "[B]НАСТРОЙКА ПРОФИЛЕЙ ПОЛЬЗОВАТЕЛЕЙ[/B][CR][CR]•Настройка учетных записей[CR]•Управление профилями"
 
 msgctxt "#31411"
 msgid "MANAGER"
 msgstr "УПРАВЛЕНИЕ"
+
+msgctxt "#31412"
+msgid "[B]MANAGE FILES/FOLDERS[/B][CR][CR]· Copy, Move, Delete, Rename Files and/or Folders[CR]· Create Folders and calculate size of folders"
+msgstr "[B]УПРАВЛЕНИЕ ФАЙЛАМИ/ПАПКАМИ[/B][CR][CR]•Копирование, перемещение, удаление, переименование файлов и/или папок[CR]•Создание папок и вычисление их размеров"
 
 msgctxt "#31413"
 msgid "MONITOR"
@@ -1222,6 +1368,14 @@ msgstr "МОНИТОРИНГ"
 msgctxt "#31414"
 msgid "Local subtitle available"
 msgstr ""
+
+msgctxt "#31415"
+msgid "Enable small Thumbs"
+msgstr "Показывать небольшие миниатюры"
+
+msgctxt "#31416"
+msgid "Open Case"
+msgstr "Открытый кейс"
 
 msgctxt "#31426"
 msgid "Full"
@@ -1238,6 +1392,38 @@ msgstr "ЗАВЕРШЕНИЕ ЧЕРЕЗ"
 msgctxt "#31429"
 msgid "On"
 msgstr "Вкл."
+
+msgctxt "#31436"
+msgid "  •  Hide Repeat/Shuffle"
+msgstr "  •  Спрятать кнопки повтора/перемешивания треков"
+
+msgctxt "#31437"
+msgid "Show Playlist"
+msgstr "Показывать плейлист"
+
+msgctxt "#31438"
+msgid "         •  Show 10 Tracks"
+msgstr "         •  Показывать названия следующих 10 треков"
+
+msgctxt "#31439"
+msgid "         •  Move Down"
+msgstr "         •  Переместить плейлист вниз"
+
+msgctxt "#31440"
+msgid "         •  fade Background"
+msgstr "         •  Затемнить фон"
+
+msgctxt "#31441"
+msgid "         •  Show Numbers"
+msgstr "         •  Показывать нумерацию треков"
+
+msgctxt "#31442"
+msgid "         •  Rating/Codec Switch"
+msgstr "         •  Показывать сведения о кодеке вместо сведений о рейтинге"
+
+msgctxt "#31443"
+msgid "         •  Genre Text/Icons Switch"
+msgstr "         •  Показывать иконку альбома вместо сведений о жанре"
 
 msgctxt "#31452"
 msgid "Not rated"
@@ -1279,6 +1465,30 @@ msgctxt "#31468"
 msgid "Get extrathumbs"
 msgstr "Доп. эскизы"
 
+msgctxt "#31469"
+msgid "Use SkinHelper Animated Posters / Backgrounds"
+msgstr "Использовать анимированные постеры/фоны скрипта SkinHelper"
+
+msgctxt "#31472"
+msgid "Move Up"
+msgstr "Переместить вверх"
+
+msgctxt "#31473"
+msgid "Show Info"
+msgstr "Отображать информацию"
+
+msgctxt "#31474"
+msgid "Show Genre | Style | Mood"
+msgstr "Отображать Жанр | Стиль | Направление"
+
+msgctxt "#31475"
+msgid "Round Cover"
+msgstr "Скругленная обложка"
+
+msgctxt "#31476"
+msgid "More Artist Icons"
+msgstr "Получить еще больше фото артиста"
+
 msgctxt "#31477"
 msgid "TriPanel"
 msgstr "Три панели"
@@ -1291,25 +1501,61 @@ msgctxt "#31479"
 msgid "Widgets"
 msgstr "Виджеты"
 
+msgctxt "#31480"
+msgid "More Album Covers"
+msgstr "Получить еще больше обложек"
+
+msgctxt "#31481"
+msgid "Show Logo"
+msgstr "Показывать логотип"
+
 msgctxt "#31482"
 msgid "Cases"
 msgstr "Боксы"
 
 msgctxt "#31483"
-msgid "Show icon label"
-msgstr "Подпись к значку"
+msgid "Grid size normal"
+msgstr "Обычный размер сетки"
 
 msgctxt "#31484"
 msgid "Play trailer"
-msgstr "Показать трейлер"
+msgstr "Проигать трейлер"
+
+msgctxt "#31485"
+msgid "Show Banner"
+msgstr "Показать баннер"
+
+msgctxt "#31486"
+msgid "   • On Right Side"
+msgstr "   • С правой стороны"
+
+msgctxt "#31488"
+msgid "Album"
+msgstr "Альбом"
+
+msgctxt "#31489"
+msgid "Albums"
+msgstr "Альбомы"
+
+msgctxt "#31490"
+msgid "with"
+msgstr "с"
 
 msgctxt "#31492"
 msgid "Enable Playlist on Startup"
 msgstr "Проигрывать плейлист при запуске"
 
+msgctxt "#31493"
+msgid "Album review"
+msgstr "Обзор альбома"
+
 msgctxt "#31494"
 msgid "Customize"
 msgstr "Доп. настройки"
+
+msgctxt "#31495"
+msgid "PVR Artwork"
+msgstr "Дополнения для PVR"
 
 msgctxt "#31496"
 msgid "Sideblade"
@@ -1375,6 +1621,38 @@ msgctxt "#31511"
 msgid "Play Disc"
 msgstr "Играть диск"
 
+msgctxt "#31512"
+msgid "Hide Info"
+msgstr "Скрыть информацию"
+
+msgctxt "#31513"
+msgid "Open Cases"
+msgstr "Приоткрытые CD-кейсы"
+
+msgctxt "#31514"
+msgid "IMDB Icon"
+msgstr "Иконка IMDB"
+
+msgctxt "#31515"
+msgid "Hide Background Panel"
+msgstr "Скрыть фоновую панель"
+
+msgctxt "#31516"
+msgid "Thumbnail Info"
+msgstr "Сведения о миниатюре"
+
+msgctxt "#31517"
+msgid "Season Title"
+msgstr "Название сезона"
+
+msgctxt "#31520"
+msgid "Small Fanart"
+msgstr "Небольшой фанарт"
+
+msgctxt "#31534"
+msgid "Enable 'Alphabet' Scrollbar"
+msgstr "Включить полосу прокрутки с алфавитным указателем"
+
 msgctxt "#31535"
 msgid "Infobar"
 msgstr "Информационная панель"
@@ -1438,6 +1716,26 @@ msgstr "Компактный"
 msgctxt "#31550"
 msgid "Standard"
 msgstr "Обычный"
+
+msgctxt "#31551"
+msgid "PLOT"
+msgstr "КРАТКОЕ СОДЕРЖАНИЕ"
+
+msgctxt "#31552"
+msgid "CAST & ROLE"
+msgstr "АКТЕРЫ И ИХ РОЛИ"
+
+msgctxt "#31553"
+msgid "Colored Genres"
+msgstr "Цветные иконки"
+
+msgctxt "#31554"
+msgid "Video Genres"
+msgstr "Жанры видео"
+
+msgctxt "#31555"
+msgid "Current Setting"
+msgstr "Текущая настройка"
 
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
@@ -1572,8 +1870,7 @@ msgid "Background Setup"
 msgstr "Настройка фона"
 
 msgctxt "#31646"
-msgid ""
-"Do you want to download all available [CR]artwork without user interaction?"
+msgid "Do you want to download all available [CR]artwork without user interaction?"
 msgstr "Загрузить все доступные картинки[CR]автоматически?"
 
 msgctxt "#31673"
@@ -1701,12 +1998,7 @@ msgid "First run help...."
 msgstr "Сведения при первом запуске."
 
 msgctxt "#31707"
-msgid ""
-"This tab signifies that there is a menu off to the side of this window that "
-"contains extra options for this section.  To access the menu, navigate to "
-"the arrow direction with your remote control or keyboard or place your mouse"
-" pointer over the tab. [CR][CR]Click \"Ok\" to close this dialog. It will "
-"not appear again."
+msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section.  To access the menu, navigate to the arrow direction with the Harmony remote or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"Ok\" to close this dialog. It will not appear again."
 msgstr "Эта вкладка означает, что сбоку окна есть меню с дополнительными настройками.  Чтобы получить доступ к меню, перейдите по стрелке при помощи пульта ДУ или клавиатуры либо поместите курсор мыши над вкладкой. [CR][CR]Нажмите ОК, чтобы закрыть этот диалог. Он больше не будет отображаться."
 
 msgctxt "#31708"
@@ -1813,43 +2105,165 @@ msgctxt "#31734"
 msgid "Use QuickList instead of default shutdown menu"
 msgstr "Список ярлыков вместо станд. меню выхода"
 
-msgctxt "#31735"
-msgid "[B]CREDITS TO:[/B]"
-msgstr "[B]БЛАГОДАРНОСТИ[/B]"
+msgctxt "#31742"
+msgid "Edit submenu"
+msgstr "Редактировать подменю"
 
-msgctxt "#31736"
-msgid "[B]N.O.W.A.L.L.[/B] for creating Artwork"
-msgstr "[B]N.O.W.A.L.L.[/B] — за создание картинок"
+msgctxt "#31743"
+msgid "  •  background image"
+msgstr "  •  фоновое изображение"
 
-msgctxt "#31737"
-msgid "[B]Fional88[/B] for creating the tutorial videos"
-msgstr "[B]Fional88[/B] — за создание обучающих видео"
+msgctxt "#31744"
+msgid "  •  Case"
+msgstr "  •  Кейс"
 
-msgctxt "#31738"
-msgid ""
-"[B]www.webdesignerdepot.com[/B] for permission to include the iconpack "
-"\"Reflection\""
-msgstr "[B]www.webdesignerdepot.com[/B] — за набор значков \"Reflection\""
+msgctxt "#31746"
+msgid "Change icon"
+msgstr "Изменить иконку"
 
-msgctxt "#31739"
-msgid ""
-"[B]DJH_ [/B]for creating Aeon, [B]Jezz_X [/B]for creating Confluence, "
-"[B]black[/B] for creating Xperience1080"
-msgstr "[B]DJH_ [/B] — за создание Aeon, [B]Jezz_X [/B] — за создание Confluence, [B]black[/B] — за создание Xperience1080"
+msgctxt "#31747"
+msgid "Widget 1"
+msgstr "Виджет 1"
 
-msgctxt "#31740"
-msgid ""
-"Translators: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], "
-"[B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], "
-"[B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
-msgstr "Переводчики: [B]CutSickAss[/B], [B]epoke[/B], [B]frodo19[/B], [B]mindweaver[/B], [B]Passer[/B], [B]PatOso[/B], [B]peppe_sr[/B], [B]Rififi77[/B][CR][B]Roman_V_M[/B], [B]lijack[/B]"
+msgctxt "#31748"
+msgid "Widget 2"
+msgstr "Виджет 2"
 
-msgctxt "#31741"
-msgid ""
-"[CR]Also to: [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B],"
-" [B]thrak76[/B], [B]xhaggi[/B] and [CR]all other people who contributed to "
-"this project"
-msgstr "[CR]Дополнительная благодарность [B]Martijn[/B], [B]Deano316[/B], [B]defluo[/B], [B]fmronan[/B], [B]thrak76[/B], [B]xhaggi[/B] и [CR]всем другим людям, которые внесли вклад в проект."
+msgctxt "#31749"
+msgid "Configure widget 1"
+msgstr "Настройка виджета 1"
+
+msgctxt "#31750"
+msgid "Style"
+msgstr "Стиль"
+
+msgctxt "#31751"
+msgid "Background"
+msgstr "Фон"
+
+msgctxt "#31752"
+msgid "Panel Label"
+msgstr "Название панели"
+
+msgctxt "#31753"
+msgid "List Widget Titles"
+msgstr "Список названий виджетов"
+
+msgctxt "#31755"
+msgid "  •  Case"
+msgstr "  •  Кейс"
+
+msgctxt "#31756"
+msgid "  •  Sort by"
+msgstr "  •  Сортировать по"
+
+msgctxt "#31757"
+msgid "  •  Sort order"
+msgstr "  •  Порядок сортировки"
+
+msgctxt "#31758"
+msgid "  •  Limit"
+msgstr "  •  Лимит"
+
+msgctxt "#31760"
+msgid "Configure widget 2"
+msgstr "Настройка виджета 2"
+
+msgctxt "#31776"
+msgid "Weather fanart"
+msgstr "Фанарт погоды"
+
+msgctxt "#31777"
+msgid "Widget 1 fanart"
+msgstr "Фанарт виджета 1"
+
+msgctxt "#31778"
+msgid "Widget 2 fanart"
+msgstr "Фанарт виджета 2"
+
+msgctxt "#31779"
+msgid "Live Background - "
+msgstr "Живые обои - "
+
+msgctxt "#31780"
+msgid "Live Background - Recently Added Albums"
+msgstr "Живые обои - недавно добавленные альбомы"
+
+msgctxt "#31781"
+msgid "Case"
+msgstr "Кейс для диска"
+
+msgctxt "#31782"
+msgid "Glass"
+msgstr "Стекло"
+
+msgctxt "#31783"
+msgid "Clear Case"
+msgstr "Прозрачный кейс"
+
+msgctxt "#31784"
+msgid "ColorCase"
+msgstr "Цветной кейс"
+
+msgctxt "#31785"
+msgid "BD-Case"
+msgstr "Кейс для BD-диска"
+
+msgctxt "#31786"
+msgid "DVD/BR Clear"
+msgstr "Прозрачный кейс для DVD/BR"
+
+msgctxt "#31787"
+msgid "DVD/BR Color"
+msgstr "Цветной кейс для DVD/BR"
+
+msgctxt "#31788"
+msgid "CD Cases"
+msgstr "CD-кейсы"
+
+msgctxt "#31789"
+msgid "CD Cases Clear"
+msgstr "Прозрачные CD-кейсы"
+
+msgctxt "#31790"
+msgid "Widget Background"
+msgstr "Фон виджета"
+
+msgctxt "#31791"
+msgid "Panel Label"
+msgstr "Название панели"
+
+msgctxt "#31792"
+msgid "Sort by"
+msgstr "Сортировать по"
+
+msgctxt "#31793"
+msgid "Sort Order"
+msgstr "Порядок сортировки"
+
+msgctxt "#31794"
+msgid "List Widget Title"
+msgstr "Список названий виджетов"
+
+msgctxt "#31795"
+msgid "Movie library"
+msgstr "Библиотека фильмов"
+
+msgctxt "#31796"
+msgid "TV library"
+msgstr "Библиотека ТВ"
+
+msgctxt "#31797"
+msgid "Movie playlist"
+msgstr "Плейлист для фильмов"
+
+msgctxt "#31798"
+msgid "TV Show playlist"
+msgstr "Плейлист для ТВ-передач"
+
+msgctxt "#31799"
+msgid "Music Video playlist"
+msgstr "Плейлист для муз.видео"
 
 msgctxt "#31800"
 msgid "Fade background in visualisation"
@@ -1870,6 +2284,22 @@ msgstr "Всегда перемешивать содержимое случай�
 msgctxt "#31804"
 msgid "Panel"
 msgstr "Панель"
+
+msgctxt "#31805"
+msgid "Square Poster"
+msgstr "Квадратные постеры"
+
+msgctxt "#31806"
+msgid "On Focus"
+msgstr "В фокусе"
+
+msgctxt "#31821"
+msgid "Always on"
+msgstr "Всегда включено"
+
+msgctxt "#31827"
+msgid "Widget Transparency"
+msgstr "Прозрачность виджета"
 
 msgctxt "#31807"
 msgid "Choose Icon"
@@ -2135,6 +2565,14 @@ msgctxt "#31878"
 msgid "Click on \"Play\" buttons To preview settings"
 msgstr "Нажмите ПРОИГРАТЬ для оценки настроек"
 
+msgctxt "#31879"
+msgid "Panel Info"
+msgstr "Информационная панель"
+
+msgctxt "#31880"
+msgid "Image"
+msgstr "Изображение"
+
 msgctxt "#31881"
 msgid "Click on buttons to customize them"
 msgstr "Нажмите на кнопках для их настройки"
@@ -2160,8 +2598,8 @@ msgid "PRESS ANY KEY"
 msgstr "НАЖМИТЕ ЛЮБУЮ КЛАВИШУ"
 
 msgctxt "#31889"
-msgid "Next Tracks"
-msgstr "Следующие треки"
+msgid "Next Tracks:"
+msgstr "Следующие треки:"
 
 msgctxt "#31890"
 msgid "Collections"
@@ -2343,19 +2781,99 @@ msgctxt "#31965"
 msgid "Playlist widget"
 msgstr "Виджет плейлиста"
 
+msgctxt "#31967"
+msgid "Others"
+msgstr "Разное"
+
+msgctxt "#31968"
+msgid "Disable Flags"
+msgstr "Отключить флаги"
+
+msgctxt "#31969"
+msgid "Flags Paths"
+msgstr "Пути до иконок"
+
+msgctxt "#31970"
+msgid "All Flags"
+msgstr "Все флаги"
+
+msgctxt "#31971"
+msgid "Aspect Ratio Flags"
+msgstr "Соотношение сторон"
+
+msgctxt "#31972"
+msgid "Audio Flags"
+msgstr "Формат аудио"
+
+msgctxt "#31973"
+msgid "Resolution Flags"
+msgstr "Разрешение видео"
+
+msgctxt "#31974"
+msgid "Source Flags"
+msgstr "Источники"
+
+msgctxt "#31975"
+msgid "Colored icons"
+msgstr "Цветные иконки"
+
+msgctxt "#31976"
+msgid "Colored TvGuide"
+msgstr "Цветные иконки"
+
+msgctxt "#31977"
+msgid "Colored Others"
+msgstr "Разные цветные иконки"
+
+msgctxt "#31978"
+msgid "Set to the [B]Flag[/B] Folder"
+msgstr "Настроить путь до всех [B]Иконок[/B]"
+
+msgctxt "#31979"
+msgid "Set to the [B]Studios[/B] Folder"
+msgstr "Настроить путь до иконок [B]Студии[/B]"
+
+msgctxt "#31980"
+msgid "Set to the [B]Language[/B] Folder"
+msgstr "Настроить путь до иконок [B]Языки[/B]"
+
+msgctxt "#31981"
+msgid "Set Path for Colored Flags"
+msgstr "Выбрать цветные иконки"
+
+msgctxt "#31982"
+msgid "Set Path for Reloaded Flags"
+msgstr "Выбрать иконки Reloaded"
+
+msgctxt "#31983"
+msgid "Set Path for Studios Flags"
+msgstr "Выбрать иконки студий"
+
+msgctxt "#31984"
+msgid "Set Path for Language Flags"
+msgstr "Выбрать иконки языков"
+
+msgctxt "#31985"
+msgid "Clear Paths"
+msgstr "Очистить пути"
+
+msgctxt "#31986"
+msgid "Colored Studios"
+msgstr "Цветные иконки студий"
 
 
+msgctxt "#31990"
+msgid "Square Thumbnails"
+msgstr "Квадратные миниатюры"
 
+msgctxt "#31992"
+msgid "IMDB Flag"
+msgstr "Иконки IMDB"
 
+msgctxt "#31993"
+msgid "On Air"
+msgstr "В эфире"
 
-
-
-
-
-
-
-
-
-
-
-
+msgctxt "#31999"
+msgid "Login"
+msgstr "Логин"

@@ -308,6 +308,10 @@ Last Update: 04.06.2016
 
 31399	msgid "Flat Discs"
 
+31404	msgid "  •  Record Player"
+
+31407	msgid "  •  Show Visualisation"
+
 31415	msgid "Enable small Thumbs"
 
 31416	msgid "Open Case"
@@ -616,6 +620,15 @@ START HERE:
 
 31550	msgid "Standard"
 
+31551	msgid "PLOT"
+
+31552	msgid "CAST & ROLE"
+
+31553	msgid "Colored Genres"
+
+31554	msgid "Video Genres"
+
+31555	msgid "Current Setting"
 
 
 END HERE
@@ -631,11 +644,6 @@ FREE SLOTS !!!!!!!!!!!!!!! ( maybe not 100% accurate - please double check befor
 =============================================================================================
 
 
-31551
-31552
-31553
-31554
-31555
 31556
 31557
 31558

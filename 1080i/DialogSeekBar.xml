@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol>1</defaultcontrol>
-	<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + ![VideoPlayer.Content(livetv) | Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo) | Window.IsActive(script-XBMC-Subtitles-main.xml)] + Window.IsVisible(fullscreenvideo)</visible>
+	<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + [VideoPlayer.Content(livetv) | Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo) | Window.IsActive(script-XBMC-Subtitles-main.xml)] + Window.IsVisible(fullscreenvideo)</visible>
 	<coordinates>
 		<system>1</system>
 		<left>0</left>
@@ -42,7 +42,7 @@
 					<align>left</align>
 					<font>Font_Bold28</font>
 					<textcolor>FF017196</textcolor>
-					<label>PLOT</label>
+					<label>$LOCALIZE[31551]</label>
 				</control>
 				<control type="textbox">
 					<visible>!Skin.HasSetting(DisableVideoThumb) + Skin.HasSetting(Discinfoscreen)</visible>
@@ -227,7 +227,7 @@
 					<align>left</align>
 					<font>Font_Bold28</font>
 					<textcolor>FF017196</textcolor>
-					<label>CAST &amp; ROLE</label>
+					<label>$LOCALIZE[31552]</label>
 				</control>
 				<control type="textbox">
 					<description>Cast</description>
@@ -276,7 +276,7 @@
 					<align>left</align>
 					<font>Font_Bold28</font>
 					<textcolor>FF017196</textcolor>
-					<label>PLOT</label>
+					<label>$LOCALIZE[31551]</label>
 				</control>
 				<control type="textbox">
 					<description>Plot</description>
@@ -298,7 +298,7 @@
 					<align>left</align>
 					<font>Font_Bold28</font>
 					<textcolor>FF017196</textcolor>
-					<label>CAST &amp; ROLE</label>
+					<label>$LOCALIZE[31552]</label>
 				</control>
 				<control type="textbox">
 					<description>Cast</description>
@@ -347,7 +347,7 @@
 					<align>left</align>
 					<font>Font_Bold28</font>
 					<textcolor>FF017196</textcolor>
-					<label>PLOT</label>
+					<label>$LOCALIZE[31551]</label>
 				</control>
 				<control type="textbox">
 					<description>Plot</description>
@@ -369,7 +369,7 @@
 					<align>left</align>
 					<font>Font_Bold28</font>
 					<textcolor>FF017196</textcolor>
-					<label>CAST &amp; ROLE</label>
+					<label>$LOCALIZE[31552]</label>
 				</control>
 				<control type="textbox">
 					<description>Cast</description>
@@ -772,7 +772,6 @@
 					</control>
 				</control>
 				<control type="image">
-					<top>-7</top>
 					<width>1920</width>
 					<height>135</height>
 					<texture colordiffuse="$VAR[DialogColorVar]" flipx="true">osd/osd_back.png</texture>

@@ -770,7 +770,7 @@
 					<height>36</height>
 					<align>right</align>
 					<font>Font_Reg22_2</font>
-					<label>[COLOR $VAR[FontColorVar]]Next:[/COLOR]</label>
+					<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31889][/COLOR]</label>
 					<shadowcolor>black</shadowcolor>
 					<scroll>true</scroll>
 					<include>Animation_VisibleChange400</include>
