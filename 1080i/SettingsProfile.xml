@@ -198,7 +198,7 @@
 						<include>Default_SettingRadioButton</include>
 					</control>
 					<control type="button" id="5">
-						<label>Auto Login (Current Setting: $INFO[System.ProfileAutoLogin])</label>
+						<label>$LOCALIZE[31267] ($LOCALIZE[31555]: $INFO[System.ProfileAutoLogin])</label>
 						<include>Default_SettingButton</include>
 						<enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable>
 					</control>

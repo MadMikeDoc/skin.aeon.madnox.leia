@@ -2232,6 +2232,10 @@ msgctxt "#31554"
 msgid "Video Genres"
 msgstr ""
 
+msgctxt "#31555"
+msgid "Current Setting"
+msgstr ""
+
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr ""

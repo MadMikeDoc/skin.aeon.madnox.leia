@@ -42,7 +42,7 @@
 					<align>left</align>
 					<font>Font_Bold28</font>
 					<textcolor>FF017196</textcolor>
-					<label>PLOT</label>
+					<label>$LOCALIZE[31551]</label>
 				</control>
 				<control type="textbox">
 					<visible>!Skin.HasSetting(DisableVideoThumb) + Skin.HasSetting(Discinfoscreen)</visible>
@@ -227,7 +227,7 @@
 					<align>left</align>
 					<font>Font_Bold28</font>
 					<textcolor>FF017196</textcolor>
-					<label>CAST &amp; ROLE</label>
+					<label>$LOCALIZE[31552]</label>
 				</control>
 				<control type="textbox">
 					<description>Cast</description>
@@ -276,7 +276,7 @@
 					<align>left</align>
 					<font>Font_Bold28</font>
 					<textcolor>FF017196</textcolor>
-					<label>PLOT</label>
+					<label>$LOCALIZE[31551]</label>
 				</control>
 				<control type="textbox">
 					<description>Plot</description>
@@ -298,7 +298,7 @@
 					<align>left</align>
 					<font>Font_Bold28</font>
 					<textcolor>FF017196</textcolor>
-					<label>CAST &amp; ROLE</label>
+					<label>$LOCALIZE[31552]</label>
 				</control>
 				<control type="textbox">
 					<description>Cast</description>

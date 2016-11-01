@@ -1041,6 +1041,14 @@ msgctxt "#31309"
 msgid "Memory Used:"
 msgstr "Использовано памяти:"
 
+msgctxt "#31312"
+msgid " •  Media Case on info and paused screens"
+msgstr " •  Обложка диска в виде CD-бокса на панели информации и во время паузы"
+
+msgctxt "#31313"
+msgid " •  Movie DiscArt on info and paused screens"
+msgstr " •  Включить DiscArt на CD-боксе на панели информации и во время паузы"
+
 msgctxt "#31314"
 msgid "Plot and Cast on info and paused screens"
 msgstr "Отображать краткое содержание, актеров и их роли во время паузы"
@@ -1311,7 +1319,7 @@ msgstr "[B]НАСТРОЙКА ПРОИГРЫВАТЕЛЯ[/B][CR][CR]•Наст�
 
 msgctxt "#31402"
 msgid "[B]CONFIGURE LIBRARY SETTINGS[/B][CR][CR]· Configure General Settings[CR]· Configure Video Settings[CR]· Configure Music Settings[CR]· Configure Pictures Settings[CR]· Configure Databases Settings"
-msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ БИБЛИОТЕКИ[/B][CR][CR]•Общие настройки медиатеки[CR]•Настройка отображения списков медиатеки[CR]•Параметры видео-медиатеки[CR]•Параметры видео-медиатеки[CR]•Параметры аудио-медиатеки[CR]•Параметры фото-медиатеки"
+msgstr "[B]НАСТРОЙКА ПАРАМЕТРОВ БИБЛИОТЕКИ[/B][CR][CR]•Общие настройки медиатеки[CR]•Настройка отображения списков медиатеки[CR]•Параметры видео-медиатеки[CR]•Параметры аудио-медиатеки[CR]•Параметры фото-медиатеки"
 
 msgctxt "#31403"
 msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR][CR]· Configure General Settings[CR]· Configure Customizers[CR]· Show Credits[CR]· Set Paths"
@@ -1724,6 +1732,10 @@ msgstr "Цветные иконки"
 msgctxt "#31554"
 msgid "Video Genres"
 msgstr "Жанры видео"
+
+msgctxt "#31555"
+msgid "Current Setting"
+msgstr "Текущая настройка"
 
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
@@ -2809,6 +2821,10 @@ msgctxt "#31976"
 msgid "Colored TvGuide"
 msgstr "Цветные иконки"
 
+msgctxt "#31977"
+msgid "Colored Others"
+msgstr "Разные цветные иконки"
+
 msgctxt "#31978"
 msgid "Set to the [B]Flag[/B] Folder"
 msgstr "Настроить путь до всех [B]Иконок[/B]"
@@ -2857,3 +2873,7 @@ msgstr "Иконки IMDB"
 msgctxt "#31993"
 msgid "On Air"
 msgstr "В эфире"
+
+msgctxt "#31999"
+msgid "Login"
+msgstr "Логин"
