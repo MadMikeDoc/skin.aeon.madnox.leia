@@ -334,7 +334,7 @@
 					<visible>Skin.HasSetting(ThirdMusicVizLayout)</visible>
 				</control>
 				<control type="radiobutton" id="18203">
-					<label>  •  Record Player</label>
+					<label>$LOCALIZE[31404]</label>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick>Skin.ToggleSetting(ThirdMusicVizRecordPlayer)</onclick>
 					<selected>Skin.HasSetting(ThirdMusicVizRecordPlayer)</selected>
@@ -342,7 +342,7 @@
 					<visible>Skin.HasSetting(ThirdMusicVizLayout)</visible>
 				</control>
 				<control type="radiobutton" id="18205">
-					<label>  •  Show Visualisation</label>
+					<label>$LOCALIZE[31407]</label>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick>Skin.ToggleSetting(ThirdMusicVizShowViz)</onclick>
 					<selected>Skin.HasSetting(ThirdMusicVizShowViz)</selected>
