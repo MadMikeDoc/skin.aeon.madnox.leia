@@ -741,6 +741,10 @@ msgctxt "#31212"
 msgid "Transparent background"
 msgstr "Прозрачный фон"
 
+msgctxt "#31215"
+msgid "Enable TvTunes"
+msgstr "Использовать дополнение TvTunes"
+
 msgctxt "#31217"
 msgid "Setting Level"
 msgstr "Уровень настроек"
@@ -748,6 +752,10 @@ msgstr "Уровень настроек"
 msgctxt "#31218"
 msgid "Change mode"
 msgstr "Изменить режим"
+
+msgctxt "#31219"
+msgid "Disable Video Extras"
+msgstr "Не использовать дополнительные материалы"
 
 msgctxt "#31220"
 msgid "Random episodes"
@@ -799,7 +807,7 @@ msgstr "Навигация"
 
 msgctxt "#31232"
 msgid "Video Info Options"
-msgstr "Настройки сведений о видео"
+msgstr "Настройка сведений о видео"
 
 msgctxt "#31233"
 msgid "Panel"
@@ -847,7 +855,7 @@ msgstr "Расписание"
 
 msgctxt "#31244"
 msgid "Enable cdART in 'Now Playing' widget"
-msgstr "Показывать CD-арт в виджете \"Сейчас проигрывается\""
+msgstr "CD-арт в виджете \"Сейчас проигрывается\""
 
 msgctxt "#31245"
 msgid "Returning"
@@ -965,6 +973,10 @@ msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr "Трейлеры в полноэкранном режиме"
 
+msgctxt "#31280"
+msgid "Show Scroll Letter"
+msgstr "Отображать алфавитный указатель при прокрутке"
+
 msgctxt "#31281"
 msgid "Show video info when player is paused"
 msgstr "Показывать сведения о видео на паузе"
@@ -1025,6 +1037,10 @@ msgctxt "#31296"
 msgid "Customize Quick Nav"
 msgstr "Изменить панель быстрой навигации"
 
+msgctxt "#31297"
+msgid "  •  Global widget backgrounds"
+msgstr "  •  Настройка фона для всех виджетов"
+
 msgctxt "#31298"
 msgid "Set area color"
 msgstr "Выбрать цвет области"
@@ -1033,21 +1049,61 @@ msgctxt "#31299"
 msgid "Data provider"
 msgstr "Источник данных"
 
+msgctxt "#31300"
+msgid "       •  Background"
+msgstr "       •  Фон"
+
+msgctxt "#31301"
+msgid "  •  Match info button background to widget background"
+msgstr "  •  Фон инфо-панели совпадает с фоном виджета"
+
+msgctxt "#31302"
+msgid "  •  Widget Transparency"
+msgstr "  •  Прозрачность виджета"
+
+msgctxt "#31303"
+msgid "  •  Show list widget information"
+msgstr "  •  Показывать сведения на виджете в виде списка"
+
+msgctxt "#31304"
+msgid "  •  Global panel widget information"
+msgstr "  •  Глобальная панель информации о виджетах"
+
+msgctxt "#31305"
+msgid "  •  Hide widgets when not focused"
+msgstr "  •  Скрывать виджеты, если они не в фокусе"
+
+msgctxt "#31306"
+msgid "  •  Auto-scroll list widgets"
+msgstr "  •  Ротация информации на виджете в виде списка"
+
 msgctxt "#31307"
 msgid "Hide fanart"
 msgstr "Скрыть фанарт"
+
+msgctxt "#31308"
+msgid "  •  Cast on widget info"
+msgstr "  •  Показывать на инфо-панели виджета сведения об актерах"
 
 msgctxt "#31309"
 msgid "Memory Used:"
 msgstr "Использовано памяти:"
 
+msgctxt "#31310"
+msgid "  •  Case on widget info"
+msgstr "  •  Использовать кейс на панели виджета"
+
+msgctxt "#31311"
+msgid "  •  Case on widget info screen"
+msgstr "  •  Использовать кейс на инфо-панели виджета"
+
 msgctxt "#31312"
 msgid " •  Media Case on info and paused screens"
-msgstr " •  Обложка диска в виде CD-бокса на панели информации и во время паузы"
+msgstr " •  Обложка диска в виде CD-бокса на инфо-панели"
 
 msgctxt "#31313"
 msgid " •  Movie DiscArt on info and paused screens"
-msgstr " •  Включить DiscArt на CD-боксе на панели информации и во время паузы"
+msgstr " •  Включить диск-арт на CD-боксе"
 
 msgctxt "#31314"
 msgid "Plot and Cast on info and paused screens"
@@ -1055,7 +1111,7 @@ msgstr "Отображать краткое содержание, актеров
 
 msgctxt "#31315"
 msgid "Hide Plot and Cast dark overlay"
-msgstr "Использовать прозрачную панель краткого содержания, актеров и их ролей во время паузы"
+msgstr "Прозрачная панель краткого содержания, актеров и их ролей во время паузы"
 
 msgctxt "#31316"
 msgid "Get artwork"
@@ -1737,6 +1793,34 @@ msgctxt "#31555"
 msgid "Current Setting"
 msgstr "Текущая настройка"
 
+msgctxt "#31556"
+msgid "Enable MPAA rating description"
+msgstr "Использовать информацию о MPAA рейтинге"
+
+msgctxt "#31557"
+msgid "  •  Disable Widget Fanart"
+msgstr "  •  Не отображать фанарт виджета"
+
+msgctxt "#31558"
+msgid "Widget Info"
+msgstr "Оформление инфо-панели виджета"
+
+msgctxt "#31559"
+msgid "Enable Widget Info"
+msgstr "Информационная панель"
+
+msgctxt "#31560"
+msgid "Move now Playing Below HomeBar"
+msgstr "Виджет \"Сейчас проигрывается\" внизу"
+
+msgctxt "#31561"
+msgid "Center CD Below HomeBar"
+msgstr "Отображать CD-арт по центру внизу"
+
+msgctxt "#31562"
+msgid "Show Logo Below HomeBar"
+msgstr "Отображать логотип внизу"
+
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr "Настройка пунктов главного меню (фон, виджеты)"
@@ -2083,7 +2167,7 @@ msgstr "Показать города"
 
 msgctxt "#31729"
 msgid "Move NowPlaying widget to bottom"
-msgstr "Виджет \"Сейчас проигрывается\" внизу"
+msgstr "Виджет \"Сейчас проигрывается\" по центру"
 
 msgctxt "#31730"
 msgid "Script features"
@@ -2143,11 +2227,15 @@ msgstr "Фон"
 
 msgctxt "#31752"
 msgid "Panel Label"
-msgstr "Название панели"
+msgstr "Подпись панели"
 
 msgctxt "#31753"
 msgid "List Widget Titles"
 msgstr "Список названий виджетов"
+
+msgctxt "#31754"
+msgid "  •  Art"
+msgstr "  •  Арт"
 
 msgctxt "#31755"
 msgid "  •  Case"
@@ -2168,6 +2256,26 @@ msgstr "  •  Лимит"
 msgctxt "#31760"
 msgid "Configure widget 2"
 msgstr "Настройка виджета 2"
+
+msgctxt "#31765"
+msgid "Extended List"
+msgstr "Широкий список"
+
+msgctxt "#31766"
+msgid "Extended Panel"
+msgstr "Широкая панель"
+
+msgctxt "#31767"
+msgid "Compact Panel"
+msgstr "Компактная панель"
+
+msgctxt "#31768"
+msgid "Extended Compact Panel"
+msgstr "Широкая компактная панель"
+
+msgctxt "#31769"
+msgid "Extended Mixed"
+msgstr "Широкая совмещаемая панель"
 
 msgctxt "#31776"
 msgid "Weather fanart"
@@ -2357,6 +2465,10 @@ msgctxt "#31820"
 msgid "Daily Babes"
 msgstr "Красотки дня"
 
+msgctxt "#31822"
+msgid "Match widget panel"
+msgstr "Совпадает с панелью"
+
 msgctxt "#31823"
 msgid "World Map + Icons"
 msgstr "Карта мира + значки"
@@ -2439,7 +2551,7 @@ msgstr "Очистить музыкальную медиатеку"
 
 msgctxt "#31844"
 msgid "Clean VideoDB"
-msgstr "Очистить музыкальную медиатеку"
+msgstr "Очистить медиатеку видео"
 
 msgctxt "#31845"
 msgid "Movie Sets"

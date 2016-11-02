@@ -630,11 +630,22 @@ START HERE:
 
 31555	msgid "Current Setting"
 
+31556	msgid "Enable MPAA rating description"
+
+31557	msgid "  •  Disable Widget Fanart"
+
+31558	msgid "Widget Info"
+
+31559	msgid "Enable Widget Info"
+
+31560	msgid "Move now Playing Below HomeBar"
+
+31561	msgid "Center CD Below HomeBar"
+
+31562	msgid "Show Logo Below HomeBar"
 
 END HERE
 ###############################################################
-
-
 
 
 =============================================================================================
@@ -644,13 +655,6 @@ FREE SLOTS !!!!!!!!!!!!!!! ( maybe not 100% accurate - please double check befor
 =============================================================================================
 
 
-31556
-31557
-31558
-31559
-31560
-31561
-31562
 31563
 31564
 31565
