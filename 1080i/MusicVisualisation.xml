@@ -4,7 +4,7 @@
 	<onload>Skin.Reset(vispanelrotate)</onload>
 	<onunload>Skin.Reset(vispanelrotate)</onunload>
 	<onload>RunScript(script.artistslideshow)</onload>
-	<onload condition="!Skin.HasSetting(AltMusicVizLayout) + !Skin.HasSetting(ThirdMusicVizLayout)">RunScript(script.cu.lrclyrics)</onload>
+	<onload condition="!Skin.HasSetting(AltMusicVizLayout) + !Skin.HasSetting(ThirdMusicVizLayout) + !Skin.HasSetting(FourthMusicVizLayout)">RunScript(script.cu.lrclyrics)</onload>
 	<onload>AlarmClock(MusicInfoRotation,ActivateWindow(1156),00:15,silent,loop)</onload>
 	<onunload>CancelAlarm(MusicInfoRotation,true)</onunload>
 	<controls>
@@ -210,6 +210,7 @@
 				<width>2100</width>
 				<height>780</height>
 				<texture>home/nowplaying_shadow.png</texture>
+				<visible>!Skin.HasSetting(ThirdMusicVizLayout) + !Skin.HasSetting(FourthMusicVizLayout)</visible>
 			</control>
 			<control type="image">
 				<posy>-400</posy>
@@ -222,7 +223,7 @@
 			<control type="group">
 				<posx>8</posx>
 				<posy>30</posy>
-				<visible>!Window.IsActive(1112) + !Skin.HasSetting(AltMusicVizLayout) + !Skin.HasSetting(ThirdMusicVizLayout)</visible>
+				<visible>!Window.IsActive(1112) + !Skin.HasSetting(AltMusicVizLayout) + !Skin.HasSetting(ThirdMusicVizLayout) + !Skin.HasSetting(FourthMusicVizLayout)</visible>
 				<animation effect="slide" start="-975" end="0" time="700" tween="cubic" delay="400">WindowOpen</animation>
 				<animation effect="slide" end="-975" time="400" tween="cubic" easing="in" delay="400" condition="Skin.HasSetting(CDArtinVis)">WindowClose</animation>
 				<animation effect="slide" end="-975" time="500" tween="cubic" easing="in" condition="!Skin.HasSetting(CDArtinVis)">WindowClose</animation>
@@ -540,7 +541,7 @@
 			</control>
 			<control type="group">
 				<posx>30</posx>
-				<visible>!Window.IsActive(1112) + !Skin.HasSetting(AltMusicVizLayout) + !Skin.HasSetting(ThirdMusicVizLayout)</visible>
+				<visible>!Window.IsActive(1112) + !Skin.HasSetting(AltMusicVizLayout) + !Skin.HasSetting(ThirdMusicVizLayout) + !Skin.HasSetting(FourthMusicVizLayout)</visible>
 				<include>Animation_OpenCloseZoom</include>
 				<control type="group">
 					<posy>70</posy>
@@ -847,7 +848,7 @@
 				</control>
 			</control>
 		</control>
-		<!-- NEW layout 1 -->
+		<!-- MooViz layout -->
 		<control type="image">
 			<animation effect="slide" start="0,0" end="0,100" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,50" time="200" tween="cubic" condition="Skin.HasSetting(AltMusicVizLayoutNext) + Skin.HasSetting(AltMusicVizLayoutProgress)">Conditional</animation>
@@ -1829,8 +1830,8 @@
 				</control>
 			</control>
 		</control>
-<!-- New layout 1 end -->
-<!-- Third Layout Start -->
+		<!-- MooViz layout end -->
+		<!-- Third Layout Start -->
 		<control type="group"> <!--OnScreen Info-->
 			<left>-20</left>
 			<top>540</top>
@@ -2187,7 +2188,7 @@
 						<posy>60</posy>
 						<width>480</width>
 						<height>370</height>
-						<texture diffuse="blank.png">recordplayer/recordplayer.png</texture>
+						<texture>recordplayer/recordplayer.png</texture>
 						<aspectratio aligny="bottom">stretch</aspectratio>
 					</control>
 					<control type="group">
@@ -2227,6 +2228,179 @@
 			</control>
 		</control>
 		<!-- Third Layout End -->
+		<!--Fourth Layout -->
+		<!-- Background-->
+		<control type="image">
+				<visible>Skin.HasSetting(FourthMusicVizLayout) + !Skin.HasSetting(FourthMusicVizLayoutDown)</visible>
+				<top>0</top>
+				<width>2100</width>
+				<height>780</height>
+				<texture flipy="true">home/nowplaying_shadow.png</texture>
+				<include>Animation_VisibleChange400</include>
+			</control>
+			<control type="image">
+				<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutDown)</visible>
+				<top>480</top>
+				<width>2100</width>
+				<height>600</height>
+				<texture>home/nowplaying_shadow.png</texture>
+				<include>Animation_VisibleChange400</include>
+			</control>
+		<!-- Logo Artist-->
+		<control type="group">
+			<visible>Skin.HasSetting(FourthMusicVizLayout)</visible>
+			<animation effect="slide" start="0,0" end="0,450" time="200" tween="cubic" condition="Skin.HasSetting(FourthMusicVizLayoutDown)">Conditional</animation>
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>800</height>
+			<control type="image" id="831844">
+				<left>710</left>
+				<top>0</top>
+				<width>500</width>
+				<height>500</height>
+				<aspectratio>keep</aspectratio>
+				<animation effect="fade" start="100" end="0" time="500" condition="Substring(Control.GetLabel(831844),empty.png)">Conditional</animation>
+				<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
+			</control>
+			<control type="label">
+				<left>460</left>
+				<top>-200</top>
+				<width>1000</width>
+				<align>center</align>
+				<scroll>true</scroll>
+				<font>Font_MainClassic2.low</font>
+				<visible>Substring(Control.GetLabel(831844),empty.png)</visible>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<textcolor>$VAR[TitleColorVar]</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<!-- Title -->
+			<control type="image">
+				<left>460</left>
+				<top>350</top>
+				<width>1000</width>
+				<height>4</height>
+				<texture>views/list_divider.png</texture>
+			</control>
+			<control type="label">
+				<left>460</left>
+				<top>359</top>
+				<width>1000</width>
+				<height>45</height>
+				<align>center</align>
+				<font>Font_MainClassic3.low</font>
+				<textcolor>$VAR[TitleColorVar]</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+				<label>[COLOR=white]$INFO[MusicPlayer.Title, “ , ”][/COLOR]</label>
+			</control>
+			<!-- Album-->
+			<control type="image">
+				<left>460</left>
+				<top>420</top>
+				<width>1000</width>
+				<height>4</height>
+				<texture>views/list_divider.png</texture>
+			</control>
+			<control type="label">
+				<left>460</left>
+				<top>425</top>
+				<width>1000</width>
+				<height>36</height>
+				<align>center</align>
+				<font>Font_MainClassic22</font>
+				<label>[COLOR white]$INFO[MusicPlayer.Album][/COLOR]$INFO[MusicPlayer.Year, [,] ]</label>
+				<textcolor>$VAR[TitleColorVar]</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+			</control>
+			<!-- Repeat/Shuffle-->
+			<control type="image">
+				<visible>Player.HasDuration + !MusicPartyMode.Enabled</visible>
+				<left>710</left>
+				<top>505</top>
+				<width>45</width>
+				<height>45</height>
+				<texture>$VAR[MusicVizOSDRepeatButtonVar]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<visible>Player.HasDuration + !MusicPartyMode.Enabled</visible>
+				<left>1150</left>
+				<top>505</top>
+				<width>45</width>
+				<height>45</height>
+				<texture>$VAR[MusicVizOSDShuffleButtonVar]</texture>
+				<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
+			</control>
+			<!-- Progressbar/Time-->
+			<control type="progress">
+				<visible>Player.HasDuration + Skin.HasSetting(FourthMusicVizLayoutProgress)</visible>
+				<animation effect="fade" end="80" condition="true">Conditional</animation>
+				<left>710</left>
+				<top>490</top>
+				<width>500</width>
+				<height>10</height>
+				<reveal>true</reveal>
+				<texturebg border="3">mooviz/progress.border.png</texturebg>
+				<midtexture>mooviz/progress.png</midtexture>
+				<lefttexture>-</lefttexture>
+				<righttexture>-</righttexture>
+				<info>Player.Progress</info>
+			</control>
+			<control type="group">
+				<visible>Player.HasDuration + Skin.HasSetting(FourthMusicVizLayoutProgress)</visible>
+				<left>460</left>
+				<top>490</top>
+				<width>1000</width>
+				<height>75</height>
+				<control type="label">
+					<width>1000</width>
+					<font>Font_MainClassic22</font>
+					<textcolor>$VAR[TitleColorVar]</textcolor>
+					<label>$INFO[MusicPlayer.Time,, / ]$INFO[MusicPlayer.Duration]</label>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>!Player.HasDuration</visible>
+					<width>1000</width>
+					<font>Font_MainClassic22</font>
+					<label>$INFO[MusicPlayer.Time,, / ]∞</label>
+					<textcolor>$VAR[TitleColorVar]</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<align>center</align>
+				</control>
+			</control>
+		</control>
+		<!-- Info -->
+		<control type="label">
+			<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutShowInfo)</visible>
+			<animation effect="slide" start="0,0" end="0,450" time="200" tween="cubic" condition="Skin.HasSetting(FourthMusicVizLayoutDown)">Conditional</animation>
+			<left>460</left>
+			<top>540</top>
+			<width>1000</width>
+			<height>40</height>
+			<align>center</align>
+			<font>font.ml</font>
+			<shadowcolor>black</shadowcolor>
+			<label>[COLOR=white]$INFO[MusicPlayer.Codec][/COLOR]  [COLOR=gray]•[/COLOR]  $INFO[MusicPlayer.Bitrate][COLOR=$VAR[TitleColorVar]] kbps[/COLOR]  [COLOR=gray]•[/COLOR]  $INFO[MusicPlayer.Samplerate][COLOR=$VAR[TitleColorVar]] kHz[/COLOR]  [COLOR=gray]•[/COLOR]  $INFO[MusicPlayer.BitsPerSample][COLOR=$VAR[TitleColorVar]] Bits[/COLOR]  [COLOR=gray]•[/COLOR]  [COLOR=white]$INFO[MusicPlayer.Genre][/COLOR]</label>
+		</control>
+		<!-- Rating-->
+		<control type="image">
+			<visible>Skin.HasSetting(FourthMusicVizLayout) + Skin.HasSetting(FourthMusicVizLayoutShowRating)</visible>
+			<animation effect="slide" start="0,0" end="0,450" time="200" tween="cubic" condition="Skin.HasSetting(FourthMusicVizLayoutDown)">Conditional</animation>
+			<left>860</left>
+			<top>560</top>
+			<width>200</width>
+			<height>89</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>white</colordiffuse>
+			<texture fallback="flags/music/rating/rating0.png">flags/music/rating/rating$INFO[Player.Rating].png</texture>
+			<!--texture fallback="rating0.png">$INFO[Player.Rating]</texture-->
+		</control>
+	<!--Fourth Layout End -->
 		<control type="group">
 			<posx>1480</posx>
 			<posy>510</posy>

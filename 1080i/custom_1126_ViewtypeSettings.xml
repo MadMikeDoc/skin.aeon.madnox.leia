@@ -383,6 +383,13 @@
 					<onclick>Skin.ToggleSetting(NoFloor)</onclick>
 					<selected>Skin.HasSetting(NoFloor)</selected>
 				</control>
+				<control type="radiobutton" id="17058">
+					<label>No Shadow</label>
+					<include>Objects_MediaMenuButtonAlt2</include>
+					<onclick>Skin.ToggleSetting(NoShadow)</onclick>
+					<selected>Skin.HasSetting(NoShadow)</selected>
+					<visible>Skin.HasSetting(NoFloor)</visible>
+				</control>
 				<!--Floor Label Options-->
 				<control type="radiobutton" id="16439">
 					<label>$LOCALIZE[31631]</label>

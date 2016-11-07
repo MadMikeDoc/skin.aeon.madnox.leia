@@ -218,7 +218,7 @@
 				<item>
 					<label>$LOCALIZE[31133]</label>
 					<onclick>Container.SetViewMode(800)</onclick>
-					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+					<visible>Container.Content(Movies) | Container.Content(Sets)</visible>
 					<visible>![Window.IsActive(videos) + !String.IsEmpty(Skin.String(DisableKodiFlixVL))]</visible>
 					<visible>String.IsEmpty(Window(home).Property(quicknavsetup))</visible>
 				</item>
@@ -265,7 +265,7 @@
 					<label>Shelf 3D Right</label>
 					<onclick>Container.SetViewMode(708)</onclick>
 					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
-					<visible>![Window.IsActive(videos) + !String.IsEmpty(Skin.String(DisableShelfVL))]</visible>
+					<visible>![Window.IsActive(videos) + !String.IsEmpty(Skin.String(DisableShelf3DVL))]</visible>
 					<visible>String.IsEmpty(Window(home).Property(quicknavsetup))</visible>
 				</item>
 				<item>
@@ -462,6 +462,13 @@
 					<thumb>$INFO[Skin.String(DisableShelfVL)]</thumb>
 					<onclick condition="String.IsEmpty(Skin.String(DisableShelfVL))">Skin.SetString(DisableShelfVL,true)</onclick>
 					<onclick condition="!String.IsEmpty(Skin.String(DisableShelfVL)) + !String.IsEqual(ListItem.Label,Container.Viewmode)">Skin.Reset(DisableShelfVL)</onclick>
+					<visible>!String.IsEmpty(Window(home).Property(quicknavsetup))</visible>
+				</item>
+				<item>
+					<label>Shelf 3D Right</label>
+					<thumb>$INFO[Skin.String(DisableShelf3DVL)]</thumb>
+					<onclick condition="String.IsEmpty(Skin.String(DisableShelf3DVL))">Skin.SetString(DisableShelf3DVL,true)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(DisableShelf3DVL)) + !String.IsEqual(ListItem.Label,Container.Viewmode)">Skin.Reset(DisableShelf3DVL)</onclick>
 					<visible>!String.IsEmpty(Window(home).Property(quicknavsetup))</visible>
 				</item>
 				<item>
