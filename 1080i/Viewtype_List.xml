@@ -1404,7 +1404,7 @@
 					<top>-40</top>
 					<width>550</width>
 					<height>825</height>
-					<aspectratio aligny="bottom" scalediffuse="false">keep</aspectratio>
+					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultAlbumCover.png">$VAR[ListPosterVar]</texture>
 					<fadetime>IconCrossfadeTime2</fadetime>
 				</control>

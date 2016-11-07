@@ -63,7 +63,7 @@
 				<selected>Skin.HasSetting(Enable.videoextras)</selected>
 			</control>
 			<control type="radiobutton" id="112">
-				<label>Enable MPAA rating description</label>
+				<label>$LOCALIZE[31556]</label>
 				<include>Objects_CommonSettingsButton</include>
 				<onclick>Skin.ToggleSetting(ExtendedMpaa)</onclick>
 				<selected>Skin.HasSetting(ExtendedMpaa)</selected>

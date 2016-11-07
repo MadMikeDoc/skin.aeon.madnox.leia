@@ -99,11 +99,11 @@
                 <onclick>Addon.OpenSettings(service.skin.widgets)</onclick>
             </control> -->
 			<control type="label" id="320">
-				<label> Widgets</label>
+				<label> $LOCALIZE[31479]</label>
 				<include>Objects_CommonSettingsButton</include>
 			</control>
 			<control type="button" id="321">
-				<label>31302</label>
+				<label>$LOCALIZE[31302]</label>
 				<label2>$VAR[WidgetTransLabelVar]%</label2>
 				<include>Objects_CommonSettingsButton</include>
 				<onclick>SetProperty(Dialog.1.Label,100%)</onclick>
@@ -175,12 +175,12 @@
 			</control>
 			<control type="radiobutton" id="326">
 				<include>Objects_CommonSettingsButton</include>
-				<label>  •  Disable Widget Fanart</label>
+				<label>$LOCALIZE[31557]</label>
 				<onclick>Skin.ToggleSetting(Disable.WidgetFanart)</onclick>
 				<selected>Skin.HasSetting(Disable.WidgetFanart)</selected>
 			</control>
 			<control type="label" id="330">
-				<label>Widget Info</label>
+				<label>$LOCALIZE[31558]</label>
 				<include>Objects_CommonSettingsButton</include>
 			</control>
 			<control type="button" id="331">

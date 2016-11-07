@@ -289,7 +289,7 @@
 				<control type="button" id="1021">
 					<description>Enable panel widget info 1</description>
 					<include>ColorChooserButton</include>
-					<label>Enable widget info</label>
+					<label>$LOCALIZE[31559]</label>
 					<label2>$VAR[WidgetPanelInfoVar]</label2>
 					<visible>!String.IsEmpty(Window.Property(widgetStyle)) + !Substring(Window.Property(widgetStyle),List) + !Skin.HasSetting(Enable.PanelInfo)</visible>
 				</control>
@@ -556,7 +556,7 @@
 				<control type="button" id="2021">
 					<description>Enable panel widget info 2</description>
 					<include>ColorChooserButton</include>
-					<label>Enable widget info</label>
+					<label>$LOCALIZE[31559]</label>
 					<label2>$VAR[WidgetPanelInfo2Var]</label2>
 					<visible>!String.IsEmpty(Window.Property(widgetStyle.2)) + !Substring(Window.Property(widgetStyle.2),List) + !Skin.HasSetting(Enable.PanelInfo)</visible>
 				</control>

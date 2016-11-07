@@ -2236,6 +2236,34 @@ msgctxt "#31555"
 msgid "Current Setting"
 msgstr ""
 
+msgctxt "#31556"
+msgid "Enable MPAA rating description"
+msgstr ""
+
+msgctxt "#31557"
+msgid "  •  Disable Widget Fanart"
+msgstr ""
+
+msgctxt "#31558"
+msgid "Widget Info"
+msgstr ""
+
+msgctxt "#31559"
+msgid "Enable Widget Info"
+msgstr ""
+
+msgctxt "#31560"
+msgid "Move now Playing Below HomeBar"
+msgstr ""
+
+msgctxt "#31561"
+msgid "Center CD Below HomeBar"
+msgstr ""
+
+msgctxt "#31562"
+msgid "Show Logo Below HomeBar"
+msgstr ""
+
 msgctxt "#31600"
 msgid "Main menu item customizer (backgrounds,widgets)"
 msgstr ""
