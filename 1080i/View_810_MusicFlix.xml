@@ -29,7 +29,7 @@
 				<height>210</height>
 				<fadetime>100</fadetime>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
-				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.ClearLogo)]</texture>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
 				<!--texture background="true">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Artist,,/logo.png]</texture-->
 				<visible>String.IsEmpty(Control.GetLabel(8101))</visible>
 			</control>
@@ -47,7 +47,7 @@
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[ListItem.Artist]</label>
 				<scroll>true</scroll>
-				<visible>String.IsEmpty(Window(Home).Property(SkinHelper.Music.ClearLogo)) + String.IsEmpty(Control.GetLabel(8101))</visible>
+				<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)) + String.IsEmpty(Control.GetLabel(8101))</visible>
 			</control>
 			<!-- End of Fake Artist Clearlogo -->
 			<!-- Album Info Box-->
@@ -85,7 +85,7 @@
 					<visible>!ListItem.IsParentFolder + Container.Content(albums)</visible>
 				</control>
 				<control type="textbox">
-					<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.Music.TrackList)][/COLOR]</label>
+					<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted)][/COLOR]</label>
 					<top>80</top>
 					<left>130</left>
 					<width>610</width>
@@ -106,7 +106,7 @@
 					<visible>!ListItem.IsParentFolder + Container.Content(artists)</visible>
 				</control>
 				<control type="textbox">
-					<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.Music.Albums)][/COLOR]</label>
+					<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.LisItem.Albums)][/COLOR]</label>
 					<top>-2</top>
 					<left>130</left>
 					<width>610</width>
@@ -122,7 +122,7 @@
 					<visible>Control.IsVisible(810)</visible>
 					<include>VisibleFadeEffect</include>
 					<control type="textbox" id="70">
-						<label>$INFO[Window(Home).Property(SkinHelper.Music.Info)]</label>
+						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
 						<!--label>$VAR[MusicPlotVar]</label-->
 						<left>15</left>
 						<top>120</top>

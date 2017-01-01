@@ -1599,7 +1599,7 @@
 				<height>264</height>
 				<aspectratio>keep</aspectratio>
 				<include>Animation_ListSlideLeft</include>
-				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.ClearLogo)]</texture>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
 				<visible>Skin.HasSetting(rightlistlogoartist)</visible>
 			</control>
 			<!--Banner-->
@@ -1622,7 +1622,7 @@
 				<width>750</width>
 				<height>180</height>
 				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.Banner)]</texture>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Banner)]</texture>
 				<visible>Skin.HasSetting(rightlistBannerartist) + String.IsEmpty(Control.GetLabel(6565))</visible>
 				<animation effect="slide" start="0,280" end="0" time="500" tween="cubic" delay="50" condition="!Container.Content(Artists)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-80" time="500" tween="cubic" delay="50" condition="Container.Content(Artists) + Skin.HasSetting(RightListShowMood)">Conditional</animation>
@@ -1634,7 +1634,7 @@
 				<height>150</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>homewidgets/glass/banner.png</texture>
-				<visible>Skin.HasSetting(rightlistBannerartist) + [!String.IsEmpty(Control.GetLabel(6565)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))]</visible>
+				<visible>Skin.HasSetting(rightlistBannerartist) + [!String.IsEmpty(Control.GetLabel(6565)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
 				<animation effect="slide" start="0,280" end="0" time="500" tween="cubic" delay="50" condition="!Container.Content(Artists)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-80" time="500" tween="cubic" delay="50" condition="Container.Content(Artists) + Skin.HasSetting(RightListShowMood)">Conditional</animation>
 			</control>
@@ -1645,7 +1645,7 @@
 				<height>150</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>thumbs_square/banner_shadow_in.png</texture>
-				<visible>Skin.HasSetting(rightlistBannerartist) + [!String.IsEmpty(Control.GetLabel(6565)) | !String.IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))]</visible>
+				<visible>Skin.HasSetting(rightlistBannerartist) + [!String.IsEmpty(Control.GetLabel(6565)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
 				<animation effect="slide" start="0,280" end="0" time="500" tween="cubic" delay="50" condition="!Container.Content(Artists)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-80" time="500" tween="cubic" delay="50" condition="Container.Content(Artists) + Skin.HasSetting(RightListShowMood)">Conditional</animation>
 			</control>
@@ -1674,7 +1674,7 @@
 				<font>Hand_28</font>
 				<aligny>top</aligny>
 				<label>[CR] $INFO[ListItem.AlbumArtist]</label>
-				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(SkinHelper.Music.DiscArt) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc) + !Container.Content(Artists)</visible>
+				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(SkinHelper.ListItem.Art.DiscArt) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc) + !Container.Content(Artists)</visible>
 				<textcolor>black</textcolor>
 				<wrapmultiline>true</wrapmultiline>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
@@ -1689,7 +1689,7 @@
 				<font>Hand_28</font>
 				<aligny>top</aligny>
 				<label>[CR][CR][CR][CR][CR][CR][CR][CR] $INFO[ListItem.Album]</label>
-				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(SkinHelper.Music.DiscArt) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc) + !Container.Content(Artists)</visible>
+				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(SkinHelper.ListItem.Art.DiscArt) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc) + !Container.Content(Artists)</visible>
 				<textcolor>black</textcolor>
 				<wrapmultiline>true</wrapmultiline>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
@@ -1702,7 +1702,7 @@
 				<width>380</width>
 				<height>380</height>
 				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[ListAlbumVar]</texture>
-				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(SkinHelper.Music.DiscArt) + Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + Skin.HasSetting(MusicFakeDisc)</visible>
+				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(SkinHelper.ListItem.Art.DiscArt) + Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + Skin.HasSetting(MusicFakeDisc)</visible>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 			</control>
@@ -1712,7 +1712,7 @@
 				<width>380</width>
 				<height>380</height>
 				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[ListAlbumVar]</texture>
-				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(SkinHelper.Music.DiscArt) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + Skin.HasSetting(MusicFakeDisc)</visible>
+				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(SkinHelper.ListItem.Art.DiscArt) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + Skin.HasSetting(MusicFakeDisc)</visible>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 			</control>
@@ -1737,7 +1737,7 @@
 				<height>380</height>
 				<aspectratio align="right">keep</aspectratio>
 				<fadetime>400</fadetime>
-				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)]</texture>
 				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914))</visible>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
@@ -1751,7 +1751,7 @@
 				<aspectratio align="right">keep</aspectratio>
 				<include condition="Skin.HasSetting(vinylart)">vinylartlibrary</include>
 				<include condition="Skin.HasSetting(blurayart)">blurayartlibrary</include>
-				<visible>String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(Window(Home).Property(SkinHelper.Music.DiscArt)) + Skin.HasSetting(rightlistCD) + !Skin.HasSetting(MusicFakeDisc) + [Container.Content(albums) | Container.Content(songs)]</visible>
+				<visible>String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)) + Skin.HasSetting(rightlistCD) + !Skin.HasSetting(MusicFakeDisc) + [Container.Content(albums) | Container.Content(songs)]</visible>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 			</control>
@@ -1871,7 +1871,7 @@
 				<include>Animation_ListSlideLeft</include>
 			<control type="textbox">
 				<include>Animation_WindowFade250</include>
-				<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.Music.TrackList)][/COLOR]</label>
+				<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted)][/COLOR]</label>
 				<top>575</top>
 				<left>490</left>
 				<width>390</width>
@@ -1884,7 +1884,7 @@
 			</control>
 			<control type="textbox">
 				<include>Animation_WindowFade250</include>
-				<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.Music.Albums.Formatted)][/COLOR]</label>
+				<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Albums.Formatted)][/COLOR]</label>
 				<top>575</top>
 				<left>490</left>
 				<width>390</width>
@@ -1897,7 +1897,7 @@
 			</control>
 			<control type="textbox">
 				<include>Animation_WindowFade250</include>
-				<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.Music.Info)][/COLOR]</label>
+				<label>[COLOR white]$INFO[Window(Home).Property(SkinHelper.ListIem.Plot)][/COLOR]</label>
 				<top>575</top>
 				<left>490</left>
 				<width>570</width>

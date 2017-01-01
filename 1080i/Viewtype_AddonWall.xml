@@ -1514,11 +1514,11 @@
 							<width>804</width>
 							<height>458</height>
 							<aspectratio>stretch</aspectratio>
-							<texture background="true">$INFO[Window(home).Property(SkinHelper.AnimatedFanart)]</texture>
+							<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)]</texture>
 							<fadetime>400</fadetime>
 							<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 							<bordersize>7</bordersize>
-							<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart)) + !Skin.HasSetting(InfoWallDisableAnimatedFanart)</visible>
+							<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)) + !Skin.HasSetting(InfoWallDisableAnimatedFanart)</visible>
 						</control>
 
 
@@ -1542,7 +1542,7 @@
 							<include condition="Window.IsActive(pictures)">Aspectratio_Keep</include>
 							<include condition="!Window.IsActive(pictures)">Aspectratio_stretch</include>
 							<timeperimage>3000</timeperimage>
-							<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.ExtraFanArtPath)]</imagepath>
+							<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</imagepath>
 							<visible>ListItem.IsCollection</visible>
 							<include>Animation_VisibleChange200</include>
 						</control>

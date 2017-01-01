@@ -74,7 +74,7 @@
 				<height>495</height>
 				<aspectratio align="center">keep</aspectratio>
 				<fadetime>400</fadetime>
-				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)]</texture>
 				<visible>Skin.HasSetting(rightlistCD) + Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
@@ -84,7 +84,7 @@
 				<height>495</height>
 				<aspectratio align="center">keep</aspectratio>
 				<fadetime>400</fadetime>
-				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.DiscArt)]</texture>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)]</texture>
 				<visible>Skin.HasSetting(rightlistCD) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
@@ -96,7 +96,7 @@
 				<fadetime>400</fadetime>
 				<include condition="Skin.HasSetting(vinylart)">vinylartlibrary</include>
 				<include condition="Skin.HasSetting(blurayart)">blurayartlibrary</include>
-				<visible>String.IsEmpty(Window(Home).Property(SkinHelper.Music.DiscArt))</visible>
+				<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.DiscArt))</visible>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
 			</control>
@@ -113,7 +113,7 @@
 				<width>500</width>
 				<height>500</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
+				<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)]</texture>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1200" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
 			</control>
@@ -123,7 +123,7 @@
 				<width>500</width>
 				<height>500</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
+				<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.1.Art.DiscArt)]</texture>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
 			</control>
@@ -133,7 +133,7 @@
 				<width>500</width>
 				<height>500</height>
 				<aspectratio align="right">keep</aspectratio>
-				<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
+				<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.2.Art.DiscArt)]</texture>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="2000" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
 			</control>
@@ -800,7 +800,7 @@
 					<aspectratio>scale</aspectratio>
 					<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 					<bordersize>7</bordersize>
-					<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.FanArt)]</texture>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.0.Art.FanArt)]</texture>
 					<fadetime>400</fadetime>
 					<visible>String.IsEmpty(Control.GetLabel(6803)) + ListItem.IsCollection</visible>
 				</control>
@@ -830,7 +830,7 @@
 						<height>396</height>
 						<align>center</align>
 						<font>font_cdvv_20</font>
-						<label>$INFO[Window(Home).Property(SkinHelper.MovieSet.Studio)] [COLOR $VAR[FontColorVar]]$LOCALIZE[31151][/COLOR] "$INFO[ListItem.Title]"</label>
+						<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Studio)] [COLOR $VAR[FontColorVar]]$LOCALIZE[31151][/COLOR] "$INFO[ListItem.Title]"</label>
 						<visible>ListItem.IsCollection</visible>
 						<scroll>true</scroll>
 					</control>
@@ -960,14 +960,14 @@
 						<height>396</height>
 						<align>center</align>
 						<font>font_cdvv_20</font>
-						<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31155]:[/COLOR] $INFO[Window(Home).Property(SkinHelper.MovieSet.Duration.Hours)] $LOCALIZE[31158] $INFO[Window(Home).Property(SkinHelper.MovieSet.Duration.Minutes)] $LOCALIZE[32046]</label>
+						<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31155]:[/COLOR] $INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours)] $LOCALIZE[31158] $INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes)] $LOCALIZE[32046]</label>
 					</control>
 					<control type="image">
 						<left>438</left>
 						<top>188</top>
 						<width>32</width>
 						<height>22</height>
-						<texture>flags/discnumber/$INFO[Window(Home).Property(SkinHelper.MovieSet.Count)].png</texture>
+						<texture>flags/discnumber/$INFO[Window(Home).Property(SkinHelper.ListItem.Count)].png</texture>
 						<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 					</control>
 				</control>

@@ -189,10 +189,10 @@
 					<width>662</width>
 					<height>370</height>
 					<aspectratio aligny="top">scale</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.AnimatedFanart)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)]</texture>
 					<bordertexture border="1,1,2,1">thumbs/panel_border.png</bordertexture>
 					<bordersize>1,1,2,1</bordersize>
-					<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart)) + !Skin.HasSetting(Shelf3DDisableAnimatedFanart)</visible>
+					<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)) + !Skin.HasSetting(Shelf3DDisableAnimatedFanart)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -685,7 +685,7 @@
 				<width>320</width>
 				<height>280</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
-				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.ClearLogo)]</texture>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
 				<visible>Skin.HasSetting(Shelf3DLogoMusic)</visible>
 			</control>
 			<control type="textbox">

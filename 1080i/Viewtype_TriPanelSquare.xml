@@ -113,7 +113,7 @@
 					<top>220</top>
 					<width>432</width>
 					<height>365</height>
-					<label>$INFO[Window(Home).Property(SkinHelper.Music.Info)]</label>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
 					<font>font.ml.26</font>
 					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -123,7 +123,7 @@
 					<top>220</top>
 					<width>432</width>
 					<height>365</height>
-					<label>$INFO[Window(Home).Property(SkinHelper.Music.Info)]</label>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</label>
 					<font>font.ml.26</font>
 					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -134,7 +134,7 @@
 					<width>432</width>
 					<height>365</height>
 					<aligny>center</aligny>
-					<label>$INFO[Window(Home).Property(SkinHelper.Music.Albums.Formatted)]</label>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Albums.Formatted)]</label>
 					<font>font.ml.26</font>
 					<autoscroll delay="1000" time="2000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -145,7 +145,7 @@
 					<width>432</width>
 					<height>365</height>
 					<aligny>center</aligny>
-					<label>$INFO[Window(Home).Property(SkinHelper.Music.TrackList)]</label>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted)]</label>
 					<font>font.ml</font>
 					<autoscroll delay="1000" time="2000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -365,7 +365,7 @@
 					<width>480</width>
 					<height>400</height>
 					<aligny>center</aligny>
-					<label>$INFO[Window(Home).Property(SkinHelper.Music.Albums)]</label>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Albums)]</label>
 					<font>font.ml.26</font>
 					<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -376,7 +376,7 @@
 					<width>480</width>
 					<height>400</height>
 					<aligny>center</aligny>
-					<label>$INFO[Window(Home).Property(SkinHelper.Music.TrackList)]</label>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted)]</label>
 					<font>font.ml</font>
 					<autoscroll delay="1000" time="2000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -748,7 +748,7 @@
 					<height>250</height>
 					<aspectratio>keep</aspectratio>
 					<fadetime>300</fadetime>
-					<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.ClearLogo)]</texture>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
 					<visible>!Skin.HasSetting(TriPanelSquareClearArt)</visible>
 					<visible>Control.IsVisible(53)</visible>
 					<animation effect="slide" end="0,0" time="300" condition=" String.IsEqual(Skin.String(TriPanelSquarePosition),1)">Conditional</animation>
@@ -761,7 +761,7 @@
 					<width>400</width>
 					<height>250</height>
 					<aspectratio>keep</aspectratio>
-					<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.Banner)]</texture>
+					<texture background="true">$INFO[Window(Home).Property(SkinHelper.LisItem.Art.Banner)]</texture>
 					<visible>Control.IsVisible(53) + Skin.HasSetting(TriPanelSquareClearArt)</visible>
 					<animation effect="slide" end="0,0" time="300" condition=" String.IsEqual(Skin.String(TriPanelSquarePosition),1)">Conditional</animation>
 					<animation effect="slide" end="-450,-50" time="300" condition=" String.IsEqual(Skin.String(TriPanelSquarePosition),2)">Conditional</animation>
@@ -773,7 +773,7 @@
 					<height>80</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>homewidgets/glass/banner.png</texture>
-					<visible>Control.IsVisible(53) + Skin.HasSetting(TriPanelSquareClearArt)  + !String.IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))</visible>
+					<visible>Control.IsVisible(53) + Skin.HasSetting(TriPanelSquareClearArt)  + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))</visible>
 					<animation effect="slide" end="0,0" time="300" condition=" String.IsEqual(Skin.String(TriPanelSquarePosition),1)">Conditional</animation>
 					<animation effect="slide" end="-450,-50" time="300" condition=" String.IsEqual(Skin.String(TriPanelSquarePosition),2)">Conditional</animation>
 				</control>
@@ -784,7 +784,7 @@
 					<height>80</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>thumbs_square/banner_shadow_in.png</texture>
-					<visible>Control.IsVisible(53) + Skin.HasSetting(TriPanelSquareClearArt)  + !String.IsEmpty(Window(Home).Property(SkinHelper.Music.Banner))</visible>
+					<visible>Control.IsVisible(53) + Skin.HasSetting(TriPanelSquareClearArt)  + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))</visible>
 					<animation effect="slide" end="0,0" time="300" condition=" String.IsEqual(Skin.String(TriPanelSquarePosition),1)">Conditional</animation>
 					<animation effect="slide" end="-450,-50" time="300" condition=" String.IsEqual(Skin.String(TriPanelSquarePosition),2)">Conditional</animation>
 				</control>

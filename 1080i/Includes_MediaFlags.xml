@@ -721,7 +721,7 @@
 	<include name="MusicMediaFlags">
 		<control type="group">
 			<top>988</top>
-			<visible>!Control.IsVisible(506) + !Control.IsVisible(518) + [!Skin.HasSetting(MusicPanelExtraInfo | !Control.IsVisible(706)]</visible>
+			<visible>!Control.IsVisible(506) + !Control.IsVisible(518) + [!Skin.HasSetting(MusicPanelExtraInfo) | !Control.IsVisible(706)]</visible>
 			<include>Animation_FlagSlideDown</include>
 			<control type="group">
 				<visible>Container.Content(artists) + !String.IsEmpty(ListItem.DBID)</visible>

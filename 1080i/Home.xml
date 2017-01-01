@@ -7,7 +7,7 @@
 	<onload condition="!Skin.HasSetting(backendmode)">Skin.SetBool(backendmode)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
-	<onload condition="System.HasAddon(plugin.image.mypicsdb)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&amp;method='Random'&amp;sort='Added'&amp;limit=10)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<onunload>ClearProperty(SkinHelper.WidgetContainer,home)</onunload>
 	<onunload>ClearProperty(Widget.CaseHome,home)</onunload>
 	<controls>
@@ -133,7 +133,7 @@
 					<posy>920</posy>
 					<fadetime>300</fadetime>
 					<visible>Player.HasAudio + Skin.HasSetting(NowPlayingBelowBar) + !Skin.HasSetting(BelowMidCD) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
-					<texture background="true" fallback="common/cdart/blank.png">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
+					<texture background="true" fallback="common/cdart/blank.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.DiscArt)]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="label">
@@ -271,7 +271,7 @@
 					<posy>920</posy>
 					<fadetime>300</fadetime>
 					<visible>Player.HasAudio + Skin.HasSetting(NowPlayingBelowBar) + Skin.HasSetting(BelowMidCD) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
-					<texture background="true" fallback="common/cdart/blank.png">$INFO[Window(Home).Property(SkinHelper.Player.Music.DiscArt)]</texture>
+					<texture background="true" fallback="common/cdart/blank.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.DiscArt)]</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
 				</control>
 				<control type="label">
@@ -644,7 +644,7 @@
 					<width>250</width>
 					<fadetime>400</fadetime>
 					<animation effect="fade" start="100" end="0" time="0" condition="Substring(Control.GetLabel(8318),empty.png)">Conditional</animation>
-					<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Player.Music.ClearLogo)]</texture>
+					<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearLogo)]</texture>
 					<aspectratio aligny="center" align="left">keep</aspectratio>
 					<visible>Skin.HasSetting(BelowMidLogo)</visible>
 					<animation effect="slide" time="560" start="-270,15" end="0,0" tween="back" easing="inout">VisibleChange</animation>

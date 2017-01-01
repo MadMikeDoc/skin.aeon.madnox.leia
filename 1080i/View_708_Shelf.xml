@@ -140,10 +140,10 @@
 					<height>360</height>
 					<visible>!ListItem.IsCollection</visible>
 					<aspectratio aligny="top">scale</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.AnimatedFanart)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)]</texture>
 					<bordertexture border="1,1,2,1">thumbs/panel_border.png</bordertexture>
 					<bordersize>1,1,2,1</bordersize>
-					<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.AnimatedFanart)) + !Skin.HasSetting(Shelf3DRDisableAnimatedFanart)</visible>
+					<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)) + !Skin.HasSetting(Shelf3DRDisableAnimatedFanart)</visible>
 				</control>
 				<control type="multiimage">
 					<left>1126</left>
@@ -154,7 +154,7 @@
 					<fadetime>650</fadetime>
 					<visible>ListItem.IsCollection</visible>
 					<aspectratio aligny="top">scale</aspectratio>
-					<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.ExtraFanArtPath)]</imagepath>
+					<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</imagepath>
 				</control>
 				<control type="image">
 					<left>121</left>

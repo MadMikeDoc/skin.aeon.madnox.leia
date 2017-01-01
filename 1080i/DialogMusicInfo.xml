@@ -31,7 +31,7 @@
 				<width>729</width>
 				<height>351</height>
 				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.ClearLogo)]</texture>
+				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
 				<visible>String.Contains(Control.GetLabel(55555),empty.png) + String.IsEqual(ListItem.DBType,artist)</visible>
 			</control>
 			<control type="image">
@@ -671,6 +671,14 @@
 							<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.Property(Role.Mixer)],Home)</onclick>
 							<onclick>ActivateWindow(1175)</onclick>
 							<visible>!String.IsEmpty(ListItem.Property(Role.Mixer))</visible>
+						</item>
+						<item>
+							<label>$INFO[ListItem.ContributorAndRole]</label>
+							<label2>Contributer/Role:</label2>
+							<onclick>SetProperty(TextViewerHeader,Contributor/Role,Home)</onclick>
+							<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.ContributorAndRole],Home)</onclick>
+							<onclick>ActivateWindow(1175)</onclick>
+							<visible>!String.IsEmpty(ListItem.ContributorAndRole)</visible>
 						</item>
 					</content>
 				</control>

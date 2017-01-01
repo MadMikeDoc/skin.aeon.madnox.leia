@@ -417,16 +417,16 @@
 					<itemgap>-20</itemgap>
 					<visible>[ListItem.IsCollection + !ListItem.IsParentFolder]</visible>
 					<control type="label">
-						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[31156]: [/COLOR][COLOR white]$INFO[Window(home).Property(SkinHelper.MovieSet.Director)][/COLOR]</label>
+						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[31156]: [/COLOR][COLOR white]$INFO[Window(home).Property(SkinHelper.ListItem.Director)][/COLOR]</label>
 						<width>580</width>
 						<include>KodiFlixButtonsValues</include>
-						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.Director)) + [Container.Content(movies) | Container.Content(sets)]</visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Director)) + [Container.Content(movies) | Container.Content(sets)]</visible>
 					</control>
 					<control type="label">
-						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[515]: [/COLOR][COLOR white]$INFO[Window(home).Property(SkinHelper.MovieSet.Genre)][/COLOR]</label>
+						<label>[COLOR $VAR[TitleColorVar]]$LOCALIZE[515]: [/COLOR][COLOR white]$INFO[Window(home).Property(SkinHelper.ListItem.Genre)][/COLOR]</label>
 						<width>580</width>
 						<include>KodiFlixButtonsValues</include>
-						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.Genre)) + [Container.Content(movies) | Container.Content(sets)]</visible>
+						<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Genre)) + [Container.Content(movies) | Container.Content(sets)]</visible>
 					</control>
 				</control>
 			</control>
@@ -906,7 +906,7 @@
 					<scroll>false</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label> • $INFO[Window(home).Property(SkinHelper.MovieSet.Runtime)] $LOCALIZE[12391]</label>
+					<label> • $INFO[Window(home).Property(SkinHelper.ListItem.Runtime)] $LOCALIZE[12391]</label>
 					<visible>[Container.Content(Movies) | Container.Content(sets)] + ListItem.IsCollection</visible>
 				</control>
 			</control>
@@ -1002,7 +1002,7 @@
 					<scroll>false</scroll>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label> • $INFO[Window(home).Property(SkinHelper.MovieSet.Runtime)] $LOCALIZE[12391]</label>
+					<label> • $INFO[Window(home).Property(SkinHelper.ListItem.Runtime)] $LOCALIZE[12391]</label>
 					<visible>[Container.Content(Movies) | Container.Content(sets)] + ListItem.IsCollection</visible>
 				</control>
 			</control>
@@ -1709,7 +1709,7 @@
 						<width>217</width>
 						<height>217</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
+						<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)]</texture>
 						<include>KodiFlixDimAnimation</include>
 					</control>
 					<control type="image">
@@ -2352,7 +2352,7 @@
 						</control>
 						
 						<control type="image">
-							<left>125</left>
+							<left>185</left>
 							<top>149</top>
 							<width>180</width>
 							<height>180</height>
@@ -2363,8 +2363,7 @@
 							<animation effect="rotatey" start="-4" end="26" time="0" condition="!Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
 							<animation effect="rotatey" start="-4" end="47" time="0" condition="Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">Conditional</animation>
 							<animation type="focus" condition="Control.IsVisible(800)" reversible="false">
-								<effect type="slide" start="-600,0" end="0,0" delay="0" time="5300" tween="cubic" easing="inout"/>
-								<effect type="rotate" start="0" center="auto" end="-720" delay="0" time="5300" tween="cubic" easing="inout"/>
+								<effect type="rotate" start="0" center="auto" end="-360" delay="0" time="5300" tween="cubic" easing="inout"/>
 							</animation>
 							<camera x="530" y="50"/>
 							<visible>Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt) + [Container.Content(movies) + !ListItem.IsCollection] + Skin.HasSetting(KodiFlixMovieBoxsetsDiscArtPos) + !String.IsEmpty(Container.ListItem.Art(discart))</visible>
@@ -2813,53 +2812,53 @@
 		</control>
 	</include>
 	<include name="KodiFlixOpenCase">
-		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt)) | Skin.HasSetting(Fakedischandwriting)| Skin.Hassetting(fakediscart)] + !Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)) | Skin.HasSetting(Fakedischandwriting)| Skin.Hassetting(fakediscart)] + !Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="50" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-50" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt)) | !String.IsEmpty(Container.ListItem.Art(poster))] + Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)) | !String.IsEmpty(Container.ListItem.Art(poster))] + Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="50" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-50" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-75" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-75" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="85" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-85" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">
+		<animation type="focus" reversible="true" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterFocus)">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="85" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-85" time="1000" tween="quadratic" easing="out"/>
 		</animation>
 	</include>
 	<include name="KodiFlixDVDShelfOpenCase">
-		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt)) | Skin.HasSetting(Fakedischandwriting)| Skin.Hassetting(fakediscart)] + !Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
+		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)) | Skin.HasSetting(Fakedischandwriting)| Skin.Hassetting(fakediscart)] + !Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="50" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-50" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt)) | !String.IsEmpty(Container.ListItem.Art(poster))] + Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
+		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)) | !String.IsEmpty(Container.ListItem.Art(poster))] + Skin.HasSetting(clearcases) + Container.Content(movies) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="50" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-50" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
+		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-75" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
+		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-75" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
+		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt))] + !Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="85" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-85" time="1000" tween="quadratic" easing="out"/>
 		</animation>
-		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
+		<animation type="focus" reversible="false" condition="Control.IsVisible(800) + Skin.HasSetting(usecases) + Skin.HasSetting(KodiFlixOpenCase) + [!String.IsEmpty(Container.ListItem.Art(discart)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt))] + Skin.HasSetting(clearcases) + Container.Content(movies) + Skin.HasSetting(KodiFlixMoviesCenterList) + Skin.HasSetting(KodiFlixMoviesCenterFocus) + !String.IsEmpty(ListItem.Art(discart))">
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="85" time="1000" tween="quadratic" easing="out"/>
 			<effect type="rotatey" delay="6800" center="-4" start="0" end="-85" time="1000" tween="quadratic" easing="out"/>
 		</animation>
@@ -2954,55 +2953,55 @@
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.DiscArt))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))">KodiFlixExtrasDiscChange</include>
 				</control>
 				<control type="image" id="6602">
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.1.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.DiscArt))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))">KodiFlixExtrasDiscChange</include>
 				</control>
 				<control type="image" id="6603">
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.2.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.DiscArt))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))">KodiFlixExtrasDiscChange</include>
 				</control>
 				<control type="image" id="6604">
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.3.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.3.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.DiscArt))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))">KodiFlixExtrasDiscChange</include>
 				</control>
 				<control type="image" id="6605">
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.4.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.4.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.DiscArt))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))">KodiFlixExtrasDiscChange</include>
 				</control>
 				<control type="image" id="6606">
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.5.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.5.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
-					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.11.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.DiscArt))">KodiFlixExtrasDiscChange</include>
+					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.11.Art.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.Disc))">KodiFlixExtrasDiscChange</include>
 				</control>
 			</control>
 			<control type="grouplist">
@@ -3014,55 +3013,55 @@
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.6.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.DiscArt))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))</visible>
 				</control>
 				<control type="image" id="6602">
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.7.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.DiscArt))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt))</visible>
 				</control>
 				<control type="image" id="6603">
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.8.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.DiscArt))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt))</visible>
 				</control>
 				<control type="image" id="6604">
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.9.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.DiscArt))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt))</visible>
 				</control>
 				<control type="image" id="6605">
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.10.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.DiscArt))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt))</visible>
 				</control>
 				<control type="image" id="6606">
 					<width>254</width>
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
-					<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.11.DiscArt)]</texture>
+					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.11.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
-					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.11.DiscArt))</visible>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.11.Art.DiscArt))</visible>
 				</control>
 			</control>
 			<control type="image">
@@ -3071,11 +3070,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.0.Poster)]</texture>
+				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.0.Art.Poster)]</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6601)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6601)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3083,11 +3082,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.MovieSet.0.VideoResolution)]p.png</texture>
+				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.0.Resolution)]p.png</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6601)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6601)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3095,11 +3094,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.1.Poster)]</texture>
+				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.1.Art.Poster)]</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6602)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.1.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6602)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.1.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3107,11 +3106,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.MovieSet.1.VideoResolution)]p.png</texture>
+				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.1.Resolution)]p.png</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6602)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.1.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6602)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.1.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3119,11 +3118,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.2.Poster)]</texture>
+				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.2.Art.Poster)]</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6603)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6603)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3131,11 +3130,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.MovieSet.2.VideoResolution)]p.png</texture>
+				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.2.Resolution)]p.png</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6603)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6603)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3143,11 +3142,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.3.Poster)]</texture>
+				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.3.Art.Poster)]</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6604)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6604)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3155,11 +3154,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.MovieSet.3.VideoResolution)]p.png</texture>
+				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.3.Resolution)]p.png</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6604)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6604)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3167,11 +3166,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.4.Poster)]</texture>
+				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.4.Art.Poster)]</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6605)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6605)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3179,11 +3178,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.MovieSet.4.VideoResolution)]p.png</texture>
+				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.4.Resolution)]p.png</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6605)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6605)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3191,11 +3190,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.MovieSet.5.Poster)]</texture>
+				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.5.Art.Poster)]</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6606)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6606)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))</visible>
 			</control>
 			<control type="image">
 				<posy>622</posy>
@@ -3203,11 +3202,11 @@
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-				<texture background="true" fallback="thumbs/boxes/movies/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.MovieSet.5.VideoResolution)]p.png</texture>
+				<texture background="true" fallback="thumbs/boxes/movies/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.5.Resolution)]p.png</texture>
 				<fadetime>400</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
-				<visible>String.IsEmpty(Control.GetLabel(6606)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))</visible>
+				<visible>String.IsEmpty(Control.GetLabel(6606)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))</visible>
 			</control>
 			<control type="Label">
 				<posy>594</posy>
@@ -3447,17 +3446,17 @@
 			<width>247</width>
 			<height>247</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.10.Poster)]</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.Poster))" reversible="true">
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.10.Art.Poster)]</texture>
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3473,16 +3472,16 @@
 			<height>273</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="770,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3516,7 +3515,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.10.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -3527,7 +3526,7 @@
 			<width>77</width>
 			<height>67</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.10.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="8400" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
@@ -3556,17 +3555,17 @@
 			<width>247</width>
 			<height>252</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.9.Poster)]</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.Poster))" reversible="true">
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.9.Art.Poster)]</texture>
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3582,16 +3581,16 @@
 			<height>278</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="700,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3625,7 +3624,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.9.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -3636,7 +3635,7 @@
 			<width>88</width>
 			<height>75</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.9.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="8200" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
@@ -3665,17 +3664,17 @@
 			<width>247</width>
 			<height>257</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.8.Poster)]</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.Poster))" reversible="true">
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.8.Art.Poster)]</texture>
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3691,16 +3690,16 @@
 			<height>283</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="630,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3734,7 +3733,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.8.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -3745,7 +3744,7 @@
 			<width>100</width>
 			<height>84</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.8.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="8000" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
@@ -3774,17 +3773,17 @@
 			<width>247</width>
 			<height>262</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.7.Poster)]</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.Poster))" reversible="true">
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.7.Art.Poster)]</texture>
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3800,16 +3799,16 @@
 			<height>288</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="560,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3843,7 +3842,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.7.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -3854,7 +3853,7 @@
 			<width>110</width>
 			<height>90</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.7.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="7800" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
@@ -3883,17 +3882,17 @@
 			<width>247</width>
 			<height>267</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.6.Poster)]</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.Poster))" reversible="true">
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.6.Art.Poster)]</texture>
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3909,16 +3908,16 @@
 			<height>293</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="490,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3952,7 +3951,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.6.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -3963,7 +3962,7 @@
 			<width>118</width>
 			<height>98</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.6.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="7600" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
@@ -3992,17 +3991,17 @@
 			<width>247</width>
 			<height>272</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.5.Poster)]</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))" reversible="true">
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.5.Art.Poster)]</texture>
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4018,16 +4017,16 @@
 			<height>298</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="420,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4061,7 +4060,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.5.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4072,7 +4071,7 @@
 			<width>128</width>
 			<height>105</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.5.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.5.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="7400" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
@@ -4101,17 +4100,17 @@
 			<width>247</width>
 			<height>277</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.4.Poster)]</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))" reversible="true">
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.4.Art.Poster)]</texture>
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4128,16 +4127,16 @@
 			<height>303</height>
 			<animation effect="fade" start="0" end="100" delay="8000" time="400">Visible</animation>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="350,10" delay="5200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4172,7 +4171,7 @@
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.4.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4183,7 +4182,7 @@
 			<width>138</width>
 			<height>113</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.4.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.4.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="2200" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
@@ -4211,17 +4210,17 @@
 			<top>601</top>
 			<width>247</width>
 			<height>282</height>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.3.Poster)]</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))" reversible="true">
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.3.Art.Poster)]</texture>
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4236,16 +4235,16 @@
 			<width>289</width>
 			<height>308</height>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="285,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4278,7 +4277,7 @@
 			</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.3.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4289,7 +4288,7 @@
 			<width>166</width>
 			<height>120</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.3.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.3.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="2800" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
@@ -4316,17 +4315,17 @@
 			<top>596</top>
 			<width>247</width>
 			<height>292</height>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.2.Poster)]</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))" reversible="true">
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.2.Art.Poster)]</texture>
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4341,16 +4340,16 @@
 			<width>289</width>
 			<height>314</height>
 			<texture background="true">views/boxsets/case.png</texture>
-			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(10) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_10) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_20) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
-			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.Poster))" reversible="true">
+			<animation type="Conditional" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_30) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))" reversible="true">
 				<effect type="slide" start="0,0" end="210,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4383,7 +4382,7 @@
 			</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.2.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4394,7 +4393,7 @@
 			<width>184</width>
 			<height>134</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.2.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="2600" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
@@ -4421,7 +4420,7 @@
 			<top>605</top>
 			<width>269</width>
 			<height>289</height>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.1.Poster)]</texture>
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.1.Art.Poster)]</texture>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
 				<effect type="slide" start="0,0" end="140,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
@@ -4488,7 +4487,7 @@
 			</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.1.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.1.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4499,7 +4498,7 @@
 			<width>200</width>
 			<height>150</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.1.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="2400" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
@@ -4526,7 +4525,7 @@
 			<top>605</top>
 			<width>294</width>
 			<height>295</height>
-			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.MovieSet.0.Poster)]</texture>
+			<texture background="true" fallback="DefaultAddonMovieInfo.png">$INFO[Window(home).Property(SkinHelper.ListItem.0.Art.Poster)]</texture>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">
 				<effect type="slide" start="0,0" end="70,10" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
@@ -4593,7 +4592,7 @@
 			</animation>
 			<camera x="1640" y="610"/>
 			<fadetime>100</fadetime>
-			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.0.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
+			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4604,7 +4603,7 @@
 			<width>225</width>
 			<height>165</height>
 			<aspectratio>stretch</aspectratio>
-			<texture background="true">$INFO[Window(home).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
+			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="2200" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<animation type="Conditional" condition="System.IdleTime(5) + Skin.HasSetting(KodiFlixMovieSetCasesDelay_5)" reversible="true">

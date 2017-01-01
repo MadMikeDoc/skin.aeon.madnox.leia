@@ -2731,7 +2731,7 @@
 						<width>280</width>
 						<height>280</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.6.DiscArt)]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.6.Art.DiscArt)]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt)">Conditional</animation>
 					</control>
@@ -2741,7 +2741,7 @@
 						<width>280</width>
 						<height>280</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.5.DiscArt)]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.5.Art.DiscArt)]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt)">Conditional</animation>
 					</control>
@@ -2751,7 +2751,7 @@
 						<width>280</width>
 						<height>280</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.4.DiscArt)]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.4.Art.DiscArt)]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt)">Conditional</animation>
 					</control>
@@ -2761,7 +2761,7 @@
 						<width>280</width>
 						<height>280</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.3.DiscArt)]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.3.Art.DiscArt)]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt)">Conditional</animation>
 					</control>
@@ -2771,7 +2771,7 @@
 						<width>280</width>
 						<height>280</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.2.DiscArt)]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.2.Art.DiscArt)]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt)">Conditional</animation>
 					</control>
@@ -2781,7 +2781,7 @@
 						<width>280</width>
 						<height>280</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.1.DiscArt)]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.1.Art.DiscArt)]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt)">Conditional</animation>
 					</control>
@@ -2791,7 +2791,7 @@
 						<width>280</width>
 						<height>280</height>
 						<aspectratio>keep</aspectratio>
-						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.DiscArt)]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.0.Art.DiscArt)]</texture>
 						<fadetime>4000</fadetime>
 						<animation effect="zoom" start="100" end="150" time="640" easing="inout" tween="circle" center="960,970" condition="Control.IsVisible(5106) + Skin.HasSetting(PostersDiscArt)">Conditional</animation>
 					</control>
@@ -3086,7 +3086,7 @@
 						<aspectratio>scale</aspectratio>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
-						<texture background="true">$INFO[Window(Home).Property(SkinHelper.MovieSet.0.FanArt)]</texture>
+						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.0.Art.FanArt)]</texture>
 						<fadetime>400</fadetime>
 						<visible>String.IsEmpty(Control.GetLabel(7803)) + ListItem.IsCollection</visible>
 					</control>
@@ -3107,7 +3107,7 @@
 							<height>396</height>
 							<align>center</align>
 							<font>font_cdvv_20</font>
-							<label>$INFO[Window(Home).Property(SkinHelper.MovieSet.Studio)] [COLOR $VAR[FontColorVar]]$LOCALIZE[31151][/COLOR] "$INFO[ListItem.Title]"</label>
+							<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Studio)] [COLOR $VAR[FontColorVar]]$LOCALIZE[31151][/COLOR] "$INFO[ListItem.Title]"</label>
 							<visible>ListItem.IsCollection</visible>
 							<scroll>true</scroll>
 						</control>
@@ -3189,14 +3189,14 @@
 							<height>396</height>
 							<align>center</align>
 							<font>font_cdvv_20</font>
-							<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31155]:[/COLOR] $INFO[Window(Home).Property(SkinHelper.MovieSet.Duration.Hours)] $LOCALIZE[31158] $INFO[Window(Home).Property(SkinHelper.MovieSet.Duration.Minutes)] $LOCALIZE[32046]</label>
+							<label>[COLOR $VAR[FontColorVar]]$LOCALIZE[31155]:[/COLOR] $INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Hours)] $LOCALIZE[31158] $INFO[Window(Home).Property(SkinHelper.ListItem.Duration.Minutes)] $LOCALIZE[32046]</label>
 						</control>
 						<control type="image">
 							<left>428</left>
 							<top>188</top>
 							<width>32</width>
 							<height>22</height>
-							<texture>flags/discnumber/$INFO[Window(Home).Property(SkinHelper.MovieSet.Count)].png</texture>
+							<texture>flags/discnumber/$INFO[Window(Home).Property(SkinHelper.ListItem.Count)].png</texture>
 							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 						</control>
 					</control>
