@@ -167,6 +167,12 @@
 					<font>Font_Bold33</font>
 					<textcolor>$VAR[TitleColorVar]</textcolor>
 				</control>
+					<control type="radiobutton" id="4367">
+					<label>manfeeds Video Lyrics</label>
+					<include>Objects_CommonSettingsButton</include>
+					<onclick>Skin.ToggleSetting(manfeedlyrics)</onclick>
+					<selected>Skin.HasSetting(manfeedlyrics)</selected>
+				</control>
 				<control type="button" id="451666">
 					<label>Music Visualisation </label>
 					<label2>[COLOR $VAR[FontColorVar]]$VAR[MusicVizSettingsVar][/COLOR]</label2>
@@ -352,7 +358,17 @@
 					<label>$LOCALIZE[31404]</label>
 					<include>Objects_CommonSettingsButton</include>
 					<onclick>Skin.ToggleSetting(ThirdMusicVizRecordPlayer)</onclick>
+					<onclick>Skin.Reset(ThirdMusicVizSimArtists)</onclick>
 					<selected>Skin.HasSetting(ThirdMusicVizRecordPlayer)</selected>
+					<enable>Skin.HasSetting(ThirdMusicVizLayout)</enable>
+					<visible>Skin.HasSetting(ThirdMusicVizLayout)</visible>
+				</control>
+				<control type="radiobutton" id="18204">
+					<label>  •  Similar Artists</label>
+					<include>Objects_CommonSettingsButton</include>
+					<onclick>Skin.ToggleSetting(ThirdMusicVizSimArtists)</onclick>
+					<onclick>Skin.Reset(ThirdMusicVizRecordPlayer)</onclick>
+					<selected>Skin.HasSetting(ThirdMusicVizSimArtists)</selected>
 					<enable>Skin.HasSetting(ThirdMusicVizLayout)</enable>
 					<visible>Skin.HasSetting(ThirdMusicVizLayout)</visible>
 				</control>

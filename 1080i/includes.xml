@@ -52,6 +52,7 @@
 	<include file="Includes_NextAired.xml"/>
 	<include file="Includes_VideoExtras.xml"/>
 	<include file="script-skinshortcuts-includes.xml" />
+	<include file="IncludesVideoLyrics.xml" />
 	<constant name="AutoScrollTime">2000</constant>
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>

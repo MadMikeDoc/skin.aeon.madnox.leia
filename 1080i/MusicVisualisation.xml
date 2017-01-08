@@ -1927,6 +1927,7 @@
 			</control>
 			<control type="group"> <!--Song Info Panel-->
 				<animation effect="slide" start="0,0" end="250,0" time="1500" tween="cubic" easing="out" delay="400" condition="Skin.HasSetting(ThirdMusicVizRecordPlayer)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="420,0" time="1500" tween="cubic" easing="out" delay="400" condition="Skin.HasSetting(ThirdMusicVizSimArtists)">Conditional</animation>
 				<left>297</left>
 				<top>60</top>
 				<width>810</width>
@@ -1934,6 +1935,7 @@
 
 				<control type="image">
 					<animation effect="slide" start="0,0" end="-250,0" time="1500" tween="cubic" easing="out" delay="400" condition="Skin.HasSetting(ThirdMusicVizRecordPlayer)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-250,0" time="1500" tween="cubic" easing="out" delay="400" condition="Skin.HasSetting(ThirdMusicVizSimArtists)">Conditional</animation>
 					<left>10</left>
 					<top>10</top>
 					<width>500</width>
@@ -1941,18 +1943,38 @@
 					<aspectratio>keep</aspectratio>
 					<texture border="5" colordiffuse="77777777" background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearLogo)]</texture>
 				</control>
+				<control type="group">
+					<visible>!String.IsEmpty(MusicPlayer.UserRating)</visible>
+					<control type="image">
+						<top>258</top>
+						<left>514</left>
+						<colordiffuse>floor</colordiffuse>
+						<include>MediaFlagVars</include>
+						<texture>userratings/frame.png</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+					<control type="image">
+						<top>245</top>
+						<left>564</left>
+						<height>55</height>
+						<width>55</width>
+						<colordiffuse>floor</colordiffuse>
+						<texture>userratings/$INFO[MusicPlayer.UserRating].png</texture>
+						<include>VisibleFadeEffect</include>
+					</control>
+				</control>
 				<control type="image">
-					<left>494</left>
-					<top>190</top>
-					<width>400</width>
-					<height>45</height>
+					<left>664</left>
+					<top>245</top>
+					<width>135</width>
+					<height>88</height>
 					<colordiffuse>selected</colordiffuse>
-					<aspectratio>keep</aspectratio>
-					<texture fallback="rating0.png">$INFO[Player.StarRating]</texture>
+					<aspectratio>stretch</aspectratio>
+					<texture fallback="flags/music/rating/rating0.png">flags/music/rating/rating$INFO[ListItem.Rating].png</texture>
 				</control>
 				<control type="progress">
 					<animation effect="slide" start="0,0" end="-250,0" time="1500" tween="cubic" easing="out" delay="400" condition="Skin.HasSetting(ThirdMusicVizRecordPlayer)">Conditional</animation>
-					<left>10</left>
+					<animation effect="slide" start="0,0" end="-250,0" time="1500" tween="cubic" easing="out" delay="400" condition="Skin.HasSetting(ThirdMusicVizSimArtists)">Conditional</animation><left>10</left>
 					<top>265</top>
 					<width>420</width>
 					<height>120</height>
@@ -2016,7 +2038,7 @@
 						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
 						<scrollsuffix>   •   </scrollsuffix>
-						<label>$INFO[MusicPlayer.Album] [COLOR $VAR[TitleColorVar]]$INFO[MusicPlayer.Year, [,] ][/COLOR]</label>
+						<label>[COLOR $VAR[TitleColorVar]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[Player.Title]</label>
 					</control>
 					<control type="label">
 						<height>21</height>
@@ -2031,10 +2053,10 @@
 						<shadowcolor>black</shadowcolor>
 						<scroll>true</scroll>
 						<scrollsuffix>   •   </scrollsuffix>
-						<label>[COLOR $VAR[TitleColorVar]]$INFO[MusicPlayer.TrackNumber,,. ][/COLOR]$INFO[Player.Title]</label>
+						<label>$INFO[MusicPlayer.Album] [COLOR $VAR[TitleColorVar]]$INFO[MusicPlayer.Year, [,] ][/COLOR]</label>
 					</control>
 					<control type="label">
-						<height>40</height>
+						<height>1</height>
 						<label>-</label>
 					</control>
 					<control type="label">
@@ -2061,7 +2083,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>!Skin.HasSetting(ThirdMusicVizRecordPlayer)</visible>
+				<visible>!Skin.HasSetting(ThirdMusicVizRecordPlayer) + !Skin.HasSetting(ThirdMusicVizSimArtists)</visible>
 				<control type="group"> <!--CD Art Display-->
 					<left>1180</left>
 					<top>0</top>
@@ -2178,7 +2200,7 @@
 			</control>
 			<!-- Start LPPlayer Mod -->
 			<control type="group">
-				<visible>Skin.HasSetting(ThirdMusicVizRecordPlayer)</visible>
+				<visible>Skin.HasSetting(ThirdMusicVizRecordPlayer) + !Skin.HasSetting(ThirdMusicVizSimArtists)</visible>
 				<control type="group">
 					<animation effect="slide" start="250,450" end="250,0" time="1500" tween="cubic" easing="out" delay="400">WindowOpen</animation>
 					<animation effect="slide" start="0" end="0,450" time="1500" tween="cubic" easing="in">WindowClose</animation>
@@ -2224,6 +2246,97 @@
                         <texture>recordplayer/tonearm.png</texture>
                         <aspectratio aligny="bottom">keep</aspectratio>
                     </control>
+				</control>
+			</control>
+			<!-- Start Similiar Artists Mod -->
+			<control type="group">
+				<visible>Skin.HasSetting(ThirdMusicVizSimArtists)</visible>
+				<control type="label">
+					<left>1525</left>
+					<top>60</top>
+					<height>40</height>
+					<font>font_musicviz_small</font>
+					<textcolor>$VAR[TitleColorVar]</textcolor>
+					<shadowcolor>shadow</shadowcolor>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+				<control type="group">
+					<control type="wraplist" id="3001">
+						<viewtype label="icon">List Info</viewtype>
+						<left>1530</left>
+						<top>60</top>
+						<width>350</width>
+						<height>400</height>
+						<orientation>horizontal</orientation>
+						<autoscroll delay="13000" time="10000" repeat="10000">true</autoscroll>
+						<itemlayout height="400" width="350">
+						</itemlayout>
+						<focusedlayout height="400" width="350">
+						<control type="label">
+							<left>-2</left>
+							<top>5</top>
+							<height>40</height>
+							<font>font_musicviz_small</font>
+							<textcolor>$VAR[TitleColorVar]</textcolor>
+							<shadowcolor>shadow</shadowcolor>
+							<align>center</align>
+							<!--label>• • Similar Artists • •</label-->
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="image">
+							<left>25</left>
+							<top>55</top>
+							<width>300</width>
+							<height>300</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>scale</aspectratio>
+							<include>Animation_Fade</include>
+							<texture fallback="defaultartist.png" background="true">$INFO[ListItem.Icon]</texture>
+							<visible>!String.Contains(ListItem.Label2,discography)</visible>
+						</control>
+						<control type="label">
+							<posx>25</posx>
+							<posy>360</posy>
+							<width>300</width>
+							<height>34</height>
+							<font>Font_Info_Caps</font>
+							<textcolor>$VAR[TitleColorVar]</textcolor>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="image">
+							<left>50</left>
+							<top>70</top>
+							<width>270</width>
+							<height>270</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<aspectratio>scale</aspectratio>
+							<include>Animation_Fade</include>
+							<texture fallback="defaultartist.png" background="true">$INFO[ListItem.Icon]</texture>
+							<visible>String.Contains(ListItem.Label2,discography)</visible>
+						</control>
+						<control type="image">
+							<left>25</left>
+							<top>55</top>
+							<width>300</width>
+							<height>300</height>
+							<aspectratio align="center">keep</aspectratio>
+							<texture>musicviz/cdcase.png</texture>
+							<visible>String.Contains(ListItem.Label2,discography)</visible>
+						</control>
+					</focusedlayout>
+						<include>ThirdVizSimArtists</include>
+					</control>
+					<!--control type="label">
+						<posx>-340</posx>
+							<posy>310</posy>
+							<height>34</height>
+						<font>Font_Info_Caps</font>
+						<textcolor>white</textcolor>
+						<label>$INFO[Container(3001).ListItem.Label]</label>
+					</control-->
 				</control>
 			</control>
 		</control>

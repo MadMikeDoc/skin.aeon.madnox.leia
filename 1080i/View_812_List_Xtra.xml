@@ -645,14 +645,14 @@
 				<item>
 					<label>Artist Albums: $INFO[Window(Home).Property(SkinHelper.ListItem.AlbumsArtistCount)]</label>
 					<onclick>SetProperty(TextViewerHeader,Artist Albums,Home)</onclick>
-					<onclick>SetProperty(TextViewerContent,$ESCINFO[Window(Home).Property(SkinHelper.ListItem.AlbumsArtist)],Home)</onclick>
+					<onclick>SetProperty(TextViewerContent,$ESCINFO[Window(Home).Property(SkinHelper.ListItem.AlbumsArtist.formatted)],Home)</onclick>
 					<onclick>ActivateWindow(1175)</onclick>
 					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.AlbumsArtistCount))</visible>
 				</item>
 				<item>
 					<label>Compilations: $INFO[Window(Home).Property(SkinHelper.ListItem.AlbumsCompilationsCount)]</label>
 					<onclick>SetProperty(TextViewerHeader,Compilations,Home)</onclick>
-					<onclick>SetProperty(TextViewerContent,$ESCINFO[Window(Home).Property(SkinHelper.ListItem.AlbumsCompilations)],Home)</onclick>
+					<onclick>SetProperty(TextViewerContent,$ESCINFO[Window(Home).Property(SkinHelper.ListItem.AlbumsCompilations.formatted)],Home)</onclick>
 					<onclick>ActivateWindow(1175)</onclick>
 					<visible>String.IsEqual(ListItem.DBType,artist) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.AlbumsCompilationsCount))</visible>
 				</item>

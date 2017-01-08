@@ -292,7 +292,7 @@
 						<width>260</width>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>$VAR[StarRatingDiffuseVar]</colordiffuse>
-						<texture fallback="flags/music/rating/rating0.png">flags/music/rating/rating$INFO[ListItem.UserRating].png</texture>
+						<texture fallback="flags/music/rating/rating0.png">flags/music/rating/rating$INFO[ListItem.Rating].png</texture>
 						<visible>!String.IsEqual(ListItem.DBType,artist)</visible>
 					</control>
 					<control type="image">
