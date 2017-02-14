@@ -8,7 +8,7 @@
 		<system>1</system>
 	</coordinates>
 	<include>Animation_DialogZoom</include>
-	<onunload condition="Substring(Skin.String(widgetlist),favourite) | Substring(Skin.String(widget2list),favourite)">AlarmClock(FavouriteUpdate,RunScript(script.favourites),00:01,silent)</onunload>
+	<onunload condition="String.Contains(Skin.String(widgetlist),favourite) | String.Contains(Skin.String(widget2list),favourite)">AlarmClock(FavouriteUpdate,RunScript(script.favourites),00:01,silent)</onunload>
 	<controls>
 		<control type="image" id="999">
 			<posx>0</posx>
@@ -105,10 +105,10 @@
 				<font>Font_Reg30_2</font>
 				<textcolor>context</textcolor>
 				<focusedcolor>white2</focusedcolor>
-				<visible>Container.Content(albums) | Container.Content(songs) | Substring(ListItem.FolderPath,.xsp,right) | Substring(ListItem.FolderPath,.m3u,right)</visible>
+				<visible>Container.Content(albums) | Container.Content(songs) | String.Contains(ListItem.FolderPath,.xsp,right) | String.Contains(ListItem.FolderPath,.m3u,right)</visible>
 				<onclick condition="Container.Content(albums)">Skin.SetString(Startup_Playlist_Path,RunScript(script.playalbum,albumid=$INFO[ListItem.DBID]))</onclick>
 				<onclick condition="Container.Content(songs)">Skin.SetString(Startup_Playlist_Path,RunScript(script.playalbum,songid=$INFO[ListItem.DBID]))</onclick>
-				<onclick condition="Substring(ListItem.FolderPath,.xsp,right) | Substring(ListItem.FolderPath,.m3u,right)">Skin.SetString(Startup_Playlist_Path,$ESCINFO[ListItem.FolderPath])</onclick>
+				<onclick condition="String.Contains(ListItem.FolderPath,.xsp,right) | String.Contains(ListItem.FolderPath,.m3u,right)">Skin.SetString(Startup_Playlist_Path,$ESCINFO[ListItem.FolderPath])</onclick>
 				<onclick>Skin.SetBool(Use_Startup_Playlist)</onclick>
 			</control>
 			<control type="button" id="2017">
@@ -139,9 +139,9 @@
 				<font>Font_Reg30_2</font>
 				<textcolor>context</textcolor>
 				<focusedcolor>white2</focusedcolor>
-				<visible>Window.IsActive(addonbrowser) + [Substring(ListItem.AddonID,script.,left) | Substring(ListItem.AddonID,plugin.,left)]</visible>
-				<onclick condition="Substring(ListItem.AddonID,script.,left)">Runscript($INFO[ListItem.AddonID)])</onclick>
-				<onclick condition="Substring(ListItem.AddonID,plugin.,left)">RunAddon($INFO[ListItem.AddonID)])</onclick>
+				<visible>Window.IsActive(addonbrowser) + [String.Contains(ListItem.AddonID,script.,left) | String.Contains(ListItem.AddonID,plugin.,left)]</visible>
+				<onclick condition="String.Contains(ListItem.AddonID,script.,left)">Runscript($INFO[ListItem.AddonID)])</onclick>
+				<onclick condition="String.Contains(ListItem.AddonID,plugin.,left)">RunAddon($INFO[ListItem.AddonID)])</onclick>
 			</control>
 			<control type="button" id="2020">
 				<width>462</width>

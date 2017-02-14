@@ -22,7 +22,7 @@
 			<control type="multiimage">
 				<include>MusicVizBG</include>
 				<imagepath fallback="special://skin/backgrounds/music/" background="true">$VAR[MusicVizBackgroundVar]</imagepath>
-				<visible>!String.IsEqual(Skin.String(MusicViz.MultiFanart),artistfanart) + !Substring(Skin.String(MusicViz.MultiFanart),case) + !Substring(Skin.String(MusicViz.MultiFanart),artistslideshow) + !Substring(Skin.String(MusicViz.MultiFanart),wall) + !String.IsEmpty(Skin.String(MusicViz.MultiFanart))</visible>
+				<visible>!String.IsEqual(Skin.String(MusicViz.MultiFanart),artistfanart) + !String.Contains(Skin.String(MusicViz.MultiFanart),case) + !String.Contains(Skin.String(MusicViz.MultiFanart),artistslideshow) + !String.Contains(Skin.String(MusicViz.MultiFanart),wall) + !String.IsEmpty(Skin.String(MusicViz.MultiFanart))</visible>
 			</control>
 			<control type="group">
 				<include>Animation_VisibleChange400</include>
@@ -31,13 +31,13 @@
 				<control type="multiimage">
 					<include>MusicVizBG</include>
 					<imagepath fallback="special://skin/backgrounds/music/">$INFO[Player.Art(fanart)]</imagepath>
-					<visible>!SubString(Control.getLabel(8870),extrafanart)</visible>
+					<visible>!String.Contains(Control.getLabel(8870),extrafanart)</visible>
 					<visible>String.IsEqual(Control.getLabel(8872),empty.png)</visible>
 				</control>
 				<control type="image" id="8872">
 					<include>MusicVizBG</include>
 					<texture fallback="empty.png">$INFO[Player.FolderPath,,fanart.jpg]</texture>
-					<visible>!SubString(Control.getLabel(8870),extrafanart)</visible>
+					<visible>!String.Contains(Control.getLabel(8870),extrafanart)</visible>
 				</control>
 				<control type="multiimage" id="8870">
 					<randomize>false</randomize>
@@ -54,7 +54,7 @@
 				<texture background="true" fallback="special://skin/backgrounds/speakergrill.jpg">$INFO[Skin.String(LiveBG)]</texture>
 				<animation effect="fade" time="500">Visible</animation>
 				<animation effect="fade" time="500">Hidden</animation>
-				<visible>!Control.IsVisible(2355) + Substring(Control.GetLabel(4322),case)</visible>
+				<visible>!Control.IsVisible(2355) + String.Contains(Control.GetLabel(4322),case)</visible>
 			</control>
 			<include>LiveBG</include>
 			<control type="group">
@@ -392,7 +392,7 @@
 				<control type="group">
 					<visible>[Integer.IsGreater(MusicPlayer.Time,71) + !Integer.IsGreater(MusicPlayer.Time,95) + Skin.HasSetting(widgetpola)]</visible>
 					<animation effect="fade" time="750">VisibleChange</animation>
-					<animation type="Conditional" condition="[Integer.IsGreater(MusicPlayer.Time,72) + !Integer.IsGreater(MusicPlayer.Time,95) + Skin.HasSetting(widgetpola) + !SubString(Window(Visualisation).Property(ArtistSlideshow),black)]" reversible="false">
+					<animation type="Conditional" condition="[Integer.IsGreater(MusicPlayer.Time,72) + !Integer.IsGreater(MusicPlayer.Time,95) + Skin.HasSetting(widgetpola) + !String.Contains(Window(Visualisation).Property(ArtistSlideshow),black)]" reversible="false">
 						<effect type="rotatey" delay="18000" center="0" start="0" end="45" time="1000" tween="quadratic" easing="out"/>
 						<effect type="rotatey" delay="22000" center="0" start="0" end="-45" time="1000" tween="quadratic" easing="out"/>
 					</animation>
@@ -425,7 +425,7 @@
 				<control type="group">
 					<visible>[Integer.IsGreater(MusicPlayer.Time,81) + !Integer.IsGreater(MusicPlayer.Time,95) + Skin.HasSetting(widgetpola)]</visible>
 					<animation effect="fade" time="750">VisibleChange</animation>
-					<animation type="Conditional" condition="[Integer.IsGreater(MusicPlayer.Time,82) + !Integer.IsGreater(MusicPlayer.Time,95) + Skin.HasSetting(widgetpola) + !SubString(Window(Visualisation).Property(ArtistSlideshow),black)]" reversible="false">
+					<animation type="Conditional" condition="[Integer.IsGreater(MusicPlayer.Time,82) + !Integer.IsGreater(MusicPlayer.Time,95) + Skin.HasSetting(widgetpola) + !String.Contains(Window(Visualisation).Property(ArtistSlideshow),black)]" reversible="false">
 						<effect type="rotatey" delay="4000" center="0" start="0" end="45" time="1000" tween="quadratic" easing="out"/>
 						<effect type="rotatey" delay="12000" center="0" start="0" end="-45" time="1000" tween="quadratic" easing="out"/>
 					</animation>
@@ -460,7 +460,7 @@
 				</control>
 				<control type="group">
 					<animation effect="fade" time="750">VisibleChange</animation>
-					<animation type="Conditional" condition="[Integer.IsGreater(MusicPlayer.Time,82) + !Integer.IsGreater(MusicPlayer.Time,95) + Skin.HasSetting(widgetpola) + !SubString(Window(Visualisation).Property(ArtistSlideshow),black)]" reversible="false">
+					<animation type="Conditional" condition="[Integer.IsGreater(MusicPlayer.Time,82) + !Integer.IsGreater(MusicPlayer.Time,95) + Skin.HasSetting(widgetpola) + !String.Contains(Window(Visualisation).Property(ArtistSlideshow),black)]" reversible="false">
 						<effect type="rotatey" delay="0" center="0" start="0" end="45" time="1000" tween="quadratic" easing="out"/>
 						<effect type="rotatey" delay="12000" center="0" start="0" end="-45" time="1000" tween="quadratic" easing="out"/>
 					</animation>
@@ -681,7 +681,7 @@
 						<height>38</height>
 						<scroll>true</scroll>
 						<font>Font_MainClassic</font>
-						<visible>[Substring(Control.GetLabel(8308),empty.png) | String.IsEmpty(Skin.String(ArtistsLogosPath))] + Skin.HasSetting(widgetpola)</visible>
+						<visible>[String.Contains(Control.GetLabel(8308),empty.png) | String.IsEmpty(Skin.String(ArtistsLogosPath))] + Skin.HasSetting(widgetpola)</visible>
 						<label>$INFO[MusicPlayer.AlbumArtist]</label>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -694,7 +694,7 @@
 						<height>38</height>
 						<scroll>true</scroll>
 						<font>Font_MainClassic</font>
-						<visible>[Substring(Control.GetLabel(8308),empty.png) | String.IsEmpty(Skin.String(ArtistsLogosPath))] + !Skin.HasSetting(widgetpola)</visible>
+						<visible>[String.Contains(Control.GetLabel(8308),empty.png) | String.IsEmpty(Skin.String(ArtistsLogosPath))] + !Skin.HasSetting(widgetpola)</visible>
 						<label>$INFO[MusicPlayer.Artist]</label>
 						<textcolor>white</textcolor>
 						<shadowcolor>black</shadowcolor>
@@ -709,7 +709,7 @@
 						<width>500</width>
 						<height>193</height>
 						<fadetime>400</fadetime>
-						<animation effect="fade" start="100" end="0" time="0" condition="Substring(Control.GetLabel(8308),empty.png)">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="0" condition="String.Contains(Control.GetLabel(8308),empty.png)">Conditional</animation>
 						<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearLogo)]</texture>
 						<visible>!String.IsEmpty(Skin.String(ArtistsLogosPath))</visible>
 						<animation effect="slide" time="400" tween="cubic" easing="inout" end="-35" condition="!Skin.HasSetting(CDArtinVis)">Conditional</animation>
@@ -1114,7 +1114,7 @@
 				<align>right</align>
 				<scroll>true</scroll>
 				<font>Font_MainClassic2.low</font>
-				<visible>!Skin.HasSetting(AltMusicVizLayoutArtist) + Substring(Control.GetLabel(8318),empty.png)</visible>
+				<visible>!Skin.HasSetting(AltMusicVizLayoutArtist) + String.Contains(Control.GetLabel(8318),empty.png)</visible>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -1129,7 +1129,7 @@
 				<align>right</align>
 				<scroll>true</scroll>
 				<font>Font_MainClassic2.low</font>
-				<visible>Skin.HasSetting(AltMusicVizLayoutArtist) + Substring(Control.GetLabel(8318),empty.png)</visible>
+				<visible>Skin.HasSetting(AltMusicVizLayoutArtist) + String.Contains(Control.GetLabel(8318),empty.png)</visible>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<textcolor>$VAR[TitleColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -1142,7 +1142,7 @@
 				<width>500</width>
 				<height>193</height>
 				<fadetime>400</fadetime>
-				<animation effect="fade" start="100" end="0" time="0" condition="Substring(Control.GetLabel(8318),empty.png)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="0" condition="String.Contains(Control.GetLabel(8318),empty.png)">Conditional</animation>
 				<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearLogo)]</texture>
 			</control>
 			<control type="label">
@@ -1881,7 +1881,7 @@
 					<width>200</width>
 					<height>200</height>
 					<texture>$INFO[MusicPlayer.offset(1).Cover]</texture>
-					<visible>!Substring(MusicPlayer.offset(1).Cover,DefaultAlbumCover.png)</visible>
+					<visible>!String.Contains(MusicPlayer.offset(1).Cover,DefaultAlbumCover.png)</visible>
 				</control>
 				<control type="image">
 					<top>37</top>
@@ -2186,7 +2186,7 @@
 						<height>500</height>
 						<aspectratio align="right">keep</aspectratio>
 						<texture>$INFO[MusicPlayer.Cover]</texture>
-						<visible>!Substring(Player.Art(thumb),DefaultAlbumCover.png)</visible>
+						<visible>!String.Contains(Player.Art(thumb),DefaultAlbumCover.png)</visible>
 					</control>
 					<control type="image">
 						<left>-54</left>
@@ -2373,7 +2373,7 @@
 				<width>500</width>
 				<height>500</height>
 				<aspectratio>keep</aspectratio>
-				<animation effect="fade" start="100" end="0" time="500" condition="Substring(Control.GetLabel(831844),empty.png)">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="500" condition="String.Contains(Control.GetLabel(831844),empty.png)">Conditional</animation>
 				<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearLogo)]</texture>
 			</control>
 			<control type="label">
@@ -2383,7 +2383,7 @@
 				<align>center</align>
 				<scroll>true</scroll>
 				<font>Font_MainClassic2.low</font>
-				<visible>Substring(Control.GetLabel(831844),empty.png)</visible>
+				<visible>String.Contains(Control.GetLabel(831844),empty.png)</visible>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<textcolor>$VAR[TitleColorVar]</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -2793,7 +2793,7 @@
 				<width>170</width>
 				<posx>75</posx>
 				<posy>-480</posy>
-				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + Skin.HasSetting(widgetpola) + Substring(Control.GetLabel(7782),xy,Left)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + Skin.HasSetting(widgetpola) + Substring(Control.GetLabel(7782),xy,Left)]</visible>
+				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + Skin.HasSetting(widgetpola) + String.Contains(Control.GetLabel(7782),xy,Left)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + Skin.HasSetting(widgetpola) + String.Contains(Control.GetLabel(7782),xy,Left)]</visible>
 				<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.Player.Art.ClearLogo)]</texture>
 				<colordiffuse>D1FFFFFF</colordiffuse>
 				<aspectratio>keep</aspectratio>
@@ -2802,7 +2802,7 @@
 				<width>295</width>
 				<posx>16</posx>
 				<posy>-490</posy>
-				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + Substring(Control.GetLabel(7782),xy,Left) + Substring(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + Substring(Control.GetLabel(7782),xy,Left) + Substring(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)]</visible>
+				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + String.Contains(Control.GetLabel(7782),xy,Left) + String.Contains(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + String.Contains(Control.GetLabel(7782),xy,Left) + String.Contains(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)]</visible>
 				<colordiffuse>EEFFFFFF</colordiffuse>
 				<texture background="true">thumbs/headline.png</texture>
 				<aspectratio>keep</aspectratio>
@@ -2815,7 +2815,7 @@
 				<aligny>top</aligny>
 				<align>center</align>
 				<font>Flyer_25</font>
-				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + Substring(Control.GetLabel(7782),xy,Left) + Substring(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + Substring(Control.GetLabel(7782),xy,Left) + Substring(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)]</visible>
+				<visible>[Integer.IsGreater(MusicPlayer.Time,7) + !Integer.IsGreater(MusicPlayer.Time,24) + String.Contains(Control.GetLabel(7782),xy,Left) + String.Contains(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)] | [Integer.IsGreater(MusicPlayer.Time,154) + !Integer.IsGreater(MusicPlayer.Time,171) + String.Contains(Control.GetLabel(7782),xy,Left) + String.Contains(Control.GetLabel(7783),qa,Left) + Skin.HasSetting(widgetpola)]</visible>
 				<label>$INFO[MusicPlayer.Artist]</label>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
@@ -4297,7 +4297,7 @@
 			<height>100</height>
 			<itemlayout height="100" width="100" />
 			<focusedlayout height="100" width="100" />
-			<autoscroll time="7000" delay="7000" repeat="7000">!SubString(Control.GetLabel(4322),case)</autoscroll>
+			<autoscroll time="7000" delay="7000" repeat="7000">!String.Contains(Control.GetLabel(4322),case)</autoscroll>
 			<content sortby="random">$VAR[MusicVisBackgroundVar]</content>
 		</control>
 	</controls>

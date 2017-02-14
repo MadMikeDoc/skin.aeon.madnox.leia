@@ -1063,7 +1063,7 @@
 			<visible>no</visible>
 		</control>
 		<control type="group">
-			<visible>!Skin.HasSetting(DisableVideoThumb) + !substring(Control.GetLabel(888777),defaultvideo)</visible>
+			<visible>!Skin.HasSetting(DisableVideoThumb) + !String.Contains(Control.GetLabel(888777),defaultvideo)</visible>
 			<include>Animation_VisibleChange200</include>
 			<control type="group">
 				<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(MusicVideos) | VideoPlayer.Content(episodes)</visible>
@@ -1180,7 +1180,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$INFO[VideoPlayer.VideoResolution]p.png</texture>
-							<visible>VideoPlayer.Content(movies) + ![SubString(Player.Filename,.3D.) | SubString(Player.Filename,.3d.)]</visible>
+							<visible>VideoPlayer.Content(movies) + ![String.Contains(Player.Filename,.3D.) | String.Contains(Player.Filename,.3d.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1188,7 +1188,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/3d.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename,.3D.) | SubString(Player.Filename,.3d.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename,.3D.) | String.Contains(Player.Filename,.3d.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1196,7 +1196,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hdtv.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename,.HDTV.) | SubString(Player.Filename,.hdtv.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename,.HDTV.) | String.Contains(Player.Filename,.hdtv.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1204,7 +1204,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hddvd.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename,.HDDVD.) | SubString(Player.Filename,.hddvd.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename,.HDDVD.) | String.Contains(Player.Filename,.hddvd.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1212,7 +1212,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hddvd.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename, HDDVD.) | SubString(Player.Filename, hddvd.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename, HDDVD.) | String.Contains(Player.Filename, hddvd.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1220,7 +1220,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename,.WEBDL.) | SubString(Player.Filename,.webdl.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename,.WEBDL.) | String.Contains(Player.Filename,.webdl.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1228,7 +1228,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename, WEBDL.) | SubString(Player.Filename, webdl.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename, WEBDL.) | String.Contains(Player.Filename, webdl.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1236,7 +1236,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename,.WEB-DL.) | SubString(Player.Filename,.web-dl.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename,.WEB-DL.) | String.Contains(Player.Filename,.web-dl.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1244,7 +1244,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename, WEB-DL.) | SubString(Player.Filename, web-dl.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename, WEB-DL.) | String.Contains(Player.Filename, web-dl.)]</visible>
 						</control>
 						<!-- MAD - No Cases on TV shows -->
 						<!--control type="image">
@@ -1253,7 +1253,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$INFO[VideoPlayer.VideoResolution]p.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + ![SubString(Player.Filename,.3D.) | SubString(Player.Filename,.3d.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + ![String.Contains(Player.Filename,.3D.) | String.Contains(Player.Filename,.3d.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1261,7 +1261,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/3d.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename,.3D.) | SubString(Player.Filename,.3d.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename,.3D.) | String.Contains(Player.Filename,.3d.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1269,7 +1269,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hdtv.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename,.HDTV.) | SubString(Player.Filename,.hdtv.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename,.HDTV.) | String.Contains(Player.Filename,.hdtv.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1277,7 +1277,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hddvd.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename,.HDDVD.) | SubString(Player.Filename,.hddvd.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename,.HDDVD.) | String.Contains(Player.Filename,.hddvd.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1285,7 +1285,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hddvd.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename, HDDVD.) | SubString(Player.Filename, hddvd.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename, HDDVD.) | String.Contains(Player.Filename, hddvd.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1293,7 +1293,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename,.WEBDL.) | SubString(Player.Filename,.webdl.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename,.WEBDL.) | String.Contains(Player.Filename,.webdl.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1301,7 +1301,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename, WEBDL.) | SubString(Player.Filename, webdl.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename, WEBDL.) | String.Contains(Player.Filename, webdl.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1309,7 +1309,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename,.WEB-DL.) | SubString(Player.Filename,.web-dl.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename,.WEB-DL.) | String.Contains(Player.Filename,.web-dl.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1317,7 +1317,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename, WEB-DL.) | SubString(Player.Filename, web-dl.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename, WEB-DL.) | String.Contains(Player.Filename, web-dl.)]</visible>
                         </control-->
 					</control>
 				</control>
@@ -1429,7 +1429,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$INFO[VideoPlayer.VideoResolution]p.png</texture>
-							<visible>VideoPlayer.Content(movies) + ![SubString(Player.Filename,.3D.) | SubString(Player.Filename,.3d.)]</visible>
+							<visible>VideoPlayer.Content(movies) + ![String.Contains(Player.Filename,.3D.) | String.Contains(Player.Filename,.3d.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1437,7 +1437,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/3d.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename,.3D.) | SubString(Player.Filename,.3d.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename,.3D.) | String.Contains(Player.Filename,.3d.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1445,7 +1445,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hdtv.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename,.HDTV.) | SubString(Player.Filename,.hdtv.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename,.HDTV.) | String.Contains(Player.Filename,.hdtv.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1453,7 +1453,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hddvd.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename,.HDDVD.) | SubString(Player.Filename,.hddvd.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename,.HDDVD.) | String.Contains(Player.Filename,.hddvd.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1461,7 +1461,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hddvd.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename, HDDVD.) | SubString(Player.Filename, hddvd.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename, HDDVD.) | String.Contains(Player.Filename, hddvd.)]</visible>
 						</control>
 
 						<control type="image">
@@ -1470,7 +1470,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename,.WEBDL.) | SubString(Player.Filename,.webdl.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename,.WEBDL.) | String.Contains(Player.Filename,.webdl.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1478,7 +1478,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename, WEBDL.) | SubString(Player.Filename, webdl.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename, WEBDL.) | String.Contains(Player.Filename, webdl.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1486,7 +1486,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename,.WEB-DL.) | SubString(Player.Filename,.web-dl.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename,.WEB-DL.) | String.Contains(Player.Filename,.web-dl.)]</visible>
 						</control>
 						<control type="image">
 							<left>-22</left>
@@ -1494,7 +1494,7 @@
 							<width>322</width>
 							<height>420</height>
 							<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-							<visible>VideoPlayer.Content(movies) + [SubString(Player.Filename, WEB-DL.) | SubString(Player.Filename, web-dl.)]</visible>
+							<visible>VideoPlayer.Content(movies) + [String.Contains(Player.Filename, WEB-DL.) | String.Contains(Player.Filename, web-dl.)]</visible>
 						</control>
 						<!-- MAD - No Cases on TV shows -->
 						<!--control type="image">
@@ -1503,7 +1503,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$INFO[VideoPlayer.VideoResolution]p.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + ![SubString(Player.Filename,.3D.) | SubString(Player.Filename,.3d.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + ![String.Contains(Player.Filename,.3D.) | String.Contains(Player.Filename,.3d.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1511,7 +1511,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/3d.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename,.3D.) | SubString(Player.Filename,.3d.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename,.3D.) | String.Contains(Player.Filename,.3d.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1519,7 +1519,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hdtv.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename,.HDTV.) | SubString(Player.Filename,.hdtv.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename,.HDTV.) | String.Contains(Player.Filename,.hdtv.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1527,7 +1527,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hddvd.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename,.HDDVD.) | SubString(Player.Filename,.hddvd.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename,.HDDVD.) | String.Contains(Player.Filename,.hddvd.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1535,7 +1535,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/hddvd.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename, HDDVD.) | SubString(Player.Filename, hddvd.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename, HDDVD.) | String.Contains(Player.Filename, hddvd.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1543,7 +1543,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename,.WEBDL.) | SubString(Player.Filename,.webdl.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename,.WEBDL.) | String.Contains(Player.Filename,.webdl.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1551,7 +1551,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename, WEBDL.) | SubString(Player.Filename, webdl.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename, WEBDL.) | String.Contains(Player.Filename, webdl.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1559,7 +1559,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename,.WEB-DL.) | SubString(Player.Filename,.web-dl.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename,.WEB-DL.) | String.Contains(Player.Filename,.web-dl.)]</visible>
                         </control>
                         <control type="image">
                             <left>-22</left>
@@ -1567,7 +1567,7 @@
                             <width>322</width>
                             <height>420</height>
                             <texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/webdl.png</texture>
-                            <visible>VideoPlayer.Content(episodes) + [SubString(Player.Filename, WEB-DL.) | SubString(Player.Filename, web-dl.)]</visible>
+                            <visible>VideoPlayer.Content(episodes) + [String.Contains(Player.Filename, WEB-DL.) | String.Contains(Player.Filename, web-dl.)]</visible>
                         </control-->
 					</control>
 				</control>
@@ -3146,50 +3146,50 @@
 		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(isSystemInfo))">SetProperty(Widget.Year,$INFO[System.FriendlyName],Home)</onfocus>
 		<!-- MPAA -->
 		<onfocus>SetProperty(Widget.FlagsRating,$INFO[Container($PARAM[id]).ListItem.MPAA,$VAR[ColorFlagsRating]rating/,.png],home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-G) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - G)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-G_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-PG) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-PG_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-14) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - 14)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-14_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-MA) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - MA)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-MA_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-Y7) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - Y7)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/tv-y7.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,TV-Y) | SubString(Container($PARAM[id]).ListItem.MPAA,TV - Y)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/tv-y.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,US:G) | SubString(Container($PARAM[id]).ListItem.MPAA,USA:G) | SubString(Container($PARAM[id]).ListItem.MPAA,Rated G)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_G_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,PG-13) | SubString(Container($PARAM[id]).ListItem.MPAA,PG - 13)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_PG-13_Certificate_US.png,home)</onfocus>
-		<onfocus condition="Substring(Container($PARAM[id]).ListItem.MPAA,Rated PG) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_PG_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,US:R) | SubString(Container($PARAM[id]).ListItem.MPAA,USA:R) | SubString(Container($PARAM[id]).ListItem.MPAA,Rated R) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,R)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_R_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,US:NC-17)| SubString(Container($PARAM[id]).ListItem.MPAA,USA:NC-17)| SubString(Container($PARAM[id]).ListItem.MPAA,Rated NC-17) | SubString(Container($PARAM[id]).ListItem.MPAA,Rated NC - 17)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_NC-17_Certificate_US.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:U)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_U_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_PG_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:12A)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_12A_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:12)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_12_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:15)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_15_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,UK:18)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_18_Certificate_UK.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:0) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 0)| SubString(Container($PARAM[id]).ListItem.MPAA,o.A)| SubString(Container($PARAM[id]).ListItem.MPAA,FSK 0)| String.IsEqual(Container($PARAM[id]).ListItem.MPAA,FSK:0)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-0.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:6) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 6) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,6) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 6) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:6)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-6.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:12) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 12) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,12) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 12) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:12)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:16) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 16) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,16) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 16) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:16)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-16.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Germany:18) | SubString(Container($PARAM[id]).ListItem.MPAA,ab 18) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,18) | Substring(Container($PARAM[id]).ListItem.MPAA,FSK 18) | SubString(Container($PARAM[id]).ListItem.MPAA,FSK:18)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-18.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,besorolás alatt)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_BA.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,korhatárra való tekintett nélkül megtekintetheto)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_KN.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,12 éven aluliak számára a megtekintése nagykorú felügyelete mellett ajánlott)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,16 éven aluliak számára nem ajánlott)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_16.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,18 éven aluliak számára nem ajánlott)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_18.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,France:U) | Substring(Container($PARAM[id]).ListItem.MPAA,partir de 3 ans) | Substring(Container($PARAM[id]).ListItem.MPAA,partir de 6 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csaU.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,France:-10) | Substring(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 10 ans) | Substring(Container($PARAM[id]).ListItem.MPAA,des propos ou des images peuvent heurter)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa10.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,France:-12) | Substring(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 12 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,France:-16) | Substring(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 16 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa16.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,France:-18) | Substring(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 18 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa18.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,전체)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_All.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,12세)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,15세)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_15.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,불가)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_18.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,제한)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_R.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:Livre) | SubString(Container($PARAM[id]).ListItem.MPAA,Livre)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_Livre.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:10) | SubString(Container($PARAM[id]).ListItem.MPAA,10 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_10.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:12) | SubString(Container($PARAM[id]).ListItem.MPAA,12 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_12.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:14) | SubString(Container($PARAM[id]).ListItem.MPAA,14 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_14.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:16) | SubString(Container($PARAM[id]).ListItem.MPAA,16 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_16.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Brazil:18) | SubString(Container($PARAM[id]).ListItem.MPAA,18 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_18.png,home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.MPAA,Rated X)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_X_Certificate_US.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,TV-G) | String.Contains(Container($PARAM[id]).ListItem.MPAA,TV - G)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-G_Certificate_US.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,TV-PG) | String.Contains(Container($PARAM[id]).ListItem.MPAA,TV - PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-PG_Certificate_US.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,TV-14) | String.Contains(Container($PARAM[id]).ListItem.MPAA,TV - 14)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-14_Certificate_US.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,TV-MA) | String.Contains(Container($PARAM[id]).ListItem.MPAA,TV - MA)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/TV-MA_Certificate_US.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,TV-Y7) | String.Contains(Container($PARAM[id]).ListItem.MPAA,TV - Y7)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/tv-y7.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,TV-Y) | String.Contains(Container($PARAM[id]).ListItem.MPAA,TV - Y)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/tv-y.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,US:G) | String.Contains(Container($PARAM[id]).ListItem.MPAA,USA:G) | String.Contains(Container($PARAM[id]).ListItem.MPAA,Rated G)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_G_Certificate_US.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,PG-13) | String.Contains(Container($PARAM[id]).ListItem.MPAA,PG - 13)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_PG-13_Certificate_US.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Rated PG) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_PG_Certificate_US.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,US:R) | String.Contains(Container($PARAM[id]).ListItem.MPAA,USA:R) | String.Contains(Container($PARAM[id]).ListItem.MPAA,Rated R) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,R)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_R_Certificate_US.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,US:NC-17)| String.Contains(Container($PARAM[id]).ListItem.MPAA,USA:NC-17)| String.Contains(Container($PARAM[id]).ListItem.MPAA,Rated NC-17) | String.Contains(Container($PARAM[id]).ListItem.MPAA,Rated NC - 17)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_NC-17_Certificate_US.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,UK:U)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_U_Certificate_UK.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,UK:PG)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_PG_Certificate_UK.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,UK:12A)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_12A_Certificate_UK.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,UK:12)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_12_Certificate_UK.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,UK:15)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_15_Certificate_UK.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,UK:18)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/BBFC_18_Certificate_UK.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Germany:0) | String.Contains(Container($PARAM[id]).ListItem.MPAA,ab 0)| String.Contains(Container($PARAM[id]).ListItem.MPAA,o.A)| String.Contains(Container($PARAM[id]).ListItem.MPAA,FSK 0)| String.IsEqual(Container($PARAM[id]).ListItem.MPAA,FSK:0)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-0.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Germany:6) | String.Contains(Container($PARAM[id]).ListItem.MPAA,ab 6) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,6) | String.Contains(Container($PARAM[id]).ListItem.MPAA,FSK 6) | String.Contains(Container($PARAM[id]).ListItem.MPAA,FSK:6)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-6.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Germany:12) | String.Contains(Container($PARAM[id]).ListItem.MPAA,ab 12) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,12) | String.Contains(Container($PARAM[id]).ListItem.MPAA,FSK 12) | String.Contains(Container($PARAM[id]).ListItem.MPAA,FSK:12)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-12.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Germany:16) | String.Contains(Container($PARAM[id]).ListItem.MPAA,ab 16) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,16) | String.Contains(Container($PARAM[id]).ListItem.MPAA,FSK 16) | String.Contains(Container($PARAM[id]).ListItem.MPAA,FSK:16)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-16.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Germany:18) | String.Contains(Container($PARAM[id]).ListItem.MPAA,ab 18) | String.IsEqual(Container($PARAM[id]).ListItem.MPAA,18) | String.Contains(Container($PARAM[id]).ListItem.MPAA,FSK 18) | String.Contains(Container($PARAM[id]).ListItem.MPAA,FSK:18)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/FSK-18.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,besorolás alatt)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_BA.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,korhatárra való tekintett nélkül megtekintetheto)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_KN.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,12 éven aluliak számára a megtekintése nagykorú felügyelete mellett ajánlott)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_12.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,16 éven aluliak számára nem ajánlott)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_16.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,18 éven aluliak számára nem ajánlott)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/HU_18.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,France:U) | String.Contains(Container($PARAM[id]).ListItem.MPAA,partir de 3 ans) | String.Contains(Container($PARAM[id]).ListItem.MPAA,partir de 6 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csaU.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,France:-10) | String.Contains(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 10 ans) | String.Contains(Container($PARAM[id]).ListItem.MPAA,des propos ou des images peuvent heurter)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa10.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,France:-12) | String.Contains(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 12 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa12.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,France:-16) | String.Contains(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 16 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa16.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,France:-18) | String.Contains(Container($PARAM[id]).ListItem.MPAA,Interdit aux moins de 18 ans)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/csa18.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,전체)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_All.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,12세)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_12.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,15세)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_15.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,불가)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_18.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,제한)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/KR_Certificate_R.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Brazil:Livre) | String.Contains(Container($PARAM[id]).ListItem.MPAA,Livre)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_Livre.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Brazil:10) | String.Contains(Container($PARAM[id]).ListItem.MPAA,10 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_10.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Brazil:12) | String.Contains(Container($PARAM[id]).ListItem.MPAA,12 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_12.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Brazil:14) | String.Contains(Container($PARAM[id]).ListItem.MPAA,14 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_14.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Brazil:16) | String.Contains(Container($PARAM[id]).ListItem.MPAA,16 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_16.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Brazil:18) | String.Contains(Container($PARAM[id]).ListItem.MPAA,18 anos)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_Brazil_18.png,home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.MPAA,Rated X)">SetProperty(Widget.FlagsRating,$VAR[ColorFlagsRating]rating/MPAA_X_Certificate_US.png,home)</onfocus>
 		<!-- Studio -->
 		<onfocus condition="Skin.HasSetting(StudiosColorFlag) + !String.IsEmpty(Container($PARAM[id]).ListItem.Studio)">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Studio,resource://resource.images.studios.coloured/,.png],Home)</onfocus>
 		<onfocus condition="!Skin.HasSetting(StudiosColorFlag) + !String.IsEmpty(Container($PARAM[id]).ListItem.Studio)">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Studio,resource://resource.images.studios.white/,.png],Home)</onfocus>
@@ -3198,14 +3198,14 @@
 		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart))">SetProperty(Widget.FlagsStudio,$INFO[Container($PARAM[id]).ListItem.Icon],Home)</onfocus>
 		<!-- VideoCodec -->
 		<onfocus>SetProperty(Widget.FlagsSource,$INFO[Container($PARAM[id]).ListItem.VideoCodec,flags/colored/source/,.png])</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,PDTV) | SubString(Container($PARAM[id]).ListItem.filename,sdtv) | SubString(Container($PARAM[id]).ListItem.filename,sd tv)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/sdtv.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,hdtv) | SubString(Container($PARAM[id]).ListItem.filename,hd tv)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/hdtv.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,hddvd) | SubString(Container($PARAM[id]).ListItem.filename,hd-dvd)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/hddvd.png,Home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.filename,PDTV) | String.Contains(Container($PARAM[id]).ListItem.filename,sdtv) | String.Contains(Container($PARAM[id]).ListItem.filename,sd tv)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/sdtv.png,Home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.filename,hdtv) | String.Contains(Container($PARAM[id]).ListItem.filename,hd tv)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/hdtv.png,Home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.filename,hddvd) | String.Contains(Container($PARAM[id]).ListItem.filename,hd-dvd)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/hddvd.png,Home)</onfocus>
 		<onfocus condition="Container($PARAM[id]).ListItem.IsStereoscopic">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/bluray3d,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,bluray) | SubString(Container($PARAM[id]).ListItem.filename,blu-ray) | SubString(Container($PARAM[id]).ListItem.filename,bdrip) | SubString(Container($PARAM[id]).ListItem.filename,brrip)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/bluray.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,dvb)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/dvb.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,web-dl)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/web-dl.png,Home)</onfocus>
-		<onfocus condition="SubString(Container($PARAM[id]).ListItem.filename,dvd) | String.IsEqual(Container($PARAM[id]).ListItem.FileExtension,iso) | String.IsEqual(Container($PARAM[id]).ListItem.FileExtension,ifo)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/dvd.png,Home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.filename,bluray) | String.Contains(Container($PARAM[id]).ListItem.filename,blu-ray) | String.Contains(Container($PARAM[id]).ListItem.filename,bdrip) | String.Contains(Container($PARAM[id]).ListItem.filename,brrip)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/bluray.png,Home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.filename,dvb)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/dvb.png,Home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.filename,web-dl)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/web-dl.png,Home)</onfocus>
+		<onfocus condition="String.Contains(Container($PARAM[id]).ListItem.filename,dvd) | String.IsEqual(Container($PARAM[id]).ListItem.FileExtension,iso) | String.IsEqual(Container($PARAM[id]).ListItem.FileExtension,ifo)">SetProperty(Widget.FlagsSource,$VAR[ColorFlagsSource]source/dvd.png,Home)</onfocus>
 		<onfocus condition="!String.IsEmpty(Container($PARAM[id]).ListItem.Property(Label3)) + !String.IsEmpty(Container($PARAM[id]).ListItem.Property(WeatherMultiFanart))">SetProperty(Widget.FlagsSource,$INFO[Window(weather).Property(WeatherProviderLogo)],Home)</onfocus>
 		<!-- Resolution -->
 		<onfocus>SetProperty(Widget.FlagsResolution,$VAR[ColorFlagsResolution]resolution/$INFO[Container($PARAM[id]).ListItem.VideoResolution,,.png],Home)</onfocus>

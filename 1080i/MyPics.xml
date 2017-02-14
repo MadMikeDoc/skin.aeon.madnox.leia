@@ -19,7 +19,7 @@
 		<control type="multiimage">
 			<imagepath background="true">$INFO[ListItem.FolderPath]</imagepath>
 			<include>CommonFanartVarsSingle</include>
-			<visible>Listitem.Isfolder + !String.IsEmpty(Container.FolderPath) + !ListItem.IsParentFolder + !substring(Container.FolderPath,plugin://)</visible>
+			<visible>Listitem.Isfolder + !String.IsEmpty(Container.FolderPath) + !ListItem.IsParentFolder + !String.Contains(Container.FolderPath,plugin://)</visible>
 		</control>
 		<include>VideoBackground</include>
 		<include>Furniture_Glow</include>
@@ -31,7 +31,7 @@
 		<control type="group">
 			<animation effect="slide" end="0,650" time="560" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
 			<control type="group">
-				<visible>!Substring(Container.FolderPath,\comics\)</visible>
+				<visible>!String.Contains(Container.FolderPath,\comics\)</visible>
 				<!-- view id = 50 -->
 				<include>ShowcaseQuadrate</include>
 				<!-- view id = 51 -->
@@ -41,7 +41,7 @@
 			<include>Viewtype_Wall</include>
 			<include>AddonWall</include>
 			<control type="group">
-				<visible>Substring(Container.FolderPath,\comics\)</visible>
+				<visible>String.Contains(Container.FolderPath,\comics\)</visible>
 				<!-- view id = 500 -->
 				<include>Showcase</include>
 			</control>

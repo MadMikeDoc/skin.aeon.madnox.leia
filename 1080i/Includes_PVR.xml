@@ -626,7 +626,7 @@
                     <align>left</align>
                     <textcolor>grey2</textcolor>
                     <label>A</label>
-                    <visible>!substring(PVR.ActStreamDevice,#0)</visible>
+                    <visible>!String.Contains(PVR.ActStreamDevice,#0)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>295</left>
@@ -636,7 +636,7 @@
                     <align>left</align>
                     <textcolor>green</textcolor>
                     <label>A</label>
-                    <visible>substring(PVR.ActStreamDevice,#0)</visible>
+                    <visible>String.Contains(PVR.ActStreamDevice,#0)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>320</left>
@@ -646,7 +646,7 @@
                     <align>left</align>
                     <textcolor>grey2</textcolor>
                     <label>B</label>
-                    <visible>!substring(PVR.ActStreamDevice,#1)</visible>
+                    <visible>!String.Contains(PVR.ActStreamDevice,#1)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>320</left>
@@ -656,7 +656,7 @@
                     <align>left</align>
                     <textcolor>green</textcolor>
                     <label>B</label>
-                    <visible>substring(PVR.ActStreamDevice,#1)</visible>
+                    <visible>String.Contains(PVR.ActStreamDevice,#1)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>345</left>
@@ -666,7 +666,7 @@
                     <align>left</align>
                     <textcolor>grey2</textcolor>
                     <label>C</label>
-                    <visible>!substring(PVR.ActStreamDevice,#2)</visible>
+                    <visible>!String.Contains(PVR.ActStreamDevice,#2)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>345</left>
@@ -676,7 +676,7 @@
                     <align>left</align>
                     <textcolor>green</textcolor>
                     <label>C</label>
-                    <visible>substring(PVR.ActStreamDevice,#2)</visible>
+                    <visible>String.Contains(PVR.ActStreamDevice,#2)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>370</left>
@@ -686,7 +686,7 @@
                     <align>left</align>
                     <textcolor>grey2</textcolor>
                     <label>D</label>
-                    <visible>!substring(PVR.ActStreamDevice,#3)</visible>
+                    <visible>!String.Contains(PVR.ActStreamDevice,#3)</visible>
                 </control>
                 <control type="label" id="1">
                     <left>370</left>
@@ -696,11 +696,11 @@
                     <align>left</align>
                     <textcolor>green</textcolor>
                     <label>D</label>
-                    <visible>substring(PVR.ActStreamDevice,#3)</visible>
+                    <visible>String.Contains(PVR.ActStreamDevice,#3)</visible>
                 </control>
             </control>
 			<control type="group" id="1">
-				<visible>!substring(PVR.ActStreamStatus,TIMESHIFT) + !Skin.HasSetting(infobar_hidesignalinfo)</visible>
+				<visible>!String.Contains(PVR.ActStreamStatus,TIMESHIFT) + !Skin.HasSetting(infobar_hidesignalinfo)</visible>
 				<control type="label" id="1">
 					<left>1585</left>
 					<width>250</width>
@@ -721,7 +721,7 @@
 				</control>
 			</control>
 			<control type="group" id="1">
-				<visible>substring(PVR.ActStreamStatus,TIMESHIFT)</visible>
+				<visible>String.Contains(PVR.ActStreamStatus,TIMESHIFT)</visible>
 				<control type="label" id="1">
 					<left>1500</left>
 					<width>500</width>
@@ -795,7 +795,7 @@
 				<label>S</label>
 			</control>
 			<control type="label" id="1">
-				<visible>SubString(PVR.ActStreamEncryptionName,01) | SubString(PVR.ActStreamEncryptionName,9F)</visible>
+				<visible>String.Contains(PVR.ActStreamEncryptionName,01) | String.Contains(PVR.ActStreamEncryptionName,9F)</visible>
 				<width>50</width>
 				<height>38</height>
 				<font>Font_Bold24</font>
@@ -813,7 +813,7 @@
 				<label>V</label>
 			</control>
 			<control type="label" id="1">
-				<visible>SubString(PVR.ActStreamEncryptionName,5)</visible>
+				<visible>String.Contains(PVR.ActStreamEncryptionName,5)</visible>
 				<left>30</left>
 				<width>50</width>
 				<height>38</height>
@@ -832,7 +832,7 @@
 				<label>I</label>
 			</control>
 			<control type="label" id="1">
-				<visible>SubString(PVR.ActStreamEncryptionName,06)</visible>
+				<visible>String.Contains(PVR.ActStreamEncryptionName,06)</visible>
 				<left>63</left>
 				<width>50</width>
 				<height>38</height>
@@ -851,7 +851,7 @@
 				<label>ND</label>
 			</control>
 			<control type="label" id="1">
-				<visible>SubString(PVR.ActStreamEncryptionName,09)</visible>
+				<visible>String.Contains(PVR.ActStreamEncryptionName,09)</visible>
 				<left>85</left>
 				<width>50</width>
 				<height>38</height>
@@ -870,7 +870,7 @@
 				<label>CO</label>
 			</control>
 			<control type="label" id="1">
-				<visible>SubString(PVR.ActStreamEncryptionName,0B)</visible>
+				<visible>String.Contains(PVR.ActStreamEncryptionName,0B)</visible>
 				<left>135</left>
 				<width>50</width>
 				<height>38</height>
@@ -889,7 +889,7 @@
 				<label>CW</label>
 			</control>
 			<control type="label" id="1">
-				<visible>SubString(PVR.ActStreamEncryptionName,0D)</visible>
+				<visible>String.Contains(PVR.ActStreamEncryptionName,0D)</visible>
 				<left>180</left>
 				<width>50</width>
 				<height>38</height>
@@ -908,7 +908,7 @@
 				<label>B</label>
 			</control>
 			<control type="label" id="1">
-				<visible>SubString(PVR.ActStreamEncryptionName,17)</visible>
+				<visible>String.Contains(PVR.ActStreamEncryptionName,17)</visible>
 				<left>230</left>
 				<width>70</width>
 				<height>38</height>
@@ -927,7 +927,7 @@
 				<label>N</label>
 			</control>
 			<control type="label" id="1">
-				<visible>SubString(PVR.ActStreamEncryptionName,18)</visible>
+				<visible>String.Contains(PVR.ActStreamEncryptionName,18)</visible>
 				<left>258</left>
 				<width>50</width>
 				<height>38</height>
@@ -1559,7 +1559,7 @@
 					<height>300</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture>$INFO[Container(11).ListItem.PlotOutline]</texture>
-					<visible>SubString(Container(11).ListItem.PlotOutline,"http://",Left) | SubString(Container(11).ListItem.PlotOutline,"https://",Left)</visible>
+					<visible>String.Contains(Container(11).ListItem.PlotOutline,"http://",Left) | String.Contains(Container(11).ListItem.PlotOutline,"https://",Left)</visible>
 				</control>
 			</control>
 

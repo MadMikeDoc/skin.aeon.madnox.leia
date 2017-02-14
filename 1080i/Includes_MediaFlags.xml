@@ -234,7 +234,7 @@
 		<control type="group">
 			<include>Animation_FlagSlideDown</include>
 			<visible>Control.IsVisible(550) | Control.IsVisible(508) | Control.IsVisible(499) | [Control.IsVisible(503) + !Skin.HasSetting(landscapeonelogo)] | [Control.IsVisible(503) + [Container.Content(movies) | Containter.Content(sets)] + Skin.HasSetting(landscapeonelogo) + Skin.HasSetting(LandscapeShowMediaFlags)] | [Control.IsVisible(503) + Container.Content(tvshows) + Skin.HasSetting(landscapeonelogo) + Skin.HasSetting(LandscapeShowTVMediaFlags)] | Control.IsVisible(501) | Control.IsVisible(500) | Control.IsVisible(512) | Control.IsVisible(516)</visible>
-			<visible>![SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,plugin.video)]</visible>
+			<visible>![String.Contains(Container.FolderPath,addons://) | String.Contains(Container.FolderPath,plugin.video)]</visible>
 			<top>1000</top>
 			<control type="group">
 				<visible>!ListItem.IsFolder</visible>
@@ -574,7 +574,7 @@
 		<control type="group">
 			<include>Animation_FlagSlideDown</include>
 			<visible>Control.IsVisible(511) | Control.IsVisible(50) | Control.IsVisible(514)</visible>
-			<visible>Control.IsVisible(9900) + ![SubString(Container.FolderPath,addons://) | SubString(Container.FolderPath,plugin.video)]</visible>
+			<visible>Control.IsVisible(9900) + ![String.Contains(Container.FolderPath,addons://) | String.Contains(Container.FolderPath,plugin.video)]</visible>
 			<animation effect="slide" end="-1220" condition="Control.IsVisible(514)">Conditional</animation>
 			<animation effect="slide" end="0,-30" time="240" tween="cubic" easing="inout" condition="Control.IsVisible(50)">Conditional</animation>
 			<animation effect="slide" end="-50,0" time="240" tween="cubic" easing="inout" condition="Control.IsVisible(50) + [!Skin.HasSetting(slimlist) | Container.Content(episodes)]">Conditional</animation>
@@ -1279,7 +1279,7 @@
 					<colordiffuse>floor</colordiffuse>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<visible>!Control.IsVisible(57)</visible>
-					<visible>Container.Content(tvshows) | SubString(Container.FolderPath,plugin.video.the.trailers)</visible>
+					<visible>Container.Content(tvshows) | String.Contains(Container.FolderPath,plugin.video.the.trailers)</visible>
 				</control>
 				<control type="image">
 					<top>-10</top>
@@ -1291,7 +1291,7 @@
 					<colordiffuse>floor</colordiffuse>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<visible>!Control.IsVisible(57)</visible>
-					<visible>Container.Content(tvshows) | SubString(Container.FolderPath,plugin.video.the.trailers)</visible>
+					<visible>Container.Content(tvshows) | String.Contains(Container.FolderPath,plugin.video.the.trailers)</visible>
 					<visible>String.IsEmpty(ListItem.Studio)</visible>
 				</control>
 			</control>

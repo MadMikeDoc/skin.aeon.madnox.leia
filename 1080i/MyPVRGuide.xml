@@ -270,7 +270,7 @@
 						<aspectratio align="center" aligny="top">keep</aspectratio>
 						<fadetime>400</fadetime>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>SubString(ListItem.PlotOutline,"http://",Left) | SubString(ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.Contains(ListItem.PlotOutline,"http://",Left) | String.Contains(ListItem.PlotOutline,"https://",Left)</visible>
 					</control>
 					<control type="image">
 						<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
@@ -439,7 +439,7 @@
 							<top>22</top>
 							<width>180</width>
 							<height>12</height>
-							<visible>SubString(Window(mypvr).Property(EpgNow),true)</visible>
+							<visible>String.Contains(Window(mypvr).Property(EpgNow),true)</visible>
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="label">
@@ -525,7 +525,7 @@
 							<top>22</top>
 							<width>180</width>
 							<height>12</height>
-							<visible>SubString(Window(mypvr).Property(EpgNow),true)</visible>
+							<visible>String.Contains(Window(mypvr).Property(EpgNow),true)</visible>
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="label">
@@ -622,7 +622,7 @@
 						<height>200</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>SubString(ListItem.PlotOutline,"http://",Left) | SubString(ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.Contains(ListItem.PlotOutline,"http://",Left) | String.Contains(ListItem.PlotOutline,"https://",Left)</visible>
 					</control>
 				</control>
 			</control>
@@ -728,7 +728,7 @@
 							<top>22</top>
 							<width>180</width>
 							<height>12</height>
-							<visible>SubString(Window(mypvr).Property(EpgNow),true)</visible>
+							<visible>String.Contains(Window(mypvr).Property(EpgNow),true)</visible>
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="label">
@@ -814,7 +814,7 @@
 							<top>22</top>
 							<width>180</width>
 							<height>12</height>
-							<visible>SubString(Window(mypvr).Property(EpgNow),true)</visible>
+							<visible>String.Contains(Window(mypvr).Property(EpgNow),true)</visible>
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="label">
@@ -892,7 +892,7 @@
 						<height>200</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>SubString(ListItem.PlotOutline,"http://",Left) | SubString(ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.Contains(ListItem.PlotOutline,"http://",Left) | String.Contains(ListItem.PlotOutline,"https://",Left)</visible>
 					</control>
 				</control>
 			</control>

@@ -124,7 +124,7 @@
 	</include>
 
 	<include name="WallContent">
-		<itemlayout height="268" width="275" condition="[!Container.Content(studios) + !Container.Content(directors) + !Container.Content(actors) + !Container.Content(years)] + ![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + [Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)] + !Container.Content(episodes)">
+		<itemlayout height="268" width="275" condition="[!Container.Content(studios) + !Container.Content(directors) + !Container.Content(actors) + !Container.Content(years)] + ![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + String.Contains(Container.FolderPath,\comics\)]] + [Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)] + !Container.Content(episodes)">
 			<control type="group">
 				<posx>20</posx>
 				<posy>23</posy>
@@ -209,7 +209,7 @@
 			</control>
 		</itemlayout>
 
-		<focusedlayout height="268" width="275" condition="[!Container.Content(studios) + !Container.Content(directors) + !Container.Content(actors) + !Container.Content(years)] + ![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + [Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)] + !Container.Content(episodes)">
+		<focusedlayout height="268" width="275" condition="[!Container.Content(studios) + !Container.Content(directors) + !Container.Content(actors) + !Container.Content(years)] + ![Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + String.Contains(Container.FolderPath,\comics\)]] + [Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)] + !Container.Content(episodes)">
 			<control type="group">
 				<posx>20</posx>
 				<posy>23</posy>
@@ -666,7 +666,7 @@
 		</focusedlayout>
 
 		<!-- POSTER -->
-		<itemlayout width="275" height="400" condition="[[Container.Content(movies) + !Skin.HasSetting(MovieWallBanner)] | [Container.Content(tvshows) + !Skin.HasSetting(TVWallBanner)] | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]]">
+		<itemlayout width="275" height="400" condition="[[Container.Content(movies) + !Skin.HasSetting(MovieWallBanner)] | [Container.Content(tvshows) + !Skin.HasSetting(TVWallBanner)] | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + String.Contains(Container.FolderPath,\comics\)]]">
 			<control type="image">
 				<posx>10</posx>
 				<posy>7</posy>
@@ -734,7 +734,7 @@
 				<include>UnwatchedIcon</include>
 			</control>
 		</itemlayout>
-		<focusedlayout width="275" height="400" condition="[[Container.Content(movies) + !Skin.HasSetting(MovieWallBanner)] | [Container.Content(tvshows) + !Skin.HasSetting(TVWallBanner)] | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]]">
+		<focusedlayout width="275" height="400" condition="[[Container.Content(movies) + !Skin.HasSetting(MovieWallBanner)] | [Container.Content(tvshows) + !Skin.HasSetting(TVWallBanner)] | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + String.Contains(Container.FolderPath,\comics\)]]">
 			<control type="group">
 				<animation type="Focus" reversible="false">
 					<effect type="zoom" center="auto" start="100" end="108" time="600" tween="cubic" />
@@ -966,10 +966,10 @@
 			</control>
 		</focusedlayout>
 
-		<itemlayout width="208" height="201" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + ![Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)]">
+		<itemlayout width="208" height="201" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + String.Contains(Container.FolderPath,\comics\)]] + ![Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)]">
 			<include>WallIcons</include>
 		</itemlayout>
-		<focusedlayout width="208" height="201" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + Substring(Container.FolderPath,\comics\)]] + ![Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)]">
+		<focusedlayout width="208" height="201" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos) | [Window.IsActive(videos) + Container.Content(genres)] | [Window.IsActive(pictures) + String.Contains(Container.FolderPath,\comics\)]] + ![Skin.HasSetting(titlewall) | String.IsEqual(Container.FolderName,youtube)]">
 			<control type="group">
 				<animation type="Focus" reversible="false">
 					<effect type="zoom" center="auto" start="100" end="160" time="320" tween="cubic" />

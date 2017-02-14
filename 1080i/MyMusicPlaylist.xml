@@ -19,7 +19,7 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-			<visible>Substring(Container.FolderPath,musicdb://,left)</visible>
+			<visible>String.Contains(Container.FolderPath,musicdb://,left)</visible>
 			<visible>[Skin.HasSetting(musicextrafanart) + !String.IsEmpty(Skin.String(ArtistsLogosPath))] | Container.Content(genres)</visible>
 		</control>
 		<include>CommonMediaPlayingBackground</include>
@@ -57,7 +57,7 @@
 			</control>
 			<control type="button" id="7000">
 				<include>HiddenObject</include>
-				<onfocus condition="Substring(Control.GetLabel(4421),infopanelon) | Container.Content(songs) | Window.IsActive(music)">SetFocus(9000)</onfocus>
+				<onfocus condition="String.Contains(Control.GetLabel(4421),infopanelon) | Container.Content(songs) | Window.IsActive(music)">SetFocus(9000)</onfocus>
 				<onup>9000</onup>
 				<onleft condition="Control.IsVisible(509)">Control.Move(509,-1)</onleft>
 				<onright condition="Control.IsVisible(509)">Control.Move(509,1)</onright>

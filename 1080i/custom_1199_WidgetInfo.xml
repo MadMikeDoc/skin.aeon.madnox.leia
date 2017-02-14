@@ -98,7 +98,7 @@
 				<width>446</width>
 				<height>649</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>[String.IsEmpty(Window(Home).Property(Widget.Case)) | SubString(Window(Home).Property(Widget.Case),-)] + !ControlGroup(816).HasFocus</visible>
+				<visible>[String.IsEmpty(Window(Home).Property(Widget.Case)) | String.Contains(Window(Home).Property(Widget.Case),-)] + !ControlGroup(816).HasFocus</visible>
 			</control>
 			<control type="image">
 				<left>112</left>
@@ -106,7 +106,7 @@
 				<width>422</width>
 				<height>623</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>Substring(Window(Home).Property(Widget.Case),glass) + !ControlGroup(816).HasFocus</visible>
+				<visible>String.Contains(Window(Home).Property(Widget.Case),glass) + !ControlGroup(816).HasFocus</visible>
 			</control>
 			<control type="image">
 				<left>111</left>
@@ -114,7 +114,7 @@
 				<width>424</width>
 				<height>585</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>Substring(Window(Home).Property(Widget.Case),/case) + !ControlGroup(816).HasFocus</visible>
+				<visible>String.Contains(Window(Home).Property(Widget.Case),/case) + !ControlGroup(816).HasFocus</visible>
 			</control>
 			<control type="image">
 				<left>102</left>
@@ -122,7 +122,7 @@
 				<width>429</width>
 				<height>577</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>Substring(Window(Home).Property(Widget.Case),bdcase) + !ControlGroup(816).HasFocus</visible>
+				<visible>String.Contains(Window(Home).Property(Widget.Case),bdcase) + !ControlGroup(816).HasFocus</visible>
 			</control>
 			<control type="image">
 				<left>114</left>
@@ -130,7 +130,7 @@
 				<width>418</width>
 				<height>623</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>Substring(Window(Home).Property(Widget.Case),clearcase) + !ControlGroup(816).HasFocus</visible>
+				<visible>String.Contains(Window(Home).Property(Widget.Case),clearcase) + !ControlGroup(816).HasFocus</visible>
 			</control>
 			<control type="image">
 				<left>100</left>
@@ -659,7 +659,7 @@
 			</control>
 			<!-- Info Plot-->
 			<control type="group">
-				<visible>!IntegerGreaterThan(Container(1000).NumItems,0) | !Skin.HasSetting(CastonWidget)</visible>
+				<visible>!Integer.IsGreater(Container(1000).NumItems,0) | !Skin.HasSetting(CastonWidget)</visible>
 				<control type="textbox">
 					<top>469</top>
 					<left>555</left>
@@ -687,7 +687,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>IntegerGreaterThan(Container(1000).NumItems,0) + Skin.HasSetting(CastonWidget)</visible>
+				<visible>Integer.IsGreater(Container(1000).NumItems,0) + Skin.HasSetting(CastonWidget)</visible>
 				<control type="textbox">
 					<top>469</top>
 					<left>555</left>
@@ -741,7 +741,7 @@
 					<onclick>Dialog.Close(1115)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>[!String.IsEmpty(Window(Home).Property(Widget.FilePath)) + !String.IsEqual(Window(Home).Property(Widget),trakt) + !String.IsEqual(Window(Home).Property(Widget),rt) + !String.IsEqual(Window(Home).Property(Widget),tmdb)] | SubString(Window(Home).Property(Widget.FilePath),playmovie)</visible>
+					<visible>[!String.IsEmpty(Window(Home).Property(Widget.FilePath)) + !String.IsEqual(Window(Home).Property(Widget),trakt) + !String.IsEqual(Window(Home).Property(Widget),rt) + !String.IsEqual(Window(Home).Property(Widget),tmdb)] | String.Contains(Window(Home).Property(Widget.FilePath),playmovie)</visible>
 				</control>
 				<control type="button" id="8054">
 					<description>Play Button</description>
@@ -760,7 +760,7 @@
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(Widget.FolderPath)],noresume)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>!SubString(Window(Home).Property(Widget.FilePath),playtrailer) + !SubString(Window(Home).Property(Widget.FilePath),playmovie) + [String.IsEqual(Window(Home).Property(Widget),trakt) | String.IsEqual(Window(Home).Property(Widget),rt) | String.IsEqual(Window(Home).Property(Widget),tmdb) | SubString(Window(Home).Property(Widget.FilePath),extendedtvinfo)]</visible>
+					<visible>!String.Contains(Window(Home).Property(Widget.FilePath),playtrailer) + !String.Contains(Window(Home).Property(Widget.FilePath),playmovie) + [String.IsEqual(Window(Home).Property(Widget),trakt) | String.IsEqual(Window(Home).Property(Widget),rt) | String.IsEqual(Window(Home).Property(Widget),tmdb) | String.Contains(Window(Home).Property(Widget.FilePath),extendedtvinfo)]</visible>
 				</control>
 				<control type="button" id="8068">
 					<description>Open Video Library Button</description>
@@ -784,7 +784,7 @@
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(Widget.FilePath)],resume)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>IntegerGreaterThan(Window(Home).Property(Widget.Resume),1) + [String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)]</visible>
+					<visible>Integer.IsGreater(Window(Home).Property(Widget.Resume),1) + [String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)]</visible>
 				</control>
 				<control type="image" id="8058">
 					<width>2</width>
@@ -799,7 +799,7 @@
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(Widget.Trailer)])</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>[!String.IsEmpty(Window(Home).Property(Widget.Trailer)) + !String.IsEqual(Window(Home).Property(Widget),trakt) + !String.IsEqual(Window(Home).Property(Widget),rt) + !String.IsEqual(Window(Home).Property(Widget),tmdb)] | [!String.IsEmpty(Window(Home).Property(Widget.Trailer)) + IntegerGreaterThan(Window(Home).Property(Widget.EIDBID),0)]</visible>
+					<visible>[!String.IsEmpty(Window(Home).Property(Widget.Trailer)) + !String.IsEqual(Window(Home).Property(Widget),trakt) + !String.IsEqual(Window(Home).Property(Widget),rt) + !String.IsEqual(Window(Home).Property(Widget),tmdb)] | [!String.IsEmpty(Window(Home).Property(Widget.Trailer)) + Integer.IsGreater(Window(Home).Property(Widget.EIDBID),0)]</visible>
 				</control>
 				<control type="button" id="8060">
 					<description>Extended Info Trailer Button</description>
@@ -808,7 +808,7 @@
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(Widget.FolderPath)],noresume)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>SubString(Window(Home).Property(Widget.FilePath),playtrailer) + [String.IsEqual(Window(Home).Property(Widget),trakt) | String.IsEqual(Window(Home).Property(Widget),rt) | String.IsEqual(Window(Home).Property(Widget),tmdb) | SubString(Window(Home).Property(Widget.FilePath),extendedtvinfo)]</visible>
+					<visible>String.Contains(Window(Home).Property(Widget.FilePath),playtrailer) + [String.IsEqual(Window(Home).Property(Widget),trakt) | String.IsEqual(Window(Home).Property(Widget),rt) | String.IsEqual(Window(Home).Property(Widget),tmdb) | String.Contains(Window(Home).Property(Widget.FilePath),extendedtvinfo)]</visible>
 				</control>
 				<control type="image" id="8061">
 					<width>2</width>
@@ -883,7 +883,7 @@
 				<width>649</width>
 				<height>649</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>String.IsEmpty(Window(Home).Property(Widget.Case)) | SubString(Window(Home).Property(Widget.Case),-)</visible>
+				<visible>String.IsEmpty(Window(Home).Property(Widget.Case)) | String.Contains(Window(Home).Property(Widget.Case),-)</visible>
 			</control>
 			<control type="image">
 				<left>114</left>
@@ -891,7 +891,7 @@
 				<width>621</width>
 				<height>623</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>Substring(Window(Home).Property(Widget.Case),glass)</visible>
+				<visible>String.Contains(Window(Home).Property(Widget.Case),glass)</visible>
 			</control>
 			<control type="image">
 				<left>158</left>
@@ -899,7 +899,7 @@
 				<width>583</width>
 				<height>629</height>
 				<texture>$INFO[Window(Home).Property(Widget.Cover)]</texture>
-				<visible>Substring(Window(Home).Property(Widget.Case),case)</visible>
+				<visible>String.Contains(Window(Home).Property(Widget.Case),case)</visible>
 			</control>
 			<control type="image">
 				<left>100</left>
@@ -1203,7 +1203,7 @@
 					<onclick>Dialog.Close(1199)</onclick>
 					<onclick>ActivateWindow(Music,$ESCINFO[Window(Home).Property(Widget.FolderPath)])</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>[String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)] + String.IsEqual(Window(Home).Property(Widget.Target),music) + !SubString(Window(Home).Property(Widget.FolderPath),skin.helper) + !SubString(Window(Home).Property(Widget.FolderPath),library.data)</visible>
+					<visible>[String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)] + String.IsEqual(Window(Home).Property(Widget.Target),music) + !String.Contains(Window(Home).Property(Widget.FolderPath),skin.helper) + !String.Contains(Window(Home).Property(Widget.FolderPath),library.data)</visible>
 				</control>
 				<control type="button" id="8082">
 					<description>Open Video Library Button</description>
@@ -1236,7 +1236,7 @@
 					<onclick>PlayMedia($ESCINFO[Window(Home).Property(Widget.FilePath)],resume)</onclick>
 					<onclick>Dialog.Close(1199)</onclick>
 					<oninfo>Dialog.Close(1199)</oninfo>
-					<visible>IntegerGreaterThan(Window(Home).Property(Widget.Resume),1) + [String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)]</visible>
+					<visible>Integer.IsGreater(Window(Home).Property(Widget.Resume),1) + [String.IsEqual(Window(Home).Property(Widget),library) | String.IsEqual(Window(Home).Property(Widget),playlist)]</visible>
 				</control>
 				<control type="image" id="8077">
 					<width>2</width>

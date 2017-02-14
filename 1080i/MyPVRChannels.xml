@@ -270,7 +270,7 @@
 						<height>398</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture>$INFO[Container(50).ListItem.PlotOutline]</texture>
-						<visible>!Player.HasVideo + SubString(Container(50).ListItem.PlotOutline,"http://",Left) | SubString(Container(50).ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>!Player.HasVideo + String.Contains(Container(50).ListItem.PlotOutline,"http://",Left) | String.Contains(Container(50).ListItem.PlotOutline,"https://",Left)</visible>
 					</control>
 					<control type="videowindow">
 						<left>20</left>
@@ -666,7 +666,7 @@
 						<height>320</height>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
 						<texture>$INFO[Container(51).ListItem.PlotOutline]</texture>
-						<visible>SubString(Container(51).ListItem.PlotOutline,"http://",Left) | SubString(Container(51).ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.Contains(Container(51).ListItem.PlotOutline,"http://",Left) | String.Contains(Container(51).ListItem.PlotOutline,"https://",Left)</visible>
 					</control>
 				</control>
 				<control type="list" id="51">
@@ -1107,7 +1107,7 @@
 						<aspectratio>keep</aspectratio>
 						<fadetime>400</fadetime>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>SubString(ListItem.PlotOutline,"http://",Left) | SubString(ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.Contains(ListItem.PlotOutline,"http://",Left) | String.Contains(ListItem.PlotOutline,"https://",Left)</visible>
 					</control>
 					<control type="image">
 						<left>2</left>

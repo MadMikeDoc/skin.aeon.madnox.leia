@@ -3338,7 +3338,7 @@
 			<pagecontrol>61</pagecontrol>
 			<focusposition>1</focusposition>
 			<visible>!String.IsEmpty(Container.FolderPath) + !Container.Content(years)</visible>
-			<visible>!Container.Content(countries) + !Container.Content(addons) + [!Container.Content(episodes) | SubString(Container.FolderPath,videodb://recentlyaddedepisodes/)]</visible>
+			<visible>!Container.Content(countries) + !Container.Content(addons) + [!Container.Content(episodes) | String.Contains(Container.FolderPath,videodb://recentlyaddedepisodes/)]</visible>
 			<visible>![!String.IsEmpty(Skin.String(DisablePostersVL)) + Window.IsActive(videos)]</visible>
 			<itemlayout width="210" height="750"></itemlayout>
 			<focusedlayout width="210" height="750"></focusedlayout>

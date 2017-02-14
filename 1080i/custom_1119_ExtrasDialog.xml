@@ -57,7 +57,7 @@
 				<onclick>Dialog.Close(1119)</onclick>
 				<onclick>Dialog.Close(MovieInformation)</onclick>
 				<onclick>ActivateWindow(videos,plugin://plugin.video.youtube/kodion/search/query/?q=$INFO[ListItem.OriginalTitle]+Trailer)</onclick>
-				<visible>Container.Content(movies) + ![substring(Container.FolderPath,plugin://) + substring(Container.FolderPath,trailer)]</visible>
+				<visible>Container.Content(movies) + ![String.Contains(Container.FolderPath,plugin://) + String.Contains(Container.FolderPath,trailer)]</visible>
 			</control>
 			<control type="button" id="113">
 				<description>Refresh button</description>
@@ -65,7 +65,7 @@
 				<onclick>Dialog.Close(1119)</onclick>
 				<onclick>SendClick(2003,6)</onclick>
 				<label>$LOCALIZE[184]</label>
-				<visible>!substring(Container.FolderPath,plugin://)</visible>
+				<visible>!String.Contains(Container.FolderPath,plugin://)</visible>
 			</control>
 			<control type="button" id="114">
 				<description>Artwork downloader button auto</description>

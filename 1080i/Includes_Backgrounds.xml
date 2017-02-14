@@ -446,15 +446,15 @@
 	</include>
 
 	<variable name="MusicVisBackgroundVar">
-		<value condition="SubString(Control.GetLabel(4322),playlist,right)">$INFO[Skin.String(MusicViz.Playlist)]</value>
-		<value condition="SubString(Control.GetLabel(4322),recentmovies,right)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</value>
-		<value condition="SubString(Control.GetLabel(4322),randommovies,right)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
-		<value condition="SubString(Control.GetLabel(4322),watchlistmovies,right)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</value>
-		<value condition="SubString(Control.GetLabel(4322),recenttv,right)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</value>
-		<value condition="SubString(Control.GetLabel(4322),randomtv,right)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
-		<value condition="SubString(Control.GetLabel(4322),watchlisttv,right)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
-		<value condition="SubString(Control.GetLabel(4322),watchlistalbums,right)">plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]</value>
-		<value condition="SubString(Control.GetLabel(4322),recentalbums,right)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
-		<value condition="SubString(Control.GetLabel(4322),randomalbums,right)">plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]</value>
+		<value condition="String.Contains(Control.GetLabel(4322),playlist,right)">$INFO[Skin.String(MusicViz.Playlist)]</value>
+		<value condition="String.Contains(Control.GetLabel(4322),recentmovies,right)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</value>
+		<value condition="String.Contains(Control.GetLabel(4322),randommovies,right)">plugin://service.library.data.provider?type=randommovies&amp;reload=$INFO[Window.Property(randommovies)]</value>
+		<value condition="String.Contains(Control.GetLabel(4322),watchlistmovies,right)">plugin://service.library.data.provider?type=recommendedmovies&amp;reload=$INFO[Window.Property(recommendedmovies)]</value>
+		<value condition="String.Contains(Control.GetLabel(4322),recenttv,right)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</value>
+		<value condition="String.Contains(Control.GetLabel(4322),randomtv,right)">plugin://service.library.data.provider?type=randomepisodes&amp;reload=$INFO[Window.Property(randomepisodes)]</value>
+		<value condition="String.Contains(Control.GetLabel(4322),watchlisttv,right)">plugin://service.library.data.provider?type=recommendedepisodes&amp;reload=$INFO[Window.Property(recommendedepisodes)]</value>
+		<value condition="String.Contains(Control.GetLabel(4322),watchlistalbums,right)">plugin://service.library.data.provider?type=recommendedalbums&amp;reload=$INFO[Window.Property(recommendedalbums)]</value>
+		<value condition="String.Contains(Control.GetLabel(4322),recentalbums,right)">plugin://service.library.data.provider?type=recentalbums&amp;reload=$INFO[Window.Property(recentalbums)]</value>
+		<value condition="String.Contains(Control.GetLabel(4322),randomalbums,right)">plugin://service.library.data.provider?type=randomalbums&amp;reload=$INFO[Window.Property(randomalbums)]</value>
 	</variable>
 </includes>

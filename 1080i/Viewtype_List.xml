@@ -228,7 +228,7 @@
 				<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 				<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 				<bordersize>7</bordersize>
-				<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+				<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [String.Contains(ListItem.Filename,.3D.) | String.Contains(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 				<bordersize>7</bordersize>
 			</control>
 			<control type="textbox">
@@ -564,7 +564,7 @@
 					<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 					<bordersize>7</bordersize>
-					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [String.Contains(ListItem.Filename,.3D.) | String.Contains(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 					<bordersize>7</bordersize>
 				</control>
 				<control type="textbox">
@@ -1149,7 +1149,7 @@
 					<animation effect="slide" end="0,0" start="210,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
 					<animation effect="rotate" end="-360" center="auto" time="6400" delay="1600" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation>
 					<bordersize>7</bordersize>
-					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
+					<visible>Skin.HasSetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + !String.IsEmpty(Container.ListItem.Art(poster)) + Container.Content(movies) + !ListItem.IsCollection + !Control.HasFocus(5001) + Skin.HasSetting(Fakedischandwriting) + [String.Contains(ListItem.Filename,.3D.) | String.Contains(ListItem.Filename,.3d.)] + Skin.Hassetting(fakehanddisccolor)</visible>
 					<bordersize>7</bordersize>
 				</control>
 				<control type="textbox">
@@ -1342,7 +1342,7 @@
 				<top>165</top>
 				<include>Animation_ListSlideRight</include>
 				<visible>![Control.IsVisible(40002) | Control.IsVisible(40003)] + !Container.Content(years) + !Container.Content(directors) + !Container.Content(episodes)</visible>
-				<visible>Skin.HasSetting(roundedcovers) + !SubString(ListItem.Path,comics) + !Container.Content(files)</visible>
+				<visible>Skin.HasSetting(roundedcovers) + !String.Contains(ListItem.Path,comics) + !Container.Content(files)</visible>
 				<control type="image">
 					<left>-36</left>
 					<top>225</top>
@@ -1398,7 +1398,7 @@
 				<top>165</top>
 				<include>Animation_ListSlideRight</include>
 				<visible>![Control.IsVisible(40002) | Control.IsVisible(40003)] + !Container.Content(years) + !Container.Content(directors) + !Container.Content(episodes)</visible>
-				<visible>Skin.HasSetting(roundedcovers) + [SubString(ListItem.Path,comics) | Container.Content(files)]</visible>
+				<visible>Skin.HasSetting(roundedcovers) + [String.Contains(ListItem.Path,comics) | Container.Content(files)]</visible>
 				<control type="image">
 					<left>-19</left>
 					<top>-40</top>
@@ -1481,14 +1481,14 @@
 				<top>165</top>
 				<include>Animation_ListSlideRight</include>
 				<visible>![Control.IsVisible(40002) | Control.IsVisible(40003)] + !Container.Content(years) + !Container.Content(directors) + !Container.Content(episodes)</visible>
-				<visible>!Skin.HasSetting(roundedcovers) + !SubString(ListItem.Path,comics) + !Container.Content(files)</visible>
+				<visible>!Skin.HasSetting(roundedcovers) + !String.Contains(ListItem.Path,comics) + !Container.Content(files)</visible>
 				<control type="image">
 					<top>255</top>
 					<width>510</width>
 					<height>510</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">common/bgcolor.png</texture>
-					<visible>!SubString(ListItem.Path,videodevil)</visible>
+					<visible>!String.Contains(ListItem.Path,videodevil)</visible>
 					<fadetime>0</fadetime>
 				</control>
 				<control type="image">
@@ -1498,7 +1498,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true" fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
 					<fadetime>IconCrossfadeTime2</fadetime>
-					<visible>!SubString(ListItem.Path,videodevil)</visible>
+					<visible>!String.Contains(ListItem.Path,videodevil)</visible>
 				</control>
 				
 				<control type="image">
@@ -1508,7 +1508,7 @@
 					<width>625</width>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">common/bgcolor.png</texture>
-					<visible>SubString(ListItem.Path,videodevil)</visible>
+					<visible>String.Contains(ListItem.Path,videodevil)</visible>
 					<fadetime>0</fadetime>
 				</control>
 				<control type="image">
@@ -1519,7 +1519,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true" fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
 					<fadetime>IconCrossfadeTime2</fadetime>
-					<visible>SubString(ListItem.Path,videodevil)</visible>
+					<visible>String.Contains(ListItem.Path,videodevil)</visible>
 				</control>
 				
 				<control type="image">
@@ -1530,7 +1530,7 @@
 					<texture diffuse="thumbs/cdcover_mask_reflect.png"  flipy="true" background="true" fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
 					<fadetime>IconCrossfadeTime2</fadetime>
 					<colordiffuse>d0FFFFFF</colordiffuse>
-					<visible>!SubString(ListItem.Path,videodevil)</visible>
+					<visible>!String.Contains(ListItem.Path,videodevil)</visible>
 				</control>
 			</control>
 
@@ -1539,7 +1539,7 @@
 				<top>165</top>
 				<include>Animation_ListSlideRight</include>
 				<visible>![Control.IsVisible(40002) | Control.IsVisible(40003)] + !Container.Content(years) + !Container.Content(directors) + !Container.Content(episodes)</visible>
-				<visible>!Skin.HasSetting(roundedcovers) + [SubString(ListItem.Path,comics) | Container.Content(files)]</visible>
+				<visible>!Skin.HasSetting(roundedcovers) + [String.Contains(ListItem.Path,comics) | Container.Content(files)]</visible>
 				<control type="image">
 					<left>-19</left>
 					<top>-40</top>

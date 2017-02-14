@@ -6,7 +6,7 @@
 		<top>0</top>
 		<system>1</system>
 	</coordinates>
-	<onunload condition="Substring(Skin.String(widgetlist),favourite) | Substring(Skin.String(widget2list),favourite)">AlarmClock(FavouriteUpdate,RunScript(script.favourites),00:01,silent)</onunload>
+	<onunload condition="String.Contains(Skin.String(widgetlist),favourite) | String.Contains(Skin.String(widget2list),favourite)">AlarmClock(FavouriteUpdate,RunScript(script.favourites),00:01,silent)</onunload>
 	<include>Animation_DialogPopup2</include>
 	<controls>
 		<include>DialogBackFade</include>

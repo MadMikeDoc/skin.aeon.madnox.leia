@@ -225,7 +225,7 @@
 					<!-- invalid multiple selected tags -->
 					<!--<selected>Skin.HasSetting(Fakediscart)</selected>-->
 					<visible>Container.Content(movies) | Container.Content(sets)</visible>
-					<visible>[Substring(Window(home).Property(actualViewtype),Showcase) | [String.IsEqual(Window(home).Property(actualViewtype),TriPanel) + !String.IsEqual(Skin.String(TriPanelPosition),3)]]</visible>
+					<visible>[String.Contains(Window(home).Property(actualViewtype),Showcase) | [String.IsEqual(Window(home).Property(actualViewtype),TriPanel) + !String.IsEqual(Skin.String(TriPanelPosition),3)]]</visible>
 				</control>
 				<control type="radiobutton" id="1201">
 					<label>31018</label>

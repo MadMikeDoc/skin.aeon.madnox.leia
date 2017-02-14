@@ -396,7 +396,7 @@
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(movielogosfloor)</onclick>
 					<selected>Skin.HasSetting(movielogosfloor)</selected>
-					<visible>[[String.IsEqual(Window(home).Property(actualViewtype),Shift) | Substring(Window(home).Property(actualViewtype),Wall) | [String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) + !Skin.HasSetting(NoFloorLabelMovies)] | String.IsEqual(Window(home).Property(actualViewtype),Banners)] + [Container.Content(movies) | Container.Content(sets)] + !String.IsEqual(Window(home).Property(actualViewtype),Wall_Large)]</visible>
+					<visible>[[String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.Contains(Window(home).Property(actualViewtype),Wall) | [String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) + !Skin.HasSetting(NoFloorLabelMovies)] | String.IsEqual(Window(home).Property(actualViewtype),Banners)] + [Container.Content(movies) | Container.Content(sets)] + !String.IsEqual(Window(home).Property(actualViewtype),Wall_Large)]</visible>
 				</control>
 				<control type="radiobutton" id="16440">
 					<label>$LOCALIZE[31631]</label>
@@ -826,7 +826,7 @@
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<label>31384</label>
 					<onclick>ActivateWindow(1174)</onclick>
-					<visible>SubString(Window(home).Property(actualViewtype),KodiFlixView)</visible>
+					<visible>String.Contains(Window(home).Property(actualViewtype),KodiFlixView)</visible>
 				</control>
 				<!--MAD - KodiFlix Options End -->
 				<!--MAD - Movie Sets View -->
@@ -1065,7 +1065,7 @@
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(showcasecdartmusic)</onclick>
 					<selected>Skin.HasSetting(showcasecdartmusic)</selected>
-					<visible>Substring(Window(home).Property(actualViewtype),Showcase) + [Container.Content(albums) | Container.Content(songs)]</visible>
+					<visible>String.Contains(Window(home).Property(actualViewtype),Showcase) + [Container.Content(albums) | Container.Content(songs)]</visible>
 				</control>
 				<control type="radiobutton" id="1787">
 					<label>$LOCALIZE[31812]</label>
@@ -1079,7 +1079,7 @@
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(Openshowcasemusic)</onclick>
 					<selected>Skin.HasSetting(Openshowcasemusic)</selected>
-					<visible>[Substring(Window(home).Property(actualViewtype),Showcase) + Container.Content(albums)] + !Skin.HasSetting(noflowalbum)</visible>
+					<visible>[String.Contains(Window(home).Property(actualViewtype),Showcase) + Container.Content(albums)] + !Skin.HasSetting(noflowalbum)</visible>
 					<enable>Skin.HasSetting(usecasescd)</enable>
 				</control>
 				<control type="radiobutton" id="1683">
@@ -1333,14 +1333,14 @@
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(titlewall)</onclick>
 					<selected>Skin.HasSetting(titlewall)</selected>
-					<visible>String.IsEqual(Window(home).Property(actualViewtype),Wall) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | String.IsEqual(Container.FolderName,youtube) | [Window.IsActive(pictures) + Substring(Container.FolderPath,/comics/)]]</visible>
+					<visible>String.IsEqual(Window(home).Property(actualViewtype),Wall) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | String.IsEqual(Container.FolderName,youtube) | [Window.IsActive(pictures) + String.Contains(Container.FolderPath,/comics/)]]</visible>
 				</control>
 				<control type="radiobutton" id="1853">
 					<label>$LOCALIZE[31050]</label>
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(iconlabel)</onclick>
 					<selected>Skin.HasSetting(iconlabel)</selected>
-					<visible>String.IsEqual(Window(home).Property(actualViewtype),Wall) + Skin.HasSetting(titlewall) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | String.IsEqual(Container.FolderName,youtube) | [Window.IsActive(pictures) + Substring(Container.FolderPath,/comics/)]]</visible>
+					<visible>String.IsEqual(Window(home).Property(actualViewtype),Wall) + Skin.HasSetting(titlewall) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | String.IsEqual(Container.FolderName,youtube) | [Window.IsActive(pictures) + String.Contains(Container.FolderPath,/comics/)]]</visible>
 				</control>
 				<control type="radiobutton" id="16530">
 					<label>31282</label>
@@ -1406,7 +1406,7 @@
 					<onclick>Skin.ToggleSetting(showcasewrap)</onclick>
 					<selected>!Skin.HasSetting(showcasewrap)</selected>
 					<include condition="!Window.IsActive(script-Rom_Collection_Browser-main.xml)">ReloadWindowOnClick</include>
-					<visible>Substring(Window(home).Property(actualViewtype),Showcase) | String.IsEqual(Window(home).Property(actualViewtype),Landscape)</visible>
+					<visible>String.Contains(Window(home).Property(actualViewtype),Showcase) | String.IsEqual(Window(home).Property(actualViewtype),Landscape)</visible>
 				</control>
 				<control type="button" id="1635">
 					<label>$LOCALIZE[31674]</label>
@@ -1434,7 +1434,7 @@
 					<onclick>Skin.ToggleSetting(DisplayCharacterArt)</onclick>
 					<onclick>Skin.Reset(tripanelextrafanart)</onclick>
 					<selected>Skin.HasSetting(DisplayCharacterArt)</selected>
-					<visible>Substring(Window(home).Property(actualViewtype),Tripanel + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+					<visible>String.Contains(Window(home).Property(actualViewtype),Tripanel + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<!--Posters Options-->
 				<control type="radiobutton" id="1648">
@@ -1556,7 +1556,7 @@
 | String.IsEqual(Window(home).Property(actualViewtype),InfoPanel) | String.IsEqual(Window(home).Property(actualViewtype),Episode)
 | String.IsEqual(Window(home).Property(actualViewtype),Banners) | String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies)
 | String.IsEqual(Window(home).Property(actualViewtype),posters) | String.IsEqual(Window(home).Property(actualViewtype),Landscape)
-| Substring(Window(home).Property(actualViewtype),Wall) | String.IsEqual(Window(home).Property(actualViewtype),BigFan)
+| String.Contains(Window(home).Property(actualViewtype),Wall) | String.IsEqual(Window(home).Property(actualViewtype),BigFan)
 | String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.IsEqual(Window(home).Property(actualViewtype),Video_RightList) | String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView)] + [Container.Content(movies) | Container.Content(tvshows)
 | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
@@ -1569,7 +1569,7 @@
 | String.IsEqual(Window(home).Property(actualViewtype),InfoPanel) | String.IsEqual(Window(home).Property(actualViewtype),Banners)
 | String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) | String.IsEqual(Window(home).Property(actualViewtype),posters)
 | String.IsEqual(Window(home).Property(actualViewtype),Landscape) | String.IsEqual(Window(home).Property(actualViewtype),Banners)
-| Substring(Window(home).Property(actualViewtype),Wall) | String.IsEqual(Window(home).Property(actualViewtype),BigFan)
+| String.Contains(Window(home).Property(actualViewtype),Wall) | String.IsEqual(Window(home).Property(actualViewtype),BigFan)
 | String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.IsEqual(Window(home).Property(actualViewtype),Video_RightList) | String.IsEqual(Window(home).Property(actualViewtype),KodiFlixView)] + [Container.Content(movies) | Container.Content(episodes)]</visible>
 				</control>
 				<control type="radiobutton" id="1677">
@@ -1581,7 +1581,7 @@
 | String.IsEqual(Window(home).Property(actualViewtype),InfoPanel) | String.IsEqual(Window(home).Property(actualViewtype),Episode)
 | String.IsEqual(Window(home).Property(actualViewtype),Banners) | String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies)
 | String.IsEqual(Window(home).Property(actualViewtype),posters) | String.IsEqual(Window(home).Property(actualViewtype),Landscape)
-| Substring(Window(home).Property(actualViewtype),Wall) | String.IsEqual(Window(home).Property(actualViewtype),BigFan)
+| String.Contains(Window(home).Property(actualViewtype),Wall) | String.IsEqual(Window(home).Property(actualViewtype),BigFan)
 | String.IsEqual(Window(home).Property(actualViewtype),Shift)] + [Container.Content(movies) | Container.Content(tvshows)
 | Container.Content(seasons) | Container.Content(episodes)] + !String.IsEqual(Window(home).Property(actualViewtype),Wall_Large)</visible>
 				</control>

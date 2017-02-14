@@ -114,35 +114,35 @@
 					<include>Default_SettingButton</include>
 					<label>$ADDON[script.skinshortcuts 32045]</label>
 					<label2>$INFO[Window.Property(backgroundName)]</label2>
-					<visible>!SubString(Window.Property(groupname),.1,right) + !String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
+					<visible>!String.Contains(Window.Property(groupname),.1,right) + !String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 				</control>
 				<control type="button" id="602">
 					<description>Change live background image</description>
 					<include>Default_SettingButton</include>
 					<label>31743</label>
 					<label2>$INFO[Window.Property(backgroundLive)]</label2>
-					<visible>SubString(Window.Property(background),.Live,right)</visible>
+					<visible>String.Contains(Window.Property(background),.Live,right)</visible>
 				</control>
 				<control type="button" id="601">
 					<description>Change live background case</description>
 					<include>Default_SettingButton</include>
 					<label>31744</label>
 					<label2>$VAR[backgroundCaseLabelVar]</label2>
-					<visible>SubString(Window.Property(background),.Live,right)</visible>
+					<visible>String.Contains(Window.Property(background),.Live,right)</visible>
 				</control>
 				<control type="button" id="603">
 					<description>Change live background sort by</description>
 					<include>Default_SettingButton</include>
 					<label>31756</label>
 					<label2>$VAR[backgroundSortByLabelVar]</label2>
-					<visible>SubString(Window.Property(background),.Live,right) | SubString(Window.Property(background),.FanartList,right)</visible>
+					<visible>String.Contains(Window.Property(background),.Live,right) | String.Contains(Window.Property(background),.FanartList,right)</visible>
 				</control>
 				<control type="button" id="604">
 					<description>Change live background sort order</description>
 					<include>Default_SettingButton</include>
 					<label>31757</label>
 					<label2>$VAR[backgroundSortLabelVar]</label2>
-					<visible>SubString(Window.Property(background),.Live,right) | SubString(Window.Property(background),.FanartList,right)</visible>
+					<visible>String.Contains(Window.Property(background),.Live,right) | String.Contains(Window.Property(background),.FanartList,right)</visible>
 				</control>
 				<!-- End Background -->
 				<control type="button" id="500">
@@ -158,7 +158,7 @@
 					<description>Change icon</description>
 					<include>Default_SettingButton</include>
 					<label>31746</label>
-					<visible>Skin.HasSetting(mainmenuicons) | SubString(Window.Property(groupname),.1,right) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
+					<visible>Skin.HasSetting(mainmenuicons) | String.Contains(Window.Property(groupname),.1,right) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 				</control>
 
 				<control type="button" id="800">
@@ -277,21 +277,21 @@
 					<include>ColorChooserButton</include>
 					<label>31752</label>
 					<label2>$VAR[WidgetTitleLabelVar]</label2>
-					<visible>!String.IsEmpty(Window.Property(widgetStyle)) + !Substring(Window.Property(widgetStyle),List)</visible>
+					<visible>!String.IsEmpty(Window.Property(widgetStyle)) + !String.Contains(Window.Property(widgetStyle),List)</visible>
 				</control>
 				<control type="button" id="1020">
 					<description>Change list widget text 1</description>
 					<include>ColorChooserButton</include>
 					<label>31753</label>
 					<label2>$VAR[WidgetListLabelVar]</label2>
-					<visible>!String.IsEmpty(Window.Property(widgetStyle)) + Substring(Window.Property(widgetStyle),List) + !String.IsEqual(Window.Property(widgetArt),Banner) + !String.IsEqual(Window.Property(widgetType),system) + !String.IsEqual(Window.Property(widgetType),weather)</visible>
+					<visible>!String.IsEmpty(Window.Property(widgetStyle)) + String.Contains(Window.Property(widgetStyle),List) + !String.IsEqual(Window.Property(widgetArt),Banner) + !String.IsEqual(Window.Property(widgetType),system) + !String.IsEqual(Window.Property(widgetType),weather)</visible>
 				</control>
 				<control type="button" id="1021">
 					<description>Enable panel widget info 1</description>
 					<include>ColorChooserButton</include>
 					<label>$LOCALIZE[31559]</label>
 					<label2>$VAR[WidgetPanelInfoVar]</label2>
-					<visible>!String.IsEmpty(Window.Property(widgetStyle)) + !Substring(Window.Property(widgetStyle),List) + !Skin.HasSetting(Enable.PanelInfo)</visible>
+					<visible>!String.IsEmpty(Window.Property(widgetStyle)) + !String.Contains(Window.Property(widgetStyle),List) + !Skin.HasSetting(Enable.PanelInfo)</visible>
 				</control>
 				<control type="button" id="312">
 					<description>Change widget 1</description>
@@ -307,14 +307,14 @@
 					<include>ColorChooserButton</include>
 					<label>31754</label>
 					<label2>$VAR[WidgetArtLabelVar]</label2>
-					<visible>[!String.IsEmpty(Window.Property(widgetPath)) + !String.IsEmpty(Window.Property(widgetStyle))] + [!String.IsEqual(Window.Property(widgetType),system) | !Substring(Window.Property(widgetStyle),List)]</visible>
+					<visible>[!String.IsEmpty(Window.Property(widgetPath)) + !String.IsEmpty(Window.Property(widgetStyle))] + [!String.IsEqual(Window.Property(widgetType),system) | !String.Contains(Window.Property(widgetStyle),List)]</visible>
 				</control>
 				<control type="button" id="1008">
 					<description>Change widget case 1</description>
 					<include>ColorChooserButton</include>
 					<label>31755</label>
 					<label2>$VAR[WidgetCaseLabelVar]</label2>
-					<visible>[!String.IsEmpty(Window.Property(widgetPath)) + !String.IsEmpty(Window.Property(widgetStyle))] + [!String.IsEqual(Window.Property(widgetType),system) | !Substring(Window.Property(widgetStyle),List)]</visible>
+					<visible>[!String.IsEmpty(Window.Property(widgetPath)) + !String.IsEmpty(Window.Property(widgetStyle))] + [!String.IsEqual(Window.Property(widgetType),system) | !String.Contains(Window.Property(widgetStyle),List)]</visible>
 				</control>
 				<control type="button" id="1012">
 					<description>Change widget 1 sort by</description>
@@ -467,7 +467,7 @@
 					<description>Setup custom widget list</description>
 					<include>ColorChooserButton</include>
 					<label>31759</label>
-					<visible>String.IsEqual(Window.Property(widgetType),custom) | [SubString(Window.Property(widgetStyle),Mixed) + [String.IsEqual(Window.Property(widgetType.a),custom) | String.IsEqual(Window.Property(widgetType.b),custom) | String.IsEqual(Window.Property(widgetType.c),custom) | String.IsEqual(Window.Property(widgetType.d),custom)]]</visible>
+					<visible>String.IsEqual(Window.Property(widgetType),custom) | [String.Contains(Window.Property(widgetStyle),Mixed) + [String.IsEqual(Window.Property(widgetType.a),custom) | String.IsEqual(Window.Property(widgetType.b),custom) | String.IsEqual(Window.Property(widgetType.c),custom) | String.IsEqual(Window.Property(widgetType.d),custom)]]</visible>
 				</control>
 			</control>
 		</control>
@@ -544,21 +544,21 @@
 					<include>ColorChooserButton</include>
 					<label>31752</label>
 					<label2>$VAR[WidgetTitle2LabelVar]</label2>
-					<visible>!String.IsEmpty(Window.Property(widgetStyle.2)) + !Substring(Window.Property(widgetStyle.2),List)</visible>
+					<visible>!String.IsEmpty(Window.Property(widgetStyle.2)) + !String.Contains(Window.Property(widgetStyle.2),List)</visible>
 				</control>
 				<control type="button" id="2020">
 					<description>Change list widget text 2</description>
 					<include>ColorChooserButton</include>
 					<label>31753</label>
 					<label2>$VAR[WidgetList2LabelVar]</label2>
-					<visible>!String.IsEmpty(Window.Property(widgetStyle.2)) + Substring(Window.Property(widgetStyle.2),List) + !String.IsEqual(Window.Property(widgetArt.2),Banner) + !String.IsEqual(Window.Property(widgetType.2),system) + !String.IsEqual(Window.Property(widgetType.2),weather)</visible>
+					<visible>!String.IsEmpty(Window.Property(widgetStyle.2)) + String.Contains(Window.Property(widgetStyle.2),List) + !String.IsEqual(Window.Property(widgetArt.2),Banner) + !String.IsEqual(Window.Property(widgetType.2),system) + !String.IsEqual(Window.Property(widgetType.2),weather)</visible>
 				</control>
 				<control type="button" id="2021">
 					<description>Enable panel widget info 2</description>
 					<include>ColorChooserButton</include>
 					<label>$LOCALIZE[31559]</label>
 					<label2>$VAR[WidgetPanelInfo2Var]</label2>
-					<visible>!String.IsEmpty(Window.Property(widgetStyle.2)) + !Substring(Window.Property(widgetStyle.2),List) + !Skin.HasSetting(Enable.PanelInfo)</visible>
+					<visible>!String.IsEmpty(Window.Property(widgetStyle.2)) + !String.Contains(Window.Property(widgetStyle.2),List) + !Skin.HasSetting(Enable.PanelInfo)</visible>
 				</control>
 				<control type="button" id="2051">
 					<description>Change widget 2</description>
@@ -576,14 +576,14 @@
 					<include>ColorChooserButton</include>
 					<label>31754</label>
 					<label2>$VAR[WidgetArt2LabelVar]</label2>
-					<visible>[!String.IsEmpty(Window.Property(widgetPath.2)) + !String.IsEmpty(Window.Property(widgetStyle.2))] + [!String.IsEqual(Window.Property(widgetType.2),system) | !Substring(Window.Property(widgetStyle.2),List)]</visible>
+					<visible>[!String.IsEmpty(Window.Property(widgetPath.2)) + !String.IsEmpty(Window.Property(widgetStyle.2))] + [!String.IsEqual(Window.Property(widgetType.2),system) | !String.Contains(Window.Property(widgetStyle.2),List)]</visible>
 				</control>
 				<control type="button" id="2008">
 					<description>Change widget case 2</description>
 					<include>ColorChooserButton</include>
 					<label>31755</label>
 					<label2>$VAR[WidgetCase2LabelVar]</label2>
-					<visible>[!String.IsEmpty(Window.Property(widgetPath.2)) + !String.IsEmpty(Window.Property(widgetStyle.2))] + [!String.IsEqual(Window.Property(widgetType.2),system) | !Substring(Window.Property(widgetStyle.2),List)]</visible>
+					<visible>[!String.IsEmpty(Window.Property(widgetPath.2)) + !String.IsEmpty(Window.Property(widgetStyle.2))] + [!String.IsEqual(Window.Property(widgetType.2),system) | !String.Contains(Window.Property(widgetStyle.2),List)]</visible>
 				</control>
 				<control type="button" id="2012">
 					<description>Change widget 2 sort by</description>
@@ -736,7 +736,7 @@
 					<description>Setup custom widget list</description>
 					<include>ColorChooserButton</include>
 					<label>31759</label>
-					<visible>String.IsEqual(Window.Property(widgetType.2),custom) | [SubString(Window.Property(widgetStyle.2),Mixed) + [String.IsEqual(Window.Property(widgetType.2a),custom) | String.IsEqual(Window.Property(widgetType.2b),custom) | String.IsEqual(Window.Property(widgetType.2c),custom) | String.IsEqual(Window.Property(widgetType.2d),custom)]]</visible>
+					<visible>String.IsEqual(Window.Property(widgetType.2),custom) | [String.Contains(Window.Property(widgetStyle.2),Mixed) + [String.IsEqual(Window.Property(widgetType.2a),custom) | String.IsEqual(Window.Property(widgetType.2b),custom) | String.IsEqual(Window.Property(widgetType.2c),custom) | String.IsEqual(Window.Property(widgetType.2d),custom)]]</visible>
 				</control>
 			</control>
 		</control>

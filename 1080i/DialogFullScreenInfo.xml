@@ -82,7 +82,7 @@
 				<label>$INFO[VideoPlayer.Title]</label>
 				<font>Font_ShowcaseMainLabel2_Caps</font>
 				<scroll>true</scroll>
-				<animation effect="slide" start="0,15" end="0,15" time="0" condition="[String.IsEmpty(Player.ChapterName) | SubString(Player.ChapterName,0,left)] + [[String.IsEmpty(VideoPlayer.Tagline) + VideoPlayer.Content(movies)] | [String.IsEmpty(VideoPlayer.Artist) + VideoPlayer.Content(musicvideos)]] | VideoPlayer.Content(files)">Conditional</animation>
+				<animation effect="slide" start="0,15" end="0,15" time="0" condition="[String.IsEmpty(Player.ChapterName) | String.Contains(Player.ChapterName,0,left)] + [[String.IsEmpty(VideoPlayer.Tagline) + VideoPlayer.Content(movies)] | [String.IsEmpty(VideoPlayer.Artist) + VideoPlayer.Content(musicvideos)]] | VideoPlayer.Content(files)">Conditional</animation>
 			</control>
 			<control type="label">
 				<left>510</left>
@@ -445,7 +445,7 @@
 					<fadetime>IconCrossfadeTime2</fadetime>
 					<texture colordiffuse="white2" fallback="">special://skin/extras/BigIcons/Speaker.png</texture>
 					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
-					<visible>!Substring(VideoPlayer.AudioLanguage,und)</visible>
+					<visible>!String.Contains(VideoPlayer.AudioLanguage,und)</visible>
 				</control>
 				<control type="image">
 					<left>1860</left>

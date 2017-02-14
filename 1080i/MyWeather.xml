@@ -587,7 +587,7 @@
 							<onup>7502</onup>
 							<ondown>7502</ondown>
 							<include>Animation_VisibleChange200</include>
-							<visible>SubString(Window.Property(Weather.CurrentView),36hour)</visible>
+							<visible>String.Contains(Window.Property(Weather.CurrentView),36hour)</visible>
 							<itemlayout width="840" height="135">
 								<control type="image">
 									<left>15</left>
@@ -738,7 +738,7 @@
 							<onleft>9000</onleft>
 							<onup>7503</onup>
 							<ondown>7503</ondown>
-							<visible>SubString(Window.Property(Weather.CurrentView),weekend)</visible>
+							<visible>String.Contains(Window.Property(Weather.CurrentView),weekend)</visible>
 							<include>Animation_VisibleChange200</include>
 							<itemlayout width="840" height="135">
 								<control type="image">
@@ -908,7 +908,7 @@
 							<onleft>9000</onleft>
 							<onup>7504</onup>
 							<ondown>7504</ondown>
-							<visible>SubString(Window.Property(Weather.CurrentView),hourly)</visible>
+							<visible>String.Contains(Window.Property(Weather.CurrentView),hourly)</visible>
 							<include>Animation_VisibleChange200</include>
 							<itemlayout width="840" height="109">
 								<control type="image">
@@ -1859,7 +1859,7 @@
 							<scrolltime>200</scrolltime>
 							<onup>7500</onup>
 							<ondown>7500</ondown>
-							<visible>![SubString(Window.Property(Weather.CurrentView),hourly) | SubString(Window.Property(Weather.CurrentView),videos) | SubString(Window.Property(Weather.CurrentView),maps) | SubString(Window.Property(Weather.CurrentView),video)]</visible>
+							<visible>![String.Contains(Window.Property(Weather.CurrentView),hourly) | String.Contains(Window.Property(Weather.CurrentView),videos) | String.Contains(Window.Property(Weather.CurrentView),maps) | String.Contains(Window.Property(Weather.CurrentView),video)]</visible>
 							<include>Animation_VisibleChange200</include>
 							<itemlayout width="210" height="195">
 								<control type="label">
@@ -2468,7 +2468,7 @@
 						<label>33034</label>
 						<include>Objects_MediaMenuButtonAlt</include>
 						<onclick>SetProperty(Weather.CurrentView,36hour)</onclick>
-						<selected>SubString(Window.Property(Weather.CurrentView),36hour)</selected>
+						<selected>String.Contains(Window.Property(Weather.CurrentView),36hour)</selected>
 						<animation type="VisibleChange">
 							<effect type="fade" end="100" delay="320" time="160" />
 						</animation>
@@ -2478,7 +2478,7 @@
 						<label>33037</label>
 						<include>Objects_MediaMenuButtonAlt</include>
 						<onclick>SetProperty(Weather.CurrentView,weekend)</onclick>
-						<selected>SubString(Window.Property(Weather.CurrentView),weekend)</selected>
+						<selected>String.Contains(Window.Property(Weather.CurrentView),weekend)</selected>
 						<animation type="VisibleChange">
 							<effect type="fade" end="100" delay="320" time="160" />
 						</animation>
@@ -2488,7 +2488,7 @@
 						<label>33036</label>
 						<include>Objects_MediaMenuButtonAlt</include>
 						<onclick>SetProperty(Weather.CurrentView,hourly)</onclick>
-						<selected>SubString(Window.Property(Weather.CurrentView),hourly)</selected>
+						<selected>String.Contains(Window.Property(Weather.CurrentView),hourly)</selected>
 						<animation type="VisibleChange">
 							<effect type="fade" end="100" delay="320" time="160" />
 						</animation>
@@ -2498,7 +2498,7 @@
 						<label>$LOCALIZE[157]</label>
 						<include>Objects_MediaMenuButtonAlt</include>
 						<onclick>SetProperty(Weather.CurrentView,videos)</onclick>
-						<selected>SubString(Window.Property(Weather.CurrentView),videos)</selected>
+						<selected>String.Contains(Window.Property(Weather.CurrentView),videos)</selected>
 						<animation type="VisibleChange">
 							<effect type="fade" end="100" delay="320" time="160" />
 						</animation>
@@ -2509,12 +2509,12 @@
 						<label>$LOCALIZE[33035]</label>
 						<include>Objects_MediaMenuButtonAlt</include>
 						<onclick>SetProperty(Weather.CurrentView,maps)</onclick>
-						<selected>SubString(Window.Property(Weather.CurrentView),maps)</selected>
+						<selected>String.Contains(Window.Property(Weather.CurrentView),maps)</selected>
 						<animation type="VisibleChange">
 							<effect type="fade" end="100" delay="320" time="160" />
 						</animation>
 						<visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
-						<visible>SubString(Weather.Plugin,weather.wunderground)</visible>
+						<visible>String.Contains(Weather.Plugin,weather.wunderground)</visible>
 					</control>
 
 					<control type="radiobutton" id="309">
@@ -2528,8 +2528,8 @@
 							<effect type="fade" end="100" delay="320" time="160" />
 						</animation>
 						<visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
-						<visible>SubString(Weather.Plugin,weather.wunderground)</visible>
-						<visible>SubString(Window.Property(Weather.CurrentView),maps)</visible>
+						<visible>String.Contains(Weather.Plugin,weather.wunderground)</visible>
+						<visible>String.Contains(Window.Property(Weather.CurrentView),maps)</visible>
 					</control>
 					<control type="radiobutton" id="310">
 						<label>	- Visual Satellite</label>
@@ -2542,8 +2542,8 @@
 							<effect type="fade" end="100" delay="320" time="160" />
 						</animation>
 						<visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
-						<visible>SubString(Weather.Plugin,weather.wunderground)</visible>
-						<visible>SubString(Window.Property(Weather.CurrentView),maps)</visible>
+						<visible>String.Contains(Weather.Plugin,weather.wunderground)</visible>
+						<visible>String.Contains(Window.Property(Weather.CurrentView),maps)</visible>
 					</control>
 					<control type="radiobutton" id="311">
 						<label>	- Radar</label>
@@ -2556,8 +2556,8 @@
 							<effect type="fade" end="100" delay="320" time="160" />
 						</animation>
 						<visible>Skin.HasSetting(ExtendedWeatherInfo)</visible>
-						<visible>SubString(Weather.Plugin,weather.wunderground)</visible>
-						<visible>SubString(Window.Property(Weather.CurrentView),maps)</visible>
+						<visible>String.Contains(Weather.Plugin,weather.wunderground)</visible>
+						<visible>String.Contains(Window.Property(Weather.CurrentView),maps)</visible>
 					</control>
 					<control type="button" id="1604">
 						<width>400</width>

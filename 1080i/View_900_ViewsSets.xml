@@ -445,7 +445,7 @@
 							<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
 							<include>Animation_CommonFade</include>
 							<animation effect="fade" start="20" end="80" time="700" condition="true" pulse="true">Conditional</animation>
-							<visible>SubString(ListItem.Path,videodb://movies/sets,left)</visible>
+							<visible>String.Contains(ListItem.Path,videodb://movies/sets,left)</visible>
 						</control>
 						<control type="label">
 							<left>20</left>

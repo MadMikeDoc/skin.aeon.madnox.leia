@@ -408,7 +408,7 @@
 				<scroll>true</scroll>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<textoffsetx>15</textoffsetx>
-				<visible>![SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + !ListItem.IsParentFolder</visible>
+				<visible>![String.Contains(ListItem.Filename,.3D.) | String.Contains(ListItem.Filename,.3d.)] + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
 				<posx>1113</posx>
@@ -420,7 +420,7 @@
 				<scroll>true</scroll>
 				<label>[B]$VAR[FirstLabelVar] 3D[/B]</label>
 				<textoffsetx>15</textoffsetx>
-				<visible>[SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)]</visible>
+				<visible>[String.Contains(ListItem.Filename,.3D.) | String.Contains(ListItem.Filename,.3d.)]</visible>
 			</control>
 			<control type="grouplist">
 				<posx>1113</posx>

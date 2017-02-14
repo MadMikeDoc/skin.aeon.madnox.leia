@@ -289,8 +289,8 @@
 				<height>200</height>
 				<texture>$INFO[ListItem.Overlay,thumbs/]</texture>
 				<visible>[Skin.HasSetting(landscapeclearart) | Skin.HasSetting(landscapelogo) | Skin.HasSetting(landscapeonelogo)]</visible>
-				<visible>[Skin.HasSetting(watchedoverlay) + SubString(ListItem(0).Overlay,OverlayWatched.png)] |
-[Skin.HasSetting(newstatus) + SubString(ListItem(0).Overlay,OverlayUnWatched.png) + [[Container.Content(movies)
+				<visible>[Skin.HasSetting(watchedoverlay) + String.Contains(ListItem(0).Overlay,OverlayWatched.png)] |
+[Skin.HasSetting(newstatus) + String.Contains(ListItem(0).Overlay,OverlayUnWatched.png) + [[Container.Content(movies)
 + [String.IsEqual(Window(Home).Property(LatestMovie.1.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.2.Title),ListItem(0).Label)
 | String.IsEqual(Window(Home).Property(LatestMovie.3.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.4.Title),ListItem(0).Label)
 | String.IsEqual(Window(Home).Property(LatestMovie.5.Title),ListItem(0).Label) | String.IsEqual(Window(Home).Property(LatestMovie.6.Title),ListItem(0).Label)

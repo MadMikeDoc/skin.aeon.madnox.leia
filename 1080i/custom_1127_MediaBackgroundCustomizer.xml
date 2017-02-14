@@ -195,7 +195,7 @@
 					<onclick>Skin.ToggleSetting(darkinfopane)</onclick>
 					<selected>Skin.HasSetting(darkinfopane)</selected>
 					<enable>![String.IsEqual(Window(home).Property(actualViewtype),wall) + Skin.HasSetting(wallfullscreen)]</enable>
-					<visible>![String.IsEqual(Window(home).Property(actualViewtype),BigFan) | String.IsEqual(Window(home).Property(actualViewtype),Episode) | Substring(Window(home).Property(actualViewtype),LowList) | String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.IsEqual(Window(home).Property(actualViewtype),AddonWall) | [Substring(Window(home).Property(actualViewtype),TriPanel) + !Window.IsActive(videos)]] + Skin.HasSetting(DisableGlowbar)</visible>
+					<visible>![String.IsEqual(Window(home).Property(actualViewtype),BigFan) | String.IsEqual(Window(home).Property(actualViewtype),Episode) | String.Contains(Window(home).Property(actualViewtype),LowList) | String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.IsEqual(Window(home).Property(actualViewtype),AddonWall) | [String.Contains(Window(home).Property(actualViewtype),TriPanel) + !Window.IsActive(videos)]] + Skin.HasSetting(DisableGlowbar)</visible>
 				</control>
 				<control type="radiobutton" id="1703">
 					<label>$LOCALIZE[31375]</label>

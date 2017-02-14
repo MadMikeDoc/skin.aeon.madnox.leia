@@ -106,49 +106,49 @@
 	<variable name="WidgetCaseLabelVar">
 		<value condition="String.IsEqual(Window.Property(widgetCase),Glass)">$LOCALIZE[31782]</value>
 		<value condition="String.IsEqual(Window.Property(widgetCase),Clear Case)">$LOCALIZE[31783]</value>
-		<value condition="SubString(Window.Property(widgetCase),Case)">$LOCALIZE[31781]</value>
+		<value condition="String.Contains(Window.Property(widgetCase),Case)">$LOCALIZE[31781]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="WidgetCaseBLabelVar">
 		<value condition="String.IsEqual(Window.Property(widgetCase.b),Glass)">$LOCALIZE[31782]</value>
 		<value condition="String.IsEqual(Window.Property(widgetCase.b),Clear Case)">$LOCALIZE[31783]</value>
-		<value condition="SubString(Window.Property(widgetCase.b),Case)">$LOCALIZE[31781]</value>
+		<value condition="String.Contains(Window.Property(widgetCase.b),Case)">$LOCALIZE[31781]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="WidgetCaseCLabelVar">
 		<value condition="String.IsEqual(Window.Property(widgetCase.c),Glass)">$LOCALIZE[31782]</value>
 		<value condition="String.IsEqual(Window.Property(widgetCase.c),Clear Case)">$LOCALIZE[31783]</value>
-		<value condition="SubString(Window.Property(widgetCase.c),Case)">$LOCALIZE[31781]</value>
+		<value condition="String.Contains(Window.Property(widgetCase.c),Case)">$LOCALIZE[31781]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="WidgetCaseDLabelVar">
 		<value condition="String.IsEqual(Window.Property(widgetCase.d),Glass)">$LOCALIZE[31782]</value>
 		<value condition="String.IsEqual(Window.Property(widgetCase.d),Clear Case)">$LOCALIZE[31783]</value>
-		<value condition="SubString(Window.Property(widgetCase.d),Case)">$LOCALIZE[31781]</value>
+		<value condition="String.Contains(Window.Property(widgetCase.d),Case)">$LOCALIZE[31781]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="WidgetCase2LabelVar">
 		<value condition="String.IsEqual(Window.Property(widgetCase.2),Glass)">$LOCALIZE[31782]</value>
 		<value condition="String.IsEqual(Window.Property(widgetCase.2),Clear Case)">$LOCALIZE[31783]</value>
-		<value condition="SubString(Window.Property(widgetCase.2),Case)">$LOCALIZE[31781]</value>
+		<value condition="String.Contains(Window.Property(widgetCase.2),Case)">$LOCALIZE[31781]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="WidgetCase2BLabelVar">
 		<value condition="String.IsEqual(Window.Property(widgetCase.2b),Glass)">$LOCALIZE[31782]</value>
 		<value condition="String.IsEqual(Window.Property(widgetCase.2b),Clear Case)">$LOCALIZE[31783]</value>
-		<value condition="SubString(Window.Property(widgetCase.2b),Case)">$LOCALIZE[31781]</value>
+		<value condition="String.Contains(Window.Property(widgetCase.2b),Case)">$LOCALIZE[31781]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="WidgetCase2CLabelVar">
 		<value condition="String.IsEqual(Window.Property(widgetCase.2c),Glass)">$LOCALIZE[31782]</value>
 		<value condition="String.IsEqual(Window.Property(widgetCase.2c),Clear Case)">$LOCALIZE[31783]</value>
-		<value condition="SubString(Window.Property(widgetCase.2c),Case)">$LOCALIZE[31781]</value>
+		<value condition="String.Contains(Window.Property(widgetCase.2c),Case)">$LOCALIZE[31781]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="WidgetCase2DLabelVar">
 		<value condition="String.IsEqual(Window.Property(widgetCase.2d),Glass)">$LOCALIZE[31782]</value>
 		<value condition="String.IsEqual(Window.Property(widgetCase.2d),Clear Case)">$LOCALIZE[31783]</value>
-		<value condition="SubString(Window.Property(widgetCase.2d),Case)">$LOCALIZE[31781]</value>
+		<value condition="String.Contains(Window.Property(widgetCase.2d),Case)">$LOCALIZE[31781]</value>
 		<value>$LOCALIZE[231]</value>
 	</variable>
 	<variable name="WidgetSortbyLabelVar">
@@ -407,7 +407,7 @@
 	</variable>
 	<variable name="HomeWidgetBackColor">
 		<value condition="String.IsEqual(Skin.String(Widget.Back),Clear White)">FFFFFFFF</value>
-		<value condition="Substring(Skin.String(Widget.Back),Colored)">$VAR[DialogColorVar]</value>
+		<value condition="String.Contains(Skin.String(Widget.Back),Colored)">$VAR[DialogColorVar]</value>
 		<value>FF0B0B0B</value>
 	</variable>
 	<variable name="HomeWidgetInfoTextColor">
@@ -452,31 +452,31 @@
 	</include>
 	<!-- Widget Artwork -->
 	<variable name="HomeWidgetPortraitCaseVar">
-		<value condition="ListItem.IsStereoscopic | SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)">3d.png</value>
+		<value condition="ListItem.IsStereoscopic | String.Contains(ListItem.Filename,.3D.) | String.Contains(ListItem.Filename,.3d.)">3d.png</value>
 		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">tvseries.png</value>
-		<value condition="SubString(ListItem.Filename,3D) | SubString(ListItem.Filename,3d)">3d.png</value>	<!-- added by s2k -->
-		<value condition="SubString(ListItem.Filename, 3D.) | SubString(ListItem.Filename, 3d.)">3d.png</value>
-		<value condition="SubString(ListItem.Filename,.3DBD.) | SubString(ListItem.Filename,.3dbd.)">3d.png</value>
-		<value condition="SubString(ListItem.Filename, 3DBD.) | SubString(ListItem.Filename, 3dbd.)">3d.png</value>
-		<value condition="SubString(ListItem.Filename,.HDDVD.) | SubString(ListItem.Filename,.hddvd.)">hddvd.png</value>
-		<value condition="SubString(ListItem.Filename, HDDVD.) | SubString(ListItem.Filename, hddvd.)">hddvd.png</value>
-		<!--<value condition="SubString(ListItem.Filename,.SDTV.) | SubString(ListItem.Filename,.sdtv.)">sdtv.png</value>
-		<value condition="SubString(ListItem.Filename, SDTV.) | SubString(ListItem.Filename, sdtv.)">sdtv.png</value>-->
-		<value condition="SubString(ListItem.Filename,.HDTV.) | SubString(ListItem.Filename,.hdtv.)">hdtv.png</value>
-		<value condition="SubString(ListItem.Filename, HDTV.) | SubString(ListItem.Filename, hdtv.)">hdtv.png</value>
-		<value condition="SubString(ListItem.Filename,WEBDL) | SubString(ListItem.Filename,webdl)">webdl.png</value>
-		<value condition="SubString(ListItem.Filename,WEB.DL) | SubString(ListItem.Filename,web.dl)">webdl.png</value>
-		<value condition="SubString(ListItem.Filename,WEBDL-) | SubString(ListItem.Filename,webdl-)">webdl.png</value>
-		<value condition="SubString(ListItem.Filename,.WEBDL.) | SubString(ListItem.Filename,.webdl.)">webdl.png</value>
-		<value condition="SubString(ListItem.Filename, WEBDL.) | SubString(ListItem.Filename, webdl.)">webdl.png</value>
-		<value condition="SubString(ListItem.Filename,.WEB-DL.) | SubString(ListItem.Filename,.web-dl.)">webdl.png</value>
-		<value condition="SubString(ListItem.Filename, WEB-DL.) | SubString(ListItem.Filename, web-dl.)">webdl.png</value>
-		<value condition="SubString(ListItem.Filename,.4K.) | SubString(ListItem.Filename,.4k.)">4k.png</value>
-		<value condition="SubString(ListItem.Filename, 4K.) | SubString(ListItem.Filename, 4k.)">4k.png</value>
+		<value condition="String.Contains(ListItem.Filename,3D) | String.Contains(ListItem.Filename,3d)">3d.png</value>	<!-- added by s2k -->
+		<value condition="String.Contains(ListItem.Filename, 3D.) | String.Contains(ListItem.Filename, 3d.)">3d.png</value>
+		<value condition="String.Contains(ListItem.Filename,.3DBD.) | String.Contains(ListItem.Filename,.3dbd.)">3d.png</value>
+		<value condition="String.Contains(ListItem.Filename, 3DBD.) | String.Contains(ListItem.Filename, 3dbd.)">3d.png</value>
+		<value condition="String.Contains(ListItem.Filename,.HDDVD.) | String.Contains(ListItem.Filename,.hddvd.)">hddvd.png</value>
+		<value condition="String.Contains(ListItem.Filename, HDDVD.) | String.Contains(ListItem.Filename, hddvd.)">hddvd.png</value>
+		<!--<value condition="String.Contains(ListItem.Filename,.SDTV.) | String.Contains(ListItem.Filename,.sdtv.)">sdtv.png</value>
+		<value condition="String.Contains(ListItem.Filename, SDTV.) | String.Contains(ListItem.Filename, sdtv.)">sdtv.png</value>-->
+		<value condition="String.Contains(ListItem.Filename,.HDTV.) | String.Contains(ListItem.Filename,.hdtv.)">hdtv.png</value>
+		<value condition="String.Contains(ListItem.Filename, HDTV.) | String.Contains(ListItem.Filename, hdtv.)">hdtv.png</value>
+		<value condition="String.Contains(ListItem.Filename,WEBDL) | String.Contains(ListItem.Filename,webdl)">webdl.png</value>
+		<value condition="String.Contains(ListItem.Filename,WEB.DL) | String.Contains(ListItem.Filename,web.dl)">webdl.png</value>
+		<value condition="String.Contains(ListItem.Filename,WEBDL-) | String.Contains(ListItem.Filename,webdl-)">webdl.png</value>
+		<value condition="String.Contains(ListItem.Filename,.WEBDL.) | String.Contains(ListItem.Filename,.webdl.)">webdl.png</value>
+		<value condition="String.Contains(ListItem.Filename, WEBDL.) | String.Contains(ListItem.Filename, webdl.)">webdl.png</value>
+		<value condition="String.Contains(ListItem.Filename,.WEB-DL.) | String.Contains(ListItem.Filename,.web-dl.)">webdl.png</value>
+		<value condition="String.Contains(ListItem.Filename, WEB-DL.) | String.Contains(ListItem.Filename, web-dl.)">webdl.png</value>
+		<value condition="String.Contains(ListItem.Filename,.4K.) | String.Contains(ListItem.Filename,.4k.)">4k.png</value>
+		<value condition="String.Contains(ListItem.Filename, 4K.) | String.Contains(ListItem.Filename, 4k.)">4k.png</value>
 		<value condition="!String.IsEmpty(ListItem.VideoResolution)">$INFO[ListItem.VideoResolution]p.png</value>
 		<value condition="!String.IsEmpty(ListItem.Property(VideoResolution))">$INFO[ListItem.Property(VideoResolution)]p.png</value>
 		<value condition="!String.IsEmpty(ListItem.VideoResolution) + !String.IsEmpty(ListItem.TVShowTitle)">tvseries.png</value>
-		<value condition="String.IsEmpty(ListItem.Property(VideoResolution)) + String.IsEmpty(ListItem.TVShowTitle) + [!String.IsEmpty(ListItem.Trailer) | SubString(ListItem.FolderPath,extendedinfo)]">trailers.png</value>
+		<value condition="String.IsEmpty(ListItem.Property(VideoResolution)) + String.IsEmpty(ListItem.TVShowTitle) + [!String.IsEmpty(ListItem.Trailer) | String.Contains(ListItem.FolderPath,extendedinfo)]">trailers.png</value>
 		<value>p.png</value>
 	</variable>
 	<variable name="HomeWidgetPosterVar">
@@ -513,11 +513,11 @@
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="HomeWidgetFakeDiscArtVar">
-		<value condition="ListItem.IsStereoscopic | SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)">3d.png</value>
-		<value condition="SubString(ListItem.Filename,3D) | SubString(ListItem.Filename,3d)">3d.png</value>	<!-- added by s2k -->
-		<value condition="SubString(ListItem.Filename, 3D.) | SubString(ListItem.Filename, 3d.)">3d.png</value>
-		<value condition="SubString(ListItem.Filename,.3DBD.) | SubString(ListItem.Filename,.3dbd.)">3d.png</value>
-		<value condition="SubString(ListItem.Filename, 3DBD.) | SubString(ListItem.Filename, 3dbd.)">3d.png</value>
+		<value condition="ListItem.IsStereoscopic | String.Contains(ListItem.Filename,.3D.) | String.Contains(ListItem.Filename,.3d.)">3d.png</value>
+		<value condition="String.Contains(ListItem.Filename,3D) | String.Contains(ListItem.Filename,3d)">3d.png</value>	<!-- added by s2k -->
+		<value condition="String.Contains(ListItem.Filename, 3D.) | String.Contains(ListItem.Filename, 3d.)">3d.png</value>
+		<value condition="String.Contains(ListItem.Filename,.3DBD.) | String.Contains(ListItem.Filename,.3dbd.)">3d.png</value>
+		<value condition="String.Contains(ListItem.Filename, 3DBD.) | String.Contains(ListItem.Filename, 3dbd.)">3d.png</value>
 		<value condition="String.IsEmpty(ListItem.Artist) + String.IsEmpty(ListItem.AlbumArtist) + String.IsEmpty(ListItem.Album)">$INFO[ListItem.VideoResolution,common/discart/,p.png]</value>
 	</variable>
 	<variable name="HomeWidgetCharacterArtVar">
@@ -533,8 +533,8 @@
 		<value condition="!String.IsEmpty(ListItem.AddonName)">$INFO[ListItem.AddonName]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(Label3)) + !String.IsEmpty(ListItem.Property(WeatherMultiFanart))">$INFO[ListItem.Label] $INFO[ListItem.Label2] $INFO[ListItem.Property(Label3)]$INFO[ListItem.Property(Label4), ]</value>
 		<value condition="!String.IsEmpty(ListItem.Property(Label3)) + !String.IsEmpty(ListItem.Property(isSystemInfo))">$INFO[ListItem.Label2]  $INFO[ListItem.Property(Label3)]</value>
-		<value condition="[!Integer.IsGreater(ListItem.Season,9) + !Integer.IsGreater(ListItem.Episode,9)] + !SubString(ListItem.Episode,S,left) + !String.IsEmpty(ListItem.Episode) + !String.IsEqual(ListItem.Label,ListItem.TVShowTitle)">$INFO[ListItem.Season,S0]$INFO[ListItem.Episode,E0] $INFO[ListItem.Title]</value>
-		<value condition="[!Integer.IsGreater(ListItem.Season,9) + !Integer.IsGreater(ListItem.Episode,9)] + SubString(ListItem.Episode,S,left) + !String.IsEmpty(ListItem.Episode) + !String.IsEqual(ListItem.Label,ListItem.TVShowTitle)">$INFO[ListItem.Season,S0]$INFO[ListItem.Episode] $INFO[ListItem.Title]</value>
+		<value condition="[!Integer.IsGreater(ListItem.Season,9) + !Integer.IsGreater(ListItem.Episode,9)] + !String.Contains(ListItem.Episode,S,left) + !String.IsEmpty(ListItem.Episode) + !String.IsEqual(ListItem.Label,ListItem.TVShowTitle)">$INFO[ListItem.Season,S0]$INFO[ListItem.Episode,E0] $INFO[ListItem.Title]</value>
+		<value condition="[!Integer.IsGreater(ListItem.Season,9) + !Integer.IsGreater(ListItem.Episode,9)] + String.Contains(ListItem.Episode,S,left) + !String.IsEmpty(ListItem.Episode) + !String.IsEqual(ListItem.Label,ListItem.TVShowTitle)">$INFO[ListItem.Season,S0]$INFO[ListItem.Episode] $INFO[ListItem.Title]</value>
 		<value condition="[!Integer.IsGreater(ListItem.Season,9) + Integer.IsGreater(ListItem.Episode,9)] + !String.IsEmpty(ListItem.Episode) + !String.IsEqual(ListItem.Label,ListItem.TVShowTitle)">$INFO[ListItem.Season,S0]$INFO[ListItem.Episode,E] $INFO[ListItem.Title]</value>
 		<value condition="[Integer.IsGreater(ListItem.Season,9) + !Integer.IsGreater(ListItem.Episode,9)] + !String.IsEmpty(ListItem.Episode) + !String.IsEqual(ListItem.Label,ListItem.TVShowTitle)">$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E0] $INFO[ListItem.Title]</value>
 		<value condition="[Integer.IsGreater(ListItem.Season,9) + Integer.IsGreater(ListItem.Episode,9)] + !String.IsEmpty(ListItem.Episode) + !String.IsEqual(ListItem.Label,ListItem.TVShowTitle)">$INFO[ListItem.Season,S]$INFO[ListItem.Episode,E] $INFO[ListItem.Title]</value>

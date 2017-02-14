@@ -274,7 +274,7 @@
 		<control type="group" id="2355">
 			<left>-52</left>
 			<top>-22</top>
-			<visible>SubString(Control.GetLabel(4322),moviewall)</visible>
+			<visible>String.Contains(Control.GetLabel(4322),moviewall)</visible>
 			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="[!Window.IsActive(home) + Skin.HasSetting(animation_bg)] | [Window.IsActive(home) + Skin.HasSetting(animatedbghome)]">Conditional</animation>
 			<animation effect="slide" start="-15,-15" end="15,15" time="6000" tween="sine" easing="inout" pulse="true" condition="[!Window.IsActive(home) + Skin.HasSetting(animation_bg)] | [Window.IsActive(home) + Skin.HasSetting(animatedbghome)]">Conditional</animation>
 			<include>Animation_WindowFade250</include>

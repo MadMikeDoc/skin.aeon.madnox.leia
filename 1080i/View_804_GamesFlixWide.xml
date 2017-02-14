@@ -70,7 +70,7 @@
 				<width>650</width>
 				<height>270</height>
 				<control type="grouplist">
-					<visible>Control.IsVisible(804) + SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+					<visible>Control.IsVisible(804) + String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
 					<control type="label">
 						<label>[COLOR $VAR[TitleColorVar]]Studio: [/COLOR]$INFO[ListItem.Studio]</label>
 						<width>580</width>
@@ -98,7 +98,7 @@
 			<control type="group">
 				<left>40</left>
 				<top>304</top>
-				<visible>Control.IsVisible(804) + SubString(Container.FolderPath,plugin.program.advanced.launcher) + !Skin.HasSetting(smallgamesflixwideview)</visible>
+				<visible>Control.IsVisible(804) + String.Contains(Container.FolderPath,plugin.program.advanced.launcher) + !Skin.HasSetting(smallgamesflixwideview)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="71">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -118,7 +118,7 @@
 			<control type="group">
 				<left>40</left>
 				<top>304</top>
-				<visible>Control.IsVisible(804) + SubString(Container.FolderPath,plugin.program.advanced.launcher) + Skin.HasSetting(smallgamesflixwideview)</visible>
+				<visible>Control.IsVisible(804) + String.Contains(Container.FolderPath,plugin.program.advanced.launcher) + Skin.HasSetting(smallgamesflixwideview)</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="71">
 					<label>$VAR[VideoPlotVar3]</label>
@@ -152,7 +152,7 @@
 				<preloaditems>2</preloaditems>
 				<scrolltime tween="quadratic">400</scrolltime>
 				<focusposition>1</focusposition>
-				<visible>SubString(Container.FolderPath,plugin.program.advanced.launcher)</visible>
+				<visible>String.Contains(Container.FolderPath,plugin.program.advanced.launcher)</visible>
 				<!-- Landscape Orientation Thumbs -->
 				<itemlayout width="400" height="300" condition="!Skin.HasSetting(smallgamesflixwideview)">
 					<control type="image">

@@ -248,7 +248,7 @@
 					<label>$LOCALIZE[31020]</label>
 					<onclick>Skin.ToggleSetting(KodiFlixExtras)</onclick>
 					<selected>Skin.HasSetting(KodiFlixExtras)</selected>
-					<visible>SubString(Window(home).Property(actualViewtype),KodiFlixView) + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
+					<visible>String.Contains(Window(home).Property(actualViewtype),KodiFlixView) + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 				</control>
 				<control type="button" id="17098">
 					<label>$LOCALIZE[31709]:</label>

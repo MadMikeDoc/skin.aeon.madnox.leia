@@ -137,7 +137,7 @@
 		<control type="radiobutton" id="7">
 			<label>$LOCALIZE[14000]</label>
 			<include>Objects_MediaMenuButtonIcons</include>
-			<visible>!SubString(Container.FolderPath,videodb://,left) + Container.Content()</visible>
+			<visible>!String.Contains(Container.FolderPath,videodb://,left) + Container.Content()</visible>
 		</control>
 		<control type="radiobutton" id="11">
 			<label>20336</label>
@@ -151,7 +151,7 @@
 		<control type="button" id="7">
 			<label>136</label>
 			<include>Objects_MediaMenuButtonIcons</include>
-			<visible>!SubString(Container.FolderPath,special://musicplaylists/,left)</visible>
+			<visible>!String.Contains(Container.FolderPath,special://musicplaylists/,left)</visible>
 		</control>
 		<control type="button" id="9">
 			<include>Objects_MediaMenuButtonIcons</include>
