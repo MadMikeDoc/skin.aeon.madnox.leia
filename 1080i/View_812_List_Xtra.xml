@@ -52,7 +52,7 @@
 				<viewtype label="ListXtra">list</viewtype>
 				<pagecontrol>62</pagecontrol>
 				<scrolltime tween="quadratic">200</scrolltime>
-				<itemlayout height="61.5">
+				<itemlayout condition="!Skin.HasSetting(Xtraslimlist)" height="61.5">
 					<control type="image">
 						<top>1.5</top>
 						<width>1142</width>
@@ -67,16 +67,6 @@
 						<textcolor>white3</textcolor>
 						<label>$VAR[ListLabel1Var]</label>
 					</control>
-					<!--control type="label">
-						<left>645</left>
-						<width>398</width>
-						<height>60</height>
-						<align>right</align>
-						<font>Font_Reg26</font>
-						<textcolor>grey2</textcolor>
-						<label>$VAR[ListLabel2Var]</label>
-						<scroll>true</scroll>
-					</control-->
 					<control type="image">
 						<left>1060</left>
 						<top>8</top>
@@ -94,7 +84,7 @@
 						<texture>$VAR[ListPosterVar]</texture>
 					</control>
 				</itemlayout>
-				<focusedlayout height="61.5">
+				<focusedlayout condition="!Skin.HasSetting(Xtraslimlist)" height="61.5">
 					<control type="image">
 						<top>1.5</top>
 						<width>1142</width>
@@ -116,15 +106,6 @@
 						<font>Font_Reg30_2</font>
 						<label>$VAR[ListLabel1Var]</label>
 					</control>
-					<!--control type="label">
-						<left>645</left>
-						<width>398</width>
-						<height>60</height>
-						<align>right</align>
-						<font>Font_Reg26</font>
-						<label>$VAR[ListLabel2Var]</label>
-						<scroll>true</scroll>
-					</control-->
 					<control type="image">
 						<left>1060</left>
 						<top>8</top>
@@ -142,16 +123,46 @@
 						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)] | ListItem.IsParentFolder</visible>
 					</control>
 				</focusedlayout>
+				<itemlayout condition="Skin.HasSetting(Xtraslimlist)" height="37.5">
+					<control type="image">
+						<top>1.5</top>
+						<width>1142</width>
+						<height>37</height>
+						<texture border="1">osd/osd_settings_buttonnf.png</texture>
+					</control>
+					<control type="label">
+						<left>25</left>
+						<width>698</width>
+						<height>37</height>
+						<font>Font_Reg30_2</font>
+						<textcolor>white3</textcolor>
+						<label>$VAR[ListLabel1Var]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout condition="Skin.HasSetting(Xtraslimlist)" height="37.5">
+					<control type="image">
+						<top>1.5</top>
+						<width>1142</width>
+						<height>37</height>
+						<texture border="1">osd/osd_settings_buttonnf.png</texture>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>-1</top>
+						<width>1116</width>
+						<height>38.5</height>
+						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
+						<animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(812)">Conditional</animation>
+					</control>
+					<control type="label">
+						<left>25</left>
+						<width>698</width>
+						<height>37</height>
+						<font>Font_Reg30_2</font>
+						<label>$VAR[ListLabel1Var]</label>
+					</control>
+				</focusedlayout>
 			</control>
-			<!--control type="image">
-				<left>872</left>
-				<top>1010</top>
-				<width>246</width>
-				<height>80</height>
-				<aspectratio>keep</aspectratio>
-				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
-			</control-->
-		
 			<control type="scrollbar" id="62">
 				<left>78</left>
 				<top>158</top>
@@ -347,14 +358,14 @@
 					<onclick>ActivateWindow(1175)</onclick>
 					<visible>!String.IsEmpty(ListItem.Artist)</visible>
 				</item>
-				<item>
+				<!--item>
 					<label>$INFO[ListItem.Title]</label>
 					<label2>$LOCALIZE[369]:</label2>
 					<onclick>SetProperty(TextViewerHeader,$LOCALIZE[369],Home)</onclick>
 					<onclick>SetProperty(TextViewerContent,$ESCINFO[ListItem.Title],Home)</onclick>
 					<onclick>ActivateWindow(1175)</onclick>
 					<visible>!String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.DBType,song)</visible>
-				</item>
+				</item-->
 				<item>
 					<label>$INFO[ListItem.AlbumArtist]</label>
 					<label2>$LOCALIZE[566]:</label2>
@@ -672,24 +683,18 @@
 					<onclick>ActivateWindow(1175)</onclick>
 					<visible>String.IsEqual(ListItem.DBType,album)</visible>
 				</item>
+				<item>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Duration)] mins</label>
+					<label2>$LOCALIZE[180]:</label2>
+					<onclick>SetProperty(TextViewerHeader,$LOCALIZE[180],Home)</onclick>
+					<onclick>SetProperty(TextViewerContent,$INFO[Window(Home).Property(SkinHelper.ListItem.Duration)] mins,Home)</onclick>
+					<onclick>ActivateWindow(1175)</onclick>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Duration))</visible>
+				</item>
+				
 			</content>
 			<control type="group">
 			</control>
 		</control>
-		<!--control type="textbox">
-			<left>1242</left>
-			<top>300</top>
-			<include>Animation_WindowFade250</include>
-			<label>Tracklist: [CR][COLOR white]$INFO[Window(Home).Property(SkinHelper.ListItem.Tracks.Formatted)][/COLOR]</label>
-			<left>40</left>
-			<top>20</top>
-			<width>600</width>
-			<height>630</height>
-			<align>left</align>
-			<font>font15</font>
-			<textcolor>grey</textcolor>
-			<autoscroll time="1000" delay="4000" repeat="5000"></autoscroll>
-			<visible>!ListItem.IsParentFolder + Container.Content(albums)</visible>
-		</control-->
 	</include>
 </includes>

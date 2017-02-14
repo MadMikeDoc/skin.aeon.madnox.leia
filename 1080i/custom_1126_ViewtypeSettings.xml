@@ -377,7 +377,7 @@
 					<visible>[[String.IsEqual(Window(home).Property(actualViewtype),Shift) | String.IsEqual(Window(home).Property(actualViewtype),Wall) | [String.IsEqual(Window(home).Property(actualViewtype),ShowcaseMovies) + !Skin.HasSetting(NoFloorLabelMovies)] | String.IsEqual(Window(home).Property(actualViewtype),Banners)] + Container.Content(movies)]</visible>
 				</control>
 				<!--MAD - No Floor option -->
-				<control type="radiobutton" id="17057">
+				<control type="radiobutton" id="50301">
 					<label>31363</label>
 					<include>Objects_MediaMenuButtonAlt2</include>
 					<onclick>Skin.ToggleSetting(NoFloor)</onclick>
@@ -1185,6 +1185,13 @@
 					<selected>Skin.HasSetting(slimlist)</selected>
 					<visible>String.IsEqual(Window(home).Property(actualViewtype),List)</visible>
 				</control>
+				<control type="radiobutton" id="17084">
+					<label>$LOCALIZE[31165]</label>
+					<include>Objects_MediaMenuButtonAlt2</include>
+					<onclick>Skin.ToggleSetting(Xtraslimlist)</onclick>
+					<selected>Skin.HasSetting(Xtraslimlist)</selected>
+					<visible>String.IsEqual(Window(home).Property(actualViewtype),ListXtra)</visible>
+				</control>
 				<control type="radiobutton" id="17110">
 					<label>31417</label>
 					<include>Objects_MediaMenuButtonAlt2</include>
@@ -1292,6 +1299,22 @@
 					<label>Disable Animated Fanart</label>
 					<onclick>Skin.ToggleSetting(BannerInfoDisableAnimatedFanart)</onclick>
 					<selected>Skin.HasSetting(BannerInfoDisableAnimatedFanart)</selected>
+					<visible>String.IsEqual(Window(home).Property(actualViewtype),VideoBannerInfo) + [Container.Content(movies) | Container.Content(sets)]</visible>
+				</control>
+				<control type="radiobutton" id="17083">
+					<description>Enable Cases</description>
+					<include>Objects_MediaMenuButtonAlt2</include>
+					<label>Enable Cases</label>
+					<onclick>Skin.ToggleSetting(BannerInfoEnableCases)</onclick>
+					<selected>Skin.HasSetting(BannerInfoEnableCases)</selected>
+					<visible>String.IsEqual(Window(home).Property(actualViewtype),VideoBannerInfo) + [Container.Content(movies) | Container.Content(sets)]</visible>
+				</control>
+				<control type="radiobutton" id="17086">
+					<description>Show Poster + Disc</description>
+					<include>Objects_MediaMenuButtonAlt2</include>
+					<label>Show Poster + Disc</label>
+					<onclick>Skin.ToggleSetting(BannerInfoPosterDisc)</onclick>
+					<selected>Skin.HasSetting(BannerInfoPosterDisc)</selected>
 					<visible>String.IsEqual(Window(home).Property(actualViewtype),VideoBannerInfo) + [Container.Content(movies) | Container.Content(sets)]</visible>
 				</control>
 				<!-- Banner Info End -->

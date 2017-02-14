@@ -2860,7 +2860,7 @@
 	</variable>
 	<variable name="VideoSubLabelVar">
 		<value condition="Container.Content(tvshows)">[COLOR $VAR[TitleColorVar]]$LOCALIZE[20360]: $INFO[ListItem.Property(TotalEpisodes)][/COLOR]$INFO[ListItem.Property(UnWatchedEpisodes), (,[LOWERCASE] $LOCALIZE[16101][/LOWERCASE])]</value>
-		<value condition="ListItem.IsCollection + !ListItem.IsParentFolder">$INFO[ListItem.Year,, • ]$INFO[ListItem.RatingAndVotes,, • ]$INFO[Window(home).Property(Set.Movies.Runtime)] $LOCALIZE[12391]</value>
+		<value condition="ListItem.IsCollection + !ListItem.IsParentFolder">$INFO[ListItem.Year,, • ]$INFO[ListItem.RatingAndVotes,, • ]$INFO[Window(home).Property(Set.Movies.Runtime)] $LOCALIZE[12391] • $INFO[Window(home).Property(SkinHelper.ListItem.Count)] Movies</value>
 		<value>$INFO[ListItem.Year,, • ]$INFO[ListItem.RatingAndVotes,, • ]$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
 	</variable>
 	<variable name="KodiFlixSubLabelInfo">

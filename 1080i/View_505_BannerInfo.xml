@@ -152,18 +152,21 @@
 							<effect type="fade" start="80" end="100" time="200" tween="sine" easing="in" />
 						</animation>
 						<control type="image">
-							<width>980</width>
-							<height>181</height>
+							<top>6</top>
+							<width>975</width>
+							<height>170</height>
 							<aspectratio>stretch</aspectratio>
-							<texture background="true" fallback="thumbs/fallback_banner_tp.png">$VAR[BannerVar]</texture>
+							<texture background="true" >$VAR[BannerVar]</texture>
 							<fadetime>400</fadetime>
-							<visible>[!String.IsEmpty(ListItem.Art(banner)) + [!Skin.HasSetting(BannerInfoUseLogo) | !ListItem.IsCollection ]]| !String.IsEmpty(ListItem.Art(fanart)) + !ListItem.IsCollection</visible>
+							<visible>[!String.IsEmpty(ListItem.Art(banner)) + [!Skin.HasSetting(BannerInfoUseLogo) | !ListItem.IsCollection ]] | !String.IsEmpty(ListItem.Art(fanart)) + !ListItem.IsCollection + Skin.HasSetting(BannerInfoEnableCases)</visible>
 						</control>
 						<control type="group">
 							<visible>String.IsEmpty(ListItem.Art(banner)) | [Skin.HasSetting(BannerInfoUseLogo) + ListItem.IsCollection]</visible>
 							<control type="image">
-								<width>980</width>
-								<height>181</height>
+								<top>1</top>
+								<posx>2</posx>
+								<width>972</width>
+								<height>179</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 								<fadetime>400</fadetime>
@@ -192,7 +195,7 @@
 								<width>1000</width>
 								<height>181</height>
 								<aspectratio>keep</aspectratio>
-								<texture background="true" fallback="thumbs/fallback_banner_tp.png">$INFO[ListItem.Art(clearlogo)]</texture>
+								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 								<fadetime>400</fadetime>
 								<bordersize>2</bordersize>
 								<visible>ListItem.IsCollection</visible>
@@ -215,7 +218,7 @@
 								<height>181</height>
 								<texture border="8">views/addonwall_select.png</texture>
 								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
+								<visible>String.IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(BannerInfoEnableCases)</visible>
 							</control>
 							<control type="label">
 								<posx>2</posx>
@@ -265,6 +268,16 @@
 						<height>181</height>
 						<texture border="8">views/addonwall_select.png</texture>
 						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+						<visible>!Skin.HasSetting(BannerInfoEnableCases)</visible>
+					</control>
+					<control type="image">
+						<left>-5</left>
+						<top>-5</top>
+						<width>984</width>
+						<height>191</height>
+						<texture background="true">homewidgets/case/banner/$VAR[GlobalCaseVar]</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>Skin.HasSetting(BannerInfoEnableCases) + !ListItem.IsParentFolder</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -282,6 +295,7 @@
 				<visible>!Skin.HasSetting(AlphabetScrollbar)</visible>
 			</control>
 			<control type="group">
+				<visible>!Skin.HasSetting(BannerInfoPosterDisc)</visible>
 				<control type="image">
 					<posx>1113</posx>
 					<posy>182</posy>
@@ -332,8 +346,58 @@
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)]</texture>
 					<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)) + !Skin.HasSetting(BannerInfoDisableAnimatedFanart)</visible>
 				</control>
-
 			</control>
+			
+			<control type="group">
+				<visible>Skin.HasSetting(BannerInfoPosterDisc) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
+				<control type="image">
+					<posx>1113</posx>
+					<posy>182</posy>
+					<width>285</width>
+					<height>385</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+				</control>
+				<control type="image">
+					<posx>1413</posx>
+					<posy>182</posy>
+					<width>385</width>
+					<height>385</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+				</control>
+			</control>
+			
+			<control type="wraplist" id="6022">
+				<posx>1113</posx>
+				<posy>182</posy>
+				<width>685</width>
+				<height>385</height>
+				<viewtype>list</viewtype>
+				<preloaditems>2</preloaditems>
+				<orientation>horizontal</orientation>
+				<visible>Skin.HasSetting(BannerInfoPosterDisc) + ListItem.IsCollection</visible>
+				<autoscroll delay="13000" time="10000" repeat="10000">true</autoscroll>
+				<itemlayout height="385" width="285">
+				</itemlayout>
+				<focusedlayout height="385" width="685">
+					<control type="image">
+						<width>285</width>
+						<height>385</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+					</control>
+					<control type="image">
+						<left>300</left>
+						<width>385</width>
+						<height>385</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+					</control>
+				</focusedlayout>
+				<content target="video" sortby="year" sortorder="ascending">videodb://movies/sets/$INFO[ListItem.DBID]/</content>
+			</control>
+						
 			<control type="label">
 				<posx>1113</posx>
 				<posy>570</posy>
@@ -344,7 +408,7 @@
 				<scroll>true</scroll>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<textoffsetx>15</textoffsetx>
-				<visible>![SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)]</visible>
+				<visible>![SubString(ListItem.Filename,.3D.) | SubString(ListItem.Filename,.3d.)] + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
 				<posx>1113</posx>
@@ -540,7 +604,7 @@
 					<texture>$VAR[StudioImageVar]</texture>
 					<visible>!String.IsEmpty(ListItem.Studio)</visible>
 					<include>VisibleFadeEffect</include>
-					<visible>!String.IsEmpty(Control.GetLabel(800014))</visible>
+					<visible>!String.IsEmpty(Control.GetLabel(800014)) + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
 					<posx>495</posx>

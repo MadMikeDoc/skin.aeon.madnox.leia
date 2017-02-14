@@ -3244,4 +3244,12 @@
 			</item>
 		</definition>
 	</include>
+	<include name="VisibleFadeAnimation">
+		<animation effect="fade" time="300">Visible</animation>
+		<animation effect="fade" time="300">Hidden</animation>
+	</include>
+	<include name="SettingsFadeAnimation">
+		<animation effect="fade" time="100" delay="200">Visible</animation>
+		<animation effect="fade" time="50">Hidden</animation>
+	</include>
 </includes>
