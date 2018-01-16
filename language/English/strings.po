@@ -2257,11 +2257,15 @@ msgid "Move now Playing Below HomeBar"
 msgstr ""
 
 msgctxt "#31561"
-msgid "Center CD Below HomeBar"
+msgid "Center CD"
 msgstr ""
 
 msgctxt "#31562"
-msgid "Show Logo Below HomeBar"
+msgid "Show Logo"
+msgstr ""
+
+msgctxt "#31563"
+msgid "List Xtra"
 msgstr ""
 
 msgctxt "#31600"
@@ -2634,6 +2638,10 @@ msgstr ""
 
 msgctxt "#31734"
 msgid "Use QuickList instead of default shutdown menu"
+msgstr ""
+
+msgctxt "#31735"
+msgid "Artwork"
 msgstr ""
 
 
@@ -3539,19 +3547,10 @@ msgctxt "#31996"
 msgid "Resume Flag"
 msgstr ""
 
+msgctxt "#31997"
+msgid "Polaroid"
+msgstr ""
+
 msgctxt "#31999"
 msgid "Login"
 msgstr ""
-
-
-
-
-
-
-
-
-
-
-
-
-
