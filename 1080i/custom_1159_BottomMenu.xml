@@ -13,33 +13,7 @@
 				<height>630</height>
 				<texture>views/lowlist_panelback.png</texture>
 			</control>
-			<!--control type="button" id="2019">
-                <top>1020</top>
-                <width>60</width>
-                <height>60</height>
-                <texturefocus border="8">views/tripanel/listselect_fo.png</texturefocus>
-                <texturenofocus>-</texturenofocus>
-                <colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-                <onup>Action(Close)</onup>
-                <ondown>Action(Close)</ondown>
-                <onright>2020</onright>
-                <onleft>SetFocus(2020,20)</onleft>
-                <onleft>2020</onleft>
-                <onclick condition="String.IsEmpty(Window(home).Property(DisableWidgets))">SetProperty(DisableWidgets,true,home)</onclick>
-                <onclick condition="!String.IsEmpty(Window(home).Property(DisableWidgets))">ClearProperty(DisableWidgets,home)</onclick>
-            </control>
-            <control type="image" id="2016">
-                <top>1025</top>
-                <width>60</width>
-                <height>60</height>
-                <texture>$VAR[WidgetModeIconVar]</texture>
-            </control>
-            <control type="list" id="2020">
-                <left>60</left>
-                <top>1020</top>
-                <width>1920</width-->
 			<control type="list" id="2020">
-				<left>0</left>
 				<top>1020</top>
 				<width>1980</width>
 				<height>135</height>
@@ -124,7 +98,7 @@
 					<item id="2">
 						<label>$LOCALIZE[31831]</label>
 						<label2>$INFO[System.DVDLabel]</label2>
-						<thumb>special://skin/extras/BigIcons/CD-DVD.png</thumb>
+						<thumb>BigIcons/CD-DVD.png</thumb>
 						<visible>System.HasMediadvd</visible>
 						<onclick>Dialog.Close(1159)</onclick>
 						<onclick>PlayDVD()</onclick>
@@ -132,7 +106,7 @@
 					<item id="3">
 						<label>31172</label>
 						<label2>$INFO[MusicPlayer.Artist]</label2>
-						<thumb>special://skin/extras/BigIcons/Headphone.png</thumb>
+						<thumb>BigIcons/Headphone.png</thumb>
 						<visible>Player.HasAudio</visible>
 						<onclick>Dialog.Close(1159)</onclick>
 						<onclick>ActivateWindow(1154)</onclick>
@@ -140,7 +114,7 @@
 					<item id="4">
 						<label>31819</label>
 						<label2 fallback="No TVShows Today">$INFO[Window(Home).Property(NextAired.1.ShortTime),,: ]$INFO[Window(Home).Property(NextAired.1.Label)]</label2>
-						<thumb fallback="special://skin/extras/BigIcons/Television.png">$INFO[Window(Home).Property(NextAired.1.Art(clearlogo))]</thumb>
+						<thumb fallback="BigIcons/Television.png">$INFO[Window(Home).Property(NextAired.1.Art(clearlogo))]</thumb>
 						<onclick>Dialog.Close(1159)</onclick>
 						<onclick>RunAddon(script.tv.show.next.aired)</onclick>
 					</item>
@@ -155,7 +129,7 @@
 					<item id="6">
 						<label>19158</label>
 						<label2>$INFO[PVR.NowRecordingTitle]</label2>
-						<thumb>special://skin/extras/BigIcons/Television.png</thumb>
+						<thumb>BigIcons/Television.png</thumb>
 						<onclick>Dialog.Close(1159)</onclick>
 						<onclick>ActivateWindowAndFocus(PVR, 34,0, 13,0)</onclick>
 						<visible>PVR.IsRecording</visible>
@@ -163,7 +137,7 @@
 					<item id="7">
 						<label>19157</label>
 						<label2>$INFO[PVR.NextRecordingDateTime]: $INFO[PVR.NextRecordingTitle]</label2>
-						<thumb>special://skin/extras/BigIcons/ButtonRecord.png</thumb>
+						<thumb>BigIcons/ButtonRecord.png</thumb>
 						<onclick>Dialog.Close(1159)</onclick>
 						<onclick>ActivateWindowAndFocus(PVR, 34,0, 13,0)</onclick>
 						<visible>PVR.HasNonRecordingTimer</visible>
@@ -171,39 +145,12 @@
 					<item id="8">
 						<label>31163</label>
 						<label2>[COLOR grey]$LOCALIZE[20343]:[/COLOR] $INFO[Window(Home).Property(TVShows.Count)]</label2>
-						<thumb>special://skin/extras/BigIcons/Star.png</thumb>
+						<thumb>BigIcons/Star.png</thumb>
 						<onclick>Dialog.Close(1159)</onclick>
 						<onclick>ActivateWindow(1115)</onclick>
 					</item>
 				</content>
 			</control>
-			<!--        <control type="grouplist" id="2020">
-                <left>0</left>
-                <top>1007</top>
-                <width>600</width>
-                <align>left</align>
-                <itemgap>7</itemgap>
-                <orientation>horizontal</orientation>
-                <control type="label" id="2017">
-                    <width>500</width>
-                    <height>70</height>
-                    <align>right</align>
-                    <aligny>top</aligny>
-                    <label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>
-                    <font>Font_Reg26_Caps</font>
-                    <textcolor>FFFFFFFF</textcolor>
-                    <scroll>false</scroll>
-                    <animation effect="zoom" center="0,22" start="100" end="120" time="160" tween="quadratic">Focus</animation>
-                </control>
-            </control>
-            <control type="image" id="2018">
-                <left>0</left>
-                <top>1007</top>
-                <width>45</width>
-                <height>45</height>
-                <colordiffuse>white</colordiffuse>
-                <texture>dialogs/circle/$INFO[Window(Home).Property(RecommendedMovie.1.PercentPlayed)].png</texture>
-            </control> -->
 		</control>
 		<control type="wraplist" id="8014">
 			<left>-1000</left>

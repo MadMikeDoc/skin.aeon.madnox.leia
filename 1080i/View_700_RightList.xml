@@ -32,8 +32,7 @@
 			</control>
 			<!-- MAD - Fake Logos -->
 			<control type="textbox">
-				<posx>0</posx>
-				<posy>38</posy>
+				<top>38</top>
 				<width>510</width>
 				<height>220</height>
 				<align>center</align>
@@ -43,11 +42,10 @@
 				<font>font_SimplerE3D_bold</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>String.Contains(ListItem.Title,a,Left) | String.Contains(ListItem.Title,b,Left) | String.Contains(ListItem.Title,c,Left) | String.Contains(ListItem.Title,d,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,a) | String.StartsWith(ListItem.Title,b) | String.StartsWith(ListItem.Title,c) | String.StartsWith(ListItem.Title,d)</visible>
 			</control>
 			<control type="textbox">
-				<posx>0</posx>
-				<posy>38</posy>
+				<top>38</top>
 				<width>510</width>
 				<height>220</height>
 				<align>center</align>
@@ -57,11 +55,10 @@
 				<font>font_armyofdarkness</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>String.Contains(ListItem.Title,e,Left) | String.Contains(ListItem.Title,f,Left) | String.Contains(ListItem.Title,g,Left) | String.Contains(ListItem.Title,h,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,e) | String.StartsWith(ListItem.Title,f) | String.StartsWith(ListItem.Title,g) | String.StartsWith(ListItem.Title,h)</visible>
 			</control>
 			<control type="textbox">
-				<posx>0</posx>
-				<posy>38</posy>
+				<top>38</top>
 				<width>510</width>
 				<height>220</height>
 				<align>center</align>
@@ -71,11 +68,10 @@
 				<font>font_babylon5</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>String.Contains(ListItem.Title,i,Left) | String.Contains(ListItem.Title,j,Left) | String.Contains(ListItem.Title,k,Left) | String.Contains(ListItem.Title,l,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,i) | String.StartsWith(ListItem.Title,j) | String.StartsWith(ListItem.Title,k) | String.StartsWith(ListItem.Title,l)</visible>
 			</control>
 			<control type="textbox">
-				<posx>0</posx>
-				<posy>38</posy>
+				<top>38</top>
 				<width>510</width>
 				<height>220</height>
 				<align>center</align>
@@ -85,11 +81,10 @@
 				<font>font_bachelorpad</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>String.Contains(ListItem.Title,m,Left) | String.Contains(ListItem.Title,n,Left) | String.Contains(ListItem.Title,o,Left) | String.Contains(ListItem.Title,p,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,m) | String.StartsWith(ListItem.Title,n) | String.StartsWith(ListItem.Title,o) | String.StartsWith(ListItem.Title,p)</visible>
 			</control>
 			<control type="textbox">
-				<posx>0</posx>
-				<posy>38</posy>
+				<top>38</top>
 				<width>510</width>
 				<height>220</height>
 				<align>center</align>
@@ -99,11 +94,10 @@
 				<font>font_bullpen3d</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>String.Contains(ListItem.Title,q,Left) | String.Contains(ListItem.Title,r,Left) | String.Contains(ListItem.Title,s,Left) | String.Contains(ListItem.Title,t,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,q) | String.StartsWith(ListItem.Title,r) | String.StartsWith(ListItem.Title,s) | String.Contains(ListItem.Title,t)</visible>
 			</control>
 			<control type="textbox">
-				<posx>0</posx>
-				<posy>38</posy>
+				<top>38</top>
 				<width>510</width>
 				<height>220</height>
 				<align>center</align>
@@ -113,7 +107,7 @@
 				<font>font_terminator</font>
 				<label>[B]$VAR[FirstLabelVar][/B]</label>
 				<visible>String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.HasSetting(rightlistfakelogo)</visible>
-				<visible>String.Contains(ListItem.Title,u,Left) | String.Contains(ListItem.Title,v,Left) | String.Contains(ListItem.Title,w,Left) | String.Contains(ListItem.Title,x,Left) | String.Contains(ListItem.Title,y,Left) | String.Contains(ListItem.Title,z,Left)</visible>
+				<visible>String.StartsWith(ListItem.Title,u) | String.StartsWith(ListItem.Title,v) | String.StartsWith(ListItem.Title,w) | String.StartsWith(ListItem.Title,x) | String.StartsWith(ListItem.Title,y) | String.StartsWith(ListItem.Title,z)</visible>
 			</control>
 			<!--MAD - End of Fake Logo -->
 			<control type="group">
@@ -230,7 +224,7 @@
 					<width>422</width>
 					<height>626</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+					<texture background="true" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -243,7 +237,7 @@
 					<width>438</width>
 					<height>637</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterBackupVar]</texture>
+					<texture background="true" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterBackupVar]</texture>
 					<fadetime>IconCrossfadeTime2</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -255,7 +249,7 @@
 					<width>438</width>
 					<height>637</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+					<texture background="true" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -267,7 +261,7 @@
 					<width>438</width>
 					<height>637</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+					<texture background="true" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -395,7 +389,7 @@
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 				</control>
 				<control type="scrollbar" id="63">
 					<left>640</left>
@@ -441,7 +435,7 @@
 					<left>1000</left>
 					<top>-13</top>
 					<colordiffuse>floor</colordiffuse>
-					<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
+					<texture>default-studio.png</texture>
 					<include>AudioFlagsVars</include>
 					<visible>String.IsEmpty(ListItem.Studio)</visible>
 				</control>
@@ -495,7 +489,7 @@
 				<control type="image">
 					<left>800</left>
 					<colordiffuse>floor</colordiffuse>
-					<texture>$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+					<texture>$VAR[ColorFlags]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 					<include>AudioFlagsVars</include>
 					<include>VisibleFadeEffect</include>
 				</control>
@@ -523,7 +517,6 @@
 						<width>162.5</width>
 						<visible>!String.IsEmpty(ListItem.Property(TotalSeasons))</visible>
 						<control type="label">
-							<left>0</left>
 							<top>2</top>
 							<width>162.5</width>
 							<height>60</height>
@@ -549,7 +542,6 @@
 						<left>1100</left>
 						<top>-6</top>
 						<control type="label">
-							<left>0</left>
 							<top>2</top>
 							<width>162.5</width>
 							<height>60</height>
@@ -575,7 +567,6 @@
 						<left>1220</left>
 						<top>-6</top>
 						<control type="label">
-							<left>0</left>
 							<width>200</width>
 							<height>60</height>
 							<align>center</align>
@@ -664,7 +655,6 @@
 				</itemlayout>
 				<focusedlayout height="85" width="806" condition="!Skin.HasSetting(rightlistalternate) + [Container.Content(movies) | Container.Content(sets)]">
 					<control type="image">
-						<top>0</top>
 						<left>20</left>
 						<width>825</width>
 						<height>85</height>
@@ -760,17 +750,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="85" width="806" condition="Skin.HasSetting(rightlistalternate) + [Container.Content(movies) | Container.Content(sets)]">
-					<!--
-					<control type="image">
-						<top>0</top>
-						<left>20</left>
-						<width>825</width>
-						<height>85</height>
-						<texture border="4">listselect_fo.png</texture>
-						<visible>Control.HasFocus(700)</visible>
-						<include>VisibleFadeEffect</include>
-					</control>
-				-->
 					<control type="label">
 						<top>-12</top>
 						<left>30</left>
@@ -867,7 +846,6 @@
 						<left>736</left>
 						<top>-1</top>
 						<control type="image">
-							<left>0</left>
 							<top>3</top>
 							<width>64</width>
 							<height>64</height>
@@ -877,7 +855,6 @@
 						</control>
 						<control type="label">
 							<left>-18</left>
-							<top>0</top>
 							<width>116</width>
 							<height>68</height>
 							<font>Font_Reg26</font>
@@ -892,7 +869,6 @@
 				</itemlayout>
 				<focusedlayout height="85" width="806" condition="!Skin.HasSetting(rightlistalternatetv) + Container.Content(tvshows)">
 					<control type="image">
-						<top>0</top>
 						<left>20</left>
 						<width>825</width>
 						<height>85</height>
@@ -949,7 +925,6 @@
 						<left>736</left>
 						<top>10</top>
 						<control type="image">
-							<left>0</left>
 							<top>3</top>
 							<width>64</width>
 							<height>64</height>
@@ -959,7 +934,6 @@
 						</control>
 						<control type="label">
 							<left>-18</left>
-							<top>0</top>
 							<width>116</width>
 							<height>68</height>
 							<font>Font_Reg26</font>
@@ -1004,7 +978,6 @@
 						<left>742</left>
 						<top>-1</top>
 						<control type="image">
-							<left>0</left>
 							<top>3</top>
 							<width>64</width>
 							<height>64</height>
@@ -1014,7 +987,6 @@
 						</control>
 						<control type="label">
 							<left>-18</left>
-							<top>0</top>
 							<width>100</width>
 							<height>68</height>
 							<font>Font_Reg26</font>
@@ -1028,17 +1000,6 @@
 					</control>
 				</itemlayout>
 				<focusedlayout height="85" width="806" condition="Skin.HasSetting(rightlistalternatetv) + Container.Content(tvshows)">
-					<!--
-					<control type="image">
-						<top>0</top>
-						<left>20</left>
-						<width>825</width>
-						<height>85</height>
-						<texture border="4">listselect_fo.png</texture>
-						<visible>Control.HasFocus(700)</visible>
-						<include>VisibleFadeEffect</include>
-					</control>
-				-->
 					<control type="label">
 						<top>-12</top>
 						<left>30</left>
@@ -1076,7 +1037,6 @@
 						<left>742</left>
 						<top>10</top>
 						<control type="image">
-							<left>0</left>
 							<top>3</top>
 							<width>64</width>
 							<height>64</height>
@@ -1086,7 +1046,6 @@
 						</control>
 						<control type="label">
 							<left>-18</left>
-							<top>0</top>
 							<width>100</width>
 							<height>68</height>
 							<font>Font_Reg26</font>
@@ -1131,7 +1090,6 @@
 						<left>742</left>
 						<top>-1</top>
 						<control type="image">
-							<left>0</left>
 							<top>1</top>
 							<width>72</width>
 							<height>72</height>
@@ -1163,7 +1121,6 @@
 						<texture border="1">separator2.png</texture>
 					</control>
 					<control type="image">
-						<top>0</top>
 						<left>20</left>
 						<width>825</width>
 						<height>68</height>
@@ -1196,7 +1153,6 @@
 						<left>742</left>
 						<top>-1</top>
 						<control type="image">
-							<left>0</left>
 							<top>-1</top>
 							<width>72</width>
 							<height>72</height>
@@ -1244,7 +1200,6 @@
 						<left>742</left>
 						<top>-1</top>
 						<control type="image">
-							<left>0</left>
 							<top>3</top>
 							<width>64</width>
 							<height>64</height>
@@ -1254,7 +1209,6 @@
 						</control>
 						<control type="label">
 							<left>-18</left>
-							<top>0</top>
 							<width>100</width>
 							<height>68</height>
 							<font>Font_Reg26</font>
@@ -1292,7 +1246,6 @@
 						<left>742</left>
 						<top>-1</top>
 						<control type="image">
-							<left>0</left>
 							<top>3</top>
 							<width>64</width>
 							<height>64</height>
@@ -1302,7 +1255,6 @@
 						</control>
 						<control type="label">
 							<left>-18</left>
-							<top>0</top>
 							<width>100</width>
 							<height>68</height>
 							<font>Font_Reg26</font>
@@ -1354,7 +1306,6 @@
 				</itemlayout>
 				<focusedlayout height="85" width="806" condition="Container.Content(episodes) + !Skin.HasSetting(rightlistalternateepisode)">
 					<control type="image">
-						<top>0</top>
 						<left>20</left>
 						<width>825</width>
 						<height>85</height>
@@ -1521,11 +1472,11 @@
 				<onleft>700</onleft>
 				<onright>SetProperty(MediaMenu,True,home)</onright>
 				<onright>SetFocus(9000)</onright>
-				<texturesliderbackground border="1">-</texturesliderbackground>
+				<texturesliderbackground />
 				<texturesliderbar border="6,0,6,0">scrollbar/texturesliderbar_hor.png</texturesliderbar>
 				<texturesliderbarfocus border="6,0,6,0">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
-				<!-- <textureslidernib>-</textureslidernib>
-			<textureslidernibfocus>-</textureslidernibfocus> -->
+				<!-- <textureslidernib />
+			<textureslidernibfocus /> -->
 				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
@@ -1632,7 +1583,6 @@
 				<top>95</top>
 				<width>763</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>homewidgets/glass/banner.png</texture>
 				<visible>Skin.HasSetting(rightlistBannerartist) + [!String.IsEmpty(Control.GetLabel(6565)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
 				<animation effect="slide" start="0,280" end="0" time="500" tween="cubic" delay="50" condition="!Container.Content(Artists)">Conditional</animation>
@@ -1643,7 +1593,6 @@
 				<top>95</top>
 				<width>763</width>
 				<height>150</height>
-				<aspectratio>stretch</aspectratio>
 				<texture>thumbs_square/banner_shadow_in.png</texture>
 				<visible>Skin.HasSetting(rightlistBannerartist) + [!String.IsEmpty(Control.GetLabel(6565)) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Banner))]</visible>
 				<animation effect="slide" start="0,280" end="0" time="500" tween="cubic" delay="50" condition="!Container.Content(Artists)">Conditional</animation>
@@ -1781,7 +1730,6 @@
 					<height>410</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true" diffuse="thumbs/cdcover_mask.png">common/bgcolor.png</texture>
-					<fadetime>0</fadetime>
 				</control>
 				<control type="image">
 					<top>255</top>
@@ -1822,7 +1770,6 @@
 					<height>410</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true">common/bgcolor.png</texture>
-					<fadetime>0</fadetime>
 				</control>
 				<control type="image">
 					<top>255</top>
@@ -1879,7 +1826,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font10</font>
-				<autoscroll time="1000" delay="4000" repeat="5000"></autoscroll>
+				<autoscroll time="1000" delay="4000" repeat="5000">true</autoscroll>
 				<visible>!ListItem.IsParentFolder + Container.Content(albums) + Skin.HasSetting(RightListShowTracks)</visible>
 			</control>
 			<control type="textbox">
@@ -1892,7 +1839,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font10</font>
-				<autoscroll time="1500" delay="4000" repeat="5000"></autoscroll>
+				<autoscroll time="1500" delay="4000" repeat="5000">true</autoscroll>
 				<visible>Skin.HasSetting(RightListShowCDs) + Container.Content(artists)</visible>
 			</control>
 			<control type="textbox">
@@ -1905,7 +1852,7 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>font10</font>
-				<autoscroll time="1500" delay="8000" repeat="5000"></autoscroll>
+				<autoscroll time="1500" delay="8000" repeat="5000">true</autoscroll>
 				<visible>Skin.HasSetting(RightListShowInfo)</visible>
 			</control>
 			</control>
@@ -2052,7 +1999,6 @@
 				<top>740</top>
 				<control type="scrollbar" id="63">
 					<left>636</left>
-					<top>0</top>
 					<width>14</width>
 					<height>245</height>
 					<onup>PageUp(70)</onup>
@@ -2134,7 +2080,6 @@
 					</control>
 					<control type="image">
 						<top>-11</top>
-						<left>0</left>
 						<width>840</width>
 						<height>90</height>
 						<texture border="0" colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo2.png</texture>
@@ -2155,7 +2100,6 @@
 					</control>
 					<control type="label">
 						<left>10</left>
-						<top>0</top>
 						<width>775</width>
 						<height>68</height>
 						<font>font15</font>
@@ -2201,11 +2145,11 @@
 				<onleft>700</onleft>
 				<onright>SetProperty(MediaMenu,True,home)</onright>
 				<onright>SetFocus(9000)</onright>
-				<texturesliderbackground border="1">-</texturesliderbackground>
+				<texturesliderbackground />
 				<texturesliderbar border="6,0,6,0">scrollbar/texturesliderbar_hor.png</texturesliderbar>
 				<texturesliderbarfocus border="6,0,6,0">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
-				<textureslidernib>-</textureslidernib>
-				<textureslidernibfocus>-</textureslidernibfocus>
+				<textureslidernib />
+				<textureslidernibfocus />
 				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>

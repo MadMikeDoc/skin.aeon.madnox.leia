@@ -13,7 +13,6 @@
 				<ondown>9000</ondown>
 				<pagecontrol>71</pagecontrol>
 				<scrolltime tween="quadratic">500</scrolltime>
-				<focusposition>0</focusposition>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
 				<visible>![!String.IsEmpty(Skin.String(DisableBigFanVL)) + Window.IsActive(videos)]</visible>
@@ -135,7 +134,7 @@
 					<top>166</top>
 					<width>215</width>
 					<height>315</height>
-					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 					<fadetime>275</fadetime>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
@@ -144,7 +143,7 @@
 					<top>166</top>
 					<width>215</width>
 					<height>315</height>
-					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar1]</texture>
+					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 					<fadetime>275</fadetime>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
@@ -179,21 +178,19 @@
 					<top>754</top>
 					<width>204</width>
 					<height>303</height>
-					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$INFO[ListItem.Art(poster)]</texture>
+					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$INFO[ListItem.Art(poster)]</texture>
 					<fadetime>275</fadetime>
 					<visible>String.IsEqual(Window(home).Property(actualViewtype),BigFan) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(genres) | Container.Content(sets)] | Container.Content(seasons)</visible>
 				</control>
 			</control>
 			<control type="image">
 				<left>194r</left>
-				<top>0</top>
 				<width>200</width>
 				<height>200</height>
 				<include>OverlayVisibility0</include>
 			</control>
 			<control type="image">
 				<left>194r</left>
-				<top>0</top>
 				<width>200</width>
 				<height>200</height>
 				<texture>$VAR[VideoextrasOverlay]</texture>
@@ -201,7 +198,6 @@
 			</control>
 			<control type="image">
 				<left>194r</left>
-				<top>0</top>
 				<width>200</width>
 				<height>200</height>
 				<texture>overlayprogress.png</texture>
@@ -228,7 +224,6 @@
 					<width>55</width>
 					<height>55</height>
 					<texture colordiffuse="$VAR[FocusTextureColorVar]">$VAR[WatchedIconVar]</texture>
-					<fadetime>0</fadetime>
 				</control>
 			</control>
 			<control type="label">

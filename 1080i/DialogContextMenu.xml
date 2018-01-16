@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol>1000</defaultcontrol>
-
 	<coordinates>
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 		<system>1</system>
 	</coordinates>
 	<include>Animation_DialogZoom</include>
 	<onunload condition="String.Contains(Skin.String(widgetlist),favourite) | String.Contains(Skin.String(widget2list),favourite)">AlarmClock(FavouriteUpdate,RunScript(script.favourites),00:01,silent)</onunload>
 	<controls>
 		<control type="image" id="999">
-			<posx>0</posx>
-			<posy>0</posy>
 			<width>462</width>
 			<height>1040</height>
 			<texture colordiffuse="$VAR[SpotColorVar2]" fallback="dialogs/context_middle_alt.png">$VAR[ContextMiddleVar]</texture>
@@ -20,8 +17,7 @@
 		<control type="grouplist" id="996">
 			<width>462</width>
 			<height max="1000">auto</height>
-			<posx>-1</posx>
-			<posy>0</posy>
+			<left>-1</left>
 			<control type="button" id="2001">
 				<width>462</width>
 				<height>58</height>
@@ -105,10 +101,10 @@
 				<font>Font_Reg30_2</font>
 				<textcolor>context</textcolor>
 				<focusedcolor>white2</focusedcolor>
-				<visible>Container.Content(albums) | Container.Content(songs) | String.Contains(ListItem.FolderPath,.xsp,right) | String.Contains(ListItem.FolderPath,.m3u,right)</visible>
+				<visible>Container.Content(albums) | Container.Content(songs) | String.EndsWith(ListItem.FolderPath,.xsp) | String.EndsWith(ListItem.FolderPath,.m3u)</visible>
 				<onclick condition="Container.Content(albums)">Skin.SetString(Startup_Playlist_Path,RunScript(script.playalbum,albumid=$INFO[ListItem.DBID]))</onclick>
 				<onclick condition="Container.Content(songs)">Skin.SetString(Startup_Playlist_Path,RunScript(script.playalbum,songid=$INFO[ListItem.DBID]))</onclick>
-				<onclick condition="String.Contains(ListItem.FolderPath,.xsp,right) | String.Contains(ListItem.FolderPath,.m3u,right)">Skin.SetString(Startup_Playlist_Path,$ESCINFO[ListItem.FolderPath])</onclick>
+				<onclick condition="String.EndsWith(ListItem.FolderPath,.xsp) | String.EndsWith(ListItem.FolderPath,.m3u)">Skin.SetString(Startup_Playlist_Path,$ESCINFO[ListItem.FolderPath])</onclick>
 				<onclick>Skin.SetBool(Use_Startup_Playlist)</onclick>
 			</control>
 			<control type="button" id="2017">
@@ -139,9 +135,9 @@
 				<font>Font_Reg30_2</font>
 				<textcolor>context</textcolor>
 				<focusedcolor>white2</focusedcolor>
-				<visible>Window.IsActive(addonbrowser) + [String.Contains(ListItem.AddonID,script.,left) | String.Contains(ListItem.AddonID,plugin.,left)]</visible>
-				<onclick condition="String.Contains(ListItem.AddonID,script.,left)">Runscript($INFO[ListItem.AddonID)])</onclick>
-				<onclick condition="String.Contains(ListItem.AddonID,plugin.,left)">RunAddon($INFO[ListItem.AddonID)])</onclick>
+				<visible>Window.IsActive(addonbrowser) + [String.StartsWith(ListItem.AddonID,script.) | String.StartsWith(ListItem.AddonID,plugin.)]</visible>
+				<onclick condition="String.StartsWith(ListItem.AddonID,script.)">Runscript($INFO[ListItem.AddonID)])</onclick>
+				<onclick condition="String.StartsWith(ListItem.AddonID,plugin.)">RunAddon($INFO[ListItem.AddonID)])</onclick>
 			</control>
 			<control type="button" id="2020">
 				<width>462</width>
@@ -192,7 +188,7 @@
 			</control>
 		</control>
 		<control type="image" id="997">
-			<posx>-1</posx>
+			<left>-1</left>
 			<top>-39</top>
 			<width>462</width>
 			<height>39</height>

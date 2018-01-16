@@ -130,7 +130,6 @@
 							<scroll>true</scroll>
 						</control>
 						<control type="textbox">
-							<left>0</left>
 							<top>209</top>
 							<width>729</width>
 							<height>220</height>
@@ -1093,9 +1092,9 @@
 	<include name="cdarthome">
 		<texture background="true">$INFO[Player.FolderPath]cdart.png</texture>
 	</include>
-	<include name="cdart">
+	<!-- <include name="cdart">
 		<texture background="true" fallback="common/cdart/default.png">$INFO[Player.FolderPath]cdart.png</texture>
-	</include>
+	</include> -->
 	<include name="vinylart">
 		<texture background="true" fallback="common/cdart/vinyl.png">$INFO[Player.FolderPath]cdart.png</texture>
 	</include>
@@ -1120,7 +1119,6 @@
 			<texture border="4">osd/osd_settings_buttonnf.png</texture>
 		</control>
 		<control type="image">
-			<left>0</left>
 			<top>10</top>
 			<width>235</width>
 			<height>235</height>
@@ -1254,8 +1252,8 @@
 					<texturenofocus>osd/buttons/OSDRecordNF.png</texturenofocus>
 					<label>264</label>
 					<include>ClassicOSDButton</include>
-					<onclick>PlayerControl(record)</onclick>
-					<visible>Player.CanRecord</visible>
+					<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+					<visible>PVR.CanRecordPlayingChannel</visible>
 				</control>
 			</control>
 			<control type="grouplist" id="651">
@@ -1289,10 +1287,10 @@
 				<control type="button" id="704">
 					<width>25</width>
 					<height>25</height>
-					<texturefocus>-</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturefocus />
+					<texturenofocus />
 					<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
-					<font>-</font>
+					<font />
 					<onclick>PlayerControl(Repeat)</onclick>
 				</control>
 				<control type="image" id="715">
@@ -1334,25 +1332,25 @@
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/Format.png</texturenofocus>
+				<texturenofocus>BigIcons/Format.png</texturenofocus>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/Oscilloscope.png</texturenofocus>
+				<texturenofocus>BigIcons/Oscilloscope.png</texturenofocus>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/Controlpanel.png</texturenofocus>
+				<texturenofocus>BigIcons/Controlpanel.png</texturenofocus>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/Pin.png</texturenofocus>
+				<texturenofocus>BigIcons/Pin.png</texturenofocus>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 		</control>
@@ -1371,39 +1369,39 @@
 			<control type="button" id="700">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/Format.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/Format.png</texturefocus>
+				<texturenofocus />
 				<label>10517</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>ActivateWindow(MusicPlaylist)</onclick>
 			</control>
 			<control type="button" id="500">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/Oscilloscope.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/Oscilloscope.png</texturefocus>
+				<texturenofocus />
 				<label>12006</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 			</control>
 			<control type="button" id="701">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/Controlpanel.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/Controlpanel.png</texturefocus>
+				<texturenofocus />
 				<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 			</control>
 			<control type="button" id="702">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/Pin.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/Pin.png</texturefocus>
+				<texturenofocus />
 				<label>31048</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>ActivateWindow(visualisationpresetlist)</onclick>
 			</control>
@@ -1423,46 +1421,46 @@
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/ButtonFirst.png</texturenofocus>
+				<texturenofocus>BigIcons/ButtonFirst.png</texturenofocus>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/ButtonFRW.png</texturenofocus>
+				<texturenofocus>BigIcons/ButtonFRW.png</texturenofocus>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="togglebutton">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/ButtonPause.png</texturenofocus>
-				<alttexturenofocus>special://skin/extras/BigIcons/ButtonPlay.png</alttexturenofocus>
+				<texturenofocus>BigIcons/ButtonPause.png</texturenofocus>
+				<alttexturenofocus>BigIcons/ButtonPlay.png</alttexturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/ButtonStop.png</texturenofocus>
+				<texturenofocus>BigIcons/ButtonStop.png</texturenofocus>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/ButtonFFW.png</texturenofocus>
+				<texturenofocus>BigIcons/ButtonFFW.png</texturenofocus>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/ButtonEnd.png</texturenofocus>
+				<texturenofocus>BigIcons/ButtonEnd.png</texturenofocus>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/Microphone.png</texturenofocus>
-				<visible>Player.CanRecord</visible>
+				<texturenofocus>BigIcons/Microphone.png</texturenofocus>
+				<visible>PVR.CanRecordPlayingChannel</visible>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 		</control>
@@ -1483,33 +1481,33 @@
 			<control type="button" id="600">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/ButtonFirst.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/ButtonFirst.png</texturefocus>
+				<texturenofocus />
 				<label>210</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>PlayerControl(Previous)</onclick>
 			</control>
 			<control type="button" id="601">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/ButtonFRW.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/ButtonFRW.png</texturefocus>
+				<texturenofocus />
 				<label>31354</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>PlayerControl(Rewind)</onclick>
 			</control>
 			<control type="togglebutton" id="602">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/ButtonPause.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<alttexturefocus>special://skin/extras/BigIcons/ButtonPlay.png</alttexturefocus>
-				<alttexturenofocus>special://skin/extras/BigIcons/ButtonPlay.png</alttexturenofocus>
+				<texturefocus>BigIcons/ButtonPause.png</texturefocus>
+				<texturenofocus />
+				<alttexturefocus>BigIcons/ButtonPlay.png</alttexturefocus>
+				<alttexturenofocus>BigIcons/ButtonPlay.png</alttexturenofocus>
 				<label>31351</label>
 				<altlabel>208</altlabel>
-				<font>-</font>
+				<font />
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>PlayerControl(Play)</onclick>
@@ -1517,10 +1515,10 @@
 			<control type="button" id="603">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/ButtonStop.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/ButtonStop.png</texturefocus>
+				<texturenofocus />
 				<label>31352</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>down</onclick>
 				<onclick>PlayerControl(Stop)</onclick>
@@ -1528,33 +1526,33 @@
 			<control type="button" id="604">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/ButtonFFW.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/ButtonFFW.png</texturefocus>
+				<texturenofocus />
 				<label>31353</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>PlayerControl(Forward)</onclick>
 			</control>
 			<control type="button" id="605">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/ButtonEnd.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/ButtonEnd.png</texturefocus>
+				<texturenofocus />
 				<label>209</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
 			<control type="button" id="706">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/Microphone.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/Microphone.png</texturefocus>
+				<texturenofocus />
 				<label>264</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<onclick>PlayerControl(record)</onclick>
-				<visible>Player.CanRecord</visible>
+				<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+				<visible>PVR.CanRecordPlayingChannel</visible>
 			</control>
 		</control>
 		<control type="grouplist">
@@ -1572,15 +1570,15 @@
 			<control type="togglebutton">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/Lyrics.png</texturenofocus>
-				<alttexturenofocus>special://skin/extras/BigIcons/Lyrics.png</alttexturenofocus>
+				<texturenofocus>BigIcons/Lyrics.png</texturenofocus>
+				<alttexturenofocus>BigIcons/Lyrics.png</alttexturenofocus>
 				<usealttexture>String.IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="button">
 				<width>1</width>
 				<height>1</height>
-				<texturenofocus>-</texturenofocus>
+				<texturenofocus />
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="image">
@@ -1592,15 +1590,15 @@
 			<control type="togglebutton">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/ArrowRight.png</texturenofocus>
-				<alttexturenofocus>special://skin/extras/BigIcons/ButtonShuffle.png</alttexturenofocus>
+				<texturenofocus>BigIcons/ArrowRight.png</texturenofocus>
+				<alttexturenofocus>BigIcons/ButtonShuffle.png</alttexturenofocus>
 				<usealttexture>Playlist.IsRandom</usealttexture>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 			<control type="button">
 				<width>100</width>
 				<height>100</height>
-				<texturenofocus>special://skin/extras/BigIcons/Gears.png</texturenofocus>
+				<texturenofocus>BigIcons/Gears.png</texturenofocus>
 				<colordiffuse>gray</colordiffuse>
 			</control>
 		</control>
@@ -1621,12 +1619,12 @@
 			<control type="togglebutton" id="703">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/Lyrics.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<alttexturefocus>special://skin/extras/BigIcons/Lyrics.png</alttexturefocus>
-				<alttexturenofocus>-</alttexturenofocus>
+				<texturefocus>BigIcons/Lyrics.png</texturefocus>
+				<texturenofocus />
+				<alttexturefocus>BigIcons/Lyrics.png</alttexturefocus>
+				<alttexturenofocus />
 				<label>24013</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>Close</onclick>
 				<onclick>RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
@@ -1638,10 +1636,10 @@
 			<control type="button" id="704">
 				<width>1</width>
 				<height>1</height>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus />
+				<texturenofocus />
 				<label>$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>PlayerControl(Repeat)</onclick>
 			</control>
@@ -1655,12 +1653,12 @@
 			<control type="togglebutton" id="705">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/ArrowRight.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<alttexturefocus>special://skin/extras/BigIcons/ButtonShuffle.png</alttexturefocus>
-				<alttexturenofocus>-</alttexturenofocus>
+				<texturefocus>BigIcons/ArrowRight.png</texturefocus>
+				<texturenofocus />
+				<alttexturefocus>BigIcons/ButtonShuffle.png</alttexturefocus>
+				<alttexturenofocus />
 				<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<usealttexture>Playlist.IsRandom</usealttexture>
 				<onclick>PlayerControl(Random)</onclick>
@@ -1668,10 +1666,10 @@
 			<control type="button" id="707">
 				<width>100</width>
 				<height>100</height>
-				<texturefocus>special://skin/extras/BigIcons/Gears.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus>BigIcons/Gears.png</texturefocus>
+				<texturenofocus />
 				<label>31026</label>
-				<font>-</font>
+				<font />
 				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
 				<onclick>Dialog.Close(musicosd)</onclick>
 				<onclick>ActivateWindow(1117)</onclick>
@@ -2136,14 +2134,12 @@
 							<itemlayout height="48" width="800">
 								<control type="image">
 									<left>15</left>
-									<top>0</top>
 									<width>770</width>
 									<height>48</height>
 									<texture border="3">osd/osd_settings_buttonnf.png</texture>
 								</control>
 								<control type="label">
 									<left>-30</left>
-									<top>0</top>
 									<width>60</width>
 									<height>48</height>
 									<align>right</align>
@@ -2153,7 +2149,6 @@
 								</control>
 								<control type="label">
 									<left>45</left>
-									<top>0</top>
 									<width>765</width>
 									<height>48</height>
 									<align>left</align>
@@ -2161,7 +2156,6 @@
 									<font>Font_Reg29</font>
 									<textcolor>grey2</textcolor>
 								</control>
-
 							</itemlayout>
 							<focusedlayout height="48" width="800">
 								<control type="image">
@@ -2172,14 +2166,12 @@
 								</control>
 								<control type="image">
 									<left>15</left>
-									<top>0</top>
 									<width>370</width>
 									<height>48</height>
 									<texture border="3">osd/osd_settings_buttonnf.png</texture>
 								</control>
 								<control type="label">
 									<left>-30</left>
-									<top>0</top>
 									<width>60</width>
 									<height>48</height>
 									<align>right</align>
@@ -2189,7 +2181,6 @@
 								</control>
 								<control type="label">
 									<left>45</left>
-									<top>0</top>
 									<width>765</width>
 									<height>48</height>
 									<align>left</align>
@@ -2420,7 +2411,6 @@
 				<colordiffuse>$VAR[ExtendedColorVar]</colordiffuse>
 			</control>
 			<control type="grouplist">
-				<left>0</left>
 				<width>1920</width>
 				<align>center</align>
 				<itemgap>50</itemgap>
@@ -2496,280 +2486,280 @@
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.1.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.1.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.2.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.2.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.2.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.3.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.3.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.3.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.4.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.4.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.4.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.5.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.5.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.5.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.6.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.6.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.6.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.7.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.7.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.7.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.8.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.8.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.8.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.9.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.9.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.9.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.10.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.10.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.10.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.11.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.11.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.11.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.12.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.12.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.12.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.13.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.13.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.13.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.14.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.14.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.14.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.15.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.15.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.15.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.16.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.16.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.16.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.17.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.17.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.17.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.18.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.18.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.18.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.19.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.19.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.19.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.20.SimilarName)]</label>
 				<label2>• • Similar Artists • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.20.SimilarThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.20.SimilarThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.1.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.1.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.1.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.2.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.2.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.2.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.3.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.3.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.3.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.4.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.4.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.4.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.5.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.5.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.5.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.6.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.6.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.6.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.7.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.7.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.7.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.8.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.8.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.8.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.9.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.9.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.9.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.10.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.10.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.10.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.11.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.11.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.11.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.12.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.12.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.12.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.13.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.13.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.13.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.14.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.14.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.14.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.15.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.15.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.15.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.16.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.16.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.16.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.17.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.17.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.17.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.18.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.18.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.18.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.19.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.19.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.19.AlbumThumb))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.20.AlbumName)]</label>
 				<label2>• • Discography • •</label2>
 				<icon>$INFO[Window(Visualisation).Property(ArtistSlideshow.20.AlbumThumb)]</icon>
-				<onclick>-</onclick>
+				<onclick>noop</onclick>
 				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.20.AlbumThumb))</visible>
 			</item>
 		</content>

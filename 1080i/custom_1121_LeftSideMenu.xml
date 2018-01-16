@@ -587,7 +587,6 @@
 					<texture colordiffuse="white3">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
-					<left></left>
 					<top>53</top>
 					<width>219</width>
 					<height>60</height>
@@ -619,7 +618,6 @@
 					<texture colordiffuse="white2">$INFO[ListItem.Icon]</texture>
 				</control>
 				<control type="label">
-					<left></left>
 					<top>53</top>
 					<width>219</width>
 					<height>60</height>
@@ -638,8 +636,8 @@
 			<height>40</height>
 			<align>center</align>
 			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">-</texturenofocus>
-			<label>-</label>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8" />
+			<label />
 			<textcolor>grey2</textcolor>
 			<onclick condition="String.IsEmpty(Window(home).Property(quicknavsetup))">SetProperty(quicknavsetup,1,home)</onclick>
 			<onclick condition="String.IsEmpty(Window(home).Property(quicknavsetup))">Notification($LOCALIZE[31902],$LOCALIZE[31881])</onclick>
@@ -668,8 +666,8 @@
 			<height>40</height>
 			<align>center</align>
 			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">-</texturenofocus>
-			<label>-</label>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8" />
+			<label />
 			<textcolor>grey2</textcolor>
 			<onclick>Action(Close)</onclick>
 			<onclick>Fullscreen</onclick>
@@ -686,7 +684,7 @@
 			<top>1043</top>
 			<width>42</width>
 			<height>42</height>
-			<texture>special://skin/extras/BigIcons/Fullscreen2.png</texture>
+			<texture>BigIcons/Fullscreen2.png</texture>
 			<animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9013)">Conditional</animation>
 			<visible>Control.IsVisible(9013)</visible>
 		</control>
@@ -697,8 +695,8 @@
 			<height>40</height>
 			<align>center</align>
 			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">-</texturenofocus>
-			<label>-</label>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8" />
+			<label />
 			<textcolor>grey2</textcolor>
 			<onclick>Action(Close)</onclick>
 			<onclick>ActivateWindow(musicplaylist)</onclick>
@@ -715,7 +713,7 @@
 			<top>1043</top>
 			<width>42</width>
 			<height>42</height>
-			<texture>special://skin/extras/BigIcons/Format.png</texture>
+			<texture>BigIcons/Format.png</texture>
 			<animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9014)">Conditional</animation>
 			<visible>Control.IsVisible(9014)</visible>
 		</control>
@@ -726,8 +724,8 @@
 			<height>40</height>
 			<align>center</align>
 			<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
-			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">-</texturenofocus>
-			<label>-</label>
+			<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="8" />
+			<label />
 			<textcolor>grey2</textcolor>
 			<onclick>Action(Close)</onclick>
 			<onclick>PlayDVD()</onclick>
@@ -744,7 +742,7 @@
 			<top>1043</top>
 			<width>42</width>
 			<height>42</height>
-			<texture>special://skin/extras/BigIcons/CD-DVD.png</texture>
+			<texture>BigIcons/CD-DVD.png</texture>
 			<animation effect="fade" start="100" end="75" time="100" condition="!Control.HasFocus(9015)">Conditional</animation>
 			<visible>Control.IsVisible(9015)</visible>
 		</control>

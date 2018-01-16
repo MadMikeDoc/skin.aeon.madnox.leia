@@ -1012,7 +1012,6 @@
 				<align>right</align>
 				<aligny>bottom</aligny>
 				<label>$VAR[InfoWallBottomLabel1Var]$INFO[ListItem.Rating, • ]</label>
-				<font>Font_Reg28</font>
 				<textcolor>grey</textcolor>
 			</control>
 		</itemlayout>
@@ -1074,7 +1073,6 @@
 					<align>right</align>
 					<aligny>bottom</aligny>
 					<label>$VAR[InfoWallBottomLabel1Var]$INFO[ListItem.Genre, • ]</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey</textcolor>
 				</control>
 				<control type="textbox">
@@ -1110,7 +1108,6 @@
 				<align>right</align>
 				<aligny>bottom</aligny>
 				<label>$VAR[EpisodeSubTitleVar]</label>
-				<font>Font_Reg28</font>
 				<textcolor>grey</textcolor>
 			</control>
 			<control type="image">
@@ -1236,10 +1233,8 @@
 						<shadowcolor>floorshadow</shadowcolor>
 						<textcolor>white2</textcolor>
 					</control>
-
 					<control type="label">
 						<left>370</left>
-						<top>0</top>
 						<width>870</width>
 						<align>right</align>
 						<label>$VAR[FirstLabelVar]</label>
@@ -1325,7 +1320,6 @@
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey</textcolor>
 					<visible>!String.IsEmpty(ListItem.Title) + !ListItem.IsCollection</visible>
 				</control>
@@ -1337,7 +1331,6 @@
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$INFO[ListItem.Year]$INFO[Window(home).Property(Set.Movies.Runtime) • $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey</textcolor>
 					<visible>!String.IsEmpty(ListItem.Title) + ListItem.IsCollection</visible>
 				</control>
@@ -1417,7 +1410,6 @@
 					<align>right</align>
 					<aligny>bottom</aligny>
 					<label>$INFO[ListItem.Date]$INFO[ListItem.Rating, • ]</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey</textcolor>
 					<visible>!String.IsEmpty(ListItem.Title)</visible>
 				</control>

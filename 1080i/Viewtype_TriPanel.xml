@@ -202,7 +202,7 @@
 					<height>550</height>
 					<fadetime>IconCrossfadeTime</fadetime>
 				</control>
-				
+
 				<control type="textbox">
 					<left>145</left>
 					<top>287</top>
@@ -310,7 +310,7 @@
 					<top>827</top>
 					<width>530</width>
 					<height>795</height>
-					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png">$VAR[ListPosterVar1]</texture>
+					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png">$VAR[ListPosterVar]</texture>
 					<fadetime>400</fadetime>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
@@ -328,7 +328,7 @@
 					<top>31</top>
 					<width>530</width>
 					<height>795</height>
-					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar1]</texture>
+					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 					<fadetime>400</fadetime>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
@@ -338,7 +338,7 @@
 					<width>530</width>
 					<height>795</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterBackupVar]</texture>
+					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterBackupVar]</texture>
 					<visible>String.IsEmpty(Control.GetLabel(3822))</visible>
 				</control>
 				<control type="image">
@@ -401,7 +401,7 @@
 					<top>762</top>
 					<width>487</width>
 					<height>732</height>
-					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar1]</texture>
+					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 					<fadetime>400</fadetime>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
@@ -410,7 +410,7 @@
 					<top>29</top>
 					<width>487</width>
 					<height>732</height>
-					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 					<fadetime>400</fadetime>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
@@ -419,7 +419,7 @@
 					<top>29</top>
 					<width>487</width>
 					<height>732</height>
-					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar1]</texture>
+					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 					<fadetime>400</fadetime>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
@@ -559,7 +559,7 @@
 					<height>550</height>
 					<fadetime>IconCrossfadeTime</fadetime>
 				</control>
-				
+
 				<control type="textbox">
 					<left>102</left>
 					<top>292</top>
@@ -951,7 +951,6 @@
 							</control>
 						</control>
 						<control type="image">
-							<top>0</top>
 							<width>842</width>
 							<height>51</height>
 							<include>PanelGlowFade</include>
@@ -1137,7 +1136,6 @@
 							</control>
 						</control>
 						<control type="image">
-							<top>0</top>
 							<width>842</width>
 							<height>96</height>
 							<texture border="8">views/tripanel/listselect_fo.png</texture>

@@ -92,7 +92,7 @@
 					<height>160</height>
 					<align>left</align>
 					<include>KodiFlixButtonsValues</include>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<visible>!ListItem.IsParentFolder + Container.Content(albums)</visible>
 				</control>
 				<!-- End Album Info -->
@@ -113,11 +113,10 @@
 					<height>160</height>
 					<align>left</align>
 					<include>KodiFlixButtonsValues</include>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<visible>!ListItem.IsParentFolder + Container.Content(artists)</visible>
 				</control>
 				<control type="group">
-					<left>0</left>
 					<top>120</top>
 					<visible>Control.IsVisible(810)</visible>
 					<include>VisibleFadeEffect</include>
@@ -132,7 +131,7 @@
 						<font>font12_textbox</font>
 						<pagecontrol>63</pagecontrol>
 						<include>ShowCaseInfoPanelButtonsValues</include>
-						<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+						<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</control>
@@ -236,17 +235,16 @@
 				</control>
 				<!-- Scrollbar -->
 				<control type="scrollbar" id="75">
-					<left>0</left>
 					<top>960</top>
 					<width>FullScreenWidth</width>
 					<height>12</height>
 					<onup>810</onup>
 					<ondown>noop</ondown>
-					<texturesliderbackground border="1">-</texturesliderbackground>
+					<texturesliderbackground />
 					<texturesliderbar border="6,0,6,0">scrollbar/texturesliderbar_hor.png</texturesliderbar>
 					<texturesliderbarfocus border="6,0,6,0">scrollbar/texturesliderbarfocus_hor.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
+					<textureslidernib />
+					<textureslidernibfocus />
 					<showonepage>false</showonepage>
 					<orientation>horizontal</orientation>
 					<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(75) + !Container.Scrolling">Conditional</animation>

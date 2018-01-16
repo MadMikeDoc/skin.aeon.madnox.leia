@@ -3,8 +3,6 @@
 	<defaultcontrol always="true">52</defaultcontrol>
 	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
 	<coordinates>
-		<left>0</left>
-		<top>0</top>
 		<system>1</system>
 	</coordinates>
 	<controls>
@@ -145,7 +143,7 @@
 			</control>
 		</control>
 		<control type="label" id="2">
-			<font>-</font>
+			<font />
 			<include>HiddenObject</include>
 		</control>
 		<control type="group">

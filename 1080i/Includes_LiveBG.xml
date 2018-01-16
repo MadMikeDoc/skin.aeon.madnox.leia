@@ -8,16 +8,14 @@
         <height>312</height>
     </include>
     <include name="PolaroidPos">
-        <left>0</left>
-        <top>0</top>
         <width>461</width>
         <height>500</height>
     </include>
     <!-- Live DVD/BD Cases -->
 	<include name="LiveBG">
 		<control type="group">
-			<visible>[Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + Integer.IsGreater(Container(8011).NumItems,0)] |
-				[String.Contains(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),FanartList,right) + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))]] |
+			<visible>[Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + Integer.IsGreater(Container(8011).NumItems,0)] |
+				[String.EndsWith(Container(9000).ListItem.Property(background),.Live) + ![Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),FanartList) + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))]] |
 				String.Contains(Control.GetLabel(4322),case)</visible>
 			<!-- Background image -->
 			<control type="image">
@@ -34,9 +32,9 @@
 			<control type="group">
 				<animation effect="fade" time="600">VisibleChange</animation>
 				<include>Animation_WindowFade250</include>
-				<visible>[Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + Integer.IsGreater(Container(8011).NumItems,0) + String.Contains(Container(9010).ListItem.Property(backgroundCase),DVD)] |
-					[String.Contains(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + [String.Contains(Container(9010).ListItem.Property(background),FanartList,right) | String.Contains(Container(9010).ListItem.Property(background),.Live,right)] + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + String.Contains(Container(9000).ListItem.Property(backgroundCase),DVD)] |
-					String.Contains(Control.GetLabel(4322),dvdcase,left)</visible>
+				<visible>[Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + Integer.IsGreater(Container(8011).NumItems,0) + String.Contains(Container(9010).ListItem.Property(backgroundCase),DVD)] |
+					[String.EndsWith(Container(9000).ListItem.Property(background),.Live) + ![Control.HasFocus(9010) + [String.EndsWith(Container(9010).ListItem.Property(background),FanartList) | String.EndsWith(Container(9010).ListItem.Property(background),.Live)] + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + String.Contains(Container(9000).ListItem.Property(backgroundCase),DVD)] |
+					String.StartsWith(Control.GetLabel(4322),dvdcase)</visible>
 				<control type="group">
 					<control type="group">
 						<left>800</left>
@@ -109,7 +107,6 @@
 					</control>
 					<control type="group">
 						<left>1950</left>
-						<top>0</top>
 						<animation effect="zoom" start="180" end="180" center="auto" time="0" tween="linear" condition="true">Conditional</animation>
 						<animation effect="rotate" center="auto" start="75" end="75" time="0" condition="true">Conditional</animation>
 						<control type="image">
@@ -275,9 +272,9 @@
 			<control type="group">
 				<animation effect="fade" time="600">VisibleChange</animation>
 				<include>Animation_WindowFade250</include>
-				<visible>[Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + Integer.IsGreater(Container(8011).NumItems,0) + String.Contains(Container(9010).ListItem.Property(backgroundCase),CD)] |
-					[String.Contains(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + [String.Contains(Container(9010).ListItem.Property(background),FanartList,right) | String.Contains(Container(9010).ListItem.Property(background),.Live,right)] + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + String.Contains(Container(9000).ListItem.Property(backgroundCase),CD)] |
-					String.Contains(Control.GetLabel(4322),case,left)</visible>
+				<visible>[Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + Integer.IsGreater(Container(8011).NumItems,0) + String.Contains(Container(9010).ListItem.Property(backgroundCase),CD)] |
+					[String.EndsWith(Container(9000).ListItem.Property(background),.Live) + ![Control.HasFocus(9010) + [String.EndsWith(Container(9010).ListItem.Property(background),FanartList) | String.EndsWith(Container(9010).ListItem.Property(background),.Live)] + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + String.Contains(Container(9000).ListItem.Property(backgroundCase),CD)] |
+					String.StartsWith(Control.GetLabel(4322),case)</visible>
 				<control type="group">
 					<left>-200</left>
 					<control type="group">
@@ -290,27 +287,27 @@
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG1]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG1]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
 							<texture background="true">thumbs/boxes/cd_glass.png</texture>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -322,27 +319,27 @@
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG2]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG2]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
 							<texture background="true">thumbs/boxes/cd_glass.png</texture>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -355,27 +352,27 @@
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG3]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG3]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
 							<texture background="true">thumbs/boxes/cd_glass.png</texture>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -388,27 +385,27 @@
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG4]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG4]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
 							<texture background="true">thumbs/boxes/cd_glass.png</texture>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -421,27 +418,27 @@
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG5]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG5]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
 							<texture background="true">thumbs/boxes/cd_glass.png</texture>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -454,27 +451,27 @@
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG6]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG6]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
 							<texture background="true">thumbs/boxes/cd_glass.png</texture>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -487,27 +484,27 @@
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG7]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG7]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
 							<texture background="true">thumbs/boxes/cd_glass.png</texture>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -520,27 +517,27 @@
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG8]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG8]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
 							<texture background="true">thumbs/boxes/cd_glass.png</texture>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -553,27 +550,27 @@
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG9]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG9]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
 							<texture background="true">thumbs/boxes/cd_glass.png</texture>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 					</control>
 					<control type="group">
@@ -586,40 +583,40 @@
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG10]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
 							<fadetime>600</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG10]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<bordertexture>thumbs/boxes/cd_shadow_light.png</bordertexture>
 							<texture background="true">thumbs/boxes/cd_glass.png</texture>
-							<visible>[Window.IsVisible(Home) + !String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<width>375</width>
 							<height>342</height>
 							<texture background="true">thumbs/boxes/cd_box_closed.png</texture>
-							<visible>[Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
+							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 					</control>
 				</control>
 			</control>
-			
+
 			<!-- My Pics -->
 			<control type="group">
 				<animation effect="fade" time="600">VisibleChange</animation>
 				<include>Animation_WindowFade250</include>
 				<include>FullscreenDimensions</include>
-				<visible>[Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + Integer.IsGreater(Container(8011).NumItems,0) + String.Contains(Container(9010).ListItem.Property(backgroundCase),Polaroid)] |
-					[String.Contains(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + [String.Contains(Container(9010).ListItem.Property(background),FanartList,right) | String.Contains(Container(9010).ListItem.Property(background),.Live,right)] + Integer.IsGreater(Container(8011).NumItems,0) + !IsEmpty(Container(8011).ListItem.Art(fanart))] + String.Contains(Container(9000).ListItem.Property(backgroundCase),Polaroid)] | 
-					String.Contains(Control.GetLabel(4322),case,left)</visible>
+				<visible>[Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + Integer.IsGreater(Container(8011).NumItems,0) + String.Contains(Container(9010).ListItem.Property(backgroundCase),Polaroid)] |
+					[String.EndsWith(Container(9000).ListItem.Property(background),.Live) + ![Control.HasFocus(9010) + [String.EndsWith(Container(9010).ListItem.Property(background),FanartList) | String.EndsWith(Container(9010).ListItem.Property(background),.Live)] + Integer.IsGreater(Container(8011).NumItems,0) + !IsEmpty(Container(8011).ListItem.Art(fanart))] + String.Contains(Container(9000).ListItem.Property(backgroundCase),Polaroid)] |
+					String.StartsWith(Control.GetLabel(4322),case)</visible>
 				<control type="group">
 					<control type="group">
 						<control type="group">
@@ -754,7 +751,6 @@
 						<control type="group">
 							<description>Picture 9</description>
 							<left>685</left>
-							<top>0</top>
 							<animation effect="rotate" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
 							<control type="image">
 								<include>PicturePos</include>
@@ -791,9 +787,9 @@
 			<control type="group">
 				<animation effect="fade" time="480">VisibleChange</animation>
 				<include>Animation_WindowFade250</include>
-				<visible>[Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + Integer.IsGreater(Container(8011).NumItems,0) + String.IsEmpty(Container(9010).ListItem.Property(backgroundCase))] |
-					[String.Contains(Container(9000).ListItem.Property(background),.Live,right) + ![Control.HasFocus(9010) + [String.Contains(Container(9010).ListItem.Property(background),FanartList,right) | String.Contains(Container(9010).ListItem.Property(background),.Live,right)] + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + String.IsEmpty(Container(9000).ListItem.Property(backgroundCase))] |
-					String.Contains(Control.GetLabel(4322),nocase,left)</visible>
+				<visible>[Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + Integer.IsGreater(Container(8011).NumItems,0) + String.IsEmpty(Container(9010).ListItem.Property(backgroundCase))] |
+					[String.EndsWith(Container(9000).ListItem.Property(background),.Live) + ![Control.HasFocus(9010) + [String.EndsWith(Container(9010).ListItem.Property(background),FanartList) | String.EndsWith(Container(9010).ListItem.Property(background),.Live)] + Integer.IsGreater(Container(8011).NumItems,0) + !String.IsEmpty(Container(8011).ListItem.Art(fanart))] + String.IsEmpty(Container(9000).ListItem.Property(backgroundCase))] |
+					String.StartsWith(Control.GetLabel(4322),nocase)</visible>
 				<control type="group">
 					<left>-200</left>
 					<control type="group">
@@ -951,205 +947,205 @@
 	</include>
 
 	<variable name="LiveBG1">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(0).Art(poster))">$INFO[Container(8011).ListItem(0).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(0).Art(tvshow.poster))">$INFO[Container(8011).ListItem(0).Art(tvshow.poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(0).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(0).Art(poster))">$INFO[Container(8011).ListItem(0).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(0).Art(tvshow.poster))">$INFO[Container(8011).ListItem(0).Art(tvshow.poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(0).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(0).Art(poster))">$INFO[Container(8020).ListItem(0).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(0).Art(tvshow.poster))">$INFO[Container(8020).ListItem(0).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8020).ListItem(0).Icon]</value>
 	</variable>
 	<variable name="LiveBG2">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(1).Art(poster))">$INFO[Container(8011).ListItem(1).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(1).Art(tvshow.poster))">$INFO[Container(8011).ListItem(1).Art(tvshow.poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(1).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(1).Art(poster))">$INFO[Container(8011).ListItem(1).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(1).Art(tvshow.poster))">$INFO[Container(8011).ListItem(1).Art(tvshow.poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(1).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(1).Art(poster))">$INFO[Container(8020).ListItem(1).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(1).Art(tvshow.poster))">$INFO[Container(8020).ListItem(1).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8020).ListItem(1).Icon]</value>
 	</variable>
 	<variable name="LiveBG3">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(2).Art(poster))">$INFO[Container(8011).ListItem(2).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(2).Art(tvshow.poster))">$INFO[Container(8011).ListItem(2).Art(tvshow.poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(2).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(2).Art(poster))">$INFO[Container(8011).ListItem(2).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(2).Art(tvshow.poster))">$INFO[Container(8011).ListItem(2).Art(tvshow.poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(2).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(2).Art(poster))">$INFO[Container(8020).ListItem(2).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(2).Art(tvshow.poster))">$INFO[Container(8020).ListItem(2).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8020).ListItem(2).Icon]</value>
 	</variable>
 	<variable name="LiveBG4">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(3).Art(poster))">$INFO[Container(8011).ListItem(3).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(3).Art(tvshow.poster))">$INFO[Container(8011).ListItem(3).Art(tvshow.poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(3).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(3).Art(poster))">$INFO[Container(8011).ListItem(3).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(3).Art(tvshow.poster))">$INFO[Container(8011).ListItem(3).Art(tvshow.poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(3).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(3).Art(poster))">$INFO[Container(8020).ListItem(3).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(3).Art(tvshow.poster))">$INFO[Container(8020).ListItem(3).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8020).ListItem(3).Icon]</value>
 	</variable>
 	<variable name="LiveBG5">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(4).Art(poster))">$INFO[Container(8011).ListItem(4).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(4).Art(tvshow.poster))">$INFO[Container(8011).ListItem(4).Art(tvshow.poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(4).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(4).Art(poster))">$INFO[Container(8011).ListItem(4).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(4).Art(tvshow.poster))">$INFO[Container(8011).ListItem(4).Art(tvshow.poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(4).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(4).Art(poster))">$INFO[Container(8020).ListItem(4).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(4).Art(tvshow.poster))">$INFO[Container(8020).ListItem(4).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8020).ListItem(4).Icon]</value>
 	</variable>
 	<variable name="LiveBG6">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(5).Art(poster))">$INFO[Container(8011).ListItem(5).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(5).Art(tvshow.poster))">$INFO[Container(8011).ListItem(5).Art(tvshow.poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(5).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(5).Art(poster))">$INFO[Container(8011).ListItem(5).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(5).Art(tvshow.poster))">$INFO[Container(8011).ListItem(5).Art(tvshow.poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(5).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(5).Art(poster))">$INFO[Container(8020).ListItem(5).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(5).Art(tvshow.poster))">$INFO[Container(8020).ListItem(5).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8020).ListItem(5).Icon]</value>
 	</variable>
 	<variable name="LiveBG7">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(6).Art(poster))">$INFO[Container(8011).ListItem(6).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(6).Art(tvshow.poster))">$INFO[Container(8011).ListItem(6).Art(tvshow.poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(6).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(6).Art(poster))">$INFO[Container(8011).ListItem(6).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(6).Art(tvshow.poster))">$INFO[Container(8011).ListItem(6).Art(tvshow.poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(6).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(6).Art(poster))">$INFO[Container(8020).ListItem(6).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(6).Art(tvshow.poster))">$INFO[Container(8020).ListItem(6).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8020).ListItem(6).Icon]</value>
 	</variable>
 	<variable name="LiveBG8">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(7).Art(poster))">$INFO[Container(8011).ListItem(7).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(7).Art(tvshow.poster))">$INFO[Container(8011).ListItem(7).Art(tvshow.poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(7).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(7).Art(poster))">$INFO[Container(8011).ListItem(7).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(7).Art(tvshow.poster))">$INFO[Container(8011).ListItem(7).Art(tvshow.poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(7).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(7).Art(poster))">$INFO[Container(8020).ListItem(7).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(7).Art(tvshow.poster))">$INFO[Container(8020).ListItem(7).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8020).ListItem(7).Icon]</value>
 	</variable>
 	<variable name="LiveBG9">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(8).Art(poster))">$INFO[Container(8011).ListItem(8).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(8).Art(tvshow.poster))">$INFO[Container(8011).ListItem(8).Art(tvshow.poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(8).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(8).Art(poster))">$INFO[Container(8011).ListItem(8).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(8).Art(tvshow.poster))">$INFO[Container(8011).ListItem(8).Art(tvshow.poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(8).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(8).Art(poster))">$INFO[Container(8020).ListItem(8).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(8).Art(tvshow.poster))">$INFO[Container(8020).ListItem(8).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8020).ListItem(8).Icon]</value>
 	</variable>
 	<variable name="LiveBG10">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(9).Art(poster))">$INFO[Container(8011).ListItem(9).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(9).Art(tvshow.poster))">$INFO[Container(8011).ListItem(9).Art(tvshow.poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(9).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(9).Art(poster))">$INFO[Container(8011).ListItem(9).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(9).Art(tvshow.poster))">$INFO[Container(8011).ListItem(9).Art(tvshow.poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(9).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(9).Art(poster))">$INFO[Container(8020).ListItem(9).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(9).Art(tvshow.poster))">$INFO[Container(8020).ListItem(9).Art(tvshow.poster)]</value>
 		<value>$INFO[Container(8020).ListItem(9).Icon]</value>
 	</variable>
 
 	<variable name="LiveBG1Picture">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(0).Art(poster))">$INFO[Container(8011).ListItem(0).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(0).Art(artists.thumb))">$INFO[Container(8011).ListItem(0).Art(artists.thumb)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(0).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(0).Art(poster))">$INFO[Container(8011).ListItem(0).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(0).Art(artists.thumb))">$INFO[Container(8011).ListItem(0).Art(artists.thumb)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(0).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(0).Art(poster))">$INFO[Container(8020).ListItem(0).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(0).Art(artists.thumb))">$INFO[Container(8020).ListItem(0).Art(artists.thumb)]</value>
 		<value>$INFO[Container(8020).ListItem(0).Icon]</value>
 	</variable>
 	<variable name="LiveBG2Picture">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(1).Art(poster))">$INFO[Container(8011).ListItem(1).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(1).Art(artists.thumb))">$INFO[Container(8011).ListItem(1).Art(artists.thumb)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(1).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(1).Art(poster))">$INFO[Container(8011).ListItem(1).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(1).Art(artists.thumb))">$INFO[Container(8011).ListItem(1).Art(artists.thumb)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(1).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(1).Art(poster))">$INFO[Container(8020).ListItem(1).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(1).Art(artists.thumb))">$INFO[Container(8020).ListItem(1).Art(artists.thumb)]</value>
 		<value>$INFO[Container(8020).ListItem(1).Icon]</value>
 	</variable>
 	<variable name="LiveBG3Picture">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(2).Art(poster))">$INFO[Container(8011).ListItem(2).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(2).Art(artists.thumb))">$INFO[Container(8011).ListItem(2).Art(artists.thumb)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(2).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(2).Art(poster))">$INFO[Container(8011).ListItem(2).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(2).Art(artists.thumb))">$INFO[Container(8011).ListItem(2).Art(artists.thumb)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(2).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(2).Art(poster))">$INFO[Container(8020).ListItem(2).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(2).Art(artists.thumb))">$INFO[Container(8020).ListItem(2).Art(artists.thumb)]</value>
 		<value>$INFO[Container(8020).ListItem(2).Icon]</value>
 	</variable>
 	<variable name="LiveBG4Picture">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(3).Art(poster))">$INFO[Container(8011).ListItem(3).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(3).Art(artists.thumb))">$INFO[Container(8011).ListItem(3).Art(artists.thumb)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(3).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(3).Art(poster))">$INFO[Container(8011).ListItem(3).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(3).Art(artists.thumb))">$INFO[Container(8011).ListItem(3).Art(artists.thumb)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(3).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(3).Art(poster))">$INFO[Container(8020).ListItem(3).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(3).Art(artists.thumb))">$INFO[Container(8020).ListItem(3).Art(artists.thumb)]</value>
 		<value>$INFO[Container(8020).ListItem(3).Icon]</value>
 	</variable>
 	<variable name="LiveBG5Picture">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(4).Art(poster))">$INFO[Container(8011).ListItem(4).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(4).Art(artists.thumb))">$INFO[Container(8011).ListItem(4).Art(artists.thumb)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(4).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(4).Art(poster))">$INFO[Container(8011).ListItem(4).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(4).Art(artists.thumb))">$INFO[Container(8011).ListItem(4).Art(artists.thumb)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(4).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(4).Art(poster))">$INFO[Container(8020).ListItem(4).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(4).Art(artists.thumb))">$INFO[Container(8020).ListItem(4).Art(artists.thumb)]</value>
 		<value>$INFO[Container(8020).ListItem(4).Icon]</value>
 	</variable>
 	<variable name="LiveBG6Picture">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(5).Art(poster))">$INFO[Container(8011).ListItem(5).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(5).Art(artists.thumb))">$INFO[Container(8011).ListItem(5).Art(artists.thumb)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(5).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(5).Art(poster))">$INFO[Container(8011).ListItem(5).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(5).Art(artists.thumb))">$INFO[Container(8011).ListItem(5).Art(artists.thumb)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(5).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(5).Art(poster))">$INFO[Container(8020).ListItem(5).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(5).Art(artists.thumb))">$INFO[Container(8020).ListItem(5).Art(artists.thumb)]</value>
 		<value>$INFO[Container(8020).ListItem(5).Icon]</value>
 	</variable>
 	<variable name="LiveBG7Picture">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(6).Art(poster))">$INFO[Container(8011).ListItem(6).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(6).Art(artists.thumb))">$INFO[Container(8011).ListItem(6).Art(artists.thumb)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(6).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(6).Art(poster))">$INFO[Container(8011).ListItem(6).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(6).Art(artists.thumb))">$INFO[Container(8011).ListItem(6).Art(artists.thumb)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(6).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(6).Art(poster))">$INFO[Container(8020).ListItem(6).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(6).Art(artists.thumb))">$INFO[Container(8020).ListItem(6).Art(artists.thumb)]</value>
 		<value>$INFO[Container(8020).ListItem(6).Icon]</value>
 	</variable>
 	<variable name="LiveBG8Picture">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(7).Art(poster))">$INFO[Container(8011).ListItem(7).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(7).Art(artists.thumb))">$INFO[Container(8011).ListItem(7).Art(artists.thumb)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(7).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(7).Art(poster))">$INFO[Container(8011).ListItem(7).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(7).Art(artists.thumb))">$INFO[Container(8011).ListItem(7).Art(artists.thumb)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(7).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(7).Art(poster))">$INFO[Container(8020).ListItem(7).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(7).Art(artists.thumb))">$INFO[Container(8020).ListItem(7).Art(artists.thumb)]</value>
 		<value>$INFO[Container(8020).ListItem(7).Icon]</value>
 	</variable>
 	<variable name="LiveBG9Picture">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(8).Art(poster))">$INFO[Container(8011).ListItem(8).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(8).Art(artists.thumb))">$INFO[Container(8011).ListItem(8).Art(artists.thumb)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(8).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(8).Art(poster))">$INFO[Container(8011).ListItem(8).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(8).Art(artists.thumb))">$INFO[Container(8011).ListItem(8).Art(artists.thumb)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(8).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(8).Art(poster))">$INFO[Container(8020).ListItem(8).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(8).Art(artists.thumb))">$INFO[Container(8020).ListItem(8).Art(artists.thumb)]</value>
 		<value>$INFO[Container(8020).ListItem(8).Icon]</value>
 	</variable>
 	<variable name="LiveBG10Picture">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(9).Art(poster))">$INFO[Container(8011).ListItem(9).Art(poster)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right) + !String.IsEmpty(Container(8011).ListItem(9).Art(artists.thumb))">$INFO[Container(8011).ListItem(9).Art(artists.thumb)]</value>
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$INFO[Container(8011).ListItem(9).Icon]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(9).Art(poster))">$INFO[Container(8011).ListItem(9).Art(poster)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live) + !String.IsEmpty(Container(8011).ListItem(9).Art(artists.thumb))">$INFO[Container(8011).ListItem(9).Art(artists.thumb)]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$INFO[Container(8011).ListItem(9).Icon]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(9).Art(poster))">$INFO[Container(8020).ListItem(9).Art(poster)]</value>
 		<value condition="!String.IsEmpty(Container(8020).ListItem(9).Art(artists.thumb))">$INFO[Container(8020).ListItem(9).Art(artists.thumb)]</value>
 		<value>$INFO[Container(8020).ListItem(9).Icon]</value>
 	</variable>
 
 	<variable name="LiveBG1Resolution">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$VAR[LiveBG1Resolution8011]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$VAR[LiveBG1Resolution8011]</value>
 		<value>$VAR[LiveBG1Resolution8020]</value>
 	</variable>
 	<variable name="LiveBG2Resolution">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$VAR[LiveBG2Resolution8011]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$VAR[LiveBG2Resolution8011]</value>
 		<value>$VAR[LiveBG2Resolution8020]</value>
 	</variable>
 	<variable name="LiveBG3Resolution">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$VAR[LiveBG3Resolution8011]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$VAR[LiveBG3Resolution8011]</value>
 		<value>$VAR[LiveBG3Resolution8020]</value>
 	</variable>
 	<variable name="LiveBG4Resolution">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$VAR[LiveBG4Resolution8011]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$VAR[LiveBG4Resolution8011]</value>
 		<value>$VAR[LiveBG4Resolution8020]</value>
 	</variable>
 	<variable name="LiveBG5Resolution">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$VAR[LiveBG5Resolution8011]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$VAR[LiveBG5Resolution8011]</value>
 		<value>$VAR[LiveBG5Resolution8020]</value>
 	</variable>
 	<variable name="LiveBG6Resolution">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$VAR[LiveBG6Resolution8011]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$VAR[LiveBG6Resolution8011]</value>
 		<value>$VAR[LiveBG6Resolution8020]</value>
 	</variable>
 	<variable name="LiveBG7Resolution">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$VAR[LiveBG7Resolution8011]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$VAR[LiveBG7Resolution8011]</value>
 		<value>$VAR[LiveBG7Resolution8020]</value>
 	</variable>
 	<variable name="LiveBG8Resolution">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$VAR[LiveBG8Resolution8011]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$VAR[LiveBG8Resolution8011]</value>
 		<value>$VAR[LiveBG8Resolution8020]</value>
 	</variable>
 	<variable name="LiveBG9Resolution">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$VAR[LiveBG9Resolution8011]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$VAR[LiveBG9Resolution8011]</value>
 		<value>$VAR[LiveBG9Resolution8020]</value>
 	</variable>
 	<variable name="LiveBG10Resolution">
-		<value condition="Control.HasFocus(9010) + String.Contains(Container(9010).ListItem.Property(background),.Live,right)">$VAR[LiveBG10Resolution8011]</value>
+		<value condition="Control.HasFocus(9010) + String.EndsWith(Container(9010).ListItem.Property(background),.Live)">$VAR[LiveBG10Resolution8011]</value>
 		<value>$VAR[LiveBG10Resolution8020]</value>
 	</variable>
 
@@ -1597,8 +1593,8 @@
 
 
 	<variable name="LiveBGCases">
-		<value condition="Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Clear,right)">movies</value>
-		<value condition="Window.IsVisible(Home) + String.Contains(Container(9000).ListItem.Property(backgroundCase),Color,right)">colorcases</value>
+		<value condition="Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)">movies</value>
+		<value condition="Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Color)">colorcases</value>
 		<value condition="Window.IsVisible(Home)">tvshows</value>
 		<value condition="String.IsEqual(Skin.String(LiveBGCase),movies)">movies</value>
 		<value condition="String.IsEqual(Skin.String(LiveBGCase),tvshows)">colorcases</value>

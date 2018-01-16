@@ -29,10 +29,10 @@
             <top>-30</top>
             <width>1</width>
             <height>1</height>
-            <label>-</label>
-            <font>-</font>
-            <texturenofocus>-</texturenofocus>
-            <texturefocus>-</texturefocus>
+            <label />
+            <font />
+            <texturenofocus />
+            <texturefocus />
             <onfocus>RunScript(script.playlists,type=video)</onfocus>
             <onfocus>RunScript(script.playlists,type=music)</onfocus>
             <onfocus>RunScript(script.favourites,playlists=play)</onfocus>
@@ -77,7 +77,6 @@
 							<colordiffuse>white5</colordiffuse>
 						</control>
 						<control type="label">
-							<left></left>
 							<top>29</top>
 							<width>213</width>
 							<height>120</height>
@@ -103,7 +102,6 @@
 							<colordiffuse>white2</colordiffuse>
 						</control>
 						<control type="label">
-							<left></left>
 							<top>29</top>
 							<width>213</width>
 							<height>120</height>

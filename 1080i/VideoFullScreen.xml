@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol>-</defaultcontrol>
+	<defaultcontrol />
 	<controls>
 		<control type="group" id="0">
 			<animation effect="slide" end="0,45" time="160" tween="cubic" condition="Window.IsVisible(seekbar) + !Skin.HasSetting(Show_Info_Paused)">Conditional</animation>
@@ -9,8 +9,6 @@
 			<!-- codec infos -->
 			<control type="image">
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<left>0</left>
-				<top>0</top>
 				<width>1920</width>
 				<height>340</height>
 				<texture flipy="true">views/lowlist_panelback.png</texture>
@@ -19,7 +17,6 @@
 			</control>
 			<control type="image">
 				<visible>VideoPlayer.Content(LiveTV)</visible>
-				<left>0</left>
 				<top>-270</top>
 				<width>1920</width>
 				<height>630</height>
@@ -29,7 +26,6 @@
 			</control>
 			<control type="grouplist" id="0">
 				<left>30</left>
-				<top>0</top>
 				<width>1920</width>
 				<height>300</height>
 				<itemgap>10</itemgap>
@@ -39,9 +35,8 @@
 					<height>90</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
-					<label>-</label>
+					<label />
 				</control>
 				<control type="label" id="11">
 					<description>row 2 label</description>
@@ -49,8 +44,7 @@
 					<height>90</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_Reg28</font>
-					<label>-</label>
+					<label />
 					<textcolor>grey2</textcolor>
 				</control>
 				<control type="label" id="12">
@@ -59,8 +53,7 @@
 					<height>90</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_Reg28</font>
-					<label>-</label>
+					<label />
 					<textcolor>grey2</textcolor>
 				</control>
 			</control>
@@ -89,7 +82,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19012]:</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
 				</control>
 				<control type="label">
@@ -101,7 +93,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[PVR.ActStreamClient]</label>
-					<font>Font_Reg28</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="label">
@@ -113,7 +104,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19006]:</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
 				</control>
 				<control type="label">
@@ -125,7 +115,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[PVR.ActStreamDevice]</label>
-					<font>Font_Reg28</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="label">
@@ -137,7 +126,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19007]:</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
 				</control>
 				<control type="label">
@@ -149,7 +137,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[PVR.ActStreamStatus]</label>
-					<font>Font_Reg28</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="label">
@@ -161,13 +148,12 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19008]:</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<posx>270</posx>
-					<posy>137</posy>
+					<left>270</left>
+					<top>137</top>
 					<width>910</width>
 					<height>14</height>
 					<info>PVR.ActStreamProgrSignal</info>
@@ -181,7 +167,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[PVR.ActStreamSignal]</label>
-					<font>Font_Reg28</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="label">
@@ -193,13 +178,12 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19009]:</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
-					<posx>270</posx>
-					<posy>167</posy>
+					<left>270</left>
+					<top>167</top>
 					<width>910</width>
 					<height>14</height>
 					<info>PVR.ActStreamProgrSNR</info>
@@ -213,7 +197,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[PVR.ActStreamSNR]</label>
-					<font>Font_Reg28</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="label">
@@ -225,7 +208,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19010]:</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
 				</control>
 				<control type="label">
@@ -237,7 +219,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[PVR.ActStreamBER]</label>
-					<font>Font_Reg28</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="label">
@@ -249,7 +230,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19011]:</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
 				</control>
 				<control type="label">
@@ -261,7 +241,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[PVR.ActStreamUNC]</label>
-					<font>Font_Reg28</font>
 					<textcolor>white</textcolor>
 				</control>
 				<control type="label">
@@ -273,7 +252,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[19015]:</label>
-					<font>Font_Reg28</font>
 					<textcolor>grey2</textcolor>
 				</control>
 				<control type="label">
@@ -285,7 +263,6 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[PVR.ActStreamEncryptionName]</label>
-					<font>Font_Reg28</font>
 					<textcolor>white</textcolor>
 				</control>
 			</control>
@@ -309,14 +286,14 @@
 			</animation>
 			<visible>[Player.Seeking | [Player.DisplayAfterSeek + [!String.IsEmpty(Player.SeekOffset) | !String.IsEmpty(Player.Chapter)]] | Player.Forwarding | Player.Rewinding] + ![Player.Paused|[Player.Paused+Player.Seeking] | [Player.Paused+Player.DisplayAfterSeek]]</visible>
 			<control type="image" id="1">
-				<posx>704</posx>
+				<left>704</left>
 				<width>513</width>
 				<height>87</height>
 				<texture flipy="true">osd/osd_top_bar.png</texture>
 				<visible>[[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek] | [[Player.Paused + Player.Caching] + !Player.Seeking] | Player.Seeking|[Player.DisplayAfterSeek + ![player.forwarding | player.rewinding] + !String.IsEmpty(Player.SeekOffset)]</visible>
 			</control>
 			<control type="label" id="1">
-				<posx>750</posx>
+				<left>750</left>
 				<width>420</width>
 				<height>42</height>
 				<align>center</align>
@@ -327,7 +304,7 @@
 			</control>
 		</control>
 		<control type="group" id="2">
-			<visible>[Player.ShowInfo|Player.Forwarding|Player.Seeking] + ![Window.IsVisible(fullscreeninfo) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
+			<visible>[Player.ShowInfo|Player.Forwarding|Player.Seeking] + ![Window.IsVisible(fullscreeninfo) | Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(pvrchannelguide)]</visible>
 			<visible>VideoPlayer.Content(LiveTV) + !String.IsEmpty(VideoPlayer.ChannelName)</visible>
 			<include condition="String.IsEmpty(Skin.String(LiveTV.InfobarType)) | String.IsEqual(Skin.String(LiveTV.InfobarType),2)">FullScreenInfoBarLiveTV</include>
 			<include condition="String.IsEqual(Skin.String(LiveTV.InfobarType),1)">FullScreenInfoBarLiveTV_Compact</include>

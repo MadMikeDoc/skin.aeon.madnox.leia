@@ -39,7 +39,7 @@
 			<texturefocus>calibration/calibrate-subtitles-focus.png</texturefocus>
 			<texturenofocus>calibration/calibrate-subtitles.png</texturenofocus>
 		</control>
-		<control type="resize" id="11"></control>
+		<control type="resize" id="11" />
 		<control type="group">
 			<left>30</left>
 			<top>120</top>
@@ -47,14 +47,14 @@
 				<top>15</top>
 				<width>1860</width>
 				<align>center</align>
-				<label>-</label>
+				<label />
 				<font>Font_Bold34</font>
 			</control>
 			<control type="fadelabel" id="3">
 				<top>60</top>
 				<width>1860</width>
 				<align>center</align>
-				<label>-</label>
+				<label />
 				<font>Font_Bold34</font>
 			</control>
 		</control>

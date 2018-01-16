@@ -8,20 +8,20 @@
 			<animation effect="fade" start="100" end="0" condition="Container(9000).OnNext | Container(9000).OnPrevious">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400" delay="400" tween="quadratic" easing="out" condition="![Container(9000).OnNext | Container(9000).OnPrevious]">Conditional</animation>
 			<animation effect="slide" end="0,-349" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Window.IsVisible(1199) | Window.IsVisible(1115)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Window.IsVisible(1115)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Skin.HasSetting(Enable.WidgetHide) + !ControlGroup(90010).HasFocus">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Skin.HasSetting(Enable.PanelInfo) + ControlGroup(90020).HasFocus + !String.Contains(Container(9000).ListItem.Property(widgetStyle.2),List)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="!Skin.HasSetting(Enable.PanelInfo) + String.IsEqual(Container(9000).ListItem.Property(widgetPanelInfo.2),Enabled) + ControlGroup(90020).HasFocus + !String.Contains(Container(9000).ListItem.Property(widgetStyle.2),List)">Conditional</animation>
 			<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetStyle))</visible>
-			<!-- Test Image
-			<control type="image">
+			<!-- Test Image -->
+			<!-- <control type="image">
 				<top>449</top>
-				<left></left>
+				<left />
 				<centerleft>50%</centerleft>
 				<width>1440</width>
 				<height>310</height>
 				<texture>grey.png</texture>
-			</control>-->
+			</control> -->
 			<!-- Widgets  -->
 			<include>skinshortcuts-template-widget1</include>
 		</control>
@@ -35,20 +35,20 @@
 			<animation effect="fade" start="100" end="0" condition="Container(9000).OnNext | Container(9000).OnPrevious">Conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400" delay="400" tween="quadratic" easing="out" condition="![Container(9000).OnNext | Container(9000).OnPrevious]">Conditional</animation>
 			<animation effect="slide" end="0,601" condition="!Skin.HasSetting(lowermainmenu)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Window.IsVisible(1199) | Window.IsVisible(1115)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Window.IsVisible(1115)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Skin.HasSetting(Enable.WidgetHide) + !ControlGroup(90020).HasFocus">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="Skin.HasSetting(Enable.PanelInfo) + ControlGroup(90010).HasFocus + !String.Contains(Container(9000).ListItem.Property(widgetStyle),List)">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="200" delay="100" condition="!Skin.HasSetting(Enable.PanelInfo) + String.IsEqual(Container(9000).ListItem.Property(widgetPanelInfo),Enabled) + ControlGroup(90010).HasFocus + !String.Contains(Container(9000).ListItem.Property(widgetStyle),List)">Conditional</animation>
 			<visible>!String.IsEmpty(Container(9000).ListItem.Property(widgetStyle.2))</visible>
-			<!-- Test Image
-			<control type="image">
+			<!-- Test Image -->
+			<!-- <control type="image">
 				<top>90</top>
 				<left></left>
 				<centerleft>50%</centerleft>
 				<width>1440</width>
 				<height>310</height>
 				<texture>grey.png</texture>
-			</control>-->
+			</control> -->
 			<!-- Widgets  -->
 			<include>skinshortcuts-template-widget2</include>
 		</control>
@@ -272,7 +272,7 @@
 			</control>
 			<control type="label">
 				<height>0.5</height>
-				<label>-</label>
+				<label />
 			</control>
 			<!-- Info 1 -->
 			<control type="label">
@@ -294,7 +294,7 @@
 			</control>
 			<control type="label">
 				<height>0.5</height>
-				<label>-</label>
+				<label />
 			</control>
 			<!-- Plot -->
 			<control type="textbox">
@@ -471,7 +471,6 @@
 					<top>$PARAM[topArt]</top>
 					<width>$PARAM[widthArt]</width>
 					<height>$PARAM[heightArt]</height>
-					<aspectratio>stretch</aspectratio>
 					<texture>$VAR[HomeWidgetBannerVar]</texture>
 				</control>
 				<control type="image">
@@ -525,7 +524,6 @@
 					<top>$PARAM[topArt]</top>
 					<width>$PARAM[widthArt]</width>
 					<height>$PARAM[heightArt]</height>
-					<aspectratio>stretch</aspectratio>
 					<texture>$VAR[HomeWidgetBannerVar]</texture>
 				</control>
 				<control type="image">
@@ -686,7 +684,7 @@
 	<!-- Panel Background -->
 	<include name="PanelBack">
 		<control type="image">
-			<left></left>
+			<left />
 			<centerleft>50%</centerleft>
 			<top>-21</top>
 			<width>$PARAM[backWidth]</width>
@@ -696,7 +694,7 @@
 			<include>HomeWidgetTrans</include>
 		</control>
 		<control type="image">
-			<left></left>
+			<left />
 			<centerleft>50%</centerleft>
 			<top>-21</top>
 			<width>$PARAM[backWidth]</width>
@@ -710,7 +708,7 @@
 	<include name="PanelLabel">
 		<control type="label">
 			<top>$PARAM[labelBottom]</top>
-			<left></left>
+			<left />
 			<centerleft>50%</centerleft>
 			<width>$PARAM[labelWidth]</width>
 			<height>auto</height>
@@ -906,7 +904,6 @@
 		<!-- Textures -->
 		<control type="image">
 			<left>$PARAM[Left]</left>
-			<top>0</top>
 			<width>$PARAM[Width]</width>
 			<height>$PARAM[Height]</height>
 			<texture>homewidgets/label_back_mixed.png</texture>
@@ -914,7 +911,6 @@
 		</control>
 		<control type="image">
 			<left>$PARAM[Left]</left>
-			<top>0</top>
 			<width>$PARAM[Width]</width>
 			<height>$PARAM[Height]</height>
 			<texture>homewidgets/label_back_mixed.png</texture>
@@ -934,8 +930,8 @@
 				<textcolor>white</textcolor>
 				<label>$PARAM[Title]</label>
 				<label2>$PARAM[titleRight]</label2>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus />
+				<texturenofocus />
 				<onclick>noop</onclick>
 				<visible>!Control.HasFocus($PARAM[id]) + $PARAM[labelVisible] + !$PARAM[isWeather]</visible>
 			</control>
@@ -949,8 +945,8 @@
 				<textcolor>white</textcolor>
 				<label>$PARAM[Title]</label>
 				<label2>$PARAM[titleRight]</label2>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus />
+				<texturenofocus />
 				<onclick>noop</onclick>
 				<visible>Control.HasFocus($PARAM[id]) + $PARAM[labelFocusVisible] + !$PARAM[isWeather]</visible>
 			</control>
@@ -964,8 +960,8 @@
 				<textcolor>white</textcolor>
 				<label>$PARAM[Title]</label>
 				<label2>$PARAM[titleRight]</label2>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus />
+				<texturenofocus />
 				<onclick>noop</onclick>
 				<visible>!Control.HasFocus($PARAM[id]) + $PARAM[labelVisible] + $PARAM[isWeather] + $PARAM[weatherFanArt]</visible>
 			</control>
@@ -979,8 +975,8 @@
 				<textcolor>white</textcolor>
 				<label>$PARAM[Title]</label>
 				<label2>$PARAM[titleRight]</label2>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus />
+				<texturenofocus />
 				<onclick>noop</onclick>
 				<visible>Control.HasFocus($PARAM[id]) + $PARAM[labelFocusVisible] + $PARAM[isWeather] + $PARAM[weatherFanArt]</visible>
 			</control>
@@ -1617,7 +1613,7 @@
 	<include name="WeatherContentToday">
 		<item>
 			<label>$LOCALIZE[31006]</label>
-			<icon>-</icon>
+			<icon />
 			<onclick>noop</onclick>
 			<visible>!Weather.IsFetched</visible>
 		</item>
@@ -1636,7 +1632,7 @@
 	<include name="WeatherContentTomorrow">
 		<item>
 			<label>$LOCALIZE[31006]</label>
-			<icon>-</icon>
+			<icon />
 			<onclick>noop</onclick>
 			<visible>!Weather.IsFetched</visible>
 		</item>
@@ -1655,7 +1651,7 @@
 	<include name="WeatherContent">
 		<item>
 			<label>$LOCALIZE[31006]</label>
-			<icon>-</icon>
+			<icon />
 			<onclick>noop</onclick>
 			<visible>!Weather.IsFetched</visible>
 		</item>
@@ -2083,7 +2079,7 @@
 	<include name="Furniture_HomeNowPlaying">
 		<control type="group">
 			<top>14</top>
-			<visible>!Window.IsActive(1115) + !Window.IsActive(1154) + !Window.IsActive(1199)</visible>
+			<visible>!Window.IsActive(1115) + !Window.IsActive(1154)</visible>
 			<visible>[String.IsEmpty(Control.GetLabel(4325)) + !Skin.HasSetting(movenowplayingwidget)] | [String.IsEmpty(Control.GetLabel(4321)) + Skin.HasSetting(movenowplayingwidget)]</visible>
 			<visible>[Skin.HasSetting(lowermainmenu) + Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90010) + ![ControlGroup(90020).HasFocus + Skin.HasSetting(Enable.PanelInfo) + !String.Contains(Container(9000).ListItem.Property(widgetStyle.2),List)]] |
 				[!Skin.HasSetting(lowermainmenu) + !Skin.HasSetting(movenowplayingwidget) + !Control.IsVisible(90010) + ![ControlGroup(90020).HasFocus + Skin.HasSetting(Enable.PanelInfo) + !String.Contains(Container(9000).ListItem.Property(widgetStyle.2),List)]] |
@@ -2744,7 +2740,7 @@
 		<control type="group">
 			<visible>Skin.HasSetting(AlternateTimeStats) + [!Skin.HasSetting(DisableLibraryStats) | !Skin.HasSetting(DisableTimePanel)]</visible>
 			<animation effect="slide" end="-1920,0" time="240">WindowClose</animation>
-			<animation effect="slide" start="-1920,0" end="0,0" delay="WidgetSlideDelay" time="240" condition="!Window.Previous(startup)">WindowOpen</animation>
+			<animation effect="slide" start="-1920,0" end="0,0" time="240" condition="!Window.Previous(startup)">WindowOpen</animation>
 			<animation effect="slide" start="-1920" end="0" time="240">VisibleChange</animation>
 			<animation effect="slide" start="-1920,0" end="0,0" delay="800" time="480" condition="Window.Previous(startup)">WindowOpen</animation>
 			<animation effect="slide" end="0,338" time="320" tween="cubic" easing="inout" condition="[Skin.HasSetting(lowermainmenu)] + ![Skin.HasSetting(totalshomehigh) | Skin.HasSetting(timehomehigh)]">Conditional</animation>

@@ -376,7 +376,7 @@
 					<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in"  />
 					<effect type="slide" start="0,0" end="0,240" delay="1000" time="350" tween="cubic" easing="out" />
 				</animation>
-				<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<!-- New Plot Info -->
 			<control type="group">
@@ -555,7 +555,7 @@
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -575,7 +575,7 @@
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -598,7 +598,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -621,7 +621,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -640,7 +640,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -663,7 +663,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -686,7 +686,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -705,7 +705,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -724,7 +724,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -747,7 +747,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -770,7 +770,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -793,7 +793,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -816,7 +816,7 @@
 					<textcolor>white</textcolor>
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -849,7 +849,6 @@
 				<control type="group">
 					<width>115</width>
 					<control type="image">
-						<left>0</left>
 						<top>-2</top>
 						<width>118</width>
 						<height>24</height>
@@ -858,8 +857,6 @@
 					</control>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
 					<width>38</width>
 					<height>23</height>
 					<colordiffuse>white</colordiffuse>
@@ -868,8 +865,6 @@
 					<visible>ListItem.IsCollection + ListItem.IsFolder + !String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>0</top>
 					<width min="0" max="250">auto</width>
 					<height>22</height>
 					<textcolor>white</textcolor>
@@ -882,8 +877,6 @@
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>0</top>
 					<width min="0" max="180">auto</width>
 					<height>21</height>
 					<textcolor>white</textcolor>
@@ -896,8 +889,6 @@
 					<visible>[Container.Content(Movies) + !ListItem.IsCollection] + [!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration,0)]</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>0</top>
 					<width min="0" max="200">auto</width>
 					<height>21</height>
 					<textcolor>white</textcolor>
@@ -945,7 +936,6 @@
 				<control type="group">
 					<width>115</width>
 					<control type="image">
-						<left>0</left>
 						<top>-2</top>
 						<width>118</width>
 						<height>24</height>
@@ -954,8 +944,6 @@
 					</control>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
 					<width>38</width>
 					<height>23</height>
 					<colordiffuse>white</colordiffuse>
@@ -964,8 +952,6 @@
 					<visible>ListItem.IsCollection + ListItem.IsFolder + !String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>0</top>
 					<width min="0" max="250">auto</width>
 					<height>22</height>
 					<textcolor>white</textcolor>
@@ -978,8 +964,6 @@
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>0</top>
 					<width min="0" max="180">auto</width>
 					<height>21</height>
 					<textcolor>white</textcolor>
@@ -992,8 +976,6 @@
 					<visible>[Container.Content(Movies) + !ListItem.IsCollection] + [!String.IsEmpty(ListItem.Duration) + Integer.IsGreater(ListItem.Duration,0)]</visible>
 				</control>
 				<control type="label">
-					<left>0</left>
-					<top>0</top>
 					<width min="0" max="200">auto</width>
 					<height>21</height>
 					<textcolor>white</textcolor>
@@ -1037,7 +1019,6 @@
 				<include condition="Skin.HasSetting(KodiFlixMoviesCenterFocus) + !Skin.Hassetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesShortList) + Skin.HasSetting(KodiFlixMovieBoxsets)">KodiFlixMoviesCenterFocusPosBoxsets</include>
 				<include condition="Skin.HasSetting(KodiFlixMoviesCenterFocus) + Skin.Hassetting(KodiFlixMoviesCenterList)">KodiFlixMoviesCenterFocusPosShort</include>
 				<include condition="!Skin.HasSetting(KodiFlixMoviesCenterFocus)">KodiFlixMoviesNormalFocusPos</include>
-				<!--focusposition>0</focusposition-->
 				<pagecontrol>60</pagecontrol>
 				<visible>Container.Content(Movies) | Container.Content(Sets)</visible>
 				<!--Movies-->
@@ -1085,7 +1066,6 @@
 					<!-- MAD - Cases -->
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>237</width>
 						<height>328</height>
 						<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -1094,7 +1074,6 @@
 					</control>
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>237</width>
 						<height>328</height>
 						<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -1103,7 +1082,6 @@
 					</control>
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>240</width>
 						<height>334</height>
 						<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -1157,7 +1135,6 @@
 						<visible>!Skin.HasSetting(NetFlixMoviesHideBackgroundPanel)</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>22</top>
 						<width>198</width>
 						<height>299</height>
@@ -1168,7 +1145,6 @@
 						<visible>ListItem.IsCollection | [[!Skin.HasSetting(KodiFlixCases) | !Skin.Hassetting(KodiFlixOpenCase)] | !Skin.HasSetting(usecases)] | String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>324</top>
 						<width>198</width>
 						<height>299</height>
@@ -1177,7 +1153,6 @@
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>2</top>
 						<width>198</width>
 						<height>299</height>
@@ -1190,7 +1165,6 @@
 					<!-- MAD - Open Case -->
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>237</width>
 						<height>328</height>
 						<texture background="true" fallback="thumbs/boxes/default_case.png">thumbs/boxes/$VAR[ShowcaseCasePathVar]/back_$VAR[GlobalCaseVar]</texture>
@@ -1211,13 +1185,12 @@
 					</control>
 					<control type="image">
 						<include>KodiFlixMovieThumb</include>
-						<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+						<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 						<include>KodiFlixOpenCase</include>
 						<visible>Skin.HasSetting(usecases) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(KodiFlixCases) + !ListItem.IsParentFolder + Skin.HasSetting(KodiFlixOpenCase) + !String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>237</width>
 						<height>328</height>
 						<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -1227,7 +1200,6 @@
 					<!--End Case Open -->
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>237</width>
 						<height>328</height>
 						<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -1235,7 +1207,6 @@
 					</control>
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>237</width>
 						<height>328</height>
 						<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -1243,7 +1214,6 @@
 					</control>
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>240</width>
 						<height>334</height>
 						<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -1298,7 +1268,6 @@
 						<visible>!Skin.HasSetting(NetFlixMoviesHideBackgroundPanel)</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>287</width>
 						<height>201</height>
@@ -1309,7 +1278,6 @@
 						<include>KodiFlixDimAnimation</include>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>92</top>
 						<width>287</width>
 						<height>201</height>
@@ -1320,7 +1288,6 @@
 						<include>KodiFlixDimAnimation</include>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>297</top>
 						<width>287</width>
 						<height>161</height>
@@ -1331,7 +1298,6 @@
 						<include>KodiFlixDimAnimation</include>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>297</top>
 						<width>287</width>
 						<height>161</height>
@@ -1346,7 +1312,6 @@
 						<include>KodiFlixDimAnimation</include>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>132</top>
 						<width>287</width>
 						<height>161</height>
@@ -1368,7 +1333,6 @@
 						<visible>!Skin.HasSetting(NetFlixMoviesHideBackgroundPanel)</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>287</width>
 						<height>201</height>
@@ -1378,7 +1342,6 @@
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>287</width>
 						<height>201</height>
@@ -1388,7 +1351,6 @@
 						<bordersize>40</bordersize>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>296</top>
 						<width>287</width>
 						<height>201</height>
@@ -1397,7 +1359,6 @@
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>297</top>
 						<width>287</width>
 						<height>201</height>
@@ -1411,7 +1372,6 @@
 						</animation>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>132</top>
 						<width>287</width>
 						<height>201</height>
@@ -1437,7 +1397,6 @@
 						<visible>!Skin.HasSetting(NetFlixMoviesHideBackgroundPanel)</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>287</width>
 						<height>201</height>
@@ -1446,7 +1405,6 @@
 						<include>KodiFlixDimAnimation</include>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>287</width>
 						<height>201</height>
@@ -1456,7 +1414,6 @@
 						<visible>String.IsEmpty(ListItem.Art(clearart))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>197</width>
 						<height>197</height>
@@ -1466,7 +1423,6 @@
 						<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>287</width>
 						<height>201</height>
@@ -1479,7 +1435,6 @@
 						<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 					<control type="textbox">
-						<left>0</left>
 						<top>128</top>
 						<width>287</width>
 						<height>201</height>
@@ -1492,7 +1447,6 @@
 						<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>297</top>
 						<width>287</width>
 						<height>161</height>
@@ -1503,7 +1457,6 @@
 						<include>KodiFlixDimAnimation</include>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>297</top>
 						<width>287</width>
 						<height>161</height>
@@ -1518,7 +1471,6 @@
 						<include>KodiFlixDimAnimation</include>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>297</top>
 						<width>287</width>
 						<height>161</height>
@@ -1548,7 +1500,6 @@
 						<visible>!Skin.HasSetting(NetFlixMoviesHideBackgroundPanel)</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>287</width>
 						<height>201</height>
@@ -1558,7 +1509,6 @@
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>287</width>
 						<height>201</height>
@@ -1567,7 +1517,6 @@
 						<visible>String.IsEmpty(ListItem.Art(clearart))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>197</width>
 						<height>197</height>
@@ -1576,7 +1525,6 @@
 						<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>287</width>
 						<height>201</height>
@@ -1588,7 +1536,6 @@
 						<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 					<control type="textbox">
-						<left>0</left>
 						<top>128</top>
 						<width>287</width>
 						<height>201</height>
@@ -1601,7 +1548,6 @@
 						<visible>String.IsEmpty(ListItem.Art(clearart)) + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>296</top>
 						<width>217</width>
 						<height>217</height>
@@ -1610,7 +1556,6 @@
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>297</top>
 						<width>287</width>
 						<height>201</height>
@@ -1679,7 +1624,6 @@
 						<include>KodiFlixDimAnimation</include>
 						<visible>String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
 					</control>
-
 					<control type="image">
 						<left>70</left>
 						<top>208</top>
@@ -1687,8 +1631,6 @@
 						<height>101</height>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-						<!--bordertexture border="1">black.png</bordertexture>
-						<bordersize>1</bordersize-->
 						<include>KodiFlixDimAnimation</include>
 						<visible>String.IsEmpty(ListItem.Art(discart)) + !Listitem.IsCollection</visible>
 					</control>
@@ -1702,7 +1644,6 @@
 						<include>KodiFlixDimAnimation</include>
 						<visible>String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
 					</control>
-
 					<control type="image">
 						<left>10</left>
 						<top>98</top>
@@ -1755,7 +1696,6 @@
 						<visible>String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>297</top>
 						<width>287</width>
 						<height>161</height>
@@ -1772,7 +1712,6 @@
 				</itemlayout>
 				<focusedlayout condition="[[Container.Content(Movies) | Container.Content(sets)] + Skin.HasSetting(KodiFlixDiscArtView)]" width="313.5" height="376">
 					<control type="image">
-						<left>0</left>
 						<top>8</top>
 						<width>317</width>
 						<height>317</height>
@@ -1794,7 +1733,6 @@
 						<visible>ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>8</top>
 						<width>317</width>
 						<height>317</height>
@@ -1803,7 +1741,6 @@
 						<visible>String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>8</top>
 						<width>317</width>
 						<height>317</height>
@@ -1822,7 +1759,6 @@
 						<visible>String.IsEmpty(ListItem.Art(discart)) + !Listitem.IsCollection</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>8</top>
 						<width>317</width>
 						<height>317</height>
@@ -1831,7 +1767,6 @@
 						<visible>String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>98</top>
 						<width>287</width>
 						<height>201</height>
@@ -1840,7 +1775,6 @@
 						<visible>String.IsEmpty(ListItem.Art(discart)) + Listitem.IsCollection + !ListItem.IsParentFolder</visible>
 					</control>
 					<control type="textbox">
-						<left>0</left>
 						<top>118</top>
 						<width>287</width>
 						<height>201</height>
@@ -1872,7 +1806,6 @@
 						<visible>String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>297</top>
 						<width>287</width>
 						<height>201</height>
@@ -1930,7 +1863,6 @@
 							<top>144</top>
 							<width>283</width>
 							<height>52</height>
-							<aspectratio>stretch</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(poster)]</texture>
 							<include>KodiFlixDimAnimation</include>
 							<visible>String.IsEmpty(ListItem.art(banner)) + String.IsEmpty(ListItem.art(fanart)) + String.IsEmpty(ListItem.art(extrafanart1))</visible>
@@ -1941,7 +1873,6 @@
 							<top>144</top>
 							<width>283</width>
 							<height>52</height>
-							<aspectratio>stretch</aspectratio>
 							<texture background="true">black.png</texture>
 							<include>KodiFlixDimAnimation</include>
 							<visible>String.IsEmpty(ListItem.art(banner)) + [ListItem.IsCollection | String.IsEmpty(ListItem.Art(clearlogo))]</visible>
@@ -2007,7 +1938,6 @@
 						<visible>!Skin.HasSetting(NetFlixMoviesHideBackgroundPanel)</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>22</top>
 						<width>198</width>
 						<height>299</height>
@@ -2017,7 +1947,6 @@
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>324</top>
 						<width>198</width>
 						<height>299</height>
@@ -2026,7 +1955,6 @@
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
-						<left>0</left>
 						<top>2</top>
 						<width>198</width>
 						<height>299</height>
@@ -2039,7 +1967,6 @@
 					<!-- MAD - Open Case -->
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>237</width>
 						<height>328</height>
 						<texture background="true" fallback="thumbs/boxes/default_case.png">thumbs/boxes/$VAR[ShowcaseCasePathVar]/back_$VAR[GlobalCaseVar]</texture>
@@ -2060,13 +1987,12 @@
 					</control>
 					<control type="image">
 						<include>KodiFlixMovieThumb</include>
-						<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+						<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="special://skin/extras/thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
 						<include>KodiFlixDVDShelfOpenCase</include>
 						<visible>[Container.Content(movies) | Container.Content(sets)] + !ListItem.IsParentFolder + !String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>237</width>
 						<height>328</height>
 						<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -2076,7 +2002,6 @@
 					<!--End Case Open -->
 					<control type="image">
 						<left>-30</left>
-						<top>0</top>
 						<width>237</width>
 						<height>328</height>
 						<texture background="true">thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -2158,8 +2083,6 @@
 						<visible>Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>237</width>
 						<height>328</height>
 						<texture background="true">views/boxsets/frame3.png</texture>
@@ -2167,8 +2090,6 @@
 						<visible>Container.Content(sets) | 	ListItem.IsCollection</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>200</width>
 						<height>298</height>
 						<texture background="true">views/kodiflix/boxsets/$VAR[GlobalCaseVar]</texture>
@@ -2178,8 +2099,6 @@
 						<visible>[Container.Content(movies) + !ListItem.IsCollection] + Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 					</control>
 					<control type="image">
-						<left>0</left>
-						<top>0</top>
 						<width>244</width>
 						<height>298</height>
 						<texture background="true">views/kodiflix/boxsets/$VAR[GlobalCaseVar]</texture>
@@ -2188,14 +2107,12 @@
 						<camera x="530" y="50"/>
 						<visible>[Container.Content(movies) + !ListItem.IsCollection] + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 					</control>
-
 					<control type="image">
 						<left>84</left>
 						<top>135</top>
 						<width>240</width>
 						<height>50</height>
 						<fadetime>100</fadetime>
-						<aspectratio>stretch</aspectratio>
 						<include>KodiFlixDimAnimation</include>
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 						<animation effect="rotate" center="auto" start="" end="-90" time="0" condition="true">Conditional</animation>
@@ -2243,7 +2160,6 @@
 							<top>7</top>
 							<width>248</width>
 							<height>280.5</height>
-							<aspectratio>stretch</aspectratio>
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-14" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="560" y="-10"/>
@@ -2274,7 +2190,6 @@
 							<top>6</top>
 							<width>204</width>
 							<height>281</height>
-							<aspectratio>stretch</aspectratio>
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="47" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
@@ -2285,7 +2200,6 @@
 							<top>26</top>
 							<width>224</width>
 							<height>295</height>
-							<aspectratio>stretch</aspectratio>
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="26" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
@@ -2316,23 +2230,18 @@
 							<top>26</top>
 							<width>202</width>
 							<height>295</height>
-							<aspectratio>stretch</aspectratio>
 							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
 							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
 						</control>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>237</width>
 							<height>328</height>
 							<texture background="true">views/boxsets/frame3.png</texture>
 							<visible>[ListItem.IsParentFolder + Container.Content(sets)] | ListItem.IsCollection</visible>
 						</control>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>230</width>
 							<height>328</height>
 							<texture background="true">views/kodiflix/boxsets/$VAR[GlobalCaseVar]</texture>
@@ -2341,8 +2250,6 @@
 							<visible>[ListItem.IsParentFolder + Container.Content(movies) +  Skin.HasSetting(KodiFlixMoviesCenterList)] | [Container.Content(movies) + !ListItem.IsCollection] + Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 						</control>
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>257</width>
 							<height>328</height>
 							<texture background="true">views/kodiflix/boxsets/$VAR[GlobalCaseVar]</texture>
@@ -2350,7 +2257,6 @@
 							<camera x="530" y="50"/>
 							<visible>!Skin.HasSetting(KodiFlixMoviesCenterList) + Container.Content(movies) + !ListItem.IsCollection + !Skin.HasSetting(KodiFlixMoviesCenterList)</visible>
 						</control>
-						
 						<control type="image">
 							<left>185</left>
 							<top>149</top>
@@ -2368,8 +2274,6 @@
 							<camera x="530" y="50"/>
 							<visible>Skin.HasSetting(KodiFlixMovieBoxsetsDiscArt) + [Container.Content(movies) + !ListItem.IsCollection] + Skin.HasSetting(KodiFlixMovieBoxsetsDiscArtPos) + !String.IsEmpty(Container.ListItem.Art(discart))</visible>
 						</control>
-						
-						
 						<control type="group">
 							<visible>!Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases)</visible>
 							<control type="image">
@@ -2378,7 +2282,6 @@
 								<width>230</width>
 								<height>50</height>
 								<fadetime>100</fadetime>
-								<aspectratio>stretch</aspectratio>
 								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 								<animation effect="rotate" center="auto" start="" end="-90" time="0" condition="true">Conditional</animation>
 								<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -2598,7 +2501,7 @@
 				<control type="image">
 					<left>400</left>
 					<colordiffuse>floor</colordiffuse>
-					<texture>$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+					<texture>$VAR[ColorFlags]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 					<include>AudioFlagsVars</include>
 					<include>VisibleFadeEffect</include>
 					<visible>!ListItem.IsParentFolder</visible>
@@ -2652,7 +2555,7 @@
 					<left>1100</left>
 					<top>-13</top>
 					<colordiffuse>floor</colordiffuse>
-					<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
+					<texture>default-studio.png</texture>
 					<include>AudioFlagsVars</include>
 					<visible>String.IsEmpty(ListItem.Studio) + !ListItem.IsParentFolder</visible>
 				</control>
@@ -2699,7 +2602,7 @@
 						<width>26</width>
 						<height>22</height>
 						<aspectratio>scale</aspectratio>
-						<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
+						<texture>$VAR[ColorFlags]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 						<include>Animation_VisibleChange200</include>
 						<fadetime>400</fadetime>
@@ -2708,7 +2611,7 @@
 						<width>26</width>
 						<height>22</height>
 						<aspectratio>scale</aspectratio>
-						<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
+						<texture>$VAR[ColorFlags]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
 						<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 						<include>Animation_VisibleChange200</include>
@@ -2718,7 +2621,7 @@
 						<width>26</width>
 						<height>22</height>
 						<aspectratio>scale</aspectratio>
-						<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
+						<texture>$VAR[ColorFlags]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
 						<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
 						<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
@@ -2741,8 +2644,8 @@
 				<texturesliderbackground border="12,0,12,0">views/scrollbarbacklist2.png</texturesliderbackground>
 				<texturesliderbar border="14,0,14,0">views/scrollbar/scrollbar_horizontal.png</texturesliderbar>
 				<texturesliderbarfocus border="14,0,14,0">views/scrollbar/scrollbar_horizontal.png</texturesliderbarfocus>
-				<textureslidernib>-</textureslidernib>
-				<textureslidernibfocus>-</textureslidernibfocus>
+				<textureslidernib />
+				<textureslidernibfocus />
 				<onup>800</onup>
 				<ondown>800</ondown>
 				<onleft>62</onleft>
@@ -2877,9 +2780,7 @@
 			<effect type="rotatey" delay="1000" center="-4" start="0" end="75" time="1000" tween="quadratic" easing="out"/>
 		</animation>
 	</include> -->
-
 	<include name="KodiFlixMovieThumb">
-		<left>0</left>
 		<top>22</top>
 		<width>198</width>
 		<height>299</height>
@@ -2923,8 +2824,8 @@
 			<animation effect="slide" start="2620,0" end="0,0" time="2650" tween="sine" easing="out" condition="System.IdleTime(20) + Skin.HasSetting(KodiFlixExtrasDelay_20)">Conditional</animation>
 			<animation effect="slide" start="2620,0" end="0,0" time="2650" tween="sine" easing="out" condition="System.IdleTime(30) + Skin.HasSetting(KodiFlixExtrasDelay_30)">Conditional</animation>
 			<control type="image">
-				<posy>598</posy>
-				<posx>250</posx>
+				<top>598</top>
+				<left>250</left>
 				<width>1685</width>
 				<height>322</height>
 				<aspectratio>scale</aspectratio>
@@ -2932,11 +2833,10 @@
 				<fadetime>400</fadetime>
 			</control>
 			<control type="image">
-				<posy>570</posy>
-				<posx>200</posx>
+				<top>570</top>
+				<left>200</left>
 				<width>1780</width>
 				<height>422</height>
-				<aspectratio>stretch</aspectratio>
 				<texture background="true">thumbs/listpanel_back_glow.png</texture>
 				<bordersize>18</bordersize>
 				<include>PanelGlowFade</include>
@@ -2945,14 +2845,13 @@
 				<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
 			</control>
 			<control type="grouplist">
-				<posy>629</posy>
-				<posx>284</posx>
+				<top>629</top>
+				<left>284</left>
 				<orientation>horizontal</orientation>
 				<visible>ListItem.IsCollection</visible>
 				<control type="image" id="6601">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
@@ -2961,7 +2860,6 @@
 				<control type="image" id="6602">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.1.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
@@ -2970,7 +2868,6 @@
 				<control type="image" id="6603">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.2.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
@@ -2979,7 +2876,6 @@
 				<control type="image" id="6604">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.3.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
@@ -2988,7 +2884,6 @@
 				<control type="image" id="6605">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.4.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
@@ -2997,7 +2892,6 @@
 				<control type="image" id="6606">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.5.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
@@ -3005,14 +2899,13 @@
 				</control>
 			</control>
 			<control type="grouplist">
-				<posy>629</posy>
-				<posx>284</posx>
+				<top>629</top>
+				<left>284</left>
 				<orientation>horizontal</orientation>
 				<visible>ListItem.IsCollection + System.IdleTime(26)</visible>
 				<control type="image" id="6601">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
@@ -3021,7 +2914,6 @@
 				<control type="image" id="6602">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
@@ -3030,7 +2922,6 @@
 				<control type="image" id="6603">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
@@ -3039,7 +2930,6 @@
 				<control type="image" id="6604">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
@@ -3048,7 +2938,6 @@
 				<control type="image" id="6605">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
@@ -3057,7 +2946,6 @@
 				<control type="image" id="6606">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.11.Art.DiscArt)]</texture>
 					<fadetime>400</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
@@ -3065,8 +2953,8 @@
 				</control>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>278</posx>
+				<top>622</top>
+				<left>278</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3077,8 +2965,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6601)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>278</posx>
+				<top>622</top>
+				<left>278</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3089,8 +2977,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6601)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>532</posx>
+				<top>622</top>
+				<left>532</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3101,8 +2989,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6602)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.1.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>532</posx>
+				<top>622</top>
+				<left>532</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3113,8 +3001,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6602)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.1.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>785</posx>
+				<top>622</top>
+				<left>785</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3125,8 +3013,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6603)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>785</posx>
+				<top>622</top>
+				<left>785</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3137,8 +3025,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6603)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>1040</posx>
+				<top>622</top>
+				<left>1040</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3149,8 +3037,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6604)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>1040</posx>
+				<top>622</top>
+				<left>1040</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3161,8 +3049,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6604)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>1295</posx>
+				<top>622</top>
+				<left>1295</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3173,8 +3061,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6605)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>1295</posx>
+				<top>622</top>
+				<left>1295</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3185,8 +3073,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6605)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>1550</posx>
+				<top>622</top>
+				<left>1550</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3197,8 +3085,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6606)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))</visible>
 			</control>
 			<control type="image">
-				<posy>622</posy>
-				<posx>1550</posx>
+				<top>622</top>
+				<left>1550</left>
 				<width>266</width>
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
@@ -3209,8 +3097,8 @@
 				<visible>String.IsEmpty(Control.GetLabel(6606)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))</visible>
 			</control>
 			<control type="Label">
-				<posy>594</posy>
-				<posx>284</posx>
+				<top>594</top>
+				<left>284</left>
 				<width>254</width>
 				<height>254</height>
 				<textcolor>FFFFFAF0</textcolor>
@@ -3221,8 +3109,8 @@
 				<include>KodiFlixExtrasClear</include>
 			</control>
 			<control type="Label">
-				<posy>594</posy>
-				<posx>284</posx>
+				<top>594</top>
+				<left>284</left>
 				<width>254</width>
 				<height>254</height>
 				<textcolor>FFFFFAF0</textcolor>
@@ -3232,8 +3120,8 @@
 				<visible>[Container.Content(movies) | Container.Content(sets)] + Skin.HasSetting(NetFlixMoviesHideFilmInfo) + [[Skin.HasSetting(KodiFlixExtrasDelay_5) + System.IdleTime(30)] | [Skin.HasSetting(KodiFlixExtrasDelay_10) + System.IdleTime(40)] | [Skin.HasSetting(KodiFlixExtrasDelay_20) + System.IdleTime(50)] | [Skin.HasSetting(KodiFlixExtrasDelay_30) + System.IdleTime(60)]]</visible>
 			</control>
 			<control type="Label">
-				<posy>594</posy>
-				<posx>284</posx>
+				<top>594</top>
+				<left>284</left>
 				<width>254</width>
 				<height>254</height>
 				<textcolor>FFFFFAF0</textcolor>
@@ -3245,14 +3133,13 @@
 			<control type="grouplist">
 				<orientation>horizontal</orientation>
 				<itemgap>10</itemgap>
-				<posy>629</posy>
-				<posx>284</posx>
+				<top>629</top>
+				<left>284</left>
 				<visible>!ListItem.IsCollection</visible>
 				<include>KodiFlixExtrasClear</include>
 				<control type="image">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
 					<fadetime>400</fadetime>
 					<visible>Container.Content(movies) + !ListItem.IsCollection</visible>
@@ -3260,7 +3147,6 @@
 				<control type="image">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(characterart)]</texture>
 					<fadetime>400</fadetime>
 					<visible>Container.Content(tvshows)</visible>
@@ -3268,7 +3154,6 @@
 				<control type="image">
 					<width>254</width>
 					<height>254</height>
-					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(tvshow.characterart)]</texture>
 					<fadetime>400</fadetime>
 					<visible>Container.Content(seasons)</visible>
@@ -3298,26 +3183,22 @@
 				</control>
 			</control>
 			<control type="image">
-				<posy>629</posy>
-				<posx>284</posx>
+				<top>629</top>
+				<left>284</left>
 				<visible>!ListItem.IsCollection</visible>
 				<width>254</width>
 				<height>254</height>
-				<aspectratio>stretch</aspectratio>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[ListItem.Art(poster)]</texture>
 				<include>KodiFlixDimAnimation</include>
 				<visible>String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + Container.Content(movies)</visible>
 				<include>KodiFlixExtrasClear</include>
 			</control>
 			<control type="image">
-				<posy>629</posy>
-				<posx>284</posx>
+				<top>629</top>
+				<left>284</left>
 				<visible>!ListItem.IsCollection</visible>
 				<width>254</width>
 				<height>254</height>
-				<aspectratio>stretch</aspectratio>
-				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true">$VAR[FakeDiscArtOverlay]</texture>
 				<include>KodiFlixDimAnimation</include>
 				<visible>String.IsEmpty(ListItem.Art(discart)) + !ListItem.IsCollection + Container.Content(movies)</visible>
@@ -3325,8 +3206,8 @@
 			</control>
 			<control type="grouplist">
 				<orientation>vertical</orientation>
-				<posy>629</posy>
-				<posx>1374</posx>
+				<top>629</top>
+				<left>1374</left>
 				<visible>!ListItem.IsCollection</visible>
 				<include>KodiFlixExtrasClear</include>
 				<control type="image">
@@ -3365,8 +3246,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posy>629</posy>
-				<posx>284</posx>
+				<top>629</top>
+				<left>284</left>
 				<visible>[Container.Content(movies) | Container.Content(sets)] + Skin.HasSetting(NetFlixMoviesHideFilmInfo) + [[Skin.HasSetting(KodiFlixExtrasDelay_5) + System.IdleTime(30)] | [Skin.HasSetting(KodiFlixExtrasDelay_10) + System.IdleTime(40)] | [Skin.HasSetting(KodiFlixExtrasDelay_20) + System.IdleTime(50)] | [Skin.HasSetting(KodiFlixExtrasDelay_30) + System.IdleTime(60)]]</visible>
 				<include>VisibleFadeEffect</include>
 				<control type="textbox" id="70">
@@ -3377,7 +3258,7 @@
 					<font>font14_textbox</font>
 					<pagecontrol>63</pagecontrol>
 					<include>ShowCaseInfoPanelButtonsValues</include>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 					<shadowcolor>77000000</shadowcolor>
 				</control>
 			</control>
@@ -3428,13 +3309,10 @@
 	</include>
 	<include name="KodiFlixSmallFanartDimensions">
 		<left>520</left>
-		<top>0</top>
 		<width>1400</width>
 		<height>788</height>
 	</include>
 	<include name="KodiFlixSmallFanartFullScreenDimensions">
-		<left>0</left>
-		<top>0</top>
 		<width>1920</width>
 		<height>1080</height>
 	</include>
@@ -3496,7 +3374,6 @@
 			<top>604</top>
 			<width>77</width>
 			<height>67</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="8400" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3525,7 +3402,6 @@
 			<top>604</top>
 			<width>77</width>
 			<height>67</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="8400" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3605,7 +3481,6 @@
 			<top>606</top>
 			<width>88</width>
 			<height>75</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="8200" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3634,7 +3509,6 @@
 			<top>606</top>
 			<width>88</width>
 			<height>75</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="8200" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3714,7 +3588,6 @@
 			<top>608</top>
 			<width>100</width>
 			<height>84</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="8000" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3743,7 +3616,6 @@
 			<top>608</top>
 			<width>100</width>
 			<height>84</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="8000" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3823,7 +3695,6 @@
 			<top>612</top>
 			<width>110</width>
 			<height>90</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="7800" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3852,7 +3723,6 @@
 			<top>612</top>
 			<width>110</width>
 			<height>90</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="7800" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3932,7 +3802,6 @@
 			<top>613</top>
 			<width>118</width>
 			<height>98</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="7600" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -3961,7 +3830,6 @@
 			<top>613</top>
 			<width>118</width>
 			<height>98</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="7600" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4041,7 +3909,6 @@
 			<top>616</top>
 			<width>128</width>
 			<height>105</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="7400" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4070,7 +3937,6 @@
 			<top>616</top>
 			<width>128</width>
 			<height>105</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.5.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="7400" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4152,7 +4018,6 @@
 			<top>620</top>
 			<width>138</width>
 			<height>113</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="2200" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4181,7 +4046,6 @@
 			<top>620</top>
 			<width>138</width>
 			<height>113</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.4.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="2200" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4259,7 +4123,6 @@
 			<top>623</top>
 			<width>166</width>
 			<height>120</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="2800" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4287,7 +4150,6 @@
 			<top>623</top>
 			<width>166</width>
 			<height>120</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.3.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="2800" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4364,7 +4226,6 @@
 			<top>628</top>
 			<width>184</width>
 			<height>134</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="2600" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4392,7 +4253,6 @@
 			<top>628</top>
 			<width>184</width>
 			<height>134</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.2.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="2600" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4469,7 +4329,6 @@
 			<top>633</top>
 			<width>200</width>
 			<height>150</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="2400" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4497,7 +4356,6 @@
 			<top>633</top>
 			<width>200</width>
 			<height>150</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.1.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="2400" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4574,7 +4432,6 @@
 			<top>638</top>
 			<width>226</width>
 			<height>166</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">views/boxsets/cdart3d.png</texture>
 			<animation effect="fade" start="0" end="100" delay="2200" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4602,7 +4459,6 @@
 			<top>638</top>
 			<width>225</width>
 			<height>165</height>
-			<aspectratio>stretch</aspectratio>
 			<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)]</texture>
 			<animation effect="fade" start="0" end="90" delay="2200" time="2000">Visible</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
@@ -4651,7 +4507,6 @@
 			<width>280</width>
 			<height>50</height>
 			<fadetime>100</fadetime>
-			<aspectratio>stretch</aspectratio>
 			<align>center</align>
 			<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 			<animation effect="rotate" center="auto" start="" end="-90" time="0" condition="true">Conditional</animation>

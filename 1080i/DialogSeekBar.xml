@@ -4,13 +4,10 @@
 	<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + ![VideoPlayer.Content(livetv) | Window.IsVisible(videoosd) | Window.IsVisible(fullscreeninfo) | Window.IsActive(script-XBMC-Subtitles-main.xml)] + Window.IsVisible(fullscreenvideo)</visible>
 	<coordinates>
 		<system>1</system>
-		<left>0</left>
-		<top>0</top>
 	</coordinates>
 	<controls>
 		<control type="group" id="10125">
 			<visible>Skin.HasSetting(Plotinfoscreen)</visible>
-			<left>0</left>
 			<top>130</top>
 			<visible>Player.Paused + VideoPlayer.Content(movies) + Skin.HasSetting(Show_Info_Paused)</visible>
 			<control type="group">
@@ -61,8 +58,8 @@
 				<control type="image" id="19547">
 					<visible>Skin.HasSetting(WeatherInfoOnPause)</visible>
 					<description>media info background image</description>
-					<posx>16</posx>
-					<posy>16</posy>
+					<left>16</left>
+					<top>16</top>
 					<width>665</width>
 					<height>195</height>
 					<texture>views/weatherback.png</texture>
@@ -70,8 +67,8 @@
 				<!--  Today's Weather   -->
 				<control type="image">
 					<visible>Skin.HasSetting(WeatherInfoOnPause)</visible>
-					<posx>22</posx>
-					<posy>8</posy>
+					<left>22</left>
+					<top>8</top>
 					<width>160</width>
 					<height>160</height>
 					<aspectratio align="right" aligny="top">keep</aspectratio>
@@ -80,8 +77,8 @@
 				<control type="label" id="19547">
 					<visible>Skin.HasSetting(WeatherInfoOnPause)</visible>
 					<description>current temp Value</description>
-					<posx>187</posx>
-					<posy>23</posy>
+					<left>187</left>
+					<top>23</top>
 					<width>195</width>
 					<height>40</height>
 					<font>Font_ShowcaseMainLabel2_Caps</font>
@@ -94,8 +91,8 @@
 				<control type="label" id="19547">
 					<visible>Skin.HasSetting(WeatherInfoOnPause)</visible>
 					<description>predicted high label</description>
-					<posx>187</posx>
-					<posy>31</posy>
+					<left>187</left>
+					<top>31</top>
 					<width>485</width>
 					<height>160</height>
 					<label>High: [COLOR orange]$INFO[Window(2600).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]  Low: [COLOR lightblue]$INFO[Window(2600).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] • $INFO[Window(2600).Property(Day0.Outlook)]</label>
@@ -110,8 +107,8 @@
 				<control type="label" id="19547">
 					<visible>Skin.HasSetting(WeatherInfoOnPause)</visible>
 					<description>low label</description>
-					<posx>35</posx>
-					<posy>78</posy>
+					<left>35</left>
+					<top>78</top>
 					<width>135</width>
 					<height>160</height>
 					<label>[COLOR white]$INFO[Window(2600).Property(Day1.Title)][/COLOR]</label>
@@ -125,8 +122,8 @@
 				<control type="label" id="19547">
 					<visible>Skin.HasSetting(WeatherInfoOnPause)</visible>
 					<description>low label</description>
-					<posx>187</posx>
-					<posy>78</posy>
+					<left>187</left>
+					<top>78</top>
 					<width>485</width>
 					<height>160</height>
 					<label> High: [COLOR orange]$INFO[Window(2600).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]  Low: [COLOR lightblue]$INFO[Window(2600).Property(Day1.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] • $INFO[Window(2600).Property(Day1.Outlook)]</label>
@@ -140,8 +137,8 @@
 				<control type="label" id="19547">
 					<visible>Skin.HasSetting(WeatherInfoOnPause)</visible>
 					<description>tomorrow high label</description>
-					<posx>35</posx>
-					<posy>104</posy>
+					<left>35</left>
+					<top>104</top>
 					<width>135</width>
 					<height>160</height>
 					<label>[COLOR white]$INFO[Window(2600).Property(Day2.Title)][/COLOR]</label>
@@ -155,8 +152,8 @@
 				<control type="label" id="19547">
 					<visible>Skin.HasSetting(WeatherInfoOnPause)</visible>
 					<description>tomorrow high label</description>
-					<posx>187</posx>
-					<posy>104</posy>
+					<left>187</left>
+					<top>104</top>
 					<width>485</width>
 					<height>160</height>
 					<label> High: [COLOR orange]$INFO[Window(2600).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]  Low: [COLOR lightblue]$INFO[Window(2600).Property(Day2.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] • $INFO[Window(2600).Property(Day2.Outlook)]</label>
@@ -244,7 +241,6 @@
 			</control>
 		</control>
 		<control type="group" id="10125">
-			<left>0</left>
 			<top>130</top>
 			<visible>Skin.HasSetting(Plotinfoscreen)</visible>
 			<visible>Player.Paused + VideoPlayer.Content(episodes) + Skin.HasSetting(Show_Info_Paused)</visible>
@@ -315,7 +311,6 @@
 			</control>
 		</control>
 		<control type="group" id="10125">
-			<left>0</left>
 			<top>130</top>
 			<visible>Skin.HasSetting(Plotinfoscreen)</visible>
 			<visible>Player.Paused + VideoPlayer.Content(files) + Skin.HasSetting(Show_Info_Paused)</visible>
@@ -791,7 +786,7 @@
 					<font>Font_ShowcaseMainLabel2_Caps</font>
 					<label>$INFO[VideoPlayer.Title]</label>
 					<scroll>true</scroll>
-					<animation effect="slide" start="0,15" end="0,15" time="0" condition="[String.IsEmpty(Player.ChapterName) | String.Contains(Player.ChapterName,0,left)] + [[String.IsEmpty(VideoPlayer.Tagline) + VideoPlayer.Content(movies)] | [String.IsEmpty(VideoPlayer.Artist) + VideoPlayer.Content(musicvideos)]] | VideoPlayer.Content(files)">Conditional</animation>
+					<animation effect="slide" start="0,15" end="0,15" time="0" condition="[String.IsEmpty(Player.ChapterName) | String.StartsWith(Player.ChapterName,0)] + [[String.IsEmpty(VideoPlayer.Tagline) + VideoPlayer.Content(movies)] | [String.IsEmpty(VideoPlayer.Artist) + VideoPlayer.Content(musicvideos)]] | VideoPlayer.Content(files)">Conditional</animation>
 				</control>
 				<control type="label">
 					<left>510</left>
@@ -816,26 +811,14 @@
 					<top>30</top>
 					<visible>!VideoPlayer.Content(files)</visible>
 					<control type="image" id="76">
-						<texture>$VAR[ColorFlagsStudio]$INFO[VideoPlayer.Studio,,.png]</texture>
+						<texture>String.Contains$INFO[VideoPlayer.Studio,,.png]</texture>
 						<include>OSDFlagVars</include>
 					</control>
 					<control type="image">
-						<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
+						<texture>default-studio.png</texture>
 						<include>OSDFlagVars</include>
 						<visible>String.IsEmpty(VideoPlayer.Studio)</visible>
 					</control>
-					<!--control type="label">
-						<left>0</left>
-						<top>-5</top>
-						<width>155</width>
-						<height>70</height>
-						<align>center</align>
-						<label>$INFO[VideoPlayer.Studio]</label>
-						<font>Font_Reg22_Caps</font>
-						<textcolor>grey</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>String.IsEmpty(Control.GetLabel(76))</visible>
-					</control-->
 				</control>
 				<control type="image" id="2117">
 					<left>325</left>
@@ -844,18 +827,11 @@
 					<include>OSDFlagVars</include>
 					<visible>!VideoPlayer.Content(files) + !String.IsEmpty(VideoPlayer.mpaa)</visible>
 				</control>
-				<!--control type="image">
-					<left>325</left>
-					<top>30</top>
-					<texture>$VAR[ColorFlagsRating]rating/MPAA_NR_Certificate_US.png</texture>
-					<include>OSDFlagVars</include>
-					<visible>!VideoPlayer.Content(files) + String.IsEmpty(Control.GetLabel(2117))</visible>
-				</control-->
 				<control type="image">
 					<left>1480</left>
 					<top>30</top>
 					<include>OSDFlagVars</include>
-					<texture>$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
+					<texture>$VAR[ColorFlags]aspectratio/$INFO[VideoPlayer.VideoAspect,,.png]</texture>
 					<animation effect="slide" end="-1305" condition="VideoPlayer.Content(files)">Conditional</animation>
 				</control>
 				<control type="image">
@@ -901,7 +877,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>IconCrossfadeTime2</fadetime>
-						<texture colordiffuse="white2" fallback="">special://skin/extras/BigIcons/Subtitle.png</texture>
+						<texture colordiffuse="white2" fallback="">BigIcons/Subtitle.png</texture>
 						<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
 					</control>
 					<control type="image">
@@ -911,7 +887,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>IconCrossfadeTime2</fadetime>
-						<texture colordiffuse="white2" fallback="">special://skin/extras/BigIcons/Speaker.png</texture>
+						<texture colordiffuse="white2" fallback="">BigIcons/Speaker.png</texture>
 						<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
 						<visible>!String.Contains(VideoPlayer.AudioLanguage,und)</visible>
 					</control>
@@ -922,7 +898,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>IconCrossfadeTime2</fadetime>
-						<texture colordiffuse="white2" fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.AudioLanguage,,.png]</texture>
+						<texture colordiffuse="white2" fallback="">$VAR[ColorFlags]$INFO[VideoPlayer.AudioLanguage,,.png]</texture>
 					</control>
 					<control type="image">
 						<left>1860</left>
@@ -931,7 +907,7 @@
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<fadetime>IconCrossfadeTime2</fadetime>
-						<texture colordiffuse="white2" fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.SubtitlesLanguage,,.png]</texture>
+						<texture colordiffuse="white2" fallback="">$VAR[ColorFlags]$INFO[VideoPlayer.SubtitlesLanguage,,.png]</texture>
 						<animation effect="fade" time="200">VisibleChange</animation>
 					</control>
 				</control>

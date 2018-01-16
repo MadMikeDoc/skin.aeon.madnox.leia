@@ -15,7 +15,6 @@
 				<top>280</top>
 				<width>1880</width>
 				<height>747</height>
-				<aspectratio>stretch</aspectratio>
 				<texture border="40">buttons/roundedbutton-nofocus.png</texture>
 			</control>
 			<control type="epggrid" id="10">
@@ -51,7 +50,7 @@
 						<font>Font_Reg26_2</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>$VAR[FontColorVar]</selectedcolor>
-						<label>$INFO[ListItem.ChannelNumber]</label>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 						<align>center</align>
 					</control>
 					<control type="image">
@@ -114,7 +113,7 @@
 						<font>Font_Reg26_2</font>
 						<textcolor>white</textcolor>
 						<selectedcolor>$VAR[FontColorVar]</selectedcolor>
-						<label>$INFO[ListItem.ChannelNumber]</label>
+						<label>$INFO[ListItem.ChannelNumberLabel]</label>
 						<align>center</align>
 					</control>
 					<control type="image">
@@ -167,13 +166,11 @@
 					<control type="image" id="1">
 						<width>60</width>
 						<height>60</height>
-						<aspectratio>stretch</aspectratio>
 						<texture border="3">$INFO[ListItem.Property(GenreType),epg-genres/,.png]</texture>
 					</control>
 					<control type="image" id="2">
 						<width>60</width>
 						<height>60</height>
-						<aspectratio>stretch</aspectratio>
 						<texture border="3" fallback="epg-genres/0.png">$INFO[ListItem.Genre,epg-genres/,.png]</texture>
 						<visible>!Control.IsVisible(1)</visible>
 					</control>
@@ -216,13 +213,11 @@
 					<control type="image" id="14">
 						<width>60</width>
 						<height>60</height>
-						<aspectratio>stretch</aspectratio>
 						<texture colordiffuse="$VAR[AreaColorVar]">views/tripanel/listselect_fo.png</texture>
 					</control>
 					<control type="image" id="2">
 						<width>60</width>
 						<height>60</height>
-						<top>0</top>
 					</control>
 					<control type="label" id="1">
 						<left>9</left>
@@ -270,7 +265,7 @@
 						<aspectratio align="center" aligny="top">keep</aspectratio>
 						<fadetime>400</fadetime>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>String.Contains(ListItem.PlotOutline,"http://",Left) | String.Contains(ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")</visible>
 					</control>
 					<control type="image">
 						<visible>!String.IsEqual(ListItem.Icon,DefaultVideo.png)</visible>
@@ -352,7 +347,7 @@
 			</control>
 			<control type="group">
 				<control type="image">
-					<posy>750</posy>
+					<top>750</top>
 					<width>1920</width>
 					<height>350</height>
 					<texture colordiffuse="$VAR[AreaColorVar]">views/diffuse_bottom.png</texture>
@@ -492,7 +487,6 @@
 							<texture>osd/osd_settings_buttonnf.png</texture>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<width>1665</width>
 							<height>59</height>
 							<texture colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texture>
@@ -616,13 +610,12 @@
 						<animation effect="fade" start="100" end="40" time="200" condition="Control.IsVisible(56)">Conditional</animation>
 					</control>
 					<control type="image" id="55">
-						<left>0</left>
 						<top>15</top>
 						<width>400</width>
 						<height>200</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>String.Contains(ListItem.PlotOutline,"http://",Left) | String.Contains(ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")</visible>
 					</control>
 				</control>
 			</control>
@@ -781,7 +774,6 @@
 							<texture>osd/osd_settings_buttonnf.png</texture>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<width>1665</width>
 							<height>59</height>
 							<texture colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texture>
@@ -886,13 +878,12 @@
 						<visible>!Control.IsVisible(55)</visible>
 					</control>
 					<control type="image" id="55">
-						<left>0</left>
 						<top>15</top>
 						<width>400</width>
 						<height>200</height>
 						<aspectratio>keep</aspectratio>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
-						<visible>String.Contains(ListItem.PlotOutline,"http://",Left) | String.Contains(ListItem.PlotOutline,"https://",Left)</visible>
+						<visible>String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")</visible>
 					</control>
 				</control>
 			</control>
@@ -1063,7 +1054,6 @@
 							<texture border="1">osd/osd_settings_buttonnf.png</texture>
 						</control>
 						<control type="image">
-							<left>0</left>
 							<width>1665</width>
 							<height>59</height>
 							<texture colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texture>
@@ -1140,11 +1130,11 @@
 			</control>
 		</control>
 		<control type="label" id="29">
-			<font>-</font>
+			<font />
 			<include>HiddenObject</include>
 		</control>
 		<control type="label" id="30">
-			<font>-</font>
+			<font />
 			<include>HiddenObject</include>
 		</control>
 		<include>BreadcrumbsContent</include>

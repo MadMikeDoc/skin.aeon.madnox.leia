@@ -21,26 +21,7 @@
 		<control type="group"><!-- default group -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(900)</visible>
-			<!--control type="image">
-			<left>10</left>
-			<top>60</top>
-			<width>1900</width>
-			<height>810</height>
-			<texture>views/other/panel.png</texture>
-			<colordiffuse>F9000000</colordiffuse>
-			<animation effect="fade" end="85" condition="true">Conditional</animation>
-		</control-->
-			<!--control type="image">
-			<left>900</left>
-			<top>690</top>
-			<width>380</width>
-			<height>362</height>
-			<texture flipy="true" diffuse="thumbs/reflection_diffuse_sq.png">views/other/panel.png</texture>
-			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-			<animation effect="fade" end="85" condition="true">Conditional</animation>
-		</control-->
 			<control type="image">
-				<left>0</left>
 				<top>471</top>
 				<width>1950</width>
 				<height>30</height>
@@ -48,12 +29,9 @@
 				<colordiffuse>C3FFFFFF</colordiffuse>
 			</control>
 			<control type="image">
-				<left>0</left>
-				<top>0</top>
 				<width>1920</width>
 				<height>362</height>
 				<texture flipy="true" diffuse="shadow_mask.png">darkgrey.png</texture>
-				<!--texture flipy="true" diffuse="thumbs/reflection_diffuse_sq.png">views/other/panel.png</texture-->
 				<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
 			</control>
@@ -68,17 +46,7 @@
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
 			</control>
 			<!-- MAD - Shadow for clearlogo -->
-			<!--control type="image">
-			<left>1470</left>
-			<top>140</top>
-			<width>390</width>
-			<height>164</height>
-			<texture>shadow_h.png</texture>
-			<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
-			<animation effect="fade" end="85" condition="true">Conditional</animation>
-		</control-->
 			<control type="image">
-				<left>0</left>
 				<top>501</top>
 				<width>1920</width>
 				<height>360</height>
@@ -105,7 +73,6 @@
 				<visible>Control.HasFocus(5801)</visible>
 			</control>
 			<control type="image">
-				<!--Source logo-->
 				<top>920</top>
 				<left>115</left>
 				<texture>$VAR[ColorFlagsSource]source/$VAR[MovieSetsSourceFlagVar,,.png]</texture>
@@ -113,17 +80,15 @@
 				<animation effect="slide" end="64" condition="Control.IsVisible(512) | Control.IsVisible(550)">Conditional</animation>
 			</control>
 			<control type="image">
-				<!--Resolution logo-->
 				<top>915</top>
 				<left>415</left>
 				<texture>$VAR[ColorFlagsResolution]resolution/$INFO[Container(5801).ListItem.VideoResolution,,.png]</texture>
 				<include>AudioFlagsVars</include>
 			</control>
 			<control type="image">
-				<!--AspectRatio logo-->
 				<top>915</top>
 				<left>715</left>
-				<texture>$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[Container(5801).ListItem.VideoAspect,,.png]</texture>
+				<texture>$VAR[ColorFlags]aspectratio/$INFO[Container(5801).ListItem.VideoAspect,,.png]</texture>
 				<include>AudioFlagsVars</include>
 			</control>
 			<control type="image">
@@ -138,7 +103,7 @@
 				<left>1315</left>
 				<animation effect="slide" end="109" condition="Control.IsVisible(512) | Control.IsVisible(550)">Conditional</animation>
 				<top>910</top>
-				<texture>$VAR[ColorFlagsStudio]$INFO[Container(5801).ListItem.Studio,,.png]</texture>
+				<texture>String.Contains$INFO[Container(5801).ListItem.Studio,,.png]</texture>
 				<width>135</width>
 				<height>82</height>
 				<aspectratio>keep</aspectratio>
@@ -150,7 +115,7 @@
 				<left>1315</left>
 				<animation effect="slide" end="109" condition="Control.IsVisible(512) | Control.IsVisible(550)">Conditional</animation>
 				<top>910</top>
-				<texture>$VAR[ColorFlagsStudio]default-studio.png</texture>
+				<texture>default-studio.png</texture>
 				<include>AudioFlagsVars</include>
 				<visible>String.IsEmpty(Container(5801).ListItem.Studio)</visible>
 			</control>
@@ -188,7 +153,7 @@
 				<width>26</width>
 				<height>22</height>
 				<aspectratio>scale</aspectratio>
-				<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
+				<texture>$VAR[ColorFlags]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 				<include>Animation_VisibleChange200</include>
 				<fadetime>400</fadetime>
@@ -198,7 +163,7 @@
 				<width>26</width>
 				<height>22</height>
 				<aspectratio>scale</aspectratio>
-				<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
+				<texture>$VAR[ColorFlags]$INFO[ListItem.Property(AudioLanguage.2),,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
 				<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 				<include>Animation_VisibleChange200</include>
@@ -209,7 +174,7 @@
 				<width>26</width>
 				<height>22</height>
 				<aspectratio>scale</aspectratio>
-				<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
+				<texture>$VAR[ColorFlags]$INFO[ListItem.Property(AudioLanguage.3),,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
 				<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
 				<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
@@ -332,7 +297,7 @@
 				<font>Font18a</font>
 				<label>$INFO[Container(5801).ListItem.Plot]</label>
 				<textcolor>FFFFFAF0</textcolor>
-				<autoscroll delay="8000" time="2000" repeat="8000"></autoscroll>
+				<autoscroll delay="8000" time="2000" repeat="8000">true</autoscroll>
 				<visible>Control.HasFocus(5801)</visible>
 			</control>
 			<control type="image"><!-- Fanart -->
@@ -411,15 +376,12 @@
 					<visible>Container.Content(movies) | Container.Content(sets)</visible>
 					<itemlayout height="40">
 						<control type="image">
-							<left>0</left>
-							<top>0</top>
 							<width>380</width>
 							<height>1</height>
 							<texture>separator2.png</texture>
 						</control>
 						<control type="label">
 							<left>20</left>
-							<top>0</top>
 							<height>40</height>
 							<width>580</width>
 							<aligny>center</aligny>
@@ -430,7 +392,6 @@
 					<focusedlayout height="40">
 						<control type="image">
 							<left>20</left>
-							<top>0</top>
 							<width>620</width>
 							<height>40</height>
 							<texture>listselect_fo.png</texture>
@@ -438,18 +399,16 @@
 						</control>
 						<control type="image">
 							<left>620</left>
-							<top>0</top>
 							<width>20</width>
 							<height>40</height>
 							<texture>arrow_settings.png</texture>
 							<colordiffuse>$VAR[TitleColorVar]</colordiffuse>
 							<include>Animation_CommonFade</include>
 							<animation effect="fade" start="20" end="80" time="700" condition="true" pulse="true">Conditional</animation>
-							<visible>String.Contains(ListItem.Path,videodb://movies/sets,left)</visible>
+							<visible>String.StartsWith(ListItem.Path,videodb://movies/sets)</visible>
 						</control>
 						<control type="label">
 							<left>20</left>
-							<top>0</top>
 							<height>40</height>
 							<width>580</width>
 							<aligny>center</aligny>
@@ -458,49 +417,47 @@
 						</control>
 					</focusedlayout>
 				</control>
-
-		<!-- Letter-Scrollbar -->
-			<control type="image">
-				<left>420</left>
-				<top>995</top>
-				<width>1097</width>
-				<height>58</height>
-				<animation effect="fade" start="100" end="100" time="50" condition="Control.HasFocus(6019)">Conditional</animation>
-				<texture>views/directory/sbl_backround.png</texture>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<visible>Control.HasFocus(6019) + Skin.HasSetting(AlphabetScrollbar)</visible>
-			</control>
-			<control type="panel" id="6019">
-				<onup>900</onup>
-				<ondown>9000</ondown>
-				<left>430</left>
-				<top>1005</top>
-				<width>1188</width>
-				<height>100%</height>
-				<animation effect="fade" start="100" end="0" time="50" condition="!Control.HasFocus(6019)">Conditional</animation>
-				<itemlayout height="41" width="40">
-					<control type="image">
-						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
-						<colordiffuse>white</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-					</control>
-					<control type="image">
-						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
-						<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
-					</control>
-				</itemlayout>
-				<focusedlayout height="41" width="40">
-					<control type="image">
-						<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
-						<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
-					</control>
-				</focusedlayout>
-				<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
-			</control>
-
+				<!-- Letter-Scrollbar -->
+				<control type="image">
+					<left>420</left>
+					<top>995</top>
+					<width>1097</width>
+					<height>58</height>
+					<animation effect="fade" start="100" end="100" time="50" condition="Control.HasFocus(6019)">Conditional</animation>
+					<texture>views/directory/sbl_backround.png</texture>
+					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+					<visible>Control.HasFocus(6019) + Skin.HasSetting(AlphabetScrollbar)</visible>
+				</control>
+				<control type="panel" id="6019">
+					<onup>900</onup>
+					<ondown>9000</ondown>
+					<left>430</left>
+					<top>1005</top>
+					<width>1188</width>
+					<height>100%</height>
+					<animation effect="fade" start="100" end="0" time="50" condition="!Control.HasFocus(6019)">Conditional</animation>
+					<itemlayout height="41" width="40">
+						<control type="image">
+							<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
+							<colordiffuse>white</colordiffuse>
+							<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						</control>
+						<control type="image">
+							<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
+							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+							<animation effect="fade" start="100" end="50" time="0" condition="true">Conditional</animation>
+							<visible>String.IsEqual(ListItem.Label,Container.ListItem.SortLetter)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="41" width="40">
+						<control type="image">
+							<texture>views/directory/1/$INFO[ListItem.Label].png</texture>
+							<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+							<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+						</control>
+					</focusedlayout>
+					<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
+				</control>
 				<control type="image">
 					<left>1285</left>
 					<top>500</top>
@@ -561,7 +518,6 @@
 						</control>
 						<control type="image">
 							<left>-35</left>
-							<top>0</top>
 							<width>278</width>
 							<height>382</height>
 							<texture>thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -635,7 +591,6 @@
 						</control>
 					</control>
 				</itemlayout>
-
 				<itemlayout condition="!Skin.HasSetting(MovieSetsNoDiscArt)" height="460" width="352">
 					<control type="image">
 						<left>87</left>
@@ -697,7 +652,6 @@
 					</control>
 					<control type="textbox">
 						<animation effect="rotate" start="02" end="-360" center="217,167" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
-						<!--animation effect="rotate" end="-360" center="216,-8" time="6400" delay="1200" loop="false" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation-->
 						<top>200</top>
 						<left>117</left>
 						<width>190</width>
@@ -710,7 +664,6 @@
 					</control>
 					<control type="group">
 						<animation effect="rotate" start="02" end="-360" center="217,167" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
-						<!--animation effect="rotate" end="-360" center="222,164" time="6400" delay="1200" loop="false" reversible="false" tween="cubic" easing="inout" condition="!Container.OnNext + !Container.OnPrevious">Conditional</animation-->
 						<top>70</top>
 						<left>152</left>
 						<width>140</width>
@@ -732,7 +685,6 @@
 						</control>
 						<control type="image">
 							<left>-35</left>
-							<top>0</top>
 							<width>279</width>
 							<height>382</height>
 							<texture>thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -821,7 +773,6 @@
 							</control>
 							<control type="image">
 								<left>-35</left>
-								<top>0</top>
 								<width>278</width>
 								<height>382</height>
 								<texture>thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -995,7 +946,6 @@
 							</control>
 							<control type="image">
 								<left>-35</left>
-								<top>0</top>
 								<width>279</width>
 								<height>382</height>
 								<texture>thumbs/boxes/$VAR[ShowcaseCasePathVar]/$VAR[GlobalCaseVar]</texture>
@@ -1074,7 +1024,6 @@
 				<content target="video" sortby="year" sortorder="ascending">videodb://movies/sets/$INFO[ListItem.DBID]/</content>
 			</control>
 		</control>
-
 		<!-- Fullscreen Poster Art -->
 		<control type="group">
 			<left>-1280</left>
@@ -1105,7 +1054,6 @@
 			<visible>Control.HasFocus(160)</visible>
 			<animation effect="slide" start="0,0" end="0,-80" time="600" delay="1000" tween="cubic" easing="inout" condition="Control.HasFocus(160)">Conditional</animation>
 			<control type="image">
-				<left>0</left>
 				<top>760</top>
 				<height>40</height>
 				<width>1280</width>
@@ -1114,7 +1062,6 @@
 				<include>Animation_DefaultGlass2</include>
 			</control>
 			<control type="label">
-				<left>0</left>
 				<top>760</top>
 				<height>40</height>
 				<width>1280</width>
@@ -1125,13 +1072,6 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<scroll>true</scroll>
 			</control>
-			<!--control type="image">
-			<left>0</left>
-			<top>760</top>
-			<height>40</height>
-			<width>1280</width>
-			<texture>gradient_small.png</texture>
-		</control-->
 		</control>
 	</include>
 </includes>

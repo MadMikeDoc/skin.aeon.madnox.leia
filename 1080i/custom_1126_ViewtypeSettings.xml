@@ -1434,7 +1434,7 @@
 					<onclick>Skin.ToggleSetting(DisplayCharacterArt)</onclick>
 					<onclick>Skin.Reset(tripanelextrafanart)</onclick>
 					<selected>Skin.HasSetting(DisplayCharacterArt)</selected>
-					<visible>String.Contains(Window(home).Property(actualViewtype),Tripanel + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+					<visible>String.Contains(Window(home).Property(actualViewtype),Tripanel) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<!--Posters Options-->
 				<control type="radiobutton" id="1648">

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol></defaultcontrol>
+	<defaultcontrol />
 	<controls>
 		<control type="label" id="1999">
 			<description>Dialog animations (doesn't work)</description>
 			<visible>false</visible>
-			<label>-</label>
+			<label />
 		</control>
 		<control type="group" id="2000">
 			<left>1140</left>

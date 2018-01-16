@@ -242,7 +242,7 @@
 						<top>6</top>
 						<colordiffuse>grey2</colordiffuse>
 						<include>MediaFlagVarsShelf</include>
-						<texture>$VAR[ColorFlagsAspectRatio]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
+						<texture>$VAR[ColorFlags]aspectratio/$INFO[ListItem.VideoAspect,,.png]</texture>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
@@ -281,8 +281,8 @@
 					<texturesliderbackground border="12,0,12,0">views/scrollbarbacklist2.png</texturesliderbackground>
 					<texturesliderbar border="14,0,14,0">views/scrollbar/scrollbar_horizontal.png</texturesliderbar>
 					<texturesliderbarfocus border="8,0,8,0">views/scrollbar/scrollbar_horizontal.png</texturesliderbarfocus>
-					<textureslidernib>-</textureslidernib>
-					<textureslidernibfocus>-</textureslidernibfocus>
+					<textureslidernib />
+					<textureslidernibfocus />
 					<showonepage>false</showonepage>
 					<orientation>horizontal</orientation>
 					<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(88) + !Container.Scrolling">Conditional</animation>
@@ -309,14 +309,12 @@
 					<itemlayout width="290" height="434">
 						<control type="group">
 							<left>150</left>
-							<top>0</top>
 							<control type="image">
 								<left>-94</left>
 								<top>164</top>
 								<width>260</width>
 								<height>339</height>
 								<texture diffuse="views/shelf3DR/diffuse_box.png" background="true">$VAR[ListPosterVar]</texture>
-								<aspectratio>stretch</aspectratio>
 							</control>
 							<control type="image">
 								<left>-94</left>
@@ -324,7 +322,6 @@
 								<width>260</width>
 								<height>337</height>
 								<texture flipy="true" diffuse="views/shelf3DR/reflect_poster.png" background="true">$VAR[ListPosterVar]</texture>
-								<aspectratio>stretch</aspectratio>
 							</control>
 							<control type="image">
 								<left>90</left>
@@ -341,7 +338,6 @@
 								<width>287</width>
 								<height>380</height>
 								<texture background="true">views/shelf3DR/$VAR[GlobalCaseVar]</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>!ListItem.IsParentFolder</visible>
 							</control>
 							<control type="image">
@@ -350,7 +346,6 @@
 								<width>287</width>
 								<height>380</height>
 								<texture flipy="true" diffuse="views/shelf3DR/reflect_box_overlay.png" background="true" >views/shelf3DR/$VAR[GlobalCaseVar]</texture>
-								<aspectratio>stretch</aspectratio>
 								<visible>!ListItem.IsParentFolder</visible>
 							</control>
 						</control>
@@ -364,7 +359,6 @@
 								<effect type="zoom" delay="5000" center="50,180" start="100" end="20" time="800" tween="cubic" easing="out" />
 							</animation>
 							<left>140</left>
-							<top>0</top>
 							<control type="image">
 								<left>-136</left>
 								<top>67</top>
@@ -407,7 +401,6 @@
 								<width>388</width>
 								<height>538</height>
 								<texture background="true">views/shelf3DR/$VAR[GlobalCaseVar]</texture>
-								<aspectratio>stretch</aspectratio>
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="50,180" start="80" end="100" time="600" tween="cubic" easing="out" />
 								</animation>
@@ -421,7 +414,6 @@
 								<visible>Control.HasFocus(708)</visible>
 								<colordiffuse>89FFFFFF</colordiffuse>
 								<texture flipy="true">views/shelf3DR/$VAR[GlobalCaseVar]</texture>
-								<aspectratio>stretch</aspectratio>
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="50,180" start="80" end="100" time="600" tween="cubic" easing="out" />
 								</animation>
@@ -431,7 +423,6 @@
 						<control type="group">
 							<visible>ListItem.IsCollection</visible>
 							<left>140</left>
-							<top>0</top>
 							<control type="image">
 								<left>-136</left>
 								<top>67</top>
@@ -473,7 +464,6 @@
 								<width>388</width>
 								<height>538</height>
 								<texture background="true">views/shelf3DR/$VAR[GlobalCaseVar]</texture>
-								<aspectratio>stretch</aspectratio>
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="50,180" start="80" end="100" time="600" tween="cubic" easing="out" />
 								</animation>
@@ -485,7 +475,6 @@
 								<height>538</height>
 								<colordiffuse>89FFFFFF</colordiffuse>
 								<texture flipy="true">views/shelf3DR/$VAR[GlobalCaseVar]</texture>
-								<aspectratio>stretch</aspectratio>
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="50,180" start="80" end="100" time="600" tween="cubic" easing="out" />
 								</animation>
@@ -495,7 +484,6 @@
 							<visible>!Control.HasFocus(708) + !ListItem.IsCollection</visible>
 							<visible>!ListItem.IsParentFolder</visible>
 							<left>140</left>
-							<top>0</top>
 							<control type="image">
 								<left>-136</left>
 								<top>67</top>
@@ -528,7 +516,6 @@
 								<width>388</width>
 								<height>538</height>
 								<texture background="true">views/shelf3DR/$VAR[GlobalCaseVar]</texture>
-								<aspectratio>stretch</aspectratio>
 							</control>
 							<control type="image">
 								<left>-144</left>
@@ -537,7 +524,6 @@
 								<height>538</height>
 								<colordiffuse>89FFFFFF</colordiffuse>
 								<texture flipy="true">views/shelf3DR/$VAR[GlobalCaseVar]</texture>
-								<aspectratio>stretch</aspectratio>
 							</control>
 						</control>
 						<control type="group">
@@ -680,7 +666,6 @@
 								<width>372</width>
 								<height>538</height>
 								<texture background="true">views/shelf3DR/b$VAR[GlobalCaseVar]</texture>
-								<aspectratio>stretch</aspectratio>
 							</control>
 							<control type="group">
 								<top>-100</top>
@@ -761,7 +746,6 @@
 								<height>538</height>
 								<colordiffuse>89FFFFFF</colordiffuse>
 								<texture flipy="true" background="true">views/shelf3DR/b$VAR[GlobalCaseVar]</texture>
-								<aspectratio>stretch</aspectratio>
 							</control>
 							<control type="textbox">
 								<left>-80</left>
@@ -777,7 +761,7 @@
 								<label>$INFO[ListItem.Studio]</label>
 								<font>Bluback2</font>
 								<textcolor>white</textcolor>
-								<visible>[String.Contains(Control.GetLabel(84756),xy,Left)]</visible>
+								<visible>[String.StartsWith(Control.GetLabel(84756),xy)]</visible>
 							</control>
 						</control>
 						<control type="group">
@@ -828,7 +812,7 @@
 								<font>Bluback2</font>
 								<textcolor>white</textcolor>
 								<shadowcolor>black</shadowcolor>
-								<visible>[String.Contains(Control.GetLabel(84756),xy,Left)]</visible>
+								<visible>[String.StartsWith(Control.GetLabel(84756),xy)]</visible>
 							</control>
 							<control type="image">
 								<left>30</left>

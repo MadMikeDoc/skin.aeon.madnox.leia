@@ -149,7 +149,7 @@
 						<height>82</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label>-</label>
+						<label />
 						<texturefocus border="40" colordiffuse="$VAR[FocusTextureColorVar]">buttons/roundedbutton-focus.png</texturefocus>
 						<texturenofocus border="40">buttons/roundedbutton-nofocus.png</texturenofocus>
 					</control>
@@ -228,8 +228,15 @@
 		</control>
 		<control type="button" id="2">
 			<description>View As button</description>
-			<label>-</label>
+			<label />
 			<include>ViewtypeSettingsButton</include>
+			<visible>!Window.IsActive(tvrecordings)</visible>
+		</control>
+		<control type="button" id="10">
+			<description>View As button</description>
+			<label>20367</label>
+			<include>ViewtypeSettingsButton</include>
+			<visible>Window.IsActive(tvrecordings)</visible>
 		</control>
 		<control type="button" id="3">
 			<description>Sort by button</description>
@@ -265,7 +272,7 @@
 						<include>Objects_MediaMenuButtonIcons1</include>
 						<textureradioon>special://skin/extras/icons/cabinet.png</textureradioon>
 						<textureradiooff>special://skin/extras/icons/cabinet.png</textureradiooff>
-						<label>-</label>
+						<label />
 					</control>
 					<control type="radiobutton" id="100">
 						<description>Channels</description>
@@ -390,7 +397,7 @@
 			</control>
 			<control type="image" id="1">
 				<top>-40</top>
-				<posx>-1000</posx>
+				<left>-1000</left>
 				<width>3920</width>
 				<height>350</height>
 				<texture colordiffuse="black">home/nowplaying_shadow.png</texture>
@@ -437,7 +444,7 @@
 				<align>left</align>
 				<font>Font_Bold56</font>
 				<textcolor>$VAR[FontColorVar]</textcolor>
-				<label>$INFO[VideoPlayer.ChannelNumber]</label>
+				<label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="label" id="1">
@@ -506,10 +513,10 @@
 				<scroll>true</scroll>
 				<label>$INFO[VideoPlayer.Title]</label>
 				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
-				<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
+				<visible>![VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel]</visible>
 			</control>
 			<control type="group" id="1">
-				<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
+				<visible>VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel</visible>
 				<control type="image" id="1">
 					<left>499</left>
 					<top>896</top>
@@ -583,8 +590,8 @@
 				<info>Player.Progress</info>
 				<midtexture border="0">new_pvr/texturebg_white.png</midtexture>
 				<texturebg border="3,0,3,0">new_pvr/texturebg_border_white.png</texturebg>
-				<lefttexture>-</lefttexture>
-				<righttexture>-</righttexture>
+				<lefttexture />
+				<righttexture />
 				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 			</control>
 		</control>
@@ -600,7 +607,7 @@
 				<scroll>true</scroll>
 				<label>No EPG</label>
 				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
-				<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
+				<visible>![VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel]</visible>
 			</control>
 		</control>
 		<!-- Bottom right Info (Stream status, SNR & Signal, Time-shift) -->
@@ -1012,7 +1019,7 @@
 				<align>left</align>
 				<font>Font_Bold56</font>
 				<textcolor>$VAR[FontColorVar]</textcolor>
-				<label>$INFO[VideoPlayer.ChannelNumber]</label>
+				<label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
 				<scroll>true</scroll>
 			</control>
 			<control type="label" id="1">
@@ -1137,7 +1144,7 @@
 				<scroll>true</scroll>
 				<label>$INFO[VideoPlayer.Title]</label>
 				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
-				<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
+				<visible>![VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel]</visible>
 			</control>
 			<control type="label" id="1">
 				<left>1450</left>
@@ -1150,7 +1157,7 @@
 				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
 			</control>
 			<control type="group" id="1">
-				<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
+				<visible>VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel</visible>
 				<control type="image" id="1">
 					<left>499</left>
 					<width>40</width>
@@ -1208,11 +1215,11 @@
 				<top>49</top>
 				<width>1225</width>
 				<height>12</height>
-				<info>Pvr.Progress</info>
+				<info>Pvr.EpgEventProgress</info>
 				<midtexture border="0">new_pvr/texturebg_white.png</midtexture>
 				<texturebg border="3,0,3,0">new_pvr/texturebg_border_white.png</texturebg>
-				<lefttexture>-</lefttexture>
-				<righttexture>-</righttexture>
+				<lefttexture />
+				<righttexture />
 				<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 			</control>
 		</control>
@@ -1227,12 +1234,10 @@
 				<scroll>true</scroll>
 				<label>No EPG</label>
 				<visible>!String.IsEmpty(VideoPlayer.Title)</visible>
-				<visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
+				<visible>![VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel]</visible>
 			</control>
 		</control>
-
 	</include>
-
 	<include name="ChannelOSDExtended">
 		<left>60</left>
 		<top>75</top>
@@ -1244,7 +1249,6 @@
 			<width>1800</width>
 			<height>940</height>
 			<texture border="40" colordiffuse="$VAR[DialogColorVar]">buttons/roundedbutton-nofocus.png</texture>
-			<aspectratio>stretch</aspectratio>
 		</control>
 		<control type="image">
 			<left>965</left>
@@ -1280,7 +1284,7 @@
 				<onright>NextChannelGroup</onright>
 				<onup>11</onup>
 				<ondown>11</ondown>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol />
 				<scrolltime tween="quadratic">200</scrolltime>
 				<itemlayout height="59" width="975">
 					<control type="image">
@@ -1291,7 +1295,6 @@
 						<texture colordiffuse="$VAR[DialogColorVar]">osd/osd_settings_buttonnf.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
 						<top>10</top>
 						<width>60</width>
 						<height>40</height>
@@ -1299,7 +1302,7 @@
 						<textcolor>grey</textcolor>
 						<selectedcolor>orange</selectedcolor>
 						<font>Font_Reg29</font>
-						<info>ListItem.ChannelNumber</info>
+						<info>ListItem.ChannelNumberLabel</info>
 					</control>
 					<control type="group">
 						<control type="image">
@@ -1322,8 +1325,8 @@
 							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							<texturebg border="3">new_pvr/texturebg_border_white.png</texturebg>
 							<midtexture border="3">new_pvr/texturebg_white.png</midtexture>
-							<lefttexture>-</lefttexture>
-							<righttexture>-</righttexture>
+							<lefttexture />
+							<righttexture />
 							<visible>!Skin.HasSetting(iconleftprogressright)</visible>
 						</control>
 					</control>
@@ -1348,8 +1351,8 @@
 							<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 							<texturebg border="3">new_pvr/texturebg_border_white.png</texturebg>
 							<midtexture border="3">new_pvr/texturebg_white.png</midtexture>
-							<lefttexture>-</lefttexture>
-							<righttexture>-</righttexture>
+							<lefttexture />
+							<righttexture />
 							<visible>Skin.HasSetting(iconleftprogressright)</visible>
 						</control>
 					</control>
@@ -1378,7 +1381,6 @@
 						<texture colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texture>
 					</control>
 					<control type="label">
-						<left>0</left>
 						<top>10</top>
 						<width>60</width>
 						<height>40</height>
@@ -1386,7 +1388,7 @@
 						<textcolor>grey</textcolor>
 						<selectedcolor>white</selectedcolor>
 						<font>Font_Reg29</font>
-						<info>ListItem.ChannelNumber</info>
+						<info>ListItem.ChannelNumberLabel</info>
 					</control>
 					<control type="group">
 						<control type="image">
@@ -1408,8 +1410,8 @@
 							<visible>!String.IsEqual(ListItem.Title,)</visible>
 							<texturebg border="3">new_pvr/texturebg_border_white.png</texturebg>
 							<midtexture border="3">new_pvr/texturebg_white.png</midtexture>
-							<lefttexture>-</lefttexture>
-							<righttexture>-</righttexture>
+							<lefttexture />
+							<righttexture />
 							<visible>!Skin.HasSetting(iconleftprogressright)</visible>
 						</control>
 					</control>
@@ -1433,8 +1435,8 @@
 							<visible>!String.IsEqual(ListItem.Title,)</visible>
 							<texturebg border="3">new_pvr/texturebg_border_white.png</texturebg>
 							<midtexture border="3">new_pvr/texturebg_white.png</midtexture>
-							<lefttexture>-</lefttexture>
-							<righttexture>-</righttexture>
+							<lefttexture />
+							<righttexture />
 							<visible>Skin.HasSetting(iconleftprogressright)</visible>
 						</control>
 					</control>
@@ -1516,8 +1518,8 @@
 					<info>Container(11).ListItem.Progress</info>
 					<midtexture border="0">new_pvr/texturebg_white.png</midtexture>
 					<texturebg border="3,0,3,0">new_pvr/texturebg_border_white.png</texturebg>
-					<lefttexture>-</lefttexture>
-					<righttexture>-</righttexture>
+					<lefttexture />
+					<righttexture />
 					<colordiffuse>$VAR[FontColorVar]</colordiffuse>
 				</control>
 			</control>
@@ -1559,7 +1561,7 @@
 					<height>300</height>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture>$INFO[Container(11).ListItem.PlotOutline]</texture>
-					<visible>String.Contains(Container(11).ListItem.PlotOutline,"http://",Left) | String.Contains(Container(11).ListItem.PlotOutline,"https://",Left)</visible>
+					<visible>String.StartsWith(Container(11).ListItem.PlotOutline,"http://") | String.StartsWith(Container(11).ListItem.PlotOutline,"https://")</visible>
 				</control>
 			</control>
 
@@ -1650,7 +1652,7 @@
 			<onright>NextChannelGroup</onright>
 			<onup>11</onup>
 			<ondown>11</ondown>
-			<pagecontrol>-</pagecontrol>
+			<pagecontrol />
 			<scrolltime tween="quadratic">200</scrolltime>
 			<itemlayout height="113" width="735">
 				<control type="image">
@@ -1666,7 +1668,7 @@
 					<width>60</width>
 					<height>45</height>
 					<font>Font_Bold34_Caps</font>
-					<info>ListItem.ChannelNumber</info>
+					<info>ListItem.ChannelNumberLabel</info>
 				</control>
 				<control type="image">
 					<left>102</left>
@@ -1736,7 +1738,6 @@
 			<focusedlayout height="113" width="735">
 				<control type="image">
 					<left>12</left>
-					<top>0</top>
 					<width>725</width>
 					<height>112</height>
 					<texture colordiffuse="$VAR[FocusTextureColorVar]">views/tripanel/listselect_fo.png</texture>
@@ -1747,7 +1748,7 @@
 					<width>60</width>
 					<height>45</height>
 					<font>Font_Bold34_Caps</font>
-					<info>ListItem.ChannelNumber</info>
+					<info>ListItem.ChannelNumberLabel</info>
 				</control>
 				<control type="image">
 					<left>102</left>

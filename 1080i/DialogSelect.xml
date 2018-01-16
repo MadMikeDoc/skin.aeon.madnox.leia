@@ -2,8 +2,6 @@
 <window type="dialog" id="2000">
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<coordinates>
-		<left>0</left>
-		<top>0</top>
 		<system>1</system>
 	</coordinates>
 	<include>Animation_DialogPopup2</include>
@@ -68,7 +66,7 @@
 				<height>60</height>
 				<align>center</align>
 				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
-				<texturenofocus border="8">-</texturenofocus>
+				<texturenofocus border="8" />
 				<label>186</label>
 				<font>Font_Bold33</font>
 				<textcolor>grey2</textcolor>
@@ -78,8 +76,8 @@
 				<height>60</height>
 				<align>center</align>
 				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
-				<texturenofocus border="8">-</texturenofocus>
-				<label>-</label>
+				<texturenofocus border="8" />
+				<label />
 				<font>Font_Bold33</font>
 				<textcolor>grey2</textcolor>
 			</control>
